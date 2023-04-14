@@ -1,10 +1,10 @@
-name: Update Providers (on demand)
+name: Update Providers (On Demand)
 on:
   workflow_dispatch:
 
 jobs:
   update-providers:
-    name: Update Providers (on demand)
+    name: Update Providers (On Demand)
     runs-on: ubuntu-latest
     permissions:
       contents: write
