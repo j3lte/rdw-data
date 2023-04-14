@@ -1,0 +1,9 @@
+export * as KentekenVoertuigen from "./KentekenVoertuigen.ts";
+export * as KentekenVoertuigenAssen from "./KentekenVoertuigenAssen.ts";
+export * as KentekenVoertuigenBijzonderheden from "./KentekenVoertuigenBijzonderheden.ts";
+export * as KentekenVoertuigenBrandstof from "./KentekenVoertuigenBrandstof.ts";
+export * as KentekenVoertuigenCarrosserie from "./KentekenVoertuigenCarrosserie.ts";
+export * as KentekenVoertuigenCarrosserieSpecificatie from "./KentekenVoertuigenCarrosserieSpecificatie.ts";
+export * as KentekenVoertuigenRupsbanden from "./KentekenVoertuigenRupsbanden.ts";
+export * as KentekenVoertuigenSubcategorieVoertuig from "./KentekenVoertuigenSubcategorieVoertuig.ts";
+export * as KentekenVoertuigenVoertuigklasse from "./KentekenVoertuigenVoertuigklasse.ts";

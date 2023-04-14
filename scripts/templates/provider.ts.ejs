@@ -1,0 +1,110 @@
+// *******************************************************
+//
+// Name: <%= it.item.full_name %>
+<%- if (it.item.description.length > 0) { %>
+//
+<%- it.item.description.forEach(function(line) { %>
+// <%= line %><% }); -%>
+<%- } %>
+//
+// Category: <%= it.item.category %>
+// Link: <%= it.item.link %>
+// Permalink: <%= it.item.permalink %>
+// Owner: <%= it.item.owner %>
+// Creator: <%= it.item.creator %>
+//
+// *******************************************************
+
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
+export {
+  Order,
+  Select,
+  SelectAll,
+  SelectGreatest,
+  SelectLeast,
+  SelectRegrIntercept,
+  SelectRegrR2,
+  SelectRegrSlope,
+  SystemFields,
+  Where,
+} from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
+export { DataType, Field };
+
+/**
+ * Return Data for <%= it.item.full_name %>
+ */
+export interface ResponseData {
+  <% it.item.columns.forEach(function(column) { %>
+  /**
+   * ### <%= column.name %>
+   *
+   * <% column.description.forEach(function(line) { %>
+   * <%= line %><% }); %>
+   *
+   * **Type**: <%= column.datatype %>
+   *
+   */
+  <%= column.field_name %>?: <%= column.node_type %>;<% }); %>
+}
+
+/**
+ * Fieldnames for **<%= it.item.name %>**
+ *
+ * | **Fieldname** | **Database Column Name** | **Data Type** |
+ * | --------- | -------------------- | --------- |<% it.item.columns.forEach(function(column) { %>
+ * | ``<%= column.big_name %>`` | ``<%= column.field_name %>`` | _<%= column.datatype %>_ |
+<%- }); %>
+ *
+ * > You can use these fieldnames in your queries to filter, group, or sort your data.
+ */
+export interface IFields {
+  <% it.item.columns.forEach(function(column) { %>
+  /**
+   * ### <%= column.name %>
+   *
+   * <% column.description.forEach(function(line) { %>
+   * <%= line %><% }); %>
+   *
+   * **Type**: <%= column.datatype %>
+   *
+   */
+   <%= column.big_name %>: FieldObject<<%= column.datatypeTemplate %>>;<% }); %>
+};
+
+export const Fields: IFields = {
+  <% it.item.columns.forEach(function(column) { %>
+  <%= column.big_name %>: Field("<%= column.field_name %>", <%= column.datatypeTemplate %>),<% }); %>
+};
+
+export const Info = {
+  fields: [
+    <% it.item.columns.forEach(function(column) { %>
+    "<%= column.big_name %>",<% }); %>
+  ],
+  dataset: "<%= it.item.id %>",
+  domain: "<%= it.item.domain %>",
+  full_name: "<%= it.item.full_name %>",
+  provider_name: "<%= it.item.name %>",
+  url: "<%= it.item.link %>",
+  api_docs: "https://dev.socrata.com/foundry/<%= it.item.domain %>/<%= it.item.id %>",
+}
+
+
+/**
+ * ### <%= it.item.full_name %><% it.item.description.forEach(function(line) { %>
+ * <%= line %><% }); %>
+ *
+ * **URL:** <%= it.item.link %>
+ *
+ * **API DOCS:** https://dev.socrata.com/foundry/<%= it.item.domain %>/<%= it.item.id %>
+ *
+ * **Dataset ID:** <%= it.item.id %>
+ *
+ * **Category:** <%= it.item.category %>
+ */
+export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+    ...opts,
+    strict: typeof opts.strict === "boolean" ? opts.strict : true,
+  });

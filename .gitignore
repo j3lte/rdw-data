@@ -1,0 +1,7 @@
+.env*
+*.json
+!deno.json
+.DS_Store
+node_modules
+npm/
+local_test.ts
