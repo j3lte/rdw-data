@@ -1,10 +1,12 @@
-name: Update Providers (on demand)
+name: Update Providers (Scheduled)
 on:
   workflow_dispatch:
+  schedule:
+    - cron: 0 0 * * *
 
 jobs:
   update-providers:
-    name: Update Providers (on demand)
+    name: Update Providers (Scheduled)
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -22,7 +24,7 @@ jobs:
         id: auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update Providers (on demand)
+          commit_message: Update Providers (Automated)
           commit_options: '--no-verify'
 
       - name: "Run if changes have been detected"
