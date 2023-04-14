@@ -1,3 +1,4 @@
+export * as AsGegevensEegUitvoering from "./AsGegevensEegUitvoering.ts";
 export * as BasisgegevensEegUitvoering from "./BasisgegevensEegUitvoering.ts";
 export * as BrandstoffenOpPc4 from "./BrandstoffenOpPc4.ts";
 export * as CarrosserieUitvoering from "./CarrosserieUitvoering.ts";
