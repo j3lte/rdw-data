@@ -20,6 +20,10 @@ jobs:
       - name: Fetch & Update Providers
         run: deno task fetch-data
 
+        # We need to pull again, because we might have updated the providers
+      - name: Pull Remote Changes
+        run: git pull
+
       - name: Commit changes
         id: auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
