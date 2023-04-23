@@ -81,12 +81,6 @@ export interface ResponseData {
    */
   aantal_zitplaatsen?: string;
   /**
-   * ### Aerodynamische voorziening of uitrusting
-   *
-   * **Type**: Text
-   */
-  aerodyn_voorz?: string;
-  /**
    * ### Afstand hart koppeling tot achterzijde voertuig
    *
    * **Type**: Number
@@ -764,12 +758,6 @@ export interface IFields {
    */
   AantalZitplaatsen: FieldObject<DataType.Number>;
   /**
-   * ### Aerodynamische voorziening of uitrusting
-   *
-   * **Type**: Text
-   */
-  AerodynVoorz: FieldObject<DataType.Text>;
-  /**
    * ### Afstand hart koppeling tot achterzijde voertuig
    *
    * **Type**: Number
@@ -1302,7 +1290,6 @@ export const Fields: IFields = {
   AantalStaanplaatsen: Field("aantal_staanplaatsen", DataType.Number),
   AantalWielen: Field("aantal_wielen", DataType.Number),
   AantalZitplaatsen: Field("aantal_zitplaatsen", DataType.Number),
-  AerodynVoorz: Field("aerodyn_voorz", DataType.Text),
   AfstandHartKoppelingTotAchterzijdeVoertuig: Field(
     "afstand_hart_koppeling_tot_achterzijde_voertuig",
     DataType.Number,
