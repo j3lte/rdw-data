@@ -81,6 +81,12 @@ export interface ResponseData {
    */
   aantal_zitplaatsen?: string;
   /**
+   * ### Aerodynamische voorziening of uitrusting
+   *
+   * **Type**: Text
+   */
+  aerodyn_voorz?: string;
+  /**
    * ### Afstand hart koppeling tot achterzijde voertuig
    *
    * **Type**: Number
@@ -237,6 +243,12 @@ export interface ResponseData {
    */
   export_indicator?: string;
   /**
+   * ### Gemiddelde Lading Waarde
+   *
+   * **Type**: Number
+   */
+  gem_lading_wrde?: string;
+  /**
    * ### Handelsbenaming
    *
    * **Type**: Text
@@ -302,6 +314,12 @@ export interface ResponseData {
    * **Type**: Number
    */
   lengte_voertuig_minimum?: string;
+  /**
+   * ### Additionele massa alternatieve aandrijving
+   *
+   * **Type**: Number
+   */
+  massa_alt_aandr?: string;
   /**
    * ### Massa bedrijfsklaar maximaal
    *
@@ -501,6 +519,12 @@ export interface ResponseData {
    */
   variant?: string;
   /**
+   * ### Verlengde cabine indicator
+   *
+   * **Type**: Text
+   */
+  verl_cab_ind?: string;
+  /**
    * ### Vermogen massarijklaar
    *
    * **Type**: Number
@@ -599,6 +623,7 @@ export interface ResponseData {
  * | ``AantalStaanplaatsen`` | ``aantal_staanplaatsen`` | _Number_ |
  * | ``AantalWielen`` | ``aantal_wielen`` | _Number_ |
  * | ``AantalZitplaatsen`` | ``aantal_zitplaatsen`` | _Number_ |
+ * | ``AerodynVoorz`` | ``aerodyn_voorz`` | _Text_ |
  * | ``AfstandHartKoppelingTotAchterzijdeVoertuig`` | ``afstand_hart_koppeling_tot_achterzijde_voertuig`` | _Number_ |
  * | ``AfstandVoorzijdeVoertuigTotHartKoppeling`` | ``afstand_voorzijde_voertuig_tot_hart_koppeling`` | _Number_ |
  * | ``AfwijkendeMaximumSnelheid`` | ``afwijkende_maximum_snelheid`` | _Number_ |
@@ -625,6 +650,7 @@ export interface ResponseData {
  * | ``EuropeseVoertuigcategorie`` | ``europese_voertuigcategorie`` | _Text_ |
  * | ``EuropeseVoertuigcategorieToevoeging`` | ``europese_voertuigcategorie_toevoeging`` | _Text_ |
  * | ``ExportIndicator`` | ``export_indicator`` | _Text_ |
+ * | ``GemLadingWrde`` | ``gem_lading_wrde`` | _Number_ |
  * | ``Handelsbenaming`` | ``handelsbenaming`` | _Text_ |
  * | ``HoogteVoertuig`` | ``hoogte_voertuig`` | _Number_ |
  * | ``HoogteVoertuigMaximum`` | ``hoogte_voertuig_maximum`` | _Number_ |
@@ -636,6 +662,7 @@ export interface ResponseData {
  * | ``Lengte`` | ``lengte`` | _Number_ |
  * | ``LengteVoertuigMaximum`` | ``lengte_voertuig_maximum`` | _Number_ |
  * | ``LengteVoertuigMinimum`` | ``lengte_voertuig_minimum`` | _Number_ |
+ * | ``MassaAltAandr`` | ``massa_alt_aandr`` | _Number_ |
  * | ``MassaBedrijfsklaarMaximaal`` | ``massa_bedrijfsklaar_maximaal`` | _Number_ |
  * | ``MassaBedrijfsklaarMinimaal`` | ``massa_bedrijfsklaar_minimaal`` | _Number_ |
  * | ``MassaLedigVoertuig`` | ``massa_ledig_voertuig`` | _Number_ |
@@ -669,6 +696,7 @@ export interface ResponseData {
  * | ``Typegoedkeuringsnummer`` | ``typegoedkeuringsnummer`` | _Text_ |
  * | ``Uitvoering`` | ``uitvoering`` | _Text_ |
  * | ``Variant`` | ``variant`` | _Text_ |
+ * | ``VerlCabInd`` | ``verl_cab_ind`` | _Text_ |
  * | ``VermogenMassarijklaar`` | ``vermogen_massarijklaar`` | _Number_ |
  * | ``VerticaleBelastingKoppelpuntGetrokkenVoertuig`` | ``verticale_belasting_koppelpunt_getrokken_voertuig`` | _Number_ |
  * | ``VervaldatumApk`` | ``vervaldatum_apk`` | _Number_ |
@@ -735,6 +763,12 @@ export interface IFields {
    * **Type**: Number
    */
   AantalZitplaatsen: FieldObject<DataType.Number>;
+  /**
+   * ### Aerodynamische voorziening of uitrusting
+   *
+   * **Type**: Text
+   */
+  AerodynVoorz: FieldObject<DataType.Text>;
   /**
    * ### Afstand hart koppeling tot achterzijde voertuig
    *
@@ -892,6 +926,12 @@ export interface IFields {
    */
   ExportIndicator: FieldObject<DataType.Text>;
   /**
+   * ### Gemiddelde Lading Waarde
+   *
+   * **Type**: Number
+   */
+  GemLadingWrde: FieldObject<DataType.Number>;
+  /**
    * ### Handelsbenaming
    *
    * **Type**: Text
@@ -957,6 +997,12 @@ export interface IFields {
    * **Type**: Number
    */
   LengteVoertuigMinimum: FieldObject<DataType.Number>;
+  /**
+   * ### Additionele massa alternatieve aandrijving
+   *
+   * **Type**: Number
+   */
+  MassaAltAandr: FieldObject<DataType.Number>;
   /**
    * ### Massa bedrijfsklaar maximaal
    *
@@ -1156,6 +1202,12 @@ export interface IFields {
    */
   Variant: FieldObject<DataType.Text>;
   /**
+   * ### Verlengde cabine indicator
+   *
+   * **Type**: Text
+   */
+  VerlCabInd: FieldObject<DataType.Text>;
+  /**
    * ### Vermogen massarijklaar
    *
    * **Type**: Number
@@ -1250,6 +1302,7 @@ export const Fields: IFields = {
   AantalStaanplaatsen: Field("aantal_staanplaatsen", DataType.Number),
   AantalWielen: Field("aantal_wielen", DataType.Number),
   AantalZitplaatsen: Field("aantal_zitplaatsen", DataType.Number),
+  AerodynVoorz: Field("aerodyn_voorz", DataType.Text),
   AfstandHartKoppelingTotAchterzijdeVoertuig: Field(
     "afstand_hart_koppeling_tot_achterzijde_voertuig",
     DataType.Number,
@@ -1303,6 +1356,7 @@ export const Fields: IFields = {
     DataType.Text,
   ),
   ExportIndicator: Field("export_indicator", DataType.Text),
+  GemLadingWrde: Field("gem_lading_wrde", DataType.Number),
   Handelsbenaming: Field("handelsbenaming", DataType.Text),
   HoogteVoertuig: Field("hoogte_voertuig", DataType.Number),
   HoogteVoertuigMaximum: Field("hoogte_voertuig_maximum", DataType.Number),
@@ -1314,6 +1368,7 @@ export const Fields: IFields = {
   Lengte: Field("lengte", DataType.Number),
   LengteVoertuigMaximum: Field("lengte_voertuig_maximum", DataType.Number),
   LengteVoertuigMinimum: Field("lengte_voertuig_minimum", DataType.Number),
+  MassaAltAandr: Field("massa_alt_aandr", DataType.Number),
   MassaBedrijfsklaarMaximaal: Field("massa_bedrijfsklaar_maximaal", DataType.Number),
   MassaBedrijfsklaarMinimaal: Field("massa_bedrijfsklaar_minimaal", DataType.Number),
   MassaLedigVoertuig: Field("massa_ledig_voertuig", DataType.Number),
@@ -1359,6 +1414,7 @@ export const Fields: IFields = {
   Typegoedkeuringsnummer: Field("typegoedkeuringsnummer", DataType.Text),
   Uitvoering: Field("uitvoering", DataType.Text),
   Variant: Field("variant", DataType.Text),
+  VerlCabInd: Field("verl_cab_ind", DataType.Text),
   VermogenMassarijklaar: Field("vermogen_massarijklaar", DataType.Number),
   VerticaleBelastingKoppelpuntGetrokkenVoertuig: Field(
     "verticale_belasting_koppelpunt_getrokken_voertuig",
@@ -1391,6 +1447,7 @@ export const Info = {
     "AantalStaanplaatsen",
     "AantalWielen",
     "AantalZitplaatsen",
+    "AerodynVoorz",
     "AfstandHartKoppelingTotAchterzijdeVoertuig",
     "AfstandVoorzijdeVoertuigTotHartKoppeling",
     "AfwijkendeMaximumSnelheid",
@@ -1417,6 +1474,7 @@ export const Info = {
     "EuropeseVoertuigcategorie",
     "EuropeseVoertuigcategorieToevoeging",
     "ExportIndicator",
+    "GemLadingWrde",
     "Handelsbenaming",
     "HoogteVoertuig",
     "HoogteVoertuigMaximum",
@@ -1428,6 +1486,7 @@ export const Info = {
     "Lengte",
     "LengteVoertuigMaximum",
     "LengteVoertuigMinimum",
+    "MassaAltAandr",
     "MassaBedrijfsklaarMaximaal",
     "MassaBedrijfsklaarMinimaal",
     "MassaLedigVoertuig",
@@ -1461,6 +1520,7 @@ export const Info = {
     "Typegoedkeuringsnummer",
     "Uitvoering",
     "Variant",
+    "VerlCabInd",
     "VermogenMassarijklaar",
     "VerticaleBelastingKoppelpuntGetrokkenVoertuig",
     "VervaldatumApk",
