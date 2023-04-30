@@ -5,15 +5,14 @@ import { DataResult, ResponseData, WithSodaVersion } from "./util/interfaces.ts"
 import { fixTitle, mapColumns } from "./util/mod.ts";
 
 const runCmd = async (cmd: string[]) => {
-  const p = Deno.run({ cmd, stdout: "piped", stderr: "piped" });
-  const status = await p.status();
-  const output = await p.output();
-  const error = await p.stderrOutput();
-  p.close();
+  const cmdFirst = cmd.shift() as string;
+  const p = new Deno.Command(cmdFirst, { stdout: "piped", stderr: "piped", args: cmd });
+  const { code, stdout, stderr } = await p.output();
+
   return {
-    output: new TextDecoder().decode(output),
-    error: new TextDecoder().decode(error),
-    code: status.code,
+    output: new TextDecoder().decode(stdout),
+    error: new TextDecoder().decode(stderr),
+    code,
   };
 };
 
