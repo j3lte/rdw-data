@@ -62,6 +62,7 @@ export * as TerugroepActieRisico from "./TerugroepActieRisico.ts";
 export * as TerugroepActieStatus from "./TerugroepActieStatus.ts";
 export * as TerugroepInformerenEigenaar from "./TerugroepInformerenEigenaar.ts";
 export * as TerugroepVoertuigMerkType from "./TerugroepVoertuigMerkType.ts";
+export * as TestProducerApi from "./TestProducerApi.ts";
 export * as ToegevoegdeObjecten from "./ToegevoegdeObjecten.ts";
 export * as UitvoeringGebruiksgegevensPerUitgave from "./UitvoeringGebruiksgegevensPerUitgave.ts";
 export * as VersnellingsbakUitvoering from "./VersnellingsbakUitvoering.ts";
