@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Erkenningen
@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### Erkenning
-   * 
+   *
    * De erkenning, bevoegdheid, regeling of overeenkomst die het bedrijf in bezit heeft. Wanneer deze tijdelijk ongeldig is, wordt deze wel getoond.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ResponseData {
   erkenning?: string;
   /**
    * ### Volgnummer
-   * 
+   *
    * Nummer waarmee een bedrijf eenduidig is te identificeren binnen de opendata set.
    *
    * **Type**: Number
@@ -49,21 +49,21 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### Erkenning
-   * 
+   *
    * De erkenning, bevoegdheid, regeling of overeenkomst die het bedrijf in bezit heeft. Wanneer deze tijdelijk ongeldig is, wordt deze wel getoond.
    *
    * **Type**: Text
    */
-   Erkenning: FieldObject<DataType.Text>;
+  Erkenning: FieldObject<DataType.Text>;
   /**
    * ### Volgnummer
-   * 
+   *
    * Nummer waarmee een bedrijf eenduidig is te identificeren binnen de opendata set.
    *
    * **Type**: Number
    */
-   Volgnummer: FieldObject<DataType.Number>;
-};
+  Volgnummer: FieldObject<DataType.Number>;
+}
 
 export const Fields: IFields = {
   Erkenning: Field("erkenning", DataType.Text),
@@ -81,7 +81,7 @@ export const Info = {
   provider_name: "Erkenningen",
   url: "https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nmwb-dqkz",
-}
+};
 
 /**
  * ### Open Data RDW: Erkenningen

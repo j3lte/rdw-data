@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gebreken
@@ -90,50 +90,50 @@ export interface IFields {
    *
    * **Type**: Number
    */
-   EinddatumGebrek: FieldObject<DataType.Number>;
+  EinddatumGebrek: FieldObject<DataType.Number>;
   /**
    * ### Einddatum gebrek DT
    *
    * **Type**: Calendar date
    */
-   EinddatumGebrekDt: FieldObject<DataType.FloatingTimestamp>;
+  EinddatumGebrekDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Gebrek artikel nummer
    *
    * **Type**: Text
    */
-   GebrekArtikelNummer: FieldObject<DataType.Text>;
+  GebrekArtikelNummer: FieldObject<DataType.Text>;
   /**
    * ### Gebrek identificatie
    *
    * **Type**: Text
    */
-   GebrekIdentificatie: FieldObject<DataType.Text>;
+  GebrekIdentificatie: FieldObject<DataType.Text>;
   /**
    * ### Gebrek omschrijving
    *
    * **Type**: Text
    */
-   GebrekOmschrijving: FieldObject<DataType.Text>;
+  GebrekOmschrijving: FieldObject<DataType.Text>;
   /**
    * ### Gebrek paragraaf nummer
    *
    * **Type**: Number
    */
-   GebrekParagraafNummer: FieldObject<DataType.Number>;
+  GebrekParagraafNummer: FieldObject<DataType.Number>;
   /**
    * ### Ingangsdatum gebrek
    *
    * **Type**: Number
    */
-   IngangsdatumGebrek: FieldObject<DataType.Number>;
+  IngangsdatumGebrek: FieldObject<DataType.Number>;
   /**
    * ### Ingangsdatum gebrek DT
    *
    * **Type**: Calendar date
    */
-   IngangsdatumGebrekDt: FieldObject<DataType.FloatingTimestamp>;
-};
+  IngangsdatumGebrekDt: FieldObject<DataType.FloatingTimestamp>;
+}
 
 export const Fields: IFields = {
   EinddatumGebrek: Field("einddatum_gebrek", DataType.Number),
@@ -163,7 +163,7 @@ export const Info = {
   provider_name: "Gebreken",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Gebreken/hx2c-gt7k",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/hx2c-gt7k",
-}
+};
 
 /**
  * ### Open Data RDW: Gebreken

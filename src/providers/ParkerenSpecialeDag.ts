@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: SPECIALE DAG
@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### DateSpecialDay
-   * 
+   *
    * Datum van een speciaal etmaal (dag).
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ResponseData {
   datespecialday?: string;
   /**
    * ### NameSpecialDay
-   * 
+   *
    * Naam van een speciaal etmaal (dag), bv. Marktdag, Koopzondag, AutoRAI of Sinterklaasintocht die op een bepaalde datum voor een gebiedsbeheerder van toepassing is.
    *
    * **Type**: Text
@@ -58,29 +58,29 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-   Areamanagerid: FieldObject<DataType.Number>;
+  Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### DateSpecialDay
-   * 
+   *
    * Datum van een speciaal etmaal (dag).
    *
    * **Type**: Number
    */
-   Datespecialday: FieldObject<DataType.Number>;
+  Datespecialday: FieldObject<DataType.Number>;
   /**
    * ### NameSpecialDay
-   * 
+   *
    * Naam van een speciaal etmaal (dag), bv. Marktdag, Koopzondag, AutoRAI of Sinterklaasintocht die op een bepaalde datum voor een gebiedsbeheerder van toepassing is.
    *
    * **Type**: Text
    */
-   Namespecialday: FieldObject<DataType.Text>;
-};
+  Namespecialday: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Areamanagerid: Field("areamanagerid", DataType.Number),
@@ -100,7 +100,7 @@ export const Info = {
   provider_name: "ParkerenSpecialeDag",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIALE-DAG/hpi4-mynq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/hpi4-mynq",
-}
+};
 
 /**
  * ### Open Data Parkeren: SPECIALE DAG

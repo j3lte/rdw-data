@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: GEO VERKOOPPUNT
@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateSellingPoint
-   * 
+   *
    * Datum waarop een bepaald verkooppunt niet meer actief is.
    *
    * **Type**: Text
@@ -37,12 +37,12 @@ export interface ResponseData {
   enddatesellingpoint?: string;
   /**
    * ### Location
-   * 
+   *
    * De cordinaten van een verkooppunt.
    *
    * **Type**: Point
    */
-  location?: { latitude: string; longitude: string; human_address: null | string; };
+  location?: { latitude: string; longitude: string; human_address: null | string };
   /**
    * ### Location (address)
    *
@@ -69,7 +69,7 @@ export interface ResponseData {
   location_zip?: string;
   /**
    * ### SellingPointDesc
-   * 
+   *
    * Omschrijving van een verkooppunt.
    *
    * **Type**: Text
@@ -77,7 +77,7 @@ export interface ResponseData {
   sellingpointdesc?: string;
   /**
    * ### SellingPointId
-   * 
+   *
    * Identificatiecode van een verkooppunt. Het SellingPointId is numeriek en hoeft niet uniek te zijn. Een SellingPointId kan op meerdere locaties voorkomen, die samen een verkooppuntgroep vormen.
    *
    * **Type**: Number
@@ -85,7 +85,7 @@ export interface ResponseData {
   sellingpointid?: string;
   /**
    * ### StartDateSellingPoint
-   * 
+   *
    * Datum vanaf wanneer een bepaald verkooppunt actief is.
    *
    * **Type**: Text
@@ -113,77 +113,77 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-   Areamanagerid: FieldObject<DataType.Number>;
+  Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndDateSellingPoint
-   * 
+   *
    * Datum waarop een bepaald verkooppunt niet meer actief is.
    *
    * **Type**: Text
    */
-   Enddatesellingpoint: FieldObject<DataType.Text>;
+  Enddatesellingpoint: FieldObject<DataType.Text>;
   /**
    * ### Location
-   * 
+   *
    * De cordinaten van een verkooppunt.
    *
    * **Type**: Point
    */
-   Location: FieldObject<DataType.Point>;
+  Location: FieldObject<DataType.Point>;
   /**
    * ### Location (address)
    *
    * **Type**: Text
    */
-   LocationAddress: FieldObject<DataType.Text>;
+  LocationAddress: FieldObject<DataType.Text>;
   /**
    * ### Location (city)
    *
    * **Type**: Text
    */
-   LocationCity: FieldObject<DataType.Text>;
+  LocationCity: FieldObject<DataType.Text>;
   /**
    * ### Location (state)
    *
    * **Type**: Text
    */
-   LocationState: FieldObject<DataType.Text>;
+  LocationState: FieldObject<DataType.Text>;
   /**
    * ### Location (zip)
    *
    * **Type**: Text
    */
-   LocationZip: FieldObject<DataType.Text>;
+  LocationZip: FieldObject<DataType.Text>;
   /**
    * ### SellingPointDesc
-   * 
+   *
    * Omschrijving van een verkooppunt.
    *
    * **Type**: Text
    */
-   Sellingpointdesc: FieldObject<DataType.Text>;
+  Sellingpointdesc: FieldObject<DataType.Text>;
   /**
    * ### SellingPointId
-   * 
+   *
    * Identificatiecode van een verkooppunt. Het SellingPointId is numeriek en hoeft niet uniek te zijn. Een SellingPointId kan op meerdere locaties voorkomen, die samen een verkooppuntgroep vormen.
    *
    * **Type**: Number
    */
-   Sellingpointid: FieldObject<DataType.Number>;
+  Sellingpointid: FieldObject<DataType.Number>;
   /**
    * ### StartDateSellingPoint
-   * 
+   *
    * Datum vanaf wanneer een bepaald verkooppunt actief is.
    *
    * **Type**: Text
    */
-   Startdatesellingpoint: FieldObject<DataType.Text>;
-};
+  Startdatesellingpoint: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Areamanagerid: Field("areamanagerid", DataType.Number),
@@ -217,7 +217,7 @@ export const Info = {
   provider_name: "ParkerenGeoVerkooppunt",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEO-VERKOOPPUNT/cgqw-pfbp",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/cgqw-pfbp",
-}
+};
 
 /**
  * ### Open Data Parkeren: GEO VERKOOPPUNT

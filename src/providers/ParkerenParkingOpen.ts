@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: PARKING OPEN
@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### EndOfPeriod
-   * 
+   *
    * Einddatum en -tijd van een periode waarin een bepaalde parkeerfaciliteit is opengesteld.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ResponseData {
   endofperiod?: string;
   /**
    * ### ExitPossibleAllDay
-   * 
+   *
    * Indicator die aangeeft of uitrijden de hele dag mogelijk is bij een parkeergebied, -garage of -terrein.
    *
    * **Type**: Number
@@ -53,7 +53,7 @@ export interface ResponseData {
   exitpossibleallday?: string;
   /**
    * ### OpenAllYear
-   * 
+   *
    * Indicator die aangeeft of een parkeerfaciliteit het hele jaar open is of niet.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ResponseData {
   openallyear?: string;
   /**
    * ### PeriodName
-   * 
+   *
    * Naam die een bepaalde openstellingsperiode van een parkeergebied, -garage of -terrein aanduidt.
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ResponseData {
   periodname?: string;
   /**
    * ### StartOfPeriod
-   * 
+   *
    * Begindatum en -tijd van een periode waarin een bepaald parkeerfaciliteit is opengesteld.
    *
    * **Type**: Text
@@ -94,61 +94,61 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
    */
-   Areaid: FieldObject<DataType.Text>;
+  Areaid: FieldObject<DataType.Text>;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-   Areamanagerid: FieldObject<DataType.Number>;
+  Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndOfPeriod
-   * 
+   *
    * Einddatum en -tijd van een periode waarin een bepaalde parkeerfaciliteit is opengesteld.
    *
    * **Type**: Text
    */
-   Endofperiod: FieldObject<DataType.Text>;
+  Endofperiod: FieldObject<DataType.Text>;
   /**
    * ### ExitPossibleAllDay
-   * 
+   *
    * Indicator die aangeeft of uitrijden de hele dag mogelijk is bij een parkeergebied, -garage of -terrein.
    *
    * **Type**: Number
    */
-   Exitpossibleallday: FieldObject<DataType.Number>;
+  Exitpossibleallday: FieldObject<DataType.Number>;
   /**
    * ### OpenAllYear
-   * 
+   *
    * Indicator die aangeeft of een parkeerfaciliteit het hele jaar open is of niet.
    *
    * **Type**: Number
    */
-   Openallyear: FieldObject<DataType.Number>;
+  Openallyear: FieldObject<DataType.Number>;
   /**
    * ### PeriodName
-   * 
+   *
    * Naam die een bepaalde openstellingsperiode van een parkeergebied, -garage of -terrein aanduidt.
    *
    * **Type**: Text
    */
-   Periodname: FieldObject<DataType.Text>;
+  Periodname: FieldObject<DataType.Text>;
   /**
    * ### StartOfPeriod
-   * 
+   *
    * Begindatum en -tijd van een periode waarin een bepaald parkeerfaciliteit is opengesteld.
    *
    * **Type**: Text
    */
-   Startofperiod: FieldObject<DataType.Text>;
-};
+  Startofperiod: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Areaid: Field("areaid", DataType.Text),
@@ -176,7 +176,7 @@ export const Info = {
   provider_name: "ParkerenParkingOpen",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-OPEN/figd-gux7",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/figd-gux7",
-}
+};
 
 /**
  * ### Open Data Parkeren: PARKING OPEN

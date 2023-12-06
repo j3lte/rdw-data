@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: TARIEFBEREKENING
@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateFare
-   * 
+   *
    * Datum tot wanneer een bepaalde tariefberekening geldig is.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ResponseData {
   enddatefare?: string;
   /**
    * ### FareCalculationCode
-   * 
+   *
    * Code van een bepaalde tariefberekening bij een gebiedsbeheerder.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ResponseData {
   farecalculationcode?: string;
   /**
    * ### FareCalculationDesc
-   * 
+   *
    * De omschrijving van een tariefberekening.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ResponseData {
   farecalculationdesc?: string;
   /**
    * ### PeriodNameTariff
-   * 
+   *
    * De naam van een tariefberekening.
    *
    * **Type**: Text
@@ -61,7 +61,7 @@ export interface ResponseData {
   periodnametariff?: string;
   /**
    * ### StartDateFare
-   * 
+   *
    * Datum waarop een bepaalde tariefberekening ingaat.
    *
    * **Type**: Number
@@ -69,7 +69,7 @@ export interface ResponseData {
   startdatefare?: string;
   /**
    * ### VATPercentage
-   * 
+   *
    * Het BTW percentage dat voor een bepaalde tariefberekening van toepassing is. De bedragen worden inclusief BTW vermeld, dus bij een percentage van 21% is de BTW 21/121 van het bedrag.
    *
    * **Type**: Number
@@ -94,61 +94,61 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-   Areamanagerid: FieldObject<DataType.Number>;
+  Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndDateFare
-   * 
+   *
    * Datum tot wanneer een bepaalde tariefberekening geldig is.
    *
    * **Type**: Number
    */
-   Enddatefare: FieldObject<DataType.Number>;
+  Enddatefare: FieldObject<DataType.Number>;
   /**
    * ### FareCalculationCode
-   * 
+   *
    * Code van een bepaalde tariefberekening bij een gebiedsbeheerder.
    *
    * **Type**: Text
    */
-   Farecalculationcode: FieldObject<DataType.Text>;
+  Farecalculationcode: FieldObject<DataType.Text>;
   /**
    * ### FareCalculationDesc
-   * 
+   *
    * De omschrijving van een tariefberekening.
    *
    * **Type**: Text
    */
-   Farecalculationdesc: FieldObject<DataType.Text>;
+  Farecalculationdesc: FieldObject<DataType.Text>;
   /**
    * ### PeriodNameTariff
-   * 
+   *
    * De naam van een tariefberekening.
    *
    * **Type**: Text
    */
-   Periodnametariff: FieldObject<DataType.Text>;
+  Periodnametariff: FieldObject<DataType.Text>;
   /**
    * ### StartDateFare
-   * 
+   *
    * Datum waarop een bepaalde tariefberekening ingaat.
    *
    * **Type**: Number
    */
-   Startdatefare: FieldObject<DataType.Number>;
+  Startdatefare: FieldObject<DataType.Number>;
   /**
    * ### VATPercentage
-   * 
+   *
    * Het BTW percentage dat voor een bepaalde tariefberekening van toepassing is. De bedragen worden inclusief BTW vermeld, dus bij een percentage van 21% is de BTW 21/121 van het bedrag.
    *
    * **Type**: Number
    */
-   Vatpercentage: FieldObject<DataType.Number>;
-};
+  Vatpercentage: FieldObject<DataType.Number>;
+}
 
 export const Fields: IFields = {
   Areamanagerid: Field("areamanagerid", DataType.Number),
@@ -176,7 +176,7 @@ export const Info = {
   provider_name: "ParkerenTariefberekening",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFBEREKENING/nfzq-8g7y",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nfzq-8g7y",
-}
+};
 
 /**
  * ### Open Data Parkeren: TARIEFBEREKENING

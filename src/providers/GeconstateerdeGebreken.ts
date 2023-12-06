@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Geconstateerde Gebreken
@@ -90,57 +90,60 @@ export interface IFields {
    *
    * **Type**: Number
    */
-   AantalGebrekenGeconstateerd: FieldObject<DataType.Number>;
+  AantalGebrekenGeconstateerd: FieldObject<DataType.Number>;
   /**
    * ### Gebrek identificatie
    *
    * **Type**: Text
    */
-   GebrekIdentificatie: FieldObject<DataType.Text>;
+  GebrekIdentificatie: FieldObject<DataType.Text>;
   /**
    * ### Kenteken
    *
    * **Type**: Text
    */
-   Kenteken: FieldObject<DataType.Text>;
+  Kenteken: FieldObject<DataType.Text>;
   /**
    * ### Meld datum door keuringsinstantie
    *
    * **Type**: Number
    */
-   MeldDatumDoorKeuringsinstantie: FieldObject<DataType.Number>;
+  MeldDatumDoorKeuringsinstantie: FieldObject<DataType.Number>;
   /**
    * ### Meld datum door keuringsinstantie DT
    *
    * **Type**: Calendar date
    */
-   MeldDatumDoorKeuringsinstantieDt: FieldObject<DataType.FloatingTimestamp>;
+  MeldDatumDoorKeuringsinstantieDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Meld tijd door keuringsinstantie
    *
    * **Type**: Number
    */
-   MeldTijdDoorKeuringsinstantie: FieldObject<DataType.Number>;
+  MeldTijdDoorKeuringsinstantie: FieldObject<DataType.Number>;
   /**
    * ### Soort erkenning keuringsinstantie
    *
    * **Type**: Text
    */
-   SoortErkenningKeuringsinstantie: FieldObject<DataType.Text>;
+  SoortErkenningKeuringsinstantie: FieldObject<DataType.Text>;
   /**
    * ### Soort erkenning omschrijving
    *
    * **Type**: Text
    */
-   SoortErkenningOmschrijving: FieldObject<DataType.Text>;
-};
+  SoortErkenningOmschrijving: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   AantalGebrekenGeconstateerd: Field("aantal_gebreken_geconstateerd", DataType.Number),
   GebrekIdentificatie: Field("gebrek_identificatie", DataType.Text),
   Kenteken: Field("kenteken", DataType.Text),
   MeldDatumDoorKeuringsinstantie: Field("meld_datum_door_keuringsinstantie", DataType.Number),
-  MeldDatumDoorKeuringsinstantieDt: Field("meld_datum_door_keuringsinstantie_dt", DataType.FloatingTimestamp),
+  MeldDatumDoorKeuringsinstantieDt: Field(
+    "meld_datum_door_keuringsinstantie_dt",
+    DataType.FloatingTimestamp,
+  ),
   MeldTijdDoorKeuringsinstantie: Field("meld_tijd_door_keuringsinstantie", DataType.Number),
   SoortErkenningKeuringsinstantie: Field("soort_erkenning_keuringsinstantie", DataType.Text),
   SoortErkenningOmschrijving: Field("soort_erkenning_omschrijving", DataType.Text),
@@ -163,7 +166,7 @@ export const Info = {
   provider_name: "GeconstateerdeGebreken",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/a34c-vvps",
-}
+};
 
 /**
  * ### Open Data RDW: Geconstateerde Gebreken

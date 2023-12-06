@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: AS Gegevens EEG Uitvoering
@@ -193,140 +193,140 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   AangedrevenAs: FieldObject<DataType.Text>;
+  AangedrevenAs: FieldObject<DataType.Text>;
   /**
    * ### Afstand volgende as bovengrens
    *
    * **Type**: Number
    */
-   AfstandVolgendeAsBovengrens: FieldObject<DataType.Number>;
+  AfstandVolgendeAsBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Afstand volgende as ondergrens
    *
    * **Type**: Number
    */
-   AfstandVolgendeAsOndergrens: FieldObject<DataType.Number>;
+  AfstandVolgendeAsOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Asnummer
    *
    * **Type**: Text
    */
-   Asnummer: FieldObject<DataType.Text>;
+  Asnummer: FieldObject<DataType.Text>;
   /**
    * ### Dubbele montage
    *
    * **Type**: Text
    */
-   DubbeleMontage: FieldObject<DataType.Text>;
+  DubbeleMontage: FieldObject<DataType.Text>;
   /**
    * ### EEG Uitvoeringscode
    *
    * **Type**: Text
    */
-   EegUitvoeringscode: FieldObject<DataType.Text>;
+  EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-   EegVariantcode: FieldObject<DataType.Text>;
+  EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Gelijkwaardig aan luchtvering
    *
    * **Type**: Text
    */
-   GelijkwaardigAanLuchtvering: FieldObject<DataType.Text>;
+  GelijkwaardigAanLuchtvering: FieldObject<DataType.Text>;
   /**
    * ### Gestuurde as indicator
    *
    * **Type**: Text
    */
-   GestuurdeAsIndicator: FieldObject<DataType.Text>;
+  GestuurdeAsIndicator: FieldObject<DataType.Text>;
   /**
    * ### Hefas
    *
    * **Type**: Text
    */
-   Hefas: FieldObject<DataType.Text>;
+  Hefas: FieldObject<DataType.Text>;
   /**
    * ### Luchtvering
    *
    * **Type**: Text
    */
-   Luchtvering: FieldObject<DataType.Text>;
+  Luchtvering: FieldObject<DataType.Text>;
   /**
    * ### Plaats as code
    *
    * **Type**: Text
    */
-   PlaatsAsCode: FieldObject<DataType.Text>;
+  PlaatsAsCode: FieldObject<DataType.Text>;
   /**
    * ### Rolstraal bovengrens
    *
    * **Type**: Number
    */
-   RolstraalBovengrens: FieldObject<DataType.Number>;
+  RolstraalBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Rolstraal ondergrens
    *
    * **Type**: Number
    */
-   RolstraalOndergrens: FieldObject<DataType.Number>;
+  RolstraalOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Snelheidssymbool ondergrens
    *
    * **Type**: Text
    */
-   SnelheidssymboolOndergrens: FieldObject<DataType.Text>;
+  SnelheidssymboolOndergrens: FieldObject<DataType.Text>;
   /**
    * ### Spoorbreedte bovengrens
    *
    * **Type**: Number
    */
-   SpoorbreedteBovengrens: FieldObject<DataType.Number>;
+  SpoorbreedteBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Spoorbreedte ondergrens
    *
    * **Type**: Number
    */
-   SpoorbreedteOndergrens: FieldObject<DataType.Number>;
+  SpoorbreedteOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max last as bovengrens
    *
    * **Type**: Number
    */
-   TechnMaxLastAsBovengrens: FieldObject<DataType.Number>;
+  TechnMaxLastAsBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max last as ondergrens
    *
    * **Type**: Number
    */
-   TechnMaxLastAsOndergrens: FieldObject<DataType.Number>;
+  TechnMaxLastAsOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max last asstel bovengr
    *
    * **Type**: Number
    */
-   TechnMaxLastAsstelBovengr: FieldObject<DataType.Number>;
+  TechnMaxLastAsstelBovengr: FieldObject<DataType.Number>;
   /**
    * ### Techn max last asstel ondergr
    *
    * **Type**: Number
    */
-   TechnMaxLastAsstelOndergr: FieldObject<DataType.Number>;
+  TechnMaxLastAsstelOndergr: FieldObject<DataType.Number>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-};
+  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+}
 
 export const Fields: IFields = {
   AangedrevenAs: Field("aangedreven_as", DataType.Text),
@@ -386,7 +386,7 @@ export const Info = {
   provider_name: "AsGegevensEegUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-AS-Gegevens-EEG-Uitvoering/ahsi-8uyu",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ahsi-8uyu",
-}
+};
 
 /**
  * ### Open Data RDW: AS Gegevens EEG Uitvoering

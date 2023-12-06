@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Carrosserie Uitvoering Nummerieke Code
@@ -81,48 +81,54 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   CarrosserieUitvoeringNumeriekEuropees: FieldObject<DataType.Text>;
+  CarrosserieUitvoeringNumeriekEuropees: FieldObject<DataType.Text>;
   /**
    * ### Carrosserie uitvoering numeriek volgnummer
    *
    * **Type**: Number
    */
-   CarrosserieUitvoeringNumeriekVolgnummer: FieldObject<DataType.Number>;
+  CarrosserieUitvoeringNumeriekVolgnummer: FieldObject<DataType.Number>;
   /**
    * ### Carrosserie volgnummer
    *
    * **Type**: Number
    */
-   CarrosserieVolgnummer: FieldObject<DataType.Number>;
+  CarrosserieVolgnummer: FieldObject<DataType.Number>;
   /**
    * ### EEG Uitvoeringscode
    *
    * **Type**: Text
    */
-   EegUitvoeringscode: FieldObject<DataType.Text>;
+  EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-   EegVariantcode: FieldObject<DataType.Text>;
+  EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-};
+  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+}
 
 export const Fields: IFields = {
-  CarrosserieUitvoeringNumeriekEuropees: Field("carrosserie_uitvoering_numeriek_europees", DataType.Text),
-  CarrosserieUitvoeringNumeriekVolgnummer: Field("carrosserie_uitvoering_numeriek_volgnummer", DataType.Number),
+  CarrosserieUitvoeringNumeriekEuropees: Field(
+    "carrosserie_uitvoering_numeriek_europees",
+    DataType.Text,
+  ),
+  CarrosserieUitvoeringNumeriekVolgnummer: Field(
+    "carrosserie_uitvoering_numeriek_volgnummer",
+    DataType.Number,
+  ),
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Number),
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
@@ -144,9 +150,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Carrosserie Uitvoering Nummerieke Code",
   provider_name: "CarrosserieUitvoeringNummeriekeCode",
-  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Nummerieke-Co/nypm-t8hx",
+  url:
+    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Nummerieke-Co/nypm-t8hx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nypm-t8hx",
-}
+};
 
 /**
  * ### Open Data RDW: Carrosserie Uitvoering Nummerieke Code

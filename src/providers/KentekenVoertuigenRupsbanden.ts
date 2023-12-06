@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_rupsbanden
@@ -81,44 +81,44 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   AangedrevenRupsbandIndicator: FieldObject<DataType.Text>;
+  AangedrevenRupsbandIndicator: FieldObject<DataType.Text>;
   /**
    * ### Geremde rupsband indicator
    *
    * **Type**: Text
    */
-   GeremdeRupsbandIndicator: FieldObject<DataType.Text>;
+  GeremdeRupsbandIndicator: FieldObject<DataType.Text>;
   /**
    * ### Kenteken
    *
    * **Type**: Text
    */
-   Kenteken: FieldObject<DataType.Text>;
+  Kenteken: FieldObject<DataType.Text>;
   /**
    * ### Rupsband set volgnummer
    *
    * **Type**: Number
    */
-   RupsbandSetVolgnr: FieldObject<DataType.Number>;
+  RupsbandSetVolgnr: FieldObject<DataType.Number>;
   /**
    * ### Technisch toelaatbaar maximum massa rupsbandset
    *
    * **Type**: Number
    */
-   TechnischToelaatbaarMaximum: FieldObject<DataType.Number>;
+  TechnischToelaatbaarMaximum: FieldObject<DataType.Number>;
   /**
    * ### Technisch toelaatbaar maximum massa rupsband set minimum
    *
    * **Type**: Number
    */
-   TechnischToelaatbaarMaximum1: FieldObject<DataType.Number>;
+  TechnischToelaatbaarMaximum1: FieldObject<DataType.Number>;
   /**
    * ### Technisch toelaatbaar maximum massa rupsband set maximum
    *
    * **Type**: Number
    */
-   TechnischToelaatbaarMaximum2: FieldObject<DataType.Number>;
-};
+  TechnischToelaatbaarMaximum2: FieldObject<DataType.Number>;
+}
 
 export const Fields: IFields = {
   AangedrevenRupsbandIndicator: Field("aangedreven_rupsband_indicator", DataType.Text),
@@ -144,9 +144,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Gekentekende_voertuigen_rupsbanden",
   provider_name: "KentekenVoertuigenRupsbanden",
-  url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_rupsbanden/3xwf-ince",
+  url:
+    "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_rupsbanden/3xwf-ince",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/3xwf-ince",
-}
+};
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_rupsbanden

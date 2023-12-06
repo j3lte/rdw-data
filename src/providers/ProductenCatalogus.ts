@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Producten Catalogus
@@ -69,32 +69,32 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   Eenheid: FieldObject<DataType.Text>;
+  Eenheid: FieldObject<DataType.Text>;
   /**
    * ### Omschrijving
    *
    * **Type**: Text
    */
-   Omschrijving: FieldObject<DataType.Text>;
+  Omschrijving: FieldObject<DataType.Text>;
   /**
    * ### Staatscourant indeling
    *
    * **Type**: Text
    */
-   StaatscourantIndeling: FieldObject<DataType.Text>;
+  StaatscourantIndeling: FieldObject<DataType.Text>;
   /**
    * ### Tarief
    *
    * **Type**: Text
    */
-   Tarief: FieldObject<DataType.Text>;
+  Tarief: FieldObject<DataType.Text>;
   /**
    * ### Tariefclustering
    *
    * **Type**: Text
    */
-   Tariefclustering: FieldObject<DataType.Text>;
-};
+  Tariefclustering: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Eenheid: Field("eenheid", DataType.Text),
@@ -118,7 +118,7 @@ export const Info = {
   provider_name: "ProductenCatalogus",
   url: "https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/v23s-d6km",
-}
+};
 
 /**
  * ### Open Data RDW: Producten Catalogus

@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Erkende Bedrijven
@@ -104,62 +104,62 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   ApiBedrijfErkenningen: FieldObject<DataType.Text>;
+  ApiBedrijfErkenningen: FieldObject<DataType.Text>;
   /**
    * ### Gevelnaam
    *
    * **Type**: Text
    */
-   Gevelnaam: FieldObject<DataType.Text>;
+  Gevelnaam: FieldObject<DataType.Text>;
   /**
    * ### Huisnummer
    *
    * **Type**: Text
    */
-   Huisnummer: FieldObject<DataType.Text>;
+  Huisnummer: FieldObject<DataType.Text>;
   /**
    * ### Huisnummer toevoeging
    *
    * **Type**: Text
    */
-   HuisnummerToevoeging: FieldObject<DataType.Text>;
+  HuisnummerToevoeging: FieldObject<DataType.Text>;
   /**
    * ### Naam bedrijf
    *
    * **Type**: Text
    */
-   NaamBedrijf: FieldObject<DataType.Text>;
+  NaamBedrijf: FieldObject<DataType.Text>;
   /**
    * ### Plaats
    *
    * **Type**: Text
    */
-   Plaats: FieldObject<DataType.Text>;
+  Plaats: FieldObject<DataType.Text>;
   /**
    * ### Postcode alfanumeriek
    *
    * **Type**: Text
    */
-   PostcodeAlfanumeriek: FieldObject<DataType.Text>;
+  PostcodeAlfanumeriek: FieldObject<DataType.Text>;
   /**
    * ### Postcode numeriek
    *
    * **Type**: Number
    */
-   PostcodeNumeriek: FieldObject<DataType.Number>;
+  PostcodeNumeriek: FieldObject<DataType.Number>;
   /**
    * ### Straat
    *
    * **Type**: Text
    */
-   Straat: FieldObject<DataType.Text>;
+  Straat: FieldObject<DataType.Text>;
   /**
    * ### Volgnummer
    *
    * **Type**: Number
    */
-   Volgnummer: FieldObject<DataType.Number>;
-};
+  Volgnummer: FieldObject<DataType.Number>;
+}
 
 export const Fields: IFields = {
   ApiBedrijfErkenningen: Field("api_bedrijf_erkenningen", DataType.Text),
@@ -193,7 +193,7 @@ export const Info = {
   provider_name: "ErkendeBedrijven",
   url: "https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/5k74-3jha",
-}
+};
 
 /**
  * ### Open Data RDW: Erkende Bedrijven

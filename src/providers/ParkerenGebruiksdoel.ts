@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: GEBRUIKSDOEL
@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateUsageId
-   * 
+   *
    * Eerste dag waarop een gebruiksdoel niet meer gehanteerd wordt
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ResponseData {
   enddateusageid?: string;
   /**
    * ### SpecificationIndicator
-   * 
+   *
    * Indicator die aangeeft of het gebruiksdoel al dan niet verbijzonderd mag worden. De gebruiksdoelen die landelijk gebruikt worden (door alle rechtverwervers in alle aangesloten gemeenten) mogen niet verder verbijzonderd  worden, gebruiksdoelen die binnen n gebiedsbeheerder gebruikt worden wel. De codering is: J: dit gebruiksdoel mag verbijzonderd worden N: dit gebruiksdoel mag NIET verbijzonderd worden.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ResponseData {
   specificationindicator?: string;
   /**
    * ### StartDateUsageId
-   * 
+   *
    * Datum vanaf wanneer een gebruiksdoel gehanteerd wordt
    *
    * **Type**: Number
@@ -53,7 +53,7 @@ export interface ResponseData {
   startdateusageid?: string;
   /**
    * ### SuperiorAreaManagerId
-   * 
+   *
    * De identificatie van de gebiedsbeheerder van het gebruiksdoel dat als bovenliggend in de hirarchie is geregistreerd. Standaard is dit dezelfde code als van het gebruiksdoel zelf, maar er kan eventueel verwezen worden naar algemene gebruiksdoelen.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ResponseData {
   superiorareamanagerid?: string;
   /**
    * ### SuperiorUsageId
-   * 
+   *
    * Code van het gebruiksdoel dat bovenliggend is in de hirarchie. Voor een juiste interpretatie moet ook de SuperiorAreaManagerId meegenomen worden.
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ResponseData {
   superiorusageid?: string;
   /**
    * ### UsageId
-   * 
+   *
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
    *
    * **Type**: Text
@@ -77,7 +77,7 @@ export interface ResponseData {
   usageid?: string;
   /**
    * ### UsageIdDesc
-   * 
+   *
    * Omschrijving van een gebruiksdoel
    *
    * **Type**: Text
@@ -103,69 +103,69 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-   Areamanagerid: FieldObject<DataType.Number>;
+  Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndDateUsageId
-   * 
+   *
    * Eerste dag waarop een gebruiksdoel niet meer gehanteerd wordt
    *
    * **Type**: Number
    */
-   Enddateusageid: FieldObject<DataType.Number>;
+  Enddateusageid: FieldObject<DataType.Number>;
   /**
    * ### SpecificationIndicator
-   * 
+   *
    * Indicator die aangeeft of het gebruiksdoel al dan niet verbijzonderd mag worden. De gebruiksdoelen die landelijk gebruikt worden (door alle rechtverwervers in alle aangesloten gemeenten) mogen niet verder verbijzonderd  worden, gebruiksdoelen die binnen n gebiedsbeheerder gebruikt worden wel. De codering is: J: dit gebruiksdoel mag verbijzonderd worden N: dit gebruiksdoel mag NIET verbijzonderd worden.
    *
    * **Type**: Text
    */
-   Specificationindicator: FieldObject<DataType.Text>;
+  Specificationindicator: FieldObject<DataType.Text>;
   /**
    * ### StartDateUsageId
-   * 
+   *
    * Datum vanaf wanneer een gebruiksdoel gehanteerd wordt
    *
    * **Type**: Number
    */
-   Startdateusageid: FieldObject<DataType.Number>;
+  Startdateusageid: FieldObject<DataType.Number>;
   /**
    * ### SuperiorAreaManagerId
-   * 
+   *
    * De identificatie van de gebiedsbeheerder van het gebruiksdoel dat als bovenliggend in de hirarchie is geregistreerd. Standaard is dit dezelfde code als van het gebruiksdoel zelf, maar er kan eventueel verwezen worden naar algemene gebruiksdoelen.
    *
    * **Type**: Number
    */
-   Superiorareamanagerid: FieldObject<DataType.Number>;
+  Superiorareamanagerid: FieldObject<DataType.Number>;
   /**
    * ### SuperiorUsageId
-   * 
+   *
    * Code van het gebruiksdoel dat bovenliggend is in de hirarchie. Voor een juiste interpretatie moet ook de SuperiorAreaManagerId meegenomen worden.
    *
    * **Type**: Text
    */
-   Superiorusageid: FieldObject<DataType.Text>;
+  Superiorusageid: FieldObject<DataType.Text>;
   /**
    * ### UsageId
-   * 
+   *
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
    *
    * **Type**: Text
    */
-   Usageid: FieldObject<DataType.Text>;
+  Usageid: FieldObject<DataType.Text>;
   /**
    * ### UsageIdDesc
-   * 
+   *
    * Omschrijving van een gebruiksdoel
    *
    * **Type**: Text
    */
-   Usageiddesc: FieldObject<DataType.Text>;
-};
+  Usageiddesc: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Areamanagerid: Field("areamanagerid", DataType.Number),
@@ -195,7 +195,7 @@ export const Info = {
   provider_name: "ParkerenGebruiksdoel",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBRUIKSDOEL/qidm-7mkf",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/qidm-7mkf",
-}
+};
 
 /**
  * ### Open Data Parkeren: GEBRUIKSDOEL

@@ -29,7 +29,7 @@ Node:
 <!-- START FUNCTIONS -->
 ## API
 
-These are auto generated providers and use `soda-query@0.4.4`.
+These are auto generated providers and use `soda-query@0.4.5`.
 
 ### Overview
 

@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_bijzonderheden
@@ -74,38 +74,38 @@ export interface IFields {
    *
    * **Type**: Number
    */
-   BijzonderheidCode: FieldObject<DataType.Number>;
+  BijzonderheidCode: FieldObject<DataType.Number>;
   /**
    * ### Bijzonderheid code omschrijving
    *
    * **Type**: Text
    */
-   BijzonderheidCode1: FieldObject<DataType.Text>;
+  BijzonderheidCode1: FieldObject<DataType.Text>;
   /**
    * ### Bijzonderheid eenheid
    *
    * **Type**: Text
    */
-   BijzonderheidEenheid: FieldObject<DataType.Text>;
+  BijzonderheidEenheid: FieldObject<DataType.Text>;
   /**
    * ### Bijzonderheid variabele tekst
    *
    * **Type**: Text
    */
-   BijzonderheidVariabeleTekst: FieldObject<DataType.Text>;
+  BijzonderheidVariabeleTekst: FieldObject<DataType.Text>;
   /**
    * ### Bijzonderheid volgnummer
    *
    * **Type**: Number
    */
-   BijzonderheidVolgnummer: FieldObject<DataType.Number>;
+  BijzonderheidVolgnummer: FieldObject<DataType.Number>;
   /**
    * ### Kenteken
    *
    * **Type**: Text
    */
-   Kenteken: FieldObject<DataType.Text>;
-};
+  Kenteken: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   BijzonderheidCode: Field("bijzonderheid_code", DataType.Number),
@@ -129,9 +129,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Gekentekende_voertuigen_bijzonderheden",
   provider_name: "KentekenVoertuigenBijzonderheden",
-  url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_bijzonderhed/7ug8-2dtt",
+  url:
+    "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_bijzonderhed/7ug8-2dtt",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/7ug8-2dtt",
-}
+};
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_bijzonderheden

@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for GEO PenR
@@ -48,7 +48,7 @@ export interface ResponseData {
    *
    * **Type**: Point
    */
-  location?: { latitude: string; longitude: string; human_address: null | string; };
+  location?: { latitude: string; longitude: string; human_address: null | string };
   /**
    * ### Location (address)
    *
@@ -111,68 +111,68 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   Areadesc: FieldObject<DataType.Text>;
+  Areadesc: FieldObject<DataType.Text>;
   /**
    * ### AreaId
    *
    * **Type**: Text
    */
-   Areaid: FieldObject<DataType.Text>;
+  Areaid: FieldObject<DataType.Text>;
   /**
    * ### AreaManagerId
    *
    * **Type**: Number
    */
-   Areamanagerid: FieldObject<DataType.Number>;
+  Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndDataArea
    *
    * **Type**: Number
    */
-   Enddataarea: FieldObject<DataType.Number>;
+  Enddataarea: FieldObject<DataType.Number>;
   /**
    * ### Location
    *
    * **Type**: Point
    */
-   Location: FieldObject<DataType.Point>;
+  Location: FieldObject<DataType.Point>;
   /**
    * ### Location (address)
    *
    * **Type**: Text
    */
-   LocationAddress: FieldObject<DataType.Text>;
+  LocationAddress: FieldObject<DataType.Text>;
   /**
    * ### Location (city)
    *
    * **Type**: Text
    */
-   LocationCity: FieldObject<DataType.Text>;
+  LocationCity: FieldObject<DataType.Text>;
   /**
    * ### Location (state)
    *
    * **Type**: Text
    */
-   LocationState: FieldObject<DataType.Text>;
+  LocationState: FieldObject<DataType.Text>;
   /**
    * ### Location (zip)
    *
    * **Type**: Text
    */
-   LocationZip: FieldObject<DataType.Text>;
+  LocationZip: FieldObject<DataType.Text>;
   /**
    * ### StartDataArea
    *
    * **Type**: Number
    */
-   Startdataarea: FieldObject<DataType.Number>;
+  Startdataarea: FieldObject<DataType.Number>;
   /**
    * ### UsageId
    *
    * **Type**: Text
    */
-   Usageid: FieldObject<DataType.Text>;
-};
+  Usageid: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Areadesc: Field("areadesc", DataType.Text),
@@ -208,7 +208,7 @@ export const Info = {
   provider_name: "GeoPenr",
   url: "https://opendata.rdw.nl/Parkeren/GEO-PenR/6wzd-evwu",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/6wzd-evwu",
-}
+};
 
 /**
  * ### GEO PenR

@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: PARKEERGEBIED CONTACTPERSOON
@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### ContactPersonId
-   * 
+   *
    * Identificatiecode van de contactpersoon.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ResponseData {
   contactpersonid?: string;
   /**
    * ### ValidityEndOfPeriod
-   * 
+   *
    * Datum en tijd van het einde van een periode waarin gegevens van
    * een contactpersoon geldig zijn.
    *
@@ -54,7 +54,7 @@ export interface ResponseData {
   validityendofperiod?: string;
   /**
    * ### ValidityStartOfPeriod
-   * 
+   *
    * Datum en tijd van het begin van een periode waarin gegevens van
    * een contactpersoon geldig zijn.
    *
@@ -78,47 +78,47 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
    */
-   Areaid: FieldObject<DataType.Text>;
+  Areaid: FieldObject<DataType.Text>;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Text
    */
-   Areamanagerid: FieldObject<DataType.Text>;
+  Areamanagerid: FieldObject<DataType.Text>;
   /**
    * ### ContactPersonId
-   * 
+   *
    * Identificatiecode van de contactpersoon.
    *
    * **Type**: Text
    */
-   Contactpersonid: FieldObject<DataType.Text>;
+  Contactpersonid: FieldObject<DataType.Text>;
   /**
    * ### ValidityEndOfPeriod
-   * 
+   *
    * Datum en tijd van het einde van een periode waarin gegevens van
    * een contactpersoon geldig zijn.
    *
    * **Type**: Text
    */
-   Validityendofperiod: FieldObject<DataType.Text>;
+  Validityendofperiod: FieldObject<DataType.Text>;
   /**
    * ### ValidityStartOfPeriod
-   * 
+   *
    * Datum en tijd van het begin van een periode waarin gegevens van
    * een contactpersoon geldig zijn.
    *
    * **Type**: Text
    */
-   Validitystartofperiod: FieldObject<DataType.Text>;
-};
+  Validitystartofperiod: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Areaid: Field("areaid", DataType.Text),
@@ -142,7 +142,7 @@ export const Info = {
   provider_name: "ParkerenParkeergebiedContactpersoon",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED-CONTACTPERSOON/69hx-t283",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/69hx-t283",
-}
+};
 
 /**
  * ### Open Data Parkeren: PARKEERGEBIED CONTACTPERSOON

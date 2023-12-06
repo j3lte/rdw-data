@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Toegevoegde Objecten
@@ -111,68 +111,68 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   ClassificatieToegevoegdObj: FieldObject<DataType.Text>;
+  ClassificatieToegevoegdObj: FieldObject<DataType.Text>;
   /**
    * ### Demontagedatum
    *
    * **Type**: Number
    */
-   Demontagedatum: FieldObject<DataType.Number>;
+  Demontagedatum: FieldObject<DataType.Number>;
   /**
    * ### Demontagedatum DT
    *
    * **Type**: Calendar date
    */
-   DemontagedatumDt: FieldObject<DataType.FloatingTimestamp>;
+  DemontagedatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Gasinstallatie tank inhoud
    *
    * **Type**: Number
    */
-   GasinstallatieTankInhoud: FieldObject<DataType.Number>;
+  GasinstallatieTankInhoud: FieldObject<DataType.Number>;
   /**
    * ### Kenteken
    *
    * **Type**: Text
    */
-   Kenteken: FieldObject<DataType.Text>;
+  Kenteken: FieldObject<DataType.Text>;
   /**
    * ### Merk object toegevoegd
    *
    * **Type**: Text
    */
-   MerkObjectToegevoegd: FieldObject<DataType.Text>;
+  MerkObjectToegevoegd: FieldObject<DataType.Text>;
   /**
    * ### Merkcode toegevoegd object
    *
    * **Type**: Text
    */
-   MerkcodeToegevoegdObject: FieldObject<DataType.Text>;
+  MerkcodeToegevoegdObject: FieldObject<DataType.Text>;
   /**
    * ### Montagedatum
    *
    * **Type**: Number
    */
-   Montagedatum: FieldObject<DataType.Number>;
+  Montagedatum: FieldObject<DataType.Number>;
   /**
    * ### Montagedatum DT
    *
    * **Type**: Calendar date
    */
-   MontagedatumDt: FieldObject<DataType.FloatingTimestamp>;
+  MontagedatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Soort toe te voegen object omschrijving
    *
    * **Type**: Text
    */
-   SoortToeTeVoegenObjectOmschrijving: FieldObject<DataType.Text>;
+  SoortToeTeVoegenObjectOmschrijving: FieldObject<DataType.Text>;
   /**
    * ### Uitvoerings volgnr toegev obj
    *
    * **Type**: Number
    */
-   UitvoeringsVolgnrToegevObj: FieldObject<DataType.Number>;
-};
+  UitvoeringsVolgnrToegevObj: FieldObject<DataType.Number>;
+}
 
 export const Fields: IFields = {
   ClassificatieToegevoegdObj: Field("classificatie_toegevoegd_obj", DataType.Text),
@@ -184,7 +184,10 @@ export const Fields: IFields = {
   MerkcodeToegevoegdObject: Field("merkcode_toegevoegd_object", DataType.Text),
   Montagedatum: Field("montagedatum", DataType.Number),
   MontagedatumDt: Field("montagedatum_dt", DataType.FloatingTimestamp),
-  SoortToeTeVoegenObjectOmschrijving: Field("soort_toe_te_voegen_object_omschrijving", DataType.Text),
+  SoortToeTeVoegenObjectOmschrijving: Field(
+    "soort_toe_te_voegen_object_omschrijving",
+    DataType.Text,
+  ),
   UitvoeringsVolgnrToegevObj: Field("uitvoerings_volgnr_toegev_obj", DataType.Number),
 };
 
@@ -208,7 +211,7 @@ export const Info = {
   provider_name: "ToegevoegdeObjecten",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/sghb-dzxx",
-}
+};
 
 /**
  * ### Open Data RDW: Toegevoegde Objecten

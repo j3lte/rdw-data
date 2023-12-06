@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_assen
@@ -19,7 +19,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### Aangedreven as
-   * 
+   *
    * Ja/Nee indicator die aangeeft of de betreffende as aangedreven is of niet.
    * Dit gegeven is alleen van belang voor bedrijfsauto's en bussen met een wettelijk toegestane maximummassa boven de 3500 kg.
    *
@@ -28,7 +28,7 @@ export interface ResponseData {
   aangedreven_as?: string;
   /**
    * ### Aantal assen
-   * 
+   *
    * Het aantal assen van een voertuig.
    *
    * **Type**: Text
@@ -54,7 +54,7 @@ export interface ResponseData {
   afstand_tot_volgende_as_voertuig_minimum?: string;
   /**
    * ### As nummer
-   * 
+   *
    * Het nummer van de (fysieke) as vanaf de voorzijde van het voertuig gerekend. Bij pendelassen wordt het nummer bepaald van links naar rechts, gezien vanuit de rijrichting.
    *
    * **Type**: Text
@@ -68,7 +68,7 @@ export interface ResponseData {
   geremde_as_indicator?: string;
   /**
    * ### Hefas
-   * 
+   *
    * Indicator die aangeeft of een as geheven kan worden, d.w.z. zodanig omhoog  bewogen dat de wielen tijdens het rijden het wegdek niet raken.
    * Deze mag alleen de waarde 'J' bevatten
    * - voor bedrijfsauto als AS-NR-VRTG > 1 en AANT-ASSEN >= 3 en
@@ -80,7 +80,7 @@ export interface ResponseData {
   hefas?: string;
   /**
    * ### Kenteken
-   * 
+   *
    * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
    *
    * **Type**: Text
@@ -100,7 +100,7 @@ export interface ResponseData {
   maximum_last_as_technisch_minimum?: string;
   /**
    * ### Plaatscode as
-   * 
+   *
    * Codering die aangeeft of het voertuig een vooras of achteras heeft.
    *
    * **Type**: Text
@@ -108,7 +108,7 @@ export interface ResponseData {
   plaatscode_as?: string;
   /**
    * ### Spoorbreedte
-   * 
+   *
    * Dit is de spoorbreedte van een as van een voertuig.
    * Met spoorbreedte van een as wordt de horizontale afstand tussen het hart van het linker- en rechterwiel van die as bedoeld, gemeten op het wegdek.
    * Een samenstel van wielen die op 1 wielnaaf zijn gemonteerd (dubbellucht) wordt dit geval aangemerkt als 1 wiel. De RDW legt dit gegeven alleen vast bij personenauto's, bedrijfsauto's en bussen met een wettelijk toegestane maximummassa niet meer dan 3500 kg.
@@ -118,7 +118,7 @@ export interface ResponseData {
   spoorbreedte?: string;
   /**
    * ### Technisch toegestane maximum aslast
-   * 
+   *
    * De technisch toegestane maximummassa van de as, opgegeven door de fabrikant van het voertuig.
    *
    * **Type**: Text
@@ -126,7 +126,7 @@ export interface ResponseData {
   technisch_toegestane_maximum_aslast?: string;
   /**
    * ### Weggedrag code
-   * 
+   *
    * Code die aangeeft wat het weggedrag is van een aangedreven as. De volgende codes worden gebruikt:
    * L = Luchtvering
    * G = Gelijkwaardig aan luchtvering
@@ -138,7 +138,7 @@ export interface ResponseData {
   weggedrag_code?: string;
   /**
    * ### Wettelijk toegestane maximum aslast
-   * 
+   *
    * De wettelijk toegestane maximummassa op de as, afgeleid van de technisch toegestane maximummassa. Zo nodig is deze verminderd aan de hand van wettelijke bepalingen of op verzoek van de aanvrager van het kentekenbewijs.
    *
    * **Type**: Text
@@ -172,56 +172,56 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### Aangedreven as
-   * 
+   *
    * Ja/Nee indicator die aangeeft of de betreffende as aangedreven is of niet.
    * Dit gegeven is alleen van belang voor bedrijfsauto's en bussen met een wettelijk toegestane maximummassa boven de 3500 kg.
    *
    * **Type**: Text
    */
-   AangedrevenAs: FieldObject<DataType.Text>;
+  AangedrevenAs: FieldObject<DataType.Text>;
   /**
    * ### Aantal assen
-   * 
+   *
    * Het aantal assen van een voertuig.
    *
    * **Type**: Text
    */
-   AantalAssen: FieldObject<DataType.Text>;
+  AantalAssen: FieldObject<DataType.Text>;
   /**
    * ### Afstand tot volgende as voertuig
    *
    * **Type**: Number
    */
-   AfstandTotVolgendeAsVoertuig: FieldObject<DataType.Number>;
+  AfstandTotVolgendeAsVoertuig: FieldObject<DataType.Number>;
   /**
    * ### Afstand tot volgende as voertuig maximum
    *
    * **Type**: Number
    */
-   AfstandTotVolgendeAsVoertuigMaximum: FieldObject<DataType.Number>;
+  AfstandTotVolgendeAsVoertuigMaximum: FieldObject<DataType.Number>;
   /**
    * ### Afstand tot volgende as voertuig minimum
    *
    * **Type**: Number
    */
-   AfstandTotVolgendeAsVoertuigMinimum: FieldObject<DataType.Number>;
+  AfstandTotVolgendeAsVoertuigMinimum: FieldObject<DataType.Number>;
   /**
    * ### As nummer
-   * 
+   *
    * Het nummer van de (fysieke) as vanaf de voorzijde van het voertuig gerekend. Bij pendelassen wordt het nummer bepaald van links naar rechts, gezien vanuit de rijrichting.
    *
    * **Type**: Text
    */
-   AsNummer: FieldObject<DataType.Text>;
+  AsNummer: FieldObject<DataType.Text>;
   /**
    * ### Geremde as indicator
    *
    * **Type**: Text
    */
-   GeremdeAsIndicator: FieldObject<DataType.Text>;
+  GeremdeAsIndicator: FieldObject<DataType.Text>;
   /**
    * ### Hefas
-   * 
+   *
    * Indicator die aangeeft of een as geheven kan worden, d.w.z. zodanig omhoog  bewogen dat de wielen tijdens het rijden het wegdek niet raken.
    * Deze mag alleen de waarde 'J' bevatten
    * - voor bedrijfsauto als AS-NR-VRTG > 1 en AANT-ASSEN >= 3 en
@@ -230,56 +230,56 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   Hefas: FieldObject<DataType.Text>;
+  Hefas: FieldObject<DataType.Text>;
   /**
    * ### Kenteken
-   * 
+   *
    * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
    *
    * **Type**: Text
    */
-   Kenteken: FieldObject<DataType.Text>;
+  Kenteken: FieldObject<DataType.Text>;
   /**
    * ### Maximum last as technisch maximum
    *
    * **Type**: Number
    */
-   MaximumLastAsTechnischMaximum: FieldObject<DataType.Number>;
+  MaximumLastAsTechnischMaximum: FieldObject<DataType.Number>;
   /**
    * ### Maximum last as technisch minimum
    *
    * **Type**: Number
    */
-   MaximumLastAsTechnischMinimum: FieldObject<DataType.Number>;
+  MaximumLastAsTechnischMinimum: FieldObject<DataType.Number>;
   /**
    * ### Plaatscode as
-   * 
+   *
    * Codering die aangeeft of het voertuig een vooras of achteras heeft.
    *
    * **Type**: Text
    */
-   PlaatscodeAs: FieldObject<DataType.Text>;
+  PlaatscodeAs: FieldObject<DataType.Text>;
   /**
    * ### Spoorbreedte
-   * 
+   *
    * Dit is de spoorbreedte van een as van een voertuig.
    * Met spoorbreedte van een as wordt de horizontale afstand tussen het hart van het linker- en rechterwiel van die as bedoeld, gemeten op het wegdek.
    * Een samenstel van wielen die op 1 wielnaaf zijn gemonteerd (dubbellucht) wordt dit geval aangemerkt als 1 wiel. De RDW legt dit gegeven alleen vast bij personenauto's, bedrijfsauto's en bussen met een wettelijk toegestane maximummassa niet meer dan 3500 kg.
    *
    * **Type**: Text
    */
-   Spoorbreedte: FieldObject<DataType.Text>;
+  Spoorbreedte: FieldObject<DataType.Text>;
   /**
    * ### Technisch toegestane maximum aslast
-   * 
+   *
    * De technisch toegestane maximummassa van de as, opgegeven door de fabrikant van het voertuig.
    *
    * **Type**: Text
    */
-   TechnischToegestaneMaximumAslast: FieldObject<DataType.Text>;
+  TechnischToegestaneMaximumAslast: FieldObject<DataType.Text>;
   /**
    * ### Weggedrag code
-   * 
+   *
    * Code die aangeeft wat het weggedrag is van een aangedreven as. De volgende codes worden gebruikt:
    * L = Luchtvering
    * G = Gelijkwaardig aan luchtvering
@@ -288,23 +288,29 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   WeggedragCode: FieldObject<DataType.Text>;
+  WeggedragCode: FieldObject<DataType.Text>;
   /**
    * ### Wettelijk toegestane maximum aslast
-   * 
+   *
    * De wettelijk toegestane maximummassa op de as, afgeleid van de technisch toegestane maximummassa. Zo nodig is deze verminderd aan de hand van wettelijke bepalingen of op verzoek van de aanvrager van het kentekenbewijs.
    *
    * **Type**: Text
    */
-   WettelijkToegestaneMaximumAslast: FieldObject<DataType.Text>;
-};
+  WettelijkToegestaneMaximumAslast: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   AangedrevenAs: Field("aangedreven_as", DataType.Text),
   AantalAssen: Field("aantal_assen", DataType.Text),
   AfstandTotVolgendeAsVoertuig: Field("afstand_tot_volgende_as_voertuig", DataType.Number),
-  AfstandTotVolgendeAsVoertuigMaximum: Field("afstand_tot_volgende_as_voertuig_maximum", DataType.Number),
-  AfstandTotVolgendeAsVoertuigMinimum: Field("afstand_tot_volgende_as_voertuig_minimum", DataType.Number),
+  AfstandTotVolgendeAsVoertuigMaximum: Field(
+    "afstand_tot_volgende_as_voertuig_maximum",
+    DataType.Number,
+  ),
+  AfstandTotVolgendeAsVoertuigMinimum: Field(
+    "afstand_tot_volgende_as_voertuig_minimum",
+    DataType.Number,
+  ),
   AsNummer: Field("as_nummer", DataType.Text),
   GeremdeAsIndicator: Field("geremde_as_indicator", DataType.Text),
   Hefas: Field("hefas", DataType.Text),
@@ -343,7 +349,7 @@ export const Info = {
   provider_name: "KentekenVoertuigenAssen",
   url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_assen/3huj-srit",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/3huj-srit",
-}
+};
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_assen

@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Brandstoffen_op_PC4
@@ -67,32 +67,32 @@ export interface IFields {
    *
    * **Type**: Number
    */
-   Aantal: FieldObject<DataType.Number>;
+  Aantal: FieldObject<DataType.Number>;
   /**
    * ### Brandstof
    *
    * **Type**: Text
    */
-   Brandstof: FieldObject<DataType.Text>;
+  Brandstof: FieldObject<DataType.Text>;
   /**
    * ### Extern oplaadbaar
    *
    * **Type**: Text
    */
-   ExternOplaadbaar: FieldObject<DataType.Text>;
+  ExternOplaadbaar: FieldObject<DataType.Text>;
   /**
    * ### Postcode
    *
    * **Type**: Number
    */
-   Postcode: FieldObject<DataType.Number>;
+  Postcode: FieldObject<DataType.Number>;
   /**
    * ### Voertuigsoort
    *
    * **Type**: Text
    */
-   Voertuigsoort: FieldObject<DataType.Text>;
-};
+  Voertuigsoort: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Aantal: Field("aantal", DataType.Number),
@@ -116,7 +116,7 @@ export const Info = {
   provider_name: "BrandstoffenOpPc4",
   url: "https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/8wbe-pu7d",
-}
+};
 
 /**
  * ### Brandstoffen_op_PC4

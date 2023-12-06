@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Plaatsaanduiding Uitvoering
@@ -88,50 +88,50 @@ export interface IFields {
    *
    * **Type**: Text
    */
-   EegUitvoeringscode: FieldObject<DataType.Text>;
+  EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-   EegVariantcode: FieldObject<DataType.Text>;
+  EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Plaats aanduiding volgnummer
    *
    * **Type**: Number
    */
-   PlaatsAanduidingVolgnummer: FieldObject<DataType.Number>;
+  PlaatsAanduidingVolgnummer: FieldObject<DataType.Number>;
   /**
    * ### Plaatsaanduiding registratie datum
    *
    * **Type**: Number
    */
-   PlaatsaanduidingRegistratieDatum: FieldObject<DataType.Number>;
+  PlaatsaanduidingRegistratieDatum: FieldObject<DataType.Number>;
   /**
    * ### Plaatsaanduiding registratie datum_DT
    *
    * **Type**: Calendar date
    */
-   PlaatsaanduidingRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
+  PlaatsaanduidingRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Plaatscode voeruig identificatie
    *
    * **Type**: Text
    */
-   PlaatscodeVoeruigIdentificatie: FieldObject<DataType.Text>;
+  PlaatscodeVoeruigIdentificatie: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-};
+  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+}
 
 export const Fields: IFields = {
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
@@ -139,7 +139,10 @@ export const Fields: IFields = {
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   PlaatsAanduidingVolgnummer: Field("plaats_aanduiding_volgnummer", DataType.Number),
   PlaatsaanduidingRegistratieDatum: Field("plaatsaanduiding_registratie_datum", DataType.Number),
-  PlaatsaanduidingRegistratieDatumDt: Field("plaatsaanduiding_registratie_datum_dt", DataType.FloatingTimestamp),
+  PlaatsaanduidingRegistratieDatumDt: Field(
+    "plaatsaanduiding_registratie_datum_dt",
+    DataType.FloatingTimestamp,
+  ),
   PlaatscodeVoeruigIdentificatie: Field("plaatscode_voeruig_identificatie", DataType.Text),
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
@@ -159,9 +162,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Plaatsaanduiding Uitvoering",
   provider_name: "PlaatsaanduidingUitvoering",
-  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Plaatsaanduiding-Uitvoering/mt8t-4ep4",
+  url:
+    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Plaatsaanduiding-Uitvoering/mt8t-4ep4",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mt8t-4ep4",
-}
+};
 
 /**
  * ### Open Data RDW: Plaatsaanduiding Uitvoering

@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: GEBIED
@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AreaDesc
-   * 
+   *
    * Een omschrijving die aan een parkeergebied of -faciliteit is gegeven.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ResponseData {
   areadesc?: string;
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateArea
-   * 
+   *
    * Datum waarop een parkeergebied of -faciliteit niet meer geldig is
    *
    * **Type**: Number
@@ -53,7 +53,7 @@ export interface ResponseData {
   enddatearea?: string;
   /**
    * ### StartDateArea
-   * 
+   *
    * Datum vanaf wanneer een parkeergebied of -faciliteit geldig
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ResponseData {
   startdatearea?: string;
   /**
    * ### UsageId
-   * 
+   *
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hirarchie.
    *
    * **Type**: Text
@@ -85,53 +85,53 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaDesc
-   * 
+   *
    * Een omschrijving die aan een parkeergebied of -faciliteit is gegeven.
    *
    * **Type**: Text
    */
-   Areadesc: FieldObject<DataType.Text>;
+  Areadesc: FieldObject<DataType.Text>;
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
    */
-   Areaid: FieldObject<DataType.Text>;
+  Areaid: FieldObject<DataType.Text>;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-   Areamanagerid: FieldObject<DataType.Number>;
+  Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndDateArea
-   * 
+   *
    * Datum waarop een parkeergebied of -faciliteit niet meer geldig is
    *
    * **Type**: Number
    */
-   Enddatearea: FieldObject<DataType.Number>;
+  Enddatearea: FieldObject<DataType.Number>;
   /**
    * ### StartDateArea
-   * 
+   *
    * Datum vanaf wanneer een parkeergebied of -faciliteit geldig
    *
    * **Type**: Number
    */
-   Startdatearea: FieldObject<DataType.Number>;
+  Startdatearea: FieldObject<DataType.Number>;
   /**
    * ### UsageId
-   * 
+   *
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hirarchie.
    *
    * **Type**: Text
    */
-   Usageid: FieldObject<DataType.Text>;
-};
+  Usageid: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Areadesc: Field("areadesc", DataType.Text),
@@ -157,7 +157,7 @@ export const Info = {
   provider_name: "ParkerenGebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/adw6-9hsg",
-}
+};
 
 /**
  * ### Open Data Parkeren: GEBIED

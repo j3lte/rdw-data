@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Terugroep_voertuig_merk_type
@@ -19,7 +19,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### Merk
-   * 
+   *
    * Het merk waarvoor de terugroepactie is georganiseerd. Er kunnen meerdere merken van toepassing zijn.
    *
    * **Type**: Text
@@ -27,7 +27,7 @@ export interface ResponseData {
   merk?: string;
   /**
    * ### Referentiecode RDW
-   * 
+   *
    * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
    *
    * **Type**: Text
@@ -35,7 +35,7 @@ export interface ResponseData {
   referentiecode_rdw?: string;
   /**
    * ### Type
-   * 
+   *
    * Het type, waarvoor de terugroepactie is georganiseerd. Na 1995 is de term type op het kentekenbewijs vervangen door handelsbenaming. Er kunnen meerdere types van toepassing zijn.
    *
    * **Type**: Text
@@ -56,29 +56,29 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### Merk
-   * 
+   *
    * Het merk waarvoor de terugroepactie is georganiseerd. Er kunnen meerdere merken van toepassing zijn.
    *
    * **Type**: Text
    */
-   Merk: FieldObject<DataType.Text>;
+  Merk: FieldObject<DataType.Text>;
   /**
    * ### Referentiecode RDW
-   * 
+   *
    * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
    *
    * **Type**: Text
    */
-   ReferentiecodeRdw: FieldObject<DataType.Text>;
+  ReferentiecodeRdw: FieldObject<DataType.Text>;
   /**
    * ### Type
-   * 
+   *
    * Het type, waarvoor de terugroepactie is georganiseerd. Na 1995 is de term type op het kentekenbewijs vervangen door handelsbenaming. Er kunnen meerdere types van toepassing zijn.
    *
    * **Type**: Text
    */
-   Type: FieldObject<DataType.Text>;
-};
+  Type: FieldObject<DataType.Text>;
+}
 
 export const Fields: IFields = {
   Merk: Field("merk", DataType.Text),
@@ -96,9 +96,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Terugroep_voertuig_merk_type",
   provider_name: "TerugroepVoertuigMerkType",
-  url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e",
+  url:
+    "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mu2x-mu5e",
-}
+};
 
 /**
  * ### Open Data RDW: Terugroep_voertuig_merk_type
