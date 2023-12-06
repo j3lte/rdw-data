@@ -81,7 +81,7 @@ const renderAndWrite = async (template: string, item: WithSodaVersion) => {
   return Deno.writeTextFile(`${outputFolder}/${item.name}.ts`, rendered);
 };
 
-const getLatestVersion = async () => {
+export const getLatestVersion = async () => {
   const mod = "https://deno.land/x/soda/mod.ts";
   const { output, code } = await runCmd([
     "deno",
