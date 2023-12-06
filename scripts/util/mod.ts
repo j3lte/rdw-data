@@ -34,7 +34,8 @@ export const pascalCase = (str: string) => {
 
 export const cleanString = (str?: string) => {
   const cleanRegex = /[^\x20-\x7E\u200B-\u200D\uFEFF\uBBBF]/g;
-  const cleanAndTrim = (s: string) => s.replace(cleanRegex, "").replace("\r", "").replace("\n", "").trim();
+  const cleanAndTrim = (s: string) =>
+    s.replace(cleanRegex, "").replace("\r", "").replace("\n", "").trim();
   const splitted = (str || "").split("\n");
   if (splitted.length === 0) {
     return "";
@@ -77,7 +78,7 @@ export const mapColumns = (res: Result): Array<{
   const columns = columns_name.map((n, i) => {
     const name = cleanString(n);
     const description = cleanString(columns_description[i]).split("\n").map((s) => s.trim()).filter(
-      (s) => s.length > 0
+      (s) => s.length > 0,
     );
     const datatype = cleanString(columns_datatype[i]);
     const datatypeTemplate = dataTypeToDataTypeTemplate(datatype);
@@ -123,4 +124,21 @@ const datatypeMap = new Map<string, string>([
 
 export const dataTypeToDataTypeTemplate = (dataType: string) => {
   return datatypeMap.get(dataType.toLowerCase()) || dataTypeStr("_Unknown");
+};
+
+export const updateText = (
+  blockID: string,
+  text: string,
+  update: string,
+): string => {
+  const snippetIdentifier = `<!-- START ${blockID} -->`;
+  const startSnippetPos = text.indexOf(snippetIdentifier);
+  const endSnippetPos = text.indexOf(`<!-- END ${blockID} -->`);
+
+  const startSnippet = text.slice(0, startSnippetPos + snippetIdentifier.length);
+  const endSnippet = text.slice(endSnippetPos);
+
+  const updatedText = `${startSnippet}\n${update}\n${endSnippet}`;
+
+  return updatedText;
 };

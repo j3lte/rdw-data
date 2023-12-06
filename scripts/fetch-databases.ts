@@ -2,7 +2,7 @@ import { render } from "https://deno.land/x/eta@v1.14.2/mod.ts";
 import { emptyDir } from "https://deno.land/x/dnt@0.34.0/mod.ts";
 
 import { DataResult, ResponseData, WithSodaVersion } from "./util/interfaces.ts";
-import { fixTitle, mapColumns } from "./util/mod.ts";
+import { fixTitle, mapColumns, updateText } from "./util/mod.ts";
 
 const runCmd = async (cmd: string[]) => {
   const cmdFirst = cmd.shift() as string;
@@ -21,6 +21,7 @@ const url =
   "https://opendata.rdw.nl/api/catalog/v1?domains=opendata.rdw.nl&limit=1000&offset=0&only=datasets&order=updatedAt DESC&show_unsupported_data_federated_assets=false&show_visibility=true&visibility=open";
 
 const outputFolder = `${thisDir}../src/providers/`;
+const rootFolder = `${thisDir}../src/`;
 
 const getData = async (url: string) => {
   const response = await fetch(url).then((res) => res.json()) as ResponseData;
@@ -107,6 +108,59 @@ export const getLatestVersion = async () => {
   return null;
 };
 
+const updateReadme = async (data: DataResult[], sodaVersion: string): Promise<void> => {
+  const filePath = new URL(import.meta.url).pathname;
+  const dirPath = filePath.split("/").slice(0, -1).join("/");
+  const readmePath = `${dirPath}/../README.md`;
+
+  const readme = await Deno.readTextFile(readmePath);
+
+  const dataOverview = `| Provider | Name | Category |\n` +
+    `| --- | --- | --- |\n` +
+    data.map((item) => {
+      return `| \`${item.name}\` | [${item.full_name}](${item.link}) | ${item.category} |`;
+    }).join("\n");
+
+  const list = data.map((item) => {
+    const columns = item.columns.map((col) => {
+      console.log(col);
+      return `| \`${col.big_name}\` | ${col.name} | ${col.datatype} |`;
+    }).join("\n");
+
+    return `<details><summary>${item.name}</summary>
+
+### Fields
+
+| FieldName | Name | Type |
+| --- | --- | --- |
+${columns}
+
+**Link:** ${item.link}
+</details>
+`;
+  }).join("\n");
+
+  const res = [
+    `## API`,
+    `These are auto generated providers and use \`soda-query@${sodaVersion}\`.`,
+    `### Overview`,
+    dataOverview,
+    `### Details`,
+    list,
+  ].join("\n\n");
+
+  const updatedReadme = updateText(
+    "FUNCTIONS",
+    readme,
+    res,
+  );
+
+  await Deno.writeTextFile(
+    readmePath,
+    updatedReadme,
+  );
+};
+
 const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
   const lastSodaVersion = await getLatestVersion();
   if (!lastSodaVersion) {
@@ -127,9 +181,13 @@ const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
   }
 
   if (!dryRun) {
+    console.log(`Make dir: ${outputFolder}`);
     await Deno.mkdir(outputFolder, { recursive: true });
-    // cleanup outputfolder
+
+    console.log(`Empty dir: ${outputFolder}`);
     await emptyDir(outputFolder);
+
+    console.log(`Render functions`);
     const modRendered = await (render(modTemplate, {
       items: resultData,
       sodaVersion: lastSodaVersion,
@@ -140,7 +198,25 @@ const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
       autoEscape: false,
       autoTrim: false,
     }) as Promise<string>);
+
+    console.log(`Write info.json`);
+    await Deno.writeTextFile(
+      `${rootFolder}/info.json`,
+      JSON.stringify(
+        {
+          sodaVersion: lastSodaVersion,
+          functions: resultData,
+        },
+        null,
+        2,
+      ),
+    );
+
+    console.log(`Write mod.ts`);
     await Deno.writeTextFile(`${outputFolder}/mod.ts`, modRendered);
+
+    console.log(`Update README.md`);
+    await updateReadme(resultData, lastSodaVersion);
   }
 
   await Promise.all(
