@@ -25,6 +25,74 @@ Node:
 > npm install rdw-data -s
 ```
 
+## Usage
+
+```typescript
+
+import {
+  KentekenVoertuigen,
+  KentekenVoertuigenAssen,
+  KentekenVoertuigenBrandstof,
+  KentekenVoertuigenCarrosserie,
+  KentekenVoertuigenCarrosserieSpecificatie,
+  KentekenVoertuigenVoertuigklasse,
+  Select,
+  Where,
+} from "https://deno.land/x/rdw_data/mod.ts";
+
+/*
+  * Example: search for a license plate and combine the results
+  */
+const search = (
+  kenteken: string,
+): Promise<
+  & KentekenVoertuigen.ResponseData
+  & KentekenVoertuigenAssen.ResponseData
+  & KentekenVoertuigenBrandstof.ResponseData
+  & KentekenVoertuigenCarrosserie.ResponseData
+  & KentekenVoertuigenCarrosserieSpecificatie.ResponseData
+  & KentekenVoertuigenVoertuigklasse.ResponseData
+> =>
+  Promise.all([
+    KentekenVoertuigen.RDWQuery().where(
+      Where.like(KentekenVoertuigen.Fields.Kenteken, kenteken),
+    ).single(),
+    KentekenVoertuigenAssen.RDWQuery().where(
+      Where.like(KentekenVoertuigenAssen.Fields.Kenteken, kenteken),
+    ).single(),
+    KentekenVoertuigenBrandstof.RDWQuery().where(
+      Where.like(KentekenVoertuigenBrandstof.Fields.Kenteken, kenteken),
+    ).single(),
+    KentekenVoertuigenCarrosserie.RDWQuery().where(
+      Where.like(KentekenVoertuigenCarrosserie.Fields.Kenteken, kenteken),
+    ).single(),
+    KentekenVoertuigenCarrosserieSpecificatie.RDWQuery().where(
+      Where.like(KentekenVoertuigenCarrosserieSpecificatie.Fields.Kenteken, kenteken),
+    ).single(),
+    KentekenVoertuigenVoertuigklasse.RDWQuery().where(
+      Where.like(KentekenVoertuigenVoertuigklasse.Fields.Kenteken, kenteken),
+    ).single(),
+  ]).then((results) => {
+    return results.reduce((acc, result) => {
+      return {
+        ...acc,
+        ...(result.data || {}),
+      };
+    }, {});
+  });
+
+// We can also count the number of result in a database
+const { data } = await KentekenVoertuigen.RDWQuery().select(
+  Select().count(),
+).single();
+
+// Let's search. Kenteken (License plate) should only have letters and numbers, no dashes ('-')
+const combined = await search("XXXXX");
+
+console.log(data.count);
+console.log(combined);
+
+```
 
 <!-- START FUNCTIONS -->
 ## API
