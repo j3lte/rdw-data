@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### ContactPersonId
-   *
+   * 
    * Identificatiecode van de contactpersoon
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ResponseData {
   contactpersonid?: string;
   /**
    * ### EmailAddress
-   *
+   * 
    * E-mailadres waaronder een contactpersoon bereikbaar is
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ResponseData {
   emailaddress?: string;
   /**
    * ### FaxNumber
-   *
+   * 
    * Faxnummer waaronder een contactpersoon bereikbaar is.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ResponseData {
   faxnumber?: string;
   /**
    * ### FirstName
-   *
+   * 
    * Voornaam van een contactpersoon.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ResponseData {
   firstname?: string;
   /**
    * ### Name
-   *
+   * 
    * Achternaam inclusief voorzetsels van een contactpersoon.
    *
    * **Type**: Text
@@ -61,7 +61,7 @@ export interface ResponseData {
   name?: string;
   /**
    * ### PhoneNumber
-   *
+   * 
    * Telefoonnummer waaronder een contactpersoon bereikbaar is.
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ResponseData {
   phonenumber?: string;
   /**
    * ### Position
-   *
+   * 
    * Functie van een contactpersoon.
    *
    * **Type**: Text
@@ -94,61 +94,61 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### ContactPersonId
-   *
+   * 
    * Identificatiecode van de contactpersoon
    *
    * **Type**: Text
    */
-  Contactpersonid: FieldObject<DataType.Text>;
+   Contactpersonid: FieldObject<DataType.Text>;
   /**
    * ### EmailAddress
-   *
+   * 
    * E-mailadres waaronder een contactpersoon bereikbaar is
    *
    * **Type**: Text
    */
-  Emailaddress: FieldObject<DataType.Text>;
+   Emailaddress: FieldObject<DataType.Text>;
   /**
    * ### FaxNumber
-   *
+   * 
    * Faxnummer waaronder een contactpersoon bereikbaar is.
    *
    * **Type**: Text
    */
-  Faxnumber: FieldObject<DataType.Text>;
+   Faxnumber: FieldObject<DataType.Text>;
   /**
    * ### FirstName
-   *
+   * 
    * Voornaam van een contactpersoon.
    *
    * **Type**: Text
    */
-  Firstname: FieldObject<DataType.Text>;
+   Firstname: FieldObject<DataType.Text>;
   /**
    * ### Name
-   *
+   * 
    * Achternaam inclusief voorzetsels van een contactpersoon.
    *
    * **Type**: Text
    */
-  Name: FieldObject<DataType.Text>;
+   Name: FieldObject<DataType.Text>;
   /**
    * ### PhoneNumber
-   *
+   * 
    * Telefoonnummer waaronder een contactpersoon bereikbaar is.
    *
    * **Type**: Text
    */
-  Phonenumber: FieldObject<DataType.Text>;
+   Phonenumber: FieldObject<DataType.Text>;
   /**
    * ### Position
-   *
+   * 
    * Functie van een contactpersoon.
    *
    * **Type**: Text
    */
-  Position: FieldObject<DataType.Text>;
-}
+   Position: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   Contactpersonid: Field("contactpersonid", DataType.Text),
@@ -176,7 +176,7 @@ export const Info = {
   provider_name: "ParkerenContactpersoon",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-CONTACTPERSOON/rbew-yhyc",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/rbew-yhyc",
-};
+}
 
 /**
  * ### Open Data Parkeren: CONTACTPERSOON

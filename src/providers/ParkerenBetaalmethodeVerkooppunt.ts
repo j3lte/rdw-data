@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### EndDatePaymentMethod
-   *
+   * 
    * Einddatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ResponseData {
   enddatepaymentmethod?: string;
   /**
    * ### PaymentMethod
-   *
+   * 
    * Betaalmethode die gebruikt kan worden voor het betalen van parkeren binnen een parkeergebied of -faciliteit.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ResponseData {
   paymentmethod?: string;
   /**
    * ### SellingPointNumber
-   *
+   * 
    * Identificatie van een verkooppunt.
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ResponseData {
   sellingpointnumber?: string;
   /**
    * ### StartDatePaymentMethod
-   *
+   * 
    * Begindatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
    *
    * **Type**: Text
@@ -67,37 +67,37 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### EndDatePaymentMethod
-   *
+   * 
    * Einddatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
    *
    * **Type**: Text
    */
-  Enddatepaymentmethod: FieldObject<DataType.Text>;
+   Enddatepaymentmethod: FieldObject<DataType.Text>;
   /**
    * ### PaymentMethod
-   *
+   * 
    * Betaalmethode die gebruikt kan worden voor het betalen van parkeren binnen een parkeergebied of -faciliteit.
    *
    * **Type**: Text
    */
-  Paymentmethod: FieldObject<DataType.Text>;
+   Paymentmethod: FieldObject<DataType.Text>;
   /**
    * ### SellingPointNumber
-   *
+   * 
    * Identificatie van een verkooppunt.
    *
    * **Type**: Number
    */
-  Sellingpointnumber: FieldObject<DataType.Number>;
+   Sellingpointnumber: FieldObject<DataType.Number>;
   /**
    * ### StartDatePaymentMethod
-   *
+   * 
    * Begindatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
    *
    * **Type**: Text
    */
-  Startdatepaymentmethod: FieldObject<DataType.Text>;
-}
+   Startdatepaymentmethod: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   Enddatepaymentmethod: Field("enddatepaymentmethod", DataType.Text),
@@ -119,7 +119,7 @@ export const Info = {
   provider_name: "ParkerenBetaalmethodeVerkooppunt",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/j96a-7nhx",
-};
+}
 
 /**
  * ### Open Data Parkeren: BETAALMETHODE VERKOOPPUNT

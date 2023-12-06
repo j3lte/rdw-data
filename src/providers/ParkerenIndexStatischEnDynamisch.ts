@@ -83,44 +83,44 @@ export interface IFields {
    *
    * **Type**: Checkbox
    */
-  DynamicParkingData: FieldObject<DataType.Checkbox>;
+   DynamicParkingData: FieldObject<DataType.Checkbox>;
   /**
    * ### Organization
    *
    * **Type**: Text
    */
-  Organization: FieldObject<DataType.Text>;
+   Organization: FieldObject<DataType.Text>;
   /**
    * ### Organization ID
    *
    * **Type**: Number
    */
-  OrganizationId: FieldObject<DataType.Number>;
+   OrganizationId: FieldObject<DataType.Number>;
   /**
    * ### Standard static parking data
    *
    * **Type**: Text
    */
-  StandardStaticParkingData: FieldObject<DataType.Text>;
+   StandardStaticParkingData: FieldObject<DataType.Text>;
   /**
    * ### Static parking data
    *
    * **Type**: Checkbox
    */
-  StaticParkingData: FieldObject<DataType.Checkbox>;
+   StaticParkingData: FieldObject<DataType.Checkbox>;
   /**
    * ### URL dynamic parking data
    *
    * **Type**: Text
    */
-  UrlDynamicParkingData: FieldObject<DataType.Text>;
+   UrlDynamicParkingData: FieldObject<DataType.Text>;
   /**
    * ### URL static parking data
    *
    * **Type**: Text
    */
-  UrlStaticParkingData: FieldObject<DataType.Text>;
-}
+   UrlStaticParkingData: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   DynamicParkingData: Field("dynamic_parking_data", DataType.Checkbox),
@@ -148,7 +148,7 @@ export const Info = {
   provider_name: "ParkerenIndexStatischEnDynamisch",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-Index-Statisch-en-Dynamisch/f6v7-gjpa",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/f6v7-gjpa",
-};
+}
 
 /**
  * ### Open Data Parkeren: Index Statisch en Dynamisch

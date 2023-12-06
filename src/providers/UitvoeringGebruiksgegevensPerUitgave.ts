@@ -74,38 +74,38 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Uitvgavenummer verbruikboek
    *
    * **Type**: Text
    */
-  UitvgavenummerVerbruikboek: FieldObject<DataType.Text>;
+   UitvgavenummerVerbruikboek: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
   /**
    * ### Verbruikcategorie uitvoering
    *
    * **Type**: Text
    */
-  VerbruikcategorieUitvoering: FieldObject<DataType.Text>;
-}
+   VerbruikcategorieUitvoering: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
@@ -129,10 +129,9 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave",
   provider_name: "UitvoeringGebruiksgegevensPerUitgave",
-  url:
-    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx",
+  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/2822-t8sx",
-};
+}
 
 /**
  * ### Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave

@@ -74,38 +74,38 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Subcateg uitvoering europees
    *
    * **Type**: Text
    */
-  SubcategUitvoeringEuropees: FieldObject<DataType.Text>;
+   SubcategUitvoeringEuropees: FieldObject<DataType.Text>;
   /**
    * ### Subcategorie uitvoering volgnr
    *
    * **Type**: Number
    */
-  SubcategorieUitvoeringVolgnr: FieldObject<DataType.Number>;
+   SubcategorieUitvoeringVolgnr: FieldObject<DataType.Number>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-}
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+};
 
 export const Fields: IFields = {
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
@@ -131,7 +131,7 @@ export const Info = {
   provider_name: "SubcategorieUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Subcategorie-Uitvoering/h9pa-e9ta",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/h9pa-e9ta",
-};
+}
 
 /**
  * ### Open Data RDW: Subcategorie Uitvoering

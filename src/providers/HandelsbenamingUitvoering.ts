@@ -88,50 +88,50 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Handelsbenaming fabrikant
    *
    * **Type**: Text
    */
-  HandelsbenamingFabrikant: FieldObject<DataType.Text>;
+   HandelsbenamingFabrikant: FieldObject<DataType.Text>;
   /**
    * ### Registratiedatum handelsbenaming
    *
    * **Type**: Number
    */
-  RegistratiedatumHandelsbenaming: FieldObject<DataType.Number>;
+   RegistratiedatumHandelsbenaming: FieldObject<DataType.Number>;
   /**
    * ### Registratiedatum handelsbenaming_DT
    *
    * **Type**: Calendar date
    */
-  RegistratiedatumHandelsbenamingDt: FieldObject<DataType.FloatingTimestamp>;
+   RegistratiedatumHandelsbenamingDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
   /**
    * ### Volgnummer handelsbenaming
    *
    * **Type**: Number
    */
-  Volgnummer: FieldObject<DataType.Number>;
-}
+   Volgnummer: FieldObject<DataType.Number>;
+};
 
 export const Fields: IFields = {
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
@@ -139,10 +139,7 @@ export const Fields: IFields = {
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   HandelsbenamingFabrikant: Field("handelsbenaming_fabrikant", DataType.Text),
   RegistratiedatumHandelsbenaming: Field("registratiedatum_handelsbenaming", DataType.Number),
-  RegistratiedatumHandelsbenamingDt: Field(
-    "registratiedatum_handelsbenaming_dt",
-    DataType.FloatingTimestamp,
-  ),
+  RegistratiedatumHandelsbenamingDt: Field("registratiedatum_handelsbenaming_dt", DataType.FloatingTimestamp),
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
   Volgnummer: Field("volgnummer", DataType.Number),
 };
@@ -164,7 +161,7 @@ export const Info = {
   provider_name: "HandelsbenamingUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Handelsbenaming-Uitvoering/mdqe-txpd",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mdqe-txpd",
-};
+}
 
 /**
  * ### Open Data RDW: Handelsbenaming Uitvoering

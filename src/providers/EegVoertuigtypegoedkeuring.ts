@@ -291,234 +291,231 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  ApiAsGegevensEegUitvoering: FieldObject<DataType.Text>;
+   ApiAsGegevensEegUitvoering: FieldObject<DataType.Text>;
   /**
    * ### API Basisgegevens EEG uitvoering
    *
    * **Type**: Text
    */
-  ApiBasisgegevensEegUitvoering: FieldObject<DataType.Text>;
+   ApiBasisgegevensEegUitvoering: FieldObject<DataType.Text>;
   /**
    * ### API Carrosserie uitvoering
    *
    * **Type**: Text
    */
-  ApiCarrosserieUitvoering: FieldObject<DataType.Text>;
+   ApiCarrosserieUitvoering: FieldObject<DataType.Text>;
   /**
    * ### API Carrosserie uitvoering klasse
    *
    * **Type**: Text
    */
-  ApiCarrosserieUitvoeringKlasse: FieldObject<DataType.Text>;
+   ApiCarrosserieUitvoeringKlasse: FieldObject<DataType.Text>;
   /**
    * ### API Carrosserie uitvoering nummerieke code
    *
    * **Type**: Text
    */
-  ApiCarrosserieUitvoeringNummeriekeCode: FieldObject<DataType.Text>;
+   ApiCarrosserieUitvoeringNummeriekeCode: FieldObject<DataType.Text>;
   /**
    * ### API Handelsbenaming uitvoering
    *
    * **Type**: Text
    */
-  ApiHandelsbenamingUitvoering: FieldObject<DataType.Text>;
+   ApiHandelsbenamingUitvoering: FieldObject<DataType.Text>;
   /**
    * ### API Merk uitvoering toegestaan
    *
    * **Type**: Text
    */
-  ApiMerkUitvoeringToegestaan: FieldObject<DataType.Text>;
+   ApiMerkUitvoeringToegestaan: FieldObject<DataType.Text>;
   /**
    * ### API Motor uitvoering
    *
    * **Type**: Text
    */
-  ApiMotorUitvoering: FieldObject<DataType.Text>;
+   ApiMotorUitvoering: FieldObject<DataType.Text>;
   /**
    * ### API Motor uitvoering brandstof
    *
    * **Type**: Text
    */
-  ApiMotorUitvoeringBrandstof: FieldObject<DataType.Text>;
+   ApiMotorUitvoeringBrandstof: FieldObject<DataType.Text>;
   /**
    * ### API Plaatsaanduiding uitvoering
    *
    * **Type**: Text
    */
-  ApiPlaatsaanduidingUitvoering: FieldObject<DataType.Text>;
+   ApiPlaatsaanduidingUitvoering: FieldObject<DataType.Text>;
   /**
    * ### API Subcategorie uitvoering
    *
    * **Type**: Text
    */
-  ApiSubcategorieUitvoering: FieldObject<DataType.Text>;
+   ApiSubcategorieUitvoering: FieldObject<DataType.Text>;
   /**
    * ### API Uitvoeringverbruik per uitgave
    *
    * **Type**: Text
    */
-  ApiUitvoeringverbruikPerUitgave: FieldObject<DataType.Text>;
+   ApiUitvoeringverbruikPerUitgave: FieldObject<DataType.Text>;
   /**
    * ### API Versnellingsbak uitvoering
    *
    * **Type**: Text
    */
-  ApiVersnellingsbakUitvoering: FieldObject<DataType.Text>;
+   ApiVersnellingsbakUitvoering: FieldObject<DataType.Text>;
   /**
    * ### EEG basis goedkeuringsnummer
    *
    * **Type**: Number
    */
-  EegBasisGoedkeuringsnummer: FieldObject<DataType.Number>;
+   EegBasisGoedkeuringsnummer: FieldObject<DataType.Number>;
   /**
    * ### EEG/ECE voertuig categorie bij type
    *
    * **Type**: Text
    */
-  EegEceVoertuigCategorieBijType: FieldObject<DataType.Text>;
+   EegEceVoertuigCategorieBijType: FieldObject<DataType.Text>;
   /**
    * ### EEG typegoedkeuringsdatum
    *
    * **Type**: Number
    */
-  EegTypegoedkeuringsdatum: FieldObject<DataType.Number>;
+   EegTypegoedkeuringsdatum: FieldObject<DataType.Number>;
   /**
    * ### EEG typegoedkeuringsdatum_DT
    *
    * **Type**: Calendar date
    */
-  EegTypegoedkeuringsdatumDt: FieldObject<DataType.FloatingTimestamp>;
+   EegTypegoedkeuringsdatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### EEG uitbreiding goedkeuringsnummer
    *
    * **Type**: Number
    */
-  EegUitbreidingGoedkeuringsnummer: FieldObject<DataType.Number>;
+   EegUitbreidingGoedkeuringsnummer: FieldObject<DataType.Number>;
   /**
    * ### EEG Voertuig cat toevoeging
    *
    * **Type**: Text
    */
-  EegVoertuigCatToevoeging: FieldObject<DataType.Text>;
+   EegVoertuigCatToevoeging: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Europese typegoedkeuring einddatum
    *
    * **Type**: Number
    */
-  EuropeseTypegoedkeuringEinddatum: FieldObject<DataType.Number>;
+   EuropeseTypegoedkeuringEinddatum: FieldObject<DataType.Number>;
   /**
    * ### Europese typegoedkeuring einddatum_DT
    *
    * **Type**: Calendar date
    */
-  EuropeseTypegoedkeuringEinddatumDt: FieldObject<DataType.FloatingTimestamp>;
+   EuropeseTypegoedkeuringEinddatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Europese typegoedkeuring intrek datum
    *
    * **Type**: Number
    */
-  EuropeseTypegoedkeuringIntrekDatum: FieldObject<DataType.Number>;
+   EuropeseTypegoedkeuringIntrekDatum: FieldObject<DataType.Number>;
   /**
    * ### Europese typegoedkeuring intrek datum_DT
    *
    * **Type**: Calendar date
    */
-  EuropeseTypegoedkeuringIntrekDatumDt: FieldObject<DataType.FloatingTimestamp>;
+   EuropeseTypegoedkeuringIntrekDatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Europese typegoedkeuring status
    *
    * **Type**: Text
    */
-  EuropeseTypegoedkeuringStatus: FieldObject<DataType.Text>;
+   EuropeseTypegoedkeuringStatus: FieldObject<DataType.Text>;
   /**
    * ### Europese typegoedkeuring status datum
    *
    * **Type**: Number
    */
-  EuropeseTypegoedkeuringStatusDatum: FieldObject<DataType.Number>;
+   EuropeseTypegoedkeuringStatusDatum: FieldObject<DataType.Number>;
   /**
    * ### Europese typegoedkeuring status datum_DT
    *
    * **Type**: Calendar date
    */
-  EuropeseTypegoedkeuringStatusDatumDt: FieldObject<DataType.FloatingTimestamp>;
+   EuropeseTypegoedkeuringStatusDatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Europese typegoedkeurings registratie datum
    *
    * **Type**: Number
    */
-  EuropeseTypegoedkeuringsRegistratieDatum: FieldObject<DataType.Number>;
+   EuropeseTypegoedkeuringsRegistratieDatum: FieldObject<DataType.Number>;
   /**
    * ### Europese typegoedkeurings registratie datum_DT
    *
    * **Type**: Calendar date
    */
-  EuropeseTypegoedkeuringsRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
+   EuropeseTypegoedkeuringsRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Fabrikant
    *
    * **Type**: Text
    */
-  Fabrikant: FieldObject<DataType.Text>;
+   Fabrikant: FieldObject<DataType.Text>;
   /**
    * ### Fabrikantcode type
    *
    * **Type**: Text
    */
-  FabrikantcodeType: FieldObject<DataType.Text>;
+   FabrikantcodeType: FieldObject<DataType.Text>;
   /**
    * ### Landcode EEG typegoedkeuring
    *
    * **Type**: Text
    */
-  LandcodeEegTypegoedkeuring: FieldObject<DataType.Text>;
+   LandcodeEegTypegoedkeuring: FieldObject<DataType.Text>;
   /**
    * ### Richtlijn nr laatste wijziging
    *
    * **Type**: Text
    */
-  RichtlijnNrLaatsteWijziging: FieldObject<DataType.Text>;
+   RichtlijnNrLaatsteWijziging: FieldObject<DataType.Text>;
   /**
    * ### Type fabrikant
    *
    * **Type**: Text
    */
-  TypeFabrikant: FieldObject<DataType.Text>;
+   TypeFabrikant: FieldObject<DataType.Text>;
   /**
    * ### Typegoedkeuringsnummer
    *
    * **Type**: Text
    */
-  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+   Typegoedkeuringsnummer: FieldObject<DataType.Text>;
   /**
    * ### Vervaldatum typegoedkeuring
    *
    * **Type**: Number
    */
-  VervaldatumTypegoedkeuring: FieldObject<DataType.Number>;
+   VervaldatumTypegoedkeuring: FieldObject<DataType.Number>;
   /**
    * ### Vervaldatum typegoedkeuring_DT
    *
    * **Type**: Calendar date
    */
-  VervaldatumTypegoedkeuringDt: FieldObject<DataType.FloatingTimestamp>;
-}
+   VervaldatumTypegoedkeuringDt: FieldObject<DataType.FloatingTimestamp>;
+};
 
 export const Fields: IFields = {
   ApiAsGegevensEegUitvoering: Field("api_as_gegevens_eeg_uitvoering", DataType.Text),
   ApiBasisgegevensEegUitvoering: Field("api_basisgegevens_eeg_uitvoering", DataType.Text),
   ApiCarrosserieUitvoering: Field("api_carrosserie_uitvoering", DataType.Text),
   ApiCarrosserieUitvoeringKlasse: Field("api_carrosserie_uitvoering_klasse", DataType.Text),
-  ApiCarrosserieUitvoeringNummeriekeCode: Field(
-    "api_carrosserie_uitvoering_nummerieke_code",
-    DataType.Text,
-  ),
+  ApiCarrosserieUitvoeringNummeriekeCode: Field("api_carrosserie_uitvoering_nummerieke_code", DataType.Text),
   ApiHandelsbenamingUitvoering: Field("api_handelsbenaming_uitvoering", DataType.Text),
   ApiMerkUitvoeringToegestaan: Field("api_merk_uitvoering_toegestaan", DataType.Text),
   ApiMotorUitvoering: Field("api_motor_uitvoering", DataType.Text),
@@ -535,35 +532,14 @@ export const Fields: IFields = {
   EegVoertuigCatToevoeging: Field("eeg_voertuig_cat_toevoeging", DataType.Text),
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   EuropeseTypegoedkeuringEinddatum: Field("europese_typegoedkeuring_einddatum", DataType.Number),
-  EuropeseTypegoedkeuringEinddatumDt: Field(
-    "europese_typegoedkeuring_einddatum_dt",
-    DataType.FloatingTimestamp,
-  ),
-  EuropeseTypegoedkeuringIntrekDatum: Field(
-    "europese_typegoedkeuring_intrek_datum",
-    DataType.Number,
-  ),
-  EuropeseTypegoedkeuringIntrekDatumDt: Field(
-    "europese_typegoedkeuring_intrek_datum_dt",
-    DataType.FloatingTimestamp,
-  ),
+  EuropeseTypegoedkeuringEinddatumDt: Field("europese_typegoedkeuring_einddatum_dt", DataType.FloatingTimestamp),
+  EuropeseTypegoedkeuringIntrekDatum: Field("europese_typegoedkeuring_intrek_datum", DataType.Number),
+  EuropeseTypegoedkeuringIntrekDatumDt: Field("europese_typegoedkeuring_intrek_datum_dt", DataType.FloatingTimestamp),
   EuropeseTypegoedkeuringStatus: Field("europese_typegoedkeuring_status", DataType.Text),
-  EuropeseTypegoedkeuringStatusDatum: Field(
-    "europese_typegoedkeuring_status_datum",
-    DataType.Number,
-  ),
-  EuropeseTypegoedkeuringStatusDatumDt: Field(
-    "europese_typegoedkeuring_status_datum_dt",
-    DataType.FloatingTimestamp,
-  ),
-  EuropeseTypegoedkeuringsRegistratieDatum: Field(
-    "europese_typegoedkeurings_registratie_datum",
-    DataType.Number,
-  ),
-  EuropeseTypegoedkeuringsRegistratieDatumDt: Field(
-    "europese_typegoedkeurings_registratie_datum_dt",
-    DataType.FloatingTimestamp,
-  ),
+  EuropeseTypegoedkeuringStatusDatum: Field("europese_typegoedkeuring_status_datum", DataType.Number),
+  EuropeseTypegoedkeuringStatusDatumDt: Field("europese_typegoedkeuring_status_datum_dt", DataType.FloatingTimestamp),
+  EuropeseTypegoedkeuringsRegistratieDatum: Field("europese_typegoedkeurings_registratie_datum", DataType.Number),
+  EuropeseTypegoedkeuringsRegistratieDatumDt: Field("europese_typegoedkeurings_registratie_datum_dt", DataType.FloatingTimestamp),
   Fabrikant: Field("fabrikant", DataType.Text),
   FabrikantcodeType: Field("fabrikantcode_type", DataType.Text),
   LandcodeEegTypegoedkeuring: Field("landcode_eeg_typegoedkeuring", DataType.Text),
@@ -618,10 +594,9 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: EEG Voertuigtypegoedkeuring",
   provider_name: "EegVoertuigtypegoedkeuring",
-  url:
-    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-EEG-Voertuigtypegoedkeuring/55kv-xf7m",
+  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-EEG-Voertuigtypegoedkeuring/55kv-xf7m",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/55kv-xf7m",
-};
+}
 
 /**
  * ### Open Data RDW: EEG Voertuigtypegoedkeuring

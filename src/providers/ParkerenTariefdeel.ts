@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AmountCumulative
-   *
+   * 
    * Het totaalbedrag van alle voorgaande tariefdelen binnen hetzelfde tarief.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ResponseData {
   amountcumulative?: string;
   /**
    * ### AmountFarePart
-   *
+   * 
    * Het bedrag in EUR dat per stapgrootte van het tariefdeel wordt geteld.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ResponseData {
   amountfarepart?: string;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateFarePart
-   *
+   * 
    * Datum waarop een tariefdeel niet meer geldig is.
    *
    * **Type**: Number
@@ -53,7 +53,7 @@ export interface ResponseData {
   enddatefarepart?: string;
   /**
    * ### EndDurationFarePart
-   *
+   * 
    * Waarde die aangeeft tot welke minuut in dit tarief dit tariefdeel geldt. Bijzonderheden: Een tariefdeel van 0 tot 180 minuten wordt aangegeven met begintijd 0 en eindtijd 180. Als de eindtijd niet van onbeperkte duur is dan moet deze gelijk zijn aan de starttijd van het eropvolgend tariefdeel.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ResponseData {
   enddurationfarepart?: string;
   /**
    * ### FareCalculationCode
-   *
+   * 
    * Identificatiecode van een tariefberekening
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ResponseData {
   farecalculationcode?: string;
   /**
    * ### StartDateFarePart
-   *
+   * 
    * Datum waarop een tariefdeel ingaat. Het tariefdeel is een onderdeel van de tariefberekening die aan een parkeer- of verblijfsregeling is gekoppeld. Met behulp van tariefdelen worden door de gebiedsbeheerder of parkeerexploitant o.a. lineaire of progressieve tarieven gedefinieerd.
    *
    * **Type**: Number
@@ -77,7 +77,7 @@ export interface ResponseData {
   startdatefarepart?: string;
   /**
    * ### StartDurationFarePart
-   *
+   * 
    * Waarde die aangeeft vanaf welke minuut in dit tarief dit tariefdeel geldt.
    *
    * **Type**: Number
@@ -85,7 +85,7 @@ export interface ResponseData {
   startdurationfarepart?: string;
   /**
    * ### StepSizeFarePart
-   *
+   * 
    * De stapgrootte in minuten waarmee het AmountFarePart rekent.
    *
    * **Type**: Number
@@ -112,77 +112,77 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AmountCumulative
-   *
+   * 
    * Het totaalbedrag van alle voorgaande tariefdelen binnen hetzelfde tarief.
    *
    * **Type**: Number
    */
-  Amountcumulative: FieldObject<DataType.Number>;
+   Amountcumulative: FieldObject<DataType.Number>;
   /**
    * ### AmountFarePart
-   *
+   * 
    * Het bedrag in EUR dat per stapgrootte van het tariefdeel wordt geteld.
    *
    * **Type**: Number
    */
-  Amountfarepart: FieldObject<DataType.Number>;
+   Amountfarepart: FieldObject<DataType.Number>;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-  Areamanagerid: FieldObject<DataType.Number>;
+   Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndDateFarePart
-   *
+   * 
    * Datum waarop een tariefdeel niet meer geldig is.
    *
    * **Type**: Number
    */
-  Enddatefarepart: FieldObject<DataType.Number>;
+   Enddatefarepart: FieldObject<DataType.Number>;
   /**
    * ### EndDurationFarePart
-   *
+   * 
    * Waarde die aangeeft tot welke minuut in dit tarief dit tariefdeel geldt. Bijzonderheden: Een tariefdeel van 0 tot 180 minuten wordt aangegeven met begintijd 0 en eindtijd 180. Als de eindtijd niet van onbeperkte duur is dan moet deze gelijk zijn aan de starttijd van het eropvolgend tariefdeel.
    *
    * **Type**: Number
    */
-  Enddurationfarepart: FieldObject<DataType.Number>;
+   Enddurationfarepart: FieldObject<DataType.Number>;
   /**
    * ### FareCalculationCode
-   *
+   * 
    * Identificatiecode van een tariefberekening
    *
    * **Type**: Text
    */
-  Farecalculationcode: FieldObject<DataType.Text>;
+   Farecalculationcode: FieldObject<DataType.Text>;
   /**
    * ### StartDateFarePart
-   *
+   * 
    * Datum waarop een tariefdeel ingaat. Het tariefdeel is een onderdeel van de tariefberekening die aan een parkeer- of verblijfsregeling is gekoppeld. Met behulp van tariefdelen worden door de gebiedsbeheerder of parkeerexploitant o.a. lineaire of progressieve tarieven gedefinieerd.
    *
    * **Type**: Number
    */
-  Startdatefarepart: FieldObject<DataType.Number>;
+   Startdatefarepart: FieldObject<DataType.Number>;
   /**
    * ### StartDurationFarePart
-   *
+   * 
    * Waarde die aangeeft vanaf welke minuut in dit tarief dit tariefdeel geldt.
    *
    * **Type**: Number
    */
-  Startdurationfarepart: FieldObject<DataType.Number>;
+   Startdurationfarepart: FieldObject<DataType.Number>;
   /**
    * ### StepSizeFarePart
-   *
+   * 
    * De stapgrootte in minuten waarmee het AmountFarePart rekent.
    *
    * **Type**: Number
    */
-  Stepsizefarepart: FieldObject<DataType.Number>;
-}
+   Stepsizefarepart: FieldObject<DataType.Number>;
+};
 
 export const Fields: IFields = {
   Amountcumulative: Field("amountcumulative", DataType.Number),
@@ -214,7 +214,7 @@ export const Info = {
   provider_name: "ParkerenTariefdeel",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFDEEL/534e-5vdg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/534e-5vdg",
-};
+}
 
 /**
  * ### Open Data Parkeren: TARIEFDEEL

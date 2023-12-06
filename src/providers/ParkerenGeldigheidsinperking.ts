@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AreaId
-   *
+   * 
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ResponseData {
   areaid?: string;
   /**
    * ### AreaIdValidityExtension
-   *
+   * 
    * De code van het gebied waarvoor een uitbreiding van de geldigheid voor bepaalde parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ResponseData {
   areaidvalidityextension?: string;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDayTimeFrameValidityRestriction
-   *
+   * 
    * Eind etmaalnaam van een venster dat een uitbreiding van de geldigheid voor parkeer- en verblijfrechten weer inperkt. De eind etmaalnaam is een waarde tot en met. Als begin en eind etmaalnaam dezelfde zijn dan betekent dit dat de inperking alleen voor  dat etmaal geldig is.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ResponseData {
   enddaytimeframevalidityrestriction?: string;
   /**
    * ### EndDurationValidityRestriction
-   *
+   * 
    * Eindtijd van een tijdvenster dat een uitbreiding van de geldigheid voor parkeer- en verblijfrechten weer inperkt. De eindtijd is een waarde tot, de hoogst mogelijke waarde is 2400. De eindtijd moet altijd groter zijn dan de begintijd.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ResponseData {
   enddurationvalidityrestriction?: string;
   /**
    * ### IndexNumberValidityRestriction
-   *
+   * 
    * Volgnummer dat verschillende etmaal- of tijdvensters onderscheidt die dezelfde uitbreiding van geldgheid voor parkeer- en verblijfsrechten weer inperken.
    *
    * **Type**: Number
@@ -69,7 +69,7 @@ export interface ResponseData {
   indexnumbervalidityrestriction?: string;
   /**
    * ### StartDayTimeFrameValidityRestriction
-   *
+   * 
    * Begin etmaalnaam van een venster dat een uitbreiding van de geldigheid voor parkeer- en verblijfrechten weer inperkt.
    *
    * **Type**: Text
@@ -77,7 +77,7 @@ export interface ResponseData {
   startdaytimeframevalidityrestriction?: string;
   /**
    * ### StartDurationValidityRestriction
-   *
+   * 
    * Begintijd van een tijdvenster dat een uitbreiding van de geldigheid voor parkeer- en verblijfrechten weer inperkt. De laagste mogelijke waarde is 0000.
    *
    * **Type**: Number
@@ -85,7 +85,7 @@ export interface ResponseData {
   startdurationvalidityrestriction?: string;
   /**
    * ### StartValidityExtension
-   *
+   * 
    * Begindatum en -tijd van de periode dat een bepaalde uitbreiding van de geldigheid voor parkeer of verblijfsrechten voor een gebied van toepassing is.
    *
    * **Type**: Text
@@ -93,7 +93,7 @@ export interface ResponseData {
   startvalidityextension?: string;
   /**
    * ### UsageId
-   *
+   * 
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
    *
    * **Type**: Text
@@ -121,85 +121,85 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaId
-   *
+   * 
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
    */
-  Areaid: FieldObject<DataType.Text>;
+   Areaid: FieldObject<DataType.Text>;
   /**
    * ### AreaIdValidityExtension
-   *
+   * 
    * De code van het gebied waarvoor een uitbreiding van de geldigheid voor bepaalde parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
    */
-  Areaidvalidityextension: FieldObject<DataType.Text>;
+   Areaidvalidityextension: FieldObject<DataType.Text>;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-  Areamanagerid: FieldObject<DataType.Number>;
+   Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndDayTimeFrameValidityRestriction
-   *
+   * 
    * Eind etmaalnaam van een venster dat een uitbreiding van de geldigheid voor parkeer- en verblijfrechten weer inperkt. De eind etmaalnaam is een waarde tot en met. Als begin en eind etmaalnaam dezelfde zijn dan betekent dit dat de inperking alleen voor  dat etmaal geldig is.
    *
    * **Type**: Text
    */
-  Enddaytimeframevalidityrestriction: FieldObject<DataType.Text>;
+   Enddaytimeframevalidityrestriction: FieldObject<DataType.Text>;
   /**
    * ### EndDurationValidityRestriction
-   *
+   * 
    * Eindtijd van een tijdvenster dat een uitbreiding van de geldigheid voor parkeer- en verblijfrechten weer inperkt. De eindtijd is een waarde tot, de hoogst mogelijke waarde is 2400. De eindtijd moet altijd groter zijn dan de begintijd.
    *
    * **Type**: Number
    */
-  Enddurationvalidityrestriction: FieldObject<DataType.Number>;
+   Enddurationvalidityrestriction: FieldObject<DataType.Number>;
   /**
    * ### IndexNumberValidityRestriction
-   *
+   * 
    * Volgnummer dat verschillende etmaal- of tijdvensters onderscheidt die dezelfde uitbreiding van geldgheid voor parkeer- en verblijfsrechten weer inperken.
    *
    * **Type**: Number
    */
-  Indexnumbervalidityrestriction: FieldObject<DataType.Number>;
+   Indexnumbervalidityrestriction: FieldObject<DataType.Number>;
   /**
    * ### StartDayTimeFrameValidityRestriction
-   *
+   * 
    * Begin etmaalnaam van een venster dat een uitbreiding van de geldigheid voor parkeer- en verblijfrechten weer inperkt.
    *
    * **Type**: Text
    */
-  Startdaytimeframevalidityrestriction: FieldObject<DataType.Text>;
+   Startdaytimeframevalidityrestriction: FieldObject<DataType.Text>;
   /**
    * ### StartDurationValidityRestriction
-   *
+   * 
    * Begintijd van een tijdvenster dat een uitbreiding van de geldigheid voor parkeer- en verblijfrechten weer inperkt. De laagste mogelijke waarde is 0000.
    *
    * **Type**: Number
    */
-  Startdurationvalidityrestriction: FieldObject<DataType.Number>;
+   Startdurationvalidityrestriction: FieldObject<DataType.Number>;
   /**
    * ### StartValidityExtension
-   *
+   * 
    * Begindatum en -tijd van de periode dat een bepaalde uitbreiding van de geldigheid voor parkeer of verblijfsrechten voor een gebied van toepassing is.
    *
    * **Type**: Text
    */
-  Startvalidityextension: FieldObject<DataType.Text>;
+   Startvalidityextension: FieldObject<DataType.Text>;
   /**
    * ### UsageId
-   *
+   * 
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
    *
    * **Type**: Text
    */
-  Usageid: FieldObject<DataType.Text>;
-}
+   Usageid: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   Areaid: Field("areaid", DataType.Text),
@@ -208,10 +208,7 @@ export const Fields: IFields = {
   Enddaytimeframevalidityrestriction: Field("enddaytimeframevalidityrestriction", DataType.Text),
   Enddurationvalidityrestriction: Field("enddurationvalidityrestriction", DataType.Number),
   Indexnumbervalidityrestriction: Field("indexnumbervalidityrestriction", DataType.Number),
-  Startdaytimeframevalidityrestriction: Field(
-    "startdaytimeframevalidityrestriction",
-    DataType.Text,
-  ),
+  Startdaytimeframevalidityrestriction: Field("startdaytimeframevalidityrestriction", DataType.Text),
   Startdurationvalidityrestriction: Field("startdurationvalidityrestriction", DataType.Number),
   Startvalidityextension: Field("startvalidityextension", DataType.Text),
   Usageid: Field("usageid", DataType.Text),
@@ -236,7 +233,7 @@ export const Info = {
   provider_name: "ParkerenGeldigheidsinperking",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSINPERKING/ynha-fuwp",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ynha-fuwp",
-};
+}
 
 /**
  * ### Open Data Parkeren: GELDIGHEIDSINPERKING

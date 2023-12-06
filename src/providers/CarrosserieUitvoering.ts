@@ -74,38 +74,38 @@ export interface IFields {
    *
    * **Type**: Number
    */
-  CarrosserieVolgnummer: FieldObject<DataType.Number>;
+   CarrosserieVolgnummer: FieldObject<DataType.Number>;
   /**
    * ### EEG Uitvoeringscode
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Type carrosserie europees
    *
    * **Type**: Text
    */
-  TypeCarrosserieEuropees: FieldObject<DataType.Text>;
+   TypeCarrosserieEuropees: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-}
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+};
 
 export const Fields: IFields = {
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Number),
@@ -131,7 +131,7 @@ export const Info = {
   provider_name: "CarrosserieUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering/w2qp-idms",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/w2qp-idms",
-};
+}
 
 /**
  * ### Open Data RDW: Carrosserie Uitvoering

@@ -74,38 +74,38 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  CarrosserieKlasseEuropees: FieldObject<DataType.Text>;
+   CarrosserieKlasseEuropees: FieldObject<DataType.Text>;
   /**
    * ### EEG Uitvoeringscode
    *
    * **Type**: Number
    */
-  EegUitvoeringscode: FieldObject<DataType.Number>;
+   EegUitvoeringscode: FieldObject<DataType.Number>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
   /**
    * ### UniekeCode
    *
    * **Type**: Text
    */
-  Uniekecode: FieldObject<DataType.Text>;
-}
+   Uniekecode: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   CarrosserieKlasseEuropees: Field("carrosserie_klasse_europees", DataType.Text),
@@ -131,7 +131,7 @@ export const Info = {
   provider_name: "TestProducerApi",
   url: "https://opendata.rdw.nl/dataset/Test_Producer_API/sgwh-cvkk",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/sgwh-cvkk",
-};
+}
 
 /**
  * ### Test_Producer_API

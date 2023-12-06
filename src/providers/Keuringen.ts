@@ -55,20 +55,20 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  Kenteken: FieldObject<DataType.Text>;
+   Kenteken: FieldObject<DataType.Text>;
   /**
    * ### Vervaldatum keuring
    *
    * **Type**: Number
    */
-  VervaldatumKeuring: FieldObject<DataType.Number>;
+   VervaldatumKeuring: FieldObject<DataType.Number>;
   /**
    * ### Vervaldatum keuring DT
    *
    * **Type**: Calendar date
    */
-  VervaldatumKeuringDt: FieldObject<DataType.FloatingTimestamp>;
-}
+   VervaldatumKeuringDt: FieldObject<DataType.FloatingTimestamp>;
+};
 
 export const Fields: IFields = {
   Kenteken: Field("kenteken", DataType.Text),
@@ -88,7 +88,7 @@ export const Info = {
   provider_name: "Keuringen",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/vkij-7mwc",
-};
+}
 
 /**
  * ### Open Data RDW: Keuringen

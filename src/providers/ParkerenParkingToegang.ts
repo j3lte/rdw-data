@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ResponseData {
   /**
    * ### AreaId
-   *
+   * 
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### Days
-   *
+   * 
    * Naam van een bepaalde dag voor een gebiedsbeheerder, waarvoor toegangstijden zijn gespecificeerd.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ResponseData {
   days?: string;
   /**
    * ### EndOfPeriod
-   *
+   * 
    * Einddatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ResponseData {
   endofperiod?: string;
   /**
    * ### EnterFrom
-   *
+   * 
    * Begintijd (uumm) vanaf wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ResponseData {
   enterfrom?: string;
   /**
    * ### EnterUntil
-   *
+   * 
    * Eindtijd (uumm) tot wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
    *
    * **Type**: Number
@@ -69,7 +69,7 @@ export interface ResponseData {
   enteruntil?: string;
   /**
    * ### StartOfPeriod
-   *
+   * 
    * Begindatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
    *
    * **Type**: Text
@@ -94,61 +94,61 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaId
-   *
+   * 
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
    */
-  Areaid: FieldObject<DataType.Text>;
+   Areaid: FieldObject<DataType.Text>;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-  Areamanagerid: FieldObject<DataType.Number>;
+   Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### Days
-   *
+   * 
    * Naam van een bepaalde dag voor een gebiedsbeheerder, waarvoor toegangstijden zijn gespecificeerd.
    *
    * **Type**: Text
    */
-  Days: FieldObject<DataType.Text>;
+   Days: FieldObject<DataType.Text>;
   /**
    * ### EndOfPeriod
-   *
+   * 
    * Einddatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
    *
    * **Type**: Text
    */
-  Endofperiod: FieldObject<DataType.Text>;
+   Endofperiod: FieldObject<DataType.Text>;
   /**
    * ### EnterFrom
-   *
+   * 
    * Begintijd (uumm) vanaf wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
    *
    * **Type**: Number
    */
-  Enterfrom: FieldObject<DataType.Number>;
+   Enterfrom: FieldObject<DataType.Number>;
   /**
    * ### EnterUntil
-   *
+   * 
    * Eindtijd (uumm) tot wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
    *
    * **Type**: Number
    */
-  Enteruntil: FieldObject<DataType.Number>;
+   Enteruntil: FieldObject<DataType.Number>;
   /**
    * ### StartOfPeriod
-   *
+   * 
    * Begindatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
    *
    * **Type**: Text
    */
-  Startofperiod: FieldObject<DataType.Text>;
-}
+   Startofperiod: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   Areaid: Field("areaid", DataType.Text),
@@ -176,7 +176,7 @@ export const Info = {
   provider_name: "ParkerenParkingToegang",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-TOEGANG/edv8-qiyg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/edv8-qiyg",
-};
+}
 
 /**
  * ### Open Data Parkeren: PARKING TOEGANG
