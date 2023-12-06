@@ -14,19 +14,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data Parkeren: GELDIGHEIDSUITBREIDING
@@ -34,7 +21,7 @@ export { DataType, Field };
 export interface ResponseData {
   /**
    * ### AreaId
-   *
+   * 
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -42,7 +29,7 @@ export interface ResponseData {
   areaid?: string;
   /**
    * ### AreaIdValidityExtension
-   *
+   * 
    * Identificatiecode van een parkeergebied of - faciliteit waarnaar een uitbreiding van de geldigheid voor  parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
@@ -50,7 +37,7 @@ export interface ResponseData {
   areaidvalidityextension?: string;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -58,7 +45,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### EndValidityExtension
-   *
+   * 
    * Datum en tijd van het einde van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
@@ -66,7 +53,7 @@ export interface ResponseData {
   endvalidityextension?: string;
   /**
    * ### StartValidityExtension
-   *
+   * 
    * Datum en tijd van het begin van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
@@ -74,7 +61,7 @@ export interface ResponseData {
   startvalidityextension?: string;
   /**
    * ### UsageId
-   *
+   * 
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
    *
    * **Type**: Text
@@ -82,7 +69,7 @@ export interface ResponseData {
   usageid?: string;
   /**
    * ### ValidityExtensionType
-   *
+   * 
    * Indicator die aangeeft of gebiedsuitbreidingen voor een bepaald gebruiksdoel overervend zijn. Het NPR onderscheid twee typen:
    * O = Overervend: Uitbreidingen worden vanuit vorige relaties meegenomen naar de volgende, bv. als gebied A uitbreidt naar B en gebied B uitbreidt naar C, dan is hiermee een recht uit gebied A impliciet ook geldig in gebied C.
    * N = Niet overervend: Elke uitbreiding wordt expliciet aangegeven, bv. als Gebied A uitbreidt naar B en gebied B uitbreidt naar C en het is de bedoeling dat gebied A ook uitbreidt naar C, dan moet de relatie van gebied A naar gebied C expliciet gelegd worden.
@@ -94,7 +81,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **ParkerenGeldigheidsuitbreiding**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``Areaid`` | ``areaid`` | _Text_ |
@@ -110,63 +96,63 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaId
-   *
+   * 
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
    */
-  Areaid: FieldObject<DataType.Text>;
+   Areaid: FieldObject<DataType.Text>;
   /**
    * ### AreaIdValidityExtension
-   *
+   * 
    * Identificatiecode van een parkeergebied of - faciliteit waarnaar een uitbreiding van de geldigheid voor  parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
    */
-  Areaidvalidityextension: FieldObject<DataType.Text>;
+   Areaidvalidityextension: FieldObject<DataType.Text>;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-  Areamanagerid: FieldObject<DataType.Number>;
+   Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndValidityExtension
-   *
+   * 
    * Datum en tijd van het einde van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
    */
-  Endvalidityextension: FieldObject<DataType.Text>;
+   Endvalidityextension: FieldObject<DataType.Text>;
   /**
    * ### StartValidityExtension
-   *
+   * 
    * Datum en tijd van het begin van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
    */
-  Startvalidityextension: FieldObject<DataType.Text>;
+   Startvalidityextension: FieldObject<DataType.Text>;
   /**
    * ### UsageId
-   *
+   * 
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
    *
    * **Type**: Text
    */
-  Usageid: FieldObject<DataType.Text>;
+   Usageid: FieldObject<DataType.Text>;
   /**
    * ### ValidityExtensionType
-   *
+   * 
    * Indicator die aangeeft of gebiedsuitbreidingen voor een bepaald gebruiksdoel overervend zijn. Het NPR onderscheid twee typen:
    * O = Overervend: Uitbreidingen worden vanuit vorige relaties meegenomen naar de volgende, bv. als gebied A uitbreidt naar B en gebied B uitbreidt naar C, dan is hiermee een recht uit gebied A impliciet ook geldig in gebied C.
    * N = Niet overervend: Elke uitbreiding wordt expliciet aangegeven, bv. als Gebied A uitbreidt naar B en gebied B uitbreidt naar C en het is de bedoeling dat gebied A ook uitbreidt naar C, dan moet de relatie van gebied A naar gebied C expliciet gelegd worden.
    *
    * **Type**: Text
    */
-  Validityextensiontype: FieldObject<DataType.Text>;
-}
+   Validityextensiontype: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   Areaid: Field("areaid", DataType.Text),
@@ -194,7 +180,7 @@ export const Info = {
   provider_name: "ParkerenGeldigheidsuitbreiding",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSUITBREIDING/8ff3-rxrk",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/8ff3-rxrk",
-};
+}
 
 /**
  * ### Open Data Parkeren: GELDIGHEIDSUITBREIDING

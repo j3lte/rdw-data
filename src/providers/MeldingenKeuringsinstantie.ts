@@ -14,19 +14,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Meldingen Keuringsinstantie
@@ -102,7 +89,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **MeldingenKeuringsinstantie**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``ApiGebrekBeschrijving`` | ``api_gebrek_beschrijving`` | _Text_ |
@@ -125,78 +111,75 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  ApiGebrekBeschrijving: FieldObject<DataType.Text>;
+   ApiGebrekBeschrijving: FieldObject<DataType.Text>;
   /**
    * ### API Gebrek constateringen
    *
    * **Type**: Text
    */
-  ApiGebrekConstateringen: FieldObject<DataType.Text>;
+   ApiGebrekConstateringen: FieldObject<DataType.Text>;
   /**
    * ### Kenteken
    *
    * **Type**: Text
    */
-  Kenteken: FieldObject<DataType.Text>;
+   Kenteken: FieldObject<DataType.Text>;
   /**
    * ### Meld datum door keuringsinstantie
    *
    * **Type**: Number
    */
-  MeldDatumDoorKeuringsinstantie: FieldObject<DataType.Number>;
+   MeldDatumDoorKeuringsinstantie: FieldObject<DataType.Number>;
   /**
    * ### Meld datum door keuringsinstantie DT
    *
    * **Type**: Calendar date
    */
-  MeldDatumDoorKeuringsinstantieDt: FieldObject<DataType.FloatingTimestamp>;
+   MeldDatumDoorKeuringsinstantieDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Meld tijd door keuringsinstantie
    *
    * **Type**: Number
    */
-  MeldTijdDoorKeuringsinstantie: FieldObject<DataType.Number>;
+   MeldTijdDoorKeuringsinstantie: FieldObject<DataType.Number>;
   /**
    * ### Soort erkenning keuringsinstantie
    *
    * **Type**: Text
    */
-  SoortErkenningKeuringsinstantie: FieldObject<DataType.Text>;
+   SoortErkenningKeuringsinstantie: FieldObject<DataType.Text>;
   /**
    * ### Soort erkenning omschrijving
    *
    * **Type**: Text
    */
-  SoortErkenningOmschrijving: FieldObject<DataType.Text>;
+   SoortErkenningOmschrijving: FieldObject<DataType.Text>;
   /**
    * ### Soort melding ki omschrijving
    *
    * **Type**: Text
    */
-  SoortMeldingKiOmschrijving: FieldObject<DataType.Text>;
+   SoortMeldingKiOmschrijving: FieldObject<DataType.Text>;
   /**
    * ### Vervaldatum keuring
    *
    * **Type**: Number
    */
-  VervaldatumKeuring: FieldObject<DataType.Number>;
+   VervaldatumKeuring: FieldObject<DataType.Number>;
   /**
    * ### Vervaldatum keuring DT
    *
    * **Type**: Calendar date
    */
-  VervaldatumKeuringDt: FieldObject<DataType.FloatingTimestamp>;
-}
+   VervaldatumKeuringDt: FieldObject<DataType.FloatingTimestamp>;
+};
 
 export const Fields: IFields = {
   ApiGebrekBeschrijving: Field("api_gebrek_beschrijving", DataType.Text),
   ApiGebrekConstateringen: Field("api_gebrek_constateringen", DataType.Text),
   Kenteken: Field("kenteken", DataType.Text),
   MeldDatumDoorKeuringsinstantie: Field("meld_datum_door_keuringsinstantie", DataType.Number),
-  MeldDatumDoorKeuringsinstantieDt: Field(
-    "meld_datum_door_keuringsinstantie_dt",
-    DataType.FloatingTimestamp,
-  ),
+  MeldDatumDoorKeuringsinstantieDt: Field("meld_datum_door_keuringsinstantie_dt", DataType.FloatingTimestamp),
   MeldTijdDoorKeuringsinstantie: Field("meld_tijd_door_keuringsinstantie", DataType.Number),
   SoortErkenningKeuringsinstantie: Field("soort_erkenning_keuringsinstantie", DataType.Text),
   SoortErkenningOmschrijving: Field("soort_erkenning_omschrijving", DataType.Text),
@@ -225,7 +208,7 @@ export const Info = {
   provider_name: "MeldingenKeuringsinstantie",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/sgfe-77wx",
-};
+}
 
 /**
  * ### Open Data RDW: Meldingen Keuringsinstantie

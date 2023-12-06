@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Gekentekende_voertuigen
 //
-//
-//
 // Category: Voertuigen
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2
 // Permalink: https://opendata.rdw.nl/d/m9d7-ebf2
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen
@@ -612,7 +597,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **KentekenVoertuigen**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``AanhangwagenAutonoomGeremd`` | ``aanhangwagen_autonoom_geremd`` | _Number_ |
@@ -720,578 +704,578 @@ export interface IFields {
    *
    * **Type**: Number
    */
-  AanhangwagenAutonoomGeremd: FieldObject<DataType.Number>;
+   AanhangwagenAutonoomGeremd: FieldObject<DataType.Number>;
   /**
    * ### Aanhangwagen middenas geremd
    *
    * **Type**: Number
    */
-  AanhangwagenMiddenasGeremd: FieldObject<DataType.Number>;
+   AanhangwagenMiddenasGeremd: FieldObject<DataType.Number>;
   /**
    * ### Aantal cilinders
    *
    * **Type**: Number
    */
-  AantalCilinders: FieldObject<DataType.Number>;
+   AantalCilinders: FieldObject<DataType.Number>;
   /**
    * ### Aantal deuren
    *
    * **Type**: Number
    */
-  AantalDeuren: FieldObject<DataType.Number>;
+   AantalDeuren: FieldObject<DataType.Number>;
   /**
    * ### Aantal rolstoelplaatsen
    *
    * **Type**: Number
    */
-  AantalRolstoelplaatsen: FieldObject<DataType.Number>;
+   AantalRolstoelplaatsen: FieldObject<DataType.Number>;
   /**
    * ### Aantal staanplaatsen
    *
    * **Type**: Number
    */
-  AantalStaanplaatsen: FieldObject<DataType.Number>;
+   AantalStaanplaatsen: FieldObject<DataType.Number>;
   /**
    * ### Aantal wielen
    *
    * **Type**: Number
    */
-  AantalWielen: FieldObject<DataType.Number>;
+   AantalWielen: FieldObject<DataType.Number>;
   /**
    * ### Aantal zitplaatsen
    *
    * **Type**: Number
    */
-  AantalZitplaatsen: FieldObject<DataType.Number>;
+   AantalZitplaatsen: FieldObject<DataType.Number>;
   /**
    * ### Aerodynamische voorziening of uitrusting
    *
    * **Type**: Text
    */
-  AerodynVoorz: FieldObject<DataType.Text>;
+   AerodynVoorz: FieldObject<DataType.Text>;
   /**
    * ### Afstand hart koppeling tot achterzijde voertuig
    *
    * **Type**: Number
    */
-  AfstandHartKoppelingTotAchterzijdeVoertuig: FieldObject<DataType.Number>;
+   AfstandHartKoppelingTotAchterzijdeVoertuig: FieldObject<DataType.Number>;
   /**
    * ### Afstand voorzijde voertuig tot hart koppeling
    *
    * **Type**: Number
    */
-  AfstandVoorzijdeVoertuigTotHartKoppeling: FieldObject<DataType.Number>;
+   AfstandVoorzijdeVoertuigTotHartKoppeling: FieldObject<DataType.Number>;
   /**
    * ### Afwijkende maximum snelheid
    *
    * **Type**: Number
    */
-  AfwijkendeMaximumSnelheid: FieldObject<DataType.Number>;
+   AfwijkendeMaximumSnelheid: FieldObject<DataType.Number>;
   /**
    * ### API Gekentekende_voertuigen_assen
    *
    * **Type**: Text
    */
-  ApiGekentekendeVoertuigenAssen: FieldObject<DataType.Text>;
+   ApiGekentekendeVoertuigenAssen: FieldObject<DataType.Text>;
   /**
    * ### API Gekentekende_voertuigen_brandstof
    *
    * **Type**: Text
    */
-  ApiGekentekendeVoertuigenBrandstof: FieldObject<DataType.Text>;
+   ApiGekentekendeVoertuigenBrandstof: FieldObject<DataType.Text>;
   /**
    * ### API Gekentekende_voertuigen_carrosserie
    *
    * **Type**: Text
    */
-  ApiGekentekendeVoertuigenCarrosserie: FieldObject<DataType.Text>;
+   ApiGekentekendeVoertuigenCarrosserie: FieldObject<DataType.Text>;
   /**
    * ### API Gekentekende_voertuigen_carrosserie_specifiek
    *
    * **Type**: Text
    */
-  ApiGekentekendeVoertuigenCarrosserieSpecifiek: FieldObject<DataType.Text>;
+   ApiGekentekendeVoertuigenCarrosserieSpecifiek: FieldObject<DataType.Text>;
   /**
    * ### API Gekentekende_voertuigen_voertuigklasse
    *
    * **Type**: Text
    */
-  ApiGekentekendeVoertuigenVoertuigklasse: FieldObject<DataType.Text>;
+   ApiGekentekendeVoertuigenVoertuigklasse: FieldObject<DataType.Text>;
   /**
    * ### Breedte
    *
    * **Type**: Number
    */
-  Breedte: FieldObject<DataType.Number>;
+   Breedte: FieldObject<DataType.Number>;
   /**
    * ### Breedte voertuig maximum
    *
    * **Type**: Number
    */
-  BreedteVoertuigMaximum: FieldObject<DataType.Number>;
+   BreedteVoertuigMaximum: FieldObject<DataType.Number>;
   /**
    * ### Breedte voertuig minimum
    *
    * **Type**: Number
    */
-  BreedteVoertuigMinimum: FieldObject<DataType.Number>;
+   BreedteVoertuigMinimum: FieldObject<DataType.Number>;
   /**
    * ### Bruto BPM
    *
    * **Type**: Number
    */
-  BrutoBpm: FieldObject<DataType.Number>;
+   BrutoBpm: FieldObject<DataType.Number>;
   /**
    * ### Catalogusprijs
    *
    * **Type**: Number
    */
-  Catalogusprijs: FieldObject<DataType.Number>;
+   Catalogusprijs: FieldObject<DataType.Number>;
   /**
    * ### Cilinderinhoud
    *
    * **Type**: Number
    */
-  Cilinderinhoud: FieldObject<DataType.Number>;
+   Cilinderinhoud: FieldObject<DataType.Number>;
   /**
    * ### Code toelichting tellerstandoordeel
    *
    * **Type**: Text
    */
-  CodeToelichtingTellerstandoordeel: FieldObject<DataType.Text>;
+   CodeToelichtingTellerstandoordeel: FieldObject<DataType.Text>;
   /**
    * ### Datum eerste tenaamstelling in Nederland
    *
    * **Type**: Number
    */
-  DatumEersteTenaamstellingInNederland: FieldObject<DataType.Number>;
+   DatumEersteTenaamstellingInNederland: FieldObject<DataType.Number>;
   /**
    * ### Datum eerste tenaamstelling in Nederland DT
    *
    * **Type**: Calendar date
    */
-  DatumEersteTenaamstellingInNederlandDt: FieldObject<DataType.FloatingTimestamp>;
+   DatumEersteTenaamstellingInNederlandDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Datum eerste toelating
    *
    * **Type**: Number
    */
-  DatumEersteToelating: FieldObject<DataType.Number>;
+   DatumEersteToelating: FieldObject<DataType.Number>;
   /**
    * ### Datum eerste toelating DT
    *
    * **Type**: Calendar date
    */
-  DatumEersteToelatingDt: FieldObject<DataType.FloatingTimestamp>;
+   DatumEersteToelatingDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Datum tenaamstelling
    *
    * **Type**: Number
    */
-  DatumTenaamstelling: FieldObject<DataType.Number>;
+   DatumTenaamstelling: FieldObject<DataType.Number>;
   /**
    * ### Datum tenaamstelling DT
    *
    * **Type**: Calendar date
    */
-  DatumTenaamstellingDt: FieldObject<DataType.FloatingTimestamp>;
+   DatumTenaamstellingDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Eerste kleur
    *
    * **Type**: Text
    */
-  EersteKleur: FieldObject<DataType.Text>;
+   EersteKleur: FieldObject<DataType.Text>;
   /**
    * ### Europese uitvoeringcategorie toevoeging
    *
    * **Type**: Text
    */
-  EuropeseUitvoeringcategorieToevoeging: FieldObject<DataType.Text>;
+   EuropeseUitvoeringcategorieToevoeging: FieldObject<DataType.Text>;
   /**
    * ### Europese voertuigcategorie
    *
    * **Type**: Text
    */
-  EuropeseVoertuigcategorie: FieldObject<DataType.Text>;
+   EuropeseVoertuigcategorie: FieldObject<DataType.Text>;
   /**
    * ### Europese voertuigcategorie toevoeging
    *
    * **Type**: Text
    */
-  EuropeseVoertuigcategorieToevoeging: FieldObject<DataType.Text>;
+   EuropeseVoertuigcategorieToevoeging: FieldObject<DataType.Text>;
   /**
    * ### Export indicator
    *
    * **Type**: Text
    */
-  ExportIndicator: FieldObject<DataType.Text>;
+   ExportIndicator: FieldObject<DataType.Text>;
   /**
    * ### Gemiddelde Lading Waarde
    *
    * **Type**: Number
    */
-  GemLadingWrde: FieldObject<DataType.Number>;
+   GemLadingWrde: FieldObject<DataType.Number>;
   /**
    * ### Handelsbenaming
    *
    * **Type**: Text
    */
-  Handelsbenaming: FieldObject<DataType.Text>;
+   Handelsbenaming: FieldObject<DataType.Text>;
   /**
    * ### Hoogte voertuig
    *
    * **Type**: Number
    */
-  HoogteVoertuig: FieldObject<DataType.Number>;
+   HoogteVoertuig: FieldObject<DataType.Number>;
   /**
    * ### Hoogte voertuig maximum
    *
    * **Type**: Number
    */
-  HoogteVoertuigMaximum: FieldObject<DataType.Number>;
+   HoogteVoertuigMaximum: FieldObject<DataType.Number>;
   /**
    * ### Hoogte voertuig minimum
    *
    * **Type**: Number
    */
-  HoogteVoertuigMinimum: FieldObject<DataType.Number>;
+   HoogteVoertuigMinimum: FieldObject<DataType.Number>;
   /**
    * ### Inrichting
    *
    * **Type**: Text
    */
-  Inrichting: FieldObject<DataType.Text>;
+   Inrichting: FieldObject<DataType.Text>;
   /**
    * ### Jaar laatste registratie tellerstand
    *
    * **Type**: Number
    */
-  JaarLaatsteRegistratieTellerstand: FieldObject<DataType.Number>;
+   JaarLaatsteRegistratieTellerstand: FieldObject<DataType.Number>;
   /**
    * ### Kenteken
    *
    * **Type**: Text
    */
-  Kenteken: FieldObject<DataType.Text>;
+   Kenteken: FieldObject<DataType.Text>;
   /**
    * ### Laadvermogen
    *
    * **Type**: Number
    */
-  Laadvermogen: FieldObject<DataType.Number>;
+   Laadvermogen: FieldObject<DataType.Number>;
   /**
    * ### Lengte
    *
    * **Type**: Number
    */
-  Lengte: FieldObject<DataType.Number>;
+   Lengte: FieldObject<DataType.Number>;
   /**
    * ### Lengte voertuig maximum
    *
    * **Type**: Number
    */
-  LengteVoertuigMaximum: FieldObject<DataType.Number>;
+   LengteVoertuigMaximum: FieldObject<DataType.Number>;
   /**
    * ### Lengte voertuig minimum
    *
    * **Type**: Number
    */
-  LengteVoertuigMinimum: FieldObject<DataType.Number>;
+   LengteVoertuigMinimum: FieldObject<DataType.Number>;
   /**
    * ### Additionele massa alternatieve aandrijving
    *
    * **Type**: Number
    */
-  MassaAltAandr: FieldObject<DataType.Number>;
+   MassaAltAandr: FieldObject<DataType.Number>;
   /**
    * ### Massa bedrijfsklaar maximaal
    *
    * **Type**: Number
    */
-  MassaBedrijfsklaarMaximaal: FieldObject<DataType.Number>;
+   MassaBedrijfsklaarMaximaal: FieldObject<DataType.Number>;
   /**
    * ### Massa bedrijfsklaar minimaal
    *
    * **Type**: Number
    */
-  MassaBedrijfsklaarMinimaal: FieldObject<DataType.Number>;
+   MassaBedrijfsklaarMinimaal: FieldObject<DataType.Number>;
   /**
    * ### Massa ledig voertuig
    *
    * **Type**: Number
    */
-  MassaLedigVoertuig: FieldObject<DataType.Number>;
+   MassaLedigVoertuig: FieldObject<DataType.Number>;
   /**
    * ### Massa rijklaar
    *
    * **Type**: Number
    */
-  MassaRijklaar: FieldObject<DataType.Number>;
+   MassaRijklaar: FieldObject<DataType.Number>;
   /**
    * ### Maximale constructiesnelheid
    *
    * **Type**: Number
    */
-  MaximaleConstructiesnelheid: FieldObject<DataType.Number>;
+   MaximaleConstructiesnelheid: FieldObject<DataType.Number>;
   /**
    * ### Maximum last onder de vooras(sen) (tezamen)/koppeling
    *
    * **Type**: Number
    */
-  MaximumLastOnderDeVoorasSenTezamenKoppeling: FieldObject<DataType.Number>;
+   MaximumLastOnderDeVoorasSenTezamenKoppeling: FieldObject<DataType.Number>;
   /**
    * ### Maximum massa samenstelling
    *
    * **Type**: Number
    */
-  MaximumMassaSamenstelling: FieldObject<DataType.Number>;
+   MaximumMassaSamenstelling: FieldObject<DataType.Number>;
   /**
    * ### Maximum massa technisch maximaal
    *
    * **Type**: Number
    */
-  MaximumMassaTechnischMaximaal: FieldObject<DataType.Number>;
+   MaximumMassaTechnischMaximaal: FieldObject<DataType.Number>;
   /**
    * ### Maximum massa technisch minimaal
    *
    * **Type**: Number
    */
-  MaximumMassaTechnischMinimaal: FieldObject<DataType.Number>;
+   MaximumMassaTechnischMinimaal: FieldObject<DataType.Number>;
   /**
    * ### Maximum massa trekken ongeremd
    *
    * **Type**: Number
    */
-  MaximumMassaTrekkenOngeremd: FieldObject<DataType.Number>;
+   MaximumMassaTrekkenOngeremd: FieldObject<DataType.Number>;
   /**
    * ### Maximum ondersteunende snelheid
    *
    * **Type**: Number
    */
-  MaximumOndersteunendeSnelheid: FieldObject<DataType.Number>;
+   MaximumOndersteunendeSnelheid: FieldObject<DataType.Number>;
   /**
    * ### Maximum trekken massa geremd
    *
    * **Type**: Number
    */
-  MaximumTrekkenMassaGeremd: FieldObject<DataType.Number>;
+   MaximumTrekkenMassaGeremd: FieldObject<DataType.Number>;
   /**
    * ### Merk
    *
    * **Type**: Text
    */
-  Merk: FieldObject<DataType.Text>;
+   Merk: FieldObject<DataType.Text>;
   /**
    * ### Openstaande terugroepactie indicator
    *
    * **Type**: Text
    */
-  OpenstaandeTerugroepactieIndicator: FieldObject<DataType.Text>;
+   OpenstaandeTerugroepactieIndicator: FieldObject<DataType.Text>;
   /**
    * ### Oplegger geremd
    *
    * **Type**: Number
    */
-  OpleggerGeremd: FieldObject<DataType.Number>;
+   OpleggerGeremd: FieldObject<DataType.Number>;
   /**
    * ### Plaats chassisnummer
    *
    * **Type**: Text
    */
-  PlaatsChassisnummer: FieldObject<DataType.Text>;
+   PlaatsChassisnummer: FieldObject<DataType.Text>;
   /**
    * ### Registratie datum goedkeuring (afschrijvingsmoment BPM)
    *
    * **Type**: Number
    */
-  RegistratieDatumGoedkeuringAfschrijvingsmomentBpm: FieldObject<DataType.Number>;
+   RegistratieDatumGoedkeuringAfschrijvingsmomentBpm: FieldObject<DataType.Number>;
   /**
    * ### Registratie datum goedkeuring (afschrijvingsmoment BPM) DT
    *
    * **Type**: Calendar date
    */
-  RegistratieDatumGoedkeuringAfschrijvingsmomentBpmDt: FieldObject<DataType.FloatingTimestamp>;
+   RegistratieDatumGoedkeuringAfschrijvingsmomentBpmDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Rupsonderstelconfiguratiecode
    *
    * **Type**: Text
    */
-  Rupsonderstelconfiguratiecode: FieldObject<DataType.Text>;
+   Rupsonderstelconfiguratiecode: FieldObject<DataType.Text>;
   /**
    * ### Subcategorie Nederland
    *
    * **Type**: Text
    */
-  SubcategorieNederland: FieldObject<DataType.Text>;
+   SubcategorieNederland: FieldObject<DataType.Text>;
   /**
    * ### Taxi indicator
    *
    * **Type**: Text
    */
-  TaxiIndicator: FieldObject<DataType.Text>;
+   TaxiIndicator: FieldObject<DataType.Text>;
   /**
    * ### Technisch toelaatbaar massa koppelpunt
    *
    * **Type**: Number
    */
-  TechnischToelaatbaarMassaKoppelpunt: FieldObject<DataType.Number>;
+   TechnischToelaatbaarMassaKoppelpunt: FieldObject<DataType.Number>;
   /**
    * ### Technische max. massa voertuig
    *
    * **Type**: Number
    */
-  TechnischeMaxMassaVoertuig: FieldObject<DataType.Number>;
+   TechnischeMaxMassaVoertuig: FieldObject<DataType.Number>;
   /**
    * ### Tellerstandoordeel
    *
    * **Type**: Text
    */
-  Tellerstandoordeel: FieldObject<DataType.Text>;
+   Tellerstandoordeel: FieldObject<DataType.Text>;
   /**
    * ### Tenaamstellen mogelijk
    *
    * **Type**: Text
    */
-  TenaamstellenMogelijk: FieldObject<DataType.Text>;
+   TenaamstellenMogelijk: FieldObject<DataType.Text>;
   /**
    * ### Toegestane maximum massa voertuig
    *
    * **Type**: Number
    */
-  ToegestaneMaximumMassaVoertuig: FieldObject<DataType.Number>;
+   ToegestaneMaximumMassaVoertuig: FieldObject<DataType.Number>;
   /**
    * ### Tweede kleur
    *
    * **Type**: Text
    */
-  TweedeKleur: FieldObject<DataType.Text>;
+   TweedeKleur: FieldObject<DataType.Text>;
   /**
    * ### Type
    *
    * **Type**: Text
    */
-  Type: FieldObject<DataType.Text>;
+   Type: FieldObject<DataType.Text>;
   /**
    * ### Type gasinstallatie
    *
    * **Type**: Text
    */
-  TypeGasinstallatie: FieldObject<DataType.Text>;
+   TypeGasinstallatie: FieldObject<DataType.Text>;
   /**
    * ### Type remsysteem voertuig code
    *
    * **Type**: Text
    */
-  TypeRemsysteemVoertuigCode: FieldObject<DataType.Text>;
+   TypeRemsysteemVoertuigCode: FieldObject<DataType.Text>;
   /**
    * ### Typegoedkeuringsnummer
    *
    * **Type**: Text
    */
-  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+   Typegoedkeuringsnummer: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering
    *
    * **Type**: Text
    */
-  Uitvoering: FieldObject<DataType.Text>;
+   Uitvoering: FieldObject<DataType.Text>;
   /**
    * ### Variant
    *
    * **Type**: Text
    */
-  Variant: FieldObject<DataType.Text>;
+   Variant: FieldObject<DataType.Text>;
   /**
    * ### Verlengde cabine indicator
    *
    * **Type**: Text
    */
-  VerlCabInd: FieldObject<DataType.Text>;
+   VerlCabInd: FieldObject<DataType.Text>;
   /**
    * ### Vermogen massarijklaar
    *
    * **Type**: Number
    */
-  VermogenMassarijklaar: FieldObject<DataType.Number>;
+   VermogenMassarijklaar: FieldObject<DataType.Number>;
   /**
    * ### Verticale belasting koppelpunt getrokken voertuig
    *
    * **Type**: Number
    */
-  VerticaleBelastingKoppelpuntGetrokkenVoertuig: FieldObject<DataType.Number>;
+   VerticaleBelastingKoppelpuntGetrokkenVoertuig: FieldObject<DataType.Number>;
   /**
    * ### Vervaldatum APK
    *
    * **Type**: Number
    */
-  VervaldatumApk: FieldObject<DataType.Number>;
+   VervaldatumApk: FieldObject<DataType.Number>;
   /**
    * ### Vervaldatum APK DT
    *
    * **Type**: Calendar date
    */
-  VervaldatumApkDt: FieldObject<DataType.FloatingTimestamp>;
+   VervaldatumApkDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Vervaldatum tachograaf
    *
    * **Type**: Number
    */
-  VervaldatumTachograaf: FieldObject<DataType.Number>;
+   VervaldatumTachograaf: FieldObject<DataType.Number>;
   /**
    * ### Vervaldatum tachograaf DT
    *
    * **Type**: Calendar date
    */
-  VervaldatumTachograafDt: FieldObject<DataType.FloatingTimestamp>;
+   VervaldatumTachograafDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Voertuigsoort
    *
    * **Type**: Text
    */
-  Voertuigsoort: FieldObject<DataType.Text>;
+   Voertuigsoort: FieldObject<DataType.Text>;
   /**
    * ### Volgnummer wijziging EU typegoedkeuring
    *
    * **Type**: Number
    */
-  VolgnummerWijzigingEuTypegoedkeuring: FieldObject<DataType.Number>;
+   VolgnummerWijzigingEuTypegoedkeuring: FieldObject<DataType.Number>;
   /**
    * ### Wacht op keuren
    *
    * **Type**: Text
    */
-  WachtOpKeuren: FieldObject<DataType.Text>;
+   WachtOpKeuren: FieldObject<DataType.Text>;
   /**
    * ### WAM verzekerd
    *
    * **Type**: Text
    */
-  WamVerzekerd: FieldObject<DataType.Text>;
+   WamVerzekerd: FieldObject<DataType.Text>;
   /**
    * ### Wielbasis
    *
    * **Type**: Number
    */
-  Wielbasis: FieldObject<DataType.Number>;
+   Wielbasis: FieldObject<DataType.Number>;
   /**
    * ### Wielbasis voertuig maximum
    *
    * **Type**: Number
    */
-  WielbasisVoertuigMaximum: FieldObject<DataType.Number>;
+   WielbasisVoertuigMaximum: FieldObject<DataType.Number>;
   /**
    * ### Wielbasis voertuig minimum
    *
    * **Type**: Number
    */
-  WielbasisVoertuigMinimum: FieldObject<DataType.Number>;
+   WielbasisVoertuigMinimum: FieldObject<DataType.Number>;
   /**
    * ### Zuinigheidsclassificatie
    *
    * **Type**: Text
    */
-  Zuinigheidsclassificatie: FieldObject<DataType.Text>;
-}
+   Zuinigheidsclassificatie: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   AanhangwagenAutonoomGeremd: Field("aanhangwagen_autonoom_geremd", DataType.Number),
@@ -1303,29 +1287,14 @@ export const Fields: IFields = {
   AantalWielen: Field("aantal_wielen", DataType.Number),
   AantalZitplaatsen: Field("aantal_zitplaatsen", DataType.Number),
   AerodynVoorz: Field("aerodyn_voorz", DataType.Text),
-  AfstandHartKoppelingTotAchterzijdeVoertuig: Field(
-    "afstand_hart_koppeling_tot_achterzijde_voertuig",
-    DataType.Number,
-  ),
-  AfstandVoorzijdeVoertuigTotHartKoppeling: Field(
-    "afstand_voorzijde_voertuig_tot_hart_koppeling",
-    DataType.Number,
-  ),
+  AfstandHartKoppelingTotAchterzijdeVoertuig: Field("afstand_hart_koppeling_tot_achterzijde_voertuig", DataType.Number),
+  AfstandVoorzijdeVoertuigTotHartKoppeling: Field("afstand_voorzijde_voertuig_tot_hart_koppeling", DataType.Number),
   AfwijkendeMaximumSnelheid: Field("afwijkende_maximum_snelheid", DataType.Number),
   ApiGekentekendeVoertuigenAssen: Field("api_gekentekende_voertuigen_assen", DataType.Text),
   ApiGekentekendeVoertuigenBrandstof: Field("api_gekentekende_voertuigen_brandstof", DataType.Text),
-  ApiGekentekendeVoertuigenCarrosserie: Field(
-    "api_gekentekende_voertuigen_carrosserie",
-    DataType.Text,
-  ),
-  ApiGekentekendeVoertuigenCarrosserieSpecifiek: Field(
-    "api_gekentekende_voertuigen_carrosserie_specifiek",
-    DataType.Text,
-  ),
-  ApiGekentekendeVoertuigenVoertuigklasse: Field(
-    "api_gekentekende_voertuigen_voertuigklasse",
-    DataType.Text,
-  ),
+  ApiGekentekendeVoertuigenCarrosserie: Field("api_gekentekende_voertuigen_carrosserie", DataType.Text),
+  ApiGekentekendeVoertuigenCarrosserieSpecifiek: Field("api_gekentekende_voertuigen_carrosserie_specifiek", DataType.Text),
+  ApiGekentekendeVoertuigenVoertuigklasse: Field("api_gekentekende_voertuigen_voertuigklasse", DataType.Text),
   Breedte: Field("breedte", DataType.Number),
   BreedteVoertuigMaximum: Field("breedte_voertuig_maximum", DataType.Number),
   BreedteVoertuigMinimum: Field("breedte_voertuig_minimum", DataType.Number),
@@ -1333,28 +1302,16 @@ export const Fields: IFields = {
   Catalogusprijs: Field("catalogusprijs", DataType.Number),
   Cilinderinhoud: Field("cilinderinhoud", DataType.Number),
   CodeToelichtingTellerstandoordeel: Field("code_toelichting_tellerstandoordeel", DataType.Text),
-  DatumEersteTenaamstellingInNederland: Field(
-    "datum_eerste_tenaamstelling_in_nederland",
-    DataType.Number,
-  ),
-  DatumEersteTenaamstellingInNederlandDt: Field(
-    "datum_eerste_tenaamstelling_in_nederland_dt",
-    DataType.FloatingTimestamp,
-  ),
+  DatumEersteTenaamstellingInNederland: Field("datum_eerste_tenaamstelling_in_nederland", DataType.Number),
+  DatumEersteTenaamstellingInNederlandDt: Field("datum_eerste_tenaamstelling_in_nederland_dt", DataType.FloatingTimestamp),
   DatumEersteToelating: Field("datum_eerste_toelating", DataType.Number),
   DatumEersteToelatingDt: Field("datum_eerste_toelating_dt", DataType.FloatingTimestamp),
   DatumTenaamstelling: Field("datum_tenaamstelling", DataType.Number),
   DatumTenaamstellingDt: Field("datum_tenaamstelling_dt", DataType.FloatingTimestamp),
   EersteKleur: Field("eerste_kleur", DataType.Text),
-  EuropeseUitvoeringcategorieToevoeging: Field(
-    "europese_uitvoeringcategorie_toevoeging",
-    DataType.Text,
-  ),
+  EuropeseUitvoeringcategorieToevoeging: Field("europese_uitvoeringcategorie_toevoeging", DataType.Text),
   EuropeseVoertuigcategorie: Field("europese_voertuigcategorie", DataType.Text),
-  EuropeseVoertuigcategorieToevoeging: Field(
-    "europese_voertuigcategorie_toevoeging",
-    DataType.Text,
-  ),
+  EuropeseVoertuigcategorieToevoeging: Field("europese_voertuigcategorie_toevoeging", DataType.Text),
   ExportIndicator: Field("export_indicator", DataType.Text),
   GemLadingWrde: Field("gem_lading_wrde", DataType.Number),
   Handelsbenaming: Field("handelsbenaming", DataType.Text),
@@ -1374,10 +1331,7 @@ export const Fields: IFields = {
   MassaLedigVoertuig: Field("massa_ledig_voertuig", DataType.Number),
   MassaRijklaar: Field("massa_rijklaar", DataType.Number),
   MaximaleConstructiesnelheid: Field("maximale_constructiesnelheid", DataType.Number),
-  MaximumLastOnderDeVoorasSenTezamenKoppeling: Field(
-    "maximum_last_onder_de_vooras_sen_tezamen_koppeling",
-    DataType.Number,
-  ),
+  MaximumLastOnderDeVoorasSenTezamenKoppeling: Field("maximum_last_onder_de_vooras_sen_tezamen_koppeling", DataType.Number),
   MaximumMassaSamenstelling: Field("maximum_massa_samenstelling", DataType.Number),
   MaximumMassaTechnischMaximaal: Field("maximum_massa_technisch_maximaal", DataType.Number),
   MaximumMassaTechnischMinimaal: Field("maximum_massa_technisch_minimaal", DataType.Number),
@@ -1388,21 +1342,12 @@ export const Fields: IFields = {
   OpenstaandeTerugroepactieIndicator: Field("openstaande_terugroepactie_indicator", DataType.Text),
   OpleggerGeremd: Field("oplegger_geremd", DataType.Number),
   PlaatsChassisnummer: Field("plaats_chassisnummer", DataType.Text),
-  RegistratieDatumGoedkeuringAfschrijvingsmomentBpm: Field(
-    "registratie_datum_goedkeuring_afschrijvingsmoment_bpm",
-    DataType.Number,
-  ),
-  RegistratieDatumGoedkeuringAfschrijvingsmomentBpmDt: Field(
-    "registratie_datum_goedkeuring_afschrijvingsmoment_bpm_dt",
-    DataType.FloatingTimestamp,
-  ),
+  RegistratieDatumGoedkeuringAfschrijvingsmomentBpm: Field("registratie_datum_goedkeuring_afschrijvingsmoment_bpm", DataType.Number),
+  RegistratieDatumGoedkeuringAfschrijvingsmomentBpmDt: Field("registratie_datum_goedkeuring_afschrijvingsmoment_bpm_dt", DataType.FloatingTimestamp),
   Rupsonderstelconfiguratiecode: Field("rupsonderstelconfiguratiecode", DataType.Text),
   SubcategorieNederland: Field("subcategorie_nederland", DataType.Text),
   TaxiIndicator: Field("taxi_indicator", DataType.Text),
-  TechnischToelaatbaarMassaKoppelpunt: Field(
-    "technisch_toelaatbaar_massa_koppelpunt",
-    DataType.Number,
-  ),
+  TechnischToelaatbaarMassaKoppelpunt: Field("technisch_toelaatbaar_massa_koppelpunt", DataType.Number),
   TechnischeMaxMassaVoertuig: Field("technische_max_massa_voertuig", DataType.Number),
   Tellerstandoordeel: Field("tellerstandoordeel", DataType.Text),
   TenaamstellenMogelijk: Field("tenaamstellen_mogelijk", DataType.Text),
@@ -1416,19 +1361,13 @@ export const Fields: IFields = {
   Variant: Field("variant", DataType.Text),
   VerlCabInd: Field("verl_cab_ind", DataType.Text),
   VermogenMassarijklaar: Field("vermogen_massarijklaar", DataType.Number),
-  VerticaleBelastingKoppelpuntGetrokkenVoertuig: Field(
-    "verticale_belasting_koppelpunt_getrokken_voertuig",
-    DataType.Number,
-  ),
+  VerticaleBelastingKoppelpuntGetrokkenVoertuig: Field("verticale_belasting_koppelpunt_getrokken_voertuig", DataType.Number),
   VervaldatumApk: Field("vervaldatum_apk", DataType.Number),
   VervaldatumApkDt: Field("vervaldatum_apk_dt", DataType.FloatingTimestamp),
   VervaldatumTachograaf: Field("vervaldatum_tachograaf", DataType.Number),
   VervaldatumTachograafDt: Field("vervaldatum_tachograaf_dt", DataType.FloatingTimestamp),
   Voertuigsoort: Field("voertuigsoort", DataType.Text),
-  VolgnummerWijzigingEuTypegoedkeuring: Field(
-    "volgnummer_wijziging_eu_typegoedkeuring",
-    DataType.Number,
-  ),
+  VolgnummerWijzigingEuTypegoedkeuring: Field("volgnummer_wijziging_eu_typegoedkeuring", DataType.Number),
   WachtOpKeuren: Field("wacht_op_keuren", DataType.Text),
   WamVerzekerd: Field("wam_verzekerd", DataType.Text),
   Wielbasis: Field("wielbasis", DataType.Number),
@@ -1542,7 +1481,7 @@ export const Info = {
   provider_name: "KentekenVoertuigen",
   url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/m9d7-ebf2",
-};
+}
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen

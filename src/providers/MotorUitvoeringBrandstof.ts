@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Motor Uitvoering Brandstof
 //
-//
-//
 // Category: Typegoedkeuring
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Motor-Uitvoering-Brandstof/5w6t-p66a
 // Permalink: https://opendata.rdw.nl/d/5w6t-p66a
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Motor Uitvoering Brandstof
@@ -486,7 +471,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **MotorUitvoeringBrandstof**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``ActieradiusBrandstof`` | ``actieradius_brandstof`` | _Number_ |
@@ -573,459 +557,456 @@ export interface IFields {
    *
    * **Type**: Number
    */
-  ActieradiusBrandstof: FieldObject<DataType.Number>;
+   ActieradiusBrandstof: FieldObject<DataType.Number>;
   /**
    * ### Actieradius brandstof extern oplaadbaar
    *
    * **Type**: Number
    */
-  ActieradiusBrandstofExternOplaadbaar: FieldObject<DataType.Number>;
+   ActieradiusBrandstofExternOplaadbaar: FieldObject<DataType.Number>;
   /**
    * ### Brandstof volgnummer
    *
    * **Type**: Number
    */
-  BrandstofVolgnummer: FieldObject<DataType.Number>;
+   BrandstofVolgnummer: FieldObject<DataType.Number>;
   /**
    * ### Brandstofcode
    *
    * **Type**: Text
    */
-  Brandstofcode: FieldObject<DataType.Text>;
+   Brandstofcode: FieldObject<DataType.Text>;
   /**
    * ### Brandstofverbruik buitenweg
    *
    * **Type**: Number
    */
-  BrandstofverbruikBuitenweg: FieldObject<DataType.Number>;
+   BrandstofverbruikBuitenweg: FieldObject<DataType.Number>;
   /**
    * ### Brandstofverbruik combin rit
    *
    * **Type**: Number
    */
-  BrandstofverbruikCombinRit: FieldObject<DataType.Number>;
+   BrandstofverbruikCombinRit: FieldObject<DataType.Number>;
   /**
    * ### Brandstofverbruik stadsrit
    *
    * **Type**: Number
    */
-  BrandstofverbruikStadsrit: FieldObject<DataType.Number>;
+   BrandstofverbruikStadsrit: FieldObject<DataType.Number>;
   /**
    * ### EEG Uitvoeringscode
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### Elektrisch verbruik combinatie
    *
    * **Type**: Number
    */
-  ElektrischVerbruikCombinatie: FieldObject<DataType.Number>;
+   ElektrischVerbruikCombinatie: FieldObject<DataType.Number>;
   /**
    * ### Elektrisch verbruik gecomb
    *
    * **Type**: Number
    */
-  ElektrischVerbruikGecomb: FieldObject<DataType.Number>;
+   ElektrischVerbruikGecomb: FieldObject<DataType.Number>;
   /**
    * ### Emissie aant deeltjes esc test
    *
    * **Type**: Number
    */
-  EmissieAantDeeltjesEscTest: FieldObject<DataType.Number>;
+   EmissieAantDeeltjesEscTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie aant deeltjes etc test
    *
    * **Type**: Number
    */
-  EmissieAantDeeltjesEtcTest: FieldObject<DataType.Number>;
+   EmissieAantDeeltjesEtcTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie aant deeltjes t1 test
    *
    * **Type**: Number
    */
-  EmissieAantDeeltjesT1Test: FieldObject<DataType.Number>;
+   EmissieAantDeeltjesT1Test: FieldObject<DataType.Number>;
   /**
    * ### Emissie ch4 volgens whsc
    *
    * **Type**: Number
    */
-  EmissieCh4VolgensWhsc: FieldObject<DataType.Number>;
+   EmissieCh4VolgensWhsc: FieldObject<DataType.Number>;
   /**
    * ### Emissie ch4 volgens whtc
    *
    * **Type**: Number
    */
-  EmissieCh4VolgensWhtc: FieldObject<DataType.Number>;
+   EmissieCh4VolgensWhtc: FieldObject<DataType.Number>;
   /**
    * ### Emissie co bij koude start
    *
    * **Type**: Number
    */
-  EmissieCoBijKoudeStart: FieldObject<DataType.Number>;
+   EmissieCoBijKoudeStart: FieldObject<DataType.Number>;
   /**
    * ### Emissie co volgens whsc
    *
    * **Type**: Number
    */
-  EmissieCoVolgensWhsc: FieldObject<DataType.Number>;
+   EmissieCoVolgensWhsc: FieldObject<DataType.Number>;
   /**
    * ### Emissie co volgens whtc
    *
    * **Type**: Number
    */
-  EmissieCoVolgensWhtc: FieldObject<DataType.Number>;
+   EmissieCoVolgensWhtc: FieldObject<DataType.Number>;
   /**
    * ### Emissie co2 buitenweg
    *
    * **Type**: Number
    */
-  EmissieCo2Buitenweg: FieldObject<DataType.Number>;
+   EmissieCo2Buitenweg: FieldObject<DataType.Number>;
   /**
    * ### Emissie co2 combinatierit
    *
    * **Type**: Number
    */
-  EmissieCo2Combinatierit: FieldObject<DataType.Number>;
+   EmissieCo2Combinatierit: FieldObject<DataType.Number>;
   /**
    * ### Emissie co2 gecombineerd
    *
    * **Type**: Number
    */
-  EmissieCo2Gecombineerd: FieldObject<DataType.Number>;
+   EmissieCo2Gecombineerd: FieldObject<DataType.Number>;
   /**
    * ### Emissie co2 stadsrit
    *
    * **Type**: Number
    */
-  EmissieCo2Stadsrit: FieldObject<DataType.Number>;
+   EmissieCo2Stadsrit: FieldObject<DataType.Number>;
   /**
    * ### Emissie deeltjes aantal whsc
    *
    * **Type**: Number
    */
-  EmissieDeeltjesAantalWhsc: FieldObject<DataType.Number>;
+   EmissieDeeltjesAantalWhsc: FieldObject<DataType.Number>;
   /**
    * ### Emissie deeltjes aantal whtc
    *
    * **Type**: Number
    */
-  EmissieDeeltjesAantalWhtc: FieldObject<DataType.Number>;
+   EmissieDeeltjesAantalWhtc: FieldObject<DataType.Number>;
   /**
    * ### Emissie deeltjes massa whsc
    *
    * **Type**: Number
    */
-  EmissieDeeltjesMassaWhsc: FieldObject<DataType.Number>;
+   EmissieDeeltjesMassaWhsc: FieldObject<DataType.Number>;
   /**
    * ### Emissie deeltjes massa whtc
    *
    * **Type**: Number
    */
-  EmissieDeeltjesMassaWhtc: FieldObject<DataType.Number>;
+   EmissieDeeltjesMassaWhtc: FieldObject<DataType.Number>;
   /**
    * ### Emissie hc bij koude start
    *
    * **Type**: Number
    */
-  EmissieHcBijKoudeStart: FieldObject<DataType.Number>;
+   EmissieHcBijKoudeStart: FieldObject<DataType.Number>;
   /**
    * ### Emissie hc en nox type1
    *
    * **Type**: Number
    */
-  EmissieHcEnNoxType1: FieldObject<DataType.Number>;
+   EmissieHcEnNoxType1: FieldObject<DataType.Number>;
   /**
    * ### Emissie koolmonaxide etc test
    *
    * **Type**: Number
    */
-  EmissieKoolmonaxideEtcTest: FieldObject<DataType.Number>;
+   EmissieKoolmonaxideEtcTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie koolmonoxide esc test
    *
    * **Type**: Number
    */
-  EmissieKoolmonoxideEscTest: FieldObject<DataType.Number>;
+   EmissieKoolmonoxideEscTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie koolmonoxide type 1
    *
    * **Type**: Number
    */
-  EmissieKoolmonoxideType1: FieldObject<DataType.Number>;
+   EmissieKoolmonoxideType1: FieldObject<DataType.Number>;
   /**
    * ### Emissie koolwaterstof type 1
    *
    * **Type**: Number
    */
-  EmissieKoolwaterstofType1: FieldObject<DataType.Number>;
+   EmissieKoolwaterstofType1: FieldObject<DataType.Number>;
   /**
    * ### Emissie koolwaterstoffen esc test
    *
    * **Type**: Number
    */
-  EmissieKoolwaterstoffenEscTest: FieldObject<DataType.Number>;
+   EmissieKoolwaterstoffenEscTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie koolwaterstoffen etc test
    *
    * **Type**: Number
    */
-  EmissieKoolwaterstoffenEtcTest: FieldObject<DataType.Number>;
+   EmissieKoolwaterstoffenEtcTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie methaan etc test
    *
    * **Type**: Number
    */
-  EmissieMethaanEtcTest: FieldObject<DataType.Number>;
+   EmissieMethaanEtcTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie nh3 volgens whsc
    *
    * **Type**: Number
    */
-  EmissieNh3VolgensWhsc: FieldObject<DataType.Number>;
+   EmissieNh3VolgensWhsc: FieldObject<DataType.Number>;
   /**
    * ### Emissie nh3 volgens whtc
    *
    * **Type**: Number
    */
-  EmissieNh3VolgensWhtc: FieldObject<DataType.Number>;
+   EmissieNh3VolgensWhtc: FieldObject<DataType.Number>;
   /**
    * ### Emissie nmhc volgens whsc
    *
    * **Type**: Number
    */
-  EmissieNmhcVolgensWhsc: FieldObject<DataType.Number>;
+   EmissieNmhcVolgensWhsc: FieldObject<DataType.Number>;
   /**
    * ### Emissie nmhc volgens whtc
    *
    * **Type**: Number
    */
-  EmissieNmhcVolgensWhtc: FieldObject<DataType.Number>;
+   EmissieNmhcVolgensWhtc: FieldObject<DataType.Number>;
   /**
    * ### Emissie non methaan koolw etc test
    *
    * **Type**: Number
    */
-  EmissieNonMethaanKoolwEtcTest: FieldObject<DataType.Number>;
+   EmissieNonMethaanKoolwEtcTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie nox volgens whsc
    *
    * **Type**: Number
    */
-  EmissieNoxVolgensWhsc: FieldObject<DataType.Number>;
+   EmissieNoxVolgensWhsc: FieldObject<DataType.Number>;
   /**
    * ### Emissie nox volgens whtc
    *
    * **Type**: Number
    */
-  EmissieNoxVolgensWhtc: FieldObject<DataType.Number>;
+   EmissieNoxVolgensWhtc: FieldObject<DataType.Number>;
   /**
    * ### Emissie stikstofoxide type 1
    *
    * **Type**: Number
    */
-  EmissieStikstofoxideType1: FieldObject<DataType.Number>;
+   EmissieStikstofoxideType1: FieldObject<DataType.Number>;
   /**
    * ### Emissie stikstofoxiden esc test
    *
    * **Type**: Number
    */
-  EmissieStikstofoxidenEscTest: FieldObject<DataType.Number>;
+   EmissieStikstofoxidenEscTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie stikstofoxiden etc test
    *
    * **Type**: Number
    */
-  EmissieStikstofoxidenEtcTest: FieldObject<DataType.Number>;
+   EmissieStikstofoxidenEtcTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie thc volgens whsc
    *
    * **Type**: Number
    */
-  EmissieThcVolgensWhsc: FieldObject<DataType.Number>;
+   EmissieThcVolgensWhsc: FieldObject<DataType.Number>;
   /**
    * ### Emissie thc volgens whtc
    *
    * **Type**: Number
    */
-  EmissieThcVolgensWhtc: FieldObject<DataType.Number>;
+   EmissieThcVolgensWhtc: FieldObject<DataType.Number>;
   /**
    * ### Emissie vaste stofdeeltjes
    *
    * **Type**: Number
    */
-  EmissieVasteStofdeeltjes: FieldObject<DataType.Number>;
+   EmissieVasteStofdeeltjes: FieldObject<DataType.Number>;
   /**
    * ### Emissie vaste stofdeeltjes esc test
    *
    * **Type**: Number
    */
-  EmissieVasteStofdeeltjesEscTest: FieldObject<DataType.Number>;
+   EmissieVasteStofdeeltjesEscTest: FieldObject<DataType.Number>;
   /**
    * ### Emissie vaste stofdeeltjes etc test
    *
    * **Type**: Number
    */
-  EmissieVasteStofdeeltjesEtcTest: FieldObject<DataType.Number>;
+   EmissieVasteStofdeeltjesEtcTest: FieldObject<DataType.Number>;
   /**
    * ### Emissieklasse
    *
    * **Type**: Text
    */
-  Emissiecode: FieldObject<DataType.Text>;
+   Emissiecode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Geluidsniveau bovengrens
    *
    * **Type**: Number
    */
-  GeluidsniveauBovengrens: FieldObject<DataType.Number>;
+   GeluidsniveauBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Geluidsniveau ondergrens
    *
    * **Type**: Number
    */
-  GeluidsniveauOndergrens: FieldObject<DataType.Number>;
+   GeluidsniveauOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Geluidsniveau rijdend
    *
    * **Type**: Number
    */
-  GeluidsniveauRijdend: FieldObject<DataType.Number>;
+   GeluidsniveauRijdend: FieldObject<DataType.Number>;
   /**
    * ### Lucht injectie indicator
    *
    * **Type**: Text
    */
-  LuchtInjectieIndicator: FieldObject<DataType.Text>;
+   LuchtInjectieIndicator: FieldObject<DataType.Text>;
   /**
    * ### Max vermogen continu bovengrens
    *
    * **Type**: Number
    */
-  MaxVermogenContinuBovengrens: FieldObject<DataType.Number>;
+   MaxVermogenContinuBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max vermogen continu ondergrens
    *
    * **Type**: Number
    */
-  MaxVermogenContinuOndergrens: FieldObject<DataType.Number>;
+   MaxVermogenContinuOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Maximale biobrandstof percentage
    *
    * **Type**: Number
    */
-  MaximaleBiobrandstofPercentage: FieldObject<DataType.Number>;
+   MaximaleBiobrandstofPercentage: FieldObject<DataType.Number>;
   /**
    * ### Netto max vermogen bovengrens
    *
    * **Type**: Number
    */
-  NettoMaxVermogenBovengrens: FieldObject<DataType.Number>;
+   NettoMaxVermogenBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Netto max vermogen ondergrens
    *
    * **Type**: Number
    */
-  NettoMaxVermogenOndergrens: FieldObject<DataType.Number>;
+   NettoMaxVermogenOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Roet uitstoot acc
    *
    * **Type**: Number
    */
-  RoetUitstootAcc: FieldObject<DataType.Number>;
+   RoetUitstootAcc: FieldObject<DataType.Number>;
   /**
    * ### Rookwaarde elr test
    *
    * **Type**: Number
    */
-  RookwaardeElrTest: FieldObject<DataType.Number>;
+   RookwaardeElrTest: FieldObject<DataType.Number>;
   /**
    * ### Soort inspuiting motor
    *
    * **Type**: Text
    */
-  SoortInspuitingMotor: FieldObject<DataType.Text>;
+   SoortInspuitingMotor: FieldObject<DataType.Text>;
   /**
    * ### Station toerental bovengrens acc
    *
    * **Type**: Number
    */
-  StationToerentalBovengrensAcc: FieldObject<DataType.Number>;
+   StationToerentalBovengrensAcc: FieldObject<DataType.Number>;
   /**
    * ### Station toerental ondergrens acc
    *
    * **Type**: Number
    */
-  StationToerentalOndergrensAcc: FieldObject<DataType.Number>;
+   StationToerentalOndergrensAcc: FieldObject<DataType.Number>;
   /**
    * ### Toerental max vermogen bovengrens
    *
    * **Type**: Number
    */
-  ToerentalMaxVermogenBovengrens: FieldObject<DataType.Number>;
+   ToerentalMaxVermogenBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Toerental max vermogen ondergrens
    *
    * **Type**: Number
    */
-  ToerentalMaxVermogenOndergrens: FieldObject<DataType.Number>;
+   ToerentalMaxVermogenOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Uitlaatgas circulatie indicator
    *
    * **Type**: Text
    */
-  UitlaatgasCirculatieIndicator: FieldObject<DataType.Text>;
+   UitlaatgasCirculatieIndicator: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Text
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Text>;
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Text>;
   /**
    * ### Verbruik gecombineerd
    *
    * **Type**: Number
    */
-  VerbruikGecombineerd: FieldObject<DataType.Number>;
+   VerbruikGecombineerd: FieldObject<DataType.Number>;
   /**
    * ### Vermogen bovengrens
    *
    * **Type**: Number
    */
-  VermogenBovengrens: FieldObject<DataType.Number>;
+   VermogenBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Vermogen ondergrens
    *
    * **Type**: Number
    */
-  VermogenOndergrens: FieldObject<DataType.Number>;
+   VermogenOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Volgnummer
    *
    * **Type**: Number
    */
-  Volgnummer: FieldObject<DataType.Number>;
-}
+   Volgnummer: FieldObject<DataType.Number>;
+};
 
 export const Fields: IFields = {
   ActieradiusBrandstof: Field("actieradius_brandstof", DataType.Number),
-  ActieradiusBrandstofExternOplaadbaar: Field(
-    "actieradius_brandstof_extern_oplaadbaar",
-    DataType.Number,
-  ),
+  ActieradiusBrandstofExternOplaadbaar: Field("actieradius_brandstof_extern_oplaadbaar", DataType.Number),
   BrandstofVolgnummer: Field("brandstof_volgnummer", DataType.Number),
   Brandstofcode: Field("brandstofcode", DataType.Text),
   BrandstofverbruikBuitenweg: Field("brandstofverbruik_buitenweg", DataType.Number),
@@ -1185,7 +1166,7 @@ export const Info = {
   provider_name: "MotorUitvoeringBrandstof",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Motor-Uitvoering-Brandstof/5w6t-p66a",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/5w6t-p66a",
-};
+}
 
 /**
  * ### Open Data RDW: Motor Uitvoering Brandstof

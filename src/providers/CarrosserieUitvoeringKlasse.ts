@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Carrosserie Uitvoering Klasse
 //
-//
-//
 // Category: Typegoedkeuring
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Klasse/q7fi-ijjh
 // Permalink: https://opendata.rdw.nl/d/q7fi-ijjh
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Carrosserie Uitvoering Klasse
@@ -78,7 +63,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **CarrosserieUitvoeringKlasse**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``CarrosserieKlasseEuropees`` | ``carrosserie_klasse_europees`` | _Text_ |
@@ -97,44 +81,44 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  CarrosserieKlasseEuropees: FieldObject<DataType.Text>;
+   CarrosserieKlasseEuropees: FieldObject<DataType.Text>;
   /**
    * ### Carrosserie klasse volgnummer
    *
    * **Type**: Number
    */
-  CarrosserieKlasseVolgnummer: FieldObject<DataType.Number>;
+   CarrosserieKlasseVolgnummer: FieldObject<DataType.Number>;
   /**
    * ### Carrosserie volgnummer
    *
    * **Type**: Number
    */
-  CarrosserieVolgnummer: FieldObject<DataType.Number>;
+   CarrosserieVolgnummer: FieldObject<DataType.Number>;
   /**
    * ### EEG Uitvoeringscode
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-}
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+};
 
 export const Fields: IFields = {
   CarrosserieKlasseEuropees: Field("carrosserie_klasse_europees", DataType.Text),
@@ -160,10 +144,9 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Carrosserie Uitvoering Klasse",
   provider_name: "CarrosserieUitvoeringKlasse",
-  url:
-    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Klasse/q7fi-ijjh",
+  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Klasse/q7fi-ijjh",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/q7fi-ijjh",
-};
+}
 
 /**
  * ### Open Data RDW: Carrosserie Uitvoering Klasse

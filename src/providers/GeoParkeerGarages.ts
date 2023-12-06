@@ -14,19 +14,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for GEO Parkeer Garages
@@ -61,7 +48,7 @@ export interface ResponseData {
    *
    * **Type**: Point
    */
-  location?: { latitude: string; longitude: string; human_address: null | string };
+  location?: { latitude: string; longitude: string; human_address: null | string; };
   /**
    * ### Location (address)
    *
@@ -102,7 +89,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **GeoParkeerGarages**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``Areadesc`` | ``areadesc`` | _Text_ |
@@ -125,68 +111,68 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  Areadesc: FieldObject<DataType.Text>;
+   Areadesc: FieldObject<DataType.Text>;
   /**
    * ### AreaId
    *
    * **Type**: Text
    */
-  Areaid: FieldObject<DataType.Text>;
+   Areaid: FieldObject<DataType.Text>;
   /**
    * ### AreaManagerId
    *
    * **Type**: Number
    */
-  Areamanagerid: FieldObject<DataType.Number>;
+   Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndDataArea
    *
    * **Type**: Number
    */
-  Enddataarea: FieldObject<DataType.Number>;
+   Enddataarea: FieldObject<DataType.Number>;
   /**
    * ### Location
    *
    * **Type**: Point
    */
-  Location: FieldObject<DataType.Point>;
+   Location: FieldObject<DataType.Point>;
   /**
    * ### Location (address)
    *
    * **Type**: Text
    */
-  LocationAddress: FieldObject<DataType.Text>;
+   LocationAddress: FieldObject<DataType.Text>;
   /**
    * ### Location (city)
    *
    * **Type**: Text
    */
-  LocationCity: FieldObject<DataType.Text>;
+   LocationCity: FieldObject<DataType.Text>;
   /**
    * ### Location (state)
    *
    * **Type**: Text
    */
-  LocationState: FieldObject<DataType.Text>;
+   LocationState: FieldObject<DataType.Text>;
   /**
    * ### Location (zip)
    *
    * **Type**: Text
    */
-  LocationZip: FieldObject<DataType.Text>;
+   LocationZip: FieldObject<DataType.Text>;
   /**
    * ### StartDataArea
    *
    * **Type**: Number
    */
-  Startdataarea: FieldObject<DataType.Number>;
+   Startdataarea: FieldObject<DataType.Number>;
   /**
    * ### UsageId
    *
    * **Type**: Text
    */
-  Usageid: FieldObject<DataType.Text>;
-}
+   Usageid: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   Areadesc: Field("areadesc", DataType.Text),
@@ -222,7 +208,7 @@ export const Info = {
   provider_name: "GeoParkeerGarages",
   url: "https://opendata.rdw.nl/Parkeren/GEO-Parkeer-Garages/t5pc-eb34",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/t5pc-eb34",
-};
+}
 
 /**
  * ### GEO Parkeer Garages

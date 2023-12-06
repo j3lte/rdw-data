@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Gekentekende_voertuigen_voertuigklasse
 //
-//
-//
 // Category: Voertuigen
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_voertuigklas/kmfi-hrps
 // Permalink: https://opendata.rdw.nl/d/kmfi-hrps
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_voertuigklasse
@@ -46,7 +31,7 @@ export interface ResponseData {
   carrosserie_volgnummer?: string;
   /**
    * ### Kenteken
-   *
+   * 
    * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
    *
    * **Type**: Text
@@ -54,7 +39,7 @@ export interface ResponseData {
   kenteken?: string;
   /**
    * ### Voertuigklasse
-   *
+   * 
    * Dit gegeven wordt vastgesteld tijdens de goedkeuring van een voertuig en geeft aan voor welke klasse(n) het voertuig is goedgekeurd.
    * Een voertuig mag tot meer dan n klasse behoren. In zon geval kan het voertuig voor elke klasse waarin het kan worden ingedeeld, worden goedgekeurd.
    * Het gegeven wordt alleen vastgesteld bij voertuigen van de Europese voertuigcategorien M2 en M3 (bussen)
@@ -72,7 +57,7 @@ export interface ResponseData {
   voertuigklasse?: string;
   /**
    * ### Voertuigklasse omschrijving
-   *
+   * 
    * Omschrijving van de voertuigklasse
    *
    * **Type**: Text
@@ -82,7 +67,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **KentekenVoertuigenVoertuigklasse**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``CarrosserieKlasseVolgnummer`` | ``carrosserie_klasse_volgnummer`` | _Text_ |
@@ -99,24 +83,24 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  CarrosserieKlasseVolgnummer: FieldObject<DataType.Text>;
+   CarrosserieKlasseVolgnummer: FieldObject<DataType.Text>;
   /**
    * ### Carrosserie volgnummer
    *
    * **Type**: Text
    */
-  CarrosserieVolgnummer: FieldObject<DataType.Text>;
+   CarrosserieVolgnummer: FieldObject<DataType.Text>;
   /**
    * ### Kenteken
-   *
+   * 
    * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
    *
    * **Type**: Text
    */
-  Kenteken: FieldObject<DataType.Text>;
+   Kenteken: FieldObject<DataType.Text>;
   /**
    * ### Voertuigklasse
-   *
+   * 
    * Dit gegeven wordt vastgesteld tijdens de goedkeuring van een voertuig en geeft aan voor welke klasse(n) het voertuig is goedgekeurd.
    * Een voertuig mag tot meer dan n klasse behoren. In zon geval kan het voertuig voor elke klasse waarin het kan worden ingedeeld, worden goedgekeurd.
    * Het gegeven wordt alleen vastgesteld bij voertuigen van de Europese voertuigcategorien M2 en M3 (bussen)
@@ -131,16 +115,16 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  Voertuigklasse: FieldObject<DataType.Text>;
+   Voertuigklasse: FieldObject<DataType.Text>;
   /**
    * ### Voertuigklasse omschrijving
-   *
+   * 
    * Omschrijving van de voertuigklasse
    *
    * **Type**: Text
    */
-  VoertuigklasseOmschrijving: FieldObject<DataType.Text>;
-}
+   VoertuigklasseOmschrijving: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   CarrosserieKlasseVolgnummer: Field("carrosserie_klasse_volgnummer", DataType.Text),
@@ -162,10 +146,9 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Gekentekende_voertuigen_voertuigklasse",
   provider_name: "KentekenVoertuigenVoertuigklasse",
-  url:
-    "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_voertuigklas/kmfi-hrps",
+  url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_voertuigklas/kmfi-hrps",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/kmfi-hrps",
-};
+}
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_voertuigklasse

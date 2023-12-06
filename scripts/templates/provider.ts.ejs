@@ -17,25 +17,11 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for <%= it.item.full_name %>
  */
-export interface ResponseData {
-  <% it.item.columns.forEach(function(column) { %>
+export interface ResponseData {<% it.item.columns.forEach(function(column) { %>
   /**
    * ### <%= column.name %>
    *
@@ -43,7 +29,6 @@ export interface ResponseData {
    * <%= line %><% }); %>
    *
    * **Type**: <%= column.datatype %>
-   *
    */
   <%= column.field_name %>?: <%= column.node_type %>;<% }); %>
 }
@@ -58,8 +43,7 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
-  <% it.item.columns.forEach(function(column) { %>
+export interface IFields {<% it.item.columns.forEach(function(column) { %>
   /**
    * ### <%= column.name %>
    *
@@ -67,19 +51,16 @@ export interface IFields {
    * <%= line %><% }); %>
    *
    * **Type**: <%= column.datatype %>
-   *
    */
    <%= column.big_name %>: FieldObject<<%= column.datatypeTemplate %>>;<% }); %>
 };
 
-export const Fields: IFields = {
-  <% it.item.columns.forEach(function(column) { %>
+export const Fields: IFields = {<% it.item.columns.forEach(function(column) { %>
   <%= column.big_name %>: Field("<%= column.field_name %>", <%= column.datatypeTemplate %>),<% }); %>
 };
 
 export const Info = {
-  fields: [
-    <% it.item.columns.forEach(function(column) { %>
+  fields: [<% it.item.columns.forEach(function(column) { %>
     "<%= column.big_name %>",<% }); %>
   ],
   dataset: "<%= it.item.id %>",
@@ -89,7 +70,6 @@ export const Info = {
   url: "<%= it.item.link %>",
   api_docs: "https://dev.socrata.com/foundry/<%= it.item.domain %>/<%= it.item.id %>",
 }
-
 
 /**
  * ### <%= it.item.full_name %><% it.item.description.forEach(function(line) { %>

@@ -14,19 +14,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data Parkeren: GEBIEDSBEHEERDER
@@ -34,7 +21,7 @@ export { DataType, Field };
 export interface ResponseData {
   /**
    * ### AreaManagerDesc
-   *
+   * 
    * Omschrijving van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Text
@@ -42,7 +29,7 @@ export interface ResponseData {
   areamanagerdesc?: string;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -50,7 +37,7 @@ export interface ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateAreaManagerId
-   *
+   * 
    * Datum tot wanneer een bepaalde gebiedsbeheerder of parkeerexploitant  niet meer in het NPR opereert.
    *
    * **Type**: Number
@@ -58,7 +45,7 @@ export interface ResponseData {
   enddateareamanagerid?: string;
   /**
    * ### StartDateAreaManagerId
-   *
+   * 
    * Datum vanaf wanneer een bepaalde gebiedsbeheerder of parkeerexploitant in het NPR opereert.
    *
    * **Type**: Number
@@ -66,7 +53,7 @@ export interface ResponseData {
   startdateareamanagerid?: string;
   /**
    * ### URL
-   *
+   * 
    * Een web-adres dat verwijst naar de website van een gebiedbeheerder (of beheerder van een parkeerterrein of -garage)
    *
    * **Type**: Text
@@ -76,7 +63,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **ParkerenGebiedsbeheerder**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``Areamanagerdesc`` | ``areamanagerdesc`` | _Text_ |
@@ -90,45 +76,45 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### AreaManagerDesc
-   *
+   * 
    * Omschrijving van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Text
    */
-  Areamanagerdesc: FieldObject<DataType.Text>;
+   Areamanagerdesc: FieldObject<DataType.Text>;
   /**
    * ### AreaManagerId
-   *
+   * 
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
    */
-  Areamanagerid: FieldObject<DataType.Number>;
+   Areamanagerid: FieldObject<DataType.Number>;
   /**
    * ### EndDateAreaManagerId
-   *
+   * 
    * Datum tot wanneer een bepaalde gebiedsbeheerder of parkeerexploitant  niet meer in het NPR opereert.
    *
    * **Type**: Number
    */
-  Enddateareamanagerid: FieldObject<DataType.Number>;
+   Enddateareamanagerid: FieldObject<DataType.Number>;
   /**
    * ### StartDateAreaManagerId
-   *
+   * 
    * Datum vanaf wanneer een bepaalde gebiedsbeheerder of parkeerexploitant in het NPR opereert.
    *
    * **Type**: Number
    */
-  Startdateareamanagerid: FieldObject<DataType.Number>;
+   Startdateareamanagerid: FieldObject<DataType.Number>;
   /**
    * ### URL
-   *
+   * 
    * Een web-adres dat verwijst naar de website van een gebiedbeheerder (of beheerder van een parkeerterrein of -garage)
    *
    * **Type**: Text
    */
-  Url: FieldObject<DataType.Text>;
-}
+   Url: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   Areamanagerdesc: Field("areamanagerdesc", DataType.Text),
@@ -152,7 +138,7 @@ export const Info = {
   provider_name: "ParkerenGebiedsbeheerder",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIEDSBEHEERDER/2uc2-nnv3",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/2uc2-nnv3",
-};
+}
 
 /**
  * ### Open Data Parkeren: GEBIEDSBEHEERDER

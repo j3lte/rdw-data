@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Gekentekende_voertuigen_carrosserie
 //
-//
-//
 // Category: Voertuigen
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie/vezc-m2t6
 // Permalink: https://opendata.rdw.nl/d/vezc-m2t6
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_carrosserie
@@ -60,7 +45,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **KentekenVoertuigenCarrosserie**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``CarrosserieVolgnummer`` | ``carrosserie_volgnummer`` | _Text_ |
@@ -76,35 +60,32 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  CarrosserieVolgnummer: FieldObject<DataType.Text>;
+   CarrosserieVolgnummer: FieldObject<DataType.Text>;
   /**
    * ### Carrosserietype
    *
    * **Type**: Text
    */
-  Carrosserietype: FieldObject<DataType.Text>;
+   Carrosserietype: FieldObject<DataType.Text>;
   /**
    * ### Kenteken
    *
    * **Type**: Text
    */
-  Kenteken: FieldObject<DataType.Text>;
+   Kenteken: FieldObject<DataType.Text>;
   /**
    * ### Type Carrosserie Europese omschrijving
    *
    * **Type**: Text
    */
-  TypeCarrosserieEuropeseOmschrijving: FieldObject<DataType.Text>;
-}
+   TypeCarrosserieEuropeseOmschrijving: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Text),
   Carrosserietype: Field("carrosserietype", DataType.Text),
   Kenteken: Field("kenteken", DataType.Text),
-  TypeCarrosserieEuropeseOmschrijving: Field(
-    "type_carrosserie_europese_omschrijving",
-    DataType.Text,
-  ),
+  TypeCarrosserieEuropeseOmschrijving: Field("type_carrosserie_europese_omschrijving", DataType.Text),
 };
 
 export const Info = {
@@ -118,10 +99,9 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Gekentekende_voertuigen_carrosserie",
   provider_name: "KentekenVoertuigenCarrosserie",
-  url:
-    "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie/vezc-m2t6",
+  url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie/vezc-m2t6",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/vezc-m2t6",
-};
+}
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_carrosserie

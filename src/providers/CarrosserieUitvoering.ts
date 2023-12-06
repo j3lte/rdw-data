@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Carrosserie Uitvoering
 //
-//
-//
 // Category: Typegoedkeuring
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering/w2qp-idms
 // Permalink: https://opendata.rdw.nl/d/w2qp-idms
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Carrosserie Uitvoering
@@ -72,7 +57,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **CarrosserieUitvoering**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``CarrosserieVolgnummer`` | ``carrosserie_volgnummer`` | _Number_ |
@@ -90,38 +74,38 @@ export interface IFields {
    *
    * **Type**: Number
    */
-  CarrosserieVolgnummer: FieldObject<DataType.Number>;
+   CarrosserieVolgnummer: FieldObject<DataType.Number>;
   /**
    * ### EEG Uitvoeringscode
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Type carrosserie europees
    *
    * **Type**: Text
    */
-  TypeCarrosserieEuropees: FieldObject<DataType.Text>;
+   TypeCarrosserieEuropees: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-}
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+};
 
 export const Fields: IFields = {
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Number),
@@ -147,7 +131,7 @@ export const Info = {
   provider_name: "CarrosserieUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering/w2qp-idms",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/w2qp-idms",
-};
+}
 
 /**
  * ### Open Data RDW: Carrosserie Uitvoering

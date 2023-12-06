@@ -1,4 +1,4 @@
-import { render } from "https://deno.land/x/eta@v1.6.0/mod.ts";
+import { render } from "https://deno.land/x/eta@v1.14.2/mod.ts";
 import { emptyDir } from "https://deno.land/x/dnt@0.34.0/mod.ts";
 
 import { DataResult, ResponseData, WithSodaVersion } from "./util/interfaces.ts";
@@ -29,7 +29,9 @@ const getData = async (url: string) => {
   response.results.forEach((result) => {
     const description = (result.resource.description || "")
       .trim()
-      .split("\n");
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0);
 
     const data: DataResult = {
       name: fixTitle(result.resource.name),
@@ -64,8 +66,14 @@ const renderRemplate = (template: string, item: WithSodaVersion) =>
     autoEscape: false,
     autoTrim: false,
   }) as Promise<string>).then((result) => {
-    const fixed = result.replace(/^(\/\/\r\n){2,}/g, "//\r\n");
-    return fixed;
+    const fixed = result
+      .replace(/^(^\/\/\s?\n)/g, "//\n")
+      .replace(/^(\/\/\s?\r\n){2,}/g, "//\r\n");
+
+    // replace multiple lines that only have a * with a single line
+    const fixed2 = fixed.replace(/(^\s+\*\s?[r\|\n]){1,3}/gm, "$1");
+
+    return fixed2;
   });
 
 const renderAndWrite = async (template: string, item: WithSodaVersion) => {
@@ -122,7 +130,10 @@ const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
     await Deno.mkdir(outputFolder, { recursive: true });
     // cleanup outputfolder
     await emptyDir(outputFolder);
-    const modRendered = await (render(modTemplate, { data: resultData }, {
+    const modRendered = await (render(modTemplate, {
+      items: resultData,
+      sodaVersion: lastSodaVersion,
+    }, {
       async: true,
       cache: true,
       rmWhitespace: false,

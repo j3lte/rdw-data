@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Terugroep_actie_risico
 //
-//
-//
 // Category: Terugroepacties
 // Link: https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_risico/9ihi-jgpf
 // Permalink: https://opendata.rdw.nl/d/9ihi-jgpf
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Terugroep_actie_risico
@@ -34,7 +19,7 @@ export { DataType, Field };
 export interface ResponseData {
   /**
    * ### Code mogelijk gevaar
-   *
+   * 
    * De code voor het mogelijke gevaar:
    * ONG= Een (verkeers)ongeval met letselschade
    * TEL= Verhoogde kans op letsel bij een ongeval
@@ -46,7 +31,7 @@ export interface ResponseData {
   code_mogelijk_gevaar?: string;
   /**
    * ### Mogelijk gevaar
-   *
+   * 
    * Uitleg over wat het gevaar van het defect is voor de bestuurder van het voertuig en eventueel de medeweggebruikers. Er kunnen meer gevaren van toepassing zijn.
    *
    * **Type**: Text
@@ -54,7 +39,7 @@ export interface ResponseData {
   mogelijk_gevaar?: string;
   /**
    * ### Referentiecode RDW
-   *
+   * 
    * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
    *
    * **Type**: Text
@@ -64,7 +49,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **TerugroepActieRisico**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``CodeMogelijkGevaar`` | ``code_mogelijk_gevaar`` | _Text_ |
@@ -76,7 +60,7 @@ export interface ResponseData {
 export interface IFields {
   /**
    * ### Code mogelijk gevaar
-   *
+   * 
    * De code voor het mogelijke gevaar:
    * ONG= Een (verkeers)ongeval met letselschade
    * TEL= Verhoogde kans op letsel bij een ongeval
@@ -85,24 +69,24 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  CodeMogelijkGevaar: FieldObject<DataType.Text>;
+   CodeMogelijkGevaar: FieldObject<DataType.Text>;
   /**
    * ### Mogelijk gevaar
-   *
+   * 
    * Uitleg over wat het gevaar van het defect is voor de bestuurder van het voertuig en eventueel de medeweggebruikers. Er kunnen meer gevaren van toepassing zijn.
    *
    * **Type**: Text
    */
-  MogelijkGevaar: FieldObject<DataType.Text>;
+   MogelijkGevaar: FieldObject<DataType.Text>;
   /**
    * ### Referentiecode RDW
-   *
+   * 
    * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
    *
    * **Type**: Text
    */
-  ReferentiecodeRdw: FieldObject<DataType.Text>;
-}
+   ReferentiecodeRdw: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   CodeMogelijkGevaar: Field("code_mogelijk_gevaar", DataType.Text),
@@ -122,7 +106,7 @@ export const Info = {
   provider_name: "TerugroepActieRisico",
   url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_risico/9ihi-jgpf",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/9ihi-jgpf",
-};
+}
 
 /**
  * ### Open Data RDW: Terugroep_actie_risico

@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Versnellingsbak Uitvoering
 //
-//
-//
 // Category: Typegoedkeuring
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Versnellingsbak-Uitvoering/r7cw-67gs
 // Permalink: https://opendata.rdw.nl/d/r7cw-67gs
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Versnellingsbak Uitvoering
@@ -84,7 +69,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **VersnellingsbakUitvoering**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``AantalVersnellingenBovengrens`` | ``aantal_versnellingen_bovengrens`` | _Number_ |
@@ -104,50 +88,50 @@ export interface IFields {
    *
    * **Type**: Number
    */
-  AantalVersnellingenBovengrens: FieldObject<DataType.Number>;
+   AantalVersnellingenBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal versnellingen ondergrens
    *
    * **Type**: Number
    */
-  AantalVersnellingenOndergrens: FieldObject<DataType.Number>;
+   AantalVersnellingenOndergrens: FieldObject<DataType.Number>;
   /**
    * ### EEG Uitvoeringscode
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Type versnellingsbak
    *
    * **Type**: Text
    */
-  TypeVersnellingsbak: FieldObject<DataType.Text>;
+   TypeVersnellingsbak: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
   /**
    * ### Volgnummer versnellingsbak
    *
    * **Type**: Number
    */
-  Volgnummer: FieldObject<DataType.Number>;
-}
+   Volgnummer: FieldObject<DataType.Number>;
+};
 
 export const Fields: IFields = {
   AantalVersnellingenBovengrens: Field("aantal_versnellingen_bovengrens", DataType.Number),
@@ -177,7 +161,7 @@ export const Info = {
   provider_name: "VersnellingsbakUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Versnellingsbak-Uitvoering/r7cw-67gs",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/r7cw-67gs",
-};
+}
 
 /**
  * ### Open Data RDW: Versnellingsbak Uitvoering

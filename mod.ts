@@ -1,2 +1,1 @@
-import * as Providers from "./src/providers/mod.ts";
-export { Providers };
+export * from "./src/mod.ts";

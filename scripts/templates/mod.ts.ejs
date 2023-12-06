@@ -1,2 +1,17 @@
-<% it.data.forEach(function (item) { %>
+export {
+  DataType,
+  Field,
+  Order,
+  Select,
+  SelectAll,
+  SelectGreatest,
+  SelectLeast,
+  SelectRegrIntercept,
+  SelectRegrR2,
+  SelectRegrSlope,
+  SystemFields,
+  Where,
+} from "https://deno.land/x/soda@<%= it.sodaVersion %>/mod.ts";
+
+<% it.items.forEach(function (item) { %>
 export * as <%= item.name %> from "./<%= item.name %>.ts";<% }); %>

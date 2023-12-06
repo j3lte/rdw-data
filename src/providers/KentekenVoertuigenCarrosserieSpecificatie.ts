@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie
 //
-//
-//
 // Category: Voertuigen
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie_/jhie-znh9
 // Permalink: https://opendata.rdw.nl/d/jhie-znh9
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie
@@ -52,7 +37,7 @@ export interface ResponseData {
   carrosserie_volgnummer?: string;
   /**
    * ### Carrosseriecode
-   *
+   * 
    * Europese codering voor het carrosserietype van een goedgekeurd compleet of voltooid voertuig van de EEG-VRTG-CAT M, N of O.
    * Zie bijlage II van de richtlijn 2007/46/EG voor codering.
    *
@@ -61,7 +46,7 @@ export interface ResponseData {
   carrosseriecode?: string;
   /**
    * ### Kenteken
-   *
+   * 
    * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
    *
    * **Type**: Text
@@ -71,7 +56,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **KentekenVoertuigenCarrosserieSpecificatie**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``CarrosserieVoertuigNummerCodeVolgnummer`` | ``carrosserie_voertuig_nummer_code_volgnummer`` | _Text_ |
@@ -88,47 +72,41 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  CarrosserieVoertuigNummerCodeVolgnummer: FieldObject<DataType.Text>;
+   CarrosserieVoertuigNummerCodeVolgnummer: FieldObject<DataType.Text>;
   /**
    * ### Carrosserie voertuig nummer Europese omschrijving
    *
    * **Type**: Text
    */
-  CarrosserieVoertuigNummerEuropeseOmschrijving: FieldObject<DataType.Text>;
+   CarrosserieVoertuigNummerEuropeseOmschrijving: FieldObject<DataType.Text>;
   /**
    * ### Carrosserie volgnummer
    *
    * **Type**: Text
    */
-  CarrosserieVolgnummer: FieldObject<DataType.Text>;
+   CarrosserieVolgnummer: FieldObject<DataType.Text>;
   /**
    * ### Carrosseriecode
-   *
+   * 
    * Europese codering voor het carrosserietype van een goedgekeurd compleet of voltooid voertuig van de EEG-VRTG-CAT M, N of O.
    * Zie bijlage II van de richtlijn 2007/46/EG voor codering.
    *
    * **Type**: Text
    */
-  Carrosseriecode: FieldObject<DataType.Text>;
+   Carrosseriecode: FieldObject<DataType.Text>;
   /**
    * ### Kenteken
-   *
+   * 
    * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
    *
    * **Type**: Text
    */
-  Kenteken: FieldObject<DataType.Text>;
-}
+   Kenteken: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
-  CarrosserieVoertuigNummerCodeVolgnummer: Field(
-    "carrosserie_voertuig_nummer_code_volgnummer",
-    DataType.Text,
-  ),
-  CarrosserieVoertuigNummerEuropeseOmschrijving: Field(
-    "carrosserie_voertuig_nummer_europese_omschrijving",
-    DataType.Text,
-  ),
+  CarrosserieVoertuigNummerCodeVolgnummer: Field("carrosserie_voertuig_nummer_code_volgnummer", DataType.Text),
+  CarrosserieVoertuigNummerEuropeseOmschrijving: Field("carrosserie_voertuig_nummer_europese_omschrijving", DataType.Text),
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Text),
   Carrosseriecode: Field("carrosseriecode", DataType.Text),
   Kenteken: Field("kenteken", DataType.Text),
@@ -146,10 +124,9 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie",
   provider_name: "KentekenVoertuigenCarrosserieSpecificatie",
-  url:
-    "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie_/jhie-znh9",
+  url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie_/jhie-znh9",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/jhie-znh9",
-};
+}
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie

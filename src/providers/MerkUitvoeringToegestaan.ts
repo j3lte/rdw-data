@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Merk Uitvoering Toegestaan
 //
-//
-//
 // Category: Typegoedkeuring
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Merk-Uitvoering-Toegestaan/fj7t-hhik
 // Permalink: https://opendata.rdw.nl/d/fj7t-hhik
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Merk Uitvoering Toegestaan
@@ -78,7 +63,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **MerkUitvoeringToegestaan**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``EegUitvoeringscode`` | ``eeg_uitvoeringscode`` | _Text_ |
@@ -97,44 +81,44 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Merk registratie datum
    *
    * **Type**: Number
    */
-  MerkRegistratieDatum: FieldObject<DataType.Number>;
+   MerkRegistratieDatum: FieldObject<DataType.Number>;
   /**
    * ### Merk registratie datum_DT
    *
    * **Type**: Calendar date
    */
-  MerkRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
+   MerkRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Merkcode
    *
    * **Type**: Text
    */
-  Merkcode: FieldObject<DataType.Text>;
+   Merkcode: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-}
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+};
 
 export const Fields: IFields = {
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
@@ -162,7 +146,7 @@ export const Info = {
   provider_name: "MerkUitvoeringToegestaan",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Merk-Uitvoering-Toegestaan/fj7t-hhik",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/fj7t-hhik",
-};
+}
 
 /**
  * ### Open Data RDW: Merk Uitvoering Toegestaan

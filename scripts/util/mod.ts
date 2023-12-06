@@ -34,7 +34,7 @@ export const pascalCase = (str: string) => {
 
 export const cleanString = (str?: string) => {
   const cleanRegex = /[^\x20-\x7E\u200B-\u200D\uFEFF\uBBBF]/g;
-  const cleanAndTrim = (s: string) => s.replace(cleanRegex, "").trim();
+  const cleanAndTrim = (s: string) => s.replace(cleanRegex, "").replace("\r", "").replace("\n", "").trim();
   const splitted = (str || "").split("\n");
   if (splitted.length === 0) {
     return "";
@@ -76,7 +76,9 @@ export const mapColumns = (res: Result): Array<{
 
   const columns = columns_name.map((n, i) => {
     const name = cleanString(n);
-    const description = cleanString(columns_description[i]).split("\n");
+    const description = cleanString(columns_description[i]).split("\n").map((s) => s.trim()).filter(
+      (s) => s.length > 0
+    );
     const datatype = cleanString(columns_datatype[i]);
     const datatypeTemplate = dataTypeToDataTypeTemplate(datatype);
     const field_name = cleanString(columns_field_name[i]);

@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Basisgegevens EEG Uitvoering
 //
-//
-//
 // Category: Typegoedkeuring
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Basisgegevens-EEG-Uitvoering/wx3j-69ie
 // Permalink: https://opendata.rdw.nl/d/wx3j-69ie
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Basisgegevens EEG Uitvoering
@@ -588,7 +573,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **BasisgegevensEegUitvoering**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``N24ghzKortbereikRadar`` | ``_24ghz_kortbereik_radar`` | _Text_ |
@@ -692,554 +676,554 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  N24ghzKortbereikRadar: FieldObject<DataType.Text>;
+   N24ghzKortbereikRadar: FieldObject<DataType.Text>;
   /**
    * ### Aant zitpl stilst vrtg bovengrens
    *
    * **Type**: Number
    */
-  AantZitplStilstVrtgBovengrens: FieldObject<DataType.Number>;
+   AantZitplStilstVrtgBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Aant zitpl stilst vrtg ondergrens
    *
    * **Type**: Number
    */
-  AantZitplStilstVrtgOndergrens: FieldObject<DataType.Number>;
+   AantZitplStilstVrtgOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal aangedreven assen
    *
    * **Type**: Number
    */
-  AantalAangedrevenAssen: FieldObject<DataType.Number>;
+   AantalAangedrevenAssen: FieldObject<DataType.Number>;
   /**
    * ### Aantal deuren bovengrens
    *
    * **Type**: Number
    */
-  AantalDeurenBovengrens: FieldObject<DataType.Number>;
+   AantalDeurenBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal deuren ondergrens
    *
    * **Type**: Number
    */
-  AantalDeurenOndergrens: FieldObject<DataType.Number>;
+   AantalDeurenOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal passagier zittend bovengrens
    *
    * **Type**: Number
    */
-  AantalPassagierZittendBovengrens: FieldObject<DataType.Number>;
+   AantalPassagierZittendBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal passagier zittend ondergrens
    *
    * **Type**: Number
    */
-  AantalPassagierZittendOndergrens: FieldObject<DataType.Number>;
+   AantalPassagierZittendOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal passagiers bovengrens
    *
    * **Type**: Number
    */
-  AantalPassagiersBovengrens: FieldObject<DataType.Number>;
+   AantalPassagiersBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal passagiers ondergrens
    *
    * **Type**: Number
    */
-  AantalPassagiersOndergrens: FieldObject<DataType.Number>;
+   AantalPassagiersOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal rolstoel plaats bovengrens
    *
    * **Type**: Number
    */
-  AantalRolstoelPlaatsBovengrens: FieldObject<DataType.Number>;
+   AantalRolstoelPlaatsBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal rolstoel plaats ondergrens
    *
    * **Type**: Number
    */
-  AantalRolstoelPlaatsOndergrens: FieldObject<DataType.Number>;
+   AantalRolstoelPlaatsOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal wielen
    *
    * **Type**: Number
    */
-  AantalWielen: FieldObject<DataType.Number>;
+   AantalWielen: FieldObject<DataType.Number>;
   /**
    * ### Aantal zitplaatsen bovengrens
    *
    * **Type**: Number
    */
-  AantalZitplaatsenBovengrens: FieldObject<DataType.Number>;
+   AantalZitplaatsenBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Aantal zitplaatsen ondergrens
    *
    * **Type**: Number
    */
-  AantalZitplaatsenOndergrens: FieldObject<DataType.Number>;
+   AantalZitplaatsenOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Afst hart koppeling as bovengrens
    *
    * **Type**: Number
    */
-  AfstHartKoppelingAsBovengrens: FieldObject<DataType.Number>;
+   AfstHartKoppelingAsBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Afst hart koppeling as ondergrens
    *
    * **Type**: Number
    */
-  AfstHartKoppelingAsOndergrens: FieldObject<DataType.Number>;
+   AfstHartKoppelingAsOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Begindatum restant voorraad
    *
    * **Type**: Number
    */
-  BegindatumRestantVoorraad: FieldObject<DataType.Number>;
+   BegindatumRestantVoorraad: FieldObject<DataType.Number>;
   /**
    * ### Begindatum restant voorraad_DT
    *
    * **Type**: Calendar date
    */
-  BegindatumRestantVoorraadDt: FieldObject<DataType.FloatingTimestamp>;
+   BegindatumRestantVoorraadDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Begindatum uitvoering
    *
    * **Type**: Number
    */
-  BegindatumUitvoering: FieldObject<DataType.Number>;
+   BegindatumUitvoering: FieldObject<DataType.Number>;
   /**
    * ### Begindatum uitvoering_DT
    *
    * **Type**: Calendar date
    */
-  BegindatumUitvoeringDt: FieldObject<DataType.FloatingTimestamp>;
+   BegindatumUitvoeringDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Breedte voertuig(uitvoering) bovengrens
    *
    * **Type**: Number
    */
-  BreedteVoertuigUitvoeringBovengrens: FieldObject<DataType.Number>;
+   BreedteVoertuigUitvoeringBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Breedte voertuig(uitvoering) ondergrens
    *
    * **Type**: Number
    */
-  BreedteVoertuigUitvoeringOndergrens: FieldObject<DataType.Number>;
+   BreedteVoertuigUitvoeringOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Code status intrekking uitvoering
    *
    * **Type**: Text
    */
-  CodeStatusIntrekkingUitvoering: FieldObject<DataType.Text>;
+   CodeStatusIntrekkingUitvoering: FieldObject<DataType.Text>;
   /**
    * ### Compleet voertuig indicator
    *
    * **Type**: Text
    */
-  CompleetVoertuigIndicator: FieldObject<DataType.Text>;
+   CompleetVoertuigIndicator: FieldObject<DataType.Text>;
   /**
    * ### Datum status wijziging
    *
    * **Type**: Number
    */
-  DatumStatusWijziging: FieldObject<DataType.Number>;
+   DatumStatusWijziging: FieldObject<DataType.Number>;
   /**
    * ### Datum status wijziging_DT
    *
    * **Type**: Calendar date
    */
-  DatumStatusWijzigingDt: FieldObject<DataType.FloatingTimestamp>;
+   DatumStatusWijzigingDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### EEG uitvoering cat toevoeging
    *
    * **Type**: Text
    */
-  EegUitvoeringCatToevoeging: FieldObject<DataType.Text>;
+   EegUitvoeringCatToevoeging: FieldObject<DataType.Text>;
   /**
    * ### EEG Uitvoeringscode
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### Einddatum restant voorraad
    *
    * **Type**: Number
    */
-  EindatumRestantVoorraad: FieldObject<DataType.Number>;
+   EindatumRestantVoorraad: FieldObject<DataType.Number>;
   /**
    * ### Einddatum restant voorraad_DT
    *
    * **Type**: Calendar date
    */
-  EinddatumRestantVoorraadDt: FieldObject<DataType.FloatingTimestamp>;
+   EinddatumRestantVoorraadDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Einddatum uitvoering
    *
    * **Type**: Number
    */
-  EinddatumUitvoering: FieldObject<DataType.Number>;
+   EinddatumUitvoering: FieldObject<DataType.Number>;
   /**
    * ### Einddatum uitvoering_DT
    *
    * **Type**: Calendar date
    */
-  EinddatumUitvoeringDt: FieldObject<DataType.FloatingTimestamp>;
+   EinddatumUitvoeringDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Eur. Codering carrosserietype
    *
    * **Type**: Text
    */
-  EurCoderingCarrosserietype: FieldObject<DataType.Text>;
+   EurCoderingCarrosserietype: FieldObject<DataType.Text>;
   /**
    * ### Handelsbenaming
    *
    * **Type**: Text
    */
-  Handelsbenaming: FieldObject<DataType.Text>;
+   Handelsbenaming: FieldObject<DataType.Text>;
   /**
    * ### Hoogte voertuig(uitvoering) bovengrens
    *
    * **Type**: Number
    */
-  HoogteVoertuigUitvoeringBovengrens: FieldObject<DataType.Number>;
+   HoogteVoertuigUitvoeringBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Hoogte voertuig(uitvoering) ondergrens
    *
    * **Type**: Number
    */
-  HoogteVoertuigUitvoeringOndergrens: FieldObject<DataType.Number>;
+   HoogteVoertuigUitvoeringOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Inhoud brandstoftank
    *
    * **Type**: Number
    */
-  InhoudBrandstoftank: FieldObject<DataType.Number>;
+   InhoudBrandstoftank: FieldObject<DataType.Number>;
   /**
    * ### Inrichtingscode
    *
    * **Type**: Number
    */
-  Inrichtingscode: FieldObject<DataType.Number>;
+   Inrichtingscode: FieldObject<DataType.Number>;
   /**
    * ### Intrekdatum uitvoering
    *
    * **Type**: Number
    */
-  IntrekdatumUitvoering: FieldObject<DataType.Number>;
+   IntrekdatumUitvoering: FieldObject<DataType.Number>;
   /**
    * ### Intrekdatum uitvoering_DT
    *
    * **Type**: Calendar date
    */
-  IntrekdatumUitvoeringDt: FieldObject<DataType.FloatingTimestamp>;
+   IntrekdatumUitvoeringDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Kant van het stuur
    *
    * **Type**: Text
    */
-  KantVanHetStuur: FieldObject<DataType.Text>;
+   KantVanHetStuur: FieldObject<DataType.Text>;
   /**
    * ### Lengte laadruimte bovengrens
    *
    * **Type**: Number
    */
-  LengteLaadruimteBovengrens: FieldObject<DataType.Number>;
+   LengteLaadruimteBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Lengte laadruimte ondergrens
    *
    * **Type**: Number
    */
-  LengteLaadruimteOndergrens: FieldObject<DataType.Number>;
+   LengteLaadruimteOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Lengte voertuig(uitvoering) bovengrens
    *
    * **Type**: Number
    */
-  LengteVoertuigUitvoeringBovengrens: FieldObject<DataType.Number>;
+   LengteVoertuigUitvoeringBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Lengte voertuig(uitvoering) ondergrens
    *
    * **Type**: Number
    */
-  LengteVoertuigUitvoeringOndergrens: FieldObject<DataType.Number>;
+   LengteVoertuigUitvoeringOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Links / Rechts rijdend
    *
    * **Type**: Text
    */
-  LinksRechtsRijdend: FieldObject<DataType.Text>;
+   LinksRechtsRijdend: FieldObject<DataType.Text>;
   /**
    * ### Massa bedrijfsklaar toestand bovengrens
    *
    * **Type**: Number
    */
-  MassaBedrijfsklaarToestandBovengrens: FieldObject<DataType.Number>;
+   MassaBedrijfsklaarToestandBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Massa bedrijfsklaar toestand ondergrens
    *
    * **Type**: Number
    */
-  MassaBedrijfsklaarToestandOndergrens: FieldObject<DataType.Number>;
+   MassaBedrijfsklaarToestandOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Massa leeg voertuig bovengrens
    *
    * **Type**: Number
    */
-  MassaLeegVoertuigBovengrens: FieldObject<DataType.Number>;
+   MassaLeegVoertuigBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Massa leeg voertuig ondergrens
    *
    * **Type**: Number
    */
-  MassaLeegVoertuigOndergrens: FieldObject<DataType.Number>;
+   MassaLeegVoertuigOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Max breedte voertuig bovengrens
    *
    * **Type**: Number
    */
-  MaxBreedteVoertuigBovengrens: FieldObject<DataType.Number>;
+   MaxBreedteVoertuigBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max breedte voertuig ondergrens
    *
    * **Type**: Number
    */
-  MaxBreedteVoertuigOndergrens: FieldObject<DataType.Number>;
+   MaxBreedteVoertuigOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Max constructie snelheid bovengrens
    *
    * **Type**: Number
    */
-  MaxConstructieSnelheidBovengrens: FieldObject<DataType.Number>;
+   MaxConstructieSnelheidBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max constructie snelheid ondergrens
    *
    * **Type**: Number
    */
-  MaxConstructieSnelheidOndergrens: FieldObject<DataType.Number>;
+   MaxConstructieSnelheidOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Max lengte voertuig bovengrens
    *
    * **Type**: Number
    */
-  MaxLengteVoertuigBovengrens: FieldObject<DataType.Number>;
+   MaxLengteVoertuigBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max lengte voertuig ondergrens
    *
    * **Type**: Number
    */
-  MaxLengteVoertuigOndergrens: FieldObject<DataType.Number>;
+   MaxLengteVoertuigOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa geremd bovengrens
    *
    * **Type**: Number
    */
-  MaxMassaGeremdBovengrens: FieldObject<DataType.Number>;
+   MaxMassaGeremdBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa geremd ondergrens
    *
    * **Type**: Number
    */
-  MaxMassaGeremdOndergrens: FieldObject<DataType.Number>;
+   MaxMassaGeremdOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa ongeremd bovengrens
    *
    * **Type**: Number
    */
-  MaxMassaOngeremdBovengrens: FieldObject<DataType.Number>;
+   MaxMassaOngeremdBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa ongeremd ondergrens
    *
    * **Type**: Number
    */
-  MaxMassaOngeremdOndergrens: FieldObject<DataType.Number>;
+   MaxMassaOngeremdOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa samenstel bovengrens
    *
    * **Type**: Number
    */
-  MaxMassaSamenstelBovengrens: FieldObject<DataType.Number>;
+   MaxMassaSamenstelBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa samenstel ondergrens
    *
    * **Type**: Number
    */
-  MaxMassaSamenstelOndergrens: FieldObject<DataType.Number>;
+   MaxMassaSamenstelOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa voertuig bovengrens
    *
    * **Type**: Number
    */
-  MaxMassaVoertuigBovengrens: FieldObject<DataType.Number>;
+   MaxMassaVoertuigBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa voertuig ondergrens
    *
    * **Type**: Number
    */
-  MaxMassaVoertuigOndergrens: FieldObject<DataType.Number>;
+   MaxMassaVoertuigOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa vrtg techn bovengrens
    *
    * **Type**: Number
    */
-  MaxMassaVrtgTechnBovengrens: FieldObject<DataType.Number>;
+   MaxMassaVrtgTechnBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max massa vrtg techn ondergrens
    *
    * **Type**: Number
    */
-  MaxMassaVrtgTechnOndergrens: FieldObject<DataType.Number>;
+   MaxMassaVrtgTechnOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Max. ondersteunde snelheid
    *
    * **Type**: Number
    */
-  MaxOndersteundeSnelheid: FieldObject<DataType.Number>;
+   MaxOndersteundeSnelheid: FieldObject<DataType.Number>;
   /**
    * ### Max ondersteuning snelheid bovengrens
    *
    * **Type**: Number
    */
-  MaxOndersteuningSnelheidBovengrens: FieldObject<DataType.Number>;
+   MaxOndersteuningSnelheidBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Max ondersteuning snelheid ondergrens
    *
    * **Type**: Number
    */
-  MaxOndersteuningSnelheidOndergrens: FieldObject<DataType.Number>;
+   MaxOndersteuningSnelheidOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Min massa voertuig
    *
    * **Type**: Number
    */
-  MinMassaVoertuig: FieldObject<DataType.Number>;
+   MinMassaVoertuig: FieldObject<DataType.Number>;
   /**
    * ### Status voertiug kentekening
    *
    * **Type**: Text
    */
-  StatusVoertiugKentekening: FieldObject<DataType.Text>;
+   StatusVoertiugKentekening: FieldObject<DataType.Text>;
   /**
    * ### Techn max last koppelpunt bovengrens
    *
    * **Type**: Number
    */
-  TechnMaxLastKoppelpuntBovengrens: FieldObject<DataType.Number>;
+   TechnMaxLastKoppelpuntBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max last koppelpunt ondergrens
    *
    * **Type**: Number
    */
-  TechnMaxLastKoppelpuntOndergrens: FieldObject<DataType.Number>;
+   TechnMaxLastKoppelpuntOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max massa autonoom bovengrens
    *
    * **Type**: Number
    */
-  TechnMaxMassaAutonoomBovengrens: FieldObject<DataType.Number>;
+   TechnMaxMassaAutonoomBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max massa autonoom ondergrens
    *
    * **Type**: Number
    */
-  TechnMaxMassaAutonoomOndergrens: FieldObject<DataType.Number>;
+   TechnMaxMassaAutonoomOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max massa middenas bovengrens
    *
    * **Type**: Number
    */
-  TechnMaxMassaMiddenasBovengrens: FieldObject<DataType.Number>;
+   TechnMaxMassaMiddenasBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max massa middenas ondergrens
    *
    * **Type**: Number
    */
-  TechnMaxMassaMiddenasOndergrens: FieldObject<DataType.Number>;
+   TechnMaxMassaMiddenasOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max massa oplegger bovengrens
    *
    * **Type**: Number
    */
-  TechnMaxMassaOpleggerBovengrens: FieldObject<DataType.Number>;
+   TechnMaxMassaOpleggerBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max massa oplegger ondergrens
    *
    * **Type**: Number
    */
-  TechnMaxMassaOpleggerOndergrens: FieldObject<DataType.Number>;
+   TechnMaxMassaOpleggerOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max massa samenst bovengrens
    *
    * **Type**: Number
    */
-  TechnMaxMassaSamenstBovengrens: FieldObject<DataType.Number>;
+   TechnMaxMassaSamenstBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Techn max massa samenst ondergrens
    *
    * **Type**: Number
    */
-  TechnMaxMassaSamenstOndergrens: FieldObject<DataType.Number>;
+   TechnMaxMassaSamenstOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Tweede brandstofcode voertuig
    *
    * **Type**: Text
    */
-  TweedeBrandstofcodeVoertuig: FieldObject<DataType.Text>;
+   TweedeBrandstofcodeVoertuig: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering registratie datum
    *
    * **Type**: Number
    */
-  UitvoeringRegistratieDatum: FieldObject<DataType.Number>;
+   UitvoeringRegistratieDatum: FieldObject<DataType.Number>;
   /**
    * ### Uitvoering registratie datum_DT
    *
    * **Type**: Calendar date
    */
-  UitvoeringRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
+   UitvoeringRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
   /**
    * ### Variant status
    *
    * **Type**: Text
    */
-  VariantStatus: FieldObject<DataType.Text>;
+   VariantStatus: FieldObject<DataType.Text>;
   /**
    * ### Wielbasis bovengrens
    *
    * **Type**: Number
    */
-  WielbaisBovengrens: FieldObject<DataType.Number>;
+   WielbaisBovengrens: FieldObject<DataType.Number>;
   /**
    * ### Wielbasis ondergrens
    *
    * **Type**: Number
    */
-  WielbasisOndergrens: FieldObject<DataType.Number>;
+   WielbasisOndergrens: FieldObject<DataType.Number>;
   /**
    * ### Zelfdragende carrosserie
    *
    * **Type**: Text
    */
-  ZelfdragendeCarrosserie: FieldObject<DataType.Text>;
-}
+   ZelfdragendeCarrosserie: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   N24ghzKortbereikRadar: Field("_24ghz_kortbereik_radar", DataType.Text),
@@ -1263,14 +1247,8 @@ export const Fields: IFields = {
   BegindatumRestantVoorraadDt: Field("begindatum_restant_voorraad_dt", DataType.FloatingTimestamp),
   BegindatumUitvoering: Field("begindatum_uitvoering", DataType.Number),
   BegindatumUitvoeringDt: Field("begindatum_uitvoering_dt", DataType.FloatingTimestamp),
-  BreedteVoertuigUitvoeringBovengrens: Field(
-    "breedte_voertuig_uitvoering_bovengrens",
-    DataType.Number,
-  ),
-  BreedteVoertuigUitvoeringOndergrens: Field(
-    "breedte_voertuig_uitvoering_ondergrens",
-    DataType.Number,
-  ),
+  BreedteVoertuigUitvoeringBovengrens: Field("breedte_voertuig_uitvoering_bovengrens", DataType.Number),
+  BreedteVoertuigUitvoeringOndergrens: Field("breedte_voertuig_uitvoering_ondergrens", DataType.Number),
   CodeStatusIntrekkingUitvoering: Field("code_status_intrekking_uitvoering", DataType.Text),
   CompleetVoertuigIndicator: Field("compleet_voertuig_indicator", DataType.Text),
   DatumStatusWijziging: Field("datum_status_wijziging", DataType.Number),
@@ -1285,14 +1263,8 @@ export const Fields: IFields = {
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   EurCoderingCarrosserietype: Field("eur_codering_carrosserietype", DataType.Text),
   Handelsbenaming: Field("handelsbenaming", DataType.Text),
-  HoogteVoertuigUitvoeringBovengrens: Field(
-    "hoogte_voertuig_uitvoering_bovengrens",
-    DataType.Number,
-  ),
-  HoogteVoertuigUitvoeringOndergrens: Field(
-    "hoogte_voertuig_uitvoering_ondergrens",
-    DataType.Number,
-  ),
+  HoogteVoertuigUitvoeringBovengrens: Field("hoogte_voertuig_uitvoering_bovengrens", DataType.Number),
+  HoogteVoertuigUitvoeringOndergrens: Field("hoogte_voertuig_uitvoering_ondergrens", DataType.Number),
   InhoudBrandstoftank: Field("inhoud_brandstoftank", DataType.Number),
   Inrichtingscode: Field("inrichtingscode", DataType.Number),
   IntrekdatumUitvoering: Field("intrekdatum_uitvoering", DataType.Number),
@@ -1300,23 +1272,11 @@ export const Fields: IFields = {
   KantVanHetStuur: Field("kant_van_het_stuur", DataType.Text),
   LengteLaadruimteBovengrens: Field("lengte_laadruimte_bovengrens", DataType.Number),
   LengteLaadruimteOndergrens: Field("lengte_laadruimte_ondergrens", DataType.Number),
-  LengteVoertuigUitvoeringBovengrens: Field(
-    "lengte_voertuig_uitvoering_bovengrens",
-    DataType.Number,
-  ),
-  LengteVoertuigUitvoeringOndergrens: Field(
-    "lengte_voertuig_uitvoering_ondergrens",
-    DataType.Number,
-  ),
+  LengteVoertuigUitvoeringBovengrens: Field("lengte_voertuig_uitvoering_bovengrens", DataType.Number),
+  LengteVoertuigUitvoeringOndergrens: Field("lengte_voertuig_uitvoering_ondergrens", DataType.Number),
   LinksRechtsRijdend: Field("links_rechts_rijdend", DataType.Text),
-  MassaBedrijfsklaarToestandBovengrens: Field(
-    "massa_bedrijfsklaar_toestand_bovengrens",
-    DataType.Number,
-  ),
-  MassaBedrijfsklaarToestandOndergrens: Field(
-    "massa_bedrijfsklaar_toestand_ondergrens",
-    DataType.Number,
-  ),
+  MassaBedrijfsklaarToestandBovengrens: Field("massa_bedrijfsklaar_toestand_bovengrens", DataType.Number),
+  MassaBedrijfsklaarToestandOndergrens: Field("massa_bedrijfsklaar_toestand_ondergrens", DataType.Number),
   MassaLeegVoertuigBovengrens: Field("massa_leeg_voertuig_bovengrens", DataType.Number),
   MassaLeegVoertuigOndergrens: Field("massa_leeg_voertuig_ondergrens", DataType.Number),
   MaxBreedteVoertuigBovengrens: Field("max_breedte_voertuig_bovengrens", DataType.Number),
@@ -1336,14 +1296,8 @@ export const Fields: IFields = {
   MaxMassaVrtgTechnBovengrens: Field("max_massa_vrtg_techn_bovengrens", DataType.Number),
   MaxMassaVrtgTechnOndergrens: Field("max_massa_vrtg_techn_ondergrens", DataType.Number),
   MaxOndersteundeSnelheid: Field("max_ondersteunde_snelheid", DataType.Number),
-  MaxOndersteuningSnelheidBovengrens: Field(
-    "max_ondersteuning_snelheid_bovengrens",
-    DataType.Number,
-  ),
-  MaxOndersteuningSnelheidOndergrens: Field(
-    "max_ondersteuning_snelheid_ondergrens",
-    DataType.Number,
-  ),
+  MaxOndersteuningSnelheidBovengrens: Field("max_ondersteuning_snelheid_bovengrens", DataType.Number),
+  MaxOndersteuningSnelheidOndergrens: Field("max_ondersteuning_snelheid_ondergrens", DataType.Number),
   MinMassaVoertuig: Field("min_massa_voertuig", DataType.Number),
   StatusVoertiugKentekening: Field("status_voertiug_kentekening", DataType.Text),
   TechnMaxLastKoppelpuntBovengrens: Field("techn_max_last_koppelpunt_bovengrens", DataType.Number),
@@ -1358,10 +1312,7 @@ export const Fields: IFields = {
   TechnMaxMassaSamenstOndergrens: Field("techn_max_massa_samenst_ondergrens", DataType.Number),
   TweedeBrandstofcodeVoertuig: Field("tweede_brandstofcode_voertuig", DataType.Text),
   UitvoeringRegistratieDatum: Field("uitvoering_registratie_datum", DataType.Number),
-  UitvoeringRegistratieDatumDt: Field(
-    "uitvoering_registratie_datum_dt",
-    DataType.FloatingTimestamp,
-  ),
+  UitvoeringRegistratieDatumDt: Field("uitvoering_registratie_datum_dt", DataType.FloatingTimestamp),
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
   VariantStatus: Field("variant_status", DataType.Text),
   WielbaisBovengrens: Field("wielbais_bovengrens", DataType.Number),
@@ -1468,10 +1419,9 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Basisgegevens EEG Uitvoering",
   provider_name: "BasisgegevensEegUitvoering",
-  url:
-    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Basisgegevens-EEG-Uitvoering/wx3j-69ie",
+  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Basisgegevens-EEG-Uitvoering/wx3j-69ie",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/wx3j-69ie",
-};
+}
 
 /**
  * ### Open Data RDW: Basisgegevens EEG Uitvoering

@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave
 //
-//
-//
 // Category: Typegoedkeuring
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx
 // Permalink: https://opendata.rdw.nl/d/2822-t8sx
@@ -14,19 +12,6 @@
 
 import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
-export {
-  Order,
-  Select,
-  SelectAll,
-  SelectGreatest,
-  SelectLeast,
-  SelectRegrIntercept,
-  SelectRegrR2,
-  SelectRegrSlope,
-  SystemFields,
-  Where,
-} from "https://deno.land/x/soda@0.4.4/mod.ts";
-export { DataType, Field };
 
 /**
  * Return Data for Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave
@@ -72,7 +57,6 @@ export interface ResponseData {
 
 /**
  * Fieldnames for **UitvoeringGebruiksgegevensPerUitgave**
- *
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``EegUitvoeringscode`` | ``eeg_uitvoeringscode`` | _Text_ |
@@ -90,38 +74,38 @@ export interface IFields {
    *
    * **Type**: Text
    */
-  EegUitvoeringscode: FieldObject<DataType.Text>;
+   EegUitvoeringscode: FieldObject<DataType.Text>;
   /**
    * ### EEG variantcode
    *
    * **Type**: Text
    */
-  EegVariantcode: FieldObject<DataType.Text>;
+   EegVariantcode: FieldObject<DataType.Text>;
   /**
    * ### EU Type goedkeuringssleutel
    *
    * **Type**: Text
    */
-  EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
+   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
   /**
    * ### Uitvgavenummer verbruikboek
    *
    * **Type**: Text
    */
-  UitvgavenummerVerbruikboek: FieldObject<DataType.Text>;
+   UitvgavenummerVerbruikboek: FieldObject<DataType.Text>;
   /**
    * ### Uitvoering wijzigingsnummer
    *
    * **Type**: Number
    */
-  UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
+   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
   /**
    * ### Verbruikcategorie uitvoering
    *
    * **Type**: Text
    */
-  VerbruikcategorieUitvoering: FieldObject<DataType.Text>;
-}
+   VerbruikcategorieUitvoering: FieldObject<DataType.Text>;
+};
 
 export const Fields: IFields = {
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
@@ -145,10 +129,9 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave",
   provider_name: "UitvoeringGebruiksgegevensPerUitgave",
-  url:
-    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx",
+  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/2822-t8sx",
-};
+}
 
 /**
  * ### Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave

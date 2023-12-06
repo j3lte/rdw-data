@@ -1,3 +1,19 @@
+export {
+  DataType,
+  Field,
+  Order,
+  Select,
+  SelectAll,
+  SelectGreatest,
+  SelectLeast,
+  SelectRegrIntercept,
+  SelectRegrR2,
+  SelectRegrSlope,
+  SystemFields,
+  Where,
+} from "https://deno.land/x/soda@0.4.4/mod.ts";
+
+
 export * as AsGegevensEegUitvoering from "./AsGegevensEegUitvoering.ts";
 export * as BasisgegevensEegUitvoering from "./BasisgegevensEegUitvoering.ts";
 export * as BrandstoffenOpPc4 from "./BrandstoffenOpPc4.ts";
