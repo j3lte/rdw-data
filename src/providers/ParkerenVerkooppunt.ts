@@ -13,8 +13,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.3/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.3/mod.ts";
+import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.4/mod.ts";
+import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.4/mod.ts";
 export {
   Order,
   Select,
@@ -26,7 +26,7 @@ export {
   SelectRegrSlope,
   SystemFields,
   Where,
-} from "https://deno.land/x/soda@0.4.3/mod.ts";
+} from "https://deno.land/x/soda@0.4.4/mod.ts";
 export { DataType, Field };
 
 /**
