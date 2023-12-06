@@ -1,6 +1,21 @@
 # RDW Data
 
-Test
+This uses the [RDW Open Data](https://opendata.rdw.nl/) API to generate a [SODA API](https://github.com/j3lte/deno-soda) providers for Deno and NodeJS.
+
+## Installation
+
+Deno:
+
+```
+Import directly from https://deno.land/x/rdw_data/mod.ts
+```
+
+Node:
+
+```bash
+> npm install rdw-data -s
+```
+
 
 <!-- START FUNCTIONS -->
 ## API

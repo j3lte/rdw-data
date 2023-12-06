@@ -1,0 +1,35 @@
+name: Build NPM package (On Demand)
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version (x.y.z):"
+        required: true
+
+jobs:
+  release:
+    name: Build NPM package (On Demand)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Run Deno dnt
+        run: deno task npm ${{ github.event.inputs.version }}
+
+      - name: Check Version
+        run: cat ./npm/package.json | jq .version
+
+      - name: Publish to NPM
+        run: cd ./npm && yarn publish --verbose --access public --new-version ${{ github.event.inputs.version }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}

@@ -1,0 +1,35 @@
+name: Build NPM package (On Release)
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  release:
+    name: Build NPM package (On Release)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Run Deno dnt
+        run: deno task npm ${{ github.ref_name }}
+
+      - name: Check Version
+        run: cat ./npm/package.json | jq .version
+
+    # Disabled for now
+    #   - name: Publish to NPM
+    #     run: cd ./npm && yarn publish --verbose --access public --new-version ${{ github.ref_name }}
+    #     env:
+    #       NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}

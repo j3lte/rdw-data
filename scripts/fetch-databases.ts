@@ -123,7 +123,6 @@ const updateReadme = async (data: DataResult[], sodaVersion: string): Promise<vo
 
   const list = data.map((item) => {
     const columns = item.columns.map((col) => {
-      console.log(col);
       return `| \`${col.big_name}\` | ${col.name} | ${col.datatype} |`;
     }).join("\n");
 
