@@ -123,15 +123,15 @@ const updateReadme = async (data: DataResult[], sodaVersion: string): Promise<vo
 
   const list = data.map((item) => {
     const columns = item.columns.map((col) => {
-      return `| \`${col.big_name}\` | ${col.name} | ${col.datatype} |`;
+      return `| \`${col.big_name}\` | \`${col.field_name}\` | ${col.name} | ${col.datatype} |`;
     }).join("\n");
 
     return `<details><summary>${item.name}</summary>
 
 ### Fields
 
-| FieldName | Name | Type |
-| --- | --- | --- |
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
 ${columns}
 
 **Link:** ${item.link}
