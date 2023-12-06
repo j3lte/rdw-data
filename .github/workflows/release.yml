@@ -28,8 +28,7 @@ jobs:
       - name: Check Version
         run: cat ./npm/package.json | jq .version
 
-    # Disabled for now
-    #   - name: Publish to NPM
-    #     run: cd ./npm && yarn publish --verbose --access public --new-version ${{ github.ref_name }}
-    #     env:
-    #       NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
+      - name: Publish to NPM
+        run: cd ./npm && yarn publish --verbose --access public --new-version ${{ github.ref_name }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
