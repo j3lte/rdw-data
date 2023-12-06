@@ -128,6 +128,10 @@ const updateReadme = async (data: DataResult[], sodaVersion: string): Promise<vo
 
     return `<details><summary>${item.name}</summary>
 
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/${item.name}.ts)
+
 ### Fields
 
 | Name | Field | Readable Name | Type |
