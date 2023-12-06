@@ -1,5 +1,15 @@
 # RDW Data
 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/releases/latest "GitHub release (latest by date)")
+[![NPM Version](https://img.shields.io/npm/v/rdw-data?style=for-the-badge)](https://www.npmjs.com/package/rdw-data "NPM Version")
+[![GitHub Release Date](https://img.shields.io/github/release-date/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/releases/latest "GitHub Release Date")
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/j3lte/rdw-data?style=for-the-badge)
+[![GitHub](https://img.shields.io/github/license/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/blob/main/LICENSE "GitHub License")
+[![GitHub last commit](https://img.shields.io/github/last-commit/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/commits/main "GitHub last commit")
+[![GitHub issues](https://img.shields.io/github/issues/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/issues "Github Issues")
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/j3lte/rdw-data/main.yml?branch=main&style=for-the-badge)](https://github.com/j3lte/rdw-data/actions/workflows/main.yml "GitHub Workflow Status")
+[![Deno docs](https://img.shields.io/badge/Deno-Docs-blue?style=for-the-badge)](https://doc.deno.land/https/deno.land/x/rdw_data/mod.ts "Deno docs")
+
 This uses the [RDW Open Data](https://opendata.rdw.nl/) API to generate a [SODA API](https://github.com/j3lte/deno-soda) providers for Deno and NodeJS.
 
 ## Installation
