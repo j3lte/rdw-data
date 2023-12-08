@@ -132,7 +132,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TerugroepVoertuigMerkType = {
+export const TerugroepVoertuigMerkType: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TerugroepVoertuigMerkType_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

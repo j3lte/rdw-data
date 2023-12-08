@@ -664,7 +664,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const EegVoertuigtypegoedkeuring = {
+export const EegVoertuigtypegoedkeuring: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<EegVoertuigtypegoedkeuring_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

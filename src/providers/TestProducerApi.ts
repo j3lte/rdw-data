@@ -168,7 +168,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TestProducerApi = {
+export const TestProducerApi: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TestProducerApi_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

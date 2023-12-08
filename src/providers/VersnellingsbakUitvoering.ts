@@ -200,7 +200,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const VersnellingsbakUitvoering = {
+export const VersnellingsbakUitvoering: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<VersnellingsbakUitvoering_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

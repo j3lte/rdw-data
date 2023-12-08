@@ -123,7 +123,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const Keuringen = {
+export const Keuringen: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<Keuringen_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

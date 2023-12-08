@@ -115,7 +115,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TellerstandoordeelTrendToelichting = {
+export const TellerstandoordeelTrendToelichting: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TellerstandoordeelTrendToelichting_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

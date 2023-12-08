@@ -162,7 +162,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TerugroepActieStatus = {
+export const TerugroepActieStatus: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TerugroepActieStatus_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

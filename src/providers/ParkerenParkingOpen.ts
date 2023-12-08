@@ -215,7 +215,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenParkingOpen = {
+export const ParkerenParkingOpen: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenParkingOpen_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

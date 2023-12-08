@@ -1544,7 +1544,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const BasisgegevensEegUitvoering = {
+export const BasisgegevensEegUitvoering: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<BasisgegevensEegUitvoering_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

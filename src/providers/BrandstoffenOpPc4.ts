@@ -152,7 +152,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const BrandstoffenOpPc4 = {
+export const BrandstoffenOpPc4: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<BrandstoffenOpPc4_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

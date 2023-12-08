@@ -251,7 +251,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const GeoPenr = {
+export const GeoPenr: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<GeoPenr_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

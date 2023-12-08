@@ -195,7 +195,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenGpsCoordinatenParkeerlocatie = {
+export const ParkerenGpsCoordinatenParkeerlocatie: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenGpsCoordinatenParkeerlocatie_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;

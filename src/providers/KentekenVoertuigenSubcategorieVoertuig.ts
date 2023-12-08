@@ -148,7 +148,7 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const KentekenVoertuigenSubcategorieVoertuig = {
+export const KentekenVoertuigenSubcategorieVoertuig: {
   RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<KentekenVoertuigenSubcategorieVoertuig_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
