@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Tellerstandoordeel Trend Toelichting
  */
-export interface ResponseData {
+export interface TellerstandoordeelTrendToelichting_ResponseData {
   /**
    * ### Code toelichting tellerstandoordeel
    * 
@@ -46,27 +46,26 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Code toelichting tellerstandoordeel
-   * 
-   * Deze code geeft het oordeel aan. Tevens sleutelveld voor de uitgebreide omschrijving.
-   *
-   * **Type**: Text
-   */
-   CodeToelichtingTellerstandoordeel: FieldObject<DataType.Text>;
-  /**
-   * ### Toelichting tellerstandoordeel
-   * 
-   * Uitleg van het oordeel dat gegeven wordt. De reeks die na de laatste registratie ontstaat, bepaalt het getoonde oordeel.
-   *
-   * **Type**: Text
-   */
-   ToelichtingTellerstandoordeel: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Code toelichting tellerstandoordeel
+  * 
+  * Deze code geeft het oordeel aan. Tevens sleutelveld voor de uitgebreide omschrijving.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `code_toelichting_tellerstandoordeel`
+  */
   CodeToelichtingTellerstandoordeel: Field("code_toelichting_tellerstandoordeel", DataType.Text),
+  /**
+  * ### Toelichting tellerstandoordeel
+  * 
+  * Uitleg van het oordeel dat gegeven wordt. De reeks die na de laatste registratie ontstaat, bepaalt het getoonde oordeel.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `toelichting_tellerstandoordeel`
+  */
   ToelichtingTellerstandoordeel: Field("toelichting_tellerstandoordeel", DataType.Text),
 };
 
@@ -94,9 +93,30 @@ export const Info = {
  * **Dataset ID:** jqs4-4kvw
  *
  * **Category:** Voertuigen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Tellerstandoordeel Trend Toelichting dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.CodeToelichtingTellerstandoordeel, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<TellerstandoordeelTrendToelichting_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const TellerstandoordeelTrendToelichting = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

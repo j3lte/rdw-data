@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_bijzonderheden
  */
-export interface ResponseData {
+export interface KentekenVoertuigenBijzonderheden_ResponseData {
   /**
    * ### Bijzonderheid code
    *
@@ -68,51 +68,54 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Bijzonderheid code
-   *
-   * **Type**: Number
-   */
-   BijzonderheidCode: FieldObject<DataType.Number>;
-  /**
-   * ### Bijzonderheid code omschrijving
-   *
-   * **Type**: Text
-   */
-   BijzonderheidCode1: FieldObject<DataType.Text>;
-  /**
-   * ### Bijzonderheid eenheid
-   *
-   * **Type**: Text
-   */
-   BijzonderheidEenheid: FieldObject<DataType.Text>;
-  /**
-   * ### Bijzonderheid variabele tekst
-   *
-   * **Type**: Text
-   */
-   BijzonderheidVariabeleTekst: FieldObject<DataType.Text>;
-  /**
-   * ### Bijzonderheid volgnummer
-   *
-   * **Type**: Number
-   */
-   BijzonderheidVolgnummer: FieldObject<DataType.Number>;
-  /**
-   * ### Kenteken
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Bijzonderheid code
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `bijzonderheid_code`
+  */
   BijzonderheidCode: Field("bijzonderheid_code", DataType.Number),
+  /**
+  * ### Bijzonderheid code omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `bijzonderheid_code_1`
+  */
   BijzonderheidCode1: Field("bijzonderheid_code_1", DataType.Text),
+  /**
+  * ### Bijzonderheid eenheid
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `bijzonderheid_eenheid`
+  */
   BijzonderheidEenheid: Field("bijzonderheid_eenheid", DataType.Text),
+  /**
+  * ### Bijzonderheid variabele tekst
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `bijzonderheid_variabele_tekst`
+  */
   BijzonderheidVariabeleTekst: Field("bijzonderheid_variabele_tekst", DataType.Text),
+  /**
+  * ### Bijzonderheid volgnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `bijzonderheid_volgnummer`
+  */
   BijzonderheidVolgnummer: Field("bijzonderheid_volgnummer", DataType.Number),
+  /**
+  * ### Kenteken
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
 };
 
@@ -143,9 +146,30 @@ export const Info = {
  * **Dataset ID:** 7ug8-2dtt
  *
  * **Category:** Voertuigen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Gekentekende_voertuigen_bijzonderheden dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.BijzonderheidCode, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<KentekenVoertuigenBijzonderheden_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const KentekenVoertuigenBijzonderheden = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

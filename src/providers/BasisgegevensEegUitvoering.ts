@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Basisgegevens EEG Uitvoering
  */
-export interface ResponseData {
+export interface BasisgegevensEegUitvoering_ResponseData {
   /**
    * ### 24GHz_kortbereik radar
    *
@@ -670,653 +670,742 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
-  /**
-   * ### 24GHz_kortbereik radar
-   *
-   * **Type**: Text
-   */
-   N24ghzKortbereikRadar: FieldObject<DataType.Text>;
-  /**
-   * ### Aant zitpl stilst vrtg bovengrens
-   *
-   * **Type**: Number
-   */
-   AantZitplStilstVrtgBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aant zitpl stilst vrtg ondergrens
-   *
-   * **Type**: Number
-   */
-   AantZitplStilstVrtgOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal aangedreven assen
-   *
-   * **Type**: Number
-   */
-   AantalAangedrevenAssen: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal deuren bovengrens
-   *
-   * **Type**: Number
-   */
-   AantalDeurenBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal deuren ondergrens
-   *
-   * **Type**: Number
-   */
-   AantalDeurenOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal passagier zittend bovengrens
-   *
-   * **Type**: Number
-   */
-   AantalPassagierZittendBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal passagier zittend ondergrens
-   *
-   * **Type**: Number
-   */
-   AantalPassagierZittendOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal passagiers bovengrens
-   *
-   * **Type**: Number
-   */
-   AantalPassagiersBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal passagiers ondergrens
-   *
-   * **Type**: Number
-   */
-   AantalPassagiersOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal rolstoel plaats bovengrens
-   *
-   * **Type**: Number
-   */
-   AantalRolstoelPlaatsBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal rolstoel plaats ondergrens
-   *
-   * **Type**: Number
-   */
-   AantalRolstoelPlaatsOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal wielen
-   *
-   * **Type**: Number
-   */
-   AantalWielen: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal zitplaatsen bovengrens
-   *
-   * **Type**: Number
-   */
-   AantalZitplaatsenBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal zitplaatsen ondergrens
-   *
-   * **Type**: Number
-   */
-   AantalZitplaatsenOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Afst hart koppeling as bovengrens
-   *
-   * **Type**: Number
-   */
-   AfstHartKoppelingAsBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Afst hart koppeling as ondergrens
-   *
-   * **Type**: Number
-   */
-   AfstHartKoppelingAsOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Begindatum restant voorraad
-   *
-   * **Type**: Number
-   */
-   BegindatumRestantVoorraad: FieldObject<DataType.Number>;
-  /**
-   * ### Begindatum restant voorraad_DT
-   *
-   * **Type**: Calendar date
-   */
-   BegindatumRestantVoorraadDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Begindatum uitvoering
-   *
-   * **Type**: Number
-   */
-   BegindatumUitvoering: FieldObject<DataType.Number>;
-  /**
-   * ### Begindatum uitvoering_DT
-   *
-   * **Type**: Calendar date
-   */
-   BegindatumUitvoeringDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Breedte voertuig(uitvoering) bovengrens
-   *
-   * **Type**: Number
-   */
-   BreedteVoertuigUitvoeringBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Breedte voertuig(uitvoering) ondergrens
-   *
-   * **Type**: Number
-   */
-   BreedteVoertuigUitvoeringOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Code status intrekking uitvoering
-   *
-   * **Type**: Text
-   */
-   CodeStatusIntrekkingUitvoering: FieldObject<DataType.Text>;
-  /**
-   * ### Compleet voertuig indicator
-   *
-   * **Type**: Text
-   */
-   CompleetVoertuigIndicator: FieldObject<DataType.Text>;
-  /**
-   * ### Datum status wijziging
-   *
-   * **Type**: Number
-   */
-   DatumStatusWijziging: FieldObject<DataType.Number>;
-  /**
-   * ### Datum status wijziging_DT
-   *
-   * **Type**: Calendar date
-   */
-   DatumStatusWijzigingDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### EEG uitvoering cat toevoeging
-   *
-   * **Type**: Text
-   */
-   EegUitvoeringCatToevoeging: FieldObject<DataType.Text>;
-  /**
-   * ### EEG Uitvoeringscode
-   *
-   * **Type**: Text
-   */
-   EegUitvoeringscode: FieldObject<DataType.Text>;
-  /**
-   * ### EEG variantcode
-   *
-   * **Type**: Text
-   */
-   EegVariantcode: FieldObject<DataType.Text>;
-  /**
-   * ### Einddatum restant voorraad
-   *
-   * **Type**: Number
-   */
-   EindatumRestantVoorraad: FieldObject<DataType.Number>;
-  /**
-   * ### Einddatum restant voorraad_DT
-   *
-   * **Type**: Calendar date
-   */
-   EinddatumRestantVoorraadDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Einddatum uitvoering
-   *
-   * **Type**: Number
-   */
-   EinddatumUitvoering: FieldObject<DataType.Number>;
-  /**
-   * ### Einddatum uitvoering_DT
-   *
-   * **Type**: Calendar date
-   */
-   EinddatumUitvoeringDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### EU Type goedkeuringssleutel
-   *
-   * **Type**: Text
-   */
-   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
-  /**
-   * ### Eur. Codering carrosserietype
-   *
-   * **Type**: Text
-   */
-   EurCoderingCarrosserietype: FieldObject<DataType.Text>;
-  /**
-   * ### Handelsbenaming
-   *
-   * **Type**: Text
-   */
-   Handelsbenaming: FieldObject<DataType.Text>;
-  /**
-   * ### Hoogte voertuig(uitvoering) bovengrens
-   *
-   * **Type**: Number
-   */
-   HoogteVoertuigUitvoeringBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Hoogte voertuig(uitvoering) ondergrens
-   *
-   * **Type**: Number
-   */
-   HoogteVoertuigUitvoeringOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Inhoud brandstoftank
-   *
-   * **Type**: Number
-   */
-   InhoudBrandstoftank: FieldObject<DataType.Number>;
-  /**
-   * ### Inrichtingscode
-   *
-   * **Type**: Number
-   */
-   Inrichtingscode: FieldObject<DataType.Number>;
-  /**
-   * ### Intrekdatum uitvoering
-   *
-   * **Type**: Number
-   */
-   IntrekdatumUitvoering: FieldObject<DataType.Number>;
-  /**
-   * ### Intrekdatum uitvoering_DT
-   *
-   * **Type**: Calendar date
-   */
-   IntrekdatumUitvoeringDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Kant van het stuur
-   *
-   * **Type**: Text
-   */
-   KantVanHetStuur: FieldObject<DataType.Text>;
-  /**
-   * ### Lengte laadruimte bovengrens
-   *
-   * **Type**: Number
-   */
-   LengteLaadruimteBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Lengte laadruimte ondergrens
-   *
-   * **Type**: Number
-   */
-   LengteLaadruimteOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Lengte voertuig(uitvoering) bovengrens
-   *
-   * **Type**: Number
-   */
-   LengteVoertuigUitvoeringBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Lengte voertuig(uitvoering) ondergrens
-   *
-   * **Type**: Number
-   */
-   LengteVoertuigUitvoeringOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Links / Rechts rijdend
-   *
-   * **Type**: Text
-   */
-   LinksRechtsRijdend: FieldObject<DataType.Text>;
-  /**
-   * ### Massa bedrijfsklaar toestand bovengrens
-   *
-   * **Type**: Number
-   */
-   MassaBedrijfsklaarToestandBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Massa bedrijfsklaar toestand ondergrens
-   *
-   * **Type**: Number
-   */
-   MassaBedrijfsklaarToestandOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Massa leeg voertuig bovengrens
-   *
-   * **Type**: Number
-   */
-   MassaLeegVoertuigBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Massa leeg voertuig ondergrens
-   *
-   * **Type**: Number
-   */
-   MassaLeegVoertuigOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max breedte voertuig bovengrens
-   *
-   * **Type**: Number
-   */
-   MaxBreedteVoertuigBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max breedte voertuig ondergrens
-   *
-   * **Type**: Number
-   */
-   MaxBreedteVoertuigOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max constructie snelheid bovengrens
-   *
-   * **Type**: Number
-   */
-   MaxConstructieSnelheidBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max constructie snelheid ondergrens
-   *
-   * **Type**: Number
-   */
-   MaxConstructieSnelheidOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max lengte voertuig bovengrens
-   *
-   * **Type**: Number
-   */
-   MaxLengteVoertuigBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max lengte voertuig ondergrens
-   *
-   * **Type**: Number
-   */
-   MaxLengteVoertuigOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa geremd bovengrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaGeremdBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa geremd ondergrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaGeremdOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa ongeremd bovengrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaOngeremdBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa ongeremd ondergrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaOngeremdOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa samenstel bovengrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaSamenstelBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa samenstel ondergrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaSamenstelOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa voertuig bovengrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaVoertuigBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa voertuig ondergrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaVoertuigOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa vrtg techn bovengrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaVrtgTechnBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max massa vrtg techn ondergrens
-   *
-   * **Type**: Number
-   */
-   MaxMassaVrtgTechnOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max. ondersteunde snelheid
-   *
-   * **Type**: Number
-   */
-   MaxOndersteundeSnelheid: FieldObject<DataType.Number>;
-  /**
-   * ### Max ondersteuning snelheid bovengrens
-   *
-   * **Type**: Number
-   */
-   MaxOndersteuningSnelheidBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Max ondersteuning snelheid ondergrens
-   *
-   * **Type**: Number
-   */
-   MaxOndersteuningSnelheidOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Min massa voertuig
-   *
-   * **Type**: Number
-   */
-   MinMassaVoertuig: FieldObject<DataType.Number>;
-  /**
-   * ### Status voertiug kentekening
-   *
-   * **Type**: Text
-   */
-   StatusVoertiugKentekening: FieldObject<DataType.Text>;
-  /**
-   * ### Techn max last koppelpunt bovengrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxLastKoppelpuntBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max last koppelpunt ondergrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxLastKoppelpuntOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max massa autonoom bovengrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxMassaAutonoomBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max massa autonoom ondergrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxMassaAutonoomOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max massa middenas bovengrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxMassaMiddenasBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max massa middenas ondergrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxMassaMiddenasOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max massa oplegger bovengrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxMassaOpleggerBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max massa oplegger ondergrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxMassaOpleggerOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max massa samenst bovengrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxMassaSamenstBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max massa samenst ondergrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxMassaSamenstOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Tweede brandstofcode voertuig
-   *
-   * **Type**: Text
-   */
-   TweedeBrandstofcodeVoertuig: FieldObject<DataType.Text>;
-  /**
-   * ### Uitvoering registratie datum
-   *
-   * **Type**: Number
-   */
-   UitvoeringRegistratieDatum: FieldObject<DataType.Number>;
-  /**
-   * ### Uitvoering registratie datum_DT
-   *
-   * **Type**: Calendar date
-   */
-   UitvoeringRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Uitvoering wijzigingsnummer
-   *
-   * **Type**: Number
-   */
-   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-  /**
-   * ### Variant status
-   *
-   * **Type**: Text
-   */
-   VariantStatus: FieldObject<DataType.Text>;
-  /**
-   * ### Wielbasis bovengrens
-   *
-   * **Type**: Number
-   */
-   WielbaisBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Wielbasis ondergrens
-   *
-   * **Type**: Number
-   */
-   WielbasisOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Zelfdragende carrosserie
-   *
-   * **Type**: Text
-   */
-   ZelfdragendeCarrosserie: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+export const Fields = {
+  /**
+  * ### 24GHz_kortbereik radar
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `_24ghz_kortbereik_radar`
+  */
   N24ghzKortbereikRadar: Field("_24ghz_kortbereik_radar", DataType.Text),
+  /**
+  * ### Aant zitpl stilst vrtg bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aant_zitpl_stilst_vrtg_bovengrens`
+  */
   AantZitplStilstVrtgBovengrens: Field("aant_zitpl_stilst_vrtg_bovengrens", DataType.Number),
+  /**
+  * ### Aant zitpl stilst vrtg ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aant_zitpl_stilst_vrtg_ondergrens`
+  */
   AantZitplStilstVrtgOndergrens: Field("aant_zitpl_stilst_vrtg_ondergrens", DataType.Number),
+  /**
+  * ### Aantal aangedreven assen
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_aangedreven_assen`
+  */
   AantalAangedrevenAssen: Field("aantal_aangedreven_assen", DataType.Number),
+  /**
+  * ### Aantal deuren bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_deuren_bovengrens`
+  */
   AantalDeurenBovengrens: Field("aantal_deuren_bovengrens", DataType.Number),
+  /**
+  * ### Aantal deuren ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_deuren_ondergrens`
+  */
   AantalDeurenOndergrens: Field("aantal_deuren_ondergrens", DataType.Number),
+  /**
+  * ### Aantal passagier zittend bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_passagier_zittend_bovengrens`
+  */
   AantalPassagierZittendBovengrens: Field("aantal_passagier_zittend_bovengrens", DataType.Number),
+  /**
+  * ### Aantal passagier zittend ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_passagier_zittend_ondergrens`
+  */
   AantalPassagierZittendOndergrens: Field("aantal_passagier_zittend_ondergrens", DataType.Number),
+  /**
+  * ### Aantal passagiers bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_passagiers_bovengrens`
+  */
   AantalPassagiersBovengrens: Field("aantal_passagiers_bovengrens", DataType.Number),
+  /**
+  * ### Aantal passagiers ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_passagiers_ondergrens`
+  */
   AantalPassagiersOndergrens: Field("aantal_passagiers_ondergrens", DataType.Number),
+  /**
+  * ### Aantal rolstoel plaats bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_rolstoel_plaats_bovengrens`
+  */
   AantalRolstoelPlaatsBovengrens: Field("aantal_rolstoel_plaats_bovengrens", DataType.Number),
+  /**
+  * ### Aantal rolstoel plaats ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_rolstoel_plaats_ondergrens`
+  */
   AantalRolstoelPlaatsOndergrens: Field("aantal_rolstoel_plaats_ondergrens", DataType.Number),
+  /**
+  * ### Aantal wielen
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_wielen`
+  */
   AantalWielen: Field("aantal_wielen", DataType.Number),
+  /**
+  * ### Aantal zitplaatsen bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_zitplaatsen_bovengrens`
+  */
   AantalZitplaatsenBovengrens: Field("aantal_zitplaatsen_bovengrens", DataType.Number),
+  /**
+  * ### Aantal zitplaatsen ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_zitplaatsen_ondergrens`
+  */
   AantalZitplaatsenOndergrens: Field("aantal_zitplaatsen_ondergrens", DataType.Number),
+  /**
+  * ### Afst hart koppeling as bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `afst_hart_koppeling_as_bovengrens`
+  */
   AfstHartKoppelingAsBovengrens: Field("afst_hart_koppeling_as_bovengrens", DataType.Number),
+  /**
+  * ### Afst hart koppeling as ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `afst_hart_koppeling_as_ondergrens`
+  */
   AfstHartKoppelingAsOndergrens: Field("afst_hart_koppeling_as_ondergrens", DataType.Number),
+  /**
+  * ### Begindatum restant voorraad
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `begindatum_restant_voorraad`
+  */
   BegindatumRestantVoorraad: Field("begindatum_restant_voorraad", DataType.Number),
+  /**
+  * ### Begindatum restant voorraad_DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `begindatum_restant_voorraad_dt`
+  */
   BegindatumRestantVoorraadDt: Field("begindatum_restant_voorraad_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Begindatum uitvoering
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `begindatum_uitvoering`
+  */
   BegindatumUitvoering: Field("begindatum_uitvoering", DataType.Number),
+  /**
+  * ### Begindatum uitvoering_DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `begindatum_uitvoering_dt`
+  */
   BegindatumUitvoeringDt: Field("begindatum_uitvoering_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Breedte voertuig(uitvoering) bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `breedte_voertuig_uitvoering_bovengrens`
+  */
   BreedteVoertuigUitvoeringBovengrens: Field("breedte_voertuig_uitvoering_bovengrens", DataType.Number),
+  /**
+  * ### Breedte voertuig(uitvoering) ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `breedte_voertuig_uitvoering_ondergrens`
+  */
   BreedteVoertuigUitvoeringOndergrens: Field("breedte_voertuig_uitvoering_ondergrens", DataType.Number),
+  /**
+  * ### Code status intrekking uitvoering
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `code_status_intrekking_uitvoering`
+  */
   CodeStatusIntrekkingUitvoering: Field("code_status_intrekking_uitvoering", DataType.Text),
+  /**
+  * ### Compleet voertuig indicator
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `compleet_voertuig_indicator`
+  */
   CompleetVoertuigIndicator: Field("compleet_voertuig_indicator", DataType.Text),
+  /**
+  * ### Datum status wijziging
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `datum_status_wijziging`
+  */
   DatumStatusWijziging: Field("datum_status_wijziging", DataType.Number),
+  /**
+  * ### Datum status wijziging_DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `datum_status_wijziging_dt`
+  */
   DatumStatusWijzigingDt: Field("datum_status_wijziging_dt", DataType.FloatingTimestamp),
+  /**
+  * ### EEG uitvoering cat toevoeging
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_uitvoering_cat_toevoeging`
+  */
   EegUitvoeringCatToevoeging: Field("eeg_uitvoering_cat_toevoeging", DataType.Text),
+  /**
+  * ### EEG Uitvoeringscode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_uitvoeringscode`
+  */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
+  /**
+  * ### EEG variantcode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_variantcode`
+  */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
+  /**
+  * ### Einddatum restant voorraad
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `eindatum_restant_voorraad`
+  */
   EindatumRestantVoorraad: Field("eindatum_restant_voorraad", DataType.Number),
+  /**
+  * ### Einddatum restant voorraad_DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `einddatum_restant_voorraad_dt`
+  */
   EinddatumRestantVoorraadDt: Field("einddatum_restant_voorraad_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Einddatum uitvoering
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `einddatum_uitvoering`
+  */
   EinddatumUitvoering: Field("einddatum_uitvoering", DataType.Number),
+  /**
+  * ### Einddatum uitvoering_DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `einddatum_uitvoering_dt`
+  */
   EinddatumUitvoeringDt: Field("einddatum_uitvoering_dt", DataType.FloatingTimestamp),
+  /**
+  * ### EU Type goedkeuringssleutel
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eu_type_goedkeuringssleutel`
+  */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
+  /**
+  * ### Eur. Codering carrosserietype
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eur_codering_carrosserietype`
+  */
   EurCoderingCarrosserietype: Field("eur_codering_carrosserietype", DataType.Text),
+  /**
+  * ### Handelsbenaming
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `handelsbenaming`
+  */
   Handelsbenaming: Field("handelsbenaming", DataType.Text),
+  /**
+  * ### Hoogte voertuig(uitvoering) bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `hoogte_voertuig_uitvoering_bovengrens`
+  */
   HoogteVoertuigUitvoeringBovengrens: Field("hoogte_voertuig_uitvoering_bovengrens", DataType.Number),
+  /**
+  * ### Hoogte voertuig(uitvoering) ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `hoogte_voertuig_uitvoering_ondergrens`
+  */
   HoogteVoertuigUitvoeringOndergrens: Field("hoogte_voertuig_uitvoering_ondergrens", DataType.Number),
+  /**
+  * ### Inhoud brandstoftank
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `inhoud_brandstoftank`
+  */
   InhoudBrandstoftank: Field("inhoud_brandstoftank", DataType.Number),
+  /**
+  * ### Inrichtingscode
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `inrichtingscode`
+  */
   Inrichtingscode: Field("inrichtingscode", DataType.Number),
+  /**
+  * ### Intrekdatum uitvoering
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `intrekdatum_uitvoering`
+  */
   IntrekdatumUitvoering: Field("intrekdatum_uitvoering", DataType.Number),
+  /**
+  * ### Intrekdatum uitvoering_DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `intrekdatum_uitvoering_dt`
+  */
   IntrekdatumUitvoeringDt: Field("intrekdatum_uitvoering_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Kant van het stuur
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kant_van_het_stuur`
+  */
   KantVanHetStuur: Field("kant_van_het_stuur", DataType.Text),
+  /**
+  * ### Lengte laadruimte bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `lengte_laadruimte_bovengrens`
+  */
   LengteLaadruimteBovengrens: Field("lengte_laadruimte_bovengrens", DataType.Number),
+  /**
+  * ### Lengte laadruimte ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `lengte_laadruimte_ondergrens`
+  */
   LengteLaadruimteOndergrens: Field("lengte_laadruimte_ondergrens", DataType.Number),
+  /**
+  * ### Lengte voertuig(uitvoering) bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `lengte_voertuig_uitvoering_bovengrens`
+  */
   LengteVoertuigUitvoeringBovengrens: Field("lengte_voertuig_uitvoering_bovengrens", DataType.Number),
+  /**
+  * ### Lengte voertuig(uitvoering) ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `lengte_voertuig_uitvoering_ondergrens`
+  */
   LengteVoertuigUitvoeringOndergrens: Field("lengte_voertuig_uitvoering_ondergrens", DataType.Number),
+  /**
+  * ### Links / Rechts rijdend
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `links_rechts_rijdend`
+  */
   LinksRechtsRijdend: Field("links_rechts_rijdend", DataType.Text),
+  /**
+  * ### Massa bedrijfsklaar toestand bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `massa_bedrijfsklaar_toestand_bovengrens`
+  */
   MassaBedrijfsklaarToestandBovengrens: Field("massa_bedrijfsklaar_toestand_bovengrens", DataType.Number),
+  /**
+  * ### Massa bedrijfsklaar toestand ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `massa_bedrijfsklaar_toestand_ondergrens`
+  */
   MassaBedrijfsklaarToestandOndergrens: Field("massa_bedrijfsklaar_toestand_ondergrens", DataType.Number),
+  /**
+  * ### Massa leeg voertuig bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `massa_leeg_voertuig_bovengrens`
+  */
   MassaLeegVoertuigBovengrens: Field("massa_leeg_voertuig_bovengrens", DataType.Number),
+  /**
+  * ### Massa leeg voertuig ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `massa_leeg_voertuig_ondergrens`
+  */
   MassaLeegVoertuigOndergrens: Field("massa_leeg_voertuig_ondergrens", DataType.Number),
+  /**
+  * ### Max breedte voertuig bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_breedte_voertuig_bovengrens`
+  */
   MaxBreedteVoertuigBovengrens: Field("max_breedte_voertuig_bovengrens", DataType.Number),
+  /**
+  * ### Max breedte voertuig ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_breedte_voertuig_ondergrens`
+  */
   MaxBreedteVoertuigOndergrens: Field("max_breedte_voertuig_ondergrens", DataType.Number),
+  /**
+  * ### Max constructie snelheid bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_constructie_snelheid_bovengrens`
+  */
   MaxConstructieSnelheidBovengrens: Field("max_constructie_snelheid_bovengrens", DataType.Number),
+  /**
+  * ### Max constructie snelheid ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_constructie_snelheid_ondergrens`
+  */
   MaxConstructieSnelheidOndergrens: Field("max_constructie_snelheid_ondergrens", DataType.Number),
+  /**
+  * ### Max lengte voertuig bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_lengte_voertuig_bovengrens`
+  */
   MaxLengteVoertuigBovengrens: Field("max_lengte_voertuig_bovengrens", DataType.Number),
+  /**
+  * ### Max lengte voertuig ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_lengte_voertuig_ondergrens`
+  */
   MaxLengteVoertuigOndergrens: Field("max_lengte_voertuig_ondergrens", DataType.Number),
+  /**
+  * ### Max massa geremd bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_geremd_bovengrens`
+  */
   MaxMassaGeremdBovengrens: Field("max_massa_geremd_bovengrens", DataType.Number),
+  /**
+  * ### Max massa geremd ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_geremd_ondergrens`
+  */
   MaxMassaGeremdOndergrens: Field("max_massa_geremd_ondergrens", DataType.Number),
+  /**
+  * ### Max massa ongeremd bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_ongeremd_bovengrens`
+  */
   MaxMassaOngeremdBovengrens: Field("max_massa_ongeremd_bovengrens", DataType.Number),
+  /**
+  * ### Max massa ongeremd ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_ongeremd_ondergrens`
+  */
   MaxMassaOngeremdOndergrens: Field("max_massa_ongeremd_ondergrens", DataType.Number),
+  /**
+  * ### Max massa samenstel bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_samenstel_bovengrens`
+  */
   MaxMassaSamenstelBovengrens: Field("max_massa_samenstel_bovengrens", DataType.Number),
+  /**
+  * ### Max massa samenstel ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_samenstel_ondergrens`
+  */
   MaxMassaSamenstelOndergrens: Field("max_massa_samenstel_ondergrens", DataType.Number),
+  /**
+  * ### Max massa voertuig bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_voertuig_bovengrens`
+  */
   MaxMassaVoertuigBovengrens: Field("max_massa_voertuig_bovengrens", DataType.Number),
+  /**
+  * ### Max massa voertuig ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_voertuig_ondergrens`
+  */
   MaxMassaVoertuigOndergrens: Field("max_massa_voertuig_ondergrens", DataType.Number),
+  /**
+  * ### Max massa vrtg techn bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_vrtg_techn_bovengrens`
+  */
   MaxMassaVrtgTechnBovengrens: Field("max_massa_vrtg_techn_bovengrens", DataType.Number),
+  /**
+  * ### Max massa vrtg techn ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_massa_vrtg_techn_ondergrens`
+  */
   MaxMassaVrtgTechnOndergrens: Field("max_massa_vrtg_techn_ondergrens", DataType.Number),
+  /**
+  * ### Max. ondersteunde snelheid
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_ondersteunde_snelheid`
+  */
   MaxOndersteundeSnelheid: Field("max_ondersteunde_snelheid", DataType.Number),
+  /**
+  * ### Max ondersteuning snelheid bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_ondersteuning_snelheid_bovengrens`
+  */
   MaxOndersteuningSnelheidBovengrens: Field("max_ondersteuning_snelheid_bovengrens", DataType.Number),
+  /**
+  * ### Max ondersteuning snelheid ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `max_ondersteuning_snelheid_ondergrens`
+  */
   MaxOndersteuningSnelheidOndergrens: Field("max_ondersteuning_snelheid_ondergrens", DataType.Number),
+  /**
+  * ### Min massa voertuig
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `min_massa_voertuig`
+  */
   MinMassaVoertuig: Field("min_massa_voertuig", DataType.Number),
+  /**
+  * ### Status voertiug kentekening
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `status_voertiug_kentekening`
+  */
   StatusVoertiugKentekening: Field("status_voertiug_kentekening", DataType.Text),
+  /**
+  * ### Techn max last koppelpunt bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_last_koppelpunt_bovengrens`
+  */
   TechnMaxLastKoppelpuntBovengrens: Field("techn_max_last_koppelpunt_bovengrens", DataType.Number),
+  /**
+  * ### Techn max last koppelpunt ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_last_koppelpunt_ondergrens`
+  */
   TechnMaxLastKoppelpuntOndergrens: Field("techn_max_last_koppelpunt_ondergrens", DataType.Number),
+  /**
+  * ### Techn max massa autonoom bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_massa_autonoom_bovengrens`
+  */
   TechnMaxMassaAutonoomBovengrens: Field("techn_max_massa_autonoom_bovengrens", DataType.Number),
+  /**
+  * ### Techn max massa autonoom ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_massa_autonoom_ondergrens`
+  */
   TechnMaxMassaAutonoomOndergrens: Field("techn_max_massa_autonoom_ondergrens", DataType.Number),
+  /**
+  * ### Techn max massa middenas bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_massa_middenas_bovengrens`
+  */
   TechnMaxMassaMiddenasBovengrens: Field("techn_max_massa_middenas_bovengrens", DataType.Number),
+  /**
+  * ### Techn max massa middenas ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_massa_middenas_ondergrens`
+  */
   TechnMaxMassaMiddenasOndergrens: Field("techn_max_massa_middenas_ondergrens", DataType.Number),
+  /**
+  * ### Techn max massa oplegger bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_massa_oplegger_bovengrens`
+  */
   TechnMaxMassaOpleggerBovengrens: Field("techn_max_massa_oplegger_bovengrens", DataType.Number),
+  /**
+  * ### Techn max massa oplegger ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_massa_oplegger_ondergrens`
+  */
   TechnMaxMassaOpleggerOndergrens: Field("techn_max_massa_oplegger_ondergrens", DataType.Number),
+  /**
+  * ### Techn max massa samenst bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_massa_samenst_bovengrens`
+  */
   TechnMaxMassaSamenstBovengrens: Field("techn_max_massa_samenst_bovengrens", DataType.Number),
+  /**
+  * ### Techn max massa samenst ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_massa_samenst_ondergrens`
+  */
   TechnMaxMassaSamenstOndergrens: Field("techn_max_massa_samenst_ondergrens", DataType.Number),
+  /**
+  * ### Tweede brandstofcode voertuig
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `tweede_brandstofcode_voertuig`
+  */
   TweedeBrandstofcodeVoertuig: Field("tweede_brandstofcode_voertuig", DataType.Text),
+  /**
+  * ### Uitvoering registratie datum
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `uitvoering_registratie_datum`
+  */
   UitvoeringRegistratieDatum: Field("uitvoering_registratie_datum", DataType.Number),
+  /**
+  * ### Uitvoering registratie datum_DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `uitvoering_registratie_datum_dt`
+  */
   UitvoeringRegistratieDatumDt: Field("uitvoering_registratie_datum_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Uitvoering wijzigingsnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `uitvoering_wijzigingsnummer`
+  */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
+  /**
+  * ### Variant status
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `variant_status`
+  */
   VariantStatus: Field("variant_status", DataType.Text),
+  /**
+  * ### Wielbasis bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `wielbais_bovengrens`
+  */
   WielbaisBovengrens: Field("wielbais_bovengrens", DataType.Number),
+  /**
+  * ### Wielbasis ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `wielbasis_ondergrens`
+  */
   WielbasisOndergrens: Field("wielbasis_ondergrens", DataType.Number),
+  /**
+  * ### Zelfdragende carrosserie
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `zelfdragende_carrosserie`
+  */
   ZelfdragendeCarrosserie: Field("zelfdragende_carrosserie", DataType.Text),
 };
 
@@ -1433,9 +1522,30 @@ export const Info = {
  * **Dataset ID:** wx3j-69ie
  *
  * **Category:** Typegoedkeuring
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Basisgegevens EEG Uitvoering dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.N24ghzKortbereikRadar, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<BasisgegevensEegUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const BasisgegevensEegUitvoering = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

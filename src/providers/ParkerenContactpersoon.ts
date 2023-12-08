@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: CONTACTPERSOON
  */
-export interface ResponseData {
+export interface ParkerenContactpersoon_ResponseData {
   /**
    * ### ContactPersonId
    * 
@@ -91,72 +91,76 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### ContactPersonId
-   * 
-   * Identificatiecode van de contactpersoon
-   *
-   * **Type**: Text
-   */
-   Contactpersonid: FieldObject<DataType.Text>;
-  /**
-   * ### EmailAddress
-   * 
-   * E-mailadres waaronder een contactpersoon bereikbaar is
-   *
-   * **Type**: Text
-   */
-   Emailaddress: FieldObject<DataType.Text>;
-  /**
-   * ### FaxNumber
-   * 
-   * Faxnummer waaronder een contactpersoon bereikbaar is.
-   *
-   * **Type**: Text
-   */
-   Faxnumber: FieldObject<DataType.Text>;
-  /**
-   * ### FirstName
-   * 
-   * Voornaam van een contactpersoon.
-   *
-   * **Type**: Text
-   */
-   Firstname: FieldObject<DataType.Text>;
-  /**
-   * ### Name
-   * 
-   * Achternaam inclusief voorzetsels van een contactpersoon.
-   *
-   * **Type**: Text
-   */
-   Name: FieldObject<DataType.Text>;
-  /**
-   * ### PhoneNumber
-   * 
-   * Telefoonnummer waaronder een contactpersoon bereikbaar is.
-   *
-   * **Type**: Text
-   */
-   Phonenumber: FieldObject<DataType.Text>;
-  /**
-   * ### Position
-   * 
-   * Functie van een contactpersoon.
-   *
-   * **Type**: Text
-   */
-   Position: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### ContactPersonId
+  * 
+  * Identificatiecode van de contactpersoon
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `contactpersonid`
+  */
   Contactpersonid: Field("contactpersonid", DataType.Text),
+  /**
+  * ### EmailAddress
+  * 
+  * E-mailadres waaronder een contactpersoon bereikbaar is
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `emailaddress`
+  */
   Emailaddress: Field("emailaddress", DataType.Text),
+  /**
+  * ### FaxNumber
+  * 
+  * Faxnummer waaronder een contactpersoon bereikbaar is.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `faxnumber`
+  */
   Faxnumber: Field("faxnumber", DataType.Text),
+  /**
+  * ### FirstName
+  * 
+  * Voornaam van een contactpersoon.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `firstname`
+  */
   Firstname: Field("firstname", DataType.Text),
+  /**
+  * ### Name
+  * 
+  * Achternaam inclusief voorzetsels van een contactpersoon.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `name`
+  */
   Name: Field("name", DataType.Text),
+  /**
+  * ### PhoneNumber
+  * 
+  * Telefoonnummer waaronder een contactpersoon bereikbaar is.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `phonenumber`
+  */
   Phonenumber: Field("phonenumber", DataType.Text),
+  /**
+  * ### Position
+  * 
+  * Functie van een contactpersoon.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `position`
+  */
   Position: Field("position", DataType.Text),
 };
 
@@ -189,9 +193,30 @@ export const Info = {
  * **Dataset ID:** rbew-yhyc
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: CONTACTPERSOON dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Contactpersonid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenContactpersoon_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenContactpersoon = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

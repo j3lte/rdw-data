@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Toegevoegde Objecten
  */
-export interface ResponseData {
+export interface ToegevoegdeObjecten_ResponseData {
   /**
    * ### Classificatie toegevoegd obj
    *
@@ -105,86 +105,94 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Classificatie toegevoegd obj
-   *
-   * **Type**: Text
-   */
-   ClassificatieToegevoegdObj: FieldObject<DataType.Text>;
-  /**
-   * ### Demontagedatum
-   *
-   * **Type**: Number
-   */
-   Demontagedatum: FieldObject<DataType.Number>;
-  /**
-   * ### Demontagedatum DT
-   *
-   * **Type**: Calendar date
-   */
-   DemontagedatumDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Gasinstallatie tank inhoud
-   *
-   * **Type**: Number
-   */
-   GasinstallatieTankInhoud: FieldObject<DataType.Number>;
-  /**
-   * ### Kenteken
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-  /**
-   * ### Merk object toegevoegd
-   *
-   * **Type**: Text
-   */
-   MerkObjectToegevoegd: FieldObject<DataType.Text>;
-  /**
-   * ### Merkcode toegevoegd object
-   *
-   * **Type**: Text
-   */
-   MerkcodeToegevoegdObject: FieldObject<DataType.Text>;
-  /**
-   * ### Montagedatum
-   *
-   * **Type**: Number
-   */
-   Montagedatum: FieldObject<DataType.Number>;
-  /**
-   * ### Montagedatum DT
-   *
-   * **Type**: Calendar date
-   */
-   MontagedatumDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Soort toe te voegen object omschrijving
-   *
-   * **Type**: Text
-   */
-   SoortToeTeVoegenObjectOmschrijving: FieldObject<DataType.Text>;
-  /**
-   * ### Uitvoerings volgnr toegev obj
-   *
-   * **Type**: Number
-   */
-   UitvoeringsVolgnrToegevObj: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### Classificatie toegevoegd obj
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `classificatie_toegevoegd_obj`
+  */
   ClassificatieToegevoegdObj: Field("classificatie_toegevoegd_obj", DataType.Text),
+  /**
+  * ### Demontagedatum
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `demontagedatum`
+  */
   Demontagedatum: Field("demontagedatum", DataType.Number),
+  /**
+  * ### Demontagedatum DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `demontagedatum_dt`
+  */
   DemontagedatumDt: Field("demontagedatum_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Gasinstallatie tank inhoud
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `gasinstallatie_tank_inhoud`
+  */
   GasinstallatieTankInhoud: Field("gasinstallatie_tank_inhoud", DataType.Number),
+  /**
+  * ### Kenteken
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
+  /**
+  * ### Merk object toegevoegd
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `merk_object_toegevoegd`
+  */
   MerkObjectToegevoegd: Field("merk_object_toegevoegd", DataType.Text),
+  /**
+  * ### Merkcode toegevoegd object
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `merkcode_toegevoegd_object`
+  */
   MerkcodeToegevoegdObject: Field("merkcode_toegevoegd_object", DataType.Text),
+  /**
+  * ### Montagedatum
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `montagedatum`
+  */
   Montagedatum: Field("montagedatum", DataType.Number),
+  /**
+  * ### Montagedatum DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `montagedatum_dt`
+  */
   MontagedatumDt: Field("montagedatum_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Soort toe te voegen object omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `soort_toe_te_voegen_object_omschrijving`
+  */
   SoortToeTeVoegenObjectOmschrijving: Field("soort_toe_te_voegen_object_omschrijving", DataType.Text),
+  /**
+  * ### Uitvoerings volgnr toegev obj
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `uitvoerings_volgnr_toegev_obj`
+  */
   UitvoeringsVolgnrToegevObj: Field("uitvoerings_volgnr_toegev_obj", DataType.Number),
 };
 
@@ -221,9 +229,30 @@ export const Info = {
  * **Dataset ID:** sghb-dzxx
  *
  * **Category:** Keuringen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Toegevoegde Objecten dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.ClassificatieToegevoegdObj, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ToegevoegdeObjecten_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ToegevoegdeObjecten = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

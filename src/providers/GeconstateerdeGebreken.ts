@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Geconstateerde Gebreken
  */
-export interface ResponseData {
+export interface GeconstateerdeGebreken_ResponseData {
   /**
    * ### Aantal gebreken geconstateerd
    *
@@ -84,65 +84,70 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Aantal gebreken geconstateerd
-   *
-   * **Type**: Number
-   */
-   AantalGebrekenGeconstateerd: FieldObject<DataType.Number>;
-  /**
-   * ### Gebrek identificatie
-   *
-   * **Type**: Text
-   */
-   GebrekIdentificatie: FieldObject<DataType.Text>;
-  /**
-   * ### Kenteken
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-  /**
-   * ### Meld datum door keuringsinstantie
-   *
-   * **Type**: Number
-   */
-   MeldDatumDoorKeuringsinstantie: FieldObject<DataType.Number>;
-  /**
-   * ### Meld datum door keuringsinstantie DT
-   *
-   * **Type**: Calendar date
-   */
-   MeldDatumDoorKeuringsinstantieDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Meld tijd door keuringsinstantie
-   *
-   * **Type**: Number
-   */
-   MeldTijdDoorKeuringsinstantie: FieldObject<DataType.Number>;
-  /**
-   * ### Soort erkenning keuringsinstantie
-   *
-   * **Type**: Text
-   */
-   SoortErkenningKeuringsinstantie: FieldObject<DataType.Text>;
-  /**
-   * ### Soort erkenning omschrijving
-   *
-   * **Type**: Text
-   */
-   SoortErkenningOmschrijving: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Aantal gebreken geconstateerd
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_gebreken_geconstateerd`
+  */
   AantalGebrekenGeconstateerd: Field("aantal_gebreken_geconstateerd", DataType.Number),
+  /**
+  * ### Gebrek identificatie
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `gebrek_identificatie`
+  */
   GebrekIdentificatie: Field("gebrek_identificatie", DataType.Text),
+  /**
+  * ### Kenteken
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
+  /**
+  * ### Meld datum door keuringsinstantie
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `meld_datum_door_keuringsinstantie`
+  */
   MeldDatumDoorKeuringsinstantie: Field("meld_datum_door_keuringsinstantie", DataType.Number),
+  /**
+  * ### Meld datum door keuringsinstantie DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `meld_datum_door_keuringsinstantie_dt`
+  */
   MeldDatumDoorKeuringsinstantieDt: Field("meld_datum_door_keuringsinstantie_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Meld tijd door keuringsinstantie
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `meld_tijd_door_keuringsinstantie`
+  */
   MeldTijdDoorKeuringsinstantie: Field("meld_tijd_door_keuringsinstantie", DataType.Number),
+  /**
+  * ### Soort erkenning keuringsinstantie
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `soort_erkenning_keuringsinstantie`
+  */
   SoortErkenningKeuringsinstantie: Field("soort_erkenning_keuringsinstantie", DataType.Text),
+  /**
+  * ### Soort erkenning omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `soort_erkenning_omschrijving`
+  */
   SoortErkenningOmschrijving: Field("soort_erkenning_omschrijving", DataType.Text),
 };
 
@@ -176,9 +181,30 @@ export const Info = {
  * **Dataset ID:** a34c-vvps
  *
  * **Category:** Keuringen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Geconstateerde Gebreken dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.AantalGebrekenGeconstateerd, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<GeconstateerdeGebreken_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const GeconstateerdeGebreken = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

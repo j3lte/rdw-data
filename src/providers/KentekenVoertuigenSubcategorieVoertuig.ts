@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_subcategorie_voertuig
  */
-export interface ResponseData {
+export interface KentekenVoertuigenSubcategorieVoertuig_ResponseData {
   /**
    * ### Kenteken
    * 
@@ -60,43 +60,44 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Kenteken
-   * 
-   * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-  /**
-   * ### Subcategorie voertuig europees
-   * 
-   * Europese codering voor het type carrosserie voor speciale doeleinden van een voertuig.
-   *
-   * **Type**: Text
-   */
-   SubcategorieVoertuigEuropees: FieldObject<DataType.Text>;
-  /**
-   * ### Subcategorie voertuig europees omschrijving
-   *
-   * **Type**: Text
-   */
-   SubcategorieVoertuigEuropeesOmschrijving: FieldObject<DataType.Text>;
-  /**
-   * ### Subcategorie voertuig volgnummer
-   * 
-   * Volgnummer ter aanduiding van een wijziging op een uitvoering van een Europese subcategorie.  Voor iedere registratie is het volgnummer 1 hoger. Dit is geen Europees gegeven, maar het wordt gebruikt om het aantal voorkomens te kunnen vastleggen.
-   *
-   * **Type**: Number
-   */
-   SubcategorieVoertuigVolgnummer: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### Kenteken
+  * 
+  * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
+  /**
+  * ### Subcategorie voertuig europees
+  * 
+  * Europese codering voor het type carrosserie voor speciale doeleinden van een voertuig.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `subcategorie_voertuig_europees`
+  */
   SubcategorieVoertuigEuropees: Field("subcategorie_voertuig_europees", DataType.Text),
+  /**
+  * ### Subcategorie voertuig europees omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `subcategorie_voertuig_europees_omschrijving`
+  */
   SubcategorieVoertuigEuropeesOmschrijving: Field("subcategorie_voertuig_europees_omschrijving", DataType.Text),
+  /**
+  * ### Subcategorie voertuig volgnummer
+  * 
+  * Volgnummer ter aanduiding van een wijziging op een uitvoering van een Europese subcategorie.  Voor iedere registratie is het volgnummer 1 hoger. Dit is geen Europees gegeven, maar het wordt gebruikt om het aantal voorkomens te kunnen vastleggen.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `subcategorie_voertuig_volgnummer`
+  */
   SubcategorieVoertuigVolgnummer: Field("subcategorie_voertuig_volgnummer", DataType.Number),
 };
 
@@ -125,9 +126,30 @@ export const Info = {
  * **Dataset ID:** 2ba7-embk
  *
  * **Category:** Voertuigen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Gekentekende_voertuigen_subcategorie_voertuig dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Kenteken, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<KentekenVoertuigenSubcategorieVoertuig_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const KentekenVoertuigenSubcategorieVoertuig = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

@@ -28,7 +28,6 @@ Node:
 ## Usage
 
 ```typescript
-
 import {
   KentekenVoertuigen,
   KentekenVoertuigenAssen,
@@ -41,18 +40,11 @@ import {
 } from "https://deno.land/x/rdw_data/mod.ts";
 
 /*
-  * Example: search for a license plate and combine the results
-  */
+ * Example: search for a license plate and combine the results
+ */
 const search = (
   kenteken: string,
-): Promise<
-  & KentekenVoertuigen.ResponseData
-  & KentekenVoertuigenAssen.ResponseData
-  & KentekenVoertuigenBrandstof.ResponseData
-  & KentekenVoertuigenCarrosserie.ResponseData
-  & KentekenVoertuigenCarrosserieSpecificatie.ResponseData
-  & KentekenVoertuigenVoertuigklasse.ResponseData
-> =>
+) =>
   Promise.all([
     KentekenVoertuigen.RDWQuery().where(
       Where.like(KentekenVoertuigen.Fields.Kenteken, kenteken),
@@ -91,15 +83,12 @@ const combined = await search("XXXXX");
 
 console.log(data.count);
 console.log(combined);
-
 ```
 
 <!-- START FUNCTIONS -->
 ## API
 
 These are auto generated providers and use `soda-query@0.4.5`.
-
-An overview can be found [here](https://deno.land/x/rdw_data/src/providers/mod.ts)
 
 ### Overview
 

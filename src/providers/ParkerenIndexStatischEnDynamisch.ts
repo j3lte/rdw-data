@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: Index Statisch en Dynamisch
  */
-export interface ResponseData {
+export interface ParkerenIndexStatischEnDynamisch_ResponseData {
   /**
    * ### Dynamic parking data
    *
@@ -77,58 +77,62 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Dynamic parking data
-   *
-   * **Type**: Checkbox
-   */
-   DynamicParkingData: FieldObject<DataType.Checkbox>;
-  /**
-   * ### Organization
-   *
-   * **Type**: Text
-   */
-   Organization: FieldObject<DataType.Text>;
-  /**
-   * ### Organization ID
-   *
-   * **Type**: Number
-   */
-   OrganizationId: FieldObject<DataType.Number>;
-  /**
-   * ### Standard static parking data
-   *
-   * **Type**: Text
-   */
-   StandardStaticParkingData: FieldObject<DataType.Text>;
-  /**
-   * ### Static parking data
-   *
-   * **Type**: Checkbox
-   */
-   StaticParkingData: FieldObject<DataType.Checkbox>;
-  /**
-   * ### URL dynamic parking data
-   *
-   * **Type**: Text
-   */
-   UrlDynamicParkingData: FieldObject<DataType.Text>;
-  /**
-   * ### URL static parking data
-   *
-   * **Type**: Text
-   */
-   UrlStaticParkingData: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Dynamic parking data
+  *
+  * **Type**: Checkbox
+  *
+  * **Database Column Name**: `dynamic_parking_data`
+  */
   DynamicParkingData: Field("dynamic_parking_data", DataType.Checkbox),
+  /**
+  * ### Organization
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `organization`
+  */
   Organization: Field("organization", DataType.Text),
+  /**
+  * ### Organization ID
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `organization_id`
+  */
   OrganizationId: Field("organization_id", DataType.Number),
+  /**
+  * ### Standard static parking data
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `standard_static_parking_data`
+  */
   StandardStaticParkingData: Field("standard_static_parking_data", DataType.Text),
+  /**
+  * ### Static parking data
+  *
+  * **Type**: Checkbox
+  *
+  * **Database Column Name**: `static_parking_data`
+  */
   StaticParkingData: Field("static_parking_data", DataType.Checkbox),
+  /**
+  * ### URL dynamic parking data
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `url_dynamic_parking_data`
+  */
   UrlDynamicParkingData: Field("url_dynamic_parking_data", DataType.Text),
+  /**
+  * ### URL static parking data
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `url_static_parking_data`
+  */
   UrlStaticParkingData: Field("url_static_parking_data", DataType.Text),
 };
 
@@ -161,9 +165,30 @@ export const Info = {
  * **Dataset ID:** f6v7-gjpa
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: Index Statisch en Dynamisch dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.DynamicParkingData, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenIndexStatischEnDynamisch_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenIndexStatischEnDynamisch = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

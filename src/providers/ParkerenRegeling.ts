@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: REGELING
  */
-export interface ResponseData {
+export interface ParkerenRegeling_ResponseData {
   /**
    * ### AreaManagerId
    * 
@@ -91,72 +91,76 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDateRegulation
-   * 
-   * Datum van het einde van een periode waarin een gebied- of verblijfsregeling van kracht is.
-   *
-   * **Type**: Text
-   */
-   Enddateregulation: FieldObject<DataType.Text>;
-  /**
-   * ### MaximumDayCharge
-   * 
-   * Het maximale tarief, incl. BTW, dat voor een recht in een gebied dat valt onder de betreffende regeling verschuldigd is (in euro).
-   *
-   * **Type**: Number
-   */
-   Maximumdaycharge: FieldObject<DataType.Number>;
-  /**
-   * ### RegulationDesc
-   * 
-   * Omschrijving van een gebied- of verblijfsregeling
-   *
-   * **Type**: Text
-   */
-   Regulationdesc: FieldObject<DataType.Text>;
-  /**
-   * ### RegulationId
-   * 
-   * Identificatiecode een gebied- of verblijfsregeling.
-   *
-   * **Type**: Text
-   */
-   Regulationid: FieldObject<DataType.Text>;
-  /**
-   * ### RegulationType
-   * 
-   * Code die aangeeft wat voor soort gebied- of verblijfsregeling van toepassing is bij een bepaalde regeling. B: Basisregeling; A: Aanvullende regeling.
-   *
-   * **Type**: Text
-   */
-   Regulationtype: FieldObject<DataType.Text>;
-  /**
-   * ### StartDateRegulation
-   * 
-   * Datum van het begin van een periode waarin een gebied- of verblijfsregeling van kracht is.
-   *
-   * **Type**: Text
-   */
-   Startdateregulation: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDateRegulation
+  * 
+  * Datum van het einde van een periode waarin een gebied- of verblijfsregeling van kracht is.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `enddateregulation`
+  */
   Enddateregulation: Field("enddateregulation", DataType.Text),
+  /**
+  * ### MaximumDayCharge
+  * 
+  * Het maximale tarief, incl. BTW, dat voor een recht in een gebied dat valt onder de betreffende regeling verschuldigd is (in euro).
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `maximumdaycharge`
+  */
   Maximumdaycharge: Field("maximumdaycharge", DataType.Number),
+  /**
+  * ### RegulationDesc
+  * 
+  * Omschrijving van een gebied- of verblijfsregeling
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `regulationdesc`
+  */
   Regulationdesc: Field("regulationdesc", DataType.Text),
+  /**
+  * ### RegulationId
+  * 
+  * Identificatiecode een gebied- of verblijfsregeling.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `regulationid`
+  */
   Regulationid: Field("regulationid", DataType.Text),
+  /**
+  * ### RegulationType
+  * 
+  * Code die aangeeft wat voor soort gebied- of verblijfsregeling van toepassing is bij een bepaalde regeling. B: Basisregeling; A: Aanvullende regeling.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `regulationtype`
+  */
   Regulationtype: Field("regulationtype", DataType.Text),
+  /**
+  * ### StartDateRegulation
+  * 
+  * Datum van het begin van een periode waarin een gebied- of verblijfsregeling van kracht is.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `startdateregulation`
+  */
   Startdateregulation: Field("startdateregulation", DataType.Text),
 };
 
@@ -189,9 +193,30 @@ export const Info = {
  * **Dataset ID:** yefi-qfiq
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: REGELING dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areamanagerid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenRegeling_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenRegeling = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

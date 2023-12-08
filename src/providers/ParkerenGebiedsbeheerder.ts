@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: GEBIEDSBEHEERDER
  */
-export interface ResponseData {
+export interface ParkerenGebiedsbeheerder_ResponseData {
   /**
    * ### AreaManagerDesc
    * 
@@ -73,54 +73,56 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaManagerDesc
-   * 
-   * Omschrijving van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Text
-   */
-   Areamanagerdesc: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDateAreaManagerId
-   * 
-   * Datum tot wanneer een bepaalde gebiedsbeheerder of parkeerexploitant  niet meer in het NPR opereert.
-   *
-   * **Type**: Number
-   */
-   Enddateareamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### StartDateAreaManagerId
-   * 
-   * Datum vanaf wanneer een bepaalde gebiedsbeheerder of parkeerexploitant in het NPR opereert.
-   *
-   * **Type**: Number
-   */
-   Startdateareamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### URL
-   * 
-   * Een web-adres dat verwijst naar de website van een gebiedbeheerder (of beheerder van een parkeerterrein of -garage)
-   *
-   * **Type**: Text
-   */
-   Url: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaManagerDesc
+  * 
+  * Omschrijving van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areamanagerdesc`
+  */
   Areamanagerdesc: Field("areamanagerdesc", DataType.Text),
+  /**
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDateAreaManagerId
+  * 
+  * Datum tot wanneer een bepaalde gebiedsbeheerder of parkeerexploitant  niet meer in het NPR opereert.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `enddateareamanagerid`
+  */
   Enddateareamanagerid: Field("enddateareamanagerid", DataType.Number),
+  /**
+  * ### StartDateAreaManagerId
+  * 
+  * Datum vanaf wanneer een bepaalde gebiedsbeheerder of parkeerexploitant in het NPR opereert.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `startdateareamanagerid`
+  */
   Startdateareamanagerid: Field("startdateareamanagerid", DataType.Number),
+  /**
+  * ### URL
+  * 
+  * Een web-adres dat verwijst naar de website van een gebiedbeheerder (of beheerder van een parkeerterrein of -garage)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `url`
+  */
   Url: Field("url", DataType.Text),
 };
 
@@ -151,9 +153,30 @@ export const Info = {
  * **Dataset ID:** 2uc2-nnv3
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: GEBIEDSBEHEERDER dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areamanagerdesc, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenGebiedsbeheerder_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenGebiedsbeheerder = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

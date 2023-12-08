@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Erkenningen
  */
-export interface ResponseData {
+export interface Erkenningen_ResponseData {
   /**
    * ### Erkenning
    * 
@@ -46,27 +46,26 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Erkenning
-   * 
-   * De erkenning, bevoegdheid, regeling of overeenkomst die het bedrijf in bezit heeft. Wanneer deze tijdelijk ongeldig is, wordt deze wel getoond.
-   *
-   * **Type**: Text
-   */
-   Erkenning: FieldObject<DataType.Text>;
-  /**
-   * ### Volgnummer
-   * 
-   * Nummer waarmee een bedrijf eenduidig is te identificeren binnen de opendata set.
-   *
-   * **Type**: Number
-   */
-   Volgnummer: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### Erkenning
+  * 
+  * De erkenning, bevoegdheid, regeling of overeenkomst die het bedrijf in bezit heeft. Wanneer deze tijdelijk ongeldig is, wordt deze wel getoond.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `erkenning`
+  */
   Erkenning: Field("erkenning", DataType.Text),
+  /**
+  * ### Volgnummer
+  * 
+  * Nummer waarmee een bedrijf eenduidig is te identificeren binnen de opendata set.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `volgnummer`
+  */
   Volgnummer: Field("volgnummer", DataType.Number),
 };
 
@@ -94,9 +93,30 @@ export const Info = {
  * **Dataset ID:** nmwb-dqkz
  *
  * **Category:** Erkende bedrijven
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Erkenningen dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Erkenning, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<Erkenningen_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const Erkenningen = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

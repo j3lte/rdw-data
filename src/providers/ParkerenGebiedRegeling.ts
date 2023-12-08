@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: GEBIED REGELING
  */
-export interface ResponseData {
+export interface ParkerenGebiedRegeling_ResponseData {
   /**
    * ### AreaId
    * 
@@ -73,54 +73,56 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaId
-   * 
-   * Identificatiecode van een parkeergebied of - faciliteit.
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDateAreaRegulation
-   * 
-   * Einddatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een gebied.
-   *
-   * **Type**: Text
-   */
-   Enddatearearegulation: FieldObject<DataType.Text>;
-  /**
-   * ### RegulationId
-   * 
-   * Identificatiecode van een regeling.
-   *
-   * **Type**: Text
-   */
-   Regulationid: FieldObject<DataType.Text>;
-  /**
-   * ### StartDateAreaRegulation
-   * 
-   * Begindatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een parkeergebied of -faciliteit.
-   *
-   * **Type**: Text
-   */
-   Startdatearearegulation: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaId
+  * 
+  * Identificatiecode van een parkeergebied of - faciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDateAreaRegulation
+  * 
+  * Einddatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een gebied.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `enddatearearegulation`
+  */
   Enddatearearegulation: Field("enddatearearegulation", DataType.Text),
+  /**
+  * ### RegulationId
+  * 
+  * Identificatiecode van een regeling.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `regulationid`
+  */
   Regulationid: Field("regulationid", DataType.Text),
+  /**
+  * ### StartDateAreaRegulation
+  * 
+  * Begindatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een parkeergebied of -faciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `startdatearearegulation`
+  */
   Startdatearearegulation: Field("startdatearearegulation", DataType.Text),
 };
 
@@ -151,9 +153,30 @@ export const Info = {
  * **Dataset ID:** qtex-qwd8
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: GEBIED REGELING dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areaid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenGebiedRegeling_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenGebiedRegeling = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

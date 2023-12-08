@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for GEO PenR
  */
-export interface ResponseData {
+export interface GeoPenr_ResponseData {
   /**
    * ### AreaDesc
    *
@@ -105,86 +105,94 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaDesc
-   *
-   * **Type**: Text
-   */
-   Areadesc: FieldObject<DataType.Text>;
-  /**
-   * ### AreaId
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDataArea
-   *
-   * **Type**: Number
-   */
-   Enddataarea: FieldObject<DataType.Number>;
-  /**
-   * ### Location
-   *
-   * **Type**: Point
-   */
-   Location: FieldObject<DataType.Point>;
-  /**
-   * ### Location (address)
-   *
-   * **Type**: Text
-   */
-   LocationAddress: FieldObject<DataType.Text>;
-  /**
-   * ### Location (city)
-   *
-   * **Type**: Text
-   */
-   LocationCity: FieldObject<DataType.Text>;
-  /**
-   * ### Location (state)
-   *
-   * **Type**: Text
-   */
-   LocationState: FieldObject<DataType.Text>;
-  /**
-   * ### Location (zip)
-   *
-   * **Type**: Text
-   */
-   LocationZip: FieldObject<DataType.Text>;
-  /**
-   * ### StartDataArea
-   *
-   * **Type**: Number
-   */
-   Startdataarea: FieldObject<DataType.Number>;
-  /**
-   * ### UsageId
-   *
-   * **Type**: Text
-   */
-   Usageid: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaDesc
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areadesc`
+  */
   Areadesc: Field("areadesc", DataType.Text),
+  /**
+  * ### AreaId
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDataArea
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `enddataarea`
+  */
   Enddataarea: Field("enddataarea", DataType.Number),
+  /**
+  * ### Location
+  *
+  * **Type**: Point
+  *
+  * **Database Column Name**: `location`
+  */
   Location: Field("location", DataType.Point),
+  /**
+  * ### Location (address)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `location_address`
+  */
   LocationAddress: Field("location_address", DataType.Text),
+  /**
+  * ### Location (city)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `location_city`
+  */
   LocationCity: Field("location_city", DataType.Text),
+  /**
+  * ### Location (state)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `location_state`
+  */
   LocationState: Field("location_state", DataType.Text),
+  /**
+  * ### Location (zip)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `location_zip`
+  */
   LocationZip: Field("location_zip", DataType.Text),
+  /**
+  * ### StartDataArea
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `startdataarea`
+  */
   Startdataarea: Field("startdataarea", DataType.Number),
+  /**
+  * ### UsageId
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `usageid`
+  */
   Usageid: Field("usageid", DataType.Text),
 };
 
@@ -221,9 +229,30 @@ export const Info = {
  * **Dataset ID:** 6wzd-evwu
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the GEO PenR dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areadesc, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<GeoPenr_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const GeoPenr = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gebreken
  */
-export interface ResponseData {
+export interface Gebreken_ResponseData {
   /**
    * ### Einddatum gebrek
    *
@@ -84,65 +84,70 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Einddatum gebrek
-   *
-   * **Type**: Number
-   */
-   EinddatumGebrek: FieldObject<DataType.Number>;
-  /**
-   * ### Einddatum gebrek DT
-   *
-   * **Type**: Calendar date
-   */
-   EinddatumGebrekDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Gebrek artikel nummer
-   *
-   * **Type**: Text
-   */
-   GebrekArtikelNummer: FieldObject<DataType.Text>;
-  /**
-   * ### Gebrek identificatie
-   *
-   * **Type**: Text
-   */
-   GebrekIdentificatie: FieldObject<DataType.Text>;
-  /**
-   * ### Gebrek omschrijving
-   *
-   * **Type**: Text
-   */
-   GebrekOmschrijving: FieldObject<DataType.Text>;
-  /**
-   * ### Gebrek paragraaf nummer
-   *
-   * **Type**: Number
-   */
-   GebrekParagraafNummer: FieldObject<DataType.Number>;
-  /**
-   * ### Ingangsdatum gebrek
-   *
-   * **Type**: Number
-   */
-   IngangsdatumGebrek: FieldObject<DataType.Number>;
-  /**
-   * ### Ingangsdatum gebrek DT
-   *
-   * **Type**: Calendar date
-   */
-   IngangsdatumGebrekDt: FieldObject<DataType.FloatingTimestamp>;
-};
-
-export const Fields: IFields = {
+  * ### Einddatum gebrek
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `einddatum_gebrek`
+  */
   EinddatumGebrek: Field("einddatum_gebrek", DataType.Number),
+  /**
+  * ### Einddatum gebrek DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `einddatum_gebrek_dt`
+  */
   EinddatumGebrekDt: Field("einddatum_gebrek_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Gebrek artikel nummer
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `gebrek_artikel_nummer`
+  */
   GebrekArtikelNummer: Field("gebrek_artikel_nummer", DataType.Text),
+  /**
+  * ### Gebrek identificatie
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `gebrek_identificatie`
+  */
   GebrekIdentificatie: Field("gebrek_identificatie", DataType.Text),
+  /**
+  * ### Gebrek omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `gebrek_omschrijving`
+  */
   GebrekOmschrijving: Field("gebrek_omschrijving", DataType.Text),
+  /**
+  * ### Gebrek paragraaf nummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `gebrek_paragraaf_nummer`
+  */
   GebrekParagraafNummer: Field("gebrek_paragraaf_nummer", DataType.Number),
+  /**
+  * ### Ingangsdatum gebrek
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `ingangsdatum_gebrek`
+  */
   IngangsdatumGebrek: Field("ingangsdatum_gebrek", DataType.Number),
+  /**
+  * ### Ingangsdatum gebrek DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `ingangsdatum_gebrek_dt`
+  */
   IngangsdatumGebrekDt: Field("ingangsdatum_gebrek_dt", DataType.FloatingTimestamp),
 };
 
@@ -176,9 +181,30 @@ export const Info = {
  * **Dataset ID:** hx2c-gt7k
  *
  * **Category:** Keuringen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Gebreken dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.EinddatumGebrek, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<Gebreken_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const Gebreken = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

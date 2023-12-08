@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: GPS-COÖRDINATEN PARKEERLOCATIE
  */
-export interface ResponseData {
+export interface ParkerenGpsCoordinatenParkeerlocatie_ResponseData {
   /**
    * ### EndDateLocation
    * 
@@ -82,63 +82,66 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### EndDateLocation
-   * 
-   * Einddatum en -tijd van de periode waarin de gegevens van een parkeerlocatie geldig zijn.
-   *
-   * **Type**: Text
-   */
-   Enddatelocation: FieldObject<DataType.Text>;
-  /**
-   * ### Latitude
-   * 
-   * Breedtegraad van de locatie in WGS84 (EPSG: 4326).
-   *
-   * **Type**: Number
-   */
-   Latitude: FieldObject<DataType.Number>;
-  /**
-   * ### LocationReference
-   * 
-   * Verwijzing naar de in- of uitgang van een parkeergebied waar een locatie betrekking op heeft of naar een verkooppunt. De indicatoren in LocationReferenceType bepalen welke van de twee mogelijkheden van toepassing is.
-   *
-   * **Type**: Number
-   */
-   Locationreference: FieldObject<DataType.Number>;
-  /**
-   * ### LocationReferenceType
-   * 
-   * Een aanduiding of de LOCATIE-REF de sleutel van een verkooppunt of een in- of uitgang bevat. VKP: verkooppunt. I-O: in- of uitgang.
-   *
-   * **Type**: Text
-   */
-   Locationreferencetype: FieldObject<DataType.Text>;
-  /**
-   * ### Longitude
-   * 
-   * De lengtegraad van een locatie in WGS84 (EPSG: 4326).
-   *
-   * **Type**: Number
-   */
-   Longitude: FieldObject<DataType.Number>;
-  /**
-   * ### StartDateLocation
-   * 
-   * Begindatum en -tijd van de periode waarin de gegevens van een parkeerlocatie geldig zijn.
-   *
-   * **Type**: Text
-   */
-   Startdatelocation: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### EndDateLocation
+  * 
+  * Einddatum en -tijd van de periode waarin de gegevens van een parkeerlocatie geldig zijn.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `enddatelocation`
+  */
   Enddatelocation: Field("enddatelocation", DataType.Text),
+  /**
+  * ### Latitude
+  * 
+  * Breedtegraad van de locatie in WGS84 (EPSG: 4326).
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `latitude`
+  */
   Latitude: Field("latitude", DataType.Number),
+  /**
+  * ### LocationReference
+  * 
+  * Verwijzing naar de in- of uitgang van een parkeergebied waar een locatie betrekking op heeft of naar een verkooppunt. De indicatoren in LocationReferenceType bepalen welke van de twee mogelijkheden van toepassing is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `locationreference`
+  */
   Locationreference: Field("locationreference", DataType.Number),
+  /**
+  * ### LocationReferenceType
+  * 
+  * Een aanduiding of de LOCATIE-REF de sleutel van een verkooppunt of een in- of uitgang bevat. VKP: verkooppunt. I-O: in- of uitgang.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `locationreferencetype`
+  */
   Locationreferencetype: Field("locationreferencetype", DataType.Text),
+  /**
+  * ### Longitude
+  * 
+  * De lengtegraad van een locatie in WGS84 (EPSG: 4326).
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `longitude`
+  */
   Longitude: Field("longitude", DataType.Number),
+  /**
+  * ### StartDateLocation
+  * 
+  * Begindatum en -tijd van de periode waarin de gegevens van een parkeerlocatie geldig zijn.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `startdatelocation`
+  */
   Startdatelocation: Field("startdatelocation", DataType.Text),
 };
 
@@ -170,9 +173,30 @@ export const Info = {
  * **Dataset ID:** k3dr-ge3w
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: GPS-COÖRDINATEN PARKEERLOCATIE dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Enddatelocation, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenGpsCoordinatenParkeerlocatie_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenGpsCoordinatenParkeerlocatie = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

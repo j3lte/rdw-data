@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Terugroep_informeren_eigenaar
  */
-export interface ResponseData {
+export interface TerugroepInformerenEigenaar_ResponseData {
   /**
    * ### Code wijze informeren
    * 
@@ -57,40 +57,40 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Code wijze informeren
-   * 
-   * De code voor de wijze van informeren van de consument:
-   * BRI= Een brief
-   * BEL= Opbellen of persoonlijk benaderen
-   * ADV=  Een advertentie in landelijke dagbladen
-   * NTB= Nader te bepalen
-   *
-   * **Type**: Text
-   */
-   CodeWijzeInformeren: FieldObject<DataType.Text>;
-  /**
-   * ### Referentiecode RDW
-   * 
-   * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
-   *
-   * **Type**: Text
-   */
-   ReferentiecodeRdw: FieldObject<DataType.Text>;
-  /**
-   * ### Wijze waarop u wordt genformeerd
-   * 
-   * Hier staat beschreven hoe de producent of distributeur de voertuigeigenaar benadert over de terugroepactie. Er kunnen meer manieren van toepassing zijn.
-   *
-   * **Type**: Text
-   */
-   WijzeWaaropUWordtGeNformeerd: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Code wijze informeren
+  * 
+  * De code voor de wijze van informeren van de consument:
+  * BRI= Een brief
+  * BEL= Opbellen of persoonlijk benaderen
+  * ADV=  Een advertentie in landelijke dagbladen
+  * NTB= Nader te bepalen
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `code_wijze_informeren`
+  */
   CodeWijzeInformeren: Field("code_wijze_informeren", DataType.Text),
+  /**
+  * ### Referentiecode RDW
+  * 
+  * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `referentiecode_rdw`
+  */
   ReferentiecodeRdw: Field("referentiecode_rdw", DataType.Text),
+  /**
+  * ### Wijze waarop u wordt genformeerd
+  * 
+  * Hier staat beschreven hoe de producent of distributeur de voertuigeigenaar benadert over de terugroepactie. Er kunnen meer manieren van toepassing zijn.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `wijze_waarop_u_wordt_ge_nformeerd`
+  */
   WijzeWaaropUWordtGeNformeerd: Field("wijze_waarop_u_wordt_ge_nformeerd", DataType.Text),
 };
 
@@ -118,9 +118,30 @@ export const Info = {
  * **Dataset ID:** mh8w-8cup
  *
  * **Category:** Terugroepacties
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Terugroep_informeren_eigenaar dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.CodeWijzeInformeren, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<TerugroepInformerenEigenaar_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const TerugroepInformerenEigenaar = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

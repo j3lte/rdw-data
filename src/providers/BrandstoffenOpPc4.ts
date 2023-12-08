@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Brandstoffen_op_PC4
  */
-export interface ResponseData {
+export interface BrandstoffenOpPc4_ResponseData {
   /**
    * ### Aantal
    *
@@ -61,44 +61,46 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Aantal
-   *
-   * **Type**: Number
-   */
-   Aantal: FieldObject<DataType.Number>;
-  /**
-   * ### Brandstof
-   *
-   * **Type**: Text
-   */
-   Brandstof: FieldObject<DataType.Text>;
-  /**
-   * ### Extern oplaadbaar
-   *
-   * **Type**: Text
-   */
-   ExternOplaadbaar: FieldObject<DataType.Text>;
-  /**
-   * ### Postcode
-   *
-   * **Type**: Number
-   */
-   Postcode: FieldObject<DataType.Number>;
-  /**
-   * ### Voertuigsoort
-   *
-   * **Type**: Text
-   */
-   Voertuigsoort: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Aantal
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal`
+  */
   Aantal: Field("aantal", DataType.Number),
+  /**
+  * ### Brandstof
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `brandstof`
+  */
   Brandstof: Field("brandstof", DataType.Text),
+  /**
+  * ### Extern oplaadbaar
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `extern_oplaadbaar`
+  */
   ExternOplaadbaar: Field("extern_oplaadbaar", DataType.Text),
+  /**
+  * ### Postcode
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `postcode`
+  */
   Postcode: Field("postcode", DataType.Number),
+  /**
+  * ### Voertuigsoort
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `voertuigsoort`
+  */
   Voertuigsoort: Field("voertuigsoort", DataType.Text),
 };
 
@@ -128,9 +130,30 @@ export const Info = {
  * **Dataset ID:** 8wbe-pu7d
  *
  * **Category:** Unknown
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Brandstoffen_op_PC4 dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Aantal, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<BrandstoffenOpPc4_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const BrandstoffenOpPc4 = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

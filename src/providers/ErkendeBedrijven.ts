@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Erkende Bedrijven
  */
-export interface ResponseData {
+export interface ErkendeBedrijven_ResponseData {
   /**
    * ### api_bedrijf_erkenningen
    *
@@ -98,79 +98,86 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### api_bedrijf_erkenningen
-   *
-   * **Type**: Text
-   */
-   ApiBedrijfErkenningen: FieldObject<DataType.Text>;
-  /**
-   * ### Gevelnaam
-   *
-   * **Type**: Text
-   */
-   Gevelnaam: FieldObject<DataType.Text>;
-  /**
-   * ### Huisnummer
-   *
-   * **Type**: Text
-   */
-   Huisnummer: FieldObject<DataType.Text>;
-  /**
-   * ### Huisnummer toevoeging
-   *
-   * **Type**: Text
-   */
-   HuisnummerToevoeging: FieldObject<DataType.Text>;
-  /**
-   * ### Naam bedrijf
-   *
-   * **Type**: Text
-   */
-   NaamBedrijf: FieldObject<DataType.Text>;
-  /**
-   * ### Plaats
-   *
-   * **Type**: Text
-   */
-   Plaats: FieldObject<DataType.Text>;
-  /**
-   * ### Postcode alfanumeriek
-   *
-   * **Type**: Text
-   */
-   PostcodeAlfanumeriek: FieldObject<DataType.Text>;
-  /**
-   * ### Postcode numeriek
-   *
-   * **Type**: Number
-   */
-   PostcodeNumeriek: FieldObject<DataType.Number>;
-  /**
-   * ### Straat
-   *
-   * **Type**: Text
-   */
-   Straat: FieldObject<DataType.Text>;
-  /**
-   * ### Volgnummer
-   *
-   * **Type**: Number
-   */
-   Volgnummer: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### api_bedrijf_erkenningen
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `api_bedrijf_erkenningen`
+  */
   ApiBedrijfErkenningen: Field("api_bedrijf_erkenningen", DataType.Text),
+  /**
+  * ### Gevelnaam
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `gevelnaam`
+  */
   Gevelnaam: Field("gevelnaam", DataType.Text),
+  /**
+  * ### Huisnummer
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `huisnummer`
+  */
   Huisnummer: Field("huisnummer", DataType.Text),
+  /**
+  * ### Huisnummer toevoeging
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `huisnummer_toevoeging`
+  */
   HuisnummerToevoeging: Field("huisnummer_toevoeging", DataType.Text),
+  /**
+  * ### Naam bedrijf
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `naam_bedrijf`
+  */
   NaamBedrijf: Field("naam_bedrijf", DataType.Text),
+  /**
+  * ### Plaats
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `plaats`
+  */
   Plaats: Field("plaats", DataType.Text),
+  /**
+  * ### Postcode alfanumeriek
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `postcode_alfanumeriek`
+  */
   PostcodeAlfanumeriek: Field("postcode_alfanumeriek", DataType.Text),
+  /**
+  * ### Postcode numeriek
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `postcode_numeriek`
+  */
   PostcodeNumeriek: Field("postcode_numeriek", DataType.Number),
+  /**
+  * ### Straat
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `straat`
+  */
   Straat: Field("straat", DataType.Text),
+  /**
+  * ### Volgnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `volgnummer`
+  */
   Volgnummer: Field("volgnummer", DataType.Number),
 };
 
@@ -206,9 +213,30 @@ export const Info = {
  * **Dataset ID:** 5k74-3jha
  *
  * **Category:** Erkende bedrijven
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Erkende Bedrijven dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.ApiBedrijfErkenningen, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ErkendeBedrijven_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ErkendeBedrijven = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

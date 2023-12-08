@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_rupsbanden
  */
-export interface ResponseData {
+export interface KentekenVoertuigenRupsbanden_ResponseData {
   /**
    * ### Aangedreven rupsband indicator
    *
@@ -75,58 +75,62 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Aangedreven rupsband indicator
-   *
-   * **Type**: Text
-   */
-   AangedrevenRupsbandIndicator: FieldObject<DataType.Text>;
-  /**
-   * ### Geremde rupsband indicator
-   *
-   * **Type**: Text
-   */
-   GeremdeRupsbandIndicator: FieldObject<DataType.Text>;
-  /**
-   * ### Kenteken
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-  /**
-   * ### Rupsband set volgnummer
-   *
-   * **Type**: Number
-   */
-   RupsbandSetVolgnr: FieldObject<DataType.Number>;
-  /**
-   * ### Technisch toelaatbaar maximum massa rupsbandset
-   *
-   * **Type**: Number
-   */
-   TechnischToelaatbaarMaximum: FieldObject<DataType.Number>;
-  /**
-   * ### Technisch toelaatbaar maximum massa rupsband set minimum
-   *
-   * **Type**: Number
-   */
-   TechnischToelaatbaarMaximum1: FieldObject<DataType.Number>;
-  /**
-   * ### Technisch toelaatbaar maximum massa rupsband set maximum
-   *
-   * **Type**: Number
-   */
-   TechnischToelaatbaarMaximum2: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### Aangedreven rupsband indicator
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `aangedreven_rupsband_indicator`
+  */
   AangedrevenRupsbandIndicator: Field("aangedreven_rupsband_indicator", DataType.Text),
+  /**
+  * ### Geremde rupsband indicator
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `geremde_rupsband_indicator`
+  */
   GeremdeRupsbandIndicator: Field("geremde_rupsband_indicator", DataType.Text),
+  /**
+  * ### Kenteken
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
+  /**
+  * ### Rupsband set volgnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `rupsband_set_volgnr`
+  */
   RupsbandSetVolgnr: Field("rupsband_set_volgnr", DataType.Number),
+  /**
+  * ### Technisch toelaatbaar maximum massa rupsbandset
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `technisch_toelaatbaar_maximum`
+  */
   TechnischToelaatbaarMaximum: Field("technisch_toelaatbaar_maximum", DataType.Number),
+  /**
+  * ### Technisch toelaatbaar maximum massa rupsband set minimum
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `technisch_toelaatbaar_maximum_1`
+  */
   TechnischToelaatbaarMaximum1: Field("technisch_toelaatbaar_maximum_1", DataType.Number),
+  /**
+  * ### Technisch toelaatbaar maximum massa rupsband set maximum
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `technisch_toelaatbaar_maximum_2`
+  */
   TechnischToelaatbaarMaximum2: Field("technisch_toelaatbaar_maximum_2", DataType.Number),
 };
 
@@ -158,9 +162,30 @@ export const Info = {
  * **Dataset ID:** 3xwf-ince
  *
  * **Category:** Voertuigen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Gekentekende_voertuigen_rupsbanden dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.AangedrevenRupsbandIndicator, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<KentekenVoertuigenRupsbanden_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const KentekenVoertuigenRupsbanden = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

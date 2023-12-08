@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Merk Uitvoering Toegestaan
  */
-export interface ResponseData {
+export interface MerkUitvoeringToegestaan_ResponseData {
   /**
    * ### EEG Uitvoeringscode
    *
@@ -75,58 +75,62 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### EEG Uitvoeringscode
-   *
-   * **Type**: Text
-   */
-   EegUitvoeringscode: FieldObject<DataType.Text>;
-  /**
-   * ### EEG variantcode
-   *
-   * **Type**: Text
-   */
-   EegVariantcode: FieldObject<DataType.Text>;
-  /**
-   * ### EU Type goedkeuringssleutel
-   *
-   * **Type**: Text
-   */
-   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
-  /**
-   * ### Merk registratie datum
-   *
-   * **Type**: Number
-   */
-   MerkRegistratieDatum: FieldObject<DataType.Number>;
-  /**
-   * ### Merk registratie datum_DT
-   *
-   * **Type**: Calendar date
-   */
-   MerkRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Merkcode
-   *
-   * **Type**: Text
-   */
-   Merkcode: FieldObject<DataType.Text>;
-  /**
-   * ### Uitvoering wijzigingsnummer
-   *
-   * **Type**: Number
-   */
-   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### EEG Uitvoeringscode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_uitvoeringscode`
+  */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
+  /**
+  * ### EEG variantcode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_variantcode`
+  */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
+  /**
+  * ### EU Type goedkeuringssleutel
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eu_type_goedkeuringssleutel`
+  */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
+  /**
+  * ### Merk registratie datum
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `merk_registratie_datum`
+  */
   MerkRegistratieDatum: Field("merk_registratie_datum", DataType.Number),
+  /**
+  * ### Merk registratie datum_DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `merk_registratie_datum_dt`
+  */
   MerkRegistratieDatumDt: Field("merk_registratie_datum_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Merkcode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `merkcode`
+  */
   Merkcode: Field("merkcode", DataType.Text),
+  /**
+  * ### Uitvoering wijzigingsnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `uitvoering_wijzigingsnummer`
+  */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
 
@@ -158,9 +162,30 @@ export const Info = {
  * **Dataset ID:** fj7t-hhik
  *
  * **Category:** Typegoedkeuring
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Merk Uitvoering Toegestaan dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.EegUitvoeringscode, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<MerkUitvoeringToegestaan_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const MerkUitvoeringToegestaan = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

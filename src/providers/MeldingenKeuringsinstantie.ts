@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Meldingen Keuringsinstantie
  */
-export interface ResponseData {
+export interface MeldingenKeuringsinstantie_ResponseData {
   /**
    * ### API Gebrek beschrijving
    *
@@ -105,86 +105,94 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### API Gebrek beschrijving
-   *
-   * **Type**: Text
-   */
-   ApiGebrekBeschrijving: FieldObject<DataType.Text>;
-  /**
-   * ### API Gebrek constateringen
-   *
-   * **Type**: Text
-   */
-   ApiGebrekConstateringen: FieldObject<DataType.Text>;
-  /**
-   * ### Kenteken
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-  /**
-   * ### Meld datum door keuringsinstantie
-   *
-   * **Type**: Number
-   */
-   MeldDatumDoorKeuringsinstantie: FieldObject<DataType.Number>;
-  /**
-   * ### Meld datum door keuringsinstantie DT
-   *
-   * **Type**: Calendar date
-   */
-   MeldDatumDoorKeuringsinstantieDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Meld tijd door keuringsinstantie
-   *
-   * **Type**: Number
-   */
-   MeldTijdDoorKeuringsinstantie: FieldObject<DataType.Number>;
-  /**
-   * ### Soort erkenning keuringsinstantie
-   *
-   * **Type**: Text
-   */
-   SoortErkenningKeuringsinstantie: FieldObject<DataType.Text>;
-  /**
-   * ### Soort erkenning omschrijving
-   *
-   * **Type**: Text
-   */
-   SoortErkenningOmschrijving: FieldObject<DataType.Text>;
-  /**
-   * ### Soort melding ki omschrijving
-   *
-   * **Type**: Text
-   */
-   SoortMeldingKiOmschrijving: FieldObject<DataType.Text>;
-  /**
-   * ### Vervaldatum keuring
-   *
-   * **Type**: Number
-   */
-   VervaldatumKeuring: FieldObject<DataType.Number>;
-  /**
-   * ### Vervaldatum keuring DT
-   *
-   * **Type**: Calendar date
-   */
-   VervaldatumKeuringDt: FieldObject<DataType.FloatingTimestamp>;
-};
-
-export const Fields: IFields = {
+  * ### API Gebrek beschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `api_gebrek_beschrijving`
+  */
   ApiGebrekBeschrijving: Field("api_gebrek_beschrijving", DataType.Text),
+  /**
+  * ### API Gebrek constateringen
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `api_gebrek_constateringen`
+  */
   ApiGebrekConstateringen: Field("api_gebrek_constateringen", DataType.Text),
+  /**
+  * ### Kenteken
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
+  /**
+  * ### Meld datum door keuringsinstantie
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `meld_datum_door_keuringsinstantie`
+  */
   MeldDatumDoorKeuringsinstantie: Field("meld_datum_door_keuringsinstantie", DataType.Number),
+  /**
+  * ### Meld datum door keuringsinstantie DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `meld_datum_door_keuringsinstantie_dt`
+  */
   MeldDatumDoorKeuringsinstantieDt: Field("meld_datum_door_keuringsinstantie_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Meld tijd door keuringsinstantie
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `meld_tijd_door_keuringsinstantie`
+  */
   MeldTijdDoorKeuringsinstantie: Field("meld_tijd_door_keuringsinstantie", DataType.Number),
+  /**
+  * ### Soort erkenning keuringsinstantie
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `soort_erkenning_keuringsinstantie`
+  */
   SoortErkenningKeuringsinstantie: Field("soort_erkenning_keuringsinstantie", DataType.Text),
+  /**
+  * ### Soort erkenning omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `soort_erkenning_omschrijving`
+  */
   SoortErkenningOmschrijving: Field("soort_erkenning_omschrijving", DataType.Text),
+  /**
+  * ### Soort melding ki omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `soort_melding_ki_omschrijving`
+  */
   SoortMeldingKiOmschrijving: Field("soort_melding_ki_omschrijving", DataType.Text),
+  /**
+  * ### Vervaldatum keuring
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `vervaldatum_keuring`
+  */
   VervaldatumKeuring: Field("vervaldatum_keuring", DataType.Number),
+  /**
+  * ### Vervaldatum keuring DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `vervaldatum_keuring_dt`
+  */
   VervaldatumKeuringDt: Field("vervaldatum_keuring_dt", DataType.FloatingTimestamp),
 };
 
@@ -221,9 +229,30 @@ export const Info = {
  * **Dataset ID:** sgfe-77wx
  *
  * **Category:** Keuringen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Meldingen Keuringsinstantie dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.ApiGebrekBeschrijving, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<MeldingenKeuringsinstantie_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const MeldingenKeuringsinstantie = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

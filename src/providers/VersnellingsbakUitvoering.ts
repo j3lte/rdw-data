@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Versnellingsbak Uitvoering
  */
-export interface ResponseData {
+export interface VersnellingsbakUitvoering_ResponseData {
   /**
    * ### Aantal versnellingen bovengrens
    *
@@ -82,65 +82,70 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Aantal versnellingen bovengrens
-   *
-   * **Type**: Number
-   */
-   AantalVersnellingenBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal versnellingen ondergrens
-   *
-   * **Type**: Number
-   */
-   AantalVersnellingenOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### EEG Uitvoeringscode
-   *
-   * **Type**: Text
-   */
-   EegUitvoeringscode: FieldObject<DataType.Text>;
-  /**
-   * ### EEG variantcode
-   *
-   * **Type**: Text
-   */
-   EegVariantcode: FieldObject<DataType.Text>;
-  /**
-   * ### EU Type goedkeuringssleutel
-   *
-   * **Type**: Text
-   */
-   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
-  /**
-   * ### Type versnellingsbak
-   *
-   * **Type**: Text
-   */
-   TypeVersnellingsbak: FieldObject<DataType.Text>;
-  /**
-   * ### Uitvoering wijzigingsnummer
-   *
-   * **Type**: Number
-   */
-   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-  /**
-   * ### Volgnummer versnellingsbak
-   *
-   * **Type**: Number
-   */
-   Volgnummer: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### Aantal versnellingen bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_versnellingen_bovengrens`
+  */
   AantalVersnellingenBovengrens: Field("aantal_versnellingen_bovengrens", DataType.Number),
+  /**
+  * ### Aantal versnellingen ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_versnellingen_ondergrens`
+  */
   AantalVersnellingenOndergrens: Field("aantal_versnellingen_ondergrens", DataType.Number),
+  /**
+  * ### EEG Uitvoeringscode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_uitvoeringscode`
+  */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
+  /**
+  * ### EEG variantcode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_variantcode`
+  */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
+  /**
+  * ### EU Type goedkeuringssleutel
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eu_type_goedkeuringssleutel`
+  */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
+  /**
+  * ### Type versnellingsbak
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `type_versnellingsbak`
+  */
   TypeVersnellingsbak: Field("type_versnellingsbak", DataType.Text),
+  /**
+  * ### Uitvoering wijzigingsnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `uitvoering_wijzigingsnummer`
+  */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
+  /**
+  * ### Volgnummer versnellingsbak
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `volgnummer`
+  */
   Volgnummer: Field("volgnummer", DataType.Number),
 };
 
@@ -173,9 +178,30 @@ export const Info = {
  * **Dataset ID:** r7cw-67gs
  *
  * **Category:** Typegoedkeuring
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Versnellingsbak Uitvoering dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.AantalVersnellingenBovengrens, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<VersnellingsbakUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const VersnellingsbakUitvoering = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

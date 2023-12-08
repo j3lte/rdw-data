@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: IN-UITGANG
  */
-export interface ResponseData {
+export interface ParkerenInUitgang_ResponseData {
   /**
    * ### Alias
    * 
@@ -118,99 +118,106 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Alias
-   * 
-   * Alias of alternatieve omschrijving van een in- of uitgang van een parkeerfaciliteit.
-   *
-   * **Type**: Text
-   */
-   Alias: FieldObject<DataType.Text>;
-  /**
-   * ### AreaId
-   * 
-   * Identificatiecode van een parkeergebied of - faciliteit.
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDateEntranceOrExit
-   * 
-   * Datum en tijd van het einde van een periode waarin gegevens over een in- of uitgang van een parkeergebied of - faciliteit geldig zijn.
-   *
-   * **Type**: Text
-   */
-   Enddateentranceorexit: FieldObject<DataType.Text>;
-  /**
-   * ### EntranceExitId
-   * 
-   * Identificatiecode die in- en uitgangen van alle parkeergebieden onderscheidt.
-   *
-   * **Type**: Number
-   */
-   Entranceexitid: FieldObject<DataType.Number>;
-  /**
-   * ### PedestrianEntrance
-   * 
-   * Indicator die aangeeft of een in- of uitgang van een parkeerfaciliteit een voetgangersingang is.
-   *
-   * **Type**: Number
-   */
-   Pedestrianentrance: FieldObject<DataType.Number>;
-  /**
-   * ### PedestrianExit
-   * 
-   * Indicator die aangeeft of een in- of uitgang van een parkeerfaciliteit een voetgangersuitgang is.
-   *
-   * **Type**: Number
-   */
-   Pedestrianexit: FieldObject<DataType.Number>;
-  /**
-   * ### StartDateEntranceOrExit
-   * 
-   * Datum en tijd van het begin van een periode waarin gegevens over een in- of uitgang van een parkeergebied of - faciliteit geldig zijn.
-   *
-   * **Type**: Text
-   */
-   Startdateentranceorexit: FieldObject<DataType.Text>;
-  /**
-   * ### VehicleEntrance
-   * 
-   * Indicator die aangeeft of een in- of uitgang van een parkeerfaciliteit een voertuigingang is.
-   *
-   * **Type**: Number
-   */
-   Vehicleentrance: FieldObject<DataType.Number>;
-  /**
-   * ### VehicleExit
-   * 
-   * Indicator die aangeeft of een in- of uitgang van een parkeerfaciliteit een voertuiguitgang is.
-   *
-   * **Type**: Number
-   */
-   Vehicleexit: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### Alias
+  * 
+  * Alias of alternatieve omschrijving van een in- of uitgang van een parkeerfaciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `alias`
+  */
   Alias: Field("alias", DataType.Text),
+  /**
+  * ### AreaId
+  * 
+  * Identificatiecode van een parkeergebied of - faciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDateEntranceOrExit
+  * 
+  * Datum en tijd van het einde van een periode waarin gegevens over een in- of uitgang van een parkeergebied of - faciliteit geldig zijn.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `enddateentranceorexit`
+  */
   Enddateentranceorexit: Field("enddateentranceorexit", DataType.Text),
+  /**
+  * ### EntranceExitId
+  * 
+  * Identificatiecode die in- en uitgangen van alle parkeergebieden onderscheidt.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `entranceexitid`
+  */
   Entranceexitid: Field("entranceexitid", DataType.Number),
+  /**
+  * ### PedestrianEntrance
+  * 
+  * Indicator die aangeeft of een in- of uitgang van een parkeerfaciliteit een voetgangersingang is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `pedestrianentrance`
+  */
   Pedestrianentrance: Field("pedestrianentrance", DataType.Number),
+  /**
+  * ### PedestrianExit
+  * 
+  * Indicator die aangeeft of een in- of uitgang van een parkeerfaciliteit een voetgangersuitgang is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `pedestrianexit`
+  */
   Pedestrianexit: Field("pedestrianexit", DataType.Number),
+  /**
+  * ### StartDateEntranceOrExit
+  * 
+  * Datum en tijd van het begin van een periode waarin gegevens over een in- of uitgang van een parkeergebied of - faciliteit geldig zijn.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `startdateentranceorexit`
+  */
   Startdateentranceorexit: Field("startdateentranceorexit", DataType.Text),
+  /**
+  * ### VehicleEntrance
+  * 
+  * Indicator die aangeeft of een in- of uitgang van een parkeerfaciliteit een voertuigingang is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `vehicleentrance`
+  */
   Vehicleentrance: Field("vehicleentrance", DataType.Number),
+  /**
+  * ### VehicleExit
+  * 
+  * Indicator die aangeeft of een in- of uitgang van een parkeerfaciliteit een voertuiguitgang is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `vehicleexit`
+  */
   Vehicleexit: Field("vehicleexit", DataType.Number),
 };
 
@@ -246,9 +253,30 @@ export const Info = {
  * **Dataset ID:** c653-u9z2
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: IN-UITGANG dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Alias, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenInUitgang_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenInUitgang = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

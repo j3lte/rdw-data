@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: PARKEERADRES
  */
-export interface ResponseData {
+export interface ParkerenParkeeradres_ResponseData {
   /**
    * ### Country
    * 
@@ -136,117 +136,126 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Country
-   * 
-   * Landnaam.
-   *
-   * **Type**: Text
-   */
-   Country: FieldObject<DataType.Text>;
-  /**
-   * ### EmailAddress
-   * 
-   * Emailadres.
-   *
-   * **Type**: Text
-   */
-   Emailaddress: FieldObject<DataType.Text>;
-  /**
-   * ### FaxNumber
-   * 
-   * Faxnummer.
-   *
-   * **Type**: Text
-   */
-   Faxnumber: FieldObject<DataType.Text>;
-  /**
-   * ### HouseNumber
-   * 
-   * Huisnummer.
-   *
-   * **Type**: Text
-   */
-   Housenumber: FieldObject<DataType.Text>;
-  /**
-   * ### ParkingAddressReference
-   * 
-   * Verwijzing naar een gebiedsbeheerder of een in- of uitgang waarbij een adres is geregistreerd. De indicatoren in ParkingAddressReferenceType bepalen welke van de mogelijkheden van toepassing is.
-   *
-   * **Type**: Number
-   */
-   Parkingaddressreference: FieldObject<DataType.Number>;
-  /**
-   * ### ParkingAddressReferenceType
-   * 
-   * Een aanduiding of de PARK-ADRES-REF de sleutel van een gebiedsbeheerder of een in- of uitgang bevat. GEB: gebiedsbeheerder. I-O: in- of uitgang.
-   *
-   * **Type**: Text
-   */
-   Parkingaddressreferencetype: FieldObject<DataType.Text>;
-  /**
-   * ### ParkingAddressType
-   * 
-   * Het soort adres dat een parkeer adres typeert. Mogelijke waarden: A: Administratief adres. F: feitelijk adres. P: postadres.
-   *
-   * **Type**: Text
-   */
-   Parkingaddresstype: FieldObject<DataType.Text>;
-  /**
-   * ### Place
-   * 
-   * Plaatsnaam.
-   *
-   * **Type**: Text
-   */
-   Place: FieldObject<DataType.Text>;
-  /**
-   * ### Province
-   * 
-   * Provincie of vergelijkbare indeling in het buitenland.
-   *
-   * **Type**: Text
-   */
-   Province: FieldObject<DataType.Text>;
-  /**
-   * ### StreetName
-   * 
-   * Straatnaam.
-   *
-   * **Type**: Text
-   */
-   Streetname: FieldObject<DataType.Text>;
-  /**
-   * ### TelephoneNumber
-   * 
-   * Telefoonnummer.
-   *
-   * **Type**: Text
-   */
-   Telephonenumber: FieldObject<DataType.Text>;
-  /**
-   * ### ZipCode
-   * 
-   * Postcode.
-   *
-   * **Type**: Text
-   */
-   Zipcode: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Country
+  * 
+  * Landnaam.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `country`
+  */
   Country: Field("country", DataType.Text),
+  /**
+  * ### EmailAddress
+  * 
+  * Emailadres.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `emailaddress`
+  */
   Emailaddress: Field("emailaddress", DataType.Text),
+  /**
+  * ### FaxNumber
+  * 
+  * Faxnummer.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `faxnumber`
+  */
   Faxnumber: Field("faxnumber", DataType.Text),
+  /**
+  * ### HouseNumber
+  * 
+  * Huisnummer.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `housenumber`
+  */
   Housenumber: Field("housenumber", DataType.Text),
+  /**
+  * ### ParkingAddressReference
+  * 
+  * Verwijzing naar een gebiedsbeheerder of een in- of uitgang waarbij een adres is geregistreerd. De indicatoren in ParkingAddressReferenceType bepalen welke van de mogelijkheden van toepassing is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `parkingaddressreference`
+  */
   Parkingaddressreference: Field("parkingaddressreference", DataType.Number),
+  /**
+  * ### ParkingAddressReferenceType
+  * 
+  * Een aanduiding of de PARK-ADRES-REF de sleutel van een gebiedsbeheerder of een in- of uitgang bevat. GEB: gebiedsbeheerder. I-O: in- of uitgang.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `parkingaddressreferencetype`
+  */
   Parkingaddressreferencetype: Field("parkingaddressreferencetype", DataType.Text),
+  /**
+  * ### ParkingAddressType
+  * 
+  * Het soort adres dat een parkeer adres typeert. Mogelijke waarden: A: Administratief adres. F: feitelijk adres. P: postadres.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `parkingaddresstype`
+  */
   Parkingaddresstype: Field("parkingaddresstype", DataType.Text),
+  /**
+  * ### Place
+  * 
+  * Plaatsnaam.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `place`
+  */
   Place: Field("place", DataType.Text),
+  /**
+  * ### Province
+  * 
+  * Provincie of vergelijkbare indeling in het buitenland.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `province`
+  */
   Province: Field("province", DataType.Text),
+  /**
+  * ### StreetName
+  * 
+  * Straatnaam.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `streetname`
+  */
   Streetname: Field("streetname", DataType.Text),
+  /**
+  * ### TelephoneNumber
+  * 
+  * Telefoonnummer.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `telephonenumber`
+  */
   Telephonenumber: Field("telephonenumber", DataType.Text),
+  /**
+  * ### ZipCode
+  * 
+  * Postcode.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `zipcode`
+  */
   Zipcode: Field("zipcode", DataType.Text),
 };
 
@@ -284,9 +293,30 @@ export const Info = {
  * **Dataset ID:** ygq4-hh5q
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: PARKEERADRES dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Country, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenParkeeradres_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenParkeeradres = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

@@ -13,13 +13,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: VERKOOPPUNT
  */
-export interface ResponseData {
+export interface ParkerenVerkooppunt_ResponseData {
   /**
    * ### AreaId
    * 
@@ -92,72 +92,76 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaId
-   * 
-   * Identificatiecode van een parkeergebied of - faciliteit.
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDateSellingPoint
-   * 
-   * Eerste dag waarop een bepaald verkooppunt niet meer actief is.
-   *
-   * **Type**: Number
-   */
-   Enddatesellingpoint: FieldObject<DataType.Number>;
-  /**
-   * ### SellingPointDesc
-   * 
-   * Omschrijving van een verkooppunt.
-   *
-   * **Type**: Text
-   */
-   Sellingpointdesc: FieldObject<DataType.Text>;
-  /**
-   * ### SellingPointId
-   * 
-   * Identificatie van een verkooppunt, zoals afgesproken tussen providers. De code is numeriek (ivm gegevensinvoer telefoon). De nummers zijn maximaal 6-cijferig (vb 9312, 13199), maar kunnen in de toekomst langer worden. Het behoeven niet altijd parkeerautomaat-identificaties te zijn: ook losse nummers op bebording komen voor. De nummers zijn niet uniek: eenzelfde SellinPointId kan op meer automaten of borden zijn weergegeven, die dan een verkooppuntgroep vormen.
-   *
-   * **Type**: Number
-   */
-   Sellingpointid: FieldObject<DataType.Number>;
-  /**
-   * ### SellingPointNumber
-   * 
-   * Identificatie van een verkooppunt.
-   *
-   * **Type**: Number
-   */
-   Sellingpointnumber: FieldObject<DataType.Number>;
-  /**
-   * ### StartDateSellingPoint
-   * 
-   * Datum vanaf wanneer een bepaald verkooppunt actief is
-   *
-   * **Type**: Number
-   */
-   Startdatesellingpoint: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### AreaId
+  * 
+  * Identificatiecode van een parkeergebied of - faciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDateSellingPoint
+  * 
+  * Eerste dag waarop een bepaald verkooppunt niet meer actief is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `enddatesellingpoint`
+  */
   Enddatesellingpoint: Field("enddatesellingpoint", DataType.Number),
+  /**
+  * ### SellingPointDesc
+  * 
+  * Omschrijving van een verkooppunt.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `sellingpointdesc`
+  */
   Sellingpointdesc: Field("sellingpointdesc", DataType.Text),
+  /**
+  * ### SellingPointId
+  * 
+  * Identificatie van een verkooppunt, zoals afgesproken tussen providers. De code is numeriek (ivm gegevensinvoer telefoon). De nummers zijn maximaal 6-cijferig (vb 9312, 13199), maar kunnen in de toekomst langer worden. Het behoeven niet altijd parkeerautomaat-identificaties te zijn: ook losse nummers op bebording komen voor. De nummers zijn niet uniek: eenzelfde SellinPointId kan op meer automaten of borden zijn weergegeven, die dan een verkooppuntgroep vormen.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `sellingpointid`
+  */
   Sellingpointid: Field("sellingpointid", DataType.Number),
+  /**
+  * ### SellingPointNumber
+  * 
+  * Identificatie van een verkooppunt.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `sellingpointnumber`
+  */
   Sellingpointnumber: Field("sellingpointnumber", DataType.Number),
+  /**
+  * ### StartDateSellingPoint
+  * 
+  * Datum vanaf wanneer een bepaald verkooppunt actief is
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `startdatesellingpoint`
+  */
   Startdatesellingpoint: Field("startdatesellingpoint", DataType.Number),
 };
 
@@ -191,9 +195,30 @@ export const Info = {
  * **Dataset ID:** fk68-nf2y
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: VERKOOPPUNT dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areaid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenVerkooppunt_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenVerkooppunt = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

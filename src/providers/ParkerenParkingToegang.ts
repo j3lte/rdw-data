@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: PARKING TOEGANG
  */
-export interface ResponseData {
+export interface ParkerenParkingToegang_ResponseData {
   /**
    * ### AreaId
    * 
@@ -91,72 +91,76 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaId
-   * 
-   * Identificatiecode van een parkeergebied of - faciliteit.
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### Days
-   * 
-   * Naam van een bepaalde dag voor een gebiedsbeheerder, waarvoor toegangstijden zijn gespecificeerd.
-   *
-   * **Type**: Text
-   */
-   Days: FieldObject<DataType.Text>;
-  /**
-   * ### EndOfPeriod
-   * 
-   * Einddatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
-   *
-   * **Type**: Text
-   */
-   Endofperiod: FieldObject<DataType.Text>;
-  /**
-   * ### EnterFrom
-   * 
-   * Begintijd (uumm) vanaf wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
-   *
-   * **Type**: Number
-   */
-   Enterfrom: FieldObject<DataType.Number>;
-  /**
-   * ### EnterUntil
-   * 
-   * Eindtijd (uumm) tot wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
-   *
-   * **Type**: Number
-   */
-   Enteruntil: FieldObject<DataType.Number>;
-  /**
-   * ### StartOfPeriod
-   * 
-   * Begindatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
-   *
-   * **Type**: Text
-   */
-   Startofperiod: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaId
+  * 
+  * Identificatiecode van een parkeergebied of - faciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### Days
+  * 
+  * Naam van een bepaalde dag voor een gebiedsbeheerder, waarvoor toegangstijden zijn gespecificeerd.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `days`
+  */
   Days: Field("days", DataType.Text),
+  /**
+  * ### EndOfPeriod
+  * 
+  * Einddatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `endofperiod`
+  */
   Endofperiod: Field("endofperiod", DataType.Text),
+  /**
+  * ### EnterFrom
+  * 
+  * Begintijd (uumm) vanaf wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `enterfrom`
+  */
   Enterfrom: Field("enterfrom", DataType.Number),
+  /**
+  * ### EnterUntil
+  * 
+  * Eindtijd (uumm) tot wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `enteruntil`
+  */
   Enteruntil: Field("enteruntil", DataType.Number),
+  /**
+  * ### StartOfPeriod
+  * 
+  * Begindatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `startofperiod`
+  */
   Startofperiod: Field("startofperiod", DataType.Text),
 };
 
@@ -189,9 +193,30 @@ export const Info = {
  * **Dataset ID:** edv8-qiyg
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: PARKING TOEGANG dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areaid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenParkingToegang_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenParkingToegang = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

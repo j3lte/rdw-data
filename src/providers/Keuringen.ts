@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Keuringen
  */
-export interface ResponseData {
+export interface Keuringen_ResponseData {
   /**
    * ### Kenteken
    *
@@ -49,30 +49,30 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Kenteken
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-  /**
-   * ### Vervaldatum keuring
-   *
-   * **Type**: Number
-   */
-   VervaldatumKeuring: FieldObject<DataType.Number>;
-  /**
-   * ### Vervaldatum keuring DT
-   *
-   * **Type**: Calendar date
-   */
-   VervaldatumKeuringDt: FieldObject<DataType.FloatingTimestamp>;
-};
-
-export const Fields: IFields = {
+  * ### Kenteken
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
+  /**
+  * ### Vervaldatum keuring
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `vervaldatum_keuring`
+  */
   VervaldatumKeuring: Field("vervaldatum_keuring", DataType.Number),
+  /**
+  * ### Vervaldatum keuring DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `vervaldatum_keuring_dt`
+  */
   VervaldatumKeuringDt: Field("vervaldatum_keuring_dt", DataType.FloatingTimestamp),
 };
 
@@ -101,9 +101,30 @@ export const Info = {
  * **Dataset ID:** vkij-7mwc
  *
  * **Category:** Keuringen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Keuringen dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Kenteken, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<Keuringen_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const Keuringen = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

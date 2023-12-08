@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: TARIEFBEREKENING
  */
-export interface ResponseData {
+export interface ParkerenTariefberekening_ResponseData {
   /**
    * ### AreaManagerId
    * 
@@ -91,72 +91,76 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDateFare
-   * 
-   * Datum tot wanneer een bepaalde tariefberekening geldig is.
-   *
-   * **Type**: Number
-   */
-   Enddatefare: FieldObject<DataType.Number>;
-  /**
-   * ### FareCalculationCode
-   * 
-   * Code van een bepaalde tariefberekening bij een gebiedsbeheerder.
-   *
-   * **Type**: Text
-   */
-   Farecalculationcode: FieldObject<DataType.Text>;
-  /**
-   * ### FareCalculationDesc
-   * 
-   * De omschrijving van een tariefberekening.
-   *
-   * **Type**: Text
-   */
-   Farecalculationdesc: FieldObject<DataType.Text>;
-  /**
-   * ### PeriodNameTariff
-   * 
-   * De naam van een tariefberekening.
-   *
-   * **Type**: Text
-   */
-   Periodnametariff: FieldObject<DataType.Text>;
-  /**
-   * ### StartDateFare
-   * 
-   * Datum waarop een bepaalde tariefberekening ingaat.
-   *
-   * **Type**: Number
-   */
-   Startdatefare: FieldObject<DataType.Number>;
-  /**
-   * ### VATPercentage
-   * 
-   * Het BTW percentage dat voor een bepaalde tariefberekening van toepassing is. De bedragen worden inclusief BTW vermeld, dus bij een percentage van 21% is de BTW 21/121 van het bedrag.
-   *
-   * **Type**: Number
-   */
-   Vatpercentage: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDateFare
+  * 
+  * Datum tot wanneer een bepaalde tariefberekening geldig is.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `enddatefare`
+  */
   Enddatefare: Field("enddatefare", DataType.Number),
+  /**
+  * ### FareCalculationCode
+  * 
+  * Code van een bepaalde tariefberekening bij een gebiedsbeheerder.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `farecalculationcode`
+  */
   Farecalculationcode: Field("farecalculationcode", DataType.Text),
+  /**
+  * ### FareCalculationDesc
+  * 
+  * De omschrijving van een tariefberekening.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `farecalculationdesc`
+  */
   Farecalculationdesc: Field("farecalculationdesc", DataType.Text),
+  /**
+  * ### PeriodNameTariff
+  * 
+  * De naam van een tariefberekening.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `periodnametariff`
+  */
   Periodnametariff: Field("periodnametariff", DataType.Text),
+  /**
+  * ### StartDateFare
+  * 
+  * Datum waarop een bepaalde tariefberekening ingaat.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `startdatefare`
+  */
   Startdatefare: Field("startdatefare", DataType.Number),
+  /**
+  * ### VATPercentage
+  * 
+  * Het BTW percentage dat voor een bepaalde tariefberekening van toepassing is. De bedragen worden inclusief BTW vermeld, dus bij een percentage van 21% is de BTW 21/121 van het bedrag.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `vatpercentage`
+  */
   Vatpercentage: Field("vatpercentage", DataType.Number),
 };
 
@@ -189,9 +193,30 @@ export const Info = {
  * **Dataset ID:** nfzq-8g7y
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: TARIEFBEREKENING dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areamanagerid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenTariefberekening_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenTariefberekening = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

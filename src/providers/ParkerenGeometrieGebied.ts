@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: GEOMETRIE GEBIED
  */
-export interface ResponseData {
+export interface ParkerenGeometrieGebied_ResponseData {
   /**
    * ### GeoDataAsText
    * 
@@ -73,54 +73,56 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### GeoDataAsText
-   * 
-   * Geometrie van een parkeergebied of -faciliteit, in cordinatenstelsel WGS84 (EPSG: 4326)
-   *
-   * **Type**: Text
-   */
-   Areageometryastext: FieldObject<DataType.Text>;
-  /**
-   * ### AreaId
-   * 
-   * Identificatiecode van een parkeergebied of - faciliteit.
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDateArea
-   * 
-   * Datum waarop een parkeergebied of -faciliteit niet meer geldig is.
-   *
-   * **Type**: Calendar date
-   */
-   Enddatearea: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### StartDateArea
-   * 
-   * Datum vanaf wanneer een parkeergebied of -faciliteit geldig is.
-   *
-   * **Type**: Calendar date
-   */
-   Startdatearea: FieldObject<DataType.FloatingTimestamp>;
-};
-
-export const Fields: IFields = {
+  * ### GeoDataAsText
+  * 
+  * Geometrie van een parkeergebied of -faciliteit, in cordinatenstelsel WGS84 (EPSG: 4326)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areageometryastext`
+  */
   Areageometryastext: Field("areageometryastext", DataType.Text),
+  /**
+  * ### AreaId
+  * 
+  * Identificatiecode van een parkeergebied of - faciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDateArea
+  * 
+  * Datum waarop een parkeergebied of -faciliteit niet meer geldig is.
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `enddatearea`
+  */
   Enddatearea: Field("enddatearea", DataType.FloatingTimestamp),
+  /**
+  * ### StartDateArea
+  * 
+  * Datum vanaf wanneer een parkeergebied of -faciliteit geldig is.
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `startdatearea`
+  */
   Startdatearea: Field("startdatearea", DataType.FloatingTimestamp),
 };
 
@@ -151,9 +153,30 @@ export const Info = {
  * **Dataset ID:** nsk3-v9n7
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: GEOMETRIE GEBIED dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areageometryastext, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenGeometrieGebied_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenGeometrieGebied = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: SPECIALE DAG
  */
-export interface ResponseData {
+export interface ParkerenSpecialeDag_ResponseData {
   /**
    * ### AreaManagerId
    * 
@@ -55,36 +55,36 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### DateSpecialDay
-   * 
-   * Datum van een speciaal etmaal (dag).
-   *
-   * **Type**: Number
-   */
-   Datespecialday: FieldObject<DataType.Number>;
-  /**
-   * ### NameSpecialDay
-   * 
-   * Naam van een speciaal etmaal (dag), bv. Marktdag, Koopzondag, AutoRAI of Sinterklaasintocht die op een bepaalde datum voor een gebiedsbeheerder van toepassing is.
-   *
-   * **Type**: Text
-   */
-   Namespecialday: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### DateSpecialDay
+  * 
+  * Datum van een speciaal etmaal (dag).
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `datespecialday`
+  */
   Datespecialday: Field("datespecialday", DataType.Number),
+  /**
+  * ### NameSpecialDay
+  * 
+  * Naam van een speciaal etmaal (dag), bv. Marktdag, Koopzondag, AutoRAI of Sinterklaasintocht die op een bepaalde datum voor een gebiedsbeheerder van toepassing is.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `namespecialday`
+  */
   Namespecialday: Field("namespecialday", DataType.Text),
 };
 
@@ -113,9 +113,30 @@ export const Info = {
  * **Dataset ID:** hpi4-mynq
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: SPECIALE DAG dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areamanagerid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenSpecialeDag_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenSpecialeDag = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

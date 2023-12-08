@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie
  */
-export interface ResponseData {
+export interface KentekenVoertuigenCarrosserieSpecificatie_ResponseData {
   /**
    * ### Carrosserie voertuig nummer code volgnummer
    *
@@ -66,49 +66,51 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Carrosserie voertuig nummer code volgnummer
-   *
-   * **Type**: Text
-   */
-   CarrosserieVoertuigNummerCodeVolgnummer: FieldObject<DataType.Text>;
-  /**
-   * ### Carrosserie voertuig nummer Europese omschrijving
-   *
-   * **Type**: Text
-   */
-   CarrosserieVoertuigNummerEuropeseOmschrijving: FieldObject<DataType.Text>;
-  /**
-   * ### Carrosserie volgnummer
-   *
-   * **Type**: Text
-   */
-   CarrosserieVolgnummer: FieldObject<DataType.Text>;
-  /**
-   * ### Carrosseriecode
-   * 
-   * Europese codering voor het carrosserietype van een goedgekeurd compleet of voltooid voertuig van de EEG-VRTG-CAT M, N of O.
-   * Zie bijlage II van de richtlijn 2007/46/EG voor codering.
-   *
-   * **Type**: Text
-   */
-   Carrosseriecode: FieldObject<DataType.Text>;
-  /**
-   * ### Kenteken
-   * 
-   * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Carrosserie voertuig nummer code volgnummer
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `carrosserie_voertuig_nummer_code_volgnummer`
+  */
   CarrosserieVoertuigNummerCodeVolgnummer: Field("carrosserie_voertuig_nummer_code_volgnummer", DataType.Text),
+  /**
+  * ### Carrosserie voertuig nummer Europese omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `carrosserie_voertuig_nummer_europese_omschrijving`
+  */
   CarrosserieVoertuigNummerEuropeseOmschrijving: Field("carrosserie_voertuig_nummer_europese_omschrijving", DataType.Text),
+  /**
+  * ### Carrosserie volgnummer
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `carrosserie_volgnummer`
+  */
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Text),
+  /**
+  * ### Carrosseriecode
+  * 
+  * Europese codering voor het carrosserietype van een goedgekeurd compleet of voltooid voertuig van de EEG-VRTG-CAT M, N of O.
+  * Zie bijlage II van de richtlijn 2007/46/EG voor codering.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `carrosseriecode`
+  */
   Carrosseriecode: Field("carrosseriecode", DataType.Text),
+  /**
+  * ### Kenteken
+  * 
+  * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
 };
 
@@ -138,9 +140,30 @@ export const Info = {
  * **Dataset ID:** jhie-znh9
  *
  * **Category:** Voertuigen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.CarrosserieVoertuigNummerCodeVolgnummer, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<KentekenVoertuigenCarrosserieSpecificatie_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const KentekenVoertuigenCarrosserieSpecificatie = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

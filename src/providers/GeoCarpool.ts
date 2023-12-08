@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for GEO Carpool
  */
-export interface ResponseData {
+export interface GeoCarpool_ResponseData {
   /**
    * ### Aantal laad punten
    *
@@ -133,114 +133,126 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Aantal laad punten
-   *
-   * **Type**: Number
-   */
-   AantalLaadPunten: FieldObject<DataType.Number>;
-  /**
-   * ### Aantal parkeer plaatsen
-   *
-   * **Type**: Number
-   */
-   AantalParkeerPlaatsen: FieldObject<DataType.Number>;
-  /**
-   * ### AreaDesc
-   *
-   * **Type**: Text
-   */
-   Areadesc: FieldObject<DataType.Text>;
-  /**
-   * ### AreaId
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDataArea
-   *
-   * **Type**: Number
-   */
-   Enddataarea: FieldObject<DataType.Number>;
-  /**
-   * ### Location
-   *
-   * **Type**: Point
-   */
-   Location: FieldObject<DataType.Point>;
-  /**
-   * ### Location (address)
-   *
-   * **Type**: Text
-   */
-   LocationAddress: FieldObject<DataType.Text>;
-  /**
-   * ### Location (city)
-   *
-   * **Type**: Text
-   */
-   LocationCity: FieldObject<DataType.Text>;
-  /**
-   * ### Location (state)
-   *
-   * **Type**: Text
-   */
-   LocationState: FieldObject<DataType.Text>;
-  /**
-   * ### Location (zip)
-   *
-   * **Type**: Text
-   */
-   LocationZip: FieldObject<DataType.Text>;
-  /**
-   * ### Maximale doorrijhoogte
-   *
-   * **Type**: Text
-   */
-   MaximaleInrijHoogte: FieldObject<DataType.Text>;
-  /**
-   * ### StartDataArea
-   *
-   * **Type**: Number
-   */
-   Startdataarea: FieldObject<DataType.Number>;
-  /**
-   * ### Toegankelijk voor gehandicapten
-   *
-   * **Type**: Number
-   */
-   ToegankelijkVoorGehandicapten: FieldObject<DataType.Number>;
-  /**
-   * ### UsageId
-   *
-   * **Type**: Text
-   */
-   Usageid: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Aantal laad punten
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_laad_punten`
+  */
   AantalLaadPunten: Field("aantal_laad_punten", DataType.Number),
+  /**
+  * ### Aantal parkeer plaatsen
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `aantal_parkeer_plaatsen`
+  */
   AantalParkeerPlaatsen: Field("aantal_parkeer_plaatsen", DataType.Number),
+  /**
+  * ### AreaDesc
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areadesc`
+  */
   Areadesc: Field("areadesc", DataType.Text),
+  /**
+  * ### AreaId
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDataArea
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `enddataarea`
+  */
   Enddataarea: Field("enddataarea", DataType.Number),
+  /**
+  * ### Location
+  *
+  * **Type**: Point
+  *
+  * **Database Column Name**: `location`
+  */
   Location: Field("location", DataType.Point),
+  /**
+  * ### Location (address)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `location_address`
+  */
   LocationAddress: Field("location_address", DataType.Text),
+  /**
+  * ### Location (city)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `location_city`
+  */
   LocationCity: Field("location_city", DataType.Text),
+  /**
+  * ### Location (state)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `location_state`
+  */
   LocationState: Field("location_state", DataType.Text),
+  /**
+  * ### Location (zip)
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `location_zip`
+  */
   LocationZip: Field("location_zip", DataType.Text),
+  /**
+  * ### Maximale doorrijhoogte
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `maximale_inrij_hoogte`
+  */
   MaximaleInrijHoogte: Field("maximale_inrij_hoogte", DataType.Text),
+  /**
+  * ### StartDataArea
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `startdataarea`
+  */
   Startdataarea: Field("startdataarea", DataType.Number),
+  /**
+  * ### Toegankelijk voor gehandicapten
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `toegankelijk_voor_gehandicapten`
+  */
   ToegankelijkVoorGehandicapten: Field("toegankelijk_voor_gehandicapten", DataType.Number),
+  /**
+  * ### UsageId
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `usageid`
+  */
   Usageid: Field("usageid", DataType.Text),
 };
 
@@ -281,9 +293,30 @@ export const Info = {
  * **Dataset ID:** 9c54-cmfx
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the GEO Carpool dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.AantalLaadPunten, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<GeoCarpool_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const GeoCarpool = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

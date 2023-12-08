@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Plaatsaanduiding Uitvoering
  */
-export interface ResponseData {
+export interface PlaatsaanduidingUitvoering_ResponseData {
   /**
    * ### EEG Uitvoeringscode
    *
@@ -82,65 +82,70 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### EEG Uitvoeringscode
-   *
-   * **Type**: Text
-   */
-   EegUitvoeringscode: FieldObject<DataType.Text>;
-  /**
-   * ### EEG variantcode
-   *
-   * **Type**: Text
-   */
-   EegVariantcode: FieldObject<DataType.Text>;
-  /**
-   * ### EU Type goedkeuringssleutel
-   *
-   * **Type**: Text
-   */
-   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
-  /**
-   * ### Plaats aanduiding volgnummer
-   *
-   * **Type**: Number
-   */
-   PlaatsAanduidingVolgnummer: FieldObject<DataType.Number>;
-  /**
-   * ### Plaatsaanduiding registratie datum
-   *
-   * **Type**: Number
-   */
-   PlaatsaanduidingRegistratieDatum: FieldObject<DataType.Number>;
-  /**
-   * ### Plaatsaanduiding registratie datum_DT
-   *
-   * **Type**: Calendar date
-   */
-   PlaatsaanduidingRegistratieDatumDt: FieldObject<DataType.FloatingTimestamp>;
-  /**
-   * ### Plaatscode voeruig identificatie
-   *
-   * **Type**: Text
-   */
-   PlaatscodeVoeruigIdentificatie: FieldObject<DataType.Text>;
-  /**
-   * ### Uitvoering wijzigingsnummer
-   *
-   * **Type**: Number
-   */
-   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### EEG Uitvoeringscode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_uitvoeringscode`
+  */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
+  /**
+  * ### EEG variantcode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_variantcode`
+  */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
+  /**
+  * ### EU Type goedkeuringssleutel
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eu_type_goedkeuringssleutel`
+  */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
+  /**
+  * ### Plaats aanduiding volgnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `plaats_aanduiding_volgnummer`
+  */
   PlaatsAanduidingVolgnummer: Field("plaats_aanduiding_volgnummer", DataType.Number),
+  /**
+  * ### Plaatsaanduiding registratie datum
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `plaatsaanduiding_registratie_datum`
+  */
   PlaatsaanduidingRegistratieDatum: Field("plaatsaanduiding_registratie_datum", DataType.Number),
+  /**
+  * ### Plaatsaanduiding registratie datum_DT
+  *
+  * **Type**: Calendar date
+  *
+  * **Database Column Name**: `plaatsaanduiding_registratie_datum_dt`
+  */
   PlaatsaanduidingRegistratieDatumDt: Field("plaatsaanduiding_registratie_datum_dt", DataType.FloatingTimestamp),
+  /**
+  * ### Plaatscode voeruig identificatie
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `plaatscode_voeruig_identificatie`
+  */
   PlaatscodeVoeruigIdentificatie: Field("plaatscode_voeruig_identificatie", DataType.Text),
+  /**
+  * ### Uitvoering wijzigingsnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `uitvoering_wijzigingsnummer`
+  */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
 
@@ -173,9 +178,30 @@ export const Info = {
  * **Dataset ID:** mt8t-4ep4
  *
  * **Category:** Typegoedkeuring
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Plaatsaanduiding Uitvoering dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.EegUitvoeringscode, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<PlaatsaanduidingUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const PlaatsaanduidingUitvoering = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

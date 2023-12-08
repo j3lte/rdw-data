@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: GEBIED
  */
-export interface ResponseData {
+export interface ParkerenGebied_ResponseData {
   /**
    * ### AreaDesc
    * 
@@ -82,63 +82,66 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaDesc
-   * 
-   * Een omschrijving die aan een parkeergebied of -faciliteit is gegeven.
-   *
-   * **Type**: Text
-   */
-   Areadesc: FieldObject<DataType.Text>;
-  /**
-   * ### AreaId
-   * 
-   * Identificatiecode van een parkeergebied of - faciliteit.
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDateArea
-   * 
-   * Datum waarop een parkeergebied of -faciliteit niet meer geldig is
-   *
-   * **Type**: Number
-   */
-   Enddatearea: FieldObject<DataType.Number>;
-  /**
-   * ### StartDateArea
-   * 
-   * Datum vanaf wanneer een parkeergebied of -faciliteit geldig
-   *
-   * **Type**: Number
-   */
-   Startdatearea: FieldObject<DataType.Number>;
-  /**
-   * ### UsageId
-   * 
-   * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hirarchie.
-   *
-   * **Type**: Text
-   */
-   Usageid: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaDesc
+  * 
+  * Een omschrijving die aan een parkeergebied of -faciliteit is gegeven.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areadesc`
+  */
   Areadesc: Field("areadesc", DataType.Text),
+  /**
+  * ### AreaId
+  * 
+  * Identificatiecode van een parkeergebied of - faciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDateArea
+  * 
+  * Datum waarop een parkeergebied of -faciliteit niet meer geldig is
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `enddatearea`
+  */
   Enddatearea: Field("enddatearea", DataType.Number),
+  /**
+  * ### StartDateArea
+  * 
+  * Datum vanaf wanneer een parkeergebied of -faciliteit geldig
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `startdatearea`
+  */
   Startdatearea: Field("startdatearea", DataType.Number),
+  /**
+  * ### UsageId
+  * 
+  * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hirarchie.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `usageid`
+  */
   Usageid: Field("usageid", DataType.Text),
 };
 
@@ -170,9 +173,30 @@ export const Info = {
  * **Dataset ID:** adw6-9hsg
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: GEBIED dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areadesc, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenGebied_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenGebied = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

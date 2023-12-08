@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_carrosserie
  */
-export interface ResponseData {
+export interface KentekenVoertuigenCarrosserie_ResponseData {
   /**
    * ### Carrosserie volgnummer
    *
@@ -54,37 +54,38 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Carrosserie volgnummer
-   *
-   * **Type**: Text
-   */
-   CarrosserieVolgnummer: FieldObject<DataType.Text>;
-  /**
-   * ### Carrosserietype
-   *
-   * **Type**: Text
-   */
-   Carrosserietype: FieldObject<DataType.Text>;
-  /**
-   * ### Kenteken
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-  /**
-   * ### Type Carrosserie Europese omschrijving
-   *
-   * **Type**: Text
-   */
-   TypeCarrosserieEuropeseOmschrijving: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Carrosserie volgnummer
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `carrosserie_volgnummer`
+  */
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Text),
+  /**
+  * ### Carrosserietype
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `carrosserietype`
+  */
   Carrosserietype: Field("carrosserietype", DataType.Text),
+  /**
+  * ### Kenteken
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
+  /**
+  * ### Type Carrosserie Europese omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `type_carrosserie_europese_omschrijving`
+  */
   TypeCarrosserieEuropeseOmschrijving: Field("type_carrosserie_europese_omschrijving", DataType.Text),
 };
 
@@ -113,9 +114,30 @@ export const Info = {
  * **Dataset ID:** vezc-m2t6
  *
  * **Category:** Voertuigen
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Gekentekende_voertuigen_carrosserie dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.CarrosserieVolgnummer, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<KentekenVoertuigenCarrosserie_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const KentekenVoertuigenCarrosserie = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

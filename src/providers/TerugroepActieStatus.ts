@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Terugroep_actie_status
  */
-export interface ResponseData {
+export interface TerugroepActieStatus_ResponseData {
   /**
    * ### Code Status
    * 
@@ -67,50 +67,51 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Code Status
-   * 
-   * De code van de status van het voertuig:
-   * O= Openstaande terugroepactie
-   * P= Producent heeft herstel gemeld
-   *
-   * **Type**: Text
-   */
-   CodeStatus: FieldObject<DataType.Text>;
-  /**
-   * ### Kenteken
-   * 
-   * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Het wordt met 6 karakters zonder tussenliggende streepjes weergegeven.
-   *
-   * **Type**: Text
-   */
-   Kenteken: FieldObject<DataType.Text>;
-  /**
-   * ### Referentiecode RDW
-   * 
-   * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
-   *
-   * **Type**: Text
-   */
-   ReferentiecodeRdw: FieldObject<DataType.Text>;
-  /**
-   * ### Status
-   * 
-   * De door de producent/distributeur doorgegeven status van het voertuig:
-   * Openstaande terugroepactie= De producent/distributeur heeft de RDW genformeerd, dat het voertuig moet worden hersteld. (=0)
-   * Producent heeft herstel gemeld= De producent/distributeur heeft de RDW genformeerd, dat het voertuig is hersteld. (=1)
-   * Opmerking: er kunnen meer terugroepacties op een voertuig van toepassing zijn.
-   *
-   * **Type**: Text
-   */
-   Status: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Code Status
+  * 
+  * De code van de status van het voertuig:
+  * O= Openstaande terugroepactie
+  * P= Producent heeft herstel gemeld
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `code_status`
+  */
   CodeStatus: Field("code_status", DataType.Text),
+  /**
+  * ### Kenteken
+  * 
+  * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Het wordt met 6 karakters zonder tussenliggende streepjes weergegeven.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `kenteken`
+  */
   Kenteken: Field("kenteken", DataType.Text),
+  /**
+  * ### Referentiecode RDW
+  * 
+  * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `referentiecode_rdw`
+  */
   ReferentiecodeRdw: Field("referentiecode_rdw", DataType.Text),
+  /**
+  * ### Status
+  * 
+  * De door de producent/distributeur doorgegeven status van het voertuig:
+  * Openstaande terugroepactie= De producent/distributeur heeft de RDW genformeerd, dat het voertuig moet worden hersteld. (=0)
+  * Producent heeft herstel gemeld= De producent/distributeur heeft de RDW genformeerd, dat het voertuig is hersteld. (=1)
+  * Opmerking: er kunnen meer terugroepacties op een voertuig van toepassing zijn.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `status`
+  */
   Status: Field("status", DataType.Text),
 };
 
@@ -139,9 +140,30 @@ export const Info = {
  * **Dataset ID:** t49b-isb7
  *
  * **Category:** Terugroepacties
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Terugroep_actie_status dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.CodeStatus, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<TerugroepActieStatus_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const TerugroepActieStatus = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

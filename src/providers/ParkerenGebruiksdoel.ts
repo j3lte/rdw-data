@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: GEBRUIKSDOEL
  */
-export interface ResponseData {
+export interface ParkerenGebruiksdoel_ResponseData {
   /**
    * ### AreaManagerId
    * 
@@ -100,81 +100,86 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndDateUsageId
-   * 
-   * Eerste dag waarop een gebruiksdoel niet meer gehanteerd wordt
-   *
-   * **Type**: Number
-   */
-   Enddateusageid: FieldObject<DataType.Number>;
-  /**
-   * ### SpecificationIndicator
-   * 
-   * Indicator die aangeeft of het gebruiksdoel al dan niet verbijzonderd mag worden. De gebruiksdoelen die landelijk gebruikt worden (door alle rechtverwervers in alle aangesloten gemeenten) mogen niet verder verbijzonderd  worden, gebruiksdoelen die binnen n gebiedsbeheerder gebruikt worden wel. De codering is: J: dit gebruiksdoel mag verbijzonderd worden N: dit gebruiksdoel mag NIET verbijzonderd worden.
-   *
-   * **Type**: Text
-   */
-   Specificationindicator: FieldObject<DataType.Text>;
-  /**
-   * ### StartDateUsageId
-   * 
-   * Datum vanaf wanneer een gebruiksdoel gehanteerd wordt
-   *
-   * **Type**: Number
-   */
-   Startdateusageid: FieldObject<DataType.Number>;
-  /**
-   * ### SuperiorAreaManagerId
-   * 
-   * De identificatie van de gebiedsbeheerder van het gebruiksdoel dat als bovenliggend in de hirarchie is geregistreerd. Standaard is dit dezelfde code als van het gebruiksdoel zelf, maar er kan eventueel verwezen worden naar algemene gebruiksdoelen.
-   *
-   * **Type**: Number
-   */
-   Superiorareamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### SuperiorUsageId
-   * 
-   * Code van het gebruiksdoel dat bovenliggend is in de hirarchie. Voor een juiste interpretatie moet ook de SuperiorAreaManagerId meegenomen worden.
-   *
-   * **Type**: Text
-   */
-   Superiorusageid: FieldObject<DataType.Text>;
-  /**
-   * ### UsageId
-   * 
-   * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
-   *
-   * **Type**: Text
-   */
-   Usageid: FieldObject<DataType.Text>;
-  /**
-   * ### UsageIdDesc
-   * 
-   * Omschrijving van een gebruiksdoel
-   *
-   * **Type**: Text
-   */
-   Usageiddesc: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndDateUsageId
+  * 
+  * Eerste dag waarop een gebruiksdoel niet meer gehanteerd wordt
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `enddateusageid`
+  */
   Enddateusageid: Field("enddateusageid", DataType.Number),
+  /**
+  * ### SpecificationIndicator
+  * 
+  * Indicator die aangeeft of het gebruiksdoel al dan niet verbijzonderd mag worden. De gebruiksdoelen die landelijk gebruikt worden (door alle rechtverwervers in alle aangesloten gemeenten) mogen niet verder verbijzonderd  worden, gebruiksdoelen die binnen n gebiedsbeheerder gebruikt worden wel. De codering is: J: dit gebruiksdoel mag verbijzonderd worden N: dit gebruiksdoel mag NIET verbijzonderd worden.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `specificationindicator`
+  */
   Specificationindicator: Field("specificationindicator", DataType.Text),
+  /**
+  * ### StartDateUsageId
+  * 
+  * Datum vanaf wanneer een gebruiksdoel gehanteerd wordt
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `startdateusageid`
+  */
   Startdateusageid: Field("startdateusageid", DataType.Number),
+  /**
+  * ### SuperiorAreaManagerId
+  * 
+  * De identificatie van de gebiedsbeheerder van het gebruiksdoel dat als bovenliggend in de hirarchie is geregistreerd. Standaard is dit dezelfde code als van het gebruiksdoel zelf, maar er kan eventueel verwezen worden naar algemene gebruiksdoelen.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `superiorareamanagerid`
+  */
   Superiorareamanagerid: Field("superiorareamanagerid", DataType.Number),
+  /**
+  * ### SuperiorUsageId
+  * 
+  * Code van het gebruiksdoel dat bovenliggend is in de hirarchie. Voor een juiste interpretatie moet ook de SuperiorAreaManagerId meegenomen worden.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `superiorusageid`
+  */
   Superiorusageid: Field("superiorusageid", DataType.Text),
+  /**
+  * ### UsageId
+  * 
+  * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `usageid`
+  */
   Usageid: Field("usageid", DataType.Text),
+  /**
+  * ### UsageIdDesc
+  * 
+  * Omschrijving van een gebruiksdoel
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `usageiddesc`
+  */
   Usageiddesc: Field("usageiddesc", DataType.Text),
 };
 
@@ -208,9 +213,30 @@ export const Info = {
  * **Dataset ID:** qidm-7mkf
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: GEBRUIKSDOEL dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areamanagerid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenGebruiksdoel_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenGebruiksdoel = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

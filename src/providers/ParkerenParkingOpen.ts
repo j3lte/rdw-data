@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: PARKING OPEN
  */
-export interface ResponseData {
+export interface ParkerenParkingOpen_ResponseData {
   /**
    * ### AreaId
    * 
@@ -91,72 +91,76 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaId
-   * 
-   * Identificatiecode van een parkeergebied of - faciliteit.
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Number
-   */
-   Areamanagerid: FieldObject<DataType.Number>;
-  /**
-   * ### EndOfPeriod
-   * 
-   * Einddatum en -tijd van een periode waarin een bepaalde parkeerfaciliteit is opengesteld.
-   *
-   * **Type**: Text
-   */
-   Endofperiod: FieldObject<DataType.Text>;
-  /**
-   * ### ExitPossibleAllDay
-   * 
-   * Indicator die aangeeft of uitrijden de hele dag mogelijk is bij een parkeergebied, -garage of -terrein.
-   *
-   * **Type**: Number
-   */
-   Exitpossibleallday: FieldObject<DataType.Number>;
-  /**
-   * ### OpenAllYear
-   * 
-   * Indicator die aangeeft of een parkeerfaciliteit het hele jaar open is of niet.
-   *
-   * **Type**: Number
-   */
-   Openallyear: FieldObject<DataType.Number>;
-  /**
-   * ### PeriodName
-   * 
-   * Naam die een bepaalde openstellingsperiode van een parkeergebied, -garage of -terrein aanduidt.
-   *
-   * **Type**: Text
-   */
-   Periodname: FieldObject<DataType.Text>;
-  /**
-   * ### StartOfPeriod
-   * 
-   * Begindatum en -tijd van een periode waarin een bepaald parkeerfaciliteit is opengesteld.
-   *
-   * **Type**: Text
-   */
-   Startofperiod: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaId
+  * 
+  * Identificatiecode van een parkeergebied of - faciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Number),
+  /**
+  * ### EndOfPeriod
+  * 
+  * Einddatum en -tijd van een periode waarin een bepaalde parkeerfaciliteit is opengesteld.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `endofperiod`
+  */
   Endofperiod: Field("endofperiod", DataType.Text),
+  /**
+  * ### ExitPossibleAllDay
+  * 
+  * Indicator die aangeeft of uitrijden de hele dag mogelijk is bij een parkeergebied, -garage of -terrein.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `exitpossibleallday`
+  */
   Exitpossibleallday: Field("exitpossibleallday", DataType.Number),
+  /**
+  * ### OpenAllYear
+  * 
+  * Indicator die aangeeft of een parkeerfaciliteit het hele jaar open is of niet.
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `openallyear`
+  */
   Openallyear: Field("openallyear", DataType.Number),
+  /**
+  * ### PeriodName
+  * 
+  * Naam die een bepaalde openstellingsperiode van een parkeergebied, -garage of -terrein aanduidt.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `periodname`
+  */
   Periodname: Field("periodname", DataType.Text),
+  /**
+  * ### StartOfPeriod
+  * 
+  * Begindatum en -tijd van een periode waarin een bepaald parkeerfaciliteit is opengesteld.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `startofperiod`
+  */
   Startofperiod: Field("startofperiod", DataType.Text),
 };
 
@@ -189,9 +193,30 @@ export const Info = {
  * **Dataset ID:** figd-gux7
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: PARKING OPEN dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areaid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenParkingOpen_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenParkingOpen = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

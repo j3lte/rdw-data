@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Producten Catalogus
  */
-export interface ResponseData {
+export interface ProductenCatalogus_ResponseData {
   /**
    * ### Eenheid
    *
@@ -63,44 +63,46 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Eenheid
-   *
-   * **Type**: Text
-   */
-   Eenheid: FieldObject<DataType.Text>;
-  /**
-   * ### Omschrijving
-   *
-   * **Type**: Text
-   */
-   Omschrijving: FieldObject<DataType.Text>;
-  /**
-   * ### Staatscourant indeling
-   *
-   * **Type**: Text
-   */
-   StaatscourantIndeling: FieldObject<DataType.Text>;
-  /**
-   * ### Tarief
-   *
-   * **Type**: Text
-   */
-   Tarief: FieldObject<DataType.Text>;
-  /**
-   * ### Tariefclustering
-   *
-   * **Type**: Text
-   */
-   Tariefclustering: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### Eenheid
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eenheid`
+  */
   Eenheid: Field("eenheid", DataType.Text),
+  /**
+  * ### Omschrijving
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `omschrijving`
+  */
   Omschrijving: Field("omschrijving", DataType.Text),
+  /**
+  * ### Staatscourant indeling
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `staatscourant_indeling`
+  */
   StaatscourantIndeling: Field("staatscourant_indeling", DataType.Text),
+  /**
+  * ### Tarief
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `tarief`
+  */
   Tarief: Field("tarief", DataType.Text),
+  /**
+  * ### Tariefclustering
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `tariefclustering`
+  */
   Tariefclustering: Field("tariefclustering", DataType.Text),
 };
 
@@ -131,9 +133,30 @@ export const Info = {
  * **Dataset ID:** v23s-d6km
  *
  * **Category:** Product catalogus
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Producten Catalogus dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Eenheid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ProductenCatalogus_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ProductenCatalogus = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

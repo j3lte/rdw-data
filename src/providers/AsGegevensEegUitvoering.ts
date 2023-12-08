@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: AS Gegevens EEG Uitvoering
  */
-export interface ResponseData {
+export interface AsGegevensEegUitvoering_ResponseData {
   /**
    * ### Aangedreven as
    *
@@ -187,170 +187,190 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Aangedreven as
-   *
-   * **Type**: Text
-   */
-   AangedrevenAs: FieldObject<DataType.Text>;
-  /**
-   * ### Afstand volgende as bovengrens
-   *
-   * **Type**: Number
-   */
-   AfstandVolgendeAsBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Afstand volgende as ondergrens
-   *
-   * **Type**: Number
-   */
-   AfstandVolgendeAsOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Asnummer
-   *
-   * **Type**: Text
-   */
-   Asnummer: FieldObject<DataType.Text>;
-  /**
-   * ### Dubbele montage
-   *
-   * **Type**: Text
-   */
-   DubbeleMontage: FieldObject<DataType.Text>;
-  /**
-   * ### EEG Uitvoeringscode
-   *
-   * **Type**: Text
-   */
-   EegUitvoeringscode: FieldObject<DataType.Text>;
-  /**
-   * ### EEG variantcode
-   *
-   * **Type**: Text
-   */
-   EegVariantcode: FieldObject<DataType.Text>;
-  /**
-   * ### EU Type goedkeuringssleutel
-   *
-   * **Type**: Text
-   */
-   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
-  /**
-   * ### Gelijkwaardig aan luchtvering
-   *
-   * **Type**: Text
-   */
-   GelijkwaardigAanLuchtvering: FieldObject<DataType.Text>;
-  /**
-   * ### Gestuurde as indicator
-   *
-   * **Type**: Text
-   */
-   GestuurdeAsIndicator: FieldObject<DataType.Text>;
-  /**
-   * ### Hefas
-   *
-   * **Type**: Text
-   */
-   Hefas: FieldObject<DataType.Text>;
-  /**
-   * ### Luchtvering
-   *
-   * **Type**: Text
-   */
-   Luchtvering: FieldObject<DataType.Text>;
-  /**
-   * ### Plaats as code
-   *
-   * **Type**: Text
-   */
-   PlaatsAsCode: FieldObject<DataType.Text>;
-  /**
-   * ### Rolstraal bovengrens
-   *
-   * **Type**: Number
-   */
-   RolstraalBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Rolstraal ondergrens
-   *
-   * **Type**: Number
-   */
-   RolstraalOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Snelheidssymbool ondergrens
-   *
-   * **Type**: Text
-   */
-   SnelheidssymboolOndergrens: FieldObject<DataType.Text>;
-  /**
-   * ### Spoorbreedte bovengrens
-   *
-   * **Type**: Number
-   */
-   SpoorbreedteBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Spoorbreedte ondergrens
-   *
-   * **Type**: Number
-   */
-   SpoorbreedteOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max last as bovengrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxLastAsBovengrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max last as ondergrens
-   *
-   * **Type**: Number
-   */
-   TechnMaxLastAsOndergrens: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max last asstel bovengr
-   *
-   * **Type**: Number
-   */
-   TechnMaxLastAsstelBovengr: FieldObject<DataType.Number>;
-  /**
-   * ### Techn max last asstel ondergr
-   *
-   * **Type**: Number
-   */
-   TechnMaxLastAsstelOndergr: FieldObject<DataType.Number>;
-  /**
-   * ### Uitvoering wijzigingsnummer
-   *
-   * **Type**: Number
-   */
-   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### Aangedreven as
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `aangedreven_as`
+  */
   AangedrevenAs: Field("aangedreven_as", DataType.Text),
+  /**
+  * ### Afstand volgende as bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `afstand_volgende_as_bovengrens`
+  */
   AfstandVolgendeAsBovengrens: Field("afstand_volgende_as_bovengrens", DataType.Number),
+  /**
+  * ### Afstand volgende as ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `afstand_volgende_as_ondergrens`
+  */
   AfstandVolgendeAsOndergrens: Field("afstand_volgende_as_ondergrens", DataType.Number),
+  /**
+  * ### Asnummer
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `asnummer`
+  */
   Asnummer: Field("asnummer", DataType.Text),
+  /**
+  * ### Dubbele montage
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `dubbele_montage`
+  */
   DubbeleMontage: Field("dubbele_montage", DataType.Text),
+  /**
+  * ### EEG Uitvoeringscode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_uitvoeringscode`
+  */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
+  /**
+  * ### EEG variantcode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_variantcode`
+  */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
+  /**
+  * ### EU Type goedkeuringssleutel
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eu_type_goedkeuringssleutel`
+  */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
+  /**
+  * ### Gelijkwaardig aan luchtvering
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `gelijkwaardig_aan_luchtvering`
+  */
   GelijkwaardigAanLuchtvering: Field("gelijkwaardig_aan_luchtvering", DataType.Text),
+  /**
+  * ### Gestuurde as indicator
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `gestuurde_as_indicator`
+  */
   GestuurdeAsIndicator: Field("gestuurde_as_indicator", DataType.Text),
+  /**
+  * ### Hefas
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `hefas`
+  */
   Hefas: Field("hefas", DataType.Text),
+  /**
+  * ### Luchtvering
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `luchtvering`
+  */
   Luchtvering: Field("luchtvering", DataType.Text),
+  /**
+  * ### Plaats as code
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `plaats_as_code`
+  */
   PlaatsAsCode: Field("plaats_as_code", DataType.Text),
+  /**
+  * ### Rolstraal bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `rolstraal_bovengrens`
+  */
   RolstraalBovengrens: Field("rolstraal_bovengrens", DataType.Number),
+  /**
+  * ### Rolstraal ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `rolstraal_ondergrens`
+  */
   RolstraalOndergrens: Field("rolstraal_ondergrens", DataType.Number),
+  /**
+  * ### Snelheidssymbool ondergrens
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `snelheidssymbool_ondergrens`
+  */
   SnelheidssymboolOndergrens: Field("snelheidssymbool_ondergrens", DataType.Text),
+  /**
+  * ### Spoorbreedte bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `spoorbreedte_bovengrens`
+  */
   SpoorbreedteBovengrens: Field("spoorbreedte_bovengrens", DataType.Number),
+  /**
+  * ### Spoorbreedte ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `spoorbreedte_ondergrens`
+  */
   SpoorbreedteOndergrens: Field("spoorbreedte_ondergrens", DataType.Number),
+  /**
+  * ### Techn max last as bovengrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_last_as_bovengrens`
+  */
   TechnMaxLastAsBovengrens: Field("techn_max_last_as_bovengrens", DataType.Number),
+  /**
+  * ### Techn max last as ondergrens
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_last_as_ondergrens`
+  */
   TechnMaxLastAsOndergrens: Field("techn_max_last_as_ondergrens", DataType.Number),
+  /**
+  * ### Techn max last asstel bovengr
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_last_asstel_bovengr`
+  */
   TechnMaxLastAsstelBovengr: Field("techn_max_last_asstel_bovengr", DataType.Number),
+  /**
+  * ### Techn max last asstel ondergr
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `techn_max_last_asstel_ondergr`
+  */
   TechnMaxLastAsstelOndergr: Field("techn_max_last_asstel_ondergr", DataType.Number),
+  /**
+  * ### Uitvoering wijzigingsnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `uitvoering_wijzigingsnummer`
+  */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
 
@@ -398,9 +418,30 @@ export const Info = {
  * **Dataset ID:** ahsi-8uyu
  *
  * **Category:** Typegoedkeuring
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: AS Gegevens EEG Uitvoering dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.AangedrevenAs, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<AsGegevensEegUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const AsGegevensEegUitvoering = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

@@ -10,13 +10,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data RDW: Carrosserie Uitvoering Nummerieke Code
  */
-export interface ResponseData {
+export interface CarrosserieUitvoeringNummeriekeCode_ResponseData {
   /**
    * ### Carrosserie uitvoering numeriek Europees
    *
@@ -75,58 +75,62 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### Carrosserie uitvoering numeriek Europees
-   *
-   * **Type**: Text
-   */
-   CarrosserieUitvoeringNumeriekEuropees: FieldObject<DataType.Text>;
-  /**
-   * ### Carrosserie uitvoering numeriek volgnummer
-   *
-   * **Type**: Number
-   */
-   CarrosserieUitvoeringNumeriekVolgnummer: FieldObject<DataType.Number>;
-  /**
-   * ### Carrosserie volgnummer
-   *
-   * **Type**: Number
-   */
-   CarrosserieVolgnummer: FieldObject<DataType.Number>;
-  /**
-   * ### EEG Uitvoeringscode
-   *
-   * **Type**: Text
-   */
-   EegUitvoeringscode: FieldObject<DataType.Text>;
-  /**
-   * ### EEG variantcode
-   *
-   * **Type**: Text
-   */
-   EegVariantcode: FieldObject<DataType.Text>;
-  /**
-   * ### EU Type goedkeuringssleutel
-   *
-   * **Type**: Text
-   */
-   EuTypeGoedkeuringssleutel: FieldObject<DataType.Text>;
-  /**
-   * ### Uitvoering wijzigingsnummer
-   *
-   * **Type**: Number
-   */
-   UitvoeringWijzigingsnummer: FieldObject<DataType.Number>;
-};
-
-export const Fields: IFields = {
+  * ### Carrosserie uitvoering numeriek Europees
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `carrosserie_uitvoering_numeriek_europees`
+  */
   CarrosserieUitvoeringNumeriekEuropees: Field("carrosserie_uitvoering_numeriek_europees", DataType.Text),
+  /**
+  * ### Carrosserie uitvoering numeriek volgnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `carrosserie_uitvoering_numeriek_volgnummer`
+  */
   CarrosserieUitvoeringNumeriekVolgnummer: Field("carrosserie_uitvoering_numeriek_volgnummer", DataType.Number),
+  /**
+  * ### Carrosserie volgnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `carrosserie_volgnummer`
+  */
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Number),
+  /**
+  * ### EEG Uitvoeringscode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_uitvoeringscode`
+  */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
+  /**
+  * ### EEG variantcode
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eeg_variantcode`
+  */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
+  /**
+  * ### EU Type goedkeuringssleutel
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `eu_type_goedkeuringssleutel`
+  */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
+  /**
+  * ### Uitvoering wijzigingsnummer
+  *
+  * **Type**: Number
+  *
+  * **Database Column Name**: `uitvoering_wijzigingsnummer`
+  */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
 
@@ -158,9 +162,30 @@ export const Info = {
  * **Dataset ID:** nypm-t8hx
  *
  * **Category:** Typegoedkeuring
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data RDW: Carrosserie Uitvoering Nummerieke Code dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.CarrosserieUitvoeringNumeriekEuropees, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<CarrosserieUitvoeringNummeriekeCode_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const CarrosserieUitvoeringNummeriekeCode = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};

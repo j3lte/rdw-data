@@ -12,13 +12,13 @@
 //
 // *******************************************************
 
-import type { AuthOpts, FieldObject, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
  * Return Data for Open Data Parkeren: PARKEERGEBIED CONTACTPERSOON
  */
-export interface ResponseData {
+export interface ParkerenParkeergebiedContactpersoon_ResponseData {
   /**
    * ### AreaId
    * 
@@ -75,56 +75,58 @@ export interface ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export interface IFields {
+export const Fields = {
   /**
-   * ### AreaId
-   * 
-   * Identificatiecode van een parkeergebied of - faciliteit.
-   *
-   * **Type**: Text
-   */
-   Areaid: FieldObject<DataType.Text>;
-  /**
-   * ### AreaManagerId
-   * 
-   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-   *
-   * **Type**: Text
-   */
-   Areamanagerid: FieldObject<DataType.Text>;
-  /**
-   * ### ContactPersonId
-   * 
-   * Identificatiecode van de contactpersoon.
-   *
-   * **Type**: Text
-   */
-   Contactpersonid: FieldObject<DataType.Text>;
-  /**
-   * ### ValidityEndOfPeriod
-   * 
-   * Datum en tijd van het einde van een periode waarin gegevens van
-   * een contactpersoon geldig zijn.
-   *
-   * **Type**: Text
-   */
-   Validityendofperiod: FieldObject<DataType.Text>;
-  /**
-   * ### ValidityStartOfPeriod
-   * 
-   * Datum en tijd van het begin van een periode waarin gegevens van
-   * een contactpersoon geldig zijn.
-   *
-   * **Type**: Text
-   */
-   Validitystartofperiod: FieldObject<DataType.Text>;
-};
-
-export const Fields: IFields = {
+  * ### AreaId
+  * 
+  * Identificatiecode van een parkeergebied of - faciliteit.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areaid`
+  */
   Areaid: Field("areaid", DataType.Text),
+  /**
+  * ### AreaManagerId
+  * 
+  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `areamanagerid`
+  */
   Areamanagerid: Field("areamanagerid", DataType.Text),
+  /**
+  * ### ContactPersonId
+  * 
+  * Identificatiecode van de contactpersoon.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `contactpersonid`
+  */
   Contactpersonid: Field("contactpersonid", DataType.Text),
+  /**
+  * ### ValidityEndOfPeriod
+  * 
+  * Datum en tijd van het einde van een periode waarin gegevens van
+  * een contactpersoon geldig zijn.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `validityendofperiod`
+  */
   Validityendofperiod: Field("validityendofperiod", DataType.Text),
+  /**
+  * ### ValidityStartOfPeriod
+  * 
+  * Datum en tijd van het begin van een periode waarin gegevens van
+  * een contactpersoon geldig zijn.
+  *
+  * **Type**: Text
+  *
+  * **Database Column Name**: `validitystartofperiod`
+  */
   Validitystartofperiod: Field("validitystartofperiod", DataType.Text),
 };
 
@@ -155,9 +157,30 @@ export const Info = {
  * **Dataset ID:** 69hx-t283
  *
  * **Category:** Parkeren
+ *
+ * -----------------------
+ * This generates a SodaQuery for the Open Data Parkeren: PARKEERGEBIED CONTACTPERSOON dataset.
+ *
+ * @param auth - Authentification options
+ * @param opts - Query options
+ *
+ * @example
+ * ```ts
+ * const data = await RDWQuery()
+ *   .where(Where.like(Fields.Areaid, "some_value")
+ *   .limit(10)
+ *   .offset(0);
+ *   .execute();
+ * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ResponseData>(Info.domain, Info.dataset, auth, {
+  createQueryWithDataset<ParkerenParkeergebiedContactpersoon_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
+
+export const ParkerenParkeergebiedContactpersoon = {
+  RDWQuery,
+  Fields: Fields,
+  Info: Info,
+};
