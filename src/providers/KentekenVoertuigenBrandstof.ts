@@ -10,7 +10,7 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
 
 /**
@@ -781,6 +781,10 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
   });
 
 export const KentekenVoertuigenBrandstof = {
+  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<KentekenVoertuigenBrandstof_ResponseData>;
+  Fields: typeof Fields;
+  Info: typeof Info;
+} = {
   RDWQuery,
   Fields: Fields,
   Info: Info,

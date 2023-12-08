@@ -15,7 +15,7 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options } from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
+import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
 import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
 
 /**
@@ -103,6 +103,10 @@ export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
   });
 
 export const <%= it.item.name %> = {
+  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<<%= it.item.name %>_ResponseData>;
+  Fields: typeof Fields;
+  Info: typeof Info;
+} = {
   RDWQuery,
   Fields: Fields,
   Info: Info,
