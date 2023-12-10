@@ -63,44 +63,44 @@ export interface BrandstoffenOpPc4_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Aantal
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal`
-  */
+   * ### Aantal
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal`
+   */
   Aantal: Field("aantal", DataType.Number),
   /**
-  * ### Brandstof
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `brandstof`
-  */
+   * ### Brandstof
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `brandstof`
+   */
   Brandstof: Field("brandstof", DataType.Text),
   /**
-  * ### Extern oplaadbaar
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `extern_oplaadbaar`
-  */
+   * ### Extern oplaadbaar
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `extern_oplaadbaar`
+   */
   ExternOplaadbaar: Field("extern_oplaadbaar", DataType.Text),
   /**
-  * ### Postcode
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `postcode`
-  */
+   * ### Postcode
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `postcode`
+   */
   Postcode: Field("postcode", DataType.Number),
   /**
-  * ### Voertuigsoort
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `voertuigsoort`
-  */
+   * ### Voertuigsoort
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `voertuigsoort`
+   */
   Voertuigsoort: Field("voertuigsoort", DataType.Text),
 };
 
@@ -118,7 +118,7 @@ export const Info = {
   provider_name: "BrandstoffenOpPc4",
   url: "https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/8wbe-pu7d",
-}
+};
 
 /**
  * ### Brandstoffen_op_PC4

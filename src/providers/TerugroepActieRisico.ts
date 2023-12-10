@@ -19,7 +19,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface TerugroepActieRisico_ResponseData {
   /**
    * ### Code mogelijk gevaar
-   * 
+   *
    * De code voor het mogelijke gevaar:
    * ONG= Een (verkeers)ongeval met letselschade
    * TEL= Verhoogde kans op letsel bij een ongeval
@@ -31,7 +31,7 @@ export interface TerugroepActieRisico_ResponseData {
   code_mogelijk_gevaar?: string;
   /**
    * ### Mogelijk gevaar
-   * 
+   *
    * Uitleg over wat het gevaar van het defect is voor de bestuurder van het voertuig en eventueel de medeweggebruikers. Er kunnen meer gevaren van toepassing zijn.
    *
    * **Type**: Text
@@ -39,7 +39,7 @@ export interface TerugroepActieRisico_ResponseData {
   mogelijk_gevaar?: string;
   /**
    * ### Referentiecode RDW
-   * 
+   *
    * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
    *
    * **Type**: Text
@@ -59,38 +59,38 @@ export interface TerugroepActieRisico_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Code mogelijk gevaar
-  * 
-  * De code voor het mogelijke gevaar:
-  * ONG= Een (verkeers)ongeval met letselschade
-  * TEL= Verhoogde kans op letsel bij een ongeval
-  * BRA= Brand met letselschade
-  * MIL= Het belasten van het milieu
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `code_mogelijk_gevaar`
-  */
+   * ### Code mogelijk gevaar
+   *
+   * De code voor het mogelijke gevaar:
+   * ONG= Een (verkeers)ongeval met letselschade
+   * TEL= Verhoogde kans op letsel bij een ongeval
+   * BRA= Brand met letselschade
+   * MIL= Het belasten van het milieu
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `code_mogelijk_gevaar`
+   */
   CodeMogelijkGevaar: Field("code_mogelijk_gevaar", DataType.Text),
   /**
-  * ### Mogelijk gevaar
-  * 
-  * Uitleg over wat het gevaar van het defect is voor de bestuurder van het voertuig en eventueel de medeweggebruikers. Er kunnen meer gevaren van toepassing zijn.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `mogelijk_gevaar`
-  */
+   * ### Mogelijk gevaar
+   *
+   * Uitleg over wat het gevaar van het defect is voor de bestuurder van het voertuig en eventueel de medeweggebruikers. Er kunnen meer gevaren van toepassing zijn.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `mogelijk_gevaar`
+   */
   MogelijkGevaar: Field("mogelijk_gevaar", DataType.Text),
   /**
-  * ### Referentiecode RDW
-  * 
-  * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `referentiecode_rdw`
-  */
+   * ### Referentiecode RDW
+   *
+   * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `referentiecode_rdw`
+   */
   ReferentiecodeRdw: Field("referentiecode_rdw", DataType.Text),
 };
 
@@ -106,7 +106,7 @@ export const Info = {
   provider_name: "TerugroepActieRisico",
   url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_risico/9ihi-jgpf",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/9ihi-jgpf",
-}
+};
 
 /**
  * ### Open Data RDW: Terugroep_actie_risico

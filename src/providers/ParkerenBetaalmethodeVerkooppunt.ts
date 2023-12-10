@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenBetaalmethodeVerkooppunt_ResponseData {
   /**
    * ### EndDatePaymentMethod
-   * 
+   *
    * Einddatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenBetaalmethodeVerkooppunt_ResponseData {
   enddatepaymentmethod?: string;
   /**
    * ### PaymentMethod
-   * 
+   *
    * Betaalmethode die gebruikt kan worden voor het betalen van parkeren binnen een parkeergebied of -faciliteit.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ParkerenBetaalmethodeVerkooppunt_ResponseData {
   paymentmethod?: string;
   /**
    * ### SellingPointNumber
-   * 
+   *
    * Identificatie van een verkooppunt.
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ParkerenBetaalmethodeVerkooppunt_ResponseData {
   sellingpointnumber?: string;
   /**
    * ### StartDatePaymentMethod
-   * 
+   *
    * Begindatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
    *
    * **Type**: Text
@@ -66,44 +66,44 @@ export interface ParkerenBetaalmethodeVerkooppunt_ResponseData {
  */
 export const Fields = {
   /**
-  * ### EndDatePaymentMethod
-  * 
-  * Einddatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `enddatepaymentmethod`
-  */
+   * ### EndDatePaymentMethod
+   *
+   * Einddatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `enddatepaymentmethod`
+   */
   Enddatepaymentmethod: Field("enddatepaymentmethod", DataType.Text),
   /**
-  * ### PaymentMethod
-  * 
-  * Betaalmethode die gebruikt kan worden voor het betalen van parkeren binnen een parkeergebied of -faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `paymentmethod`
-  */
+   * ### PaymentMethod
+   *
+   * Betaalmethode die gebruikt kan worden voor het betalen van parkeren binnen een parkeergebied of -faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `paymentmethod`
+   */
   Paymentmethod: Field("paymentmethod", DataType.Text),
   /**
-  * ### SellingPointNumber
-  * 
-  * Identificatie van een verkooppunt.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `sellingpointnumber`
-  */
+   * ### SellingPointNumber
+   *
+   * Identificatie van een verkooppunt.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `sellingpointnumber`
+   */
   Sellingpointnumber: Field("sellingpointnumber", DataType.Number),
   /**
-  * ### StartDatePaymentMethod
-  * 
-  * Begindatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `startdatepaymentmethod`
-  */
+   * ### StartDatePaymentMethod
+   *
+   * Begindatum en -tijd van de periode waarin een bepaalde betaalmethode voor een verkooppunt geldig is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `startdatepaymentmethod`
+   */
   Startdatepaymentmethod: Field("startdatepaymentmethod", DataType.Text),
 };
 
@@ -120,7 +120,7 @@ export const Info = {
   provider_name: "ParkerenBetaalmethodeVerkooppunt",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/j96a-7nhx",
-}
+};
 
 /**
  * ### Open Data Parkeren: BETAALMETHODE VERKOOPPUNT
@@ -150,13 +150,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ParkerenBetaalmethodeVerkooppunt_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<ParkerenBetaalmethodeVerkooppunt_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const ParkerenBetaalmethodeVerkooppunt: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenBetaalmethodeVerkooppunt_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<ParkerenBetaalmethodeVerkooppunt_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

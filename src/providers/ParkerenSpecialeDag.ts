@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenSpecialeDag_ResponseData {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ParkerenSpecialeDag_ResponseData {
   areamanagerid?: string;
   /**
    * ### DateSpecialDay
-   * 
+   *
    * Datum van een speciaal etmaal (dag).
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ParkerenSpecialeDag_ResponseData {
   datespecialday?: string;
   /**
    * ### NameSpecialDay
-   * 
+   *
    * Naam van een speciaal etmaal (dag), bv. Marktdag, Koopzondag, AutoRAI of Sinterklaasintocht die op een bepaalde datum voor een gebiedsbeheerder van toepassing is.
    *
    * **Type**: Text
@@ -57,34 +57,34 @@ export interface ParkerenSpecialeDag_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### DateSpecialDay
-  * 
-  * Datum van een speciaal etmaal (dag).
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `datespecialday`
-  */
+   * ### DateSpecialDay
+   *
+   * Datum van een speciaal etmaal (dag).
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `datespecialday`
+   */
   Datespecialday: Field("datespecialday", DataType.Number),
   /**
-  * ### NameSpecialDay
-  * 
-  * Naam van een speciaal etmaal (dag), bv. Marktdag, Koopzondag, AutoRAI of Sinterklaasintocht die op een bepaalde datum voor een gebiedsbeheerder van toepassing is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `namespecialday`
-  */
+   * ### NameSpecialDay
+   *
+   * Naam van een speciaal etmaal (dag), bv. Marktdag, Koopzondag, AutoRAI of Sinterklaasintocht die op een bepaalde datum voor een gebiedsbeheerder van toepassing is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `namespecialday`
+   */
   Namespecialday: Field("namespecialday", DataType.Text),
 };
 
@@ -100,7 +100,7 @@ export const Info = {
   provider_name: "ParkerenSpecialeDag",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIALE-DAG/hpi4-mynq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/hpi4-mynq",
-}
+};
 
 /**
  * ### Open Data Parkeren: SPECIALE DAG

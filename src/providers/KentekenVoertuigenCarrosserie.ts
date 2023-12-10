@@ -56,37 +56,40 @@ export interface KentekenVoertuigenCarrosserie_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Carrosserie volgnummer
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `carrosserie_volgnummer`
-  */
+   * ### Carrosserie volgnummer
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `carrosserie_volgnummer`
+   */
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Text),
   /**
-  * ### Carrosserietype
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `carrosserietype`
-  */
+   * ### Carrosserietype
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `carrosserietype`
+   */
   Carrosserietype: Field("carrosserietype", DataType.Text),
   /**
-  * ### Kenteken
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `kenteken`
-  */
+   * ### Kenteken
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `kenteken`
+   */
   Kenteken: Field("kenteken", DataType.Text),
   /**
-  * ### Type Carrosserie Europese omschrijving
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `type_carrosserie_europese_omschrijving`
-  */
-  TypeCarrosserieEuropeseOmschrijving: Field("type_carrosserie_europese_omschrijving", DataType.Text),
+   * ### Type Carrosserie Europese omschrijving
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `type_carrosserie_europese_omschrijving`
+   */
+  TypeCarrosserieEuropeseOmschrijving: Field(
+    "type_carrosserie_europese_omschrijving",
+    DataType.Text,
+  ),
 };
 
 export const Info = {
@@ -100,9 +103,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Gekentekende_voertuigen_carrosserie",
   provider_name: "KentekenVoertuigenCarrosserie",
-  url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie/vezc-m2t6",
+  url:
+    "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie/vezc-m2t6",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/vezc-m2t6",
-}
+};
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_carrosserie
@@ -131,13 +135,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<KentekenVoertuigenCarrosserie_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<KentekenVoertuigenCarrosserie_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const KentekenVoertuigenCarrosserie: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<KentekenVoertuigenCarrosserie_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<KentekenVoertuigenCarrosserie_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

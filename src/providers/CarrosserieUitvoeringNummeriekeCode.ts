@@ -77,60 +77,66 @@ export interface CarrosserieUitvoeringNummeriekeCode_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Carrosserie uitvoering numeriek Europees
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `carrosserie_uitvoering_numeriek_europees`
-  */
-  CarrosserieUitvoeringNumeriekEuropees: Field("carrosserie_uitvoering_numeriek_europees", DataType.Text),
+   * ### Carrosserie uitvoering numeriek Europees
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `carrosserie_uitvoering_numeriek_europees`
+   */
+  CarrosserieUitvoeringNumeriekEuropees: Field(
+    "carrosserie_uitvoering_numeriek_europees",
+    DataType.Text,
+  ),
   /**
-  * ### Carrosserie uitvoering numeriek volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `carrosserie_uitvoering_numeriek_volgnummer`
-  */
-  CarrosserieUitvoeringNumeriekVolgnummer: Field("carrosserie_uitvoering_numeriek_volgnummer", DataType.Number),
+   * ### Carrosserie uitvoering numeriek volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `carrosserie_uitvoering_numeriek_volgnummer`
+   */
+  CarrosserieUitvoeringNumeriekVolgnummer: Field(
+    "carrosserie_uitvoering_numeriek_volgnummer",
+    DataType.Number,
+  ),
   /**
-  * ### Carrosserie volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `carrosserie_volgnummer`
-  */
+   * ### Carrosserie volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `carrosserie_volgnummer`
+   */
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Number),
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
 
@@ -148,9 +154,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Carrosserie Uitvoering Nummerieke Code",
   provider_name: "CarrosserieUitvoeringNummeriekeCode",
-  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Nummerieke-Co/nypm-t8hx",
+  url:
+    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Nummerieke-Co/nypm-t8hx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nypm-t8hx",
-}
+};
 
 /**
  * ### Open Data RDW: Carrosserie Uitvoering Nummerieke Code
@@ -179,13 +186,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<CarrosserieUitvoeringNummeriekeCode_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<CarrosserieUitvoeringNummeriekeCode_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const CarrosserieUitvoeringNummeriekeCode: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<CarrosserieUitvoeringNummeriekeCode_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<CarrosserieUitvoeringNummeriekeCode_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

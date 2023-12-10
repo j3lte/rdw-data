@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenTijdvak_ResponseData {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ParkerenTijdvak_ResponseData {
   areamanagerid?: string;
   /**
    * ### ClaimRightPossible
-   * 
+   *
    * Indicatie of het mogelijk is binnen dit TimeFrame een recht te verwerven of niet. J: in dit tijdvak is het wel mogelijk rechten te verwerven, N: in dit tijdvak is het niet mogelijk rechten te verwerven.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ParkerenTijdvak_ResponseData {
   claimrightpossible?: string;
   /**
    * ### DayTimeFrame
-   * 
+   *
    * Naam van een bepaalde dag voor een gebiedsbeheerder. Dit zijn de weekdagen maandag tot en met zondag, en de namen van de speciale dagen.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenTijdvak_ResponseData {
   daytimeframe?: string;
   /**
    * ### EndDateTimeFrame
-   * 
+   *
    * Datum en tijd van het einde van een periode waarin een bepaald tijdvak geldig is.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ParkerenTijdvak_ResponseData {
   enddatetimeframe?: string;
   /**
    * ### EndTimeTimeFrame
-   * 
+   *
    * Tijdstip (uumm) waarop het tijdvak eindigt. Voor aansluitende tijdvakken is de EndTimeTimeFrame van het eerste tijdvak gelijk aan StartTimeTimeFrame van het tweede.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ParkerenTijdvak_ResponseData {
   endtimetimeframe?: string;
   /**
    * ### FareCalculationCode
-   * 
+   *
    * Verwijzing naar het tarief, indien voor een recht in een tijdvak een tarief verschuldigd is. Kan alleen van toepassing zijn als ClaimRightPossible = J
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ParkerenTijdvak_ResponseData {
   farecalculationcode?: string;
   /**
    * ### MaxDurationRight
-   * 
+   *
    * De maximale tijdsduur waarvoor in een gebied dat valt onder de betreffende regeling, in dit betreffende tijdvak een recht kan worden verworven (minuten).
    *
    * **Type**: Number
@@ -77,7 +77,7 @@ export interface ParkerenTijdvak_ResponseData {
   maxdurationright?: string;
   /**
    * ### MinParkingInterruption
-   * 
+   *
    * De minimale tijdsduur  in minuten tussen twee rechten in hetzelfde gebied voor hetzelfde voertuig die geldt bij dit TimeFrame.
    *
    * **Type**: Number
@@ -85,7 +85,7 @@ export interface ParkerenTijdvak_ResponseData {
   minparkinginterruption?: string;
   /**
    * ### RegulationId
-   * 
+   *
    * Identificatiecode van een regeling binnen een parkeergebied of -faciliteit.
    *
    * **Type**: Text
@@ -93,7 +93,7 @@ export interface ParkerenTijdvak_ResponseData {
   regulationid?: string;
   /**
    * ### StartDateTimeFrame
-   * 
+   *
    * Datum en tijd van het begin van een periode waarop een bepaald tijdvak geldig is.
    *
    * **Type**: Text
@@ -101,7 +101,7 @@ export interface ParkerenTijdvak_ResponseData {
   startdatetimeframe?: string;
   /**
    * ### StartTimeTimeFrame
-   * 
+   *
    * Tijdstip (uumm) waarop een bepaald tijdvak begint.
    *
    * **Type**: Number
@@ -129,114 +129,114 @@ export interface ParkerenTijdvak_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### ClaimRightPossible
-  * 
-  * Indicatie of het mogelijk is binnen dit TimeFrame een recht te verwerven of niet. J: in dit tijdvak is het wel mogelijk rechten te verwerven, N: in dit tijdvak is het niet mogelijk rechten te verwerven.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `claimrightpossible`
-  */
+   * ### ClaimRightPossible
+   *
+   * Indicatie of het mogelijk is binnen dit TimeFrame een recht te verwerven of niet. J: in dit tijdvak is het wel mogelijk rechten te verwerven, N: in dit tijdvak is het niet mogelijk rechten te verwerven.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `claimrightpossible`
+   */
   Claimrightpossible: Field("claimrightpossible", DataType.Text),
   /**
-  * ### DayTimeFrame
-  * 
-  * Naam van een bepaalde dag voor een gebiedsbeheerder. Dit zijn de weekdagen maandag tot en met zondag, en de namen van de speciale dagen.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `daytimeframe`
-  */
+   * ### DayTimeFrame
+   *
+   * Naam van een bepaalde dag voor een gebiedsbeheerder. Dit zijn de weekdagen maandag tot en met zondag, en de namen van de speciale dagen.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `daytimeframe`
+   */
   Daytimeframe: Field("daytimeframe", DataType.Text),
   /**
-  * ### EndDateTimeFrame
-  * 
-  * Datum en tijd van het einde van een periode waarin een bepaald tijdvak geldig is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `enddatetimeframe`
-  */
+   * ### EndDateTimeFrame
+   *
+   * Datum en tijd van het einde van een periode waarin een bepaald tijdvak geldig is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `enddatetimeframe`
+   */
   Enddatetimeframe: Field("enddatetimeframe", DataType.Text),
   /**
-  * ### EndTimeTimeFrame
-  * 
-  * Tijdstip (uumm) waarop het tijdvak eindigt. Voor aansluitende tijdvakken is de EndTimeTimeFrame van het eerste tijdvak gelijk aan StartTimeTimeFrame van het tweede.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `endtimetimeframe`
-  */
+   * ### EndTimeTimeFrame
+   *
+   * Tijdstip (uumm) waarop het tijdvak eindigt. Voor aansluitende tijdvakken is de EndTimeTimeFrame van het eerste tijdvak gelijk aan StartTimeTimeFrame van het tweede.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `endtimetimeframe`
+   */
   Endtimetimeframe: Field("endtimetimeframe", DataType.Number),
   /**
-  * ### FareCalculationCode
-  * 
-  * Verwijzing naar het tarief, indien voor een recht in een tijdvak een tarief verschuldigd is. Kan alleen van toepassing zijn als ClaimRightPossible = J
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `farecalculationcode`
-  */
+   * ### FareCalculationCode
+   *
+   * Verwijzing naar het tarief, indien voor een recht in een tijdvak een tarief verschuldigd is. Kan alleen van toepassing zijn als ClaimRightPossible = J
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `farecalculationcode`
+   */
   Farecalculationcode: Field("farecalculationcode", DataType.Text),
   /**
-  * ### MaxDurationRight
-  * 
-  * De maximale tijdsduur waarvoor in een gebied dat valt onder de betreffende regeling, in dit betreffende tijdvak een recht kan worden verworven (minuten).
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maxdurationright`
-  */
+   * ### MaxDurationRight
+   *
+   * De maximale tijdsduur waarvoor in een gebied dat valt onder de betreffende regeling, in dit betreffende tijdvak een recht kan worden verworven (minuten).
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maxdurationright`
+   */
   Maxdurationright: Field("maxdurationright", DataType.Number),
   /**
-  * ### MinParkingInterruption
-  * 
-  * De minimale tijdsduur  in minuten tussen twee rechten in hetzelfde gebied voor hetzelfde voertuig die geldt bij dit TimeFrame.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `minparkinginterruption`
-  */
+   * ### MinParkingInterruption
+   *
+   * De minimale tijdsduur  in minuten tussen twee rechten in hetzelfde gebied voor hetzelfde voertuig die geldt bij dit TimeFrame.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `minparkinginterruption`
+   */
   Minparkinginterruption: Field("minparkinginterruption", DataType.Number),
   /**
-  * ### RegulationId
-  * 
-  * Identificatiecode van een regeling binnen een parkeergebied of -faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `regulationid`
-  */
+   * ### RegulationId
+   *
+   * Identificatiecode van een regeling binnen een parkeergebied of -faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `regulationid`
+   */
   Regulationid: Field("regulationid", DataType.Text),
   /**
-  * ### StartDateTimeFrame
-  * 
-  * Datum en tijd van het begin van een periode waarop een bepaald tijdvak geldig is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `startdatetimeframe`
-  */
+   * ### StartDateTimeFrame
+   *
+   * Datum en tijd van het begin van een periode waarop een bepaald tijdvak geldig is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `startdatetimeframe`
+   */
   Startdatetimeframe: Field("startdatetimeframe", DataType.Text),
   /**
-  * ### StartTimeTimeFrame
-  * 
-  * Tijdstip (uumm) waarop een bepaald tijdvak begint.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `starttimetimeframe`
-  */
+   * ### StartTimeTimeFrame
+   *
+   * Tijdstip (uumm) waarop een bepaald tijdvak begint.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `starttimetimeframe`
+   */
   Starttimetimeframe: Field("starttimetimeframe", DataType.Number),
 };
 
@@ -260,7 +260,7 @@ export const Info = {
   provider_name: "ParkerenTijdvak",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TIJDVAK/ixf8-gtwq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ixf8-gtwq",
-}
+};
 
 /**
  * ### Open Data Parkeren: TIJDVAK

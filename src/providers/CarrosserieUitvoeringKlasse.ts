@@ -77,60 +77,60 @@ export interface CarrosserieUitvoeringKlasse_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Carrosserie klasse europees
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `carrosserie_klasse_europees`
-  */
+   * ### Carrosserie klasse europees
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `carrosserie_klasse_europees`
+   */
   CarrosserieKlasseEuropees: Field("carrosserie_klasse_europees", DataType.Text),
   /**
-  * ### Carrosserie klasse volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `carrosserie_klasse_volgnummer`
-  */
+   * ### Carrosserie klasse volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `carrosserie_klasse_volgnummer`
+   */
   CarrosserieKlasseVolgnummer: Field("carrosserie_klasse_volgnummer", DataType.Number),
   /**
-  * ### Carrosserie volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `carrosserie_volgnummer`
-  */
+   * ### Carrosserie volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `carrosserie_volgnummer`
+   */
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Number),
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
 
@@ -148,9 +148,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Carrosserie Uitvoering Klasse",
   provider_name: "CarrosserieUitvoeringKlasse",
-  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Klasse/q7fi-ijjh",
+  url:
+    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Klasse/q7fi-ijjh",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/q7fi-ijjh",
-}
+};
 
 /**
  * ### Open Data RDW: Carrosserie Uitvoering Klasse
@@ -179,13 +180,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<CarrosserieUitvoeringKlasse_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<CarrosserieUitvoeringKlasse_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const CarrosserieUitvoeringKlasse: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<CarrosserieUitvoeringKlasse_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<CarrosserieUitvoeringKlasse_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

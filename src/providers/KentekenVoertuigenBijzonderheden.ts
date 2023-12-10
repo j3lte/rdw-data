@@ -70,52 +70,52 @@ export interface KentekenVoertuigenBijzonderheden_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Bijzonderheid code
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `bijzonderheid_code`
-  */
+   * ### Bijzonderheid code
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `bijzonderheid_code`
+   */
   BijzonderheidCode: Field("bijzonderheid_code", DataType.Number),
   /**
-  * ### Bijzonderheid code omschrijving
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `bijzonderheid_code_1`
-  */
+   * ### Bijzonderheid code omschrijving
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `bijzonderheid_code_1`
+   */
   BijzonderheidCode1: Field("bijzonderheid_code_1", DataType.Text),
   /**
-  * ### Bijzonderheid eenheid
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `bijzonderheid_eenheid`
-  */
+   * ### Bijzonderheid eenheid
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `bijzonderheid_eenheid`
+   */
   BijzonderheidEenheid: Field("bijzonderheid_eenheid", DataType.Text),
   /**
-  * ### Bijzonderheid variabele tekst
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `bijzonderheid_variabele_tekst`
-  */
+   * ### Bijzonderheid variabele tekst
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `bijzonderheid_variabele_tekst`
+   */
   BijzonderheidVariabeleTekst: Field("bijzonderheid_variabele_tekst", DataType.Text),
   /**
-  * ### Bijzonderheid volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `bijzonderheid_volgnummer`
-  */
+   * ### Bijzonderheid volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `bijzonderheid_volgnummer`
+   */
   BijzonderheidVolgnummer: Field("bijzonderheid_volgnummer", DataType.Number),
   /**
-  * ### Kenteken
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `kenteken`
-  */
+   * ### Kenteken
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `kenteken`
+   */
   Kenteken: Field("kenteken", DataType.Text),
 };
 
@@ -132,9 +132,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Gekentekende_voertuigen_bijzonderheden",
   provider_name: "KentekenVoertuigenBijzonderheden",
-  url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_bijzonderhed/7ug8-2dtt",
+  url:
+    "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_bijzonderhed/7ug8-2dtt",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/7ug8-2dtt",
-}
+};
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_bijzonderheden
@@ -163,13 +164,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<KentekenVoertuigenBijzonderheden_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<KentekenVoertuigenBijzonderheden_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const KentekenVoertuigenBijzonderheden: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<KentekenVoertuigenBijzonderheden_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<KentekenVoertuigenBijzonderheden_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

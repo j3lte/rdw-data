@@ -77,60 +77,60 @@ export interface MerkUitvoeringToegestaan_ResponseData {
  */
 export const Fields = {
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Merk registratie datum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `merk_registratie_datum`
-  */
+   * ### Merk registratie datum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `merk_registratie_datum`
+   */
   MerkRegistratieDatum: Field("merk_registratie_datum", DataType.Number),
   /**
-  * ### Merk registratie datum_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `merk_registratie_datum_dt`
-  */
+   * ### Merk registratie datum_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `merk_registratie_datum_dt`
+   */
   MerkRegistratieDatumDt: Field("merk_registratie_datum_dt", DataType.FloatingTimestamp),
   /**
-  * ### Merkcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `merkcode`
-  */
+   * ### Merkcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `merkcode`
+   */
   Merkcode: Field("merkcode", DataType.Text),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
 
@@ -150,7 +150,7 @@ export const Info = {
   provider_name: "MerkUitvoeringToegestaan",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Merk-Uitvoering-Toegestaan/fj7t-hhik",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/fj7t-hhik",
-}
+};
 
 /**
  * ### Open Data RDW: Merk Uitvoering Toegestaan

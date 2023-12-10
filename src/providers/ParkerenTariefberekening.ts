@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenTariefberekening_ResponseData {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ParkerenTariefberekening_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateFare
-   * 
+   *
    * Datum tot wanneer een bepaalde tariefberekening geldig is.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ParkerenTariefberekening_ResponseData {
   enddatefare?: string;
   /**
    * ### FareCalculationCode
-   * 
+   *
    * Code van een bepaalde tariefberekening bij een gebiedsbeheerder.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenTariefberekening_ResponseData {
   farecalculationcode?: string;
   /**
    * ### FareCalculationDesc
-   * 
+   *
    * De omschrijving van een tariefberekening.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ParkerenTariefberekening_ResponseData {
   farecalculationdesc?: string;
   /**
    * ### PeriodNameTariff
-   * 
+   *
    * De naam van een tariefberekening.
    *
    * **Type**: Text
@@ -61,7 +61,7 @@ export interface ParkerenTariefberekening_ResponseData {
   periodnametariff?: string;
   /**
    * ### StartDateFare
-   * 
+   *
    * Datum waarop een bepaalde tariefberekening ingaat.
    *
    * **Type**: Number
@@ -69,7 +69,7 @@ export interface ParkerenTariefberekening_ResponseData {
   startdatefare?: string;
   /**
    * ### VATPercentage
-   * 
+   *
    * Het BTW percentage dat voor een bepaalde tariefberekening van toepassing is. De bedragen worden inclusief BTW vermeld, dus bij een percentage van 21% is de BTW 21/121 van het bedrag.
    *
    * **Type**: Number
@@ -93,74 +93,74 @@ export interface ParkerenTariefberekening_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDateFare
-  * 
-  * Datum tot wanneer een bepaalde tariefberekening geldig is.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `enddatefare`
-  */
+   * ### EndDateFare
+   *
+   * Datum tot wanneer een bepaalde tariefberekening geldig is.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `enddatefare`
+   */
   Enddatefare: Field("enddatefare", DataType.Number),
   /**
-  * ### FareCalculationCode
-  * 
-  * Code van een bepaalde tariefberekening bij een gebiedsbeheerder.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `farecalculationcode`
-  */
+   * ### FareCalculationCode
+   *
+   * Code van een bepaalde tariefberekening bij een gebiedsbeheerder.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `farecalculationcode`
+   */
   Farecalculationcode: Field("farecalculationcode", DataType.Text),
   /**
-  * ### FareCalculationDesc
-  * 
-  * De omschrijving van een tariefberekening.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `farecalculationdesc`
-  */
+   * ### FareCalculationDesc
+   *
+   * De omschrijving van een tariefberekening.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `farecalculationdesc`
+   */
   Farecalculationdesc: Field("farecalculationdesc", DataType.Text),
   /**
-  * ### PeriodNameTariff
-  * 
-  * De naam van een tariefberekening.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `periodnametariff`
-  */
+   * ### PeriodNameTariff
+   *
+   * De naam van een tariefberekening.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `periodnametariff`
+   */
   Periodnametariff: Field("periodnametariff", DataType.Text),
   /**
-  * ### StartDateFare
-  * 
-  * Datum waarop een bepaalde tariefberekening ingaat.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `startdatefare`
-  */
+   * ### StartDateFare
+   *
+   * Datum waarop een bepaalde tariefberekening ingaat.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `startdatefare`
+   */
   Startdatefare: Field("startdatefare", DataType.Number),
   /**
-  * ### VATPercentage
-  * 
-  * Het BTW percentage dat voor een bepaalde tariefberekening van toepassing is. De bedragen worden inclusief BTW vermeld, dus bij een percentage van 21% is de BTW 21/121 van het bedrag.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `vatpercentage`
-  */
+   * ### VATPercentage
+   *
+   * Het BTW percentage dat voor een bepaalde tariefberekening van toepassing is. De bedragen worden inclusief BTW vermeld, dus bij een percentage van 21% is de BTW 21/121 van het bedrag.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `vatpercentage`
+   */
   Vatpercentage: Field("vatpercentage", DataType.Number),
 };
 
@@ -180,7 +180,7 @@ export const Info = {
   provider_name: "ParkerenTariefberekening",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFBEREKENING/nfzq-8g7y",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nfzq-8g7y",
-}
+};
 
 /**
  * ### Open Data Parkeren: TARIEFBEREKENING

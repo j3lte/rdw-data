@@ -77,60 +77,60 @@ export interface KentekenVoertuigenRupsbanden_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Aangedreven rupsband indicator
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `aangedreven_rupsband_indicator`
-  */
+   * ### Aangedreven rupsband indicator
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `aangedreven_rupsband_indicator`
+   */
   AangedrevenRupsbandIndicator: Field("aangedreven_rupsband_indicator", DataType.Text),
   /**
-  * ### Geremde rupsband indicator
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `geremde_rupsband_indicator`
-  */
+   * ### Geremde rupsband indicator
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `geremde_rupsband_indicator`
+   */
   GeremdeRupsbandIndicator: Field("geremde_rupsband_indicator", DataType.Text),
   /**
-  * ### Kenteken
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `kenteken`
-  */
+   * ### Kenteken
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `kenteken`
+   */
   Kenteken: Field("kenteken", DataType.Text),
   /**
-  * ### Rupsband set volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `rupsband_set_volgnr`
-  */
+   * ### Rupsband set volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `rupsband_set_volgnr`
+   */
   RupsbandSetVolgnr: Field("rupsband_set_volgnr", DataType.Number),
   /**
-  * ### Technisch toelaatbaar maximum massa rupsbandset
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `technisch_toelaatbaar_maximum`
-  */
+   * ### Technisch toelaatbaar maximum massa rupsbandset
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `technisch_toelaatbaar_maximum`
+   */
   TechnischToelaatbaarMaximum: Field("technisch_toelaatbaar_maximum", DataType.Number),
   /**
-  * ### Technisch toelaatbaar maximum massa rupsband set minimum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `technisch_toelaatbaar_maximum_1`
-  */
+   * ### Technisch toelaatbaar maximum massa rupsband set minimum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `technisch_toelaatbaar_maximum_1`
+   */
   TechnischToelaatbaarMaximum1: Field("technisch_toelaatbaar_maximum_1", DataType.Number),
   /**
-  * ### Technisch toelaatbaar maximum massa rupsband set maximum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `technisch_toelaatbaar_maximum_2`
-  */
+   * ### Technisch toelaatbaar maximum massa rupsband set maximum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `technisch_toelaatbaar_maximum_2`
+   */
   TechnischToelaatbaarMaximum2: Field("technisch_toelaatbaar_maximum_2", DataType.Number),
 };
 
@@ -148,9 +148,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Gekentekende_voertuigen_rupsbanden",
   provider_name: "KentekenVoertuigenRupsbanden",
-  url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_rupsbanden/3xwf-ince",
+  url:
+    "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_rupsbanden/3xwf-ince",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/3xwf-ince",
-}
+};
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_rupsbanden
@@ -179,13 +180,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<KentekenVoertuigenRupsbanden_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<KentekenVoertuigenRupsbanden_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const KentekenVoertuigenRupsbanden: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<KentekenVoertuigenRupsbanden_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<KentekenVoertuigenRupsbanden_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

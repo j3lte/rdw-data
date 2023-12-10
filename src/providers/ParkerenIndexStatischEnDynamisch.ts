@@ -79,60 +79,60 @@ export interface ParkerenIndexStatischEnDynamisch_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Dynamic parking data
-  *
-  * **Type**: Checkbox
-  *
-  * **Database Column Name**: `dynamic_parking_data`
-  */
+   * ### Dynamic parking data
+   *
+   * **Type**: Checkbox
+   *
+   * **Database Column Name**: `dynamic_parking_data`
+   */
   DynamicParkingData: Field("dynamic_parking_data", DataType.Checkbox),
   /**
-  * ### Organization
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `organization`
-  */
+   * ### Organization
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `organization`
+   */
   Organization: Field("organization", DataType.Text),
   /**
-  * ### Organization ID
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `organization_id`
-  */
+   * ### Organization ID
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `organization_id`
+   */
   OrganizationId: Field("organization_id", DataType.Number),
   /**
-  * ### Standard static parking data
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `standard_static_parking_data`
-  */
+   * ### Standard static parking data
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `standard_static_parking_data`
+   */
   StandardStaticParkingData: Field("standard_static_parking_data", DataType.Text),
   /**
-  * ### Static parking data
-  *
-  * **Type**: Checkbox
-  *
-  * **Database Column Name**: `static_parking_data`
-  */
+   * ### Static parking data
+   *
+   * **Type**: Checkbox
+   *
+   * **Database Column Name**: `static_parking_data`
+   */
   StaticParkingData: Field("static_parking_data", DataType.Checkbox),
   /**
-  * ### URL dynamic parking data
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `url_dynamic_parking_data`
-  */
+   * ### URL dynamic parking data
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `url_dynamic_parking_data`
+   */
   UrlDynamicParkingData: Field("url_dynamic_parking_data", DataType.Text),
   /**
-  * ### URL static parking data
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `url_static_parking_data`
-  */
+   * ### URL static parking data
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `url_static_parking_data`
+   */
   UrlStaticParkingData: Field("url_static_parking_data", DataType.Text),
 };
 
@@ -152,7 +152,7 @@ export const Info = {
   provider_name: "ParkerenIndexStatischEnDynamisch",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-Index-Statisch-en-Dynamisch/f6v7-gjpa",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/f6v7-gjpa",
-}
+};
 
 /**
  * ### Open Data Parkeren: Index Statisch en Dynamisch
@@ -182,13 +182,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ParkerenIndexStatischEnDynamisch_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<ParkerenIndexStatischEnDynamisch_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const ParkerenIndexStatischEnDynamisch: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenIndexStatischEnDynamisch_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<ParkerenIndexStatischEnDynamisch_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

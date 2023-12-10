@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenRegeling_ResponseData {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ParkerenRegeling_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateRegulation
-   * 
+   *
    * Datum van het einde van een periode waarin een gebied- of verblijfsregeling van kracht is.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ParkerenRegeling_ResponseData {
   enddateregulation?: string;
   /**
    * ### MaximumDayCharge
-   * 
+   *
    * Het maximale tarief, incl. BTW, dat voor een recht in een gebied dat valt onder de betreffende regeling verschuldigd is (in euro).
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ParkerenRegeling_ResponseData {
   maximumdaycharge?: string;
   /**
    * ### RegulationDesc
-   * 
+   *
    * Omschrijving van een gebied- of verblijfsregeling
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ParkerenRegeling_ResponseData {
   regulationdesc?: string;
   /**
    * ### RegulationId
-   * 
+   *
    * Identificatiecode een gebied- of verblijfsregeling.
    *
    * **Type**: Text
@@ -61,7 +61,7 @@ export interface ParkerenRegeling_ResponseData {
   regulationid?: string;
   /**
    * ### RegulationType
-   * 
+   *
    * Code die aangeeft wat voor soort gebied- of verblijfsregeling van toepassing is bij een bepaalde regeling. B: Basisregeling; A: Aanvullende regeling.
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ParkerenRegeling_ResponseData {
   regulationtype?: string;
   /**
    * ### StartDateRegulation
-   * 
+   *
    * Datum van het begin van een periode waarin een gebied- of verblijfsregeling van kracht is.
    *
    * **Type**: Text
@@ -93,74 +93,74 @@ export interface ParkerenRegeling_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDateRegulation
-  * 
-  * Datum van het einde van een periode waarin een gebied- of verblijfsregeling van kracht is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `enddateregulation`
-  */
+   * ### EndDateRegulation
+   *
+   * Datum van het einde van een periode waarin een gebied- of verblijfsregeling van kracht is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `enddateregulation`
+   */
   Enddateregulation: Field("enddateregulation", DataType.Text),
   /**
-  * ### MaximumDayCharge
-  * 
-  * Het maximale tarief, incl. BTW, dat voor een recht in een gebied dat valt onder de betreffende regeling verschuldigd is (in euro).
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximumdaycharge`
-  */
+   * ### MaximumDayCharge
+   *
+   * Het maximale tarief, incl. BTW, dat voor een recht in een gebied dat valt onder de betreffende regeling verschuldigd is (in euro).
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximumdaycharge`
+   */
   Maximumdaycharge: Field("maximumdaycharge", DataType.Number),
   /**
-  * ### RegulationDesc
-  * 
-  * Omschrijving van een gebied- of verblijfsregeling
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `regulationdesc`
-  */
+   * ### RegulationDesc
+   *
+   * Omschrijving van een gebied- of verblijfsregeling
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `regulationdesc`
+   */
   Regulationdesc: Field("regulationdesc", DataType.Text),
   /**
-  * ### RegulationId
-  * 
-  * Identificatiecode een gebied- of verblijfsregeling.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `regulationid`
-  */
+   * ### RegulationId
+   *
+   * Identificatiecode een gebied- of verblijfsregeling.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `regulationid`
+   */
   Regulationid: Field("regulationid", DataType.Text),
   /**
-  * ### RegulationType
-  * 
-  * Code die aangeeft wat voor soort gebied- of verblijfsregeling van toepassing is bij een bepaalde regeling. B: Basisregeling; A: Aanvullende regeling.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `regulationtype`
-  */
+   * ### RegulationType
+   *
+   * Code die aangeeft wat voor soort gebied- of verblijfsregeling van toepassing is bij een bepaalde regeling. B: Basisregeling; A: Aanvullende regeling.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `regulationtype`
+   */
   Regulationtype: Field("regulationtype", DataType.Text),
   /**
-  * ### StartDateRegulation
-  * 
-  * Datum van het begin van een periode waarin een gebied- of verblijfsregeling van kracht is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `startdateregulation`
-  */
+   * ### StartDateRegulation
+   *
+   * Datum van het begin van een periode waarin een gebied- of verblijfsregeling van kracht is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `startdateregulation`
+   */
   Startdateregulation: Field("startdateregulation", DataType.Text),
 };
 
@@ -180,7 +180,7 @@ export const Info = {
   provider_name: "ParkerenRegeling",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-REGELING/yefi-qfiq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/yefi-qfiq",
-}
+};
 
 /**
  * ### Open Data Parkeren: REGELING

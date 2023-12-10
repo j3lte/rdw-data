@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenParkingToegang_ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenParkingToegang_ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ParkerenParkingToegang_ResponseData {
   areamanagerid?: string;
   /**
    * ### Days
-   * 
+   *
    * Naam van een bepaalde dag voor een gebiedsbeheerder, waarvoor toegangstijden zijn gespecificeerd.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenParkingToegang_ResponseData {
   days?: string;
   /**
    * ### EndOfPeriod
-   * 
+   *
    * Einddatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ParkerenParkingToegang_ResponseData {
   endofperiod?: string;
   /**
    * ### EnterFrom
-   * 
+   *
    * Begintijd (uumm) vanaf wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ParkerenParkingToegang_ResponseData {
   enterfrom?: string;
   /**
    * ### EnterUntil
-   * 
+   *
    * Eindtijd (uumm) tot wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
    *
    * **Type**: Number
@@ -69,7 +69,7 @@ export interface ParkerenParkingToegang_ResponseData {
   enteruntil?: string;
   /**
    * ### StartOfPeriod
-   * 
+   *
    * Begindatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
    *
    * **Type**: Text
@@ -93,74 +93,74 @@ export interface ParkerenParkingToegang_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### Days
-  * 
-  * Naam van een bepaalde dag voor een gebiedsbeheerder, waarvoor toegangstijden zijn gespecificeerd.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `days`
-  */
+   * ### Days
+   *
+   * Naam van een bepaalde dag voor een gebiedsbeheerder, waarvoor toegangstijden zijn gespecificeerd.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `days`
+   */
   Days: Field("days", DataType.Text),
   /**
-  * ### EndOfPeriod
-  * 
-  * Einddatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `endofperiod`
-  */
+   * ### EndOfPeriod
+   *
+   * Einddatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `endofperiod`
+   */
   Endofperiod: Field("endofperiod", DataType.Text),
   /**
-  * ### EnterFrom
-  * 
-  * Begintijd (uumm) vanaf wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `enterfrom`
-  */
+   * ### EnterFrom
+   *
+   * Begintijd (uumm) vanaf wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `enterfrom`
+   */
   Enterfrom: Field("enterfrom", DataType.Number),
   /**
-  * ### EnterUntil
-  * 
-  * Eindtijd (uumm) tot wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `enteruntil`
-  */
+   * ### EnterUntil
+   *
+   * Eindtijd (uumm) tot wanneer op een bepaalde dag een parkeergebied, -garage of -terrein toegankelijk is.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `enteruntil`
+   */
   Enteruntil: Field("enteruntil", DataType.Number),
   /**
-  * ### StartOfPeriod
-  * 
-  * Begindatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `startofperiod`
-  */
+   * ### StartOfPeriod
+   *
+   * Begindatum en -tijd van de periode waarin een bepaalde toegangstijd van een parkeergebied, -garage of -terrein geldig is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `startofperiod`
+   */
   Startofperiod: Field("startofperiod", DataType.Text),
 };
 
@@ -180,7 +180,7 @@ export const Info = {
   provider_name: "ParkerenParkingToegang",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-TOEGANG/edv8-qiyg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/edv8-qiyg",
-}
+};
 
 /**
  * ### Open Data Parkeren: PARKING TOEGANG

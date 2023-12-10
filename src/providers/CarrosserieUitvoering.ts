@@ -70,52 +70,52 @@ export interface CarrosserieUitvoering_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Carrosserie volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `carrosserie_volgnummer`
-  */
+   * ### Carrosserie volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `carrosserie_volgnummer`
+   */
   CarrosserieVolgnummer: Field("carrosserie_volgnummer", DataType.Number),
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Type carrosserie europees
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `type_carrosserie_europees`
-  */
+   * ### Type carrosserie europees
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `type_carrosserie_europees`
+   */
   TypeCarrosserieEuropees: Field("type_carrosserie_europees", DataType.Text),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
 
@@ -134,7 +134,7 @@ export const Info = {
   provider_name: "CarrosserieUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering/w2qp-idms",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/w2qp-idms",
-}
+};
 
 /**
  * ### Open Data RDW: Carrosserie Uitvoering

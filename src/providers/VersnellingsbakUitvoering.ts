@@ -84,68 +84,68 @@ export interface VersnellingsbakUitvoering_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Aantal versnellingen bovengrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_versnellingen_bovengrens`
-  */
+   * ### Aantal versnellingen bovengrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_versnellingen_bovengrens`
+   */
   AantalVersnellingenBovengrens: Field("aantal_versnellingen_bovengrens", DataType.Number),
   /**
-  * ### Aantal versnellingen ondergrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_versnellingen_ondergrens`
-  */
+   * ### Aantal versnellingen ondergrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_versnellingen_ondergrens`
+   */
   AantalVersnellingenOndergrens: Field("aantal_versnellingen_ondergrens", DataType.Number),
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Type versnellingsbak
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `type_versnellingsbak`
-  */
+   * ### Type versnellingsbak
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `type_versnellingsbak`
+   */
   TypeVersnellingsbak: Field("type_versnellingsbak", DataType.Text),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
   /**
-  * ### Volgnummer versnellingsbak
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `volgnummer`
-  */
+   * ### Volgnummer versnellingsbak
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `volgnummer`
+   */
   Volgnummer: Field("volgnummer", DataType.Number),
 };
 
@@ -166,7 +166,7 @@ export const Info = {
   provider_name: "VersnellingsbakUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Versnellingsbak-Uitvoering/r7cw-67gs",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/r7cw-67gs",
-}
+};
 
 /**
  * ### Open Data RDW: Versnellingsbak Uitvoering

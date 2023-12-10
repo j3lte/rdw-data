@@ -70,52 +70,52 @@ export interface TestProducerApi_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Carrosserie klasse europees
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `carrosserie_klasse_europees`
-  */
+   * ### Carrosserie klasse europees
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `carrosserie_klasse_europees`
+   */
   CarrosserieKlasseEuropees: Field("carrosserie_klasse_europees", DataType.Text),
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Number),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
   /**
-  * ### UniekeCode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `uniekecode`
-  */
+   * ### UniekeCode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `uniekecode`
+   */
   Uniekecode: Field("uniekecode", DataType.Text),
 };
 
@@ -134,7 +134,7 @@ export const Info = {
   provider_name: "TestProducerApi",
   url: "https://opendata.rdw.nl/dataset/Test_Producer_API/sgwh-cvkk",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/sgwh-cvkk",
-}
+};
 
 /**
  * ### Test_Producer_API

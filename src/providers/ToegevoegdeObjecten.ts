@@ -107,92 +107,95 @@ export interface ToegevoegdeObjecten_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Classificatie toegevoegd obj
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `classificatie_toegevoegd_obj`
-  */
+   * ### Classificatie toegevoegd obj
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `classificatie_toegevoegd_obj`
+   */
   ClassificatieToegevoegdObj: Field("classificatie_toegevoegd_obj", DataType.Text),
   /**
-  * ### Demontagedatum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `demontagedatum`
-  */
+   * ### Demontagedatum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `demontagedatum`
+   */
   Demontagedatum: Field("demontagedatum", DataType.Number),
   /**
-  * ### Demontagedatum DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `demontagedatum_dt`
-  */
+   * ### Demontagedatum DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `demontagedatum_dt`
+   */
   DemontagedatumDt: Field("demontagedatum_dt", DataType.FloatingTimestamp),
   /**
-  * ### Gasinstallatie tank inhoud
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `gasinstallatie_tank_inhoud`
-  */
+   * ### Gasinstallatie tank inhoud
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `gasinstallatie_tank_inhoud`
+   */
   GasinstallatieTankInhoud: Field("gasinstallatie_tank_inhoud", DataType.Number),
   /**
-  * ### Kenteken
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `kenteken`
-  */
+   * ### Kenteken
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `kenteken`
+   */
   Kenteken: Field("kenteken", DataType.Text),
   /**
-  * ### Merk object toegevoegd
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `merk_object_toegevoegd`
-  */
+   * ### Merk object toegevoegd
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `merk_object_toegevoegd`
+   */
   MerkObjectToegevoegd: Field("merk_object_toegevoegd", DataType.Text),
   /**
-  * ### Merkcode toegevoegd object
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `merkcode_toegevoegd_object`
-  */
+   * ### Merkcode toegevoegd object
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `merkcode_toegevoegd_object`
+   */
   MerkcodeToegevoegdObject: Field("merkcode_toegevoegd_object", DataType.Text),
   /**
-  * ### Montagedatum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `montagedatum`
-  */
+   * ### Montagedatum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `montagedatum`
+   */
   Montagedatum: Field("montagedatum", DataType.Number),
   /**
-  * ### Montagedatum DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `montagedatum_dt`
-  */
+   * ### Montagedatum DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `montagedatum_dt`
+   */
   MontagedatumDt: Field("montagedatum_dt", DataType.FloatingTimestamp),
   /**
-  * ### Soort toe te voegen object omschrijving
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `soort_toe_te_voegen_object_omschrijving`
-  */
-  SoortToeTeVoegenObjectOmschrijving: Field("soort_toe_te_voegen_object_omschrijving", DataType.Text),
+   * ### Soort toe te voegen object omschrijving
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `soort_toe_te_voegen_object_omschrijving`
+   */
+  SoortToeTeVoegenObjectOmschrijving: Field(
+    "soort_toe_te_voegen_object_omschrijving",
+    DataType.Text,
+  ),
   /**
-  * ### Uitvoerings volgnr toegev obj
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoerings_volgnr_toegev_obj`
-  */
+   * ### Uitvoerings volgnr toegev obj
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoerings_volgnr_toegev_obj`
+   */
   UitvoeringsVolgnrToegevObj: Field("uitvoerings_volgnr_toegev_obj", DataType.Number),
 };
 
@@ -216,7 +219,7 @@ export const Info = {
   provider_name: "ToegevoegdeObjecten",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/sghb-dzxx",
-}
+};
 
 /**
  * ### Open Data RDW: Toegevoegde Objecten

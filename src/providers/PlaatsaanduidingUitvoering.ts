@@ -84,68 +84,71 @@ export interface PlaatsaanduidingUitvoering_ResponseData {
  */
 export const Fields = {
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Plaats aanduiding volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `plaats_aanduiding_volgnummer`
-  */
+   * ### Plaats aanduiding volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `plaats_aanduiding_volgnummer`
+   */
   PlaatsAanduidingVolgnummer: Field("plaats_aanduiding_volgnummer", DataType.Number),
   /**
-  * ### Plaatsaanduiding registratie datum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `plaatsaanduiding_registratie_datum`
-  */
+   * ### Plaatsaanduiding registratie datum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `plaatsaanduiding_registratie_datum`
+   */
   PlaatsaanduidingRegistratieDatum: Field("plaatsaanduiding_registratie_datum", DataType.Number),
   /**
-  * ### Plaatsaanduiding registratie datum_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `plaatsaanduiding_registratie_datum_dt`
-  */
-  PlaatsaanduidingRegistratieDatumDt: Field("plaatsaanduiding_registratie_datum_dt", DataType.FloatingTimestamp),
+   * ### Plaatsaanduiding registratie datum_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `plaatsaanduiding_registratie_datum_dt`
+   */
+  PlaatsaanduidingRegistratieDatumDt: Field(
+    "plaatsaanduiding_registratie_datum_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Plaatscode voeruig identificatie
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `plaatscode_voeruig_identificatie`
-  */
+   * ### Plaatscode voeruig identificatie
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `plaatscode_voeruig_identificatie`
+   */
   PlaatscodeVoeruigIdentificatie: Field("plaatscode_voeruig_identificatie", DataType.Text),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
 };
 
@@ -164,9 +167,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Plaatsaanduiding Uitvoering",
   provider_name: "PlaatsaanduidingUitvoering",
-  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Plaatsaanduiding-Uitvoering/mt8t-4ep4",
+  url:
+    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Plaatsaanduiding-Uitvoering/mt8t-4ep4",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mt8t-4ep4",
-}
+};
 
 /**
  * ### Open Data RDW: Plaatsaanduiding Uitvoering

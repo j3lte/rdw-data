@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenGeoVerkooppunt_ResponseData {
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -29,7 +29,7 @@ export interface ParkerenGeoVerkooppunt_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateSellingPoint
-   * 
+   *
    * Datum waarop een bepaald verkooppunt niet meer actief is.
    *
    * **Type**: Text
@@ -37,12 +37,12 @@ export interface ParkerenGeoVerkooppunt_ResponseData {
   enddatesellingpoint?: string;
   /**
    * ### Location
-   * 
+   *
    * De cordinaten van een verkooppunt.
    *
    * **Type**: Point
    */
-  location?: { latitude: string; longitude: string; human_address: null | string; };
+  location?: { latitude: string; longitude: string; human_address: null | string };
   /**
    * ### Location (address)
    *
@@ -69,7 +69,7 @@ export interface ParkerenGeoVerkooppunt_ResponseData {
   location_zip?: string;
   /**
    * ### SellingPointDesc
-   * 
+   *
    * Omschrijving van een verkooppunt.
    *
    * **Type**: Text
@@ -77,7 +77,7 @@ export interface ParkerenGeoVerkooppunt_ResponseData {
   sellingpointdesc?: string;
   /**
    * ### SellingPointId
-   * 
+   *
    * Identificatiecode van een verkooppunt. Het SellingPointId is numeriek en hoeft niet uniek te zijn. Een SellingPointId kan op meerdere locaties voorkomen, die samen een verkooppuntgroep vormen.
    *
    * **Type**: Number
@@ -85,7 +85,7 @@ export interface ParkerenGeoVerkooppunt_ResponseData {
   sellingpointid?: string;
   /**
    * ### StartDateSellingPoint
-   * 
+   *
    * Datum vanaf wanneer een bepaald verkooppunt actief is.
    *
    * **Type**: Text
@@ -112,96 +112,96 @@ export interface ParkerenGeoVerkooppunt_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDateSellingPoint
-  * 
-  * Datum waarop een bepaald verkooppunt niet meer actief is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `enddatesellingpoint`
-  */
+   * ### EndDateSellingPoint
+   *
+   * Datum waarop een bepaald verkooppunt niet meer actief is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `enddatesellingpoint`
+   */
   Enddatesellingpoint: Field("enddatesellingpoint", DataType.Text),
   /**
-  * ### Location
-  * 
-  * De cordinaten van een verkooppunt.
-  *
-  * **Type**: Point
-  *
-  * **Database Column Name**: `location`
-  */
+   * ### Location
+   *
+   * De cordinaten van een verkooppunt.
+   *
+   * **Type**: Point
+   *
+   * **Database Column Name**: `location`
+   */
   Location: Field("location", DataType.Point),
   /**
-  * ### Location (address)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_address`
-  */
+   * ### Location (address)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_address`
+   */
   LocationAddress: Field("location_address", DataType.Text),
   /**
-  * ### Location (city)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_city`
-  */
+   * ### Location (city)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_city`
+   */
   LocationCity: Field("location_city", DataType.Text),
   /**
-  * ### Location (state)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_state`
-  */
+   * ### Location (state)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_state`
+   */
   LocationState: Field("location_state", DataType.Text),
   /**
-  * ### Location (zip)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_zip`
-  */
+   * ### Location (zip)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_zip`
+   */
   LocationZip: Field("location_zip", DataType.Text),
   /**
-  * ### SellingPointDesc
-  * 
-  * Omschrijving van een verkooppunt.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `sellingpointdesc`
-  */
+   * ### SellingPointDesc
+   *
+   * Omschrijving van een verkooppunt.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `sellingpointdesc`
+   */
   Sellingpointdesc: Field("sellingpointdesc", DataType.Text),
   /**
-  * ### SellingPointId
-  * 
-  * Identificatiecode van een verkooppunt. Het SellingPointId is numeriek en hoeft niet uniek te zijn. Een SellingPointId kan op meerdere locaties voorkomen, die samen een verkooppuntgroep vormen.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `sellingpointid`
-  */
+   * ### SellingPointId
+   *
+   * Identificatiecode van een verkooppunt. Het SellingPointId is numeriek en hoeft niet uniek te zijn. Een SellingPointId kan op meerdere locaties voorkomen, die samen een verkooppuntgroep vormen.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `sellingpointid`
+   */
   Sellingpointid: Field("sellingpointid", DataType.Number),
   /**
-  * ### StartDateSellingPoint
-  * 
-  * Datum vanaf wanneer een bepaald verkooppunt actief is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `startdatesellingpoint`
-  */
+   * ### StartDateSellingPoint
+   *
+   * Datum vanaf wanneer een bepaald verkooppunt actief is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `startdatesellingpoint`
+   */
   Startdatesellingpoint: Field("startdatesellingpoint", DataType.Text),
 };
 
@@ -224,7 +224,7 @@ export const Info = {
   provider_name: "ParkerenGeoVerkooppunt",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEO-VERKOOPPUNT/cgqw-pfbp",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/cgqw-pfbp",
-}
+};
 
 /**
  * ### Open Data Parkeren: GEO VERKOOPPUNT

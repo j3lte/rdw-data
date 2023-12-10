@@ -86,68 +86,71 @@ export interface GeconstateerdeGebreken_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Aantal gebreken geconstateerd
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_gebreken_geconstateerd`
-  */
+   * ### Aantal gebreken geconstateerd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_gebreken_geconstateerd`
+   */
   AantalGebrekenGeconstateerd: Field("aantal_gebreken_geconstateerd", DataType.Number),
   /**
-  * ### Gebrek identificatie
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `gebrek_identificatie`
-  */
+   * ### Gebrek identificatie
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `gebrek_identificatie`
+   */
   GebrekIdentificatie: Field("gebrek_identificatie", DataType.Text),
   /**
-  * ### Kenteken
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `kenteken`
-  */
+   * ### Kenteken
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `kenteken`
+   */
   Kenteken: Field("kenteken", DataType.Text),
   /**
-  * ### Meld datum door keuringsinstantie
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `meld_datum_door_keuringsinstantie`
-  */
+   * ### Meld datum door keuringsinstantie
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `meld_datum_door_keuringsinstantie`
+   */
   MeldDatumDoorKeuringsinstantie: Field("meld_datum_door_keuringsinstantie", DataType.Number),
   /**
-  * ### Meld datum door keuringsinstantie DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `meld_datum_door_keuringsinstantie_dt`
-  */
-  MeldDatumDoorKeuringsinstantieDt: Field("meld_datum_door_keuringsinstantie_dt", DataType.FloatingTimestamp),
+   * ### Meld datum door keuringsinstantie DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `meld_datum_door_keuringsinstantie_dt`
+   */
+  MeldDatumDoorKeuringsinstantieDt: Field(
+    "meld_datum_door_keuringsinstantie_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Meld tijd door keuringsinstantie
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `meld_tijd_door_keuringsinstantie`
-  */
+   * ### Meld tijd door keuringsinstantie
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `meld_tijd_door_keuringsinstantie`
+   */
   MeldTijdDoorKeuringsinstantie: Field("meld_tijd_door_keuringsinstantie", DataType.Number),
   /**
-  * ### Soort erkenning keuringsinstantie
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `soort_erkenning_keuringsinstantie`
-  */
+   * ### Soort erkenning keuringsinstantie
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `soort_erkenning_keuringsinstantie`
+   */
   SoortErkenningKeuringsinstantie: Field("soort_erkenning_keuringsinstantie", DataType.Text),
   /**
-  * ### Soort erkenning omschrijving
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `soort_erkenning_omschrijving`
-  */
+   * ### Soort erkenning omschrijving
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `soort_erkenning_omschrijving`
+   */
   SoortErkenningOmschrijving: Field("soort_erkenning_omschrijving", DataType.Text),
 };
 
@@ -168,7 +171,7 @@ export const Info = {
   provider_name: "GeconstateerdeGebreken",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/a34c-vvps",
-}
+};
 
 /**
  * ### Open Data RDW: Geconstateerde Gebreken

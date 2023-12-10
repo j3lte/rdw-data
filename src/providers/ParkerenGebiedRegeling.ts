@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenGebiedRegeling_ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenGebiedRegeling_ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ParkerenGebiedRegeling_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateAreaRegulation
-   * 
+   *
    * Einddatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een gebied.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenGebiedRegeling_ResponseData {
   enddatearearegulation?: string;
   /**
    * ### RegulationId
-   * 
+   *
    * Identificatiecode van een regeling.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ParkerenGebiedRegeling_ResponseData {
   regulationid?: string;
   /**
    * ### StartDateAreaRegulation
-   * 
+   *
    * Begindatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een parkeergebied of -faciliteit.
    *
    * **Type**: Text
@@ -75,54 +75,54 @@ export interface ParkerenGebiedRegeling_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDateAreaRegulation
-  * 
-  * Einddatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een gebied.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `enddatearearegulation`
-  */
+   * ### EndDateAreaRegulation
+   *
+   * Einddatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een gebied.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `enddatearearegulation`
+   */
   Enddatearearegulation: Field("enddatearearegulation", DataType.Text),
   /**
-  * ### RegulationId
-  * 
-  * Identificatiecode van een regeling.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `regulationid`
-  */
+   * ### RegulationId
+   *
+   * Identificatiecode van een regeling.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `regulationid`
+   */
   Regulationid: Field("regulationid", DataType.Text),
   /**
-  * ### StartDateAreaRegulation
-  * 
-  * Begindatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een parkeergebied of -faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `startdatearearegulation`
-  */
+   * ### StartDateAreaRegulation
+   *
+   * Begindatum en -tijd van de koppeling van een parkeer- of verblijfsregeling aan een parkeergebied of -faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `startdatearearegulation`
+   */
   Startdatearearegulation: Field("startdatearearegulation", DataType.Text),
 };
 
@@ -140,7 +140,7 @@ export const Info = {
   provider_name: "ParkerenGebiedRegeling",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED-REGELING/qtex-qwd8",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/qtex-qwd8",
-}
+};
 
 /**
  * ### Open Data Parkeren: GEBIED REGELING

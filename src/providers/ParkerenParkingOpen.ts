@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenParkingOpen_ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenParkingOpen_ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ParkerenParkingOpen_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndOfPeriod
-   * 
+   *
    * Einddatum en -tijd van een periode waarin een bepaalde parkeerfaciliteit is opengesteld.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenParkingOpen_ResponseData {
   endofperiod?: string;
   /**
    * ### ExitPossibleAllDay
-   * 
+   *
    * Indicator die aangeeft of uitrijden de hele dag mogelijk is bij een parkeergebied, -garage of -terrein.
    *
    * **Type**: Number
@@ -53,7 +53,7 @@ export interface ParkerenParkingOpen_ResponseData {
   exitpossibleallday?: string;
   /**
    * ### OpenAllYear
-   * 
+   *
    * Indicator die aangeeft of een parkeerfaciliteit het hele jaar open is of niet.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ParkerenParkingOpen_ResponseData {
   openallyear?: string;
   /**
    * ### PeriodName
-   * 
+   *
    * Naam die een bepaalde openstellingsperiode van een parkeergebied, -garage of -terrein aanduidt.
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ParkerenParkingOpen_ResponseData {
   periodname?: string;
   /**
    * ### StartOfPeriod
-   * 
+   *
    * Begindatum en -tijd van een periode waarin een bepaald parkeerfaciliteit is opengesteld.
    *
    * **Type**: Text
@@ -93,74 +93,74 @@ export interface ParkerenParkingOpen_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndOfPeriod
-  * 
-  * Einddatum en -tijd van een periode waarin een bepaalde parkeerfaciliteit is opengesteld.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `endofperiod`
-  */
+   * ### EndOfPeriod
+   *
+   * Einddatum en -tijd van een periode waarin een bepaalde parkeerfaciliteit is opengesteld.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `endofperiod`
+   */
   Endofperiod: Field("endofperiod", DataType.Text),
   /**
-  * ### ExitPossibleAllDay
-  * 
-  * Indicator die aangeeft of uitrijden de hele dag mogelijk is bij een parkeergebied, -garage of -terrein.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `exitpossibleallday`
-  */
+   * ### ExitPossibleAllDay
+   *
+   * Indicator die aangeeft of uitrijden de hele dag mogelijk is bij een parkeergebied, -garage of -terrein.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `exitpossibleallday`
+   */
   Exitpossibleallday: Field("exitpossibleallday", DataType.Number),
   /**
-  * ### OpenAllYear
-  * 
-  * Indicator die aangeeft of een parkeerfaciliteit het hele jaar open is of niet.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `openallyear`
-  */
+   * ### OpenAllYear
+   *
+   * Indicator die aangeeft of een parkeerfaciliteit het hele jaar open is of niet.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `openallyear`
+   */
   Openallyear: Field("openallyear", DataType.Number),
   /**
-  * ### PeriodName
-  * 
-  * Naam die een bepaalde openstellingsperiode van een parkeergebied, -garage of -terrein aanduidt.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `periodname`
-  */
+   * ### PeriodName
+   *
+   * Naam die een bepaalde openstellingsperiode van een parkeergebied, -garage of -terrein aanduidt.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `periodname`
+   */
   Periodname: Field("periodname", DataType.Text),
   /**
-  * ### StartOfPeriod
-  * 
-  * Begindatum en -tijd van een periode waarin een bepaald parkeerfaciliteit is opengesteld.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `startofperiod`
-  */
+   * ### StartOfPeriod
+   *
+   * Begindatum en -tijd van een periode waarin een bepaald parkeerfaciliteit is opengesteld.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `startofperiod`
+   */
   Startofperiod: Field("startofperiod", DataType.Text),
 };
 
@@ -180,7 +180,7 @@ export const Info = {
   provider_name: "ParkerenParkingOpen",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-OPEN/figd-gux7",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/figd-gux7",
-}
+};
 
 /**
  * ### Open Data Parkeren: PARKING OPEN

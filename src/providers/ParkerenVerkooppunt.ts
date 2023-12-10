@@ -22,7 +22,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenVerkooppunt_ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -30,7 +30,7 @@ export interface ParkerenVerkooppunt_ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -38,7 +38,7 @@ export interface ParkerenVerkooppunt_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateSellingPoint
-   * 
+   *
    * Eerste dag waarop een bepaald verkooppunt niet meer actief is.
    *
    * **Type**: Number
@@ -46,7 +46,7 @@ export interface ParkerenVerkooppunt_ResponseData {
   enddatesellingpoint?: string;
   /**
    * ### SellingPointDesc
-   * 
+   *
    * Omschrijving van een verkooppunt.
    *
    * **Type**: Text
@@ -54,7 +54,7 @@ export interface ParkerenVerkooppunt_ResponseData {
   sellingpointdesc?: string;
   /**
    * ### SellingPointId
-   * 
+   *
    * Identificatie van een verkooppunt, zoals afgesproken tussen providers. De code is numeriek (ivm gegevensinvoer telefoon). De nummers zijn maximaal 6-cijferig (vb 9312, 13199), maar kunnen in de toekomst langer worden. Het behoeven niet altijd parkeerautomaat-identificaties te zijn: ook losse nummers op bebording komen voor. De nummers zijn niet uniek: eenzelfde SellinPointId kan op meer automaten of borden zijn weergegeven, die dan een verkooppuntgroep vormen.
    *
    * **Type**: Number
@@ -62,7 +62,7 @@ export interface ParkerenVerkooppunt_ResponseData {
   sellingpointid?: string;
   /**
    * ### SellingPointNumber
-   * 
+   *
    * Identificatie van een verkooppunt.
    *
    * **Type**: Number
@@ -70,7 +70,7 @@ export interface ParkerenVerkooppunt_ResponseData {
   sellingpointnumber?: string;
   /**
    * ### StartDateSellingPoint
-   * 
+   *
    * Datum vanaf wanneer een bepaald verkooppunt actief is
    *
    * **Type**: Number
@@ -94,74 +94,74 @@ export interface ParkerenVerkooppunt_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDateSellingPoint
-  * 
-  * Eerste dag waarop een bepaald verkooppunt niet meer actief is.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `enddatesellingpoint`
-  */
+   * ### EndDateSellingPoint
+   *
+   * Eerste dag waarop een bepaald verkooppunt niet meer actief is.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `enddatesellingpoint`
+   */
   Enddatesellingpoint: Field("enddatesellingpoint", DataType.Number),
   /**
-  * ### SellingPointDesc
-  * 
-  * Omschrijving van een verkooppunt.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `sellingpointdesc`
-  */
+   * ### SellingPointDesc
+   *
+   * Omschrijving van een verkooppunt.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `sellingpointdesc`
+   */
   Sellingpointdesc: Field("sellingpointdesc", DataType.Text),
   /**
-  * ### SellingPointId
-  * 
-  * Identificatie van een verkooppunt, zoals afgesproken tussen providers. De code is numeriek (ivm gegevensinvoer telefoon). De nummers zijn maximaal 6-cijferig (vb 9312, 13199), maar kunnen in de toekomst langer worden. Het behoeven niet altijd parkeerautomaat-identificaties te zijn: ook losse nummers op bebording komen voor. De nummers zijn niet uniek: eenzelfde SellinPointId kan op meer automaten of borden zijn weergegeven, die dan een verkooppuntgroep vormen.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `sellingpointid`
-  */
+   * ### SellingPointId
+   *
+   * Identificatie van een verkooppunt, zoals afgesproken tussen providers. De code is numeriek (ivm gegevensinvoer telefoon). De nummers zijn maximaal 6-cijferig (vb 9312, 13199), maar kunnen in de toekomst langer worden. Het behoeven niet altijd parkeerautomaat-identificaties te zijn: ook losse nummers op bebording komen voor. De nummers zijn niet uniek: eenzelfde SellinPointId kan op meer automaten of borden zijn weergegeven, die dan een verkooppuntgroep vormen.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `sellingpointid`
+   */
   Sellingpointid: Field("sellingpointid", DataType.Number),
   /**
-  * ### SellingPointNumber
-  * 
-  * Identificatie van een verkooppunt.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `sellingpointnumber`
-  */
+   * ### SellingPointNumber
+   *
+   * Identificatie van een verkooppunt.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `sellingpointnumber`
+   */
   Sellingpointnumber: Field("sellingpointnumber", DataType.Number),
   /**
-  * ### StartDateSellingPoint
-  * 
-  * Datum vanaf wanneer een bepaald verkooppunt actief is
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `startdatesellingpoint`
-  */
+   * ### StartDateSellingPoint
+   *
+   * Datum vanaf wanneer een bepaald verkooppunt actief is
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `startdatesellingpoint`
+   */
   Startdatesellingpoint: Field("startdatesellingpoint", DataType.Number),
 };
 
@@ -181,7 +181,7 @@ export const Info = {
   provider_name: "ParkerenVerkooppunt",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-VERKOOPPUNT/fk68-nf2y",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/fk68-nf2y",
-}
+};
 
 /**
  * ### Open Data Parkeren: VERKOOPPUNT

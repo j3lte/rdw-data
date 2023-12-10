@@ -86,68 +86,68 @@ export interface Gebreken_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Einddatum gebrek
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `einddatum_gebrek`
-  */
+   * ### Einddatum gebrek
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `einddatum_gebrek`
+   */
   EinddatumGebrek: Field("einddatum_gebrek", DataType.Number),
   /**
-  * ### Einddatum gebrek DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `einddatum_gebrek_dt`
-  */
+   * ### Einddatum gebrek DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `einddatum_gebrek_dt`
+   */
   EinddatumGebrekDt: Field("einddatum_gebrek_dt", DataType.FloatingTimestamp),
   /**
-  * ### Gebrek artikel nummer
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `gebrek_artikel_nummer`
-  */
+   * ### Gebrek artikel nummer
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `gebrek_artikel_nummer`
+   */
   GebrekArtikelNummer: Field("gebrek_artikel_nummer", DataType.Text),
   /**
-  * ### Gebrek identificatie
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `gebrek_identificatie`
-  */
+   * ### Gebrek identificatie
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `gebrek_identificatie`
+   */
   GebrekIdentificatie: Field("gebrek_identificatie", DataType.Text),
   /**
-  * ### Gebrek omschrijving
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `gebrek_omschrijving`
-  */
+   * ### Gebrek omschrijving
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `gebrek_omschrijving`
+   */
   GebrekOmschrijving: Field("gebrek_omschrijving", DataType.Text),
   /**
-  * ### Gebrek paragraaf nummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `gebrek_paragraaf_nummer`
-  */
+   * ### Gebrek paragraaf nummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `gebrek_paragraaf_nummer`
+   */
   GebrekParagraafNummer: Field("gebrek_paragraaf_nummer", DataType.Number),
   /**
-  * ### Ingangsdatum gebrek
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `ingangsdatum_gebrek`
-  */
+   * ### Ingangsdatum gebrek
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `ingangsdatum_gebrek`
+   */
   IngangsdatumGebrek: Field("ingangsdatum_gebrek", DataType.Number),
   /**
-  * ### Ingangsdatum gebrek DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `ingangsdatum_gebrek_dt`
-  */
+   * ### Ingangsdatum gebrek DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `ingangsdatum_gebrek_dt`
+   */
   IngangsdatumGebrekDt: Field("ingangsdatum_gebrek_dt", DataType.FloatingTimestamp),
 };
 
@@ -168,7 +168,7 @@ export const Info = {
   provider_name: "Gebreken",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Gebreken/hx2c-gt7k",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/hx2c-gt7k",
-}
+};
 
 /**
  * ### Open Data RDW: Gebreken

@@ -70,52 +70,52 @@ export interface UitvoeringGebruiksgegevensPerUitgave_ResponseData {
  */
 export const Fields = {
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Uitvgavenummer verbruikboek
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `uitvgavenummer_verbruikboek`
-  */
+   * ### Uitvgavenummer verbruikboek
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `uitvgavenummer_verbruikboek`
+   */
   UitvgavenummerVerbruikboek: Field("uitvgavenummer_verbruikboek", DataType.Text),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
   /**
-  * ### Verbruikcategorie uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `verbruikcategorie_uitvoering`
-  */
+   * ### Verbruikcategorie uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `verbruikcategorie_uitvoering`
+   */
   VerbruikcategorieUitvoering: Field("verbruikcategorie_uitvoering", DataType.Text),
 };
 
@@ -132,9 +132,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave",
   provider_name: "UitvoeringGebruiksgegevensPerUitgave",
-  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx",
+  url:
+    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/2822-t8sx",
-}
+};
 
 /**
  * ### Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave
@@ -163,13 +164,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<UitvoeringGebruiksgegevensPerUitgave_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<UitvoeringGebruiksgegevensPerUitgave_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const UitvoeringGebruiksgegevensPerUitgave: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<UitvoeringGebruiksgegevensPerUitgave_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<UitvoeringGebruiksgegevensPerUitgave_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

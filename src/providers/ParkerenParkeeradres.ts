@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenParkeeradres_ResponseData {
   /**
    * ### Country
-   * 
+   *
    * Landnaam.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenParkeeradres_ResponseData {
   country?: string;
   /**
    * ### EmailAddress
-   * 
+   *
    * Emailadres.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ParkerenParkeeradres_ResponseData {
   emailaddress?: string;
   /**
    * ### FaxNumber
-   * 
+   *
    * Faxnummer.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenParkeeradres_ResponseData {
   faxnumber?: string;
   /**
    * ### HouseNumber
-   * 
+   *
    * Huisnummer.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ParkerenParkeeradres_ResponseData {
   housenumber?: string;
   /**
    * ### ParkingAddressReference
-   * 
+   *
    * Verwijzing naar een gebiedsbeheerder of een in- of uitgang waarbij een adres is geregistreerd. De indicatoren in ParkingAddressReferenceType bepalen welke van de mogelijkheden van toepassing is.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ParkerenParkeeradres_ResponseData {
   parkingaddressreference?: string;
   /**
    * ### ParkingAddressReferenceType
-   * 
+   *
    * Een aanduiding of de PARK-ADRES-REF de sleutel van een gebiedsbeheerder of een in- of uitgang bevat. GEB: gebiedsbeheerder. I-O: in- of uitgang.
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ParkerenParkeeradres_ResponseData {
   parkingaddressreferencetype?: string;
   /**
    * ### ParkingAddressType
-   * 
+   *
    * Het soort adres dat een parkeer adres typeert. Mogelijke waarden: A: Administratief adres. F: feitelijk adres. P: postadres.
    *
    * **Type**: Text
@@ -77,7 +77,7 @@ export interface ParkerenParkeeradres_ResponseData {
   parkingaddresstype?: string;
   /**
    * ### Place
-   * 
+   *
    * Plaatsnaam.
    *
    * **Type**: Text
@@ -85,7 +85,7 @@ export interface ParkerenParkeeradres_ResponseData {
   place?: string;
   /**
    * ### Province
-   * 
+   *
    * Provincie of vergelijkbare indeling in het buitenland.
    *
    * **Type**: Text
@@ -93,7 +93,7 @@ export interface ParkerenParkeeradres_ResponseData {
   province?: string;
   /**
    * ### StreetName
-   * 
+   *
    * Straatnaam.
    *
    * **Type**: Text
@@ -101,7 +101,7 @@ export interface ParkerenParkeeradres_ResponseData {
   streetname?: string;
   /**
    * ### TelephoneNumber
-   * 
+   *
    * Telefoonnummer.
    *
    * **Type**: Text
@@ -109,7 +109,7 @@ export interface ParkerenParkeeradres_ResponseData {
   telephonenumber?: string;
   /**
    * ### ZipCode
-   * 
+   *
    * Postcode.
    *
    * **Type**: Text
@@ -138,124 +138,124 @@ export interface ParkerenParkeeradres_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Country
-  * 
-  * Landnaam.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `country`
-  */
+   * ### Country
+   *
+   * Landnaam.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `country`
+   */
   Country: Field("country", DataType.Text),
   /**
-  * ### EmailAddress
-  * 
-  * Emailadres.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `emailaddress`
-  */
+   * ### EmailAddress
+   *
+   * Emailadres.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `emailaddress`
+   */
   Emailaddress: Field("emailaddress", DataType.Text),
   /**
-  * ### FaxNumber
-  * 
-  * Faxnummer.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `faxnumber`
-  */
+   * ### FaxNumber
+   *
+   * Faxnummer.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `faxnumber`
+   */
   Faxnumber: Field("faxnumber", DataType.Text),
   /**
-  * ### HouseNumber
-  * 
-  * Huisnummer.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `housenumber`
-  */
+   * ### HouseNumber
+   *
+   * Huisnummer.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `housenumber`
+   */
   Housenumber: Field("housenumber", DataType.Text),
   /**
-  * ### ParkingAddressReference
-  * 
-  * Verwijzing naar een gebiedsbeheerder of een in- of uitgang waarbij een adres is geregistreerd. De indicatoren in ParkingAddressReferenceType bepalen welke van de mogelijkheden van toepassing is.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `parkingaddressreference`
-  */
+   * ### ParkingAddressReference
+   *
+   * Verwijzing naar een gebiedsbeheerder of een in- of uitgang waarbij een adres is geregistreerd. De indicatoren in ParkingAddressReferenceType bepalen welke van de mogelijkheden van toepassing is.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `parkingaddressreference`
+   */
   Parkingaddressreference: Field("parkingaddressreference", DataType.Number),
   /**
-  * ### ParkingAddressReferenceType
-  * 
-  * Een aanduiding of de PARK-ADRES-REF de sleutel van een gebiedsbeheerder of een in- of uitgang bevat. GEB: gebiedsbeheerder. I-O: in- of uitgang.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `parkingaddressreferencetype`
-  */
+   * ### ParkingAddressReferenceType
+   *
+   * Een aanduiding of de PARK-ADRES-REF de sleutel van een gebiedsbeheerder of een in- of uitgang bevat. GEB: gebiedsbeheerder. I-O: in- of uitgang.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `parkingaddressreferencetype`
+   */
   Parkingaddressreferencetype: Field("parkingaddressreferencetype", DataType.Text),
   /**
-  * ### ParkingAddressType
-  * 
-  * Het soort adres dat een parkeer adres typeert. Mogelijke waarden: A: Administratief adres. F: feitelijk adres. P: postadres.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `parkingaddresstype`
-  */
+   * ### ParkingAddressType
+   *
+   * Het soort adres dat een parkeer adres typeert. Mogelijke waarden: A: Administratief adres. F: feitelijk adres. P: postadres.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `parkingaddresstype`
+   */
   Parkingaddresstype: Field("parkingaddresstype", DataType.Text),
   /**
-  * ### Place
-  * 
-  * Plaatsnaam.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `place`
-  */
+   * ### Place
+   *
+   * Plaatsnaam.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `place`
+   */
   Place: Field("place", DataType.Text),
   /**
-  * ### Province
-  * 
-  * Provincie of vergelijkbare indeling in het buitenland.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `province`
-  */
+   * ### Province
+   *
+   * Provincie of vergelijkbare indeling in het buitenland.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `province`
+   */
   Province: Field("province", DataType.Text),
   /**
-  * ### StreetName
-  * 
-  * Straatnaam.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `streetname`
-  */
+   * ### StreetName
+   *
+   * Straatnaam.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `streetname`
+   */
   Streetname: Field("streetname", DataType.Text),
   /**
-  * ### TelephoneNumber
-  * 
-  * Telefoonnummer.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `telephonenumber`
-  */
+   * ### TelephoneNumber
+   *
+   * Telefoonnummer.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `telephonenumber`
+   */
   Telephonenumber: Field("telephonenumber", DataType.Text),
   /**
-  * ### ZipCode
-  * 
-  * Postcode.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `zipcode`
-  */
+   * ### ZipCode
+   *
+   * Postcode.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `zipcode`
+   */
   Zipcode: Field("zipcode", DataType.Text),
 };
 
@@ -280,7 +280,7 @@ export const Info = {
   provider_name: "ParkerenParkeeradres",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERADRES/ygq4-hh5q",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ygq4-hh5q",
-}
+};
 
 /**
  * ### Open Data Parkeren: PARKEERADRES

@@ -65,44 +65,44 @@ export interface ProductenCatalogus_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Eenheid
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eenheid`
-  */
+   * ### Eenheid
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eenheid`
+   */
   Eenheid: Field("eenheid", DataType.Text),
   /**
-  * ### Omschrijving
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `omschrijving`
-  */
+   * ### Omschrijving
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `omschrijving`
+   */
   Omschrijving: Field("omschrijving", DataType.Text),
   /**
-  * ### Staatscourant indeling
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `staatscourant_indeling`
-  */
+   * ### Staatscourant indeling
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `staatscourant_indeling`
+   */
   StaatscourantIndeling: Field("staatscourant_indeling", DataType.Text),
   /**
-  * ### Tarief
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `tarief`
-  */
+   * ### Tarief
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `tarief`
+   */
   Tarief: Field("tarief", DataType.Text),
   /**
-  * ### Tariefclustering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `tariefclustering`
-  */
+   * ### Tariefclustering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `tariefclustering`
+   */
   Tariefclustering: Field("tariefclustering", DataType.Text),
 };
 
@@ -120,7 +120,7 @@ export const Info = {
   provider_name: "ProductenCatalogus",
   url: "https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/v23s-d6km",
-}
+};
 
 /**
  * ### Open Data RDW: Producten Catalogus

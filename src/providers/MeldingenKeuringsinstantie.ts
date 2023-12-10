@@ -107,92 +107,95 @@ export interface MeldingenKeuringsinstantie_ResponseData {
  */
 export const Fields = {
   /**
-  * ### API Gebrek beschrijving
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_gebrek_beschrijving`
-  */
+   * ### API Gebrek beschrijving
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_gebrek_beschrijving`
+   */
   ApiGebrekBeschrijving: Field("api_gebrek_beschrijving", DataType.Text),
   /**
-  * ### API Gebrek constateringen
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_gebrek_constateringen`
-  */
+   * ### API Gebrek constateringen
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_gebrek_constateringen`
+   */
   ApiGebrekConstateringen: Field("api_gebrek_constateringen", DataType.Text),
   /**
-  * ### Kenteken
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `kenteken`
-  */
+   * ### Kenteken
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `kenteken`
+   */
   Kenteken: Field("kenteken", DataType.Text),
   /**
-  * ### Meld datum door keuringsinstantie
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `meld_datum_door_keuringsinstantie`
-  */
+   * ### Meld datum door keuringsinstantie
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `meld_datum_door_keuringsinstantie`
+   */
   MeldDatumDoorKeuringsinstantie: Field("meld_datum_door_keuringsinstantie", DataType.Number),
   /**
-  * ### Meld datum door keuringsinstantie DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `meld_datum_door_keuringsinstantie_dt`
-  */
-  MeldDatumDoorKeuringsinstantieDt: Field("meld_datum_door_keuringsinstantie_dt", DataType.FloatingTimestamp),
+   * ### Meld datum door keuringsinstantie DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `meld_datum_door_keuringsinstantie_dt`
+   */
+  MeldDatumDoorKeuringsinstantieDt: Field(
+    "meld_datum_door_keuringsinstantie_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Meld tijd door keuringsinstantie
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `meld_tijd_door_keuringsinstantie`
-  */
+   * ### Meld tijd door keuringsinstantie
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `meld_tijd_door_keuringsinstantie`
+   */
   MeldTijdDoorKeuringsinstantie: Field("meld_tijd_door_keuringsinstantie", DataType.Number),
   /**
-  * ### Soort erkenning keuringsinstantie
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `soort_erkenning_keuringsinstantie`
-  */
+   * ### Soort erkenning keuringsinstantie
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `soort_erkenning_keuringsinstantie`
+   */
   SoortErkenningKeuringsinstantie: Field("soort_erkenning_keuringsinstantie", DataType.Text),
   /**
-  * ### Soort erkenning omschrijving
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `soort_erkenning_omschrijving`
-  */
+   * ### Soort erkenning omschrijving
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `soort_erkenning_omschrijving`
+   */
   SoortErkenningOmschrijving: Field("soort_erkenning_omschrijving", DataType.Text),
   /**
-  * ### Soort melding ki omschrijving
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `soort_melding_ki_omschrijving`
-  */
+   * ### Soort melding ki omschrijving
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `soort_melding_ki_omschrijving`
+   */
   SoortMeldingKiOmschrijving: Field("soort_melding_ki_omschrijving", DataType.Text),
   /**
-  * ### Vervaldatum keuring
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `vervaldatum_keuring`
-  */
+   * ### Vervaldatum keuring
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `vervaldatum_keuring`
+   */
   VervaldatumKeuring: Field("vervaldatum_keuring", DataType.Number),
   /**
-  * ### Vervaldatum keuring DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `vervaldatum_keuring_dt`
-  */
+   * ### Vervaldatum keuring DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `vervaldatum_keuring_dt`
+   */
   VervaldatumKeuringDt: Field("vervaldatum_keuring_dt", DataType.FloatingTimestamp),
 };
 
@@ -216,7 +219,7 @@ export const Info = {
   provider_name: "MeldingenKeuringsinstantie",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/sgfe-77wx",
-}
+};
 
 /**
  * ### Open Data RDW: Meldingen Keuringsinstantie

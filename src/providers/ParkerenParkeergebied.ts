@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenParkeergebied_ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenParkeergebied_ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ParkerenParkeergebied_ResponseData {
   areamanagerid?: string;
   /**
    * ### AreaName
-   * 
+   *
    * Een naam die door een externe partij gebruikt kan worden om een bepaald parkeergebied aan te duiden.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenParkeergebied_ResponseData {
   areaname?: string;
   /**
    * ### UUID
-   * 
+   *
    * Een UUID die een parkeergebied, -garage of -terrein identificeert.
    *
    * **Type**: Text
@@ -66,44 +66,44 @@ export interface ParkerenParkeergebied_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### AreaName
-  * 
-  * Een naam die door een externe partij gebruikt kan worden om een bepaald parkeergebied aan te duiden.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaname`
-  */
+   * ### AreaName
+   *
+   * Een naam die door een externe partij gebruikt kan worden om een bepaald parkeergebied aan te duiden.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaname`
+   */
   Areaname: Field("areaname", DataType.Text),
   /**
-  * ### UUID
-  * 
-  * Een UUID die een parkeergebied, -garage of -terrein identificeert.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `uuid`
-  */
+   * ### UUID
+   *
+   * Een UUID die een parkeergebied, -garage of -terrein identificeert.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `uuid`
+   */
   Uuid: Field("uuid", DataType.Text),
 };
 
@@ -120,7 +120,7 @@ export const Info = {
   provider_name: "ParkerenParkeergebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED/mz4f-59fw",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mz4f-59fw",
-}
+};
 
 /**
  * ### Open Data Parkeren: PARKEERGEBIED

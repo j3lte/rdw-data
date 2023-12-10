@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenGeometrieGebied_ResponseData {
   /**
    * ### GeoDataAsText
-   * 
+   *
    * Geometrie van een parkeergebied of -faciliteit, in cordinatenstelsel WGS84 (EPSG: 4326)
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenGeometrieGebied_ResponseData {
   areageometryastext?: string;
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ParkerenGeometrieGebied_ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ParkerenGeometrieGebied_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateArea
-   * 
+   *
    * Datum waarop een parkeergebied of -faciliteit niet meer geldig is.
    *
    * **Type**: Calendar date
@@ -53,7 +53,7 @@ export interface ParkerenGeometrieGebied_ResponseData {
   enddatearea?: string;
   /**
    * ### StartDateArea
-   * 
+   *
    * Datum vanaf wanneer een parkeergebied of -faciliteit geldig is.
    *
    * **Type**: Calendar date
@@ -75,54 +75,54 @@ export interface ParkerenGeometrieGebied_ResponseData {
  */
 export const Fields = {
   /**
-  * ### GeoDataAsText
-  * 
-  * Geometrie van een parkeergebied of -faciliteit, in cordinatenstelsel WGS84 (EPSG: 4326)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areageometryastext`
-  */
+   * ### GeoDataAsText
+   *
+   * Geometrie van een parkeergebied of -faciliteit, in cordinatenstelsel WGS84 (EPSG: 4326)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areageometryastext`
+   */
   Areageometryastext: Field("areageometryastext", DataType.Text),
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDateArea
-  * 
-  * Datum waarop een parkeergebied of -faciliteit niet meer geldig is.
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `enddatearea`
-  */
+   * ### EndDateArea
+   *
+   * Datum waarop een parkeergebied of -faciliteit niet meer geldig is.
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `enddatearea`
+   */
   Enddatearea: Field("enddatearea", DataType.FloatingTimestamp),
   /**
-  * ### StartDateArea
-  * 
-  * Datum vanaf wanneer een parkeergebied of -faciliteit geldig is.
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `startdatearea`
-  */
+   * ### StartDateArea
+   *
+   * Datum vanaf wanneer een parkeergebied of -faciliteit geldig is.
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `startdatearea`
+   */
   Startdatearea: Field("startdatearea", DataType.FloatingTimestamp),
 };
 
@@ -140,7 +140,7 @@ export const Info = {
   provider_name: "ParkerenGeometrieGebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEOMETRIE-GEBIED/nsk3-v9n7",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nsk3-v9n7",
-}
+};
 
 /**
  * ### Open Data Parkeren: GEOMETRIE GEBIED

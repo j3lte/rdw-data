@@ -43,7 +43,7 @@ export interface TerugroepActie_ResponseData {
   api_terugroep_voertuig_merk_type?: string;
   /**
    * ### Beschrijving van het herstel
-   * 
+   *
    * Hier vindt u informatie over wat er moet gebeuren om het defect te herstellen.
    *
    * **Type**: Text
@@ -51,7 +51,7 @@ export interface TerugroepActie_ResponseData {
   beschrijving_van_het_herstel?: string;
   /**
    * ### Categorie defect
-   * 
+   *
    * Deze omschrijving geeft op hoofdlijnen aan bij welk onderdeel van het voertuig een defect is geconstateerd.
    *
    * **Type**: Text
@@ -107,7 +107,7 @@ export interface TerugroepActie_ResponseData {
   datum_melding_bij_rdw_dt?: string;
   /**
    * ### Materile gevolgen
-   * 
+   *
    * Uitleg over de gevolgen van het defect die u mogelijk merkt als u het voertuig gebruikt.
    *
    * **Type**: Text
@@ -115,7 +115,7 @@ export interface TerugroepActie_ResponseData {
   materi_le_gevolgen?: string;
   /**
    * ### Meer informatie op internet
-   * 
+   *
    * Hier vindt u, indien aan de RDW doorgegeven, de website van producent of distributeur met meer informatie over de terugroepactie.
    *
    * **Type**: Text
@@ -123,7 +123,7 @@ export interface TerugroepActie_ResponseData {
   meer_informatie_op_internet?: string;
   /**
    * ### Meer informatie via telefoonnummer
-   * 
+   *
    * Hier vindt u, indien aan de RDW doorgegeven, het telefoonnummer van de producent of distributeur waarmee u contact kunt opnemen.
    *
    * **Type**: Text
@@ -131,7 +131,7 @@ export interface TerugroepActie_ResponseData {
   meer_informatie_via_telefoonnummer?: string;
   /**
    * ### Meldende producent/distributeur
-   * 
+   *
    * De producent of distributeur die de RDW heeft genformeerd over een door de producent georganiseerde terugroepactie.
    *
    * **Type**: Text
@@ -145,7 +145,7 @@ export interface TerugroepActie_ResponseData {
   nationaal_opgegeven_aantal_voertuigen_terugroepactie?: string;
   /**
    * ### Omschrijving defect
-   * 
+   *
    * De omschrijving van het defect, waarvoor deze terugroepactie is georganiseerd.
    *
    * **Type**: Text
@@ -153,7 +153,7 @@ export interface TerugroepActie_ResponseData {
   omschrijving_defect?: string;
   /**
    * ### Opmerkingen RDW
-   * 
+   *
    * Hier worden eventuele extra opmerkingen vanuit de RDW over de terugroepactie vermeld.
    *
    * **Type**: Text
@@ -161,7 +161,7 @@ export interface TerugroepActie_ResponseData {
   opmerkingen_rdw?: string;
   /**
    * ### Publicatiedatum RDW
-   * 
+   *
    * De datum waarop de RDW de terugroepactie in het terugroepregister heeft gepubliceerd.
    *
    * **Type**: Number
@@ -175,7 +175,7 @@ export interface TerugroepActie_ResponseData {
   publicatiedatum_rdw_dt?: string;
   /**
    * ### Referentiecode producent
-   * 
+   *
    * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
    *
    * **Type**: Text
@@ -183,7 +183,7 @@ export interface TerugroepActie_ResponseData {
   referentiecode_producent?: string;
   /**
    * ### Referentiecode RDW
-   * 
+   *
    * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
    *
    * **Type**: Text
@@ -239,243 +239,252 @@ export interface TerugroepActie_ResponseData {
  */
 export const Fields = {
   /**
-  * ### API Terugroep_actie_risico
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_terugroep_actie_risico`
-  */
+   * ### API Terugroep_actie_risico
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_terugroep_actie_risico`
+   */
   ApiTerugroepActieRisico: Field("api_terugroep_actie_risico", DataType.Text),
   /**
-  * ### API Terugroep_ actie_status
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_terugroep_actie_status`
-  */
+   * ### API Terugroep_ actie_status
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_terugroep_actie_status`
+   */
   ApiTerugroepActieStatus: Field("api_terugroep_actie_status", DataType.Text),
   /**
-  * ### API Terugroep_infomeren_eigenaar
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_terugroep_infomeren_eigenaar`
-  */
+   * ### API Terugroep_infomeren_eigenaar
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_terugroep_infomeren_eigenaar`
+   */
   ApiTerugroepInfomerenEigenaar: Field("api_terugroep_infomeren_eigenaar", DataType.Text),
   /**
-  * ### API Terugroep_voertuig_merk_type
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_terugroep_voertuig_merk_type`
-  */
+   * ### API Terugroep_voertuig_merk_type
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_terugroep_voertuig_merk_type`
+   */
   ApiTerugroepVoertuigMerkType: Field("api_terugroep_voertuig_merk_type", DataType.Text),
   /**
-  * ### Beschrijving van het herstel
-  * 
-  * Hier vindt u informatie over wat er moet gebeuren om het defect te herstellen.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `beschrijving_van_het_herstel`
-  */
+   * ### Beschrijving van het herstel
+   *
+   * Hier vindt u informatie over wat er moet gebeuren om het defect te herstellen.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `beschrijving_van_het_herstel`
+   */
   BeschrijvingVanHetHerstel: Field("beschrijving_van_het_herstel", DataType.Text),
   /**
-  * ### Categorie defect
-  * 
-  * Deze omschrijving geeft op hoofdlijnen aan bij welk onderdeel van het voertuig een defect is geconstateerd.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `categorie_defect`
-  */
+   * ### Categorie defect
+   *
+   * Deze omschrijving geeft op hoofdlijnen aan bij welk onderdeel van het voertuig een defect is geconstateerd.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `categorie_defect`
+   */
   CategorieDefect: Field("categorie_defect", DataType.Text),
   /**
-  * ### Datum aankondiging producent
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `datum_aankondiging_producent`
-  */
+   * ### Datum aankondiging producent
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `datum_aankondiging_producent`
+   */
   DatumAankondigingProducent: Field("datum_aankondiging_producent", DataType.Number),
   /**
-  * ### Datum aankondiging producent_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `datum_aankondiging_producent_dt`
-  */
-  DatumAankondigingProducentDt: Field("datum_aankondiging_producent_dt", DataType.FloatingTimestamp),
+   * ### Datum aankondiging producent_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `datum_aankondiging_producent_dt`
+   */
+  DatumAankondigingProducentDt: Field(
+    "datum_aankondiging_producent_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Datum eigenaren genformeerd
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `datum_eigenaren_ge_nformeerd`
-  */
+   * ### Datum eigenaren genformeerd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `datum_eigenaren_ge_nformeerd`
+   */
   DatumEigenarenGeNformeerd: Field("datum_eigenaren_ge_nformeerd", DataType.Number),
   /**
-  * ### Datum eigenaren genformeerd_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `datum_eigenaren_ge_nformeerd_dt`
-  */
+   * ### Datum eigenaren genformeerd_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `datum_eigenaren_ge_nformeerd_dt`
+   */
   DatumEigenarenGeNformeerdDt: Field("datum_eigenaren_ge_nformeerd_dt", DataType.FloatingTimestamp),
   /**
-  * ### Datum informeren eigenaar
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `datum_informeren_eigenaar`
-  */
+   * ### Datum informeren eigenaar
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `datum_informeren_eigenaar`
+   */
   DatumInformerenEigenaar: Field("datum_informeren_eigenaar", DataType.Number),
   /**
-  * ### Datum informeren eigenaar_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `datum_informeren_eigenaar_dt`
-  */
+   * ### Datum informeren eigenaar_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `datum_informeren_eigenaar_dt`
+   */
   DatumInformerenEigenaarDt: Field("datum_informeren_eigenaar_dt", DataType.FloatingTimestamp),
   /**
-  * ### Datum melding bij RDW
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `datum_melding_bij_rdw`
-  */
+   * ### Datum melding bij RDW
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `datum_melding_bij_rdw`
+   */
   DatumMeldingBijRdw: Field("datum_melding_bij_rdw", DataType.Number),
   /**
-  * ### Datum melding bij RDW_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `datum_melding_bij_rdw_dt`
-  */
+   * ### Datum melding bij RDW_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `datum_melding_bij_rdw_dt`
+   */
   DatumMeldingBijRdwDt: Field("datum_melding_bij_rdw_dt", DataType.FloatingTimestamp),
   /**
-  * ### Materile gevolgen
-  * 
-  * Uitleg over de gevolgen van het defect die u mogelijk merkt als u het voertuig gebruikt.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `materi_le_gevolgen`
-  */
+   * ### Materile gevolgen
+   *
+   * Uitleg over de gevolgen van het defect die u mogelijk merkt als u het voertuig gebruikt.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `materi_le_gevolgen`
+   */
   MateriLeGevolgen: Field("materi_le_gevolgen", DataType.Text),
   /**
-  * ### Meer informatie op internet
-  * 
-  * Hier vindt u, indien aan de RDW doorgegeven, de website van producent of distributeur met meer informatie over de terugroepactie.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `meer_informatie_op_internet`
-  */
+   * ### Meer informatie op internet
+   *
+   * Hier vindt u, indien aan de RDW doorgegeven, de website van producent of distributeur met meer informatie over de terugroepactie.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `meer_informatie_op_internet`
+   */
   MeerInformatieOpInternet: Field("meer_informatie_op_internet", DataType.Text),
   /**
-  * ### Meer informatie via telefoonnummer
-  * 
-  * Hier vindt u, indien aan de RDW doorgegeven, het telefoonnummer van de producent of distributeur waarmee u contact kunt opnemen.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `meer_informatie_via_telefoonnummer`
-  */
+   * ### Meer informatie via telefoonnummer
+   *
+   * Hier vindt u, indien aan de RDW doorgegeven, het telefoonnummer van de producent of distributeur waarmee u contact kunt opnemen.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `meer_informatie_via_telefoonnummer`
+   */
   MeerInformatieViaTelefoonnummer: Field("meer_informatie_via_telefoonnummer", DataType.Text),
   /**
-  * ### Meldende producent/distributeur
-  * 
-  * De producent of distributeur die de RDW heeft genformeerd over een door de producent georganiseerde terugroepactie.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `meldende_producent_distributeur`
-  */
+   * ### Meldende producent/distributeur
+   *
+   * De producent of distributeur die de RDW heeft genformeerd over een door de producent georganiseerde terugroepactie.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `meldende_producent_distributeur`
+   */
   MeldendeProducentDistributeur: Field("meldende_producent_distributeur", DataType.Text),
   /**
-  * ### Nationaal opgegeven aantal voertuigen terugroepactie
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `nationaal_opgegeven_aantal_voertuigen_terugroepactie`
-  */
-  NationaalOpgegevenAantalVoertuigenTerugroepactie: Field("nationaal_opgegeven_aantal_voertuigen_terugroepactie", DataType.Number),
+   * ### Nationaal opgegeven aantal voertuigen terugroepactie
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `nationaal_opgegeven_aantal_voertuigen_terugroepactie`
+   */
+  NationaalOpgegevenAantalVoertuigenTerugroepactie: Field(
+    "nationaal_opgegeven_aantal_voertuigen_terugroepactie",
+    DataType.Number,
+  ),
   /**
-  * ### Omschrijving defect
-  * 
-  * De omschrijving van het defect, waarvoor deze terugroepactie is georganiseerd.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `omschrijving_defect`
-  */
+   * ### Omschrijving defect
+   *
+   * De omschrijving van het defect, waarvoor deze terugroepactie is georganiseerd.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `omschrijving_defect`
+   */
   OmschrijvingDefect: Field("omschrijving_defect", DataType.Text),
   /**
-  * ### Opmerkingen RDW
-  * 
-  * Hier worden eventuele extra opmerkingen vanuit de RDW over de terugroepactie vermeld.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `opmerkingen_rdw`
-  */
+   * ### Opmerkingen RDW
+   *
+   * Hier worden eventuele extra opmerkingen vanuit de RDW over de terugroepactie vermeld.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `opmerkingen_rdw`
+   */
   OpmerkingenRdw: Field("opmerkingen_rdw", DataType.Text),
   /**
-  * ### Publicatiedatum RDW
-  * 
-  * De datum waarop de RDW de terugroepactie in het terugroepregister heeft gepubliceerd.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `publicatiedatum_rdw`
-  */
+   * ### Publicatiedatum RDW
+   *
+   * De datum waarop de RDW de terugroepactie in het terugroepregister heeft gepubliceerd.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `publicatiedatum_rdw`
+   */
   PublicatiedatumRdw: Field("publicatiedatum_rdw", DataType.Number),
   /**
-  * ### Publicatiedatum RDW_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `publicatiedatum_rdw_dt`
-  */
+   * ### Publicatiedatum RDW_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `publicatiedatum_rdw_dt`
+   */
   PublicatiedatumRdwDt: Field("publicatiedatum_rdw_dt", DataType.FloatingTimestamp),
   /**
-  * ### Referentiecode producent
-  * 
-  * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `referentiecode_producent`
-  */
+   * ### Referentiecode producent
+   *
+   * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `referentiecode_producent`
+   */
   ReferentiecodeProducent: Field("referentiecode_producent", DataType.Text),
   /**
-  * ### Referentiecode RDW
-  * 
-  * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `referentiecode_rdw`
-  */
+   * ### Referentiecode RDW
+   *
+   * Dit is de referentiecode waaronder de RDW de terugroepactie heeft geregistreerd.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `referentiecode_rdw`
+   */
   ReferentiecodeRdw: Field("referentiecode_rdw", DataType.Text),
   /**
-  * ### Risicobeoordeling RDW
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `risicobeoordeling_rdw`
-  */
+   * ### Risicobeoordeling RDW
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `risicobeoordeling_rdw`
+   */
   RisicobeoordelingRdw: Field("risicobeoordeling_rdw", DataType.Text),
   /**
-  * ### Totaal aantal voertuigen terugroepactie
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `totaal_aantal_voertuigen_terugroepactie`
-  */
-  TotaalAantalVoertuigenTerugroepactie: Field("totaal_aantal_voertuigen_terugroepactie", DataType.Number),
+   * ### Totaal aantal voertuigen terugroepactie
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `totaal_aantal_voertuigen_terugroepactie`
+   */
+  TotaalAantalVoertuigenTerugroepactie: Field(
+    "totaal_aantal_voertuigen_terugroepactie",
+    DataType.Number,
+  ),
 };
 
 export const Info = {
@@ -514,7 +523,7 @@ export const Info = {
   provider_name: "TerugroepActie",
   url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie/j9yg-7rg9",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/j9yg-7rg9",
-}
+};
 
 /**
  * ### Open Data RDW: Terugroep_actie

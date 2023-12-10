@@ -100,84 +100,84 @@ export interface ErkendeBedrijven_ResponseData {
  */
 export const Fields = {
   /**
-  * ### api_bedrijf_erkenningen
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_bedrijf_erkenningen`
-  */
+   * ### api_bedrijf_erkenningen
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_bedrijf_erkenningen`
+   */
   ApiBedrijfErkenningen: Field("api_bedrijf_erkenningen", DataType.Text),
   /**
-  * ### Gevelnaam
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `gevelnaam`
-  */
+   * ### Gevelnaam
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `gevelnaam`
+   */
   Gevelnaam: Field("gevelnaam", DataType.Text),
   /**
-  * ### Huisnummer
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `huisnummer`
-  */
+   * ### Huisnummer
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `huisnummer`
+   */
   Huisnummer: Field("huisnummer", DataType.Text),
   /**
-  * ### Huisnummer toevoeging
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `huisnummer_toevoeging`
-  */
+   * ### Huisnummer toevoeging
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `huisnummer_toevoeging`
+   */
   HuisnummerToevoeging: Field("huisnummer_toevoeging", DataType.Text),
   /**
-  * ### Naam bedrijf
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `naam_bedrijf`
-  */
+   * ### Naam bedrijf
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `naam_bedrijf`
+   */
   NaamBedrijf: Field("naam_bedrijf", DataType.Text),
   /**
-  * ### Plaats
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `plaats`
-  */
+   * ### Plaats
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `plaats`
+   */
   Plaats: Field("plaats", DataType.Text),
   /**
-  * ### Postcode alfanumeriek
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `postcode_alfanumeriek`
-  */
+   * ### Postcode alfanumeriek
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `postcode_alfanumeriek`
+   */
   PostcodeAlfanumeriek: Field("postcode_alfanumeriek", DataType.Text),
   /**
-  * ### Postcode numeriek
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `postcode_numeriek`
-  */
+   * ### Postcode numeriek
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `postcode_numeriek`
+   */
   PostcodeNumeriek: Field("postcode_numeriek", DataType.Number),
   /**
-  * ### Straat
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `straat`
-  */
+   * ### Straat
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `straat`
+   */
   Straat: Field("straat", DataType.Text),
   /**
-  * ### Volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `volgnummer`
-  */
+   * ### Volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `volgnummer`
+   */
   Volgnummer: Field("volgnummer", DataType.Number),
 };
 
@@ -200,7 +200,7 @@ export const Info = {
   provider_name: "ErkendeBedrijven",
   url: "https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/5k74-3jha",
-}
+};
 
 /**
  * ### Open Data RDW: Erkende Bedrijven

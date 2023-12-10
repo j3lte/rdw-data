@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenContactpersoon_ResponseData {
   /**
    * ### ContactPersonId
-   * 
+   *
    * Identificatiecode van de contactpersoon
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenContactpersoon_ResponseData {
   contactpersonid?: string;
   /**
    * ### EmailAddress
-   * 
+   *
    * E-mailadres waaronder een contactpersoon bereikbaar is
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ParkerenContactpersoon_ResponseData {
   emailaddress?: string;
   /**
    * ### FaxNumber
-   * 
+   *
    * Faxnummer waaronder een contactpersoon bereikbaar is.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenContactpersoon_ResponseData {
   faxnumber?: string;
   /**
    * ### FirstName
-   * 
+   *
    * Voornaam van een contactpersoon.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ParkerenContactpersoon_ResponseData {
   firstname?: string;
   /**
    * ### Name
-   * 
+   *
    * Achternaam inclusief voorzetsels van een contactpersoon.
    *
    * **Type**: Text
@@ -61,7 +61,7 @@ export interface ParkerenContactpersoon_ResponseData {
   name?: string;
   /**
    * ### PhoneNumber
-   * 
+   *
    * Telefoonnummer waaronder een contactpersoon bereikbaar is.
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ParkerenContactpersoon_ResponseData {
   phonenumber?: string;
   /**
    * ### Position
-   * 
+   *
    * Functie van een contactpersoon.
    *
    * **Type**: Text
@@ -93,74 +93,74 @@ export interface ParkerenContactpersoon_ResponseData {
  */
 export const Fields = {
   /**
-  * ### ContactPersonId
-  * 
-  * Identificatiecode van de contactpersoon
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `contactpersonid`
-  */
+   * ### ContactPersonId
+   *
+   * Identificatiecode van de contactpersoon
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `contactpersonid`
+   */
   Contactpersonid: Field("contactpersonid", DataType.Text),
   /**
-  * ### EmailAddress
-  * 
-  * E-mailadres waaronder een contactpersoon bereikbaar is
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `emailaddress`
-  */
+   * ### EmailAddress
+   *
+   * E-mailadres waaronder een contactpersoon bereikbaar is
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `emailaddress`
+   */
   Emailaddress: Field("emailaddress", DataType.Text),
   /**
-  * ### FaxNumber
-  * 
-  * Faxnummer waaronder een contactpersoon bereikbaar is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `faxnumber`
-  */
+   * ### FaxNumber
+   *
+   * Faxnummer waaronder een contactpersoon bereikbaar is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `faxnumber`
+   */
   Faxnumber: Field("faxnumber", DataType.Text),
   /**
-  * ### FirstName
-  * 
-  * Voornaam van een contactpersoon.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `firstname`
-  */
+   * ### FirstName
+   *
+   * Voornaam van een contactpersoon.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `firstname`
+   */
   Firstname: Field("firstname", DataType.Text),
   /**
-  * ### Name
-  * 
-  * Achternaam inclusief voorzetsels van een contactpersoon.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `name`
-  */
+   * ### Name
+   *
+   * Achternaam inclusief voorzetsels van een contactpersoon.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `name`
+   */
   Name: Field("name", DataType.Text),
   /**
-  * ### PhoneNumber
-  * 
-  * Telefoonnummer waaronder een contactpersoon bereikbaar is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `phonenumber`
-  */
+   * ### PhoneNumber
+   *
+   * Telefoonnummer waaronder een contactpersoon bereikbaar is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `phonenumber`
+   */
   Phonenumber: Field("phonenumber", DataType.Text),
   /**
-  * ### Position
-  * 
-  * Functie van een contactpersoon.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `position`
-  */
+   * ### Position
+   *
+   * Functie van een contactpersoon.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `position`
+   */
   Position: Field("position", DataType.Text),
 };
 
@@ -180,7 +180,7 @@ export const Info = {
   provider_name: "ParkerenContactpersoon",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-CONTACTPERSOON/rbew-yhyc",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/rbew-yhyc",
-}
+};
 
 /**
  * ### Open Data Parkeren: CONTACTPERSOON

@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenBetaalmethodeGebied_ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenBetaalmethodeGebied_ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ParkerenBetaalmethodeGebied_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDatePaymentMethod
-   * 
+   *
    * Datum en tijd van het einde van een periode waarin een betaalmethode voor een bepaald parkeergebied of -faciliteit geldig is.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenBetaalmethodeGebied_ResponseData {
   enddate?: string;
   /**
    * ### PaymentAtExit
-   * 
+   *
    * Indicator die aangeeft of een betaalmethode voor het parkeren in een bepaald parkeergebied of -faciliteit zich bij de uitgang bevind.
    *
    * **Type**: Number
@@ -53,7 +53,7 @@ export interface ParkerenBetaalmethodeGebied_ResponseData {
   paymentatexit?: string;
   /**
    * ### PaymentAtPaystation
-   * 
+   *
    * Indicator die aangeeft of een betaalmethode voor het parkeren in een bepaald parkeergebied of faciliteit beschikbaar is bij een verkooppunt.
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ParkerenBetaalmethodeGebied_ResponseData {
   paymentatpaystation?: string;
   /**
    * ### PaymentMethod
-   * 
+   *
    * Betaalmethode die gebruikt kan worden voor het betalen van parkeren binnen een parkeergebied of -faciliteit.
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ParkerenBetaalmethodeGebied_ResponseData {
   paymentmethod?: string;
   /**
    * ### StartDatePaymentMethod
-   * 
+   *
    * Datum en tijd van het begin van een periode waarin een betaalmethode voor een bepaald parkeergebied of -faciliteit geldig is.
    *
    * **Type**: Text
@@ -93,74 +93,74 @@ export interface ParkerenBetaalmethodeGebied_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDatePaymentMethod
-  * 
-  * Datum en tijd van het einde van een periode waarin een betaalmethode voor een bepaald parkeergebied of -faciliteit geldig is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `enddate`
-  */
+   * ### EndDatePaymentMethod
+   *
+   * Datum en tijd van het einde van een periode waarin een betaalmethode voor een bepaald parkeergebied of -faciliteit geldig is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `enddate`
+   */
   Enddate: Field("enddate", DataType.Text),
   /**
-  * ### PaymentAtExit
-  * 
-  * Indicator die aangeeft of een betaalmethode voor het parkeren in een bepaald parkeergebied of -faciliteit zich bij de uitgang bevind.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `paymentatexit`
-  */
+   * ### PaymentAtExit
+   *
+   * Indicator die aangeeft of een betaalmethode voor het parkeren in een bepaald parkeergebied of -faciliteit zich bij de uitgang bevind.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `paymentatexit`
+   */
   Paymentatexit: Field("paymentatexit", DataType.Number),
   /**
-  * ### PaymentAtPaystation
-  * 
-  * Indicator die aangeeft of een betaalmethode voor het parkeren in een bepaald parkeergebied of faciliteit beschikbaar is bij een verkooppunt.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `paymentatpaystation`
-  */
+   * ### PaymentAtPaystation
+   *
+   * Indicator die aangeeft of een betaalmethode voor het parkeren in een bepaald parkeergebied of faciliteit beschikbaar is bij een verkooppunt.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `paymentatpaystation`
+   */
   Paymentatpaystation: Field("paymentatpaystation", DataType.Number),
   /**
-  * ### PaymentMethod
-  * 
-  * Betaalmethode die gebruikt kan worden voor het betalen van parkeren binnen een parkeergebied of -faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `paymentmethod`
-  */
+   * ### PaymentMethod
+   *
+   * Betaalmethode die gebruikt kan worden voor het betalen van parkeren binnen een parkeergebied of -faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `paymentmethod`
+   */
   Paymentmethod: Field("paymentmethod", DataType.Text),
   /**
-  * ### StartDatePaymentMethod
-  * 
-  * Datum en tijd van het begin van een periode waarin een betaalmethode voor een bepaald parkeergebied of -faciliteit geldig is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `startdate`
-  */
+   * ### StartDatePaymentMethod
+   *
+   * Datum en tijd van het begin van een periode waarin een betaalmethode voor een bepaald parkeergebied of -faciliteit geldig is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `startdate`
+   */
   Startdate: Field("startdate", DataType.Text),
 };
 
@@ -180,7 +180,7 @@ export const Info = {
   provider_name: "ParkerenBetaalmethodeGebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/r3rs-ibz5",
-}
+};
 
 /**
  * ### Open Data Parkeren: BETAALMETHODE GEBIED
@@ -210,13 +210,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ParkerenBetaalmethodeGebied_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<ParkerenBetaalmethodeGebied_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const ParkerenBetaalmethodeGebied: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenBetaalmethodeGebied_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<ParkerenBetaalmethodeGebied_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

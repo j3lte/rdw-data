@@ -553,604 +553,607 @@ export interface MotorUitvoeringBrandstof_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Actieradius brandstof
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `actieradius_brandstof`
-  */
+   * ### Actieradius brandstof
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `actieradius_brandstof`
+   */
   ActieradiusBrandstof: Field("actieradius_brandstof", DataType.Number),
   /**
-  * ### Actieradius brandstof extern oplaadbaar
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `actieradius_brandstof_extern_oplaadbaar`
-  */
-  ActieradiusBrandstofExternOplaadbaar: Field("actieradius_brandstof_extern_oplaadbaar", DataType.Number),
+   * ### Actieradius brandstof extern oplaadbaar
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `actieradius_brandstof_extern_oplaadbaar`
+   */
+  ActieradiusBrandstofExternOplaadbaar: Field(
+    "actieradius_brandstof_extern_oplaadbaar",
+    DataType.Number,
+  ),
   /**
-  * ### Brandstof volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `brandstof_volgnummer`
-  */
+   * ### Brandstof volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `brandstof_volgnummer`
+   */
   BrandstofVolgnummer: Field("brandstof_volgnummer", DataType.Number),
   /**
-  * ### Brandstofcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `brandstofcode`
-  */
+   * ### Brandstofcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `brandstofcode`
+   */
   Brandstofcode: Field("brandstofcode", DataType.Text),
   /**
-  * ### Brandstofverbruik buitenweg
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `brandstofverbruik_buitenweg`
-  */
+   * ### Brandstofverbruik buitenweg
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `brandstofverbruik_buitenweg`
+   */
   BrandstofverbruikBuitenweg: Field("brandstofverbruik_buitenweg", DataType.Number),
   /**
-  * ### Brandstofverbruik combin rit
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `brandstofverbruik_combin_rit`
-  */
+   * ### Brandstofverbruik combin rit
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `brandstofverbruik_combin_rit`
+   */
   BrandstofverbruikCombinRit: Field("brandstofverbruik_combin_rit", DataType.Number),
   /**
-  * ### Brandstofverbruik stadsrit
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `brandstofverbruik_stadsrit`
-  */
+   * ### Brandstofverbruik stadsrit
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `brandstofverbruik_stadsrit`
+   */
   BrandstofverbruikStadsrit: Field("brandstofverbruik_stadsrit", DataType.Number),
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### Elektrisch verbruik combinatie
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `elektrisch_verbruik_combinatie`
-  */
+   * ### Elektrisch verbruik combinatie
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `elektrisch_verbruik_combinatie`
+   */
   ElektrischVerbruikCombinatie: Field("elektrisch_verbruik_combinatie", DataType.Number),
   /**
-  * ### Elektrisch verbruik gecomb
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `elektrisch_verbruik_gecomb`
-  */
+   * ### Elektrisch verbruik gecomb
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `elektrisch_verbruik_gecomb`
+   */
   ElektrischVerbruikGecomb: Field("elektrisch_verbruik_gecomb", DataType.Number),
   /**
-  * ### Emissie aant deeltjes esc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_aant_deeltjes_esc_test`
-  */
+   * ### Emissie aant deeltjes esc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_aant_deeltjes_esc_test`
+   */
   EmissieAantDeeltjesEscTest: Field("emissie_aant_deeltjes_esc_test", DataType.Number),
   /**
-  * ### Emissie aant deeltjes etc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_aant_deeltjes_etc_test`
-  */
+   * ### Emissie aant deeltjes etc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_aant_deeltjes_etc_test`
+   */
   EmissieAantDeeltjesEtcTest: Field("emissie_aant_deeltjes_etc_test", DataType.Number),
   /**
-  * ### Emissie aant deeltjes t1 test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_aant_deeltjes_t1_test`
-  */
+   * ### Emissie aant deeltjes t1 test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_aant_deeltjes_t1_test`
+   */
   EmissieAantDeeltjesT1Test: Field("emissie_aant_deeltjes_t1_test", DataType.Number),
   /**
-  * ### Emissie ch4 volgens whsc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_ch4_volgens_whsc`
-  */
+   * ### Emissie ch4 volgens whsc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_ch4_volgens_whsc`
+   */
   EmissieCh4VolgensWhsc: Field("emissie_ch4_volgens_whsc", DataType.Number),
   /**
-  * ### Emissie ch4 volgens whtc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_ch4_volgens_whtc`
-  */
+   * ### Emissie ch4 volgens whtc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_ch4_volgens_whtc`
+   */
   EmissieCh4VolgensWhtc: Field("emissie_ch4_volgens_whtc", DataType.Number),
   /**
-  * ### Emissie co bij koude start
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_co_bij_koude_start`
-  */
+   * ### Emissie co bij koude start
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_co_bij_koude_start`
+   */
   EmissieCoBijKoudeStart: Field("emissie_co_bij_koude_start", DataType.Number),
   /**
-  * ### Emissie co volgens whsc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_co_volgens_whsc`
-  */
+   * ### Emissie co volgens whsc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_co_volgens_whsc`
+   */
   EmissieCoVolgensWhsc: Field("emissie_co_volgens_whsc", DataType.Number),
   /**
-  * ### Emissie co volgens whtc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_co_volgens_whtc`
-  */
+   * ### Emissie co volgens whtc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_co_volgens_whtc`
+   */
   EmissieCoVolgensWhtc: Field("emissie_co_volgens_whtc", DataType.Number),
   /**
-  * ### Emissie co2 buitenweg
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_co2_buitenweg`
-  */
+   * ### Emissie co2 buitenweg
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_co2_buitenweg`
+   */
   EmissieCo2Buitenweg: Field("emissie_co2_buitenweg", DataType.Number),
   /**
-  * ### Emissie co2 combinatierit
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_co2_combinatierit`
-  */
+   * ### Emissie co2 combinatierit
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_co2_combinatierit`
+   */
   EmissieCo2Combinatierit: Field("emissie_co2_combinatierit", DataType.Number),
   /**
-  * ### Emissie co2 gecombineerd
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_co2_gecombineerd`
-  */
+   * ### Emissie co2 gecombineerd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_co2_gecombineerd`
+   */
   EmissieCo2Gecombineerd: Field("emissie_co2_gecombineerd", DataType.Number),
   /**
-  * ### Emissie co2 stadsrit
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_co2_stadsrit`
-  */
+   * ### Emissie co2 stadsrit
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_co2_stadsrit`
+   */
   EmissieCo2Stadsrit: Field("emissie_co2_stadsrit", DataType.Number),
   /**
-  * ### Emissie deeltjes aantal whsc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_deeltjes_aantal_whsc`
-  */
+   * ### Emissie deeltjes aantal whsc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_deeltjes_aantal_whsc`
+   */
   EmissieDeeltjesAantalWhsc: Field("emissie_deeltjes_aantal_whsc", DataType.Number),
   /**
-  * ### Emissie deeltjes aantal whtc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_deeltjes_aantal_whtc`
-  */
+   * ### Emissie deeltjes aantal whtc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_deeltjes_aantal_whtc`
+   */
   EmissieDeeltjesAantalWhtc: Field("emissie_deeltjes_aantal_whtc", DataType.Number),
   /**
-  * ### Emissie deeltjes massa whsc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_deeltjes_massa_whsc`
-  */
+   * ### Emissie deeltjes massa whsc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_deeltjes_massa_whsc`
+   */
   EmissieDeeltjesMassaWhsc: Field("emissie_deeltjes_massa_whsc", DataType.Number),
   /**
-  * ### Emissie deeltjes massa whtc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_deeltjes_massa_whtc`
-  */
+   * ### Emissie deeltjes massa whtc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_deeltjes_massa_whtc`
+   */
   EmissieDeeltjesMassaWhtc: Field("emissie_deeltjes_massa_whtc", DataType.Number),
   /**
-  * ### Emissie hc bij koude start
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_hc_bij_koude_start`
-  */
+   * ### Emissie hc bij koude start
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_hc_bij_koude_start`
+   */
   EmissieHcBijKoudeStart: Field("emissie_hc_bij_koude_start", DataType.Number),
   /**
-  * ### Emissie hc en nox type1
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_hc_en_nox_type1`
-  */
+   * ### Emissie hc en nox type1
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_hc_en_nox_type1`
+   */
   EmissieHcEnNoxType1: Field("emissie_hc_en_nox_type1", DataType.Number),
   /**
-  * ### Emissie koolmonaxide etc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_koolmonaxide_etc_test`
-  */
+   * ### Emissie koolmonaxide etc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_koolmonaxide_etc_test`
+   */
   EmissieKoolmonaxideEtcTest: Field("emissie_koolmonaxide_etc_test", DataType.Number),
   /**
-  * ### Emissie koolmonoxide esc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_koolmonoxide_esc_test`
-  */
+   * ### Emissie koolmonoxide esc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_koolmonoxide_esc_test`
+   */
   EmissieKoolmonoxideEscTest: Field("emissie_koolmonoxide_esc_test", DataType.Number),
   /**
-  * ### Emissie koolmonoxide type 1
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_koolmonoxide_type_1`
-  */
+   * ### Emissie koolmonoxide type 1
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_koolmonoxide_type_1`
+   */
   EmissieKoolmonoxideType1: Field("emissie_koolmonoxide_type_1", DataType.Number),
   /**
-  * ### Emissie koolwaterstof type 1
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_koolwaterstof_type_1`
-  */
+   * ### Emissie koolwaterstof type 1
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_koolwaterstof_type_1`
+   */
   EmissieKoolwaterstofType1: Field("emissie_koolwaterstof_type_1", DataType.Number),
   /**
-  * ### Emissie koolwaterstoffen esc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_koolwaterstoffen_esc_test`
-  */
+   * ### Emissie koolwaterstoffen esc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_koolwaterstoffen_esc_test`
+   */
   EmissieKoolwaterstoffenEscTest: Field("emissie_koolwaterstoffen_esc_test", DataType.Number),
   /**
-  * ### Emissie koolwaterstoffen etc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_koolwaterstoffen_etc_test`
-  */
+   * ### Emissie koolwaterstoffen etc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_koolwaterstoffen_etc_test`
+   */
   EmissieKoolwaterstoffenEtcTest: Field("emissie_koolwaterstoffen_etc_test", DataType.Number),
   /**
-  * ### Emissie methaan etc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_methaan_etc_test`
-  */
+   * ### Emissie methaan etc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_methaan_etc_test`
+   */
   EmissieMethaanEtcTest: Field("emissie_methaan_etc_test", DataType.Number),
   /**
-  * ### Emissie nh3 volgens whsc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_nh3_volgens_whsc`
-  */
+   * ### Emissie nh3 volgens whsc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_nh3_volgens_whsc`
+   */
   EmissieNh3VolgensWhsc: Field("emissie_nh3_volgens_whsc", DataType.Number),
   /**
-  * ### Emissie nh3 volgens whtc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_nh3_volgens_whtc`
-  */
+   * ### Emissie nh3 volgens whtc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_nh3_volgens_whtc`
+   */
   EmissieNh3VolgensWhtc: Field("emissie_nh3_volgens_whtc", DataType.Number),
   /**
-  * ### Emissie nmhc volgens whsc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_nmhc_volgens_whsc`
-  */
+   * ### Emissie nmhc volgens whsc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_nmhc_volgens_whsc`
+   */
   EmissieNmhcVolgensWhsc: Field("emissie_nmhc_volgens_whsc", DataType.Number),
   /**
-  * ### Emissie nmhc volgens whtc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_nmhc_volgens_whtc`
-  */
+   * ### Emissie nmhc volgens whtc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_nmhc_volgens_whtc`
+   */
   EmissieNmhcVolgensWhtc: Field("emissie_nmhc_volgens_whtc", DataType.Number),
   /**
-  * ### Emissie non methaan koolw etc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_non_methaan_koolw_etc_test`
-  */
+   * ### Emissie non methaan koolw etc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_non_methaan_koolw_etc_test`
+   */
   EmissieNonMethaanKoolwEtcTest: Field("emissie_non_methaan_koolw_etc_test", DataType.Number),
   /**
-  * ### Emissie nox volgens whsc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_nox_volgens_whsc`
-  */
+   * ### Emissie nox volgens whsc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_nox_volgens_whsc`
+   */
   EmissieNoxVolgensWhsc: Field("emissie_nox_volgens_whsc", DataType.Number),
   /**
-  * ### Emissie nox volgens whtc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_nox_volgens_whtc`
-  */
+   * ### Emissie nox volgens whtc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_nox_volgens_whtc`
+   */
   EmissieNoxVolgensWhtc: Field("emissie_nox_volgens_whtc", DataType.Number),
   /**
-  * ### Emissie stikstofoxide type 1
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_stikstofoxide_type_1`
-  */
+   * ### Emissie stikstofoxide type 1
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_stikstofoxide_type_1`
+   */
   EmissieStikstofoxideType1: Field("emissie_stikstofoxide_type_1", DataType.Number),
   /**
-  * ### Emissie stikstofoxiden esc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_stikstofoxiden_esc_test`
-  */
+   * ### Emissie stikstofoxiden esc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_stikstofoxiden_esc_test`
+   */
   EmissieStikstofoxidenEscTest: Field("emissie_stikstofoxiden_esc_test", DataType.Number),
   /**
-  * ### Emissie stikstofoxiden etc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_stikstofoxiden_etc_test`
-  */
+   * ### Emissie stikstofoxiden etc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_stikstofoxiden_etc_test`
+   */
   EmissieStikstofoxidenEtcTest: Field("emissie_stikstofoxiden_etc_test", DataType.Number),
   /**
-  * ### Emissie thc volgens whsc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_thc_volgens_whsc`
-  */
+   * ### Emissie thc volgens whsc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_thc_volgens_whsc`
+   */
   EmissieThcVolgensWhsc: Field("emissie_thc_volgens_whsc", DataType.Number),
   /**
-  * ### Emissie thc volgens whtc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_thc_volgens_whtc`
-  */
+   * ### Emissie thc volgens whtc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_thc_volgens_whtc`
+   */
   EmissieThcVolgensWhtc: Field("emissie_thc_volgens_whtc", DataType.Number),
   /**
-  * ### Emissie vaste stofdeeltjes
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_vaste_stofdeeltjes`
-  */
+   * ### Emissie vaste stofdeeltjes
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_vaste_stofdeeltjes`
+   */
   EmissieVasteStofdeeltjes: Field("emissie_vaste_stofdeeltjes", DataType.Number),
   /**
-  * ### Emissie vaste stofdeeltjes esc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_vaste_stofdeeltjes_esc_test`
-  */
+   * ### Emissie vaste stofdeeltjes esc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_vaste_stofdeeltjes_esc_test`
+   */
   EmissieVasteStofdeeltjesEscTest: Field("emissie_vaste_stofdeeltjes_esc_test", DataType.Number),
   /**
-  * ### Emissie vaste stofdeeltjes etc test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `emissie_vaste_stofdeeltjes_etc_test`
-  */
+   * ### Emissie vaste stofdeeltjes etc test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `emissie_vaste_stofdeeltjes_etc_test`
+   */
   EmissieVasteStofdeeltjesEtcTest: Field("emissie_vaste_stofdeeltjes_etc_test", DataType.Number),
   /**
-  * ### Emissieklasse
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `emissiecode`
-  */
+   * ### Emissieklasse
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `emissiecode`
+   */
   Emissiecode: Field("emissiecode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Geluidsniveau bovengrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `geluidsniveau_bovengrens`
-  */
+   * ### Geluidsniveau bovengrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `geluidsniveau_bovengrens`
+   */
   GeluidsniveauBovengrens: Field("geluidsniveau_bovengrens", DataType.Number),
   /**
-  * ### Geluidsniveau ondergrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `geluidsniveau_ondergrens`
-  */
+   * ### Geluidsniveau ondergrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `geluidsniveau_ondergrens`
+   */
   GeluidsniveauOndergrens: Field("geluidsniveau_ondergrens", DataType.Number),
   /**
-  * ### Geluidsniveau rijdend
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `geluidsniveau_rijdend`
-  */
+   * ### Geluidsniveau rijdend
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `geluidsniveau_rijdend`
+   */
   GeluidsniveauRijdend: Field("geluidsniveau_rijdend", DataType.Number),
   /**
-  * ### Lucht injectie indicator
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `lucht_injectie_indicator`
-  */
+   * ### Lucht injectie indicator
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `lucht_injectie_indicator`
+   */
   LuchtInjectieIndicator: Field("lucht_injectie_indicator", DataType.Text),
   /**
-  * ### Max vermogen continu bovengrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `max_vermogen_continu_bovengrens`
-  */
+   * ### Max vermogen continu bovengrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `max_vermogen_continu_bovengrens`
+   */
   MaxVermogenContinuBovengrens: Field("max_vermogen_continu_bovengrens", DataType.Number),
   /**
-  * ### Max vermogen continu ondergrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `max_vermogen_continu_ondergrens`
-  */
+   * ### Max vermogen continu ondergrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `max_vermogen_continu_ondergrens`
+   */
   MaxVermogenContinuOndergrens: Field("max_vermogen_continu_ondergrens", DataType.Number),
   /**
-  * ### Maximale biobrandstof percentage
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximale_biobrandstof_percentage`
-  */
+   * ### Maximale biobrandstof percentage
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximale_biobrandstof_percentage`
+   */
   MaximaleBiobrandstofPercentage: Field("maximale_biobrandstof_percentage", DataType.Number),
   /**
-  * ### Netto max vermogen bovengrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `netto_max_vermogen_bovengrens`
-  */
+   * ### Netto max vermogen bovengrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `netto_max_vermogen_bovengrens`
+   */
   NettoMaxVermogenBovengrens: Field("netto_max_vermogen_bovengrens", DataType.Number),
   /**
-  * ### Netto max vermogen ondergrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `netto_max_vermogen_ondergrens`
-  */
+   * ### Netto max vermogen ondergrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `netto_max_vermogen_ondergrens`
+   */
   NettoMaxVermogenOndergrens: Field("netto_max_vermogen_ondergrens", DataType.Number),
   /**
-  * ### Roet uitstoot acc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `roet_uitstoot_acc`
-  */
+   * ### Roet uitstoot acc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `roet_uitstoot_acc`
+   */
   RoetUitstootAcc: Field("roet_uitstoot_acc", DataType.Number),
   /**
-  * ### Rookwaarde elr test
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `rookwaarde_elr_test`
-  */
+   * ### Rookwaarde elr test
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `rookwaarde_elr_test`
+   */
   RookwaardeElrTest: Field("rookwaarde_elr_test", DataType.Number),
   /**
-  * ### Soort inspuiting motor
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `soort_inspuiting_motor`
-  */
+   * ### Soort inspuiting motor
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `soort_inspuiting_motor`
+   */
   SoortInspuitingMotor: Field("soort_inspuiting_motor", DataType.Text),
   /**
-  * ### Station toerental bovengrens acc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `station_toerental_bovengrens_acc`
-  */
+   * ### Station toerental bovengrens acc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `station_toerental_bovengrens_acc`
+   */
   StationToerentalBovengrensAcc: Field("station_toerental_bovengrens_acc", DataType.Number),
   /**
-  * ### Station toerental ondergrens acc
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `station_toerental_ondergrens_acc`
-  */
+   * ### Station toerental ondergrens acc
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `station_toerental_ondergrens_acc`
+   */
   StationToerentalOndergrensAcc: Field("station_toerental_ondergrens_acc", DataType.Number),
   /**
-  * ### Toerental max vermogen bovengrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `toerental_max_vermogen_bovengrens`
-  */
+   * ### Toerental max vermogen bovengrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `toerental_max_vermogen_bovengrens`
+   */
   ToerentalMaxVermogenBovengrens: Field("toerental_max_vermogen_bovengrens", DataType.Number),
   /**
-  * ### Toerental max vermogen ondergrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `toerental_max_vermogen_ondergrens`
-  */
+   * ### Toerental max vermogen ondergrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `toerental_max_vermogen_ondergrens`
+   */
   ToerentalMaxVermogenOndergrens: Field("toerental_max_vermogen_ondergrens", DataType.Number),
   /**
-  * ### Uitlaatgas circulatie indicator
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `uitlaatgas_circulatie_indicator`
-  */
+   * ### Uitlaatgas circulatie indicator
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `uitlaatgas_circulatie_indicator`
+   */
   UitlaatgasCirculatieIndicator: Field("uitlaatgas_circulatie_indicator", DataType.Text),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Text),
   /**
-  * ### Verbruik gecombineerd
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `verbruik_gecombineerd`
-  */
+   * ### Verbruik gecombineerd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `verbruik_gecombineerd`
+   */
   VerbruikGecombineerd: Field("verbruik_gecombineerd", DataType.Number),
   /**
-  * ### Vermogen bovengrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `vermogen_bovengrens`
-  */
+   * ### Vermogen bovengrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `vermogen_bovengrens`
+   */
   VermogenBovengrens: Field("vermogen_bovengrens", DataType.Number),
   /**
-  * ### Vermogen ondergrens
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `vermogen_ondergrens`
-  */
+   * ### Vermogen ondergrens
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `vermogen_ondergrens`
+   */
   VermogenOndergrens: Field("vermogen_ondergrens", DataType.Number),
   /**
-  * ### Volgnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `volgnummer`
-  */
+   * ### Volgnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `volgnummer`
+   */
   Volgnummer: Field("volgnummer", DataType.Number),
 };
 
@@ -1238,7 +1241,7 @@ export const Info = {
   provider_name: "MotorUitvoeringBrandstof",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Motor-Uitvoering-Brandstof/5w6t-p66a",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/5w6t-p66a",
-}
+};
 
 /**
  * ### Open Data RDW: Motor Uitvoering Brandstof

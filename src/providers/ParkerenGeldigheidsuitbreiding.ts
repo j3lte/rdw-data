@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenGeldigheidsuitbreiding_ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenGeldigheidsuitbreiding_ResponseData {
   areaid?: string;
   /**
    * ### AreaIdValidityExtension
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit waarnaar een uitbreiding van de geldigheid voor  parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ParkerenGeldigheidsuitbreiding_ResponseData {
   areaidvalidityextension?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ParkerenGeldigheidsuitbreiding_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndValidityExtension
-   * 
+   *
    * Datum en tijd van het einde van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
@@ -53,7 +53,7 @@ export interface ParkerenGeldigheidsuitbreiding_ResponseData {
   endvalidityextension?: string;
   /**
    * ### StartValidityExtension
-   * 
+   *
    * Datum en tijd van het begin van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
    *
    * **Type**: Text
@@ -61,7 +61,7 @@ export interface ParkerenGeldigheidsuitbreiding_ResponseData {
   startvalidityextension?: string;
   /**
    * ### UsageId
-   * 
+   *
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
    *
    * **Type**: Text
@@ -69,7 +69,7 @@ export interface ParkerenGeldigheidsuitbreiding_ResponseData {
   usageid?: string;
   /**
    * ### ValidityExtensionType
-   * 
+   *
    * Indicator die aangeeft of gebiedsuitbreidingen voor een bepaald gebruiksdoel overervend zijn. Het NPR onderscheid twee typen:
    * O = Overervend: Uitbreidingen worden vanuit vorige relaties meegenomen naar de volgende, bv. als gebied A uitbreidt naar B en gebied B uitbreidt naar C, dan is hiermee een recht uit gebied A impliciet ook geldig in gebied C.
    * N = Niet overervend: Elke uitbreiding wordt expliciet aangegeven, bv. als Gebied A uitbreidt naar B en gebied B uitbreidt naar C en het is de bedoeling dat gebied A ook uitbreidt naar C, dan moet de relatie van gebied A naar gebied C expliciet gelegd worden.
@@ -95,76 +95,76 @@ export interface ParkerenGeldigheidsuitbreiding_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaIdValidityExtension
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit waarnaar een uitbreiding van de geldigheid voor  parkeer of verblijfsrechten van toepassing is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaidvalidityextension`
-  */
+   * ### AreaIdValidityExtension
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit waarnaar een uitbreiding van de geldigheid voor  parkeer of verblijfsrechten van toepassing is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaidvalidityextension`
+   */
   Areaidvalidityextension: Field("areaidvalidityextension", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndValidityExtension
-  * 
-  * Datum en tijd van het einde van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `endvalidityextension`
-  */
+   * ### EndValidityExtension
+   *
+   * Datum en tijd van het einde van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `endvalidityextension`
+   */
   Endvalidityextension: Field("endvalidityextension", DataType.Text),
   /**
-  * ### StartValidityExtension
-  * 
-  * Datum en tijd van het begin van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `startvalidityextension`
-  */
+   * ### StartValidityExtension
+   *
+   * Datum en tijd van het begin van een periode waarop een uitbreiding van de geldigheid voor parkeer of verblijfsrechten van toepassing is.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `startvalidityextension`
+   */
   Startvalidityextension: Field("startvalidityextension", DataType.Text),
   /**
-  * ### UsageId
-  * 
-  * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `usageid`
-  */
+   * ### UsageId
+   *
+   * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `usageid`
+   */
   Usageid: Field("usageid", DataType.Text),
   /**
-  * ### ValidityExtensionType
-  * 
-  * Indicator die aangeeft of gebiedsuitbreidingen voor een bepaald gebruiksdoel overervend zijn. Het NPR onderscheid twee typen:
-  * O = Overervend: Uitbreidingen worden vanuit vorige relaties meegenomen naar de volgende, bv. als gebied A uitbreidt naar B en gebied B uitbreidt naar C, dan is hiermee een recht uit gebied A impliciet ook geldig in gebied C.
-  * N = Niet overervend: Elke uitbreiding wordt expliciet aangegeven, bv. als Gebied A uitbreidt naar B en gebied B uitbreidt naar C en het is de bedoeling dat gebied A ook uitbreidt naar C, dan moet de relatie van gebied A naar gebied C expliciet gelegd worden.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `validityextensiontype`
-  */
+   * ### ValidityExtensionType
+   *
+   * Indicator die aangeeft of gebiedsuitbreidingen voor een bepaald gebruiksdoel overervend zijn. Het NPR onderscheid twee typen:
+   * O = Overervend: Uitbreidingen worden vanuit vorige relaties meegenomen naar de volgende, bv. als gebied A uitbreidt naar B en gebied B uitbreidt naar C, dan is hiermee een recht uit gebied A impliciet ook geldig in gebied C.
+   * N = Niet overervend: Elke uitbreiding wordt expliciet aangegeven, bv. als Gebied A uitbreidt naar B en gebied B uitbreidt naar C en het is de bedoeling dat gebied A ook uitbreidt naar C, dan moet de relatie van gebied A naar gebied C expliciet gelegd worden.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `validityextensiontype`
+   */
   Validityextensiontype: Field("validityextensiontype", DataType.Text),
 };
 
@@ -184,7 +184,7 @@ export const Info = {
   provider_name: "ParkerenGeldigheidsuitbreiding",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSUITBREIDING/8ff3-rxrk",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/8ff3-rxrk",
-}
+};
 
 /**
  * ### Open Data Parkeren: GELDIGHEIDSUITBREIDING
@@ -214,13 +214,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ParkerenGeldigheidsuitbreiding_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<ParkerenGeldigheidsuitbreiding_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const ParkerenGeldigheidsuitbreiding: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenGeldigheidsuitbreiding_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<ParkerenGeldigheidsuitbreiding_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

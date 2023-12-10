@@ -84,68 +84,71 @@ export interface HandelsbenamingUitvoering_ResponseData {
  */
 export const Fields = {
   /**
-  * ### EEG Uitvoeringscode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_uitvoeringscode`
-  */
+   * ### EEG Uitvoeringscode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_uitvoeringscode`
+   */
   EegUitvoeringscode: Field("eeg_uitvoeringscode", DataType.Text),
   /**
-  * ### EEG variantcode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_variantcode`
-  */
+   * ### EEG variantcode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_variantcode`
+   */
   EegVariantcode: Field("eeg_variantcode", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Handelsbenaming fabrikant
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `handelsbenaming_fabrikant`
-  */
+   * ### Handelsbenaming fabrikant
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `handelsbenaming_fabrikant`
+   */
   HandelsbenamingFabrikant: Field("handelsbenaming_fabrikant", DataType.Text),
   /**
-  * ### Registratiedatum handelsbenaming
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `registratiedatum_handelsbenaming`
-  */
+   * ### Registratiedatum handelsbenaming
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `registratiedatum_handelsbenaming`
+   */
   RegistratiedatumHandelsbenaming: Field("registratiedatum_handelsbenaming", DataType.Number),
   /**
-  * ### Registratiedatum handelsbenaming_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `registratiedatum_handelsbenaming_dt`
-  */
-  RegistratiedatumHandelsbenamingDt: Field("registratiedatum_handelsbenaming_dt", DataType.FloatingTimestamp),
+   * ### Registratiedatum handelsbenaming_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `registratiedatum_handelsbenaming_dt`
+   */
+  RegistratiedatumHandelsbenamingDt: Field(
+    "registratiedatum_handelsbenaming_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Uitvoering wijzigingsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `uitvoering_wijzigingsnummer`
-  */
+   * ### Uitvoering wijzigingsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `uitvoering_wijzigingsnummer`
+   */
   UitvoeringWijzigingsnummer: Field("uitvoering_wijzigingsnummer", DataType.Number),
   /**
-  * ### Volgnummer handelsbenaming
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `volgnummer`
-  */
+   * ### Volgnummer handelsbenaming
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `volgnummer`
+   */
   Volgnummer: Field("volgnummer", DataType.Number),
 };
 
@@ -166,7 +169,7 @@ export const Info = {
   provider_name: "HandelsbenamingUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Handelsbenaming-Uitvoering/mdqe-txpd",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mdqe-txpd",
-}
+};
 
 /**
  * ### Open Data RDW: Handelsbenaming Uitvoering

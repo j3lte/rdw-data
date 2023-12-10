@@ -60,7 +60,7 @@ export interface GeoCarpool_ResponseData {
    *
    * **Type**: Point
    */
-  location?: { latitude: string; longitude: string; human_address: null | string; };
+  location?: { latitude: string; longitude: string; human_address: null | string };
   /**
    * ### Location (address)
    *
@@ -135,124 +135,124 @@ export interface GeoCarpool_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Aantal laad punten
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_laad_punten`
-  */
+   * ### Aantal laad punten
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_laad_punten`
+   */
   AantalLaadPunten: Field("aantal_laad_punten", DataType.Number),
   /**
-  * ### Aantal parkeer plaatsen
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_parkeer_plaatsen`
-  */
+   * ### Aantal parkeer plaatsen
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_parkeer_plaatsen`
+   */
   AantalParkeerPlaatsen: Field("aantal_parkeer_plaatsen", DataType.Number),
   /**
-  * ### AreaDesc
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areadesc`
-  */
+   * ### AreaDesc
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areadesc`
+   */
   Areadesc: Field("areadesc", DataType.Text),
   /**
-  * ### AreaId
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDataArea
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `enddataarea`
-  */
+   * ### EndDataArea
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `enddataarea`
+   */
   Enddataarea: Field("enddataarea", DataType.Number),
   /**
-  * ### Location
-  *
-  * **Type**: Point
-  *
-  * **Database Column Name**: `location`
-  */
+   * ### Location
+   *
+   * **Type**: Point
+   *
+   * **Database Column Name**: `location`
+   */
   Location: Field("location", DataType.Point),
   /**
-  * ### Location (address)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_address`
-  */
+   * ### Location (address)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_address`
+   */
   LocationAddress: Field("location_address", DataType.Text),
   /**
-  * ### Location (city)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_city`
-  */
+   * ### Location (city)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_city`
+   */
   LocationCity: Field("location_city", DataType.Text),
   /**
-  * ### Location (state)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_state`
-  */
+   * ### Location (state)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_state`
+   */
   LocationState: Field("location_state", DataType.Text),
   /**
-  * ### Location (zip)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_zip`
-  */
+   * ### Location (zip)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_zip`
+   */
   LocationZip: Field("location_zip", DataType.Text),
   /**
-  * ### Maximale doorrijhoogte
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `maximale_inrij_hoogte`
-  */
+   * ### Maximale doorrijhoogte
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `maximale_inrij_hoogte`
+   */
   MaximaleInrijHoogte: Field("maximale_inrij_hoogte", DataType.Text),
   /**
-  * ### StartDataArea
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `startdataarea`
-  */
+   * ### StartDataArea
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `startdataarea`
+   */
   Startdataarea: Field("startdataarea", DataType.Number),
   /**
-  * ### Toegankelijk voor gehandicapten
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `toegankelijk_voor_gehandicapten`
-  */
+   * ### Toegankelijk voor gehandicapten
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `toegankelijk_voor_gehandicapten`
+   */
   ToegankelijkVoorGehandicapten: Field("toegankelijk_voor_gehandicapten", DataType.Number),
   /**
-  * ### UsageId
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `usageid`
-  */
+   * ### UsageId
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `usageid`
+   */
   Usageid: Field("usageid", DataType.Text),
 };
 
@@ -280,7 +280,7 @@ export const Info = {
   provider_name: "GeoCarpool",
   url: "https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/9c54-cmfx",
-}
+};
 
 /**
  * ### GEO Carpool

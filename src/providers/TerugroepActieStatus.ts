@@ -19,7 +19,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface TerugroepActieStatus_ResponseData {
   /**
    * ### Code Status
-   * 
+   *
    * De code van de status van het voertuig:
    * O= Openstaande terugroepactie
    * P= Producent heeft herstel gemeld
@@ -29,7 +29,7 @@ export interface TerugroepActieStatus_ResponseData {
   code_status?: string;
   /**
    * ### Kenteken
-   * 
+   *
    * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Het wordt met 6 karakters zonder tussenliggende streepjes weergegeven.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface TerugroepActieStatus_ResponseData {
   kenteken?: string;
   /**
    * ### Referentiecode RDW
-   * 
+   *
    * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface TerugroepActieStatus_ResponseData {
   referentiecode_rdw?: string;
   /**
    * ### Status
-   * 
+   *
    * De door de producent/distributeur doorgegeven status van het voertuig:
    * Openstaande terugroepactie= De producent/distributeur heeft de RDW genformeerd, dat het voertuig moet worden hersteld. (=0)
    * Producent heeft herstel gemeld= De producent/distributeur heeft de RDW genformeerd, dat het voertuig is hersteld. (=1)
@@ -69,49 +69,49 @@ export interface TerugroepActieStatus_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Code Status
-  * 
-  * De code van de status van het voertuig:
-  * O= Openstaande terugroepactie
-  * P= Producent heeft herstel gemeld
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `code_status`
-  */
+   * ### Code Status
+   *
+   * De code van de status van het voertuig:
+   * O= Openstaande terugroepactie
+   * P= Producent heeft herstel gemeld
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `code_status`
+   */
   CodeStatus: Field("code_status", DataType.Text),
   /**
-  * ### Kenteken
-  * 
-  * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Het wordt met 6 karakters zonder tussenliggende streepjes weergegeven.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `kenteken`
-  */
+   * ### Kenteken
+   *
+   * Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Het wordt met 6 karakters zonder tussenliggende streepjes weergegeven.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `kenteken`
+   */
   Kenteken: Field("kenteken", DataType.Text),
   /**
-  * ### Referentiecode RDW
-  * 
-  * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `referentiecode_rdw`
-  */
+   * ### Referentiecode RDW
+   *
+   * De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `referentiecode_rdw`
+   */
   ReferentiecodeRdw: Field("referentiecode_rdw", DataType.Text),
   /**
-  * ### Status
-  * 
-  * De door de producent/distributeur doorgegeven status van het voertuig:
-  * Openstaande terugroepactie= De producent/distributeur heeft de RDW genformeerd, dat het voertuig moet worden hersteld. (=0)
-  * Producent heeft herstel gemeld= De producent/distributeur heeft de RDW genformeerd, dat het voertuig is hersteld. (=1)
-  * Opmerking: er kunnen meer terugroepacties op een voertuig van toepassing zijn.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `status`
-  */
+   * ### Status
+   *
+   * De door de producent/distributeur doorgegeven status van het voertuig:
+   * Openstaande terugroepactie= De producent/distributeur heeft de RDW genformeerd, dat het voertuig moet worden hersteld. (=0)
+   * Producent heeft herstel gemeld= De producent/distributeur heeft de RDW genformeerd, dat het voertuig is hersteld. (=1)
+   * Opmerking: er kunnen meer terugroepacties op een voertuig van toepassing zijn.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `status`
+   */
   Status: Field("status", DataType.Text),
 };
 
@@ -128,7 +128,7 @@ export const Info = {
   provider_name: "TerugroepActieStatus",
   url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_status/t49b-isb7",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/t49b-isb7",
-}
+};
 
 /**
  * ### Open Data RDW: Terugroep_actie_status

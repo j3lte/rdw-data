@@ -287,300 +287,324 @@ export interface EegVoertuigtypegoedkeuring_ResponseData {
  */
 export const Fields = {
   /**
-  * ### API AS gegevens EEG uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_as_gegevens_eeg_uitvoering`
-  */
+   * ### API AS gegevens EEG uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_as_gegevens_eeg_uitvoering`
+   */
   ApiAsGegevensEegUitvoering: Field("api_as_gegevens_eeg_uitvoering", DataType.Text),
   /**
-  * ### API Basisgegevens EEG uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_basisgegevens_eeg_uitvoering`
-  */
+   * ### API Basisgegevens EEG uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_basisgegevens_eeg_uitvoering`
+   */
   ApiBasisgegevensEegUitvoering: Field("api_basisgegevens_eeg_uitvoering", DataType.Text),
   /**
-  * ### API Carrosserie uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_carrosserie_uitvoering`
-  */
+   * ### API Carrosserie uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_carrosserie_uitvoering`
+   */
   ApiCarrosserieUitvoering: Field("api_carrosserie_uitvoering", DataType.Text),
   /**
-  * ### API Carrosserie uitvoering klasse
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_carrosserie_uitvoering_klasse`
-  */
+   * ### API Carrosserie uitvoering klasse
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_carrosserie_uitvoering_klasse`
+   */
   ApiCarrosserieUitvoeringKlasse: Field("api_carrosserie_uitvoering_klasse", DataType.Text),
   /**
-  * ### API Carrosserie uitvoering nummerieke code
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_carrosserie_uitvoering_nummerieke_code`
-  */
-  ApiCarrosserieUitvoeringNummeriekeCode: Field("api_carrosserie_uitvoering_nummerieke_code", DataType.Text),
+   * ### API Carrosserie uitvoering nummerieke code
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_carrosserie_uitvoering_nummerieke_code`
+   */
+  ApiCarrosserieUitvoeringNummeriekeCode: Field(
+    "api_carrosserie_uitvoering_nummerieke_code",
+    DataType.Text,
+  ),
   /**
-  * ### API Handelsbenaming uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_handelsbenaming_uitvoering`
-  */
+   * ### API Handelsbenaming uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_handelsbenaming_uitvoering`
+   */
   ApiHandelsbenamingUitvoering: Field("api_handelsbenaming_uitvoering", DataType.Text),
   /**
-  * ### API Merk uitvoering toegestaan
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_merk_uitvoering_toegestaan`
-  */
+   * ### API Merk uitvoering toegestaan
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_merk_uitvoering_toegestaan`
+   */
   ApiMerkUitvoeringToegestaan: Field("api_merk_uitvoering_toegestaan", DataType.Text),
   /**
-  * ### API Motor uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_motor_uitvoering`
-  */
+   * ### API Motor uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_motor_uitvoering`
+   */
   ApiMotorUitvoering: Field("api_motor_uitvoering", DataType.Text),
   /**
-  * ### API Motor uitvoering brandstof
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_motor_uitvoering_brandstof`
-  */
+   * ### API Motor uitvoering brandstof
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_motor_uitvoering_brandstof`
+   */
   ApiMotorUitvoeringBrandstof: Field("api_motor_uitvoering_brandstof", DataType.Text),
   /**
-  * ### API Plaatsaanduiding uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_plaatsaanduiding_uitvoering`
-  */
+   * ### API Plaatsaanduiding uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_plaatsaanduiding_uitvoering`
+   */
   ApiPlaatsaanduidingUitvoering: Field("api_plaatsaanduiding_uitvoering", DataType.Text),
   /**
-  * ### API Subcategorie uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_subcategorie_uitvoering`
-  */
+   * ### API Subcategorie uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_subcategorie_uitvoering`
+   */
   ApiSubcategorieUitvoering: Field("api_subcategorie_uitvoering", DataType.Text),
   /**
-  * ### API Uitvoeringverbruik per uitgave
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_uitvoeringverbruik_per_uitgave`
-  */
+   * ### API Uitvoeringverbruik per uitgave
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_uitvoeringverbruik_per_uitgave`
+   */
   ApiUitvoeringverbruikPerUitgave: Field("api_uitvoeringverbruik_per_uitgave", DataType.Text),
   /**
-  * ### API Versnellingsbak uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_versnellingsbak_uitvoering`
-  */
+   * ### API Versnellingsbak uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_versnellingsbak_uitvoering`
+   */
   ApiVersnellingsbakUitvoering: Field("api_versnellingsbak_uitvoering", DataType.Text),
   /**
-  * ### EEG basis goedkeuringsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `eeg_basis_goedkeuringsnummer`
-  */
+   * ### EEG basis goedkeuringsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `eeg_basis_goedkeuringsnummer`
+   */
   EegBasisGoedkeuringsnummer: Field("eeg_basis_goedkeuringsnummer", DataType.Number),
   /**
-  * ### EEG/ECE voertuig categorie bij type
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_ece_voertuig_categorie_bij_type`
-  */
+   * ### EEG/ECE voertuig categorie bij type
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_ece_voertuig_categorie_bij_type`
+   */
   EegEceVoertuigCategorieBijType: Field("eeg_ece_voertuig_categorie_bij_type", DataType.Text),
   /**
-  * ### EEG typegoedkeuringsdatum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `eeg_typegoedkeuringsdatum`
-  */
+   * ### EEG typegoedkeuringsdatum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `eeg_typegoedkeuringsdatum`
+   */
   EegTypegoedkeuringsdatum: Field("eeg_typegoedkeuringsdatum", DataType.Number),
   /**
-  * ### EEG typegoedkeuringsdatum_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `eeg_typegoedkeuringsdatum_dt`
-  */
+   * ### EEG typegoedkeuringsdatum_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `eeg_typegoedkeuringsdatum_dt`
+   */
   EegTypegoedkeuringsdatumDt: Field("eeg_typegoedkeuringsdatum_dt", DataType.FloatingTimestamp),
   /**
-  * ### EEG uitbreiding goedkeuringsnummer
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `eeg_uitbreiding_goedkeuringsnummer`
-  */
+   * ### EEG uitbreiding goedkeuringsnummer
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `eeg_uitbreiding_goedkeuringsnummer`
+   */
   EegUitbreidingGoedkeuringsnummer: Field("eeg_uitbreiding_goedkeuringsnummer", DataType.Number),
   /**
-  * ### EEG Voertuig cat toevoeging
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eeg_voertuig_cat_toevoeging`
-  */
+   * ### EEG Voertuig cat toevoeging
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eeg_voertuig_cat_toevoeging`
+   */
   EegVoertuigCatToevoeging: Field("eeg_voertuig_cat_toevoeging", DataType.Text),
   /**
-  * ### EU Type goedkeuringssleutel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eu_type_goedkeuringssleutel`
-  */
+   * ### EU Type goedkeuringssleutel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eu_type_goedkeuringssleutel`
+   */
   EuTypeGoedkeuringssleutel: Field("eu_type_goedkeuringssleutel", DataType.Text),
   /**
-  * ### Europese typegoedkeuring einddatum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `europese_typegoedkeuring_einddatum`
-  */
+   * ### Europese typegoedkeuring einddatum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `europese_typegoedkeuring_einddatum`
+   */
   EuropeseTypegoedkeuringEinddatum: Field("europese_typegoedkeuring_einddatum", DataType.Number),
   /**
-  * ### Europese typegoedkeuring einddatum_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `europese_typegoedkeuring_einddatum_dt`
-  */
-  EuropeseTypegoedkeuringEinddatumDt: Field("europese_typegoedkeuring_einddatum_dt", DataType.FloatingTimestamp),
+   * ### Europese typegoedkeuring einddatum_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `europese_typegoedkeuring_einddatum_dt`
+   */
+  EuropeseTypegoedkeuringEinddatumDt: Field(
+    "europese_typegoedkeuring_einddatum_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Europese typegoedkeuring intrek datum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `europese_typegoedkeuring_intrek_datum`
-  */
-  EuropeseTypegoedkeuringIntrekDatum: Field("europese_typegoedkeuring_intrek_datum", DataType.Number),
+   * ### Europese typegoedkeuring intrek datum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `europese_typegoedkeuring_intrek_datum`
+   */
+  EuropeseTypegoedkeuringIntrekDatum: Field(
+    "europese_typegoedkeuring_intrek_datum",
+    DataType.Number,
+  ),
   /**
-  * ### Europese typegoedkeuring intrek datum_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `europese_typegoedkeuring_intrek_datum_dt`
-  */
-  EuropeseTypegoedkeuringIntrekDatumDt: Field("europese_typegoedkeuring_intrek_datum_dt", DataType.FloatingTimestamp),
+   * ### Europese typegoedkeuring intrek datum_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `europese_typegoedkeuring_intrek_datum_dt`
+   */
+  EuropeseTypegoedkeuringIntrekDatumDt: Field(
+    "europese_typegoedkeuring_intrek_datum_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Europese typegoedkeuring status
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `europese_typegoedkeuring_status`
-  */
+   * ### Europese typegoedkeuring status
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `europese_typegoedkeuring_status`
+   */
   EuropeseTypegoedkeuringStatus: Field("europese_typegoedkeuring_status", DataType.Text),
   /**
-  * ### Europese typegoedkeuring status datum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `europese_typegoedkeuring_status_datum`
-  */
-  EuropeseTypegoedkeuringStatusDatum: Field("europese_typegoedkeuring_status_datum", DataType.Number),
+   * ### Europese typegoedkeuring status datum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `europese_typegoedkeuring_status_datum`
+   */
+  EuropeseTypegoedkeuringStatusDatum: Field(
+    "europese_typegoedkeuring_status_datum",
+    DataType.Number,
+  ),
   /**
-  * ### Europese typegoedkeuring status datum_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `europese_typegoedkeuring_status_datum_dt`
-  */
-  EuropeseTypegoedkeuringStatusDatumDt: Field("europese_typegoedkeuring_status_datum_dt", DataType.FloatingTimestamp),
+   * ### Europese typegoedkeuring status datum_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `europese_typegoedkeuring_status_datum_dt`
+   */
+  EuropeseTypegoedkeuringStatusDatumDt: Field(
+    "europese_typegoedkeuring_status_datum_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Europese typegoedkeurings registratie datum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `europese_typegoedkeurings_registratie_datum`
-  */
-  EuropeseTypegoedkeuringsRegistratieDatum: Field("europese_typegoedkeurings_registratie_datum", DataType.Number),
+   * ### Europese typegoedkeurings registratie datum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `europese_typegoedkeurings_registratie_datum`
+   */
+  EuropeseTypegoedkeuringsRegistratieDatum: Field(
+    "europese_typegoedkeurings_registratie_datum",
+    DataType.Number,
+  ),
   /**
-  * ### Europese typegoedkeurings registratie datum_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `europese_typegoedkeurings_registratie_datum_dt`
-  */
-  EuropeseTypegoedkeuringsRegistratieDatumDt: Field("europese_typegoedkeurings_registratie_datum_dt", DataType.FloatingTimestamp),
+   * ### Europese typegoedkeurings registratie datum_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `europese_typegoedkeurings_registratie_datum_dt`
+   */
+  EuropeseTypegoedkeuringsRegistratieDatumDt: Field(
+    "europese_typegoedkeurings_registratie_datum_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Fabrikant
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `fabrikant`
-  */
+   * ### Fabrikant
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `fabrikant`
+   */
   Fabrikant: Field("fabrikant", DataType.Text),
   /**
-  * ### Fabrikantcode type
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `fabrikantcode_type`
-  */
+   * ### Fabrikantcode type
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `fabrikantcode_type`
+   */
   FabrikantcodeType: Field("fabrikantcode_type", DataType.Text),
   /**
-  * ### Landcode EEG typegoedkeuring
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `landcode_eeg_typegoedkeuring`
-  */
+   * ### Landcode EEG typegoedkeuring
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `landcode_eeg_typegoedkeuring`
+   */
   LandcodeEegTypegoedkeuring: Field("landcode_eeg_typegoedkeuring", DataType.Text),
   /**
-  * ### Richtlijn nr laatste wijziging
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `richtlijn_nr_laatste_wijziging`
-  */
+   * ### Richtlijn nr laatste wijziging
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `richtlijn_nr_laatste_wijziging`
+   */
   RichtlijnNrLaatsteWijziging: Field("richtlijn_nr_laatste_wijziging", DataType.Text),
   /**
-  * ### Type fabrikant
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `type_fabrikant`
-  */
+   * ### Type fabrikant
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `type_fabrikant`
+   */
   TypeFabrikant: Field("type_fabrikant", DataType.Text),
   /**
-  * ### Typegoedkeuringsnummer
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `typegoedkeuringsnummer`
-  */
+   * ### Typegoedkeuringsnummer
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `typegoedkeuringsnummer`
+   */
   Typegoedkeuringsnummer: Field("typegoedkeuringsnummer", DataType.Text),
   /**
-  * ### Vervaldatum typegoedkeuring
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `vervaldatum_typegoedkeuring`
-  */
+   * ### Vervaldatum typegoedkeuring
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `vervaldatum_typegoedkeuring`
+   */
   VervaldatumTypegoedkeuring: Field("vervaldatum_typegoedkeuring", DataType.Number),
   /**
-  * ### Vervaldatum typegoedkeuring_DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `vervaldatum_typegoedkeuring_dt`
-  */
+   * ### Vervaldatum typegoedkeuring_DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `vervaldatum_typegoedkeuring_dt`
+   */
   VervaldatumTypegoedkeuringDt: Field("vervaldatum_typegoedkeuring_dt", DataType.FloatingTimestamp),
 };
 
@@ -628,9 +652,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: EEG Voertuigtypegoedkeuring",
   provider_name: "EegVoertuigtypegoedkeuring",
-  url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-EEG-Voertuigtypegoedkeuring/55kv-xf7m",
+  url:
+    "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-EEG-Voertuigtypegoedkeuring/55kv-xf7m",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/55kv-xf7m",
-}
+};
 
 /**
  * ### Open Data RDW: EEG Voertuigtypegoedkeuring

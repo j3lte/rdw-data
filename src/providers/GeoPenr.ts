@@ -48,7 +48,7 @@ export interface GeoPenr_ResponseData {
    *
    * **Type**: Point
    */
-  location?: { latitude: string; longitude: string; human_address: null | string; };
+  location?: { latitude: string; longitude: string; human_address: null | string };
   /**
    * ### Location (address)
    *
@@ -107,92 +107,92 @@ export interface GeoPenr_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaDesc
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areadesc`
-  */
+   * ### AreaDesc
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areadesc`
+   */
   Areadesc: Field("areadesc", DataType.Text),
   /**
-  * ### AreaId
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDataArea
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `enddataarea`
-  */
+   * ### EndDataArea
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `enddataarea`
+   */
   Enddataarea: Field("enddataarea", DataType.Number),
   /**
-  * ### Location
-  *
-  * **Type**: Point
-  *
-  * **Database Column Name**: `location`
-  */
+   * ### Location
+   *
+   * **Type**: Point
+   *
+   * **Database Column Name**: `location`
+   */
   Location: Field("location", DataType.Point),
   /**
-  * ### Location (address)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_address`
-  */
+   * ### Location (address)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_address`
+   */
   LocationAddress: Field("location_address", DataType.Text),
   /**
-  * ### Location (city)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_city`
-  */
+   * ### Location (city)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_city`
+   */
   LocationCity: Field("location_city", DataType.Text),
   /**
-  * ### Location (state)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_state`
-  */
+   * ### Location (state)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_state`
+   */
   LocationState: Field("location_state", DataType.Text),
   /**
-  * ### Location (zip)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `location_zip`
-  */
+   * ### Location (zip)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `location_zip`
+   */
   LocationZip: Field("location_zip", DataType.Text),
   /**
-  * ### StartDataArea
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `startdataarea`
-  */
+   * ### StartDataArea
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `startdataarea`
+   */
   Startdataarea: Field("startdataarea", DataType.Number),
   /**
-  * ### UsageId
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `usageid`
-  */
+   * ### UsageId
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `usageid`
+   */
   Usageid: Field("usageid", DataType.Text),
 };
 
@@ -216,7 +216,7 @@ export const Info = {
   provider_name: "GeoPenr",
   url: "https://opendata.rdw.nl/Parkeren/GEO-PenR/6wzd-evwu",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/6wzd-evwu",
-}
+};
 
 /**
  * ### GEO PenR

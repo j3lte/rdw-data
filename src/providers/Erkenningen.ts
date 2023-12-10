@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface Erkenningen_ResponseData {
   /**
    * ### Erkenning
-   * 
+   *
    * De erkenning, bevoegdheid, regeling of overeenkomst die het bedrijf in bezit heeft. Wanneer deze tijdelijk ongeldig is, wordt deze wel getoond.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface Erkenningen_ResponseData {
   erkenning?: string;
   /**
    * ### Volgnummer
-   * 
+   *
    * Nummer waarmee een bedrijf eenduidig is te identificeren binnen de opendata set.
    *
    * **Type**: Number
@@ -48,24 +48,24 @@ export interface Erkenningen_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Erkenning
-  * 
-  * De erkenning, bevoegdheid, regeling of overeenkomst die het bedrijf in bezit heeft. Wanneer deze tijdelijk ongeldig is, wordt deze wel getoond.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `erkenning`
-  */
+   * ### Erkenning
+   *
+   * De erkenning, bevoegdheid, regeling of overeenkomst die het bedrijf in bezit heeft. Wanneer deze tijdelijk ongeldig is, wordt deze wel getoond.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `erkenning`
+   */
   Erkenning: Field("erkenning", DataType.Text),
   /**
-  * ### Volgnummer
-  * 
-  * Nummer waarmee een bedrijf eenduidig is te identificeren binnen de opendata set.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `volgnummer`
-  */
+   * ### Volgnummer
+   *
+   * Nummer waarmee een bedrijf eenduidig is te identificeren binnen de opendata set.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `volgnummer`
+   */
   Volgnummer: Field("volgnummer", DataType.Number),
 };
 
@@ -80,7 +80,7 @@ export const Info = {
   provider_name: "Erkenningen",
   url: "https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nmwb-dqkz",
-}
+};
 
 /**
  * ### Open Data RDW: Erkenningen

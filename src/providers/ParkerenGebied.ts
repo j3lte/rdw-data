@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenGebied_ResponseData {
   /**
    * ### AreaDesc
-   * 
+   *
    * Een omschrijving die aan een parkeergebied of -faciliteit is gegeven.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenGebied_ResponseData {
   areadesc?: string;
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ParkerenGebied_ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ParkerenGebied_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateArea
-   * 
+   *
    * Datum waarop een parkeergebied of -faciliteit niet meer geldig is
    *
    * **Type**: Number
@@ -53,7 +53,7 @@ export interface ParkerenGebied_ResponseData {
   enddatearea?: string;
   /**
    * ### StartDateArea
-   * 
+   *
    * Datum vanaf wanneer een parkeergebied of -faciliteit geldig
    *
    * **Type**: Number
@@ -61,7 +61,7 @@ export interface ParkerenGebied_ResponseData {
   startdatearea?: string;
   /**
    * ### UsageId
-   * 
+   *
    * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hirarchie.
    *
    * **Type**: Text
@@ -84,64 +84,64 @@ export interface ParkerenGebied_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaDesc
-  * 
-  * Een omschrijving die aan een parkeergebied of -faciliteit is gegeven.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areadesc`
-  */
+   * ### AreaDesc
+   *
+   * Een omschrijving die aan een parkeergebied of -faciliteit is gegeven.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areadesc`
+   */
   Areadesc: Field("areadesc", DataType.Text),
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDateArea
-  * 
-  * Datum waarop een parkeergebied of -faciliteit niet meer geldig is
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `enddatearea`
-  */
+   * ### EndDateArea
+   *
+   * Datum waarop een parkeergebied of -faciliteit niet meer geldig is
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `enddatearea`
+   */
   Enddatearea: Field("enddatearea", DataType.Number),
   /**
-  * ### StartDateArea
-  * 
-  * Datum vanaf wanneer een parkeergebied of -faciliteit geldig
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `startdatearea`
-  */
+   * ### StartDateArea
+   *
+   * Datum vanaf wanneer een parkeergebied of -faciliteit geldig
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `startdatearea`
+   */
   Startdatearea: Field("startdatearea", DataType.Number),
   /**
-  * ### UsageId
-  * 
-  * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hirarchie.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `usageid`
-  */
+   * ### UsageId
+   *
+   * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hirarchie.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `usageid`
+   */
   Usageid: Field("usageid", DataType.Text),
 };
 
@@ -160,7 +160,7 @@ export const Info = {
   provider_name: "ParkerenGebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/adw6-9hsg",
-}
+};
 
 /**
  * ### Open Data Parkeren: GEBIED

@@ -51,28 +51,28 @@ export interface Keuringen_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Kenteken
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `kenteken`
-  */
+   * ### Kenteken
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `kenteken`
+   */
   Kenteken: Field("kenteken", DataType.Text),
   /**
-  * ### Vervaldatum keuring
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `vervaldatum_keuring`
-  */
+   * ### Vervaldatum keuring
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `vervaldatum_keuring`
+   */
   VervaldatumKeuring: Field("vervaldatum_keuring", DataType.Number),
   /**
-  * ### Vervaldatum keuring DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `vervaldatum_keuring_dt`
-  */
+   * ### Vervaldatum keuring DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `vervaldatum_keuring_dt`
+   */
   VervaldatumKeuringDt: Field("vervaldatum_keuring_dt", DataType.FloatingTimestamp),
 };
 
@@ -88,7 +88,7 @@ export const Info = {
   provider_name: "Keuringen",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/vkij-7mwc",
-}
+};
 
 /**
  * ### Open Data RDW: Keuringen

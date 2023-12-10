@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenGebiedsbeheerder_ResponseData {
   /**
    * ### AreaManagerDesc
-   * 
+   *
    * Omschrijving van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenGebiedsbeheerder_ResponseData {
   areamanagerdesc?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Number
@@ -37,7 +37,7 @@ export interface ParkerenGebiedsbeheerder_ResponseData {
   areamanagerid?: string;
   /**
    * ### EndDateAreaManagerId
-   * 
+   *
    * Datum tot wanneer een bepaalde gebiedsbeheerder of parkeerexploitant  niet meer in het NPR opereert.
    *
    * **Type**: Number
@@ -45,7 +45,7 @@ export interface ParkerenGebiedsbeheerder_ResponseData {
   enddateareamanagerid?: string;
   /**
    * ### StartDateAreaManagerId
-   * 
+   *
    * Datum vanaf wanneer een bepaalde gebiedsbeheerder of parkeerexploitant in het NPR opereert.
    *
    * **Type**: Number
@@ -53,7 +53,7 @@ export interface ParkerenGebiedsbeheerder_ResponseData {
   startdateareamanagerid?: string;
   /**
    * ### URL
-   * 
+   *
    * Een web-adres dat verwijst naar de website van een gebiedbeheerder (of beheerder van een parkeerterrein of -garage)
    *
    * **Type**: Text
@@ -75,54 +75,54 @@ export interface ParkerenGebiedsbeheerder_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaManagerDesc
-  * 
-  * Omschrijving van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areamanagerdesc`
-  */
+   * ### AreaManagerDesc
+   *
+   * Omschrijving van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areamanagerdesc`
+   */
   Areamanagerdesc: Field("areamanagerdesc", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Number),
   /**
-  * ### EndDateAreaManagerId
-  * 
-  * Datum tot wanneer een bepaalde gebiedsbeheerder of parkeerexploitant  niet meer in het NPR opereert.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `enddateareamanagerid`
-  */
+   * ### EndDateAreaManagerId
+   *
+   * Datum tot wanneer een bepaalde gebiedsbeheerder of parkeerexploitant  niet meer in het NPR opereert.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `enddateareamanagerid`
+   */
   Enddateareamanagerid: Field("enddateareamanagerid", DataType.Number),
   /**
-  * ### StartDateAreaManagerId
-  * 
-  * Datum vanaf wanneer een bepaalde gebiedsbeheerder of parkeerexploitant in het NPR opereert.
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `startdateareamanagerid`
-  */
+   * ### StartDateAreaManagerId
+   *
+   * Datum vanaf wanneer een bepaalde gebiedsbeheerder of parkeerexploitant in het NPR opereert.
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `startdateareamanagerid`
+   */
   Startdateareamanagerid: Field("startdateareamanagerid", DataType.Number),
   /**
-  * ### URL
-  * 
-  * Een web-adres dat verwijst naar de website van een gebiedbeheerder (of beheerder van een parkeerterrein of -garage)
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `url`
-  */
+   * ### URL
+   *
+   * Een web-adres dat verwijst naar de website van een gebiedbeheerder (of beheerder van een parkeerterrein of -garage)
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `url`
+   */
   Url: Field("url", DataType.Text),
 };
 
@@ -140,7 +140,7 @@ export const Info = {
   provider_name: "ParkerenGebiedsbeheerder",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIEDSBEHEERDER/2uc2-nnv3",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/2uc2-nnv3",
-}
+};
 
 /**
  * ### Open Data Parkeren: GEBIEDSBEHEERDER

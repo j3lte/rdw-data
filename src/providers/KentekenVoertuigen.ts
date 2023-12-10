@@ -700,772 +700,817 @@ export interface KentekenVoertuigen_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Aanhangwagen autonoom geremd
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aanhangwagen_autonoom_geremd`
-  */
+   * ### Aanhangwagen autonoom geremd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aanhangwagen_autonoom_geremd`
+   */
   AanhangwagenAutonoomGeremd: Field("aanhangwagen_autonoom_geremd", DataType.Number),
   /**
-  * ### Aanhangwagen middenas geremd
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aanhangwagen_middenas_geremd`
-  */
+   * ### Aanhangwagen middenas geremd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aanhangwagen_middenas_geremd`
+   */
   AanhangwagenMiddenasGeremd: Field("aanhangwagen_middenas_geremd", DataType.Number),
   /**
-  * ### Aantal cilinders
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_cilinders`
-  */
+   * ### Aantal cilinders
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_cilinders`
+   */
   AantalCilinders: Field("aantal_cilinders", DataType.Number),
   /**
-  * ### Aantal deuren
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_deuren`
-  */
+   * ### Aantal deuren
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_deuren`
+   */
   AantalDeuren: Field("aantal_deuren", DataType.Number),
   /**
-  * ### Aantal rolstoelplaatsen
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_rolstoelplaatsen`
-  */
+   * ### Aantal rolstoelplaatsen
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_rolstoelplaatsen`
+   */
   AantalRolstoelplaatsen: Field("aantal_rolstoelplaatsen", DataType.Number),
   /**
-  * ### Aantal staanplaatsen
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_staanplaatsen`
-  */
+   * ### Aantal staanplaatsen
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_staanplaatsen`
+   */
   AantalStaanplaatsen: Field("aantal_staanplaatsen", DataType.Number),
   /**
-  * ### Aantal wielen
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_wielen`
-  */
+   * ### Aantal wielen
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_wielen`
+   */
   AantalWielen: Field("aantal_wielen", DataType.Number),
   /**
-  * ### Aantal zitplaatsen
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `aantal_zitplaatsen`
-  */
+   * ### Aantal zitplaatsen
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_zitplaatsen`
+   */
   AantalZitplaatsen: Field("aantal_zitplaatsen", DataType.Number),
   /**
-  * ### Aerodynamische voorziening of uitrusting
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `aerodyn_voorz`
-  */
+   * ### Aerodynamische voorziening of uitrusting
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `aerodyn_voorz`
+   */
   AerodynVoorz: Field("aerodyn_voorz", DataType.Text),
   /**
-  * ### Afstand hart koppeling tot achterzijde voertuig
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `afstand_hart_koppeling_tot_achterzijde_voertuig`
-  */
-  AfstandHartKoppelingTotAchterzijdeVoertuig: Field("afstand_hart_koppeling_tot_achterzijde_voertuig", DataType.Number),
+   * ### Afstand hart koppeling tot achterzijde voertuig
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `afstand_hart_koppeling_tot_achterzijde_voertuig`
+   */
+  AfstandHartKoppelingTotAchterzijdeVoertuig: Field(
+    "afstand_hart_koppeling_tot_achterzijde_voertuig",
+    DataType.Number,
+  ),
   /**
-  * ### Afstand voorzijde voertuig tot hart koppeling
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `afstand_voorzijde_voertuig_tot_hart_koppeling`
-  */
-  AfstandVoorzijdeVoertuigTotHartKoppeling: Field("afstand_voorzijde_voertuig_tot_hart_koppeling", DataType.Number),
+   * ### Afstand voorzijde voertuig tot hart koppeling
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `afstand_voorzijde_voertuig_tot_hart_koppeling`
+   */
+  AfstandVoorzijdeVoertuigTotHartKoppeling: Field(
+    "afstand_voorzijde_voertuig_tot_hart_koppeling",
+    DataType.Number,
+  ),
   /**
-  * ### Afwijkende maximum snelheid
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `afwijkende_maximum_snelheid`
-  */
+   * ### Afwijkende maximum snelheid
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `afwijkende_maximum_snelheid`
+   */
   AfwijkendeMaximumSnelheid: Field("afwijkende_maximum_snelheid", DataType.Number),
   /**
-  * ### API Gekentekende_voertuigen_assen
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_gekentekende_voertuigen_assen`
-  */
+   * ### API Gekentekende_voertuigen_assen
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_gekentekende_voertuigen_assen`
+   */
   ApiGekentekendeVoertuigenAssen: Field("api_gekentekende_voertuigen_assen", DataType.Text),
   /**
-  * ### API Gekentekende_voertuigen_brandstof
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_gekentekende_voertuigen_brandstof`
-  */
+   * ### API Gekentekende_voertuigen_brandstof
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_gekentekende_voertuigen_brandstof`
+   */
   ApiGekentekendeVoertuigenBrandstof: Field("api_gekentekende_voertuigen_brandstof", DataType.Text),
   /**
-  * ### API Gekentekende_voertuigen_carrosserie
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_gekentekende_voertuigen_carrosserie`
-  */
-  ApiGekentekendeVoertuigenCarrosserie: Field("api_gekentekende_voertuigen_carrosserie", DataType.Text),
+   * ### API Gekentekende_voertuigen_carrosserie
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_gekentekende_voertuigen_carrosserie`
+   */
+  ApiGekentekendeVoertuigenCarrosserie: Field(
+    "api_gekentekende_voertuigen_carrosserie",
+    DataType.Text,
+  ),
   /**
-  * ### API Gekentekende_voertuigen_carrosserie_specifiek
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_gekentekende_voertuigen_carrosserie_specifiek`
-  */
-  ApiGekentekendeVoertuigenCarrosserieSpecifiek: Field("api_gekentekende_voertuigen_carrosserie_specifiek", DataType.Text),
+   * ### API Gekentekende_voertuigen_carrosserie_specifiek
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_gekentekende_voertuigen_carrosserie_specifiek`
+   */
+  ApiGekentekendeVoertuigenCarrosserieSpecifiek: Field(
+    "api_gekentekende_voertuigen_carrosserie_specifiek",
+    DataType.Text,
+  ),
   /**
-  * ### API Gekentekende_voertuigen_voertuigklasse
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `api_gekentekende_voertuigen_voertuigklasse`
-  */
-  ApiGekentekendeVoertuigenVoertuigklasse: Field("api_gekentekende_voertuigen_voertuigklasse", DataType.Text),
+   * ### API Gekentekende_voertuigen_voertuigklasse
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `api_gekentekende_voertuigen_voertuigklasse`
+   */
+  ApiGekentekendeVoertuigenVoertuigklasse: Field(
+    "api_gekentekende_voertuigen_voertuigklasse",
+    DataType.Text,
+  ),
   /**
-  * ### Breedte
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `breedte`
-  */
+   * ### Breedte
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `breedte`
+   */
   Breedte: Field("breedte", DataType.Number),
   /**
-  * ### Breedte voertuig maximum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `breedte_voertuig_maximum`
-  */
+   * ### Breedte voertuig maximum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `breedte_voertuig_maximum`
+   */
   BreedteVoertuigMaximum: Field("breedte_voertuig_maximum", DataType.Number),
   /**
-  * ### Breedte voertuig minimum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `breedte_voertuig_minimum`
-  */
+   * ### Breedte voertuig minimum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `breedte_voertuig_minimum`
+   */
   BreedteVoertuigMinimum: Field("breedte_voertuig_minimum", DataType.Number),
   /**
-  * ### Bruto BPM
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `bruto_bpm`
-  */
+   * ### Bruto BPM
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `bruto_bpm`
+   */
   BrutoBpm: Field("bruto_bpm", DataType.Number),
   /**
-  * ### Catalogusprijs
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `catalogusprijs`
-  */
+   * ### Catalogusprijs
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `catalogusprijs`
+   */
   Catalogusprijs: Field("catalogusprijs", DataType.Number),
   /**
-  * ### Cilinderinhoud
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `cilinderinhoud`
-  */
+   * ### Cilinderinhoud
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `cilinderinhoud`
+   */
   Cilinderinhoud: Field("cilinderinhoud", DataType.Number),
   /**
-  * ### Code toelichting tellerstandoordeel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `code_toelichting_tellerstandoordeel`
-  */
+   * ### Code toelichting tellerstandoordeel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `code_toelichting_tellerstandoordeel`
+   */
   CodeToelichtingTellerstandoordeel: Field("code_toelichting_tellerstandoordeel", DataType.Text),
   /**
-  * ### Datum eerste tenaamstelling in Nederland
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `datum_eerste_tenaamstelling_in_nederland`
-  */
-  DatumEersteTenaamstellingInNederland: Field("datum_eerste_tenaamstelling_in_nederland", DataType.Number),
+   * ### Datum eerste tenaamstelling in Nederland
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `datum_eerste_tenaamstelling_in_nederland`
+   */
+  DatumEersteTenaamstellingInNederland: Field(
+    "datum_eerste_tenaamstelling_in_nederland",
+    DataType.Number,
+  ),
   /**
-  * ### Datum eerste tenaamstelling in Nederland DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `datum_eerste_tenaamstelling_in_nederland_dt`
-  */
-  DatumEersteTenaamstellingInNederlandDt: Field("datum_eerste_tenaamstelling_in_nederland_dt", DataType.FloatingTimestamp),
+   * ### Datum eerste tenaamstelling in Nederland DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `datum_eerste_tenaamstelling_in_nederland_dt`
+   */
+  DatumEersteTenaamstellingInNederlandDt: Field(
+    "datum_eerste_tenaamstelling_in_nederland_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Datum eerste toelating
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `datum_eerste_toelating`
-  */
+   * ### Datum eerste toelating
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `datum_eerste_toelating`
+   */
   DatumEersteToelating: Field("datum_eerste_toelating", DataType.Number),
   /**
-  * ### Datum eerste toelating DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `datum_eerste_toelating_dt`
-  */
+   * ### Datum eerste toelating DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `datum_eerste_toelating_dt`
+   */
   DatumEersteToelatingDt: Field("datum_eerste_toelating_dt", DataType.FloatingTimestamp),
   /**
-  * ### Datum tenaamstelling
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `datum_tenaamstelling`
-  */
+   * ### Datum tenaamstelling
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `datum_tenaamstelling`
+   */
   DatumTenaamstelling: Field("datum_tenaamstelling", DataType.Number),
   /**
-  * ### Datum tenaamstelling DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `datum_tenaamstelling_dt`
-  */
+   * ### Datum tenaamstelling DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `datum_tenaamstelling_dt`
+   */
   DatumTenaamstellingDt: Field("datum_tenaamstelling_dt", DataType.FloatingTimestamp),
   /**
-  * ### Eerste kleur
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `eerste_kleur`
-  */
+   * ### Eerste kleur
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `eerste_kleur`
+   */
   EersteKleur: Field("eerste_kleur", DataType.Text),
   /**
-  * ### Europese uitvoeringcategorie toevoeging
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `europese_uitvoeringcategorie_toevoeging`
-  */
-  EuropeseUitvoeringcategorieToevoeging: Field("europese_uitvoeringcategorie_toevoeging", DataType.Text),
+   * ### Europese uitvoeringcategorie toevoeging
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `europese_uitvoeringcategorie_toevoeging`
+   */
+  EuropeseUitvoeringcategorieToevoeging: Field(
+    "europese_uitvoeringcategorie_toevoeging",
+    DataType.Text,
+  ),
   /**
-  * ### Europese voertuigcategorie
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `europese_voertuigcategorie`
-  */
+   * ### Europese voertuigcategorie
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `europese_voertuigcategorie`
+   */
   EuropeseVoertuigcategorie: Field("europese_voertuigcategorie", DataType.Text),
   /**
-  * ### Europese voertuigcategorie toevoeging
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `europese_voertuigcategorie_toevoeging`
-  */
-  EuropeseVoertuigcategorieToevoeging: Field("europese_voertuigcategorie_toevoeging", DataType.Text),
+   * ### Europese voertuigcategorie toevoeging
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `europese_voertuigcategorie_toevoeging`
+   */
+  EuropeseVoertuigcategorieToevoeging: Field(
+    "europese_voertuigcategorie_toevoeging",
+    DataType.Text,
+  ),
   /**
-  * ### Export indicator
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `export_indicator`
-  */
+   * ### Export indicator
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `export_indicator`
+   */
   ExportIndicator: Field("export_indicator", DataType.Text),
   /**
-  * ### Gemiddelde Lading Waarde
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `gem_lading_wrde`
-  */
+   * ### Gemiddelde Lading Waarde
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `gem_lading_wrde`
+   */
   GemLadingWrde: Field("gem_lading_wrde", DataType.Number),
   /**
-  * ### Handelsbenaming
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `handelsbenaming`
-  */
+   * ### Handelsbenaming
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `handelsbenaming`
+   */
   Handelsbenaming: Field("handelsbenaming", DataType.Text),
   /**
-  * ### Hoogte voertuig
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `hoogte_voertuig`
-  */
+   * ### Hoogte voertuig
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `hoogte_voertuig`
+   */
   HoogteVoertuig: Field("hoogte_voertuig", DataType.Number),
   /**
-  * ### Hoogte voertuig maximum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `hoogte_voertuig_maximum`
-  */
+   * ### Hoogte voertuig maximum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `hoogte_voertuig_maximum`
+   */
   HoogteVoertuigMaximum: Field("hoogte_voertuig_maximum", DataType.Number),
   /**
-  * ### Hoogte voertuig minimum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `hoogte_voertuig_minimum`
-  */
+   * ### Hoogte voertuig minimum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `hoogte_voertuig_minimum`
+   */
   HoogteVoertuigMinimum: Field("hoogte_voertuig_minimum", DataType.Number),
   /**
-  * ### Inrichting
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `inrichting`
-  */
+   * ### Inrichting
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `inrichting`
+   */
   Inrichting: Field("inrichting", DataType.Text),
   /**
-  * ### Jaar laatste registratie tellerstand
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `jaar_laatste_registratie_tellerstand`
-  */
+   * ### Jaar laatste registratie tellerstand
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `jaar_laatste_registratie_tellerstand`
+   */
   JaarLaatsteRegistratieTellerstand: Field("jaar_laatste_registratie_tellerstand", DataType.Number),
   /**
-  * ### Kenteken
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `kenteken`
-  */
+   * ### Kenteken
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `kenteken`
+   */
   Kenteken: Field("kenteken", DataType.Text),
   /**
-  * ### Laadvermogen
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `laadvermogen`
-  */
+   * ### Laadvermogen
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `laadvermogen`
+   */
   Laadvermogen: Field("laadvermogen", DataType.Number),
   /**
-  * ### Lengte
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `lengte`
-  */
+   * ### Lengte
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `lengte`
+   */
   Lengte: Field("lengte", DataType.Number),
   /**
-  * ### Lengte voertuig maximum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `lengte_voertuig_maximum`
-  */
+   * ### Lengte voertuig maximum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `lengte_voertuig_maximum`
+   */
   LengteVoertuigMaximum: Field("lengte_voertuig_maximum", DataType.Number),
   /**
-  * ### Lengte voertuig minimum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `lengte_voertuig_minimum`
-  */
+   * ### Lengte voertuig minimum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `lengte_voertuig_minimum`
+   */
   LengteVoertuigMinimum: Field("lengte_voertuig_minimum", DataType.Number),
   /**
-  * ### Additionele massa alternatieve aandrijving
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `massa_alt_aandr`
-  */
+   * ### Additionele massa alternatieve aandrijving
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `massa_alt_aandr`
+   */
   MassaAltAandr: Field("massa_alt_aandr", DataType.Number),
   /**
-  * ### Massa bedrijfsklaar maximaal
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `massa_bedrijfsklaar_maximaal`
-  */
+   * ### Massa bedrijfsklaar maximaal
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `massa_bedrijfsklaar_maximaal`
+   */
   MassaBedrijfsklaarMaximaal: Field("massa_bedrijfsklaar_maximaal", DataType.Number),
   /**
-  * ### Massa bedrijfsklaar minimaal
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `massa_bedrijfsklaar_minimaal`
-  */
+   * ### Massa bedrijfsklaar minimaal
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `massa_bedrijfsklaar_minimaal`
+   */
   MassaBedrijfsklaarMinimaal: Field("massa_bedrijfsklaar_minimaal", DataType.Number),
   /**
-  * ### Massa ledig voertuig
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `massa_ledig_voertuig`
-  */
+   * ### Massa ledig voertuig
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `massa_ledig_voertuig`
+   */
   MassaLedigVoertuig: Field("massa_ledig_voertuig", DataType.Number),
   /**
-  * ### Massa rijklaar
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `massa_rijklaar`
-  */
+   * ### Massa rijklaar
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `massa_rijklaar`
+   */
   MassaRijklaar: Field("massa_rijklaar", DataType.Number),
   /**
-  * ### Maximale constructiesnelheid
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximale_constructiesnelheid`
-  */
+   * ### Maximale constructiesnelheid
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximale_constructiesnelheid`
+   */
   MaximaleConstructiesnelheid: Field("maximale_constructiesnelheid", DataType.Number),
   /**
-  * ### Maximum last onder de vooras(sen) (tezamen)/koppeling
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximum_last_onder_de_vooras_sen_tezamen_koppeling`
-  */
-  MaximumLastOnderDeVoorasSenTezamenKoppeling: Field("maximum_last_onder_de_vooras_sen_tezamen_koppeling", DataType.Number),
+   * ### Maximum last onder de vooras(sen) (tezamen)/koppeling
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximum_last_onder_de_vooras_sen_tezamen_koppeling`
+   */
+  MaximumLastOnderDeVoorasSenTezamenKoppeling: Field(
+    "maximum_last_onder_de_vooras_sen_tezamen_koppeling",
+    DataType.Number,
+  ),
   /**
-  * ### Maximum massa samenstelling
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximum_massa_samenstelling`
-  */
+   * ### Maximum massa samenstelling
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximum_massa_samenstelling`
+   */
   MaximumMassaSamenstelling: Field("maximum_massa_samenstelling", DataType.Number),
   /**
-  * ### Maximum massa technisch maximaal
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximum_massa_technisch_maximaal`
-  */
+   * ### Maximum massa technisch maximaal
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximum_massa_technisch_maximaal`
+   */
   MaximumMassaTechnischMaximaal: Field("maximum_massa_technisch_maximaal", DataType.Number),
   /**
-  * ### Maximum massa technisch minimaal
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximum_massa_technisch_minimaal`
-  */
+   * ### Maximum massa technisch minimaal
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximum_massa_technisch_minimaal`
+   */
   MaximumMassaTechnischMinimaal: Field("maximum_massa_technisch_minimaal", DataType.Number),
   /**
-  * ### Maximum massa trekken ongeremd
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximum_massa_trekken_ongeremd`
-  */
+   * ### Maximum massa trekken ongeremd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximum_massa_trekken_ongeremd`
+   */
   MaximumMassaTrekkenOngeremd: Field("maximum_massa_trekken_ongeremd", DataType.Number),
   /**
-  * ### Maximum ondersteunende snelheid
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximum_ondersteunende_snelheid`
-  */
+   * ### Maximum ondersteunende snelheid
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximum_ondersteunende_snelheid`
+   */
   MaximumOndersteunendeSnelheid: Field("maximum_ondersteunende_snelheid", DataType.Number),
   /**
-  * ### Maximum trekken massa geremd
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `maximum_trekken_massa_geremd`
-  */
+   * ### Maximum trekken massa geremd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maximum_trekken_massa_geremd`
+   */
   MaximumTrekkenMassaGeremd: Field("maximum_trekken_massa_geremd", DataType.Number),
   /**
-  * ### Merk
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `merk`
-  */
+   * ### Merk
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `merk`
+   */
   Merk: Field("merk", DataType.Text),
   /**
-  * ### Openstaande terugroepactie indicator
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `openstaande_terugroepactie_indicator`
-  */
+   * ### Openstaande terugroepactie indicator
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `openstaande_terugroepactie_indicator`
+   */
   OpenstaandeTerugroepactieIndicator: Field("openstaande_terugroepactie_indicator", DataType.Text),
   /**
-  * ### Oplegger geremd
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `oplegger_geremd`
-  */
+   * ### Oplegger geremd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `oplegger_geremd`
+   */
   OpleggerGeremd: Field("oplegger_geremd", DataType.Number),
   /**
-  * ### Plaats chassisnummer
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `plaats_chassisnummer`
-  */
+   * ### Plaats chassisnummer
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `plaats_chassisnummer`
+   */
   PlaatsChassisnummer: Field("plaats_chassisnummer", DataType.Text),
   /**
-  * ### Registratie datum goedkeuring (afschrijvingsmoment BPM)
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `registratie_datum_goedkeuring_afschrijvingsmoment_bpm`
-  */
-  RegistratieDatumGoedkeuringAfschrijvingsmomentBpm: Field("registratie_datum_goedkeuring_afschrijvingsmoment_bpm", DataType.Number),
+   * ### Registratie datum goedkeuring (afschrijvingsmoment BPM)
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `registratie_datum_goedkeuring_afschrijvingsmoment_bpm`
+   */
+  RegistratieDatumGoedkeuringAfschrijvingsmomentBpm: Field(
+    "registratie_datum_goedkeuring_afschrijvingsmoment_bpm",
+    DataType.Number,
+  ),
   /**
-  * ### Registratie datum goedkeuring (afschrijvingsmoment BPM) DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `registratie_datum_goedkeuring_afschrijvingsmoment_bpm_dt`
-  */
-  RegistratieDatumGoedkeuringAfschrijvingsmomentBpmDt: Field("registratie_datum_goedkeuring_afschrijvingsmoment_bpm_dt", DataType.FloatingTimestamp),
+   * ### Registratie datum goedkeuring (afschrijvingsmoment BPM) DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `registratie_datum_goedkeuring_afschrijvingsmoment_bpm_dt`
+   */
+  RegistratieDatumGoedkeuringAfschrijvingsmomentBpmDt: Field(
+    "registratie_datum_goedkeuring_afschrijvingsmoment_bpm_dt",
+    DataType.FloatingTimestamp,
+  ),
   /**
-  * ### Rupsonderstelconfiguratiecode
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `rupsonderstelconfiguratiecode`
-  */
+   * ### Rupsonderstelconfiguratiecode
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `rupsonderstelconfiguratiecode`
+   */
   Rupsonderstelconfiguratiecode: Field("rupsonderstelconfiguratiecode", DataType.Text),
   /**
-  * ### Subcategorie Nederland
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `subcategorie_nederland`
-  */
+   * ### Subcategorie Nederland
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `subcategorie_nederland`
+   */
   SubcategorieNederland: Field("subcategorie_nederland", DataType.Text),
   /**
-  * ### Taxi indicator
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `taxi_indicator`
-  */
+   * ### Taxi indicator
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `taxi_indicator`
+   */
   TaxiIndicator: Field("taxi_indicator", DataType.Text),
   /**
-  * ### Technisch toelaatbaar massa koppelpunt
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `technisch_toelaatbaar_massa_koppelpunt`
-  */
-  TechnischToelaatbaarMassaKoppelpunt: Field("technisch_toelaatbaar_massa_koppelpunt", DataType.Number),
+   * ### Technisch toelaatbaar massa koppelpunt
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `technisch_toelaatbaar_massa_koppelpunt`
+   */
+  TechnischToelaatbaarMassaKoppelpunt: Field(
+    "technisch_toelaatbaar_massa_koppelpunt",
+    DataType.Number,
+  ),
   /**
-  * ### Technische max. massa voertuig
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `technische_max_massa_voertuig`
-  */
+   * ### Technische max. massa voertuig
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `technische_max_massa_voertuig`
+   */
   TechnischeMaxMassaVoertuig: Field("technische_max_massa_voertuig", DataType.Number),
   /**
-  * ### Tellerstandoordeel
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `tellerstandoordeel`
-  */
+   * ### Tellerstandoordeel
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `tellerstandoordeel`
+   */
   Tellerstandoordeel: Field("tellerstandoordeel", DataType.Text),
   /**
-  * ### Tenaamstellen mogelijk
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `tenaamstellen_mogelijk`
-  */
+   * ### Tenaamstellen mogelijk
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `tenaamstellen_mogelijk`
+   */
   TenaamstellenMogelijk: Field("tenaamstellen_mogelijk", DataType.Text),
   /**
-  * ### Toegestane maximum massa voertuig
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `toegestane_maximum_massa_voertuig`
-  */
+   * ### Toegestane maximum massa voertuig
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `toegestane_maximum_massa_voertuig`
+   */
   ToegestaneMaximumMassaVoertuig: Field("toegestane_maximum_massa_voertuig", DataType.Number),
   /**
-  * ### Tweede kleur
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `tweede_kleur`
-  */
+   * ### Tweede kleur
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `tweede_kleur`
+   */
   TweedeKleur: Field("tweede_kleur", DataType.Text),
   /**
-  * ### Type
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `type`
-  */
+   * ### Type
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `type`
+   */
   Type: Field("type", DataType.Text),
   /**
-  * ### Type gasinstallatie
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `type_gasinstallatie`
-  */
+   * ### Type gasinstallatie
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `type_gasinstallatie`
+   */
   TypeGasinstallatie: Field("type_gasinstallatie", DataType.Text),
   /**
-  * ### Type remsysteem voertuig code
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `type_remsysteem_voertuig_code`
-  */
+   * ### Type remsysteem voertuig code
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `type_remsysteem_voertuig_code`
+   */
   TypeRemsysteemVoertuigCode: Field("type_remsysteem_voertuig_code", DataType.Text),
   /**
-  * ### Typegoedkeuringsnummer
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `typegoedkeuringsnummer`
-  */
+   * ### Typegoedkeuringsnummer
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `typegoedkeuringsnummer`
+   */
   Typegoedkeuringsnummer: Field("typegoedkeuringsnummer", DataType.Text),
   /**
-  * ### Uitvoering
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `uitvoering`
-  */
+   * ### Uitvoering
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `uitvoering`
+   */
   Uitvoering: Field("uitvoering", DataType.Text),
   /**
-  * ### Variant
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `variant`
-  */
+   * ### Variant
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `variant`
+   */
   Variant: Field("variant", DataType.Text),
   /**
-  * ### Verlengde cabine indicator
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `verl_cab_ind`
-  */
+   * ### Verlengde cabine indicator
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `verl_cab_ind`
+   */
   VerlCabInd: Field("verl_cab_ind", DataType.Text),
   /**
-  * ### Vermogen massarijklaar
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `vermogen_massarijklaar`
-  */
+   * ### Vermogen massarijklaar
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `vermogen_massarijklaar`
+   */
   VermogenMassarijklaar: Field("vermogen_massarijklaar", DataType.Number),
   /**
-  * ### Verticale belasting koppelpunt getrokken voertuig
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `verticale_belasting_koppelpunt_getrokken_voertuig`
-  */
-  VerticaleBelastingKoppelpuntGetrokkenVoertuig: Field("verticale_belasting_koppelpunt_getrokken_voertuig", DataType.Number),
+   * ### Verticale belasting koppelpunt getrokken voertuig
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `verticale_belasting_koppelpunt_getrokken_voertuig`
+   */
+  VerticaleBelastingKoppelpuntGetrokkenVoertuig: Field(
+    "verticale_belasting_koppelpunt_getrokken_voertuig",
+    DataType.Number,
+  ),
   /**
-  * ### Vervaldatum APK
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `vervaldatum_apk`
-  */
+   * ### Vervaldatum APK
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `vervaldatum_apk`
+   */
   VervaldatumApk: Field("vervaldatum_apk", DataType.Number),
   /**
-  * ### Vervaldatum APK DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `vervaldatum_apk_dt`
-  */
+   * ### Vervaldatum APK DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `vervaldatum_apk_dt`
+   */
   VervaldatumApkDt: Field("vervaldatum_apk_dt", DataType.FloatingTimestamp),
   /**
-  * ### Vervaldatum tachograaf
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `vervaldatum_tachograaf`
-  */
+   * ### Vervaldatum tachograaf
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `vervaldatum_tachograaf`
+   */
   VervaldatumTachograaf: Field("vervaldatum_tachograaf", DataType.Number),
   /**
-  * ### Vervaldatum tachograaf DT
-  *
-  * **Type**: Calendar date
-  *
-  * **Database Column Name**: `vervaldatum_tachograaf_dt`
-  */
+   * ### Vervaldatum tachograaf DT
+   *
+   * **Type**: Calendar date
+   *
+   * **Database Column Name**: `vervaldatum_tachograaf_dt`
+   */
   VervaldatumTachograafDt: Field("vervaldatum_tachograaf_dt", DataType.FloatingTimestamp),
   /**
-  * ### Voertuigsoort
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `voertuigsoort`
-  */
+   * ### Voertuigsoort
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `voertuigsoort`
+   */
   Voertuigsoort: Field("voertuigsoort", DataType.Text),
   /**
-  * ### Volgnummer wijziging EU typegoedkeuring
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `volgnummer_wijziging_eu_typegoedkeuring`
-  */
-  VolgnummerWijzigingEuTypegoedkeuring: Field("volgnummer_wijziging_eu_typegoedkeuring", DataType.Number),
+   * ### Volgnummer wijziging EU typegoedkeuring
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `volgnummer_wijziging_eu_typegoedkeuring`
+   */
+  VolgnummerWijzigingEuTypegoedkeuring: Field(
+    "volgnummer_wijziging_eu_typegoedkeuring",
+    DataType.Number,
+  ),
   /**
-  * ### Wacht op keuren
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `wacht_op_keuren`
-  */
+   * ### Wacht op keuren
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `wacht_op_keuren`
+   */
   WachtOpKeuren: Field("wacht_op_keuren", DataType.Text),
   /**
-  * ### WAM verzekerd
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `wam_verzekerd`
-  */
+   * ### WAM verzekerd
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `wam_verzekerd`
+   */
   WamVerzekerd: Field("wam_verzekerd", DataType.Text),
   /**
-  * ### Wielbasis
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `wielbasis`
-  */
+   * ### Wielbasis
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `wielbasis`
+   */
   Wielbasis: Field("wielbasis", DataType.Number),
   /**
-  * ### Wielbasis voertuig maximum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `wielbasis_voertuig_maximum`
-  */
+   * ### Wielbasis voertuig maximum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `wielbasis_voertuig_maximum`
+   */
   WielbasisVoertuigMaximum: Field("wielbasis_voertuig_maximum", DataType.Number),
   /**
-  * ### Wielbasis voertuig minimum
-  *
-  * **Type**: Number
-  *
-  * **Database Column Name**: `wielbasis_voertuig_minimum`
-  */
+   * ### Wielbasis voertuig minimum
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `wielbasis_voertuig_minimum`
+   */
   WielbasisVoertuigMinimum: Field("wielbasis_voertuig_minimum", DataType.Number),
   /**
-  * ### Zuinigheidsclassificatie
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `zuinigheidsclassificatie`
-  */
+   * ### Zuinigheidsclassificatie
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `zuinigheidsclassificatie`
+   */
   Zuinigheidsclassificatie: Field("zuinigheidsclassificatie", DataType.Text),
 };
 
@@ -1574,7 +1619,7 @@ export const Info = {
   provider_name: "KentekenVoertuigen",
   url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/m9d7-ebf2",
-}
+};
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen

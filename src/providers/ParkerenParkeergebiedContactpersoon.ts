@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface ParkerenParkeergebiedContactpersoon_ResponseData {
   /**
    * ### AreaId
-   * 
+   *
    * Identificatiecode van een parkeergebied of - faciliteit.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface ParkerenParkeergebiedContactpersoon_ResponseData {
   areaid?: string;
   /**
    * ### AreaManagerId
-   * 
+   *
    * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
    *
    * **Type**: Text
@@ -37,7 +37,7 @@ export interface ParkerenParkeergebiedContactpersoon_ResponseData {
   areamanagerid?: string;
   /**
    * ### ContactPersonId
-   * 
+   *
    * Identificatiecode van de contactpersoon.
    *
    * **Type**: Text
@@ -45,7 +45,7 @@ export interface ParkerenParkeergebiedContactpersoon_ResponseData {
   contactpersonid?: string;
   /**
    * ### ValidityEndOfPeriod
-   * 
+   *
    * Datum en tijd van het einde van een periode waarin gegevens van
    * een contactpersoon geldig zijn.
    *
@@ -54,7 +54,7 @@ export interface ParkerenParkeergebiedContactpersoon_ResponseData {
   validityendofperiod?: string;
   /**
    * ### ValidityStartOfPeriod
-   * 
+   *
    * Datum en tijd van het begin van een periode waarin gegevens van
    * een contactpersoon geldig zijn.
    *
@@ -77,56 +77,56 @@ export interface ParkerenParkeergebiedContactpersoon_ResponseData {
  */
 export const Fields = {
   /**
-  * ### AreaId
-  * 
-  * Identificatiecode van een parkeergebied of - faciliteit.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areaid`
-  */
+   * ### AreaId
+   *
+   * Identificatiecode van een parkeergebied of - faciliteit.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areaid`
+   */
   Areaid: Field("areaid", DataType.Text),
   /**
-  * ### AreaManagerId
-  * 
-  * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `areamanagerid`
-  */
+   * ### AreaManagerId
+   *
+   * Identificatiecode van de gebiedsbeheerder of parkeerexploitant.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `areamanagerid`
+   */
   Areamanagerid: Field("areamanagerid", DataType.Text),
   /**
-  * ### ContactPersonId
-  * 
-  * Identificatiecode van de contactpersoon.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `contactpersonid`
-  */
+   * ### ContactPersonId
+   *
+   * Identificatiecode van de contactpersoon.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `contactpersonid`
+   */
   Contactpersonid: Field("contactpersonid", DataType.Text),
   /**
-  * ### ValidityEndOfPeriod
-  * 
-  * Datum en tijd van het einde van een periode waarin gegevens van
-  * een contactpersoon geldig zijn.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `validityendofperiod`
-  */
+   * ### ValidityEndOfPeriod
+   *
+   * Datum en tijd van het einde van een periode waarin gegevens van
+   * een contactpersoon geldig zijn.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `validityendofperiod`
+   */
   Validityendofperiod: Field("validityendofperiod", DataType.Text),
   /**
-  * ### ValidityStartOfPeriod
-  * 
-  * Datum en tijd van het begin van een periode waarin gegevens van
-  * een contactpersoon geldig zijn.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `validitystartofperiod`
-  */
+   * ### ValidityStartOfPeriod
+   *
+   * Datum en tijd van het begin van een periode waarin gegevens van
+   * een contactpersoon geldig zijn.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `validitystartofperiod`
+   */
   Validitystartofperiod: Field("validitystartofperiod", DataType.Text),
 };
 
@@ -144,7 +144,7 @@ export const Info = {
   provider_name: "ParkerenParkeergebiedContactpersoon",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED-CONTACTPERSOON/69hx-t283",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/69hx-t283",
-}
+};
 
 /**
  * ### Open Data Parkeren: PARKEERGEBIED CONTACTPERSOON
@@ -174,13 +174,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<ParkerenParkeergebiedContactpersoon_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<ParkerenParkeergebiedContactpersoon_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const ParkerenParkeergebiedContactpersoon: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenParkeergebiedContactpersoon_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<ParkerenParkeergebiedContactpersoon_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {

@@ -21,7 +21,7 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
 export interface TellerstandoordeelTrendToelichting_ResponseData {
   /**
    * ### Code toelichting tellerstandoordeel
-   * 
+   *
    * Deze code geeft het oordeel aan. Tevens sleutelveld voor de uitgebreide omschrijving.
    *
    * **Type**: Text
@@ -29,7 +29,7 @@ export interface TellerstandoordeelTrendToelichting_ResponseData {
   code_toelichting_tellerstandoordeel?: string;
   /**
    * ### Toelichting tellerstandoordeel
-   * 
+   *
    * Uitleg van het oordeel dat gegeven wordt. De reeks die na de laatste registratie ontstaat, bepaalt het getoonde oordeel.
    *
    * **Type**: Text
@@ -48,24 +48,24 @@ export interface TellerstandoordeelTrendToelichting_ResponseData {
  */
 export const Fields = {
   /**
-  * ### Code toelichting tellerstandoordeel
-  * 
-  * Deze code geeft het oordeel aan. Tevens sleutelveld voor de uitgebreide omschrijving.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `code_toelichting_tellerstandoordeel`
-  */
+   * ### Code toelichting tellerstandoordeel
+   *
+   * Deze code geeft het oordeel aan. Tevens sleutelveld voor de uitgebreide omschrijving.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `code_toelichting_tellerstandoordeel`
+   */
   CodeToelichtingTellerstandoordeel: Field("code_toelichting_tellerstandoordeel", DataType.Text),
   /**
-  * ### Toelichting tellerstandoordeel
-  * 
-  * Uitleg van het oordeel dat gegeven wordt. De reeks die na de laatste registratie ontstaat, bepaalt het getoonde oordeel.
-  *
-  * **Type**: Text
-  *
-  * **Database Column Name**: `toelichting_tellerstandoordeel`
-  */
+   * ### Toelichting tellerstandoordeel
+   *
+   * Uitleg van het oordeel dat gegeven wordt. De reeks die na de laatste registratie ontstaat, bepaalt het getoonde oordeel.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `toelichting_tellerstandoordeel`
+   */
   ToelichtingTellerstandoordeel: Field("toelichting_tellerstandoordeel", DataType.Text),
 };
 
@@ -78,9 +78,10 @@ export const Info = {
   domain: "opendata.rdw.nl",
   full_name: "Open Data RDW: Tellerstandoordeel Trend Toelichting",
   provider_name: "TellerstandoordeelTrendToelichting",
-  url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Tellerstandoordeel-Trend-Toelichting/jqs4-4kvw",
+  url:
+    "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Tellerstandoordeel-Trend-Toelichting/jqs4-4kvw",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/jqs4-4kvw",
-}
+};
 
 /**
  * ### Open Data RDW: Tellerstandoordeel Trend Toelichting
@@ -110,13 +111,21 @@ export const Info = {
  * ```
  */
 export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
-  createQueryWithDataset<TellerstandoordeelTrendToelichting_ResponseData>(Info.domain, Info.dataset, auth, {
-    ...opts,
-    strict: typeof opts.strict === "boolean" ? opts.strict : true,
-  });
+  createQueryWithDataset<TellerstandoordeelTrendToelichting_ResponseData>(
+    Info.domain,
+    Info.dataset,
+    auth,
+    {
+      ...opts,
+      strict: typeof opts.strict === "boolean" ? opts.strict : true,
+    },
+  );
 
 export const TellerstandoordeelTrendToelichting: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TellerstandoordeelTrendToelichting_ResponseData>;
+  RDWQuery: (
+    auth?: AuthOpts,
+    opts?: Options,
+  ) => SodaQuery<TellerstandoordeelTrendToelichting_ResponseData>;
   Fields: typeof Fields;
   Info: typeof Info;
 } = {
