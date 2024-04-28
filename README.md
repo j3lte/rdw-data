@@ -159,6 +159,18 @@ These are auto generated providers and use `soda-query@0.4.5`.
 | `TerugroepInformerenEigenaar` | [Open Data RDW: Terugroep_informeren_eigenaar](https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_informeren_eigenaar/mh8w-8cup) | Terugroepacties |
 | `TerugroepVoertuigMerkType` | [Open Data RDW: Terugroep_voertuig_merk_type](https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e) | Terugroepacties |
 | `TestProducerApi` | [Test_Producer_API](https://opendata.rdw.nl/dataset/Test_Producer_API/sgwh-cvkk) | Unknown |
+| `TgkAandrijvingUitvoering` | [Open Data RDW: TGK Aandrijving Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Aandrijving-Uitvoering/4by9-ammk) | Typegoedkeuring |
+| `TgkAsUitvoering` | [Open Data RDW: TGK As Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-As-Uitvoering/xhyb-w7xt) | Typegoedkeuring |
+| `TgkBasisUitvoering` | [Open Data RDW: TGK Basis Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Basis-Uitvoering/byxc-wwua) | Typegoedkeuring |
+| `TgkCarrosserieUitvoering` | [Open Data RDW: TGK Carrosserie Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Carrosserie-Uitvoering/ky2r-jqad) | Typegoedkeuring |
+| `TgkEnergiebronUitvoering` | [Open Data RDW: TGK Energiebron Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Energiebron-Uitvoering/gr7t-qfnb) | Typegoedkeuring |
+| `TgkHandelsbenamingFabrikant` | [Open Data RDW: TGK Handelsbenaming Fabrikant](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Handelsbenaming-Fabrikant/x5v3-sewk) | Typegoedkeuring |
+| `TgkIntrekkingTypegoedkeuring` | [Open Data RDW: TGK Intrekking Typegoedkeuring](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Intrekking-Typegoedkeuring/9s6a-b42z) | Typegoedkeuring |
+| `TgkKoppelingUitvoering` | [Open Data RDW: TGK Koppeling Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Koppeling-Uitvoering/d3ex-xghj) | Typegoedkeuring |
+| `TgkMerkUitvoering` | [Open Data RDW: TGK Merk Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Merk-Uitvoering/kyri-nuah) | Typegoedkeuring |
+| `TgkRupsbandsetUitvoering` | [Open Data RDW: TGK Rupsbandset Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Rupsbandset-Uitvoering/xn6e-huse) | Typegoedkeuring |
+| `TgkSpecialeDoeleinden` | [Open Data RDW: TGK Speciale Doeleinden](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Speciale-Doeleinden/m692-vvff) | Typegoedkeuring |
+| `TgkVersnellingUitvoering` | [Open Data RDW: TGK Versnelling Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Versnelling-Uitvoering/7rjk-eycs) | Typegoedkeuring |
 | `ToegevoegdeObjecten` | [Open Data RDW: Toegevoegde Objecten](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx) | Keuringen |
 | `UitvoeringGebruiksgegevensPerUitgave` | [Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx) | Typegoedkeuring |
 | `VersnellingsbakUitvoering` | [Open Data RDW: Versnellingsbak Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Versnellingsbak-Uitvoering/r7cw-67gs) | Typegoedkeuring |
@@ -1899,6 +1911,405 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Tes
 | `Uniekecode` | `uniekecode` | UniekeCode | Text |
 
 **Link:** https://opendata.rdw.nl/dataset/Test_Producer_API/sgwh-cvkk
+</details>
+
+<details><summary>TgkAandrijvingUitvoering</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkAandrijvingUitvoering.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Aantalcilinders` | `aantalcilinders` | AantalCilinders | Number |
+| `Cilinderinhoud` | `cilinderinhoud` | Cilinderinhoud | Text |
+| `Codebrandstoftypemotor` | `codebrandstoftypemotor` | CodeBrandstoftypeMotor | Text |
+| `Codecilinderopstelling` | `codecilinderopstelling` | CodeCilinderopstelling | Text |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Codewerkingmotor` | `codewerkingmotor` | CodeWerkingMotor | Text |
+| `Elektromotorindicator` | `elektromotorindicator` | ElektromotorIndicator | Text |
+| `Enkelelektrischschakelingind` | `enkelelektrischschakelingind` | EnkelElektrischSchakelingInd | Text |
+| `Externoplaadbaarindicator` | `externoplaadbaarindicator` | ExternOplaadbaarIndicator | Text |
+| `Hybridemotorindicator` | `hybridemotorindicator` | HybrideMotorIndicator | Text |
+| `Motorcode` | `motorcode` | Motorcode | Text |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Typegoedkeuringsnummermotor` | `typegoedkeuringsnummermotor` | TypegoedkeuringsnummerMotor | Text |
+| `Volgnummeraandrijving` | `volgnummeraandrijving` | VolgnummerAandrijving | Number |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Aandrijving-Uitvoering/4by9-ammk
+</details>
+
+<details><summary>TgkAsUitvoering</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkAsUitvoering.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Aangedrevenasindicator` | `aangedrevenasindicator` | AangedrevenAsIndicator | Text |
+| `Afstandvolgendeasbovengrens` | `afstandvolgendeasbovengrens` | AfstandVolgendeAsBovengrens | Text |
+| `Afstandvolgendeasondergrens` | `afstandvolgendeasondergrens` | AfstandVolgendeAsOndergrens | Text |
+| `Belastbareasindicator` | `belastbareasindicator` | BelastbareAsIndicator | Text |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Dubbelemontageindicator` | `dubbelemontageindicator` | DubbeleMontageIndicator | Text |
+| `Gelijkwaardigaangedrevenasind` | `gelijkwaardigaangedrevenasind` | GelijkwaardigAangedrevenAsInd | Text |
+| `Geremdeasindicator` | `geremdeasindicator` | GeremdeAsIndicator | Text |
+| `Hefasindicator` | `hefasindicator` | HefAsIndicator | Text |
+| `Luchtveringaangedrevenasind` | `luchtveringaangedrevenasind` | LuchtveringAangedrevenAsInd | Text |
+| `Maximummassaasbelastingbgr` | `maximummassaasbelastingbgr` | MaximummassaAsBelastingBgr | Text |
+| `Maximummassaasbelastingogr` | `maximummassaasbelastingogr` | MaximummassaAsBelastingOgr | Text |
+| `Spoorbreedtebovengrens` | `spoorbreedtebovengrens` | SpoorbreedteBovengrens | Text |
+| `Spoorbreedteondergrens` | `spoorbreedteondergrens` | SpoorbreedteOndergrens | Text |
+| `Stuurasindicator` | `stuurasindicator` | StuurAsIndicator | Text |
+| `Typegoedkeuringnummer` | `typegoedkeuringnummer` | Typegoedkeuringnummer | Text |
+| `Volgnummeras` | `volgnummeras` | VolgnummerAs | Number |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-As-Uitvoering/xhyb-w7xt
+</details>
+
+<details><summary>TgkBasisUitvoering</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkBasisUitvoering.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Aantaldeurenbovengrens` | `aantaldeurenbovengrens` | AantalDeurenBovengrens | Number |
+| `Aantaldeurenondergrens` | `aantaldeurenondergrens` | AantalDeurenOndergrens | Number |
+| `Aantalpassagiersbovengrens` | `aantalpassagiersbovengrens` | AantalPassagiersBovengrens | Number |
+| `Aantalpassagiersondergrens` | `aantalpassagiersondergrens` | AantalPassagiersOndergrens | Number |
+| `Aantalrolstoelplaatsenbgr` | `aantalrolstoelplaatsenbgr` | AantalRolstoelplaatsenBgr | Number |
+| `Aantalrolstoelplaatsenogr` | `aantalrolstoelplaatsenogr` | AantalRolstoelplaatsenOgr | Number |
+| `Aantalwielen` | `aantalwielen` | AantalWielen | Number |
+| `Aantalzitplaatsenbovengrens` | `aantalzitplaatsenbovengrens` | AantalZitplaatsenBovengrens | Number |
+| `Aantalzitplaatsenondergrens` | `aantalzitplaatsenondergrens` | AantalZitplaatsenOndergrens | Number |
+| `Aantalzitplaatsenpassagiersbgr` | `aantalzitplaatsenpassagiersbgr` | AantalZitplaatsenPassagiersBgr | Number |
+| `Aantalzitplaatsenpassagiersogr` | `aantalzitplaatsenpassagiersogr` | AantalZitplaatsenPassagiersOgr | Number |
+| `Aantalzitplaatsenstilstaandbgr` | `aantalzitplaatsenstilstaandbgr` | AantalZitplaatsenStilstaandBgr | Number |
+| `Aantalzitplaatsenstilstaandogr` | `aantalzitplaatsenstilstaandogr` | AantalZitplaatsenStilstaandOgr | Number |
+| `Begindatumrevisieuitvoering` | `begindatumrevisieuitvoering` | BegindatumRevisieUitvoering | Text |
+| `Breedtebovengrens` | `breedtebovengrens` | BreedteBovengrens | Number |
+| `Breedteondergrens` | `breedteondergrens` | BreedteOndergrens | Number |
+| `Codelinksrechtsrijdend` | `codelinksrechtsrijdend` | CodeLinksRechtsRijdend | Text |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Einddatumrevisieuitvoering` | `einddatumrevisieuitvoering` | EinddatumRevisieUitvoering | Text |
+| `Hoogtebovengrens` | `hoogtebovengrens` | HoogteBovengrens | Number |
+| `Hoogteondergrens` | `hoogteondergrens` | HoogteOndergrens | Number |
+| `Lengtebovengrens` | `lengtebovengrens` | LengteBovengrens | Number |
+| `Lengteondergrens` | `lengteondergrens` | LengteOndergrens | Number |
+| `Massaledigbovengrens` | `massaledigbovengrens` | MassaLedigBovengrens | Number |
+| `Massaledigondergrens` | `massaledigondergrens` | MassaLedigOndergrens | Number |
+| `Massarijklaarbovengens` | `massarijklaarbovengens` | MassaRijklaarBovengens | Number |
+| `Massarijklaarondergens` | `massarijklaarondergens` | MassaRijklaarOndergens | Number |
+| `Maxconstructiesnelheidahw` | `maxconstructiesnelheidahw` | MaxconstructiesnelheidAhw Ogr | Number |
+| `Maxconstructiesnelheidahw1` | `maxconstructiesnelheidahw_1` | MaxconstructiesnelheidAhw Bgr | Number |
+| `Maximummassabovengrens` | `maximummassabovengrens` | MaximummassaBovengrens | Number |
+| `Maximummassaondergrens` | `maximummassaondergrens` | MaximummassaOndergrens | Number |
+| `Maxondersteundesnelheidbgr` | `maxondersteundesnelheidbgr` | MaxOndersteundeSnelheidBgr | Number |
+| `Maxondersteundesnelheidogr` | `maxondersteundesnelheidogr` | MaxOndersteundeSnelheidOgr | Number |
+| `Maxverticalebelastopkoppbgr` | `maxverticalebelastopkoppbgr` | MaxVerticaleBelastOpKoppBgr | Number |
+| `Maxverticalebelastopkoppogr` | `maxverticalebelastopkoppogr` | MaxVerticaleBelastOpKoppOgr | Number |
+| `Minimummassavoltooid` | `minimummassavoltooid` | MinimummassaVoltooid | Number |
+| `Paramrijweerstandf0bovengrens` | `paramrijweerstandf0bovengrens` | ParamRijweerstandF0Bovengrens | Number |
+| `Paramrijweerstandf0ondergrens` | `paramrijweerstandf0ondergrens` | ParamRijweerstandF0Ondergrens | Number |
+| `Paramrijweerstandf1bovengrens` | `paramrijweerstandf1bovengrens` | ParamRijweerstandF1Bovengrens | Number |
+| `Paramrijweerstandf1ondergrens` | `paramrijweerstandf1ondergrens` | ParamRijweerstandF1Ondergrens | Number |
+| `Paramrijweerstandf2bovengrens` | `paramrijweerstandf2bovengrens` | ParamRijweerstandF2Bovengrens | Number |
+| `Paramrijweerstandf2ondergrens` | `paramrijweerstandf2ondergrens` | ParamRijweerstandF2Ondergrens | Number |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Voertuigcategorie` | `voertuigcategorie` | Voertuigcategorie | Text |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
+| `Wielbasisbovengrens` | `wielbasisbovengrens` | WielbasisBovengrens | Number |
+| `Wielbasisondergrens` | `wielbasisondergrens` | WielbasisOndergrens | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Basis-Uitvoering/byxc-wwua
+</details>
+
+<details><summary>TgkCarrosserieUitvoering</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkCarrosserieUitvoering.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Codecarrosseriecode` | `codecarrosseriecode` | CodeCarrosseriecode | Text |
+| `Codecarrosserietype` | `codecarrosserietype` | CodeCarrosserietype | Text |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Codevoertuigklasse` | `codevoertuigklasse` | CodeVoertuigklasse | Text |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Volgnummercarrosseriecode` | `volgnummercarrosseriecode` | VolgnummerCarrosseriecode | Number |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
+| `Volgnummervoertuigklasse` | `volgnummervoertuigklasse` | VolgnummerVoertuigklasse | Number |
+| `Volgummercarrosserietype` | `volgummercarrosserietype` | VolgummerCarrosserietype | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Carrosserie-Uitvoering/ky2r-jqad
+</details>
+
+<details><summary>TgkEnergiebronUitvoering</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkEnergiebronUitvoering.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Actieradiusexternoplaadwltpbgr` | `actieradiusexternoplaadwltpbgr` | ActieradiusExternOplaadWltpBgr | Text |
+| `Actieradiusexternoplaadwltpogr` | `actieradiusexternoplaadwltpogr` | ActieradiusExternOplaadWltpOgr | Text |
+| `Actieradiusvolledigelekwltpbgr` | `actieradiusvolledigelekwltpbgr` | ActieradiusVolledigElekWltpBgr | Text |
+| `Actieradiusvolledigelekwltpogr` | `actieradiusvolledigelekwltpogr` | ActieradiusVolledigElekWltpOgr | Text |
+| `Brandstofverbruikgecombwltpbgr` | `brandstofverbruikgecombwltpbgr` | BrandstofverbruikGecombWltpBgr | Text |
+| `Brandstofverbruikgecombwltpogr` | `brandstofverbruikgecombwltpogr` | BrandstofverbruikGecombWltpOgr | Text |
+| `Brandstverbrgewogencombwltpbgr` | `brandstverbrgewogencombwltpbgr` | BrandstVerbrGewogenCombWltpBgr | Text |
+| `Brandstverbrgewogencombwltpogr` | `brandstverbrgewogencombwltpogr` | BrandstVerbrGewogenCombWltpOgr | Text |
+| `Co2emisgecombineerdnedchoog` | `co2emisgecombineerdnedchoog` | Co2EmisGecombineerdNedcHoog | Text |
+| `Co2emisgecombineerdnedclaag` | `co2emisgecombineerdnedclaag` | Co2EmisGecombineerdNedcLaag | Text |
+| `Co2emisgecombineerdwltpbgr` | `co2emisgecombineerdwltpbgr` | Co2EmisGecombineerdWltpBgr | Text |
+| `Co2emisgecombineerdwltpogr` | `co2emisgecombineerdwltpogr` | Co2EmisGecombineerdWltpOgr | Text |
+| `Co2emisgewGecombnedchoog` | `co2emisgew_gecombnedchoog` | Co2EmisGew GecombNedcHoog | Text |
+| `Co2emisgewGecombnedclaag` | `co2emisgew_gecombnedclaag` | Co2EmisGew GecombNedcLaag | Text |
+| `Co2emisgewogengecombwltpbgr` | `co2emisgewogengecombwltpbgr` | Co2EmisGewogenGecombWltpBgr | Text |
+| `Co2emisgewogengecombwltpogr` | `co2emisgewogengecombwltpogr` | Co2EmisGewogenGecombWltpOgr | Text |
+| `Co2emissiebuitennedchoog` | `co2emissiebuitennedchoog` | Co2EmissieBuitenNedcHoog | Text |
+| `Co2emissiebuitennedclaag` | `co2emissiebuitennedclaag` | Co2EmissieBuitenNedcLaag | Text |
+| `Co2emissiestadnedchoog` | `co2emissiestadnedchoog` | Co2EmissieStadNedcHoog | Text |
+| `Co2emissiestadnedclaag` | `co2emissiestadnedclaag` | Co2EmissieStadNedcLaag | Text |
+| `Codeenergiebron` | `codeenergiebron` | CodeEnergiebron | Text |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Coemissieesc` | `coemissieesc` | CoEmissieEsc | Text |
+| `Coemissieetc` | `coemissieetc` | CoEmissieEtc | Text |
+| `Coemissietype1` | `coemissietype1` | CoEmissieType1 | Text |
+| `Coemissietype1wltp` | `coemissietype1wltp` | CoEmissieType1Wltp | Text |
+| `Coemissiewhsc` | `coemissiewhsc` | CoEmissieWhsc | Text |
+| `Coemissiewhtc` | `coemissiewhtc` | CoEmissieWhtc | Text |
+| `Elekactieradiusextoplaadbnedc` | `elekactieradiusextoplaadbnedc` | ElekActieradiusExtOplaadbNedc | Text |
+| `Elektrischeactieradiusnedc` | `elektrischeactieradiusnedc` | ElektrischeActieradiusNedc | Text |
+| `Elekverbrexternoplaadbwltpbgr` | `elekverbrexternoplaadbwltpbgr` | ElekVerbrExternOplaadbWltpBgr | Text |
+| `Elekverbrexternoplaadbwltpogr` | `elekverbrexternoplaadbwltpogr` | ElekVerbrExternOplaadbWltpOgr | Text |
+| `Elekverbruikgecombineerdnedc` | `elekverbruikgecombineerdnedc` | ElekVerbruikGecombineerdNedc | Text |
+| `Elekverbruikgew` | `elekverbruikgew` | ElekVerbruikGew GecombVerbrNedc | Text |
+| `Emissieaantaldeeltjesesc` | `emissieaantaldeeltjesesc` | EmissieAantalDeeltjesEsc | Text |
+| `Emissieaantaldeeltjesetc` | `emissieaantaldeeltjesetc` | EmissieAantalDeeltjesEtc | Text |
+| `Emissieaantaldeeltjestype1` | `emissieaantaldeeltjestype1` | EmissieAantalDeeltjesType1 | Text |
+| `Emissieaantaldeeltjestype1wltp` | `emissieaantaldeeltjestype1wltp` | EmissieAantalDeeltjesType1Wltp | Text |
+| `Emissieaantaldeeltjeswhsc` | `emissieaantaldeeltjeswhsc` | EmissieAantalDeeltjesWhsc | Text |
+| `Emissieaantaldeeltjeswhtc` | `emissieaantaldeeltjeswhtc` | EmissieAantalDeeltjesWhtc | Text |
+| `Emissiedeeltjesesc` | `emissiedeeltjesesc` | EmissiedeeltjesEsc | Text |
+| `Emissiedeeltjesetc` | `emissiedeeltjesetc` | EmissiedeeltjesEtc | Text |
+| `Emissiedeeltjestype1` | `emissiedeeltjestype1` | EmissiedeeltjesType1 | Text |
+| `Emissiedeeltjestype1wltp` | `emissiedeeltjestype1wltp` | EmissiedeeltjesType1Wltp | Text |
+| `Emissiedeeltjeswhsc` | `emissiedeeltjeswhsc` | EmissiedeeltjesWhsc | Text |
+| `Emissiedeeltjeswhtc` | `emissiedeeltjeswhtc` | EmissiedeeltjesWhtc | Text |
+| `Geluidsniveaubovengrens` | `geluidsniveaubovengrens` | GeluidsniveauBovengrens | Text |
+| `Geluidsniveauondergrens` | `geluidsniveauondergrens` | GeluidsniveauOndergrens | Text |
+| `Geluidsniveaurijdend` | `geluidsniveaurijdend` | GeluidsniveauRijdend | Text |
+| `Geluidsniveautoerentalbgr` | `geluidsniveautoerentalbgr` | GeluidsniveauToerentalBgr | Text |
+| `Geluidsniveautoerentalogr` | `geluidsniveautoerentalogr` | GeluidsniveauToerentalOgr | Text |
+| `Hcemissietype1` | `hcemissietype1` | HcEmissieType1 | Text |
+| `Hcnoxemissietype1` | `hcnoxemissietype1` | HcNoxEmissieType1 | Text |
+| `Maxbiopercentagebrandstof` | `maxbiopercentagebrandstof` | MaxBiopercentageBrandstof | Text |
+| `Maximumconstructiesnelheidbgr` | `maximumconstructiesnelheidbgr` | MaximumconstructiesnelheidBgr | Text |
+| `Maximumconstructiesnelheidogr` | `maximumconstructiesnelheidogr` | MaximumconstructiesnelheidOgr | Text |
+| `Maximumnettovermogenbgr` | `maximumnettovermogenbgr` | MaximumNettoVermogenBgr | Text |
+| `Maximumnettovermogenogr` | `maximumnettovermogenogr` | MaximumNettoVermogenOgr | Text |
+| `Maximumvermogen30minbgr` | `maximumvermogen30minbgr` | MaximumVermogen30MinBgr | Text |
+| `Maximumvermogen30minogr` | `maximumvermogen30minogr` | MaximumVermogen30MinOgr | Text |
+| `Noxemissieesc` | `noxemissieesc` | NoxEmissieEsc | Text |
+| `Noxemissieetc` | `noxemissieetc` | NoxEmissieEtc | Text |
+| `Noxemissietype1` | `noxemissietype1` | NoxEmissieType1 | Text |
+| `Noxemissietype1wltp` | `noxemissietype1wltp` | NoxEmissieType1Wltp | Text |
+| `Noxemissiewhsc` | `noxemissiewhsc` | NoxEmissieWhsc | Text |
+| `Noxemissiewhtc` | `noxemissiewhtc` | NoxEmissieWhtc | Text |
+| `Regelgevingemissiemotoren` | `regelgevingemissiemotoren` | RegelgevingEmissieMotoren | Text |
+| `Regelgevingemissievoertuigen` | `regelgevingemissievoertuigen` | RegelgevingEmissieVoertuigen | Text |
+| `Toerentalmaxnettovermogenbgr` | `toerentalmaxnettovermogenbgr` | ToerentalMaxNettoVermogenBgr | Text |
+| `Toerentalmaxnettovermogenogr` | `toerentalmaxnettovermogenogr` | ToerentalMaxNettoVermogenOgr | Text |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Uitlaatemissieniveau` | `uitlaatemissieniveau` | Uitlaatemissieniveau | Text |
+| `Verbrgewogengecombnedchoog` | `verbrgewogengecombnedchoog` | VerbrGewogenGecombNedcHoog | Text |
+| `Verbrgewogengecombnedclaag` | `verbrgewogengecombnedclaag` | VerbrGewogenGecombNedcLaag | Text |
+| `Verbruikgecombineerdnedchoog` | `verbruikgecombineerdnedchoog` | VerbruikGecombineerdNedcHoog | Text |
+| `Verbruikgecombineerdnedclaag` | `verbruikgecombineerdnedclaag` | VerbruikGecombineerdNedcLaag | Text |
+| `Verbruikvolledigelekwltpbgr` | `verbruikvolledigelekwltpbgr` | VerbruikVolledigElekWltpBgr | Text |
+| `Verbruikvolledigelekwltpogr` | `verbruikvolledigelekwltpogr` | VerbruikVolledigElekWltpOgr | Text |
+| `Volgnummeraandrijving` | `volgnummeraandrijving` | VolgnummerAandrijving | Number |
+| `Volgnummerenergiebron` | `volgnummerenergiebron` | VolgnummerEnergiebron | Text |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Energiebron-Uitvoering/gr7t-qfnb
+</details>
+
+<details><summary>TgkHandelsbenamingFabrikant</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkHandelsbenamingFabrikant.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevariantgk` | `codevariantgk` | CodeVariantTgk | Text |
+| `Handelsbenamingfabrikant` | `handelsbenamingfabrikant` | HandelsbenamingFabrikant | Text |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Volgnummerhandelsbenamingfabr` | `volgnummerhandelsbenamingfabr` | VolgnummerHandelsbenamingFabr | Number |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Handelsbenaming-Fabrikant/x5v3-sewk
+</details>
+
+<details><summary>TgkIntrekkingTypegoedkeuring</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkIntrekkingTypegoedkeuring.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Begindatumintrekkingtgk` | `begindatumintrekkingtgk` | BegindatumIntrekkingTgk | Calendar date |
+| `Einddatumintrekkingtgk` | `einddatumintrekkingtgk` | EinddatumIntrekkingTgk | Calendar date |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Volgnummerintrekkingtgk` | `volgnummerintrekkingtgk` | VolgnummerIntrekkingTgk | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Intrekking-Typegoedkeuring/9s6a-b42z
+</details>
+
+<details><summary>TgkKoppelingUitvoering</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkKoppelingUitvoering.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Maximummassaautonoombgr` | `maximummassaautonoombgr` | MaximummassaAutonoomBgr | Number |
+| `Maximummassaautonoomogr` | `maximummassaautonoomogr` | MaximummassaAutonoomOgr | Number |
+| `Maximummassageremdbgr` | `maximummassageremdbgr` | MaximummassaGeremdBgr | Number |
+| `Maximummassageremdogr` | `maximummassageremdogr` | MaximummassaGeremdOgr | Number |
+| `Maximummassamiddenasbgr` | `maximummassamiddenasbgr` | MaximummassaMiddenasBgr | Number |
+| `Maximummassamiddenasogr` | `maximummassamiddenasogr` | MaximummassaMiddenasOgr | Number |
+| `Maximummassaongeremdbgr` | `maximummassaongeremdbgr` | MaximummassaOngeremdBgr | Number |
+| `Maximummassaongeremdogr` | `maximummassaongeremdogr` | MaximummassaOngeremdOgr | Number |
+| `Maximummassaopleggerbgr` | `maximummassaopleggerbgr` | MaximummassaOpleggerBgr | Number |
+| `Maximummassaopleggerogr` | `maximummassaopleggerogr` | MaximummassaOpleggerOgr | Number |
+| `Maximummassasamenstelbgr` | `maximummassasamenstelbgr` | MaximummassaSamenstelBgr | Number |
+| `Maximummassasamenstelogr` | `maximummassasamenstelogr` | MaximummassaSamenstelOgr | Number |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Volgnummerkoppeling` | `volgnummerkoppeling` | VolgnummerKoppeling | Number |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Koppeling-Uitvoering/d3ex-xghj
+</details>
+
+<details><summary>TgkMerkUitvoering</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkMerkUitvoering.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Merkcoderdw` | `merkcoderdw` | MerkcodeRdw | Text |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Volgnummermerk` | `volgnummermerk` | VolgnummerMerk | Text |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Text |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Merk-Uitvoering/kyri-nuah
+</details>
+
+<details><summary>TgkRupsbandsetUitvoering</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkRupsbandsetUitvoering.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Aangedrevenrupsbandsetind` | `aangedrevenrupsbandsetind` | AangedrevenRupsbandsetInd | Text |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Geremderupsbandsetindicator` | `geremderupsbandsetindicator` | GeremdeRupsbandsetIndicator | Number |
+| `Maximummassarupsbandsetbgr` | `maximummassarupsbandsetbgr` | MaximummassaRupsbandsetBgr | Number |
+| `Maximummassarupsbandsetogr` | `maximummassarupsbandsetogr` | MaximummassaRupsbandsetOgr | Number |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
+| `Volgnummerrupsbandset` | `volgnummerrupsbandset` | VolgnummerRupsbandset | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Rupsbandset-Uitvoering/xn6e-huse
+</details>
+
+<details><summary>TgkSpecialeDoeleinden</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkSpecialeDoeleinden.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Codespecialedoeleinden` | `codespecialedoeleinden` | CodeSpecialeDoeleinden | Text |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
+| `Volgnummerspecialedoeleinden` | `volgnummerspecialedoeleinden` | VolgnummerSpecialeDoeleinden | Number |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Speciale-Doeleinden/m692-vvff
+</details>
+
+<details><summary>TgkVersnellingUitvoering</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TgkVersnellingUitvoering.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `Aantalversnellingenbovengrens` | `aantalversnellingenbovengrens` | AantalVersnellingenBovengrens | Text |
+| `Aantalversnellingenondergrens` | `aantalversnellingenondergrens` | AantalVersnellingenOndergrens | Text |
+| `Codetypeversnellingsbak` | `codetypeversnellingsbak` | CodeTypeVersnellingsbak | Text |
+| `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
+| `Codevarianttgk` | `codevarianttgk` | CodeVariantTgk | Text |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
+| `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Text |
+| `Volgnummerversnelling` | `volgnummerversnelling` | VolgnummerVersnelling | Text |
+
+**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Versnelling-Uitvoering/7rjk-eycs
 </details>
 
 <details><summary>ToegevoegdeObjecten</summary>
