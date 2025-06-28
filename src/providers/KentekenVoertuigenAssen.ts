@@ -31,7 +31,7 @@ export interface KentekenVoertuigenAssen_ResponseData {
    *
    * Het aantal assen van een voertuig.
    *
-   * **Type**: Text
+   * **Type**: Number
    */
   aantal_assen?: string;
   /**
@@ -57,7 +57,7 @@ export interface KentekenVoertuigenAssen_ResponseData {
    *
    * Het nummer van de (fysieke) as vanaf de voorzijde van het voertuig gerekend. Bij pendelassen wordt het nummer bepaald van links naar rechts, gezien vanuit de rijrichting.
    *
-   * **Type**: Text
+   * **Type**: Number
    */
   as_nummer?: string;
   /**
@@ -113,7 +113,7 @@ export interface KentekenVoertuigenAssen_ResponseData {
    * Met spoorbreedte van een as wordt de horizontale afstand tussen het hart van het linker- en rechterwiel van die as bedoeld, gemeten op het wegdek.
    * Een samenstel van wielen die op 1 wielnaaf zijn gemonteerd (dubbellucht) wordt dit geval aangemerkt als 1 wiel. De RDW legt dit gegeven alleen vast bij personenauto's, bedrijfsauto's en bussen met een wettelijk toegestane maximummassa niet meer dan 3500 kg.
    *
-   * **Type**: Text
+   * **Type**: Number
    */
   spoorbreedte?: string;
   /**
@@ -121,7 +121,7 @@ export interface KentekenVoertuigenAssen_ResponseData {
    *
    * De technisch toegestane maximummassa van de as, opgegeven door de fabrikant van het voertuig.
    *
-   * **Type**: Text
+   * **Type**: Number
    */
   technisch_toegestane_maximum_aslast?: string;
   /**
@@ -141,7 +141,7 @@ export interface KentekenVoertuigenAssen_ResponseData {
    *
    * De wettelijk toegestane maximummassa op de as, afgeleid van de technisch toegestane maximummassa. Zo nodig is deze verminderd aan de hand van wettelijke bepalingen of op verzoek van de aanvrager van het kentekenbewijs.
    *
-   * **Type**: Text
+   * **Type**: Number
    */
   wettelijk_toegestane_maximum_aslast?: string;
 }
@@ -151,21 +151,21 @@ export interface KentekenVoertuigenAssen_ResponseData {
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
  * | ``AangedrevenAs`` | ``aangedreven_as`` | _Text_ |
- * | ``AantalAssen`` | ``aantal_assen`` | _Text_ |
+ * | ``AantalAssen`` | ``aantal_assen`` | _Number_ |
  * | ``AfstandTotVolgendeAsVoertuig`` | ``afstand_tot_volgende_as_voertuig`` | _Number_ |
  * | ``AfstandTotVolgendeAsVoertuigMaximum`` | ``afstand_tot_volgende_as_voertuig_maximum`` | _Number_ |
  * | ``AfstandTotVolgendeAsVoertuigMinimum`` | ``afstand_tot_volgende_as_voertuig_minimum`` | _Number_ |
- * | ``AsNummer`` | ``as_nummer`` | _Text_ |
+ * | ``AsNummer`` | ``as_nummer`` | _Number_ |
  * | ``GeremdeAsIndicator`` | ``geremde_as_indicator`` | _Text_ |
  * | ``Hefas`` | ``hefas`` | _Text_ |
  * | ``Kenteken`` | ``kenteken`` | _Text_ |
  * | ``MaximumLastAsTechnischMaximum`` | ``maximum_last_as_technisch_maximum`` | _Number_ |
  * | ``MaximumLastAsTechnischMinimum`` | ``maximum_last_as_technisch_minimum`` | _Number_ |
  * | ``PlaatscodeAs`` | ``plaatscode_as`` | _Text_ |
- * | ``Spoorbreedte`` | ``spoorbreedte`` | _Text_ |
- * | ``TechnischToegestaneMaximumAslast`` | ``technisch_toegestane_maximum_aslast`` | _Text_ |
+ * | ``Spoorbreedte`` | ``spoorbreedte`` | _Number_ |
+ * | ``TechnischToegestaneMaximumAslast`` | ``technisch_toegestane_maximum_aslast`` | _Number_ |
  * | ``WeggedragCode`` | ``weggedrag_code`` | _Text_ |
- * | ``WettelijkToegestaneMaximumAslast`` | ``wettelijk_toegestane_maximum_aslast`` | _Text_ |
+ * | ``WettelijkToegestaneMaximumAslast`` | ``wettelijk_toegestane_maximum_aslast`` | _Number_ |
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
@@ -186,11 +186,11 @@ export const Fields = {
    *
    * Het aantal assen van een voertuig.
    *
-   * **Type**: Text
+   * **Type**: Number
    *
    * **Database Column Name**: `aantal_assen`
    */
-  AantalAssen: Field("aantal_assen", DataType.Text),
+  AantalAssen: Field("aantal_assen", DataType.Number),
   /**
    * ### Afstand tot volgende as voertuig
    *
@@ -226,11 +226,11 @@ export const Fields = {
    *
    * Het nummer van de (fysieke) as vanaf de voorzijde van het voertuig gerekend. Bij pendelassen wordt het nummer bepaald van links naar rechts, gezien vanuit de rijrichting.
    *
-   * **Type**: Text
+   * **Type**: Number
    *
    * **Database Column Name**: `as_nummer`
    */
-  AsNummer: Field("as_nummer", DataType.Text),
+  AsNummer: Field("as_nummer", DataType.Number),
   /**
    * ### Geremde as indicator
    *
@@ -296,21 +296,21 @@ export const Fields = {
    * Met spoorbreedte van een as wordt de horizontale afstand tussen het hart van het linker- en rechterwiel van die as bedoeld, gemeten op het wegdek.
    * Een samenstel van wielen die op 1 wielnaaf zijn gemonteerd (dubbellucht) wordt dit geval aangemerkt als 1 wiel. De RDW legt dit gegeven alleen vast bij personenauto's, bedrijfsauto's en bussen met een wettelijk toegestane maximummassa niet meer dan 3500 kg.
    *
-   * **Type**: Text
+   * **Type**: Number
    *
    * **Database Column Name**: `spoorbreedte`
    */
-  Spoorbreedte: Field("spoorbreedte", DataType.Text),
+  Spoorbreedte: Field("spoorbreedte", DataType.Number),
   /**
    * ### Technisch toegestane maximum aslast
    *
    * De technisch toegestane maximummassa van de as, opgegeven door de fabrikant van het voertuig.
    *
-   * **Type**: Text
+   * **Type**: Number
    *
    * **Database Column Name**: `technisch_toegestane_maximum_aslast`
    */
-  TechnischToegestaneMaximumAslast: Field("technisch_toegestane_maximum_aslast", DataType.Text),
+  TechnischToegestaneMaximumAslast: Field("technisch_toegestane_maximum_aslast", DataType.Number),
   /**
    * ### Weggedrag code
    *
@@ -330,11 +330,11 @@ export const Fields = {
    *
    * De wettelijk toegestane maximummassa op de as, afgeleid van de technisch toegestane maximummassa. Zo nodig is deze verminderd aan de hand van wettelijke bepalingen of op verzoek van de aanvrager van het kentekenbewijs.
    *
-   * **Type**: Text
+   * **Type**: Number
    *
    * **Database Column Name**: `wettelijk_toegestane_maximum_aslast`
    */
-  WettelijkToegestaneMaximumAslast: Field("wettelijk_toegestane_maximum_aslast", DataType.Text),
+  WettelijkToegestaneMaximumAslast: Field("wettelijk_toegestane_maximum_aslast", DataType.Number),
 };
 
 export const Info = {

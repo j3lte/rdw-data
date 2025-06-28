@@ -104,6 +104,12 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
    */
   brandstofverbruik_stad?: string;
   /**
+   * ### CO2 emissieklasse
+   *
+   * **Type**: Text
+   */
+  co2_emissieklasse?: string;
+  /**
    * ### CO2 uitstoot gecombineerd
    *
    * De gewogen uitstoot van CO2 in g/km van een plug-in hybride voertuig, tijdens een combinatie van een stadsrit en een rit buiten de stad, getest op een rollenbank. De waarde is berekend aan de hand van de uitstoot die ontstaat door eenmaal met lege accus en eenmaal met volle accus te rijden.
@@ -122,7 +128,7 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
   /**
    * ### Elektrisch verbruik enkel elektrisch wltp
    *
-   * Actieradius gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.
+   * Electrisch verbruik gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.
    *
    * **Type**: Number
    */
@@ -316,6 +322,7 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
  * | ``BrandstofverbruikBuiten`` | ``brandstofverbruik_buiten`` | _Text_ |
  * | ``BrandstofverbruikGecombineerd`` | ``brandstofverbruik_gecombineerd`` | _Text_ |
  * | ``BrandstofverbruikStad`` | ``brandstofverbruik_stad`` | _Text_ |
+ * | ``Co2Emissieklasse`` | ``co2_emissieklasse`` | _Text_ |
  * | ``Co2UitstootGecombineerd`` | ``co2_uitstoot_gecombineerd`` | _Text_ |
  * | ``Co2UitstootGewogen`` | ``co2_uitstoot_gewogen`` | _Text_ |
  * | ``ElektrischVerbruikEnkelElektrischWltp`` | ``elektrisch_verbruik_enkel_elektrisch_wltp`` | _Number_ |
@@ -460,6 +467,14 @@ export const Fields = {
    */
   BrandstofverbruikStad: Field("brandstofverbruik_stad", DataType.Text),
   /**
+   * ### CO2 emissieklasse
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `co2_emissieklasse`
+   */
+  Co2Emissieklasse: Field("co2_emissieklasse", DataType.Text),
+  /**
    * ### CO2 uitstoot gecombineerd
    *
    * De gewogen uitstoot van CO2 in g/km van een plug-in hybride voertuig, tijdens een combinatie van een stadsrit en een rit buiten de stad, getest op een rollenbank. De waarde is berekend aan de hand van de uitstoot die ontstaat door eenmaal met lege accus en eenmaal met volle accus te rijden.
@@ -482,7 +497,7 @@ export const Fields = {
   /**
    * ### Elektrisch verbruik enkel elektrisch wltp
    *
-   * Actieradius gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.
+   * Electrisch verbruik gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.
    *
    * **Type**: Number
    *
@@ -726,6 +741,7 @@ export const Info = {
     "BrandstofverbruikBuiten",
     "BrandstofverbruikGecombineerd",
     "BrandstofverbruikStad",
+    "Co2Emissieklasse",
     "Co2UitstootGecombineerd",
     "Co2UitstootGewogen",
     "ElektrischVerbruikEnkelElektrischWltp",

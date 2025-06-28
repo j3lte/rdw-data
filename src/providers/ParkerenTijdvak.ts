@@ -92,6 +92,12 @@ export interface ParkerenTijdvak_ResponseData {
    */
   regulationid?: string;
   /**
+   * ### ResetDurationTimeFrame
+   *
+   * **Type**: Number
+   */
+  resetdurationtimeframe?: string;
+  /**
    * ### StartDateTimeFrame
    *
    * Datum en tijd van het begin van een periode waarop een bepaald tijdvak geldig is.
@@ -122,6 +128,7 @@ export interface ParkerenTijdvak_ResponseData {
  * | ``Maxdurationright`` | ``maxdurationright`` | _Number_ |
  * | ``Minparkinginterruption`` | ``minparkinginterruption`` | _Number_ |
  * | ``Regulationid`` | ``regulationid`` | _Text_ |
+ * | ``Resetdurationtimeframe`` | ``resetdurationtimeframe`` | _Number_ |
  * | ``Startdatetimeframe`` | ``startdatetimeframe`` | _Text_ |
  * | ``Starttimetimeframe`` | ``starttimetimeframe`` | _Number_ |
  *
@@ -219,6 +226,14 @@ export const Fields = {
    */
   Regulationid: Field("regulationid", DataType.Text),
   /**
+   * ### ResetDurationTimeFrame
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `resetdurationtimeframe`
+   */
+  Resetdurationtimeframe: Field("resetdurationtimeframe", DataType.Number),
+  /**
    * ### StartDateTimeFrame
    *
    * Datum en tijd van het begin van een periode waarop een bepaald tijdvak geldig is.
@@ -251,6 +266,7 @@ export const Info = {
     "Maxdurationright",
     "Minparkinginterruption",
     "Regulationid",
+    "Resetdurationtimeframe",
     "Startdatetimeframe",
     "Starttimetimeframe",
   ],

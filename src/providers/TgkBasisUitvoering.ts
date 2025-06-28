@@ -174,29 +174,29 @@ export interface TgkBasisUitvoering_ResponseData {
    */
   massaledigondergrens?: string;
   /**
-   * ### MassaRijklaarBovengens
+   * ### MassaRijklaarBovengrens
    *
    * **Type**: Number
    */
-  massarijklaarbovengens?: string;
+  massarijklaarbovengrens?: string;
   /**
-   * ### MassaRijklaarOndergens
+   * ### MassaRijklaarOndergrens
    *
    * **Type**: Number
    */
-  massarijklaarondergens?: string;
-  /**
-   * ### MaxconstructiesnelheidAhw Ogr
-   *
-   * **Type**: Number
-   */
-  maxconstructiesnelheidahw?: string;
+  massarijklaarondergrens?: string;
   /**
    * ### MaxconstructiesnelheidAhw Bgr
    *
    * **Type**: Number
    */
-  maxconstructiesnelheidahw_1?: string;
+  maxconstructiesnelheidahwbgr?: string;
+  /**
+   * ### MaxconstructiesnelheidAhw Ogr
+   *
+   * **Type**: Number
+   */
+  maxconstructiesnelheidahwogr?: string;
   /**
    * ### MaximummassaBovengrens
    *
@@ -337,10 +337,10 @@ export interface TgkBasisUitvoering_ResponseData {
  * | ``Lengteondergrens`` | ``lengteondergrens`` | _Number_ |
  * | ``Massaledigbovengrens`` | ``massaledigbovengrens`` | _Number_ |
  * | ``Massaledigondergrens`` | ``massaledigondergrens`` | _Number_ |
- * | ``Massarijklaarbovengens`` | ``massarijklaarbovengens`` | _Number_ |
- * | ``Massarijklaarondergens`` | ``massarijklaarondergens`` | _Number_ |
- * | ``Maxconstructiesnelheidahw`` | ``maxconstructiesnelheidahw`` | _Number_ |
- * | ``Maxconstructiesnelheidahw1`` | ``maxconstructiesnelheidahw_1`` | _Number_ |
+ * | ``Massarijklaarbovengrens`` | ``massarijklaarbovengrens`` | _Number_ |
+ * | ``Massarijklaarondergrens`` | ``massarijklaarondergrens`` | _Number_ |
+ * | ``Maxconstructiesnelheidahwbgr`` | ``maxconstructiesnelheidahwbgr`` | _Number_ |
+ * | ``Maxconstructiesnelheidahwogr`` | ``maxconstructiesnelheidahwogr`` | _Number_ |
  * | ``Maximummassabovengrens`` | ``maximummassabovengrens`` | _Number_ |
  * | ``Maximummassaondergrens`` | ``maximummassaondergrens`` | _Number_ |
  * | ``Maxondersteundesnelheidbgr`` | ``maxondersteundesnelheidbgr`` | _Number_ |
@@ -572,37 +572,37 @@ export const Fields = {
    */
   Massaledigondergrens: Field("massaledigondergrens", DataType.Number),
   /**
-   * ### MassaRijklaarBovengens
+   * ### MassaRijklaarBovengrens
    *
    * **Type**: Number
    *
-   * **Database Column Name**: `massarijklaarbovengens`
+   * **Database Column Name**: `massarijklaarbovengrens`
    */
-  Massarijklaarbovengens: Field("massarijklaarbovengens", DataType.Number),
+  Massarijklaarbovengrens: Field("massarijklaarbovengrens", DataType.Number),
   /**
-   * ### MassaRijklaarOndergens
+   * ### MassaRijklaarOndergrens
    *
    * **Type**: Number
    *
-   * **Database Column Name**: `massarijklaarondergens`
+   * **Database Column Name**: `massarijklaarondergrens`
    */
-  Massarijklaarondergens: Field("massarijklaarondergens", DataType.Number),
-  /**
-   * ### MaxconstructiesnelheidAhw Ogr
-   *
-   * **Type**: Number
-   *
-   * **Database Column Name**: `maxconstructiesnelheidahw`
-   */
-  Maxconstructiesnelheidahw: Field("maxconstructiesnelheidahw", DataType.Number),
+  Massarijklaarondergrens: Field("massarijklaarondergrens", DataType.Number),
   /**
    * ### MaxconstructiesnelheidAhw Bgr
    *
    * **Type**: Number
    *
-   * **Database Column Name**: `maxconstructiesnelheidahw_1`
+   * **Database Column Name**: `maxconstructiesnelheidahwbgr`
    */
-  Maxconstructiesnelheidahw1: Field("maxconstructiesnelheidahw_1", DataType.Number),
+  Maxconstructiesnelheidahwbgr: Field("maxconstructiesnelheidahwbgr", DataType.Number),
+  /**
+   * ### MaxconstructiesnelheidAhw Ogr
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `maxconstructiesnelheidahwogr`
+   */
+  Maxconstructiesnelheidahwogr: Field("maxconstructiesnelheidahwogr", DataType.Number),
   /**
    * ### MaximummassaBovengrens
    *
@@ -777,10 +777,10 @@ export const Info = {
     "Lengteondergrens",
     "Massaledigbovengrens",
     "Massaledigondergrens",
-    "Massarijklaarbovengens",
-    "Massarijklaarondergens",
-    "Maxconstructiesnelheidahw",
-    "Maxconstructiesnelheidahw1",
+    "Massarijklaarbovengrens",
+    "Massarijklaarondergrens",
+    "Maxconstructiesnelheidahwbgr",
+    "Maxconstructiesnelheidahwogr",
     "Maximummassabovengrens",
     "Maximummassaondergrens",
     "Maxondersteundesnelheidbgr",

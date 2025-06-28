@@ -90,17 +90,17 @@ export interface TgkEnergiebronUitvoering_ResponseData {
    */
   co2emisgecombineerdwltpogr?: string;
   /**
-   * ### Co2EmisGew GecombNedcHoog
+   * ### Co2EmisGewGecombNedcHoog
    *
    * **Type**: Text
    */
-  co2emisgew_gecombnedchoog?: string;
+  co2emisgewgecombnedchoog?: string;
   /**
-   * ### Co2EmisGew GecombNedcLaag
+   * ### Co2EmisGewGecombNedcLaag
    *
    * **Type**: Text
    */
-  co2emisgew_gecombnedclaag?: string;
+  co2emisgewgecombnedclaag?: string;
   /**
    * ### Co2EmisGewogenGecombWltpBgr
    *
@@ -222,11 +222,11 @@ export interface TgkEnergiebronUitvoering_ResponseData {
    */
   elekverbruikgecombineerdnedc?: string;
   /**
-   * ### ElekVerbruikGew GecombVerbrNedc
+   * ### ElekVerbruikGewGecombVerbrNedc
    *
    * **Type**: Text
    */
-  elekverbruikgew?: string;
+  elekverbruikgewgecombverbrnedc?: string;
   /**
    * ### EmissieAantalDeeltjesEsc
    *
@@ -527,8 +527,8 @@ export interface TgkEnergiebronUitvoering_ResponseData {
  * | ``Co2emisgecombineerdnedclaag`` | ``co2emisgecombineerdnedclaag`` | _Text_ |
  * | ``Co2emisgecombineerdwltpbgr`` | ``co2emisgecombineerdwltpbgr`` | _Text_ |
  * | ``Co2emisgecombineerdwltpogr`` | ``co2emisgecombineerdwltpogr`` | _Text_ |
- * | ``Co2emisgewGecombnedchoog`` | ``co2emisgew_gecombnedchoog`` | _Text_ |
- * | ``Co2emisgewGecombnedclaag`` | ``co2emisgew_gecombnedclaag`` | _Text_ |
+ * | ``Co2emisgewgecombnedchoog`` | ``co2emisgewgecombnedchoog`` | _Text_ |
+ * | ``Co2emisgewgecombnedclaag`` | ``co2emisgewgecombnedclaag`` | _Text_ |
  * | ``Co2emisgewogengecombwltpbgr`` | ``co2emisgewogengecombwltpbgr`` | _Text_ |
  * | ``Co2emisgewogengecombwltpogr`` | ``co2emisgewogengecombwltpogr`` | _Text_ |
  * | ``Co2emissiebuitennedchoog`` | ``co2emissiebuitennedchoog`` | _Text_ |
@@ -549,7 +549,7 @@ export interface TgkEnergiebronUitvoering_ResponseData {
  * | ``Elekverbrexternoplaadbwltpbgr`` | ``elekverbrexternoplaadbwltpbgr`` | _Text_ |
  * | ``Elekverbrexternoplaadbwltpogr`` | ``elekverbrexternoplaadbwltpogr`` | _Text_ |
  * | ``Elekverbruikgecombineerdnedc`` | ``elekverbruikgecombineerdnedc`` | _Text_ |
- * | ``Elekverbruikgew`` | ``elekverbruikgew`` | _Text_ |
+ * | ``Elekverbruikgewgecombverbrnedc`` | ``elekverbruikgewgecombverbrnedc`` | _Text_ |
  * | ``Emissieaantaldeeltjesesc`` | ``emissieaantaldeeltjesesc`` | _Text_ |
  * | ``Emissieaantaldeeltjesetc`` | ``emissieaantaldeeltjesetc`` | _Text_ |
  * | ``Emissieaantaldeeltjestype1`` | ``emissieaantaldeeltjestype1`` | _Text_ |
@@ -698,21 +698,21 @@ export const Fields = {
    */
   Co2emisgecombineerdwltpogr: Field("co2emisgecombineerdwltpogr", DataType.Text),
   /**
-   * ### Co2EmisGew GecombNedcHoog
+   * ### Co2EmisGewGecombNedcHoog
    *
    * **Type**: Text
    *
-   * **Database Column Name**: `co2emisgew_gecombnedchoog`
+   * **Database Column Name**: `co2emisgewgecombnedchoog`
    */
-  Co2emisgewGecombnedchoog: Field("co2emisgew_gecombnedchoog", DataType.Text),
+  Co2emisgewgecombnedchoog: Field("co2emisgewgecombnedchoog", DataType.Text),
   /**
-   * ### Co2EmisGew GecombNedcLaag
+   * ### Co2EmisGewGecombNedcLaag
    *
    * **Type**: Text
    *
-   * **Database Column Name**: `co2emisgew_gecombnedclaag`
+   * **Database Column Name**: `co2emisgewgecombnedclaag`
    */
-  Co2emisgewGecombnedclaag: Field("co2emisgew_gecombnedclaag", DataType.Text),
+  Co2emisgewgecombnedclaag: Field("co2emisgewgecombnedclaag", DataType.Text),
   /**
    * ### Co2EmisGewogenGecombWltpBgr
    *
@@ -874,13 +874,13 @@ export const Fields = {
    */
   Elekverbruikgecombineerdnedc: Field("elekverbruikgecombineerdnedc", DataType.Text),
   /**
-   * ### ElekVerbruikGew GecombVerbrNedc
+   * ### ElekVerbruikGewGecombVerbrNedc
    *
    * **Type**: Text
    *
-   * **Database Column Name**: `elekverbruikgew`
+   * **Database Column Name**: `elekverbruikgewgecombverbrnedc`
    */
-  Elekverbruikgew: Field("elekverbruikgew", DataType.Text),
+  Elekverbruikgewgecombverbrnedc: Field("elekverbruikgewgecombverbrnedc", DataType.Text),
   /**
    * ### EmissieAantalDeeltjesEsc
    *
@@ -1273,8 +1273,8 @@ export const Info = {
     "Co2emisgecombineerdnedclaag",
     "Co2emisgecombineerdwltpbgr",
     "Co2emisgecombineerdwltpogr",
-    "Co2emisgewGecombnedchoog",
-    "Co2emisgewGecombnedclaag",
+    "Co2emisgewgecombnedchoog",
+    "Co2emisgewgecombnedclaag",
     "Co2emisgewogengecombwltpbgr",
     "Co2emisgewogengecombwltpogr",
     "Co2emissiebuitennedchoog",
@@ -1295,7 +1295,7 @@ export const Info = {
     "Elekverbrexternoplaadbwltpbgr",
     "Elekverbrexternoplaadbwltpogr",
     "Elekverbruikgecombineerdnedc",
-    "Elekverbruikgew",
+    "Elekverbruikgewgecombverbrnedc",
     "Emissieaantaldeeltjesesc",
     "Emissieaantaldeeltjesetc",
     "Emissieaantaldeeltjestype1",

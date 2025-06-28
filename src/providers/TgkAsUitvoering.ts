@@ -114,11 +114,11 @@ export interface TgkAsUitvoering_ResponseData {
    */
   stuurasindicator?: string;
   /**
-   * ### Typegoedkeuringnummer
+   * ### Typegoedkeuringsnummer
    *
    * **Type**: Text
    */
-  typegoedkeuringnummer?: string;
+  typegoedkeuringsnummer?: string;
   /**
    * ### VolgnummerAs
    *
@@ -153,7 +153,7 @@ export interface TgkAsUitvoering_ResponseData {
  * | ``Spoorbreedtebovengrens`` | ``spoorbreedtebovengrens`` | _Text_ |
  * | ``Spoorbreedteondergrens`` | ``spoorbreedteondergrens`` | _Text_ |
  * | ``Stuurasindicator`` | ``stuurasindicator`` | _Text_ |
- * | ``Typegoedkeuringnummer`` | ``typegoedkeuringnummer`` | _Text_ |
+ * | ``Typegoedkeuringsnummer`` | ``typegoedkeuringsnummer`` | _Text_ |
  * | ``Volgnummeras`` | ``volgnummeras`` | _Number_ |
  * | ``Volgnummerrevisieuitvoering`` | ``volgnummerrevisieuitvoering`` | _Number_ |
  *
@@ -289,13 +289,13 @@ export const Fields = {
    */
   Stuurasindicator: Field("stuurasindicator", DataType.Text),
   /**
-   * ### Typegoedkeuringnummer
+   * ### Typegoedkeuringsnummer
    *
    * **Type**: Text
    *
-   * **Database Column Name**: `typegoedkeuringnummer`
+   * **Database Column Name**: `typegoedkeuringsnummer`
    */
-  Typegoedkeuringnummer: Field("typegoedkeuringnummer", DataType.Text),
+  Typegoedkeuringsnummer: Field("typegoedkeuringsnummer", DataType.Text),
   /**
    * ### VolgnummerAs
    *
@@ -332,7 +332,7 @@ export const Info = {
     "Spoorbreedtebovengrens",
     "Spoorbreedteondergrens",
     "Stuurasindicator",
-    "Typegoedkeuringnummer",
+    "Typegoedkeuringsnummer",
     "Volgnummeras",
     "Volgnummerrevisieuitvoering",
   ],

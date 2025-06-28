@@ -60,6 +60,12 @@ export interface TgkCarrosserieUitvoering_ResponseData {
    */
   volgnummercarrosseriecode?: string;
   /**
+   * ### VolgnummerCarrosserietype
+   *
+   * **Type**: Number
+   */
+  volgnummercarrosserietype?: string;
+  /**
    * ### VolgnummerRevisieUitvoering
    *
    * **Type**: Number
@@ -71,12 +77,6 @@ export interface TgkCarrosserieUitvoering_ResponseData {
    * **Type**: Number
    */
   volgnummervoertuigklasse?: string;
-  /**
-   * ### VolgummerCarrosserietype
-   *
-   * **Type**: Number
-   */
-  volgummercarrosserietype?: string;
 }
 
 /**
@@ -90,9 +90,9 @@ export interface TgkCarrosserieUitvoering_ResponseData {
  * | ``Codevoertuigklasse`` | ``codevoertuigklasse`` | _Text_ |
  * | ``Typegoedkeuringsnummer`` | ``typegoedkeuringsnummer`` | _Text_ |
  * | ``Volgnummercarrosseriecode`` | ``volgnummercarrosseriecode`` | _Number_ |
+ * | ``Volgnummercarrosserietype`` | ``volgnummercarrosserietype`` | _Number_ |
  * | ``Volgnummerrevisieuitvoering`` | ``volgnummerrevisieuitvoering`` | _Number_ |
  * | ``Volgnummervoertuigklasse`` | ``volgnummervoertuigklasse`` | _Number_ |
- * | ``Volgummercarrosserietype`` | ``volgummercarrosserietype`` | _Number_ |
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
@@ -154,6 +154,14 @@ export const Fields = {
    */
   Volgnummercarrosseriecode: Field("volgnummercarrosseriecode", DataType.Number),
   /**
+   * ### VolgnummerCarrosserietype
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `volgnummercarrosserietype`
+   */
+  Volgnummercarrosserietype: Field("volgnummercarrosserietype", DataType.Number),
+  /**
    * ### VolgnummerRevisieUitvoering
    *
    * **Type**: Number
@@ -169,14 +177,6 @@ export const Fields = {
    * **Database Column Name**: `volgnummervoertuigklasse`
    */
   Volgnummervoertuigklasse: Field("volgnummervoertuigklasse", DataType.Number),
-  /**
-   * ### VolgummerCarrosserietype
-   *
-   * **Type**: Number
-   *
-   * **Database Column Name**: `volgummercarrosserietype`
-   */
-  Volgummercarrosserietype: Field("volgummercarrosserietype", DataType.Number),
 };
 
 export const Info = {
@@ -188,9 +188,9 @@ export const Info = {
     "Codevoertuigklasse",
     "Typegoedkeuringsnummer",
     "Volgnummercarrosseriecode",
+    "Volgnummercarrosserietype",
     "Volgnummerrevisieuitvoering",
     "Volgnummervoertuigklasse",
-    "Volgummercarrosserietype",
   ],
   dataset: "ky2r-jqad",
   domain: "opendata.rdw.nl",

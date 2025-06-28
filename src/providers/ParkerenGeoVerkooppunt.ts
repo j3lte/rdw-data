@@ -38,35 +38,9 @@ export interface ParkerenGeoVerkooppunt_ResponseData {
   /**
    * ### Location
    *
-   * De cordinaten van een verkooppunt.
-   *
    * **Type**: Point
    */
   location?: { latitude: string; longitude: string; human_address: null | string };
-  /**
-   * ### Location (address)
-   *
-   * **Type**: Text
-   */
-  location_address?: string;
-  /**
-   * ### Location (city)
-   *
-   * **Type**: Text
-   */
-  location_city?: string;
-  /**
-   * ### Location (state)
-   *
-   * **Type**: Text
-   */
-  location_state?: string;
-  /**
-   * ### Location (zip)
-   *
-   * **Type**: Text
-   */
-  location_zip?: string;
   /**
    * ### SellingPointDesc
    *
@@ -100,10 +74,6 @@ export interface ParkerenGeoVerkooppunt_ResponseData {
  * | ``Areamanagerid`` | ``areamanagerid`` | _Number_ |
  * | ``Enddatesellingpoint`` | ``enddatesellingpoint`` | _Text_ |
  * | ``Location`` | ``location`` | _Point_ |
- * | ``LocationAddress`` | ``location_address`` | _Text_ |
- * | ``LocationCity`` | ``location_city`` | _Text_ |
- * | ``LocationState`` | ``location_state`` | _Text_ |
- * | ``LocationZip`` | ``location_zip`` | _Text_ |
  * | ``Sellingpointdesc`` | ``sellingpointdesc`` | _Text_ |
  * | ``Sellingpointid`` | ``sellingpointid`` | _Number_ |
  * | ``Startdatesellingpoint`` | ``startdatesellingpoint`` | _Text_ |
@@ -134,45 +104,11 @@ export const Fields = {
   /**
    * ### Location
    *
-   * De cordinaten van een verkooppunt.
-   *
    * **Type**: Point
    *
    * **Database Column Name**: `location`
    */
   Location: Field("location", DataType.Point),
-  /**
-   * ### Location (address)
-   *
-   * **Type**: Text
-   *
-   * **Database Column Name**: `location_address`
-   */
-  LocationAddress: Field("location_address", DataType.Text),
-  /**
-   * ### Location (city)
-   *
-   * **Type**: Text
-   *
-   * **Database Column Name**: `location_city`
-   */
-  LocationCity: Field("location_city", DataType.Text),
-  /**
-   * ### Location (state)
-   *
-   * **Type**: Text
-   *
-   * **Database Column Name**: `location_state`
-   */
-  LocationState: Field("location_state", DataType.Text),
-  /**
-   * ### Location (zip)
-   *
-   * **Type**: Text
-   *
-   * **Database Column Name**: `location_zip`
-   */
-  LocationZip: Field("location_zip", DataType.Text),
   /**
    * ### SellingPointDesc
    *
@@ -210,10 +146,6 @@ export const Info = {
     "Areamanagerid",
     "Enddatesellingpoint",
     "Location",
-    "LocationAddress",
-    "LocationCity",
-    "LocationState",
-    "LocationZip",
     "Sellingpointdesc",
     "Sellingpointid",
     "Startdatesellingpoint",

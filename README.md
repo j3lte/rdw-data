@@ -94,21 +94,16 @@ These are auto generated providers and use `soda-query@0.4.5`.
 
 | Provider | Name | Category |
 | --- | --- | --- |
-| `AsGegevensEegUitvoering` | [Open Data RDW: AS Gegevens EEG Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-AS-Gegevens-EEG-Uitvoering/ahsi-8uyu) | Typegoedkeuring |
-| `BasisgegevensEegUitvoering` | [Open Data RDW: Basisgegevens EEG Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Basisgegevens-EEG-Uitvoering/wx3j-69ie) | Typegoedkeuring |
 | `BrandstoffenOpPc4` | [Brandstoffen_op_PC4](https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d) | Unknown |
-| `CarrosserieUitvoering` | [Open Data RDW: Carrosserie Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering/w2qp-idms) | Typegoedkeuring |
-| `CarrosserieUitvoeringKlasse` | [Open Data RDW: Carrosserie Uitvoering Klasse](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Klasse/q7fi-ijjh) | Typegoedkeuring |
-| `CarrosserieUitvoeringNummeriekeCode` | [Open Data RDW: Carrosserie Uitvoering Nummerieke Code](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Nummerieke-Co/nypm-t8hx) | Typegoedkeuring |
-| `EegVoertuigtypegoedkeuring` | [Open Data RDW: EEG Voertuigtypegoedkeuring](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-EEG-Voertuigtypegoedkeuring/55kv-xf7m) | Typegoedkeuring |
 | `ErkendeBedrijven` | [Open Data RDW: Erkende Bedrijven](https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha) | Erkende bedrijven |
 | `Erkenningen` | [Open Data RDW: Erkenningen](https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz) | Erkende bedrijven |
+| `Gebieden` | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd) | Parkeren |
+| `Gebieden` | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw) | Parkeren |
 | `Gebreken` | [Open Data RDW: Gebreken](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Gebreken/hx2c-gt7k) | Keuringen |
 | `GeconstateerdeGebreken` | [Open Data RDW: Geconstateerde Gebreken](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps) | Keuringen |
 | `GeoCarpool` | [GEO Carpool](https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx) | Parkeren |
 | `GeoParkeerGarages` | [GEO Parkeer Garages](https://opendata.rdw.nl/Parkeren/GEO-Parkeer-Garages/t5pc-eb34) | Parkeren |
 | `GeoPenr` | [GEO PenR](https://opendata.rdw.nl/Parkeren/GEO-PenR/6wzd-evwu) | Parkeren |
-| `HandelsbenamingUitvoering` | [Open Data RDW: Handelsbenaming Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Handelsbenaming-Uitvoering/mdqe-txpd) | Typegoedkeuring |
 | `KentekenVoertuigen` | [Open Data RDW: Gekentekende_voertuigen](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2) | Voertuigen |
 | `KentekenVoertuigenAssen` | [Open Data RDW: Gekentekende_voertuigen_assen](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_assen/3huj-srit) | Voertuigen |
 | `KentekenVoertuigenBijzonderheden` | [Open Data RDW: Gekentekende_voertuigen_bijzonderheden](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_bijzonderhed/7ug8-2dtt) | Voertuigen |
@@ -119,10 +114,9 @@ These are auto generated providers and use `soda-query@0.4.5`.
 | `KentekenVoertuigenSubcategorieVoertuig` | [Open Data RDW: Gekentekende_voertuigen_subcategorie_voertuig](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_subcategorie/2ba7-embk) | Voertuigen |
 | `KentekenVoertuigenVoertuigklasse` | [Open Data RDW: Gekentekende_voertuigen_voertuigklasse](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_voertuigklas/kmfi-hrps) | Voertuigen |
 | `Keuringen` | [Open Data RDW: Keuringen](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc) | Keuringen |
+| `Locaties` | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy) | Parkeren |
+| `Locaties` | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5) | Parkeren |
 | `MeldingenKeuringsinstantie` | [Open Data RDW: Meldingen Keuringsinstantie](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx) | Keuringen |
-| `MerkUitvoeringToegestaan` | [Open Data RDW: Merk Uitvoering Toegestaan](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Merk-Uitvoering-Toegestaan/fj7t-hhik) | Typegoedkeuring |
-| `MotorUitvoering` | [Open Data RDW: Motor Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Motor-Uitvoering/g2s6-ehxa) | Typegoedkeuring |
-| `MotorUitvoeringBrandstof` | [Open Data RDW: Motor Uitvoering Brandstof](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Motor-Uitvoering-Brandstof/5w6t-p66a) | Typegoedkeuring |
 | `ParkerenBetaalmethodeGebied` | [Open Data Parkeren: BETAALMETHODE GEBIED](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5) | Parkeren |
 | `ParkerenBetaalmethodeVerkooppunt` | [Open Data Parkeren: BETAALMETHODE VERKOOPPUNT](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx) | Parkeren |
 | `ParkerenContactpersoon` | [Open Data Parkeren: CONTACTPERSOON](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-CONTACTPERSOON/rbew-yhyc) | Parkeren |
@@ -149,16 +143,13 @@ These are auto generated providers and use `soda-query@0.4.5`.
 | `ParkerenTariefdeel` | [Open Data Parkeren: TARIEFDEEL](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFDEEL/534e-5vdg) | Parkeren |
 | `ParkerenTijdvak` | [Open Data Parkeren: TIJDVAK](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TIJDVAK/ixf8-gtwq) | Parkeren |
 | `ParkerenVerkooppunt` | [Open Data Parkeren: VERKOOPPUNT](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-VERKOOPPUNT/fk68-nf2y) | Parkeren |
-| `PlaatsaanduidingUitvoering` | [Open Data RDW: Plaatsaanduiding Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Plaatsaanduiding-Uitvoering/mt8t-4ep4) | Typegoedkeuring |
 | `ProductenCatalogus` | [Open Data RDW: Producten Catalogus](https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km) | Product catalogus |
-| `SubcategorieUitvoering` | [Open Data RDW: Subcategorie Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Subcategorie-Uitvoering/h9pa-e9ta) | Typegoedkeuring |
 | `TellerstandoordeelTrendToelichting` | [Open Data RDW: Tellerstandoordeel Trend Toelichting](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Tellerstandoordeel-Trend-Toelichting/jqs4-4kvw) | Voertuigen |
 | `TerugroepActie` | [Open Data RDW: Terugroep_actie](https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie/j9yg-7rg9) | Terugroepacties |
 | `TerugroepActieRisico` | [Open Data RDW: Terugroep_actie_risico](https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_risico/9ihi-jgpf) | Terugroepacties |
 | `TerugroepActieStatus` | [Open Data RDW: Terugroep_actie_status](https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_status/t49b-isb7) | Terugroepacties |
 | `TerugroepInformerenEigenaar` | [Open Data RDW: Terugroep_informeren_eigenaar](https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_informeren_eigenaar/mh8w-8cup) | Terugroepacties |
 | `TerugroepVoertuigMerkType` | [Open Data RDW: Terugroep_voertuig_merk_type](https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e) | Terugroepacties |
-| `TestProducerApi` | [Test_Producer_API](https://opendata.rdw.nl/dataset/Test_Producer_API/sgwh-cvkk) | Unknown |
 | `TgkAandrijvingUitvoering` | [Open Data RDW: TGK Aandrijving Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Aandrijving-Uitvoering/4by9-ammk) | Typegoedkeuring |
 | `TgkAsUitvoering` | [Open Data RDW: TGK As Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-As-Uitvoering/xhyb-w7xt) | Typegoedkeuring |
 | `TgkBasisUitvoering` | [Open Data RDW: TGK Basis Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Basis-Uitvoering/byxc-wwua) | Typegoedkeuring |
@@ -172,153 +163,8 @@ These are auto generated providers and use `soda-query@0.4.5`.
 | `TgkSpecialeDoeleinden` | [Open Data RDW: TGK Speciale Doeleinden](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Speciale-Doeleinden/m692-vvff) | Typegoedkeuring |
 | `TgkVersnellingUitvoering` | [Open Data RDW: TGK Versnelling Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Versnelling-Uitvoering/7rjk-eycs) | Typegoedkeuring |
 | `ToegevoegdeObjecten` | [Open Data RDW: Toegevoegde Objecten](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx) | Keuringen |
-| `UitvoeringGebruiksgegevensPerUitgave` | [Open Data RDW: Uitvoering Gebruiksgegevens Per Uitgave](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx) | Typegoedkeuring |
-| `VersnellingsbakUitvoering` | [Open Data RDW: Versnellingsbak Uitvoering](https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Versnellingsbak-Uitvoering/r7cw-67gs) | Typegoedkeuring |
 
 ### Details
-
-<details><summary>AsGegevensEegUitvoering</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/AsGegevensEegUitvoering.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `AangedrevenAs` | `aangedreven_as` | Aangedreven as | Text |
-| `AfstandVolgendeAsBovengrens` | `afstand_volgende_as_bovengrens` | Afstand volgende as bovengrens | Number |
-| `AfstandVolgendeAsOndergrens` | `afstand_volgende_as_ondergrens` | Afstand volgende as ondergrens | Number |
-| `Asnummer` | `asnummer` | Asnummer | Text |
-| `DubbeleMontage` | `dubbele_montage` | Dubbele montage | Text |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `GelijkwaardigAanLuchtvering` | `gelijkwaardig_aan_luchtvering` | Gelijkwaardig aan luchtvering | Text |
-| `GestuurdeAsIndicator` | `gestuurde_as_indicator` | Gestuurde as indicator | Text |
-| `Hefas` | `hefas` | Hefas | Text |
-| `Luchtvering` | `luchtvering` | Luchtvering | Text |
-| `PlaatsAsCode` | `plaats_as_code` | Plaats as code | Text |
-| `RolstraalBovengrens` | `rolstraal_bovengrens` | Rolstraal bovengrens | Number |
-| `RolstraalOndergrens` | `rolstraal_ondergrens` | Rolstraal ondergrens | Number |
-| `SnelheidssymboolOndergrens` | `snelheidssymbool_ondergrens` | Snelheidssymbool ondergrens | Text |
-| `SpoorbreedteBovengrens` | `spoorbreedte_bovengrens` | Spoorbreedte bovengrens | Number |
-| `SpoorbreedteOndergrens` | `spoorbreedte_ondergrens` | Spoorbreedte ondergrens | Number |
-| `TechnMaxLastAsBovengrens` | `techn_max_last_as_bovengrens` | Techn max last as bovengrens | Number |
-| `TechnMaxLastAsOndergrens` | `techn_max_last_as_ondergrens` | Techn max last as ondergrens | Number |
-| `TechnMaxLastAsstelBovengr` | `techn_max_last_asstel_bovengr` | Techn max last asstel bovengr | Number |
-| `TechnMaxLastAsstelOndergr` | `techn_max_last_asstel_ondergr` | Techn max last asstel ondergr | Number |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-AS-Gegevens-EEG-Uitvoering/ahsi-8uyu
-</details>
-
-<details><summary>BasisgegevensEegUitvoering</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/BasisgegevensEegUitvoering.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `N24ghzKortbereikRadar` | `_24ghz_kortbereik_radar` | 24GHz_kortbereik radar | Text |
-| `AantZitplStilstVrtgBovengrens` | `aant_zitpl_stilst_vrtg_bovengrens` | Aant zitpl stilst vrtg bovengrens | Number |
-| `AantZitplStilstVrtgOndergrens` | `aant_zitpl_stilst_vrtg_ondergrens` | Aant zitpl stilst vrtg ondergrens | Number |
-| `AantalAangedrevenAssen` | `aantal_aangedreven_assen` | Aantal aangedreven assen | Number |
-| `AantalDeurenBovengrens` | `aantal_deuren_bovengrens` | Aantal deuren bovengrens | Number |
-| `AantalDeurenOndergrens` | `aantal_deuren_ondergrens` | Aantal deuren ondergrens | Number |
-| `AantalPassagierZittendBovengrens` | `aantal_passagier_zittend_bovengrens` | Aantal passagier zittend bovengrens | Number |
-| `AantalPassagierZittendOndergrens` | `aantal_passagier_zittend_ondergrens` | Aantal passagier zittend ondergrens | Number |
-| `AantalPassagiersBovengrens` | `aantal_passagiers_bovengrens` | Aantal passagiers bovengrens | Number |
-| `AantalPassagiersOndergrens` | `aantal_passagiers_ondergrens` | Aantal passagiers ondergrens | Number |
-| `AantalRolstoelPlaatsBovengrens` | `aantal_rolstoel_plaats_bovengrens` | Aantal rolstoel plaats bovengrens | Number |
-| `AantalRolstoelPlaatsOndergrens` | `aantal_rolstoel_plaats_ondergrens` | Aantal rolstoel plaats ondergrens | Number |
-| `AantalWielen` | `aantal_wielen` | Aantal wielen | Number |
-| `AantalZitplaatsenBovengrens` | `aantal_zitplaatsen_bovengrens` | Aantal zitplaatsen bovengrens | Number |
-| `AantalZitplaatsenOndergrens` | `aantal_zitplaatsen_ondergrens` | Aantal zitplaatsen ondergrens | Number |
-| `AfstHartKoppelingAsBovengrens` | `afst_hart_koppeling_as_bovengrens` | Afst hart koppeling as bovengrens | Number |
-| `AfstHartKoppelingAsOndergrens` | `afst_hart_koppeling_as_ondergrens` | Afst hart koppeling as ondergrens | Number |
-| `BegindatumRestantVoorraad` | `begindatum_restant_voorraad` | Begindatum restant voorraad | Number |
-| `BegindatumRestantVoorraadDt` | `begindatum_restant_voorraad_dt` | Begindatum restant voorraad_DT | Calendar date |
-| `BegindatumUitvoering` | `begindatum_uitvoering` | Begindatum uitvoering | Number |
-| `BegindatumUitvoeringDt` | `begindatum_uitvoering_dt` | Begindatum uitvoering_DT | Calendar date |
-| `BreedteVoertuigUitvoeringBovengrens` | `breedte_voertuig_uitvoering_bovengrens` | Breedte voertuig(uitvoering) bovengrens | Number |
-| `BreedteVoertuigUitvoeringOndergrens` | `breedte_voertuig_uitvoering_ondergrens` | Breedte voertuig(uitvoering) ondergrens | Number |
-| `CodeStatusIntrekkingUitvoering` | `code_status_intrekking_uitvoering` | Code status intrekking uitvoering | Text |
-| `CompleetVoertuigIndicator` | `compleet_voertuig_indicator` | Compleet voertuig indicator | Text |
-| `DatumStatusWijziging` | `datum_status_wijziging` | Datum status wijziging | Number |
-| `DatumStatusWijzigingDt` | `datum_status_wijziging_dt` | Datum status wijziging_DT | Calendar date |
-| `EegUitvoeringCatToevoeging` | `eeg_uitvoering_cat_toevoeging` | EEG uitvoering cat toevoeging | Text |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EindatumRestantVoorraad` | `eindatum_restant_voorraad` | Einddatum restant voorraad | Number |
-| `EinddatumRestantVoorraadDt` | `einddatum_restant_voorraad_dt` | Einddatum restant voorraad_DT | Calendar date |
-| `EinddatumUitvoering` | `einddatum_uitvoering` | Einddatum uitvoering | Number |
-| `EinddatumUitvoeringDt` | `einddatum_uitvoering_dt` | Einddatum uitvoering_DT | Calendar date |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `EurCoderingCarrosserietype` | `eur_codering_carrosserietype` | Eur. Codering carrosserietype | Text |
-| `Handelsbenaming` | `handelsbenaming` | Handelsbenaming | Text |
-| `HoogteVoertuigUitvoeringBovengrens` | `hoogte_voertuig_uitvoering_bovengrens` | Hoogte voertuig(uitvoering) bovengrens | Number |
-| `HoogteVoertuigUitvoeringOndergrens` | `hoogte_voertuig_uitvoering_ondergrens` | Hoogte voertuig(uitvoering) ondergrens | Number |
-| `InhoudBrandstoftank` | `inhoud_brandstoftank` | Inhoud brandstoftank | Number |
-| `Inrichtingscode` | `inrichtingscode` | Inrichtingscode | Number |
-| `IntrekdatumUitvoering` | `intrekdatum_uitvoering` | Intrekdatum uitvoering | Number |
-| `IntrekdatumUitvoeringDt` | `intrekdatum_uitvoering_dt` | Intrekdatum uitvoering_DT | Calendar date |
-| `KantVanHetStuur` | `kant_van_het_stuur` | Kant van het stuur | Text |
-| `LengteLaadruimteBovengrens` | `lengte_laadruimte_bovengrens` | Lengte laadruimte bovengrens | Number |
-| `LengteLaadruimteOndergrens` | `lengte_laadruimte_ondergrens` | Lengte laadruimte ondergrens | Number |
-| `LengteVoertuigUitvoeringBovengrens` | `lengte_voertuig_uitvoering_bovengrens` | Lengte voertuig(uitvoering) bovengrens | Number |
-| `LengteVoertuigUitvoeringOndergrens` | `lengte_voertuig_uitvoering_ondergrens` | Lengte voertuig(uitvoering) ondergrens | Number |
-| `LinksRechtsRijdend` | `links_rechts_rijdend` | Links / Rechts rijdend | Text |
-| `MassaBedrijfsklaarToestandBovengrens` | `massa_bedrijfsklaar_toestand_bovengrens` | Massa bedrijfsklaar toestand bovengrens | Number |
-| `MassaBedrijfsklaarToestandOndergrens` | `massa_bedrijfsklaar_toestand_ondergrens` | Massa bedrijfsklaar toestand ondergrens | Number |
-| `MassaLeegVoertuigBovengrens` | `massa_leeg_voertuig_bovengrens` | Massa leeg voertuig bovengrens | Number |
-| `MassaLeegVoertuigOndergrens` | `massa_leeg_voertuig_ondergrens` | Massa leeg voertuig ondergrens | Number |
-| `MaxBreedteVoertuigBovengrens` | `max_breedte_voertuig_bovengrens` | Max breedte voertuig bovengrens | Number |
-| `MaxBreedteVoertuigOndergrens` | `max_breedte_voertuig_ondergrens` | Max breedte voertuig ondergrens | Number |
-| `MaxConstructieSnelheidBovengrens` | `max_constructie_snelheid_bovengrens` | Max constructie snelheid bovengrens | Number |
-| `MaxConstructieSnelheidOndergrens` | `max_constructie_snelheid_ondergrens` | Max constructie snelheid ondergrens | Number |
-| `MaxLengteVoertuigBovengrens` | `max_lengte_voertuig_bovengrens` | Max lengte voertuig bovengrens | Number |
-| `MaxLengteVoertuigOndergrens` | `max_lengte_voertuig_ondergrens` | Max lengte voertuig ondergrens | Number |
-| `MaxMassaGeremdBovengrens` | `max_massa_geremd_bovengrens` | Max massa geremd bovengrens | Number |
-| `MaxMassaGeremdOndergrens` | `max_massa_geremd_ondergrens` | Max massa geremd ondergrens | Number |
-| `MaxMassaOngeremdBovengrens` | `max_massa_ongeremd_bovengrens` | Max massa ongeremd bovengrens | Number |
-| `MaxMassaOngeremdOndergrens` | `max_massa_ongeremd_ondergrens` | Max massa ongeremd ondergrens | Number |
-| `MaxMassaSamenstelBovengrens` | `max_massa_samenstel_bovengrens` | Max massa samenstel bovengrens | Number |
-| `MaxMassaSamenstelOndergrens` | `max_massa_samenstel_ondergrens` | Max massa samenstel ondergrens | Number |
-| `MaxMassaVoertuigBovengrens` | `max_massa_voertuig_bovengrens` | Max massa voertuig bovengrens | Number |
-| `MaxMassaVoertuigOndergrens` | `max_massa_voertuig_ondergrens` | Max massa voertuig ondergrens | Number |
-| `MaxMassaVrtgTechnBovengrens` | `max_massa_vrtg_techn_bovengrens` | Max massa vrtg techn bovengrens | Number |
-| `MaxMassaVrtgTechnOndergrens` | `max_massa_vrtg_techn_ondergrens` | Max massa vrtg techn ondergrens | Number |
-| `MaxOndersteundeSnelheid` | `max_ondersteunde_snelheid` | Max. ondersteunde snelheid | Number |
-| `MaxOndersteuningSnelheidBovengrens` | `max_ondersteuning_snelheid_bovengrens` | Max ondersteuning snelheid bovengrens | Number |
-| `MaxOndersteuningSnelheidOndergrens` | `max_ondersteuning_snelheid_ondergrens` | Max ondersteuning snelheid ondergrens | Number |
-| `MinMassaVoertuig` | `min_massa_voertuig` | Min massa voertuig | Number |
-| `StatusVoertiugKentekening` | `status_voertiug_kentekening` | Status voertiug kentekening | Text |
-| `TechnMaxLastKoppelpuntBovengrens` | `techn_max_last_koppelpunt_bovengrens` | Techn max last koppelpunt bovengrens | Number |
-| `TechnMaxLastKoppelpuntOndergrens` | `techn_max_last_koppelpunt_ondergrens` | Techn max last koppelpunt ondergrens | Number |
-| `TechnMaxMassaAutonoomBovengrens` | `techn_max_massa_autonoom_bovengrens` | Techn max massa autonoom bovengrens | Number |
-| `TechnMaxMassaAutonoomOndergrens` | `techn_max_massa_autonoom_ondergrens` | Techn max massa autonoom ondergrens | Number |
-| `TechnMaxMassaMiddenasBovengrens` | `techn_max_massa_middenas_bovengrens` | Techn max massa middenas bovengrens | Number |
-| `TechnMaxMassaMiddenasOndergrens` | `techn_max_massa_middenas_ondergrens` | Techn max massa middenas ondergrens | Number |
-| `TechnMaxMassaOpleggerBovengrens` | `techn_max_massa_oplegger_bovengrens` | Techn max massa oplegger bovengrens | Number |
-| `TechnMaxMassaOpleggerOndergrens` | `techn_max_massa_oplegger_ondergrens` | Techn max massa oplegger ondergrens | Number |
-| `TechnMaxMassaSamenstBovengrens` | `techn_max_massa_samenst_bovengrens` | Techn max massa samenst bovengrens | Number |
-| `TechnMaxMassaSamenstOndergrens` | `techn_max_massa_samenst_ondergrens` | Techn max massa samenst ondergrens | Number |
-| `TweedeBrandstofcodeVoertuig` | `tweede_brandstofcode_voertuig` | Tweede brandstofcode voertuig | Text |
-| `UitvoeringRegistratieDatum` | `uitvoering_registratie_datum` | Uitvoering registratie datum | Number |
-| `UitvoeringRegistratieDatumDt` | `uitvoering_registratie_datum_dt` | Uitvoering registratie datum_DT | Calendar date |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-| `VariantStatus` | `variant_status` | Variant status | Text |
-| `WielbaisBovengrens` | `wielbais_bovengrens` | Wielbasis bovengrens | Number |
-| `WielbasisOndergrens` | `wielbasis_ondergrens` | Wielbasis ondergrens | Number |
-| `ZelfdragendeCarrosserie` | `zelfdragende_carrosserie` | Zelfdragende carrosserie | Text |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Basisgegevens-EEG-Uitvoering/wx3j-69ie
-</details>
 
 <details><summary>BrandstoffenOpPc4</summary>
 
@@ -337,119 +183,6 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Bra
 | `Voertuigsoort` | `voertuigsoort` | Voertuigsoort | Text |
 
 **Link:** https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d
-</details>
-
-<details><summary>CarrosserieUitvoering</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/CarrosserieUitvoering.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `CarrosserieVolgnummer` | `carrosserie_volgnummer` | Carrosserie volgnummer | Number |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `TypeCarrosserieEuropees` | `type_carrosserie_europees` | Type carrosserie europees | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering/w2qp-idms
-</details>
-
-<details><summary>CarrosserieUitvoeringKlasse</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/CarrosserieUitvoeringKlasse.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `CarrosserieKlasseEuropees` | `carrosserie_klasse_europees` | Carrosserie klasse europees | Text |
-| `CarrosserieKlasseVolgnummer` | `carrosserie_klasse_volgnummer` | Carrosserie klasse volgnummer | Number |
-| `CarrosserieVolgnummer` | `carrosserie_volgnummer` | Carrosserie volgnummer | Number |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Klasse/q7fi-ijjh
-</details>
-
-<details><summary>CarrosserieUitvoeringNummeriekeCode</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/CarrosserieUitvoeringNummeriekeCode.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `CarrosserieUitvoeringNumeriekEuropees` | `carrosserie_uitvoering_numeriek_europees` | Carrosserie uitvoering numeriek Europees | Text |
-| `CarrosserieUitvoeringNumeriekVolgnummer` | `carrosserie_uitvoering_numeriek_volgnummer` | Carrosserie uitvoering numeriek volgnummer | Number |
-| `CarrosserieVolgnummer` | `carrosserie_volgnummer` | Carrosserie volgnummer | Number |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Carrosserie-Uitvoering-Nummerieke-Co/nypm-t8hx
-</details>
-
-<details><summary>EegVoertuigtypegoedkeuring</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/EegVoertuigtypegoedkeuring.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `ApiAsGegevensEegUitvoering` | `api_as_gegevens_eeg_uitvoering` | API AS gegevens EEG uitvoering | Text |
-| `ApiBasisgegevensEegUitvoering` | `api_basisgegevens_eeg_uitvoering` | API Basisgegevens EEG uitvoering | Text |
-| `ApiCarrosserieUitvoering` | `api_carrosserie_uitvoering` | API Carrosserie uitvoering | Text |
-| `ApiCarrosserieUitvoeringKlasse` | `api_carrosserie_uitvoering_klasse` | API Carrosserie uitvoering klasse | Text |
-| `ApiCarrosserieUitvoeringNummeriekeCode` | `api_carrosserie_uitvoering_nummerieke_code` | API Carrosserie uitvoering nummerieke code | Text |
-| `ApiHandelsbenamingUitvoering` | `api_handelsbenaming_uitvoering` | API Handelsbenaming uitvoering | Text |
-| `ApiMerkUitvoeringToegestaan` | `api_merk_uitvoering_toegestaan` | API Merk uitvoering toegestaan | Text |
-| `ApiMotorUitvoering` | `api_motor_uitvoering` | API Motor uitvoering | Text |
-| `ApiMotorUitvoeringBrandstof` | `api_motor_uitvoering_brandstof` | API Motor uitvoering brandstof | Text |
-| `ApiPlaatsaanduidingUitvoering` | `api_plaatsaanduiding_uitvoering` | API Plaatsaanduiding uitvoering | Text |
-| `ApiSubcategorieUitvoering` | `api_subcategorie_uitvoering` | API Subcategorie uitvoering | Text |
-| `ApiUitvoeringverbruikPerUitgave` | `api_uitvoeringverbruik_per_uitgave` | API Uitvoeringverbruik per uitgave | Text |
-| `ApiVersnellingsbakUitvoering` | `api_versnellingsbak_uitvoering` | API Versnellingsbak uitvoering | Text |
-| `EegBasisGoedkeuringsnummer` | `eeg_basis_goedkeuringsnummer` | EEG basis goedkeuringsnummer | Number |
-| `EegEceVoertuigCategorieBijType` | `eeg_ece_voertuig_categorie_bij_type` | EEG/ECE voertuig categorie bij type | Text |
-| `EegTypegoedkeuringsdatum` | `eeg_typegoedkeuringsdatum` | EEG typegoedkeuringsdatum | Number |
-| `EegTypegoedkeuringsdatumDt` | `eeg_typegoedkeuringsdatum_dt` | EEG typegoedkeuringsdatum_DT | Calendar date |
-| `EegUitbreidingGoedkeuringsnummer` | `eeg_uitbreiding_goedkeuringsnummer` | EEG uitbreiding goedkeuringsnummer | Number |
-| `EegVoertuigCatToevoeging` | `eeg_voertuig_cat_toevoeging` | EEG Voertuig cat toevoeging | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `EuropeseTypegoedkeuringEinddatum` | `europese_typegoedkeuring_einddatum` | Europese typegoedkeuring einddatum | Number |
-| `EuropeseTypegoedkeuringEinddatumDt` | `europese_typegoedkeuring_einddatum_dt` | Europese typegoedkeuring einddatum_DT | Calendar date |
-| `EuropeseTypegoedkeuringIntrekDatum` | `europese_typegoedkeuring_intrek_datum` | Europese typegoedkeuring intrek datum | Number |
-| `EuropeseTypegoedkeuringIntrekDatumDt` | `europese_typegoedkeuring_intrek_datum_dt` | Europese typegoedkeuring intrek datum_DT | Calendar date |
-| `EuropeseTypegoedkeuringStatus` | `europese_typegoedkeuring_status` | Europese typegoedkeuring status | Text |
-| `EuropeseTypegoedkeuringStatusDatum` | `europese_typegoedkeuring_status_datum` | Europese typegoedkeuring status datum | Number |
-| `EuropeseTypegoedkeuringStatusDatumDt` | `europese_typegoedkeuring_status_datum_dt` | Europese typegoedkeuring status datum_DT | Calendar date |
-| `EuropeseTypegoedkeuringsRegistratieDatum` | `europese_typegoedkeurings_registratie_datum` | Europese typegoedkeurings registratie datum | Number |
-| `EuropeseTypegoedkeuringsRegistratieDatumDt` | `europese_typegoedkeurings_registratie_datum_dt` | Europese typegoedkeurings registratie datum_DT | Calendar date |
-| `Fabrikant` | `fabrikant` | Fabrikant | Text |
-| `FabrikantcodeType` | `fabrikantcode_type` | Fabrikantcode type | Text |
-| `LandcodeEegTypegoedkeuring` | `landcode_eeg_typegoedkeuring` | Landcode EEG typegoedkeuring | Text |
-| `RichtlijnNrLaatsteWijziging` | `richtlijn_nr_laatste_wijziging` | Richtlijn nr laatste wijziging | Text |
-| `TypeFabrikant` | `type_fabrikant` | Type fabrikant | Text |
-| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
-| `VervaldatumTypegoedkeuring` | `vervaldatum_typegoedkeuring` | Vervaldatum typegoedkeuring | Number |
-| `VervaldatumTypegoedkeuringDt` | `vervaldatum_typegoedkeuring_dt` | Vervaldatum typegoedkeuring_DT | Calendar date |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-EEG-Voertuigtypegoedkeuring/55kv-xf7m
 </details>
 
 <details><summary>ErkendeBedrijven</summary>
@@ -490,6 +223,126 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Erk
 | `Volgnummer` | `volgnummer` | Volgnummer | Number |
 
 **Link:** https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz
+</details>
+
+<details><summary>Gebieden</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Gebieden.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `N01Naam` | `_01_naam` | 01_NAAM | Text |
+| `N02Code` | `_02_code` | 02_CODE | Text |
+| `N03Url` | `_03_url` | 03_URL | Text |
+| `N04Uuid` | `_04_uuid` | 04_UUID | Text |
+| `N05Gebcode` | `_05_gebcode` | 05_GEBCODE | Text |
+| `N06Geboms` | `_06_geboms` | 06_GEBOMS | Text |
+| `N07Regcode` | `_07_regcode` | 07_REGCODE | Text |
+| `N08Regoms` | `_08_regoms` | 08_REGOMS | Text |
+| `N09Prijs` | `_09_prijs` | 09_PRIJS | Text |
+| `N10SrtReg` | `_10_srt_reg` | 10_SRT_REG | Text |
+| `N11Ma` | `_11_ma` | 11_MA | Text |
+| `N12Di` | `_12_di` | 12_DI | Text |
+| `N13Wo` | `_13_wo` | 13_WO | Text |
+| `N14Do` | `_14_do` | 14_DO | Text |
+| `N15Vr` | `_15_vr` | 15_VR | Text |
+| `N16Za` | `_16_za` | 16_ZA | Text |
+| `N17Zo` | `_17_zo` | 17_ZO | Text |
+| `N18Maximum` | `_18_maximum` | 18_MAXIMUM | Text |
+| `N19ParkPl` | `_19_park_pl` | 19_PARK_PL | Text |
+| `N20Oplaadp` | `_20_oplaadp` | 20_OPLAADP | Text |
+| `N21Rolst` | `_21_rolst` | 21_ROLST | Text |
+| `N22Hoogte` | `_22_hoogte` | 22_HOOGTE | Text |
+| `N23VoetgI` | `_23_voetg_i` | 23_VOETG_I | Text |
+| `N24VoetgU` | `_24_voetg_u` | 24_VOETG_U | Text |
+| `N25VrtgI` | `_25_vrtg_i` | 25_VRTG_I | Text |
+| `N26VrtgU` | `_26_vrtg_u` | 26_VRTG_U | Text |
+| `N27UitInd` | `_27_uit_ind` | 27_UIT_IND | Text |
+| `N28Jaarope` | `_28_jaarope` | 28_JAAROPE | Text |
+| `N29Betaal` | `_29_betaal` | 29_BETAAL | Text |
+| `N30Naam` | `_30_naam` | 30_NAAM | Text |
+| `N31Functie` | `_31_functie` | 31_FUNCTIE | Text |
+| `N32Tel` | `_32_tel` | 32_TEL | Text |
+| `N33EMail` | `_33_e_mail` | 33_E_MAIL | Text |
+| `N34Open` | `_34_open` | 34_OPEN | Text |
+| `N35Vrij` | `_35_vrij` | 35_VRIJ | Text |
+| `N36Vrijopl` | `_36_vrijopl` | 36_VRIJOPL | Text |
+| `N37Vol` | `_37_vol` | 37_VOL | Text |
+| `Issues` | `_issues___` | _issues___ | Text |
+| `Issues00` | `_issues_00` | _issues_00 | Text |
+| `Issues01` | `_issues_01` | _issues_01 | Text |
+| `Issues02` | `_issues_02` | _issues_02 | Text |
+| `ActueleInf` | `actuele_inf` | ActueleInf | Text |
+| `LocationRe` | `location_re` | LocationRe | Text |
+| `SocrataId` | `socrata_id` | socrata_id | Text |
+| `TheGeom` | `the_geom` | the_geom | MultiPolygon |
+| `UsageId` | `usage_id` | UsageId | Text |
+
+**Link:** https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
+</details>
+
+<details><summary>Gebieden</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Gebieden.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `N01Naam` | `_01_naam` | 01_NAAM | Text |
+| `N02Code` | `_02_code` | 02_CODE | Text |
+| `N03Url` | `_03_url` | 03_URL | Text |
+| `N04Uuid` | `_04_uuid` | 04_UUID | Text |
+| `N05Gebcode` | `_05_gebcode` | 05_GEBCODE | Text |
+| `N06Geboms` | `_06_geboms` | 06_GEBOMS | Text |
+| `N07Regcode` | `_07_regcode` | 07_REGCODE | Text |
+| `N08Regoms` | `_08_regoms` | 08_REGOMS | Text |
+| `N09Prijs` | `_09_prijs` | 09_PRIJS | Text |
+| `N10SrtReg` | `_10_srt_reg` | 10_SRT_REG | Text |
+| `N11Ma` | `_11_ma` | 11_MA | Text |
+| `N12Di` | `_12_di` | 12_DI | Text |
+| `N13Wo` | `_13_wo` | 13_WO | Text |
+| `N14Do` | `_14_do` | 14_DO | Text |
+| `N15Vr` | `_15_vr` | 15_VR | Text |
+| `N16Za` | `_16_za` | 16_ZA | Text |
+| `N17Zo` | `_17_zo` | 17_ZO | Text |
+| `N18Maximum` | `_18_maximum` | 18_MAXIMUM | Text |
+| `N19ParkPl` | `_19_park_pl` | 19_PARK_PL | Text |
+| `N20Oplaadp` | `_20_oplaadp` | 20_OPLAADP | Text |
+| `N21Rolst` | `_21_rolst` | 21_ROLST | Text |
+| `N22Hoogte` | `_22_hoogte` | 22_HOOGTE | Text |
+| `N23VoetgI` | `_23_voetg_i` | 23_VOETG_I | Text |
+| `N24VoetgU` | `_24_voetg_u` | 24_VOETG_U | Text |
+| `N25VrtgI` | `_25_vrtg_i` | 25_VRTG_I | Text |
+| `N26VrtgU` | `_26_vrtg_u` | 26_VRTG_U | Text |
+| `N27UitInd` | `_27_uit_ind` | 27_UIT_IND | Text |
+| `N28Jaarope` | `_28_jaarope` | 28_JAAROPE | Text |
+| `N29Betaal` | `_29_betaal` | 29_BETAAL | Text |
+| `N30Naam` | `_30_naam` | 30_NAAM | Text |
+| `N31Functie` | `_31_functie` | 31_FUNCTIE | Text |
+| `N32Tel` | `_32_tel` | 32_TEL | Text |
+| `N33EMail` | `_33_e_mail` | 33_E_MAIL | Text |
+| `N34Open` | `_34_open` | 34_OPEN | Text |
+| `N35Vrij` | `_35_vrij` | 35_VRIJ | Text |
+| `N36Vrijopl` | `_36_vrijopl` | 36_VRIJOPL | Text |
+| `N37Vol` | `_37_vol` | 37_VOL | Text |
+| `Issues` | `_issues___` | _issues___ | Text |
+| `Issues00` | `_issues_00` | _issues_00 | Text |
+| `Issues01` | `_issues_01` | _issues_01 | Text |
+| `Issues02` | `_issues_02` | _issues_02 | Text |
+| `ActueleInf` | `actuele_inf` | ActueleInf | Text |
+| `LocationRe` | `location_re` | LocationRe | Text |
+| `SocrataId` | `socrata_id` | socrata_id | Text |
+| `TheGeom` | `the_geom` | the_geom | MultiPolygon |
+| `UsageId` | `usage_id` | UsageId | Text |
+
+**Link:** https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
 </details>
 
 <details><summary>Gebreken</summary>
@@ -615,28 +468,6 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Geo
 **Link:** https://opendata.rdw.nl/Parkeren/GEO-PenR/6wzd-evwu
 </details>
 
-<details><summary>HandelsbenamingUitvoering</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/HandelsbenamingUitvoering.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `HandelsbenamingFabrikant` | `handelsbenaming_fabrikant` | Handelsbenaming fabrikant | Text |
-| `RegistratiedatumHandelsbenaming` | `registratiedatum_handelsbenaming` | Registratiedatum handelsbenaming | Number |
-| `RegistratiedatumHandelsbenamingDt` | `registratiedatum_handelsbenaming_dt` | Registratiedatum handelsbenaming_DT | Calendar date |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-| `Volgnummer` | `volgnummer` | Volgnummer handelsbenaming | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Handelsbenaming-Uitvoering/mdqe-txpd
-</details>
-
 <details><summary>KentekenVoertuigen</summary>
 
 ### API
@@ -758,21 +589,21 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Ken
 | Name | Field | Readable Name | Type |
 | --- | --- | --- | --- |
 | `AangedrevenAs` | `aangedreven_as` | Aangedreven as | Text |
-| `AantalAssen` | `aantal_assen` | Aantal assen | Text |
+| `AantalAssen` | `aantal_assen` | Aantal assen | Number |
 | `AfstandTotVolgendeAsVoertuig` | `afstand_tot_volgende_as_voertuig` | Afstand tot volgende as voertuig | Number |
 | `AfstandTotVolgendeAsVoertuigMaximum` | `afstand_tot_volgende_as_voertuig_maximum` | Afstand tot volgende as voertuig maximum | Number |
 | `AfstandTotVolgendeAsVoertuigMinimum` | `afstand_tot_volgende_as_voertuig_minimum` | Afstand tot volgende as voertuig minimum | Number |
-| `AsNummer` | `as_nummer` | As nummer | Text |
+| `AsNummer` | `as_nummer` | As nummer | Number |
 | `GeremdeAsIndicator` | `geremde_as_indicator` | Geremde as indicator | Text |
 | `Hefas` | `hefas` | Hefas | Text |
 | `Kenteken` | `kenteken` | Kenteken | Text |
 | `MaximumLastAsTechnischMaximum` | `maximum_last_as_technisch_maximum` | Maximum last as technisch maximum | Number |
 | `MaximumLastAsTechnischMinimum` | `maximum_last_as_technisch_minimum` | Maximum last as technisch minimum | Number |
 | `PlaatscodeAs` | `plaatscode_as` | Plaatscode as | Text |
-| `Spoorbreedte` | `spoorbreedte` | Spoorbreedte | Text |
-| `TechnischToegestaneMaximumAslast` | `technisch_toegestane_maximum_aslast` | Technisch toegestane maximum aslast | Text |
+| `Spoorbreedte` | `spoorbreedte` | Spoorbreedte | Number |
+| `TechnischToegestaneMaximumAslast` | `technisch_toegestane_maximum_aslast` | Technisch toegestane maximum aslast | Number |
 | `WeggedragCode` | `weggedrag_code` | Weggedrag code | Text |
-| `WettelijkToegestaneMaximumAslast` | `wettelijk_toegestane_maximum_aslast` | Wettelijk toegestane maximum aslast | Text |
+| `WettelijkToegestaneMaximumAslast` | `wettelijk_toegestane_maximum_aslast` | Wettelijk toegestane maximum aslast | Number |
 
 **Link:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_assen/3huj-srit
 </details>
@@ -818,6 +649,7 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Ken
 | `BrandstofverbruikBuiten` | `brandstofverbruik_buiten` | Brandstofverbruik buiten de stad | Text |
 | `BrandstofverbruikGecombineerd` | `brandstofverbruik_gecombineerd` | Brandstofverbruik gecombineerd | Text |
 | `BrandstofverbruikStad` | `brandstofverbruik_stad` | Brandstofverbruik stad | Text |
+| `Co2Emissieklasse` | `co2_emissieklasse` | CO2 emissieklasse | Text |
 | `Co2UitstootGecombineerd` | `co2_uitstoot_gecombineerd` | CO2 uitstoot gecombineerd | Text |
 | `Co2UitstootGewogen` | `co2_uitstoot_gewogen` | CO2 uitstoot gewogen | Text |
 | `ElektrischVerbruikEnkelElektrischWltp` | `elektrisch_verbruik_enkel_elektrisch_wltp` | Elektrisch verbruik enkel elektrisch wltp | Number |
@@ -959,6 +791,128 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Keu
 **Link:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc
 </details>
 
+<details><summary>Locaties</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Locaties.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `N01Naam` | `_01_naam` | 01_NAAM | Text |
+| `N02Code` | `_02_code` | 02_CODE | Text |
+| `N03Url` | `_03_url` | 03_URL | Text |
+| `N04Uuid` | `_04_uuid` | 04_UUID | Text |
+| `N05Gebcode` | `_05_gebcode` | 05_GEBCODE | Text |
+| `N06Geboms` | `_06_geboms` | 06_GEBOMS | Text |
+| `N07Regcode` | `_07_regcode` | 07_REGCODE | Text |
+| `N08Regoms` | `_08_regoms` | 08_REGOMS | Text |
+| `N09Prijs` | `_09_prijs` | 09_PRIJS | Text |
+| `N10SrtReg` | `_10_srt_reg` | 10_SRT_REG | Text |
+| `N11Ma` | `_11_ma` | 11_MA | Text |
+| `N12Di` | `_12_di` | 12_DI | Text |
+| `N13Wo` | `_13_wo` | 13_WO | Text |
+| `N14Do` | `_14_do` | 14_DO | Text |
+| `N15Vr` | `_15_vr` | 15_VR | Text |
+| `N16Za` | `_16_za` | 16_ZA | Text |
+| `N17Zo` | `_17_zo` | 17_ZO | Text |
+| `N18Maximum` | `_18_maximum` | 18_MAXIMUM | Text |
+| `N19ParkPl` | `_19_park_pl` | 19_PARK_PL | Text |
+| `N20Oplaadp` | `_20_oplaadp` | 20_OPLAADP | Text |
+| `N21Rolst` | `_21_rolst` | 21_ROLST | Text |
+| `N22Hoogte` | `_22_hoogte` | 22_HOOGTE | Text |
+| `N23VoetgI` | `_23_voetg_i` | 23_VOETG_I | Text |
+| `N24VoetgU` | `_24_voetg_u` | 24_VOETG_U | Text |
+| `N25VrtgI` | `_25_vrtg_i` | 25_VRTG_I | Text |
+| `N26VrtgU` | `_26_vrtg_u` | 26_VRTG_U | Text |
+| `N27UitInd` | `_27_uit_ind` | 27_UIT_IND | Text |
+| `N28Jaarope` | `_28_jaarope` | 28_JAAROPE | Text |
+| `N29Betaal` | `_29_betaal` | 29_BETAAL | Text |
+| `N30Naam` | `_30_naam` | 30_NAAM | Text |
+| `N31Functie` | `_31_functie` | 31_FUNCTIE | Text |
+| `N32Tel` | `_32_tel` | 32_TEL | Text |
+| `N33EMail` | `_33_e_mail` | 33_E_MAIL | Text |
+| `N34Open` | `_34_open` | 34_OPEN | Text |
+| `N35Vrij` | `_35_vrij` | 35_VRIJ | Text |
+| `N36Vrijopl` | `_36_vrijopl` | 36_VRIJOPL | Text |
+| `N37Vol` | `_37_vol` | 37_VOL | Text |
+| `Issues` | `_issues___` | _issues___ | Text |
+| `Issues00` | `_issues_00` | _issues_00 | Text |
+| `Issues01` | `_issues_01` | _issues_01 | Text |
+| `Issues02` | `_issues_02` | _issues_02 | Text |
+| `ActueleInf` | `actuele_inf` | ActueleInf | Text |
+| `Location00` | `location_00` | Location00 | Text |
+| `LocationRe` | `location_re` | LocationRe | Text |
+| `SocrataId` | `socrata_id` | socrata_id | Text |
+| `TheGeom` | `the_geom` | the_geom | Point |
+| `UsageId` | `usage_id` | UsageId | Text |
+
+**Link:** https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy
+</details>
+
+<details><summary>Locaties</summary>
+
+### API
+
+Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Locaties.ts)
+
+### Fields
+
+| Name | Field | Readable Name | Type |
+| --- | --- | --- | --- |
+| `N01Naam` | `_01_naam` | 01_NAAM | Text |
+| `N02Code` | `_02_code` | 02_CODE | Text |
+| `N03Url` | `_03_url` | 03_URL | Text |
+| `N04Uuid` | `_04_uuid` | 04_UUID | Text |
+| `N05Gebcode` | `_05_gebcode` | 05_GEBCODE | Text |
+| `N06Geboms` | `_06_geboms` | 06_GEBOMS | Text |
+| `N07Regcode` | `_07_regcode` | 07_REGCODE | Text |
+| `N08Regoms` | `_08_regoms` | 08_REGOMS | Text |
+| `N09Prijs` | `_09_prijs` | 09_PRIJS | Text |
+| `N10SrtReg` | `_10_srt_reg` | 10_SRT_REG | Text |
+| `N11Ma` | `_11_ma` | 11_MA | Text |
+| `N12Di` | `_12_di` | 12_DI | Text |
+| `N13Wo` | `_13_wo` | 13_WO | Text |
+| `N14Do` | `_14_do` | 14_DO | Text |
+| `N15Vr` | `_15_vr` | 15_VR | Text |
+| `N16Za` | `_16_za` | 16_ZA | Text |
+| `N17Zo` | `_17_zo` | 17_ZO | Text |
+| `N18Maximum` | `_18_maximum` | 18_MAXIMUM | Text |
+| `N19ParkPl` | `_19_park_pl` | 19_PARK_PL | Text |
+| `N20Oplaadp` | `_20_oplaadp` | 20_OPLAADP | Text |
+| `N21Rolst` | `_21_rolst` | 21_ROLST | Text |
+| `N22Hoogte` | `_22_hoogte` | 22_HOOGTE | Text |
+| `N23VoetgI` | `_23_voetg_i` | 23_VOETG_I | Text |
+| `N24VoetgU` | `_24_voetg_u` | 24_VOETG_U | Text |
+| `N25VrtgI` | `_25_vrtg_i` | 25_VRTG_I | Text |
+| `N26VrtgU` | `_26_vrtg_u` | 26_VRTG_U | Text |
+| `N27UitInd` | `_27_uit_ind` | 27_UIT_IND | Text |
+| `N28Jaarope` | `_28_jaarope` | 28_JAAROPE | Text |
+| `N29Betaal` | `_29_betaal` | 29_BETAAL | Text |
+| `N30Naam` | `_30_naam` | 30_NAAM | Text |
+| `N31Functie` | `_31_functie` | 31_FUNCTIE | Text |
+| `N32Tel` | `_32_tel` | 32_TEL | Text |
+| `N33EMail` | `_33_e_mail` | 33_E_MAIL | Text |
+| `N34Open` | `_34_open` | 34_OPEN | Text |
+| `N35Vrij` | `_35_vrij` | 35_VRIJ | Text |
+| `N36Vrijopl` | `_36_vrijopl` | 36_VRIJOPL | Text |
+| `N37Vol` | `_37_vol` | 37_VOL | Text |
+| `Issues` | `_issues___` | _issues___ | Text |
+| `Issues00` | `_issues_00` | _issues_00 | Text |
+| `Issues01` | `_issues_01` | _issues_01 | Text |
+| `Issues02` | `_issues_02` | _issues_02 | Text |
+| `ActueleInf` | `actuele_inf` | ActueleInf | Text |
+| `Location00` | `location_00` | Location00 | Text |
+| `LocationRe` | `location_re` | LocationRe | Text |
+| `SocrataId` | `socrata_id` | socrata_id | Text |
+| `TheGeom` | `the_geom` | the_geom | Point |
+| `UsageId` | `usage_id` | UsageId | Text |
+
+**Link:** https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5
+</details>
+
 <details><summary>MeldingenKeuringsinstantie</summary>
 
 ### API
@@ -982,179 +936,6 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Mel
 | `VervaldatumKeuringDt` | `vervaldatum_keuring_dt` | Vervaldatum keuring DT | Calendar date |
 
 **Link:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx
-</details>
-
-<details><summary>MerkUitvoeringToegestaan</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/MerkUitvoeringToegestaan.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `MerkRegistratieDatum` | `merk_registratie_datum` | Merk registratie datum | Number |
-| `MerkRegistratieDatumDt` | `merk_registratie_datum_dt` | Merk registratie datum_DT | Calendar date |
-| `Merkcode` | `merkcode` | Merkcode | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Merk-Uitvoering-Toegestaan/fj7t-hhik
-</details>
-
-<details><summary>MotorUitvoering</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/MotorUitvoering.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `AantalCilinders` | `aantal_cilinders` | Aantal cilinders | Number |
-| `Brandstofcode` | `brandstofcode` | Brandstofcode | Text |
-| `BrandstofverbruikBuitenweg` | `brandstofverbruik_buitenweg` | Brandstofverbruik buitenweg | Number |
-| `BrandstofverbruikCombinRit` | `brandstofverbruik_combin_rit` | Brandstofverbruik combin rit | Number |
-| `BrandstofverbruikStadsrit` | `brandstofverbruik_stadsrit` | Brandstofverbruik stadsrit | Number |
-| `CilinderinhoudCm3` | `cilinderinhoud_cm3` | Cilinderinhoud (cm3) | Number |
-| `CngSysteem` | `cng_systeem` | CNG Systeem | Text |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `ElectromotorAfFabriekIndicator` | `electromotor_af_fabriek_indicator` | Electromotor af fabriek indicator | Text |
-| `EmissieCoBijKoudeStart` | `emissie_co_bij_koude_start` | Emissie co bij koude start | Number |
-| `EmissieCo2Buitenweg` | `emissie_co2_buitenweg` | Emissie co2 buitenweg | Number |
-| `EmissieCo2Combinatierit` | `emissie_co2_combinatierit` | Emissie co2 combinatierit | Number |
-| `EmissieCo2Stadsrit` | `emissie_co2_stadsrit` | Emissie co2 stadsrit | Number |
-| `EmissieHcBijKoudeStart` | `emissie_hc_bij_koude_start` | Emissie hc bij koude start | Number |
-| `EmissieHcEnNox` | `emissie_hc_en_nox` | Emissie hc en nox | Number |
-| `EmissieKoolmonoxide` | `emissie_koolmonoxide` | Emissie koolmonoxide | Number |
-| `EmissieKoolwaterstof` | `emissie_koolwaterstof` | Emissie koolwaterstof | Number |
-| `EmissieStikstofoxide` | `emissie_stikstofoxide` | Emissie stikstofoxide | Number |
-| `EmissieVasteStofdeeltjes` | `emissie_vaste_stofdeeltjes` | Emissie vaste stofdeeltjes | Number |
-| `Emissiecode` | `emissiecode` | Emissieklasse | Text |
-| `EnkelElectrischeIndicator` | `enkel_electrische_indicator` | Enkel electrische indicator | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `ExternOplaadbaar` | `extern_oplaadbaar` | Extern oplaadbaar | Text |
-| `GeluidsniveauBovengrens` | `geluidsniveau_bovengrens` | Geluidsniveau bovengrens | Number |
-| `GeluidsniveauOndergrens` | `geluidsniveau_ondergrens` | Geluidsniveau ondergrens | Number |
-| `GeluidsniveauRijdend` | `geluidsniveau_rijdend` | Geluidsniveau rijdend | Number |
-| `HybrideElektrischVoertuig` | `hybride_elektrisch_voertuig` | Hybride elektrisch voertuig | Text |
-| `KatalysatorIndicator` | `katalysator_indicator` | Katalysator indicator | Text |
-| `LpgSysteem` | `lpg_systeem` | LPG Systeem | Text |
-| `LuchtInjectieIndicator` | `lucht_injectie_indicator` | Lucht injectie indicator | Text |
-| `MaxVermogenContinuBovengrens` | `max_vermogen_continu_bovengrens` | Max vermogen continu bovengrens | Number |
-| `MaxVermogenContinuOndergrens` | `max_vermogen_continu_ondergrens` | Max vermogen continu ondergrens | Number |
-| `MotorRegistratiedatum` | `motor_registratiedatum` | Motor registratiedatum | Number |
-| `MotorRegistratiedatumDt` | `motor_registratiedatum_dt` | Motor registratiedatum_DT | Calendar date |
-| `Motorcode` | `motorcode` | Motorcode | Text |
-| `RoetUitstoot` | `roet_uitstoot` | Roet uitstoot | Number |
-| `SoortInspuitingMotor` | `soort_inspuiting_motor` | Soort inspuiting motor | Text |
-| `StationairToerentalBovengr` | `stationair_toerental_bovengr` | Stationair toerental bovengr | Number |
-| `StationairToerentalOndergr` | `stationair_toerental_ondergr` | Stationair toerental ondergr | Number |
-| `ToerentalGeluidsniveauBovengrens` | `toerental_geluidsniveau_bovengrens` | Toerental geluidsniveau bovengrens | Number |
-| `ToerentalGeluidsniveauOndergrens` | `toerental_geluidsniveau_ondergrens` | Toerental geluidsniveau ondergrens | Number |
-| `UitlaatgasCirculatieIndicator` | `uitlaatgas_circulatie_indicator` | Uitlaatgas circulatie indicator | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-| `VermogenBovengrens` | `vermogen_bovengrens` | Vermogen bovengrens | Number |
-| `VermogenOndergrens` | `vermogen_ondergrens` | Vermogen ondergrens | Number |
-| `VoertuigbrandstofType` | `voertuigbrandstof_type` | Voertuigbrandstof type | Text |
-| `Volgnummer` | `volgnummer` | Volgnummer motor uitvoering | Number |
-| `WerkingsbeginselVerbrandingsmotor` | `werkingsbeginsel_verbrandingsmotor` | Werkingsbeginsel verbrandingsmotor | Text |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Motor-Uitvoering/g2s6-ehxa
-</details>
-
-<details><summary>MotorUitvoeringBrandstof</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/MotorUitvoeringBrandstof.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `ActieradiusBrandstof` | `actieradius_brandstof` | Actieradius brandstof | Number |
-| `ActieradiusBrandstofExternOplaadbaar` | `actieradius_brandstof_extern_oplaadbaar` | Actieradius brandstof extern oplaadbaar | Number |
-| `BrandstofVolgnummer` | `brandstof_volgnummer` | Brandstof volgnummer | Number |
-| `Brandstofcode` | `brandstofcode` | Brandstofcode | Text |
-| `BrandstofverbruikBuitenweg` | `brandstofverbruik_buitenweg` | Brandstofverbruik buitenweg | Number |
-| `BrandstofverbruikCombinRit` | `brandstofverbruik_combin_rit` | Brandstofverbruik combin rit | Number |
-| `BrandstofverbruikStadsrit` | `brandstofverbruik_stadsrit` | Brandstofverbruik stadsrit | Number |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `ElektrischVerbruikCombinatie` | `elektrisch_verbruik_combinatie` | Elektrisch verbruik combinatie | Number |
-| `ElektrischVerbruikGecomb` | `elektrisch_verbruik_gecomb` | Elektrisch verbruik gecomb | Number |
-| `EmissieAantDeeltjesEscTest` | `emissie_aant_deeltjes_esc_test` | Emissie aant deeltjes esc test | Number |
-| `EmissieAantDeeltjesEtcTest` | `emissie_aant_deeltjes_etc_test` | Emissie aant deeltjes etc test | Number |
-| `EmissieAantDeeltjesT1Test` | `emissie_aant_deeltjes_t1_test` | Emissie aant deeltjes t1 test | Number |
-| `EmissieCh4VolgensWhsc` | `emissie_ch4_volgens_whsc` | Emissie ch4 volgens whsc | Number |
-| `EmissieCh4VolgensWhtc` | `emissie_ch4_volgens_whtc` | Emissie ch4 volgens whtc | Number |
-| `EmissieCoBijKoudeStart` | `emissie_co_bij_koude_start` | Emissie co bij koude start | Number |
-| `EmissieCoVolgensWhsc` | `emissie_co_volgens_whsc` | Emissie co volgens whsc | Number |
-| `EmissieCoVolgensWhtc` | `emissie_co_volgens_whtc` | Emissie co volgens whtc | Number |
-| `EmissieCo2Buitenweg` | `emissie_co2_buitenweg` | Emissie co2 buitenweg | Number |
-| `EmissieCo2Combinatierit` | `emissie_co2_combinatierit` | Emissie co2 combinatierit | Number |
-| `EmissieCo2Gecombineerd` | `emissie_co2_gecombineerd` | Emissie co2 gecombineerd | Number |
-| `EmissieCo2Stadsrit` | `emissie_co2_stadsrit` | Emissie co2 stadsrit | Number |
-| `EmissieDeeltjesAantalWhsc` | `emissie_deeltjes_aantal_whsc` | Emissie deeltjes aantal whsc | Number |
-| `EmissieDeeltjesAantalWhtc` | `emissie_deeltjes_aantal_whtc` | Emissie deeltjes aantal whtc | Number |
-| `EmissieDeeltjesMassaWhsc` | `emissie_deeltjes_massa_whsc` | Emissie deeltjes massa whsc | Number |
-| `EmissieDeeltjesMassaWhtc` | `emissie_deeltjes_massa_whtc` | Emissie deeltjes massa whtc | Number |
-| `EmissieHcBijKoudeStart` | `emissie_hc_bij_koude_start` | Emissie hc bij koude start | Number |
-| `EmissieHcEnNoxType1` | `emissie_hc_en_nox_type1` | Emissie hc en nox type1 | Number |
-| `EmissieKoolmonaxideEtcTest` | `emissie_koolmonaxide_etc_test` | Emissie koolmonaxide etc test | Number |
-| `EmissieKoolmonoxideEscTest` | `emissie_koolmonoxide_esc_test` | Emissie koolmonoxide esc test | Number |
-| `EmissieKoolmonoxideType1` | `emissie_koolmonoxide_type_1` | Emissie koolmonoxide type 1 | Number |
-| `EmissieKoolwaterstofType1` | `emissie_koolwaterstof_type_1` | Emissie koolwaterstof type 1 | Number |
-| `EmissieKoolwaterstoffenEscTest` | `emissie_koolwaterstoffen_esc_test` | Emissie koolwaterstoffen esc test | Number |
-| `EmissieKoolwaterstoffenEtcTest` | `emissie_koolwaterstoffen_etc_test` | Emissie koolwaterstoffen etc test | Number |
-| `EmissieMethaanEtcTest` | `emissie_methaan_etc_test` | Emissie methaan etc test | Number |
-| `EmissieNh3VolgensWhsc` | `emissie_nh3_volgens_whsc` | Emissie nh3 volgens whsc | Number |
-| `EmissieNh3VolgensWhtc` | `emissie_nh3_volgens_whtc` | Emissie nh3 volgens whtc | Number |
-| `EmissieNmhcVolgensWhsc` | `emissie_nmhc_volgens_whsc` | Emissie nmhc volgens whsc | Number |
-| `EmissieNmhcVolgensWhtc` | `emissie_nmhc_volgens_whtc` | Emissie nmhc volgens whtc | Number |
-| `EmissieNonMethaanKoolwEtcTest` | `emissie_non_methaan_koolw_etc_test` | Emissie non methaan koolw etc test | Number |
-| `EmissieNoxVolgensWhsc` | `emissie_nox_volgens_whsc` | Emissie nox volgens whsc | Number |
-| `EmissieNoxVolgensWhtc` | `emissie_nox_volgens_whtc` | Emissie nox volgens whtc | Number |
-| `EmissieStikstofoxideType1` | `emissie_stikstofoxide_type_1` | Emissie stikstofoxide type 1 | Number |
-| `EmissieStikstofoxidenEscTest` | `emissie_stikstofoxiden_esc_test` | Emissie stikstofoxiden esc test | Number |
-| `EmissieStikstofoxidenEtcTest` | `emissie_stikstofoxiden_etc_test` | Emissie stikstofoxiden etc test | Number |
-| `EmissieThcVolgensWhsc` | `emissie_thc_volgens_whsc` | Emissie thc volgens whsc | Number |
-| `EmissieThcVolgensWhtc` | `emissie_thc_volgens_whtc` | Emissie thc volgens whtc | Number |
-| `EmissieVasteStofdeeltjes` | `emissie_vaste_stofdeeltjes` | Emissie vaste stofdeeltjes | Number |
-| `EmissieVasteStofdeeltjesEscTest` | `emissie_vaste_stofdeeltjes_esc_test` | Emissie vaste stofdeeltjes esc test | Number |
-| `EmissieVasteStofdeeltjesEtcTest` | `emissie_vaste_stofdeeltjes_etc_test` | Emissie vaste stofdeeltjes etc test | Number |
-| `Emissiecode` | `emissiecode` | Emissieklasse | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `GeluidsniveauBovengrens` | `geluidsniveau_bovengrens` | Geluidsniveau bovengrens | Number |
-| `GeluidsniveauOndergrens` | `geluidsniveau_ondergrens` | Geluidsniveau ondergrens | Number |
-| `GeluidsniveauRijdend` | `geluidsniveau_rijdend` | Geluidsniveau rijdend | Number |
-| `LuchtInjectieIndicator` | `lucht_injectie_indicator` | Lucht injectie indicator | Text |
-| `MaxVermogenContinuBovengrens` | `max_vermogen_continu_bovengrens` | Max vermogen continu bovengrens | Number |
-| `MaxVermogenContinuOndergrens` | `max_vermogen_continu_ondergrens` | Max vermogen continu ondergrens | Number |
-| `MaximaleBiobrandstofPercentage` | `maximale_biobrandstof_percentage` | Maximale biobrandstof percentage | Number |
-| `NettoMaxVermogenBovengrens` | `netto_max_vermogen_bovengrens` | Netto max vermogen bovengrens | Number |
-| `NettoMaxVermogenOndergrens` | `netto_max_vermogen_ondergrens` | Netto max vermogen ondergrens | Number |
-| `RoetUitstootAcc` | `roet_uitstoot_acc` | Roet uitstoot acc | Number |
-| `RookwaardeElrTest` | `rookwaarde_elr_test` | Rookwaarde elr test | Number |
-| `SoortInspuitingMotor` | `soort_inspuiting_motor` | Soort inspuiting motor | Text |
-| `StationToerentalBovengrensAcc` | `station_toerental_bovengrens_acc` | Station toerental bovengrens acc | Number |
-| `StationToerentalOndergrensAcc` | `station_toerental_ondergrens_acc` | Station toerental ondergrens acc | Number |
-| `ToerentalMaxVermogenBovengrens` | `toerental_max_vermogen_bovengrens` | Toerental max vermogen bovengrens | Number |
-| `ToerentalMaxVermogenOndergrens` | `toerental_max_vermogen_ondergrens` | Toerental max vermogen ondergrens | Number |
-| `UitlaatgasCirculatieIndicator` | `uitlaatgas_circulatie_indicator` | Uitlaatgas circulatie indicator | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Text |
-| `VerbruikGecombineerd` | `verbruik_gecombineerd` | Verbruik gecombineerd | Number |
-| `VermogenBovengrens` | `vermogen_bovengrens` | Vermogen bovengrens | Number |
-| `VermogenOndergrens` | `vermogen_ondergrens` | Vermogen ondergrens | Number |
-| `Volgnummer` | `volgnummer` | Volgnummer | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Motor-Uitvoering-Brandstof/5w6t-p66a
 </details>
 
 <details><summary>ParkerenBetaalmethodeGebied</summary>
@@ -1374,10 +1155,6 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Par
 | `Areamanagerid` | `areamanagerid` | AreaManagerId | Number |
 | `Enddatesellingpoint` | `enddatesellingpoint` | EndDateSellingPoint | Text |
 | `Location` | `location` | Location | Point |
-| `LocationAddress` | `location_address` | Location (address) | Text |
-| `LocationCity` | `location_city` | Location (city) | Text |
-| `LocationState` | `location_state` | Location (state) | Text |
-| `LocationZip` | `location_zip` | Location (zip) | Text |
 | `Sellingpointdesc` | `sellingpointdesc` | SellingPointDesc | Text |
 | `Sellingpointid` | `sellingpointid` | SellingPointId | Number |
 | `Startdatesellingpoint` | `startdatesellingpoint` | StartDateSellingPoint | Text |
@@ -1489,6 +1266,7 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Par
 | `Areaid` | `areaid` | AreaId | Text |
 | `Areamanagerid` | `areamanagerid` | AreaManagerId | Number |
 | `Areaname` | `areaname` | AreaName | Text |
+| `Usageid` | `usageid` | UsageId | Text |
 | `Uuid` | `uuid` | UUID | Text |
 
 **Link:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED/mz4f-59fw
@@ -1679,6 +1457,7 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Par
 | `Maxdurationright` | `maxdurationright` | MaxDurationRight | Number |
 | `Minparkinginterruption` | `minparkinginterruption` | MinParkingInterruption | Number |
 | `Regulationid` | `regulationid` | RegulationId | Text |
+| `Resetdurationtimeframe` | `resetdurationtimeframe` | ResetDurationTimeFrame | Number |
 | `Startdatetimeframe` | `startdatetimeframe` | StartDateTimeFrame | Text |
 | `Starttimetimeframe` | `starttimetimeframe` | StartTimeTimeFrame | Number |
 
@@ -1706,28 +1485,6 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Par
 **Link:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-VERKOOPPUNT/fk68-nf2y
 </details>
 
-<details><summary>PlaatsaanduidingUitvoering</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/PlaatsaanduidingUitvoering.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `PlaatsAanduidingVolgnummer` | `plaats_aanduiding_volgnummer` | Plaats aanduiding volgnummer | Number |
-| `PlaatsaanduidingRegistratieDatum` | `plaatsaanduiding_registratie_datum` | Plaatsaanduiding registratie datum | Number |
-| `PlaatsaanduidingRegistratieDatumDt` | `plaatsaanduiding_registratie_datum_dt` | Plaatsaanduiding registratie datum_DT | Calendar date |
-| `PlaatscodeVoeruigIdentificatie` | `plaatscode_voeruig_identificatie` | Plaatscode voeruig identificatie | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Plaatsaanduiding-Uitvoering/mt8t-4ep4
-</details>
-
 <details><summary>ProductenCatalogus</summary>
 
 ### API
@@ -1745,26 +1502,6 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Pro
 | `Tariefclustering` | `tariefclustering` | Tariefclustering | Text |
 
 **Link:** https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km
-</details>
-
-<details><summary>SubcategorieUitvoering</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/SubcategorieUitvoering.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `SubcategUitvoeringEuropees` | `subcateg_uitvoering_europees` | Subcateg uitvoering europees | Text |
-| `SubcategorieUitvoeringVolgnr` | `subcategorie_uitvoering_volgnr` | Subcategorie uitvoering volgnr | Number |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Subcategorie-Uitvoering/h9pa-e9ta
 </details>
 
 <details><summary>TellerstandoordeelTrendToelichting</summary>
@@ -1893,26 +1630,6 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Ter
 **Link:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e
 </details>
 
-<details><summary>TestProducerApi</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/TestProducerApi.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `CarrosserieKlasseEuropees` | `carrosserie_klasse_europees` | Carrosserie klasse europees | Text |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Number |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-| `Uniekecode` | `uniekecode` | UniekeCode | Text |
-
-**Link:** https://opendata.rdw.nl/dataset/Test_Producer_API/sgwh-cvkk
-</details>
-
 <details><summary>TgkAandrijvingUitvoering</summary>
 
 ### API
@@ -1969,7 +1686,7 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Tgk
 | `Spoorbreedtebovengrens` | `spoorbreedtebovengrens` | SpoorbreedteBovengrens | Text |
 | `Spoorbreedteondergrens` | `spoorbreedteondergrens` | SpoorbreedteOndergrens | Text |
 | `Stuurasindicator` | `stuurasindicator` | StuurAsIndicator | Text |
-| `Typegoedkeuringnummer` | `typegoedkeuringnummer` | Typegoedkeuringnummer | Text |
+| `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
 | `Volgnummeras` | `volgnummeras` | VolgnummerAs | Number |
 | `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
 
@@ -2012,10 +1729,10 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Tgk
 | `Lengteondergrens` | `lengteondergrens` | LengteOndergrens | Number |
 | `Massaledigbovengrens` | `massaledigbovengrens` | MassaLedigBovengrens | Number |
 | `Massaledigondergrens` | `massaledigondergrens` | MassaLedigOndergrens | Number |
-| `Massarijklaarbovengens` | `massarijklaarbovengens` | MassaRijklaarBovengens | Number |
-| `Massarijklaarondergens` | `massarijklaarondergens` | MassaRijklaarOndergens | Number |
-| `Maxconstructiesnelheidahw` | `maxconstructiesnelheidahw` | MaxconstructiesnelheidAhw Ogr | Number |
-| `Maxconstructiesnelheidahw1` | `maxconstructiesnelheidahw_1` | MaxconstructiesnelheidAhw Bgr | Number |
+| `Massarijklaarbovengrens` | `massarijklaarbovengrens` | MassaRijklaarBovengrens | Number |
+| `Massarijklaarondergrens` | `massarijklaarondergrens` | MassaRijklaarOndergrens | Number |
+| `Maxconstructiesnelheidahwbgr` | `maxconstructiesnelheidahwbgr` | MaxconstructiesnelheidAhw Bgr | Number |
+| `Maxconstructiesnelheidahwogr` | `maxconstructiesnelheidahwogr` | MaxconstructiesnelheidAhw Ogr | Number |
 | `Maximummassabovengrens` | `maximummassabovengrens` | MaximummassaBovengrens | Number |
 | `Maximummassaondergrens` | `maximummassaondergrens` | MaximummassaOndergrens | Number |
 | `Maxondersteundesnelheidbgr` | `maxondersteundesnelheidbgr` | MaxOndersteundeSnelheidBgr | Number |
@@ -2055,9 +1772,9 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Tgk
 | `Codevoertuigklasse` | `codevoertuigklasse` | CodeVoertuigklasse | Text |
 | `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
 | `Volgnummercarrosseriecode` | `volgnummercarrosseriecode` | VolgnummerCarrosseriecode | Number |
+| `Volgnummercarrosserietype` | `volgnummercarrosserietype` | VolgnummerCarrosserietype | Number |
 | `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
 | `Volgnummervoertuigklasse` | `volgnummervoertuigklasse` | VolgnummerVoertuigklasse | Number |
-| `Volgummercarrosserietype` | `volgummercarrosserietype` | VolgummerCarrosserietype | Number |
 
 **Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Carrosserie-Uitvoering/ky2r-jqad
 </details>
@@ -2084,8 +1801,8 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Tgk
 | `Co2emisgecombineerdnedclaag` | `co2emisgecombineerdnedclaag` | Co2EmisGecombineerdNedcLaag | Text |
 | `Co2emisgecombineerdwltpbgr` | `co2emisgecombineerdwltpbgr` | Co2EmisGecombineerdWltpBgr | Text |
 | `Co2emisgecombineerdwltpogr` | `co2emisgecombineerdwltpogr` | Co2EmisGecombineerdWltpOgr | Text |
-| `Co2emisgewGecombnedchoog` | `co2emisgew_gecombnedchoog` | Co2EmisGew GecombNedcHoog | Text |
-| `Co2emisgewGecombnedclaag` | `co2emisgew_gecombnedclaag` | Co2EmisGew GecombNedcLaag | Text |
+| `Co2emisgewgecombnedchoog` | `co2emisgewgecombnedchoog` | Co2EmisGewGecombNedcHoog | Text |
+| `Co2emisgewgecombnedclaag` | `co2emisgewgecombnedclaag` | Co2EmisGewGecombNedcLaag | Text |
 | `Co2emisgewogengecombwltpbgr` | `co2emisgewogengecombwltpbgr` | Co2EmisGewogenGecombWltpBgr | Text |
 | `Co2emisgewogengecombwltpogr` | `co2emisgewogengecombwltpogr` | Co2EmisGewogenGecombWltpOgr | Text |
 | `Co2emissiebuitennedchoog` | `co2emissiebuitennedchoog` | Co2EmissieBuitenNedcHoog | Text |
@@ -2106,7 +1823,7 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Tgk
 | `Elekverbrexternoplaadbwltpbgr` | `elekverbrexternoplaadbwltpbgr` | ElekVerbrExternOplaadbWltpBgr | Text |
 | `Elekverbrexternoplaadbwltpogr` | `elekverbrexternoplaadbwltpogr` | ElekVerbrExternOplaadbWltpOgr | Text |
 | `Elekverbruikgecombineerdnedc` | `elekverbruikgecombineerdnedc` | ElekVerbruikGecombineerdNedc | Text |
-| `Elekverbruikgew` | `elekverbruikgew` | ElekVerbruikGew GecombVerbrNedc | Text |
+| `Elekverbruikgewgecombverbrnedc` | `elekverbruikgewgecombverbrnedc` | ElekVerbruikGewGecombVerbrNedc | Text |
 | `Emissieaantaldeeltjesesc` | `emissieaantaldeeltjesesc` | EmissieAantalDeeltjesEsc | Text |
 | `Emissieaantaldeeltjesetc` | `emissieaantaldeeltjesetc` | EmissieAantalDeeltjesEtc | Text |
 | `Emissieaantaldeeltjestype1` | `emissieaantaldeeltjestype1` | EmissieAantalDeeltjesType1 | Text |
@@ -2171,6 +1888,7 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Tgk
 | `Codeuitvoeringtgk` | `codeuitvoeringtgk` | CodeUitvoeringTgk | Text |
 | `Codevariantgk` | `codevariantgk` | CodeVariantTgk | Text |
 | `Handelsbenamingfabrikant` | `handelsbenamingfabrikant` | HandelsbenamingFabrikant | Text |
+| `Typeaanduidingfabrikant` | `typeaanduidingfabrikant` | TypeAanduidingFabrikant | Text |
 | `Typegoedkeuringsnummer` | `typegoedkeuringsnummer` | Typegoedkeuringsnummer | Text |
 | `Volgnummerhandelsbenamingfabr` | `volgnummerhandelsbenamingfabr` | VolgnummerHandelsbenamingFabr | Number |
 | `Volgnummerrevisieuitvoering` | `volgnummerrevisieuitvoering` | VolgnummerRevisieUitvoering | Number |
@@ -2335,48 +2053,6 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Toe
 | `UitvoeringsVolgnrToegevObj` | `uitvoerings_volgnr_toegev_obj` | Uitvoerings volgnr toegev obj | Number |
 
 **Link:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx
-</details>
-
-<details><summary>UitvoeringGebruiksgegevensPerUitgave</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/UitvoeringGebruiksgegevensPerUitgave.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `UitvgavenummerVerbruikboek` | `uitvgavenummer_verbruikboek` | Uitvgavenummer verbruikboek | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-| `VerbruikcategorieUitvoering` | `verbruikcategorie_uitvoering` | Verbruikcategorie uitvoering | Text |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Uitvoering-Gebruiksgegevens-Per-Uitg/2822-t8sx
-</details>
-
-<details><summary>VersnellingsbakUitvoering</summary>
-
-### API
-
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/VersnellingsbakUitvoering.ts)
-
-### Fields
-
-| Name | Field | Readable Name | Type |
-| --- | --- | --- | --- |
-| `AantalVersnellingenBovengrens` | `aantal_versnellingen_bovengrens` | Aantal versnellingen bovengrens | Number |
-| `AantalVersnellingenOndergrens` | `aantal_versnellingen_ondergrens` | Aantal versnellingen ondergrens | Number |
-| `EegUitvoeringscode` | `eeg_uitvoeringscode` | EEG Uitvoeringscode | Text |
-| `EegVariantcode` | `eeg_variantcode` | EEG variantcode | Text |
-| `EuTypeGoedkeuringssleutel` | `eu_type_goedkeuringssleutel` | EU Type goedkeuringssleutel | Text |
-| `TypeVersnellingsbak` | `type_versnellingsbak` | Type versnellingsbak | Text |
-| `UitvoeringWijzigingsnummer` | `uitvoering_wijzigingsnummer` | Uitvoering wijzigingsnummer | Number |
-| `Volgnummer` | `volgnummer` | Volgnummer versnellingsbak | Number |
-
-**Link:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-Versnellingsbak-Uitvoering/r7cw-67gs
 </details>
 
 <!-- END FUNCTIONS -->

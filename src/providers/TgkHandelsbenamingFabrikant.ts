@@ -36,6 +36,12 @@ export interface TgkHandelsbenamingFabrikant_ResponseData {
    */
   handelsbenamingfabrikant?: string;
   /**
+   * ### TypeAanduidingFabrikant
+   *
+   * **Type**: Text
+   */
+  typeaanduidingfabrikant?: string;
+  /**
    * ### Typegoedkeuringsnummer
    *
    * **Type**: Text
@@ -62,6 +68,7 @@ export interface TgkHandelsbenamingFabrikant_ResponseData {
  * | ``Codeuitvoeringtgk`` | ``codeuitvoeringtgk`` | _Text_ |
  * | ``Codevariantgk`` | ``codevariantgk`` | _Text_ |
  * | ``Handelsbenamingfabrikant`` | ``handelsbenamingfabrikant`` | _Text_ |
+ * | ``Typeaanduidingfabrikant`` | ``typeaanduidingfabrikant`` | _Text_ |
  * | ``Typegoedkeuringsnummer`` | ``typegoedkeuringsnummer`` | _Text_ |
  * | ``Volgnummerhandelsbenamingfabr`` | ``volgnummerhandelsbenamingfabr`` | _Number_ |
  * | ``Volgnummerrevisieuitvoering`` | ``volgnummerrevisieuitvoering`` | _Number_ |
@@ -94,6 +101,14 @@ export const Fields = {
    */
   Handelsbenamingfabrikant: Field("handelsbenamingfabrikant", DataType.Text),
   /**
+   * ### TypeAanduidingFabrikant
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `typeaanduidingfabrikant`
+   */
+  Typeaanduidingfabrikant: Field("typeaanduidingfabrikant", DataType.Text),
+  /**
    * ### Typegoedkeuringsnummer
    *
    * **Type**: Text
@@ -124,6 +139,7 @@ export const Info = {
     "Codeuitvoeringtgk",
     "Codevariantgk",
     "Handelsbenamingfabrikant",
+    "Typeaanduidingfabrikant",
     "Typegoedkeuringsnummer",
     "Volgnummerhandelsbenamingfabr",
     "Volgnummerrevisieuitvoering",

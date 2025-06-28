@@ -44,6 +44,14 @@ export interface ParkerenParkeergebied_ResponseData {
    */
   areaname?: string;
   /**
+   * ### UsageId
+   *
+   * Identificatiecode van het gebruiksdoel dat geldt voor een parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
+   *
+   * **Type**: Text
+   */
+  usageid?: string;
+  /**
    * ### UUID
    *
    * Een UUID die een parkeergebied, -garage of -terrein identificeert.
@@ -60,6 +68,7 @@ export interface ParkerenParkeergebied_ResponseData {
  * | ``Areaid`` | ``areaid`` | _Text_ |
  * | ``Areamanagerid`` | ``areamanagerid`` | _Number_ |
  * | ``Areaname`` | ``areaname`` | _Text_ |
+ * | ``Usageid`` | ``usageid`` | _Text_ |
  * | ``Uuid`` | ``uuid`` | _Text_ |
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
@@ -96,6 +105,16 @@ export const Fields = {
    */
   Areaname: Field("areaname", DataType.Text),
   /**
+   * ### UsageId
+   *
+   * Identificatiecode van het gebruiksdoel dat geldt voor een parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `usageid`
+   */
+  Usageid: Field("usageid", DataType.Text),
+  /**
    * ### UUID
    *
    * Een UUID die een parkeergebied, -garage of -terrein identificeert.
@@ -112,6 +131,7 @@ export const Info = {
     "Areaid",
     "Areamanagerid",
     "Areaname",
+    "Usageid",
     "Uuid",
   ],
   dataset: "mz4f-59fw",
