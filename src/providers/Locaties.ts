@@ -3,8 +3,8 @@
 // Name: Locaties
 //
 // Category: Parkeren
-// Link: https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5
-// Permalink: https://opendata.rdw.nl/d/3rhp-hrx5
+// Link: https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy
+// Permalink: https://opendata.rdw.nl/d/gfb5-nkdy
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
 //
@@ -784,22 +784,22 @@ export const Info = {
     "TheGeom",
     "UsageId",
   ],
-  dataset: "3rhp-hrx5",
+  dataset: "gfb5-nkdy",
   domain: "opendata.rdw.nl",
   full_name: "Locaties",
   provider_name: "Locaties",
-  url: "https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5",
-  api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/3rhp-hrx5",
+  url: "https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy",
+  api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/gfb5-nkdy",
 };
 
 /**
  * ### Locaties
  *
- * **URL:** https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5
+ * **URL:** https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy
  *
- * **API DOCS:** https://dev.socrata.com/foundry/opendata.rdw.nl/3rhp-hrx5
+ * **API DOCS:** https://dev.socrata.com/foundry/opendata.rdw.nl/gfb5-nkdy
  *
- * **Dataset ID:** 3rhp-hrx5
+ * **Dataset ID:** gfb5-nkdy
  *
  * **Category:** Parkeren
  *
