@@ -42,6 +42,12 @@ export interface KentekenVoertuigen_ResponseData {
    */
   aantal_deuren?: string;
   /**
+   * ### Aantal passagiers zitplaatsen wettelijk
+   *
+   * **Type**: Number
+   */
+  aantal_passagiers_zitplaatsen_wettelijk?: string;
+  /**
    * ### Aantal rolstoelplaatsen
    *
    * **Type**: Number
@@ -65,6 +71,12 @@ export interface KentekenVoertuigen_ResponseData {
    * **Type**: Number
    */
   aantal_zitplaatsen?: string;
+  /**
+   * ### Aanwijzingsnummer
+   *
+   * **Type**: Text
+   */
+  aanwijzingsnummer?: string;
   /**
    * ### Aerodynamische voorziening of uitrusting
    *
@@ -603,10 +615,12 @@ export interface KentekenVoertuigen_ResponseData {
  * | ``AanhangwagenMiddenasGeremd`` | ``aanhangwagen_middenas_geremd`` | _Number_ |
  * | ``AantalCilinders`` | ``aantal_cilinders`` | _Number_ |
  * | ``AantalDeuren`` | ``aantal_deuren`` | _Number_ |
+ * | ``AantalPassagiersZitplaatsenWettelijk`` | ``aantal_passagiers_zitplaatsen_wettelijk`` | _Number_ |
  * | ``AantalRolstoelplaatsen`` | ``aantal_rolstoelplaatsen`` | _Number_ |
  * | ``AantalStaanplaatsen`` | ``aantal_staanplaatsen`` | _Number_ |
  * | ``AantalWielen`` | ``aantal_wielen`` | _Number_ |
  * | ``AantalZitplaatsen`` | ``aantal_zitplaatsen`` | _Number_ |
+ * | ``Aanwijzingsnummer`` | ``aanwijzingsnummer`` | _Text_ |
  * | ``AerodynVoorz`` | ``aerodyn_voorz`` | _Text_ |
  * | ``AfstandHartKoppelingTotAchterzijdeVoertuig`` | ``afstand_hart_koppeling_tot_achterzijde_voertuig`` | _Number_ |
  * | ``AfstandVoorzijdeVoertuigTotHartKoppeling`` | ``afstand_voorzijde_voertuig_tot_hart_koppeling`` | _Number_ |
@@ -732,6 +746,17 @@ export const Fields = {
    */
   AantalDeuren: Field("aantal_deuren", DataType.Number),
   /**
+   * ### Aantal passagiers zitplaatsen wettelijk
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `aantal_passagiers_zitplaatsen_wettelijk`
+   */
+  AantalPassagiersZitplaatsenWettelijk: Field(
+    "aantal_passagiers_zitplaatsen_wettelijk",
+    DataType.Number,
+  ),
+  /**
    * ### Aantal rolstoelplaatsen
    *
    * **Type**: Number
@@ -763,6 +788,14 @@ export const Fields = {
    * **Database Column Name**: `aantal_zitplaatsen`
    */
   AantalZitplaatsen: Field("aantal_zitplaatsen", DataType.Number),
+  /**
+   * ### Aanwijzingsnummer
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `aanwijzingsnummer`
+   */
+  Aanwijzingsnummer: Field("aanwijzingsnummer", DataType.Text),
   /**
    * ### Aerodynamische voorziening of uitrusting
    *
@@ -1520,10 +1553,12 @@ export const Info = {
     "AanhangwagenMiddenasGeremd",
     "AantalCilinders",
     "AantalDeuren",
+    "AantalPassagiersZitplaatsenWettelijk",
     "AantalRolstoelplaatsen",
     "AantalStaanplaatsen",
     "AantalWielen",
     "AantalZitplaatsen",
+    "Aanwijzingsnummer",
     "AerodynVoorz",
     "AfstandHartKoppelingTotAchterzijdeVoertuig",
     "AfstandVoorzijdeVoertuigTotHartKoppeling",

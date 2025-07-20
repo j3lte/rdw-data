@@ -482,10 +482,12 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Ken
 | `AanhangwagenMiddenasGeremd` | `aanhangwagen_middenas_geremd` | Aanhangwagen middenas geremd | Number |
 | `AantalCilinders` | `aantal_cilinders` | Aantal cilinders | Number |
 | `AantalDeuren` | `aantal_deuren` | Aantal deuren | Number |
+| `AantalPassagiersZitplaatsenWettelijk` | `aantal_passagiers_zitplaatsen_wettelijk` | Aantal passagiers zitplaatsen wettelijk | Number |
 | `AantalRolstoelplaatsen` | `aantal_rolstoelplaatsen` | Aantal rolstoelplaatsen | Number |
 | `AantalStaanplaatsen` | `aantal_staanplaatsen` | Aantal staanplaatsen | Number |
 | `AantalWielen` | `aantal_wielen` | Aantal wielen | Number |
 | `AantalZitplaatsen` | `aantal_zitplaatsen` | Aantal zitplaatsen | Number |
+| `Aanwijzingsnummer` | `aanwijzingsnummer` | Aanwijzingsnummer | Text |
 | `AerodynVoorz` | `aerodyn_voorz` | Aerodynamische voorziening of uitrusting | Text |
 | `AfstandHartKoppelingTotAchterzijdeVoertuig` | `afstand_hart_koppeling_tot_achterzijde_voertuig` | Afstand hart koppeling tot achterzijde voertuig | Number |
 | `AfstandVoorzijdeVoertuigTotHartKoppeling` | `afstand_voorzijde_voertuig_tot_hart_koppeling` | Afstand voorzijde voertuig tot hart koppeling | Number |
