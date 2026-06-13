@@ -59,6 +59,10 @@ export const Fields: {<% it.item.columns.forEach(function(column) { %>
   <%= column.big_name %>: Field("<%= column.field_name %>", <%= column.datatypeTemplate %>),<% }); %>
 };
 
+/**
+ * Dataset metadata for **<%= it.item.name %>**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [<% it.item.columns.forEach(function(column) { %>
     "<%= column.big_name %>",<% }); %>
@@ -107,12 +111,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const <%= it.item.name %>: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<<%= it.item.name %>_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **<%= it.item.full_name %>**<% it.item.description.forEach(function(line) { %>
+ * <%= line %><% }); %>
+ *
+ * Provider for the <%= it.item.full_name %> dataset. Bundles:
+ * - {@link <%= it.item.name %>.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link <%= it.item.name %>.Fields} — the queryable field definitions
+ * - {@link <%= it.item.name %>.Info} — dataset metadata
+ *
+ * **Category:** <%= it.item.category %>
+ *
+ * **Dataset ID:** <%= it.item.id %>
+ *
+ * **URL:** <%= it.item.link %>
+ *
+ * @example
+ * ```ts
+ * const { data } = await <%= it.item.name %>.RDWQuery()
+ *   .where(Where.like(<%= it.item.name %>.Fields.<%= it.item.columns[0].big_name %>, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const <%= it.item.name %> = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

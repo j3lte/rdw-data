@@ -1,6 +1,7 @@
 export {
   DataType,
   Field,
+  FieldObject,
   Order,
   Select,
   SelectAll,
