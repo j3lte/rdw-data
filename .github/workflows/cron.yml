@@ -2,7 +2,8 @@ name: Update Providers (Scheduled)
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 0 * * 0
+    # 1st and 3rd Sunday of each month (~every two weeks)
+    - cron: 0 0 1-7,15-21 * 0
 
 jobs:
   update-providers:
@@ -31,7 +32,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Providers (Automated)
-          commit_options: '--no-verify'
+          commit_options: "--no-verify"
 
       - name: "Run if changes have been detected"
         if: steps.auto-commit-action.outputs.changes_detected == 'true'
