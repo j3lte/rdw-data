@@ -89,7 +89,7 @@ console.log(combined);
 
 ## API
 
-These are auto generated providers and use `soda-query@0.4.8`.
+These are auto generated providers and use `soda-query@0.5.0`.
 
 ### Overview
 
@@ -114,7 +114,7 @@ These are auto generated providers and use `soda-query@0.4.8`.
 | `KentekenVoertuigenSubcategorieVoertuig`    | [Open Data RDW: Gekentekende_voertuigen_subcategorie_voertuig](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_subcategorie/2ba7-embk)    | Voertuigen        |
 | `KentekenVoertuigenVoertuigklasse`          | [Open Data RDW: Gekentekende_voertuigen_voertuigklasse](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_voertuigklas/kmfi-hrps)           | Voertuigen        |
 | `Keuringen`                                 | [Open Data RDW: Keuringen](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc)                                                                    | Keuringen         |
-| `Locaties`                                  | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5)                                                                                                    | Parkeren          |
+| `Locaties`                                  | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy)                                                                                                    | Parkeren          |
 | `MeldingenKeuringsinstantie`                | [Open Data RDW: Meldingen Keuringsinstantie](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx)                                | Keuringen         |
 | `ParkerenBetaalmethodeGebied`               | [Open Data Parkeren: BETAALMETHODE GEBIED](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5)                                     | Parkeren          |
 | `ParkerenBetaalmethodeVerkooppunt`          | [Open Data Parkeren: BETAALMETHODE VERKOOPPUNT](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx)                           | Parkeren          |
@@ -808,7 +808,7 @@ Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Locaties)
 | `TheGeom`    | `the_geom`    | the_geom      | Point |
 | `UsageId`    | `usage_id`    | UsageId       | Text  |
 
-**Link:** https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5
+**Link:** https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy
 
 </details>
 

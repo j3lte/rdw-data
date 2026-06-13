@@ -3,7 +3,7 @@
   "specifiers": {
     "jsr:@david/code-block-writer@^13.0.3": "13.0.3",
     "jsr:@deno/dnt@~0.42.3": "0.42.3",
-    "jsr:@j3lte/soda@0.4.8": "0.4.8",
+    "jsr:@j3lte/soda@0.5.0": "0.5.0",
     "jsr:@std/fmt@1": "1.0.10",
     "jsr:@std/fs@1": "1.0.24",
     "jsr:@std/internal@^1.0.14": "1.0.14",
@@ -27,8 +27,8 @@
         "jsr:@ts-morph/bootstrap"
       ]
     },
-    "@j3lte/soda@0.4.8": {
-      "integrity": "0de042cc88df01c75e08525de858e099988dc30ed955e90e4c92a6befb67b4b2"
+    "@j3lte/soda@0.5.0": {
+      "integrity": "673795a800dd0e46acfb4bec224313abdecf8c37a0748d827d2fb38aaf66e364"
     },
     "@std/fmt@1.0.10": {
       "integrity": "90dfba288802ac6de82fb31d0917eb9e4450b9925b954d5e51fc29ac07419db5"
@@ -71,7 +71,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@deno/dnt@~0.42.3",
-      "jsr:@j3lte/soda@0.4.8",
+      "jsr:@j3lte/soda@0.5.0",
       "npm:eta@^1.14.2"
     ]
   }

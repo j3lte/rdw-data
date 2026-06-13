@@ -44,7 +44,7 @@
     "npm/"
   ],
   "imports": {
-    "soda": "jsr:@j3lte/soda@0.4.8",
+    "soda": "jsr:@j3lte/soda@0.5.0",
     "@deno/dnt": "jsr:@deno/dnt@^0.42.3",
     "eta": "npm:eta@^1.14.2"
   }
