@@ -1,6 +1,7 @@
 .env*
 *.json
 !deno.json
+!scripts/dnt-import-map.json
 .DS_Store
 node_modules
 npm/
