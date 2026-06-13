@@ -126,6 +126,10 @@ export const Fields: {
   Volgnummerspecialedoeleinden: Field("volgnummerspecialedoeleinden", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **TgkSpecialeDoeleinden**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Codespecialedoeleinden",
@@ -178,12 +182,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TgkSpecialeDoeleinden: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TgkSpecialeDoeleinden_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: TGK Speciale Doeleinden**
+ *
+ * Provider for the Open Data RDW: TGK Speciale Doeleinden dataset. Bundles:
+ * - {@link TgkSpecialeDoeleinden.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TgkSpecialeDoeleinden.Fields} — the queryable field definitions
+ * - {@link TgkSpecialeDoeleinden.Info} — dataset metadata
+ *
+ * **Category:** Typegoedkeuring
+ *
+ * **Dataset ID:** m692-vvff
+ *
+ * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Speciale-Doeleinden/m692-vvff
+ *
+ * @example
+ * ```ts
+ * const { data } = await TgkSpecialeDoeleinden.RDWQuery()
+ *   .where(Where.like(TgkSpecialeDoeleinden.Fields.Codespecialedoeleinden, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TgkSpecialeDoeleinden = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -92,6 +92,10 @@ export const Fields: {
   Namespecialday: Field("namespecialday", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenSpecialeDag**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areamanagerid",
@@ -142,12 +146,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenSpecialeDag: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenSpecialeDag_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: SPECIALE DAG**
+ * Een door de gebiedsbeheerder benoemd etmaal waarop afwijkende tarieven gelden (lokale feestdagen, evenementen, koopzondagen, etc.).
+ *
+ * Provider for the Open Data Parkeren: SPECIALE DAG dataset. Bundles:
+ * - {@link ParkerenSpecialeDag.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenSpecialeDag.Fields} — the queryable field definitions
+ * - {@link ParkerenSpecialeDag.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** hpi4-mynq
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIALE-DAG/hpi4-mynq
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenSpecialeDag.RDWQuery()
+ *   .where(Where.like(ParkerenSpecialeDag.Fields.Areamanagerid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenSpecialeDag = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

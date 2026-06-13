@@ -172,6 +172,10 @@ export const Fields: {
   Startdateregulation: Field("startdateregulation", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenRegeling**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areamanagerid",
@@ -226,12 +230,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenRegeling: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenRegeling_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: REGELING**
+ * Een regeling bevat alle condities die gelden wanneer iemand een recht voor een bepaald gebied verwerft.
+ *
+ * Provider for the Open Data Parkeren: REGELING dataset. Bundles:
+ * - {@link ParkerenRegeling.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenRegeling.Fields} — the queryable field definitions
+ * - {@link ParkerenRegeling.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** yefi-qfiq
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-REGELING/yefi-qfiq
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenRegeling.RDWQuery()
+ *   .where(Where.like(ParkerenRegeling.Fields.Areamanagerid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenRegeling = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

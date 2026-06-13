@@ -110,6 +110,10 @@ export const Fields: {
   Voertuigsoort: Field("voertuigsoort", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **BrandstoffenOpPc4**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Aantal",
@@ -161,12 +165,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const BrandstoffenOpPc4: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<BrandstoffenOpPc4_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Brandstoffen_op_PC4**
+ *
+ * Provider for the Brandstoffen_op_PC4 dataset. Bundles:
+ * - {@link BrandstoffenOpPc4.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link BrandstoffenOpPc4.Fields} — the queryable field definitions
+ * - {@link BrandstoffenOpPc4.Info} — dataset metadata
+ *
+ * **Category:** Unknown
+ *
+ * **Dataset ID:** 8wbe-pu7d
+ *
+ * **URL:** https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d
+ *
+ * @example
+ * ```ts
+ * const { data } = await BrandstoffenOpPc4.RDWQuery()
+ *   .where(Where.like(BrandstoffenOpPc4.Fields.Aantal, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const BrandstoffenOpPc4 = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

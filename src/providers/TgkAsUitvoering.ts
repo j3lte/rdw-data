@@ -334,6 +334,10 @@ export const Fields: {
   Volgnummerrevisieuitvoering: Field("volgnummerrevisieuitvoering", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **TgkAsUitvoering**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Aangedrevenasindicator",
@@ -399,12 +403,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TgkAsUitvoering: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TgkAsUitvoering_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: TGK As Uitvoering**
+ *
+ * Provider for the Open Data RDW: TGK As Uitvoering dataset. Bundles:
+ * - {@link TgkAsUitvoering.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TgkAsUitvoering.Fields} — the queryable field definitions
+ * - {@link TgkAsUitvoering.Info} — dataset metadata
+ *
+ * **Category:** Typegoedkeuring
+ *
+ * **Dataset ID:** xhyb-w7xt
+ *
+ * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-As-Uitvoering/xhyb-w7xt
+ *
+ * @example
+ * ```ts
+ * const { data } = await TgkAsUitvoering.RDWQuery()
+ *   .where(Where.like(TgkAsUitvoering.Fields.Aangedrevenasindicator, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TgkAsUitvoering = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

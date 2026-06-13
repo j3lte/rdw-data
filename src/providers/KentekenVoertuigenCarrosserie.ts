@@ -97,6 +97,10 @@ export const Fields: {
   ),
 };
 
+/**
+ * Dataset metadata for **KentekenVoertuigenCarrosserie**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "CarrosserieVolgnummer",
@@ -153,15 +157,30 @@ export const RDWQuery = (
     },
   );
 
-export const KentekenVoertuigenCarrosserie: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<KentekenVoertuigenCarrosserie_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Gekentekende_voertuigen_carrosserie**
+ *
+ * Provider for the Open Data RDW: Gekentekende_voertuigen_carrosserie dataset. Bundles:
+ * - {@link KentekenVoertuigenCarrosserie.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link KentekenVoertuigenCarrosserie.Fields} — the queryable field definitions
+ * - {@link KentekenVoertuigenCarrosserie.Info} — dataset metadata
+ *
+ * **Category:** Voertuigen
+ *
+ * **Dataset ID:** vezc-m2t6
+ *
+ * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie/vezc-m2t6
+ *
+ * @example
+ * ```ts
+ * const { data } = await KentekenVoertuigenCarrosserie.RDWQuery()
+ *   .where(Where.like(KentekenVoertuigenCarrosserie.Fields.CarrosserieVolgnummer, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const KentekenVoertuigenCarrosserie = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

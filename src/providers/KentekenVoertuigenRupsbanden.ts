@@ -142,6 +142,10 @@ export const Fields: {
   TechnischToelaatbaarMaximum2: Field("technisch_toelaatbaar_maximum_2", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **KentekenVoertuigenRupsbanden**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "AangedrevenRupsbandIndicator",
@@ -201,15 +205,30 @@ export const RDWQuery = (
     },
   );
 
-export const KentekenVoertuigenRupsbanden: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<KentekenVoertuigenRupsbanden_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Gekentekende_voertuigen_rupsbanden**
+ *
+ * Provider for the Open Data RDW: Gekentekende_voertuigen_rupsbanden dataset. Bundles:
+ * - {@link KentekenVoertuigenRupsbanden.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link KentekenVoertuigenRupsbanden.Fields} — the queryable field definitions
+ * - {@link KentekenVoertuigenRupsbanden.Info} — dataset metadata
+ *
+ * **Category:** Voertuigen
+ *
+ * **Dataset ID:** 3xwf-ince
+ *
+ * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_rupsbanden/3xwf-ince
+ *
+ * @example
+ * ```ts
+ * const { data } = await KentekenVoertuigenRupsbanden.RDWQuery()
+ *   .where(Where.like(KentekenVoertuigenRupsbanden.Fields.AangedrevenRupsbandIndicator, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const KentekenVoertuigenRupsbanden = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

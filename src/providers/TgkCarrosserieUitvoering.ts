@@ -190,6 +190,10 @@ export const Fields: {
   Volgnummervoertuigklasse: Field("volgnummervoertuigklasse", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **TgkCarrosserieUitvoering**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Codecarrosseriecode",
@@ -246,12 +250,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TgkCarrosserieUitvoering: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TgkCarrosserieUitvoering_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: TGK Carrosserie Uitvoering**
+ *
+ * Provider for the Open Data RDW: TGK Carrosserie Uitvoering dataset. Bundles:
+ * - {@link TgkCarrosserieUitvoering.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TgkCarrosserieUitvoering.Fields} — the queryable field definitions
+ * - {@link TgkCarrosserieUitvoering.Info} — dataset metadata
+ *
+ * **Category:** Typegoedkeuring
+ *
+ * **Dataset ID:** ky2r-jqad
+ *
+ * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Carrosserie-Uitvoering/ky2r-jqad
+ *
+ * @example
+ * ```ts
+ * const { data } = await TgkCarrosserieUitvoering.RDWQuery()
+ *   .where(Where.like(TgkCarrosserieUitvoering.Fields.Codecarrosseriecode, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TgkCarrosserieUitvoering = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

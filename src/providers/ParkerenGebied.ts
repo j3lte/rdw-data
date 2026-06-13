@@ -132,6 +132,10 @@ export const Fields: {
   Startdatearea: Field("startdatearea", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **ParkerenGebied**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areadesc",
@@ -184,12 +188,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenGebied: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenGebied_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: GEBIED**
+ * Een benoemde ruimte met een gebruiksdoel waar een voertuig zich onder condities kan begeven of bevinden.
+ *
+ * Provider for the Open Data Parkeren: GEBIED dataset. Bundles:
+ * - {@link ParkerenGebied.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenGebied.Fields} — the queryable field definitions
+ * - {@link ParkerenGebied.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** adw6-9hsg
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenGebied.RDWQuery()
+ *   .where(Where.like(ParkerenGebied.Fields.Areadesc, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenGebied = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

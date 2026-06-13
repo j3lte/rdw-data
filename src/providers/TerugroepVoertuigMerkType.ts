@@ -90,6 +90,10 @@ export const Fields: {
   Type: Field("type", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **TerugroepVoertuigMerkType**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Merk",
@@ -140,12 +144,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TerugroepVoertuigMerkType: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TerugroepVoertuigMerkType_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Terugroep_voertuig_merk_type**
+ *
+ * Provider for the Open Data RDW: Terugroep_voertuig_merk_type dataset. Bundles:
+ * - {@link TerugroepVoertuigMerkType.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TerugroepVoertuigMerkType.Fields} — the queryable field definitions
+ * - {@link TerugroepVoertuigMerkType.Info} — dataset metadata
+ *
+ * **Category:** Terugroepacties
+ *
+ * **Dataset ID:** mu2x-mu5e
+ *
+ * **URL:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e
+ *
+ * @example
+ * ```ts
+ * const { data } = await TerugroepVoertuigMerkType.RDWQuery()
+ *   .where(Where.like(TerugroepVoertuigMerkType.Fields.Merk, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TerugroepVoertuigMerkType = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

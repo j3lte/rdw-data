@@ -80,6 +80,10 @@ export const Fields: {
   VervaldatumKeuringDt: Field("vervaldatum_keuring_dt", DataType.FloatingTimestamp),
 };
 
+/**
+ * Dataset metadata for **Keuringen**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Kenteken",
@@ -130,12 +134,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const Keuringen: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<Keuringen_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Keuringen**
+ * Gegevens set met per kenteken de vervaldatum van de laatst uitgevoerde APK.
+ *
+ * Provider for the Open Data RDW: Keuringen dataset. Bundles:
+ * - {@link Keuringen.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link Keuringen.Fields} — the queryable field definitions
+ * - {@link Keuringen.Info} — dataset metadata
+ *
+ * **Category:** Keuringen
+ *
+ * **Dataset ID:** vkij-7mwc
+ *
+ * **URL:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc
+ *
+ * @example
+ * ```ts
+ * const { data } = await Keuringen.RDWQuery()
+ *   .where(Where.like(Keuringen.Fields.Kenteken, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const Keuringen = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

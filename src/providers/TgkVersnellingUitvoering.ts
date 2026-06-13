@@ -158,6 +158,10 @@ export const Fields: {
   Volgnummerversnelling: Field("volgnummerversnelling", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **TgkVersnellingUitvoering**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Aantalversnellingenbovengrens",
@@ -212,12 +216,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TgkVersnellingUitvoering: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TgkVersnellingUitvoering_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: TGK Versnelling Uitvoering**
+ *
+ * Provider for the Open Data RDW: TGK Versnelling Uitvoering dataset. Bundles:
+ * - {@link TgkVersnellingUitvoering.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TgkVersnellingUitvoering.Fields} — the queryable field definitions
+ * - {@link TgkVersnellingUitvoering.Info} — dataset metadata
+ *
+ * **Category:** Typegoedkeuring
+ *
+ * **Dataset ID:** 7rjk-eycs
+ *
+ * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Versnelling-Uitvoering/7rjk-eycs
+ *
+ * @example
+ * ```ts
+ * const { data } = await TgkVersnellingUitvoering.RDWQuery()
+ *   .where(Where.like(TgkVersnellingUitvoering.Fields.Aantalversnellingenbovengrens, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TgkVersnellingUitvoering = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

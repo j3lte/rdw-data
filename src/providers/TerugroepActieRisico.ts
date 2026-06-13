@@ -98,6 +98,10 @@ export const Fields: {
   ReferentiecodeRdw: Field("referentiecode_rdw", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **TerugroepActieRisico**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "CodeMogelijkGevaar",
@@ -147,12 +151,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TerugroepActieRisico: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TerugroepActieRisico_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Terugroep_actie_risico**
+ *
+ * Provider for the Open Data RDW: Terugroep_actie_risico dataset. Bundles:
+ * - {@link TerugroepActieRisico.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TerugroepActieRisico.Fields} — the queryable field definitions
+ * - {@link TerugroepActieRisico.Info} — dataset metadata
+ *
+ * **Category:** Terugroepacties
+ *
+ * **Dataset ID:** 9ihi-jgpf
+ *
+ * **URL:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_risico/9ihi-jgpf
+ *
+ * @example
+ * ```ts
+ * const { data } = await TerugroepActieRisico.RDWQuery()
+ *   .where(Where.like(TerugroepActieRisico.Fields.CodeMogelijkGevaar, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TerugroepActieRisico = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -172,6 +172,10 @@ export const Fields: {
   Vatpercentage: Field("vatpercentage", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **ParkerenTariefberekening**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areamanagerid",
@@ -226,12 +230,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenTariefberekening: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenTariefberekening_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: TARIEFBEREKENING**
+ * De berekeningswijze waarmee het bedrag van een recht wordt bepaald. Elke gebiedsbeheerder kan zijn eigen voorgedefinieerde tarieven aanleggen.
+ *
+ * Provider for the Open Data Parkeren: TARIEFBEREKENING dataset. Bundles:
+ * - {@link ParkerenTariefberekening.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenTariefberekening.Fields} — the queryable field definitions
+ * - {@link ParkerenTariefberekening.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** nfzq-8g7y
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFBEREKENING/nfzq-8g7y
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenTariefberekening.RDWQuery()
+ *   .where(Where.like(ParkerenTariefberekening.Fields.Areamanagerid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenTariefberekening = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -192,6 +192,10 @@ export const Fields: {
   Usageiddesc: Field("usageiddesc", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenGebruiksdoel**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areamanagerid",
@@ -247,12 +251,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenGebruiksdoel: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenGebruiksdoel_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: GEBRUIKSDOEL**
+ * Een voertuiggerelateerde gereguleerde bestemming van een gebied. Voorbeelden: betaald parkeren, vergunning, blauwe zone, etc.
+ *
+ * Provider for the Open Data Parkeren: GEBRUIKSDOEL dataset. Bundles:
+ * - {@link ParkerenGebruiksdoel.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenGebruiksdoel.Fields} — the queryable field definitions
+ * - {@link ParkerenGebruiksdoel.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** qidm-7mkf
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBRUIKSDOEL/qidm-7mkf
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenGebruiksdoel.RDWQuery()
+ *   .where(Where.like(ParkerenGebruiksdoel.Fields.Areamanagerid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenGebruiksdoel = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

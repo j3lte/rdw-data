@@ -110,6 +110,10 @@ export const Fields: {
   Tariefclustering: Field("tariefclustering", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ProductenCatalogus**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Eenheid",
@@ -161,12 +165,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ProductenCatalogus: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ProductenCatalogus_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Producten Catalogus**
+ *
+ * Provider for the Open Data RDW: Producten Catalogus dataset. Bundles:
+ * - {@link ProductenCatalogus.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ProductenCatalogus.Fields} — the queryable field definitions
+ * - {@link ProductenCatalogus.Info} — dataset metadata
+ *
+ * **Category:** Product catalogus
+ *
+ * **Dataset ID:** v23s-d6km
+ *
+ * **URL:** https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km
+ *
+ * @example
+ * ```ts
+ * const { data } = await ProductenCatalogus.RDWQuery()
+ *   .where(Where.like(ProductenCatalogus.Fields.Eenheid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ProductenCatalogus = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

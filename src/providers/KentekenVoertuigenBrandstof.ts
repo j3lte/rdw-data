@@ -730,6 +730,10 @@ export const Fields: {
   UitstootDeeltjesZwaar: Field("uitstoot_deeltjes_zwaar", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **KentekenVoertuigenBrandstof**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "ActieRadiusEnkelElektrischWltp",
@@ -818,15 +822,30 @@ export const RDWQuery = (
     },
   );
 
-export const KentekenVoertuigenBrandstof: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<KentekenVoertuigenBrandstof_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Gekentekende_voertuigen_brandstof**
+ *
+ * Provider for the Open Data RDW: Gekentekende_voertuigen_brandstof dataset. Bundles:
+ * - {@link KentekenVoertuigenBrandstof.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link KentekenVoertuigenBrandstof.Fields} — the queryable field definitions
+ * - {@link KentekenVoertuigenBrandstof.Info} — dataset metadata
+ *
+ * **Category:** Voertuigen
+ *
+ * **Dataset ID:** 8ys7-d773
+ *
+ * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_brandstof/8ys7-d773
+ *
+ * @example
+ * ```ts
+ * const { data } = await KentekenVoertuigenBrandstof.RDWQuery()
+ *   .where(Where.like(KentekenVoertuigenBrandstof.Fields.ActieRadiusEnkelElektrischWltp, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const KentekenVoertuigenBrandstof = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -235,6 +235,10 @@ export const Fields: {
   Usageid: Field("usageid", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenGeldigheidsinperking**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areaid",
@@ -297,15 +301,31 @@ export const RDWQuery = (
     },
   );
 
-export const ParkerenGeldigheidsinperking: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<ParkerenGeldigheidsinperking_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: GELDIGHEIDSINPERKING**
+ * Een etmaal- en/of tijdvenster dat de geldigheid van een parkeer- of verblijfrecht inperkt. Het einde van een inperking van de geldigheid wordt alleen geregistreerd bij de uitbreiding van het gebied waarvoor dat recht geldt.
+ *
+ * Provider for the Open Data Parkeren: GELDIGHEIDSINPERKING dataset. Bundles:
+ * - {@link ParkerenGeldigheidsinperking.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenGeldigheidsinperking.Fields} — the queryable field definitions
+ * - {@link ParkerenGeldigheidsinperking.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** ynha-fuwp
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSINPERKING/ynha-fuwp
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenGeldigheidsinperking.RDWQuery()
+ *   .where(Where.like(ParkerenGeldigheidsinperking.Fields.Areaid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenGeldigheidsinperking = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -211,6 +211,10 @@ export const Fields: {
   VervaldatumKeuringDt: Field("vervaldatum_keuring_dt", DataType.FloatingTimestamp),
 };
 
+/**
+ * Dataset metadata for **MeldingenKeuringsinstantie**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "ApiGebrekBeschrijving",
@@ -269,12 +273,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const MeldingenKeuringsinstantie: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<MeldingenKeuringsinstantie_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Meldingen Keuringsinstantie**
+ * Dataset met meldingen in het kader van een bepaalde erkenning uitgevoerd door een keuringsinstantie.
+ *
+ * Provider for the Open Data RDW: Meldingen Keuringsinstantie dataset. Bundles:
+ * - {@link MeldingenKeuringsinstantie.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link MeldingenKeuringsinstantie.Fields} — the queryable field definitions
+ * - {@link MeldingenKeuringsinstantie.Info} — dataset metadata
+ *
+ * **Category:** Keuringen
+ *
+ * **Dataset ID:** sgfe-77wx
+ *
+ * **URL:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx
+ *
+ * @example
+ * ```ts
+ * const { data } = await MeldingenKeuringsinstantie.RDWQuery()
+ *   .where(Where.like(MeldingenKeuringsinstantie.Fields.ApiGebrekBeschrijving, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const MeldingenKeuringsinstantie = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

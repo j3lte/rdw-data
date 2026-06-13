@@ -1342,6 +1342,10 @@ export const Fields: {
   Volgnummerrevisieuitvoering: Field("volgnummerrevisieuitvoering", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **TgkEnergiebronUitvoering**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Actieradiusexternoplaadwltpbgr",
@@ -1470,12 +1474,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TgkEnergiebronUitvoering: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TgkEnergiebronUitvoering_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: TGK Energiebron Uitvoering**
+ *
+ * Provider for the Open Data RDW: TGK Energiebron Uitvoering dataset. Bundles:
+ * - {@link TgkEnergiebronUitvoering.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TgkEnergiebronUitvoering.Fields} — the queryable field definitions
+ * - {@link TgkEnergiebronUitvoering.Info} — dataset metadata
+ *
+ * **Category:** Typegoedkeuring
+ *
+ * **Dataset ID:** gr7t-qfnb
+ *
+ * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Energiebron-Uitvoering/gr7t-qfnb
+ *
+ * @example
+ * ```ts
+ * const { data } = await TgkEnergiebronUitvoering.RDWQuery()
+ *   .where(Where.like(TgkEnergiebronUitvoering.Fields.Actieradiusexternoplaadwltpbgr, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TgkEnergiebronUitvoering = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -132,6 +132,10 @@ export const Fields: {
   Uuid: Field("uuid", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenParkeergebied**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areaid",
@@ -184,12 +188,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenParkeergebied: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenParkeergebied_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: PARKEERGEBIED**
+ * Deze tabel legt een koppeling tussen de gebieden zoals deze vastgelegd zijn in het NPR en de gebieden zoals deze voor Open Data Parkeren volgens de standaard SPDP2.0 gepubliceerd worden.
+ *
+ * Provider for the Open Data Parkeren: PARKEERGEBIED dataset. Bundles:
+ * - {@link ParkerenParkeergebied.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenParkeergebied.Fields} — the queryable field definitions
+ * - {@link ParkerenParkeergebied.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** mz4f-59fw
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED/mz4f-59fw
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenParkeergebied.RDWQuery()
+ *   .where(Where.like(ParkerenParkeergebied.Fields.Areaid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenParkeergebied = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

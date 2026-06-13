@@ -272,6 +272,10 @@ export const Fields: {
   Zipcode: Field("zipcode", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenParkeeradres**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Country",
@@ -331,12 +335,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenParkeeradres: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenParkeeradres_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: PARKEERADRES**
+ * Een adres van een gebiedsbeheerder of een in- of uitgang van een parkeergebied.
+ *
+ * Provider for the Open Data Parkeren: PARKEERADRES dataset. Bundles:
+ * - {@link ParkerenParkeeradres.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenParkeeradres.Fields} — the queryable field definitions
+ * - {@link ParkerenParkeeradres.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** ygq4-hh5q
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERADRES/ygq4-hh5q
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenParkeeradres.RDWQuery()
+ *   .where(Where.like(ParkerenParkeeradres.Fields.Country, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenParkeeradres = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

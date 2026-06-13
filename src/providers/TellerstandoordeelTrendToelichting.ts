@@ -72,6 +72,10 @@ export const Fields: {
   ToelichtingTellerstandoordeel: Field("toelichting_tellerstandoordeel", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **TellerstandoordeelTrendToelichting**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "CodeToelichtingTellerstandoordeel",
@@ -127,15 +131,31 @@ export const RDWQuery = (
     },
   );
 
-export const TellerstandoordeelTrendToelichting: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<TellerstandoordeelTrendToelichting_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Tellerstandoordeel Trend Toelichting**
+ * De tellerstandoordelen worden in gekentekende voertuigen vermeld als codes. Deze tabel helpt de gebruiker om die codes om te zetten in begrijpbare toelichtingen.
+ *
+ * Provider for the Open Data RDW: Tellerstandoordeel Trend Toelichting dataset. Bundles:
+ * - {@link TellerstandoordeelTrendToelichting.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TellerstandoordeelTrendToelichting.Fields} — the queryable field definitions
+ * - {@link TellerstandoordeelTrendToelichting.Info} — dataset metadata
+ *
+ * **Category:** Voertuigen
+ *
+ * **Dataset ID:** jqs4-4kvw
+ *
+ * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Tellerstandoordeel-Trend-Toelichting/jqs4-4kvw
+ *
+ * @example
+ * ```ts
+ * const { data } = await TellerstandoordeelTrendToelichting.RDWQuery()
+ *   .where(Where.like(TellerstandoordeelTrendToelichting.Fields.CodeToelichtingTellerstandoordeel, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TellerstandoordeelTrendToelichting = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

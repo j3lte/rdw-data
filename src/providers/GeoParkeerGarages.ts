@@ -208,6 +208,10 @@ export const Fields: {
   Usageid: Field("usageid", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **GeoParkeerGarages**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areadesc",
@@ -266,12 +270,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const GeoParkeerGarages: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<GeoParkeerGarages_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **GEO Parkeer Garages**
+ * GEO Data laag met Parkeer Garage locaties.
+ *
+ * Provider for the GEO Parkeer Garages dataset. Bundles:
+ * - {@link GeoParkeerGarages.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link GeoParkeerGarages.Fields} — the queryable field definitions
+ * - {@link GeoParkeerGarages.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** t5pc-eb34
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/GEO-Parkeer-Garages/t5pc-eb34
+ *
+ * @example
+ * ```ts
+ * const { data } = await GeoParkeerGarages.RDWQuery()
+ *   .where(Where.like(GeoParkeerGarages.Fields.Areadesc, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const GeoParkeerGarages = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

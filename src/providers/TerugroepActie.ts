@@ -515,6 +515,10 @@ export const Fields: {
   ),
 };
 
+/**
+ * Dataset metadata for **TerugroepActie**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "ApiTerugroepActieRisico",
@@ -588,12 +592,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TerugroepActie: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TerugroepActie_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Terugroep_actie**
+ *
+ * Provider for the Open Data RDW: Terugroep_actie dataset. Bundles:
+ * - {@link TerugroepActie.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TerugroepActie.Fields} — the queryable field definitions
+ * - {@link TerugroepActie.Info} — dataset metadata
+ *
+ * **Category:** Terugroepacties
+ *
+ * **Dataset ID:** j9yg-7rg9
+ *
+ * **URL:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie/j9yg-7rg9
+ *
+ * @example
+ * ```ts
+ * const { data } = await TerugroepActie.RDWQuery()
+ *   .where(Where.like(TerugroepActie.Fields.ApiTerugroepActieRisico, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TerugroepActie = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

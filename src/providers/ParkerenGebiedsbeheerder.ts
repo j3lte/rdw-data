@@ -132,6 +132,10 @@ export const Fields: {
   Url: Field("url", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenGebiedsbeheerder**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areamanagerdesc",
@@ -184,12 +188,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenGebiedsbeheerder: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenGebiedsbeheerder_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: GEBIEDSBEHEERDER**
+ * Tabel met informatie over de rechtspersoon die zeggenschap heeft over het gebruiksdoel en de regeling van een gebied.
+ *
+ * Provider for the Open Data Parkeren: GEBIEDSBEHEERDER dataset. Bundles:
+ * - {@link ParkerenGebiedsbeheerder.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenGebiedsbeheerder.Fields} — the queryable field definitions
+ * - {@link ParkerenGebiedsbeheerder.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** 2uc2-nnv3
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIEDSBEHEERDER/2uc2-nnv3
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenGebiedsbeheerder.RDWQuery()
+ *   .where(Where.like(ParkerenGebiedsbeheerder.Fields.Areamanagerdesc, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenGebiedsbeheerder = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

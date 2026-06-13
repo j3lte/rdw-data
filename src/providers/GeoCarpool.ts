@@ -272,6 +272,10 @@ export const Fields: {
   Usageid: Field("usageid", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **GeoCarpool**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "AantalLaadPunten",
@@ -334,12 +338,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const GeoCarpool: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<GeoCarpool_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **GEO Carpool**
+ * GEO Data laag met Carpool locaties.
+ *
+ * Provider for the GEO Carpool dataset. Bundles:
+ * - {@link GeoCarpool.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link GeoCarpool.Fields} — the queryable field definitions
+ * - {@link GeoCarpool.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** 9c54-cmfx
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx
+ *
+ * @example
+ * ```ts
+ * const { data } = await GeoCarpool.RDWQuery()
+ *   .where(Where.like(GeoCarpool.Fields.AantalLaadPunten, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const GeoCarpool = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

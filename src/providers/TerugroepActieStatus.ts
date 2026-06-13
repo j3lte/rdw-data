@@ -120,6 +120,10 @@ export const Fields: {
   Status: Field("status", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **TerugroepActieStatus**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "CodeStatus",
@@ -170,12 +174,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TerugroepActieStatus: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TerugroepActieStatus_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Terugroep_actie_status**
+ *
+ * Provider for the Open Data RDW: Terugroep_actie_status dataset. Bundles:
+ * - {@link TerugroepActieStatus.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TerugroepActieStatus.Fields} — the queryable field definitions
+ * - {@link TerugroepActieStatus.Info} — dataset metadata
+ *
+ * **Category:** Terugroepacties
+ *
+ * **Dataset ID:** t49b-isb7
+ *
+ * **URL:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_status/t49b-isb7
+ *
+ * @example
+ * ```ts
+ * const { data } = await TerugroepActieStatus.RDWQuery()
+ *   .where(Where.like(TerugroepActieStatus.Fields.CodeStatus, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TerugroepActieStatus = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -782,6 +782,10 @@ export const Fields: {
   UsageId: Field("usage_id", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **Locaties**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "N01Naam",
@@ -875,12 +879,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const Locaties: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<Locaties_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Locaties**
+ *
+ * Provider for the Locaties dataset. Bundles:
+ * - {@link Locaties.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link Locaties.Fields} — the queryable field definitions
+ * - {@link Locaties.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** gfb5-nkdy
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy
+ *
+ * @example
+ * ```ts
+ * const { data } = await Locaties.RDWQuery()
+ *   .where(Where.like(Locaties.Fields.N01Naam, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const Locaties = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

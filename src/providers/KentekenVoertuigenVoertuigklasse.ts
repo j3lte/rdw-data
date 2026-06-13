@@ -142,6 +142,10 @@ export const Fields: {
   VoertuigklasseOmschrijving: Field("voertuigklasse_omschrijving", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **KentekenVoertuigenVoertuigklasse**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "CarrosserieKlasseVolgnummer",
@@ -199,15 +203,30 @@ export const RDWQuery = (
     },
   );
 
-export const KentekenVoertuigenVoertuigklasse: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<KentekenVoertuigenVoertuigklasse_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Gekentekende_voertuigen_voertuigklasse**
+ *
+ * Provider for the Open Data RDW: Gekentekende_voertuigen_voertuigklasse dataset. Bundles:
+ * - {@link KentekenVoertuigenVoertuigklasse.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link KentekenVoertuigenVoertuigklasse.Fields} — the queryable field definitions
+ * - {@link KentekenVoertuigenVoertuigklasse.Info} — dataset metadata
+ *
+ * **Category:** Voertuigen
+ *
+ * **Dataset ID:** kmfi-hrps
+ *
+ * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_voertuigklas/kmfi-hrps
+ *
+ * @example
+ * ```ts
+ * const { data } = await KentekenVoertuigenVoertuigklasse.RDWQuery()
+ *   .where(Where.like(KentekenVoertuigenVoertuigklasse.Fields.CarrosserieKlasseVolgnummer, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const KentekenVoertuigenVoertuigklasse = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

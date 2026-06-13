@@ -126,6 +126,10 @@ export const Fields: {
   Kenteken: Field("kenteken", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **KentekenVoertuigenBijzonderheden**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "BijzonderheidCode",
@@ -184,15 +188,30 @@ export const RDWQuery = (
     },
   );
 
-export const KentekenVoertuigenBijzonderheden: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<KentekenVoertuigenBijzonderheden_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Gekentekende_voertuigen_bijzonderheden**
+ *
+ * Provider for the Open Data RDW: Gekentekende_voertuigen_bijzonderheden dataset. Bundles:
+ * - {@link KentekenVoertuigenBijzonderheden.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link KentekenVoertuigenBijzonderheden.Fields} — the queryable field definitions
+ * - {@link KentekenVoertuigenBijzonderheden.Info} — dataset metadata
+ *
+ * **Category:** Voertuigen
+ *
+ * **Dataset ID:** 7ug8-2dtt
+ *
+ * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_bijzonderhed/7ug8-2dtt
+ *
+ * @example
+ * ```ts
+ * const { data } = await KentekenVoertuigenBijzonderheden.RDWQuery()
+ *   .where(Where.like(KentekenVoertuigenBijzonderheden.Fields.BijzonderheidCode, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const KentekenVoertuigenBijzonderheden = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

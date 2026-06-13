@@ -152,6 +152,10 @@ export const Fields: {
   Usageid: Field("usageid", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenGebiedRegeling**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areaid",
@@ -205,12 +209,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenGebiedRegeling: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenGebiedRegeling_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: GEBIED REGELING**
+ * Regeling of regelingen die op een gebied van toepassing zijn. Op een bepaald moment is op één gebied maar één regeling van toepassing, maar de regeling die van toepassing is op een gebied, kan periodiek veranderen
+ *
+ * Provider for the Open Data Parkeren: GEBIED REGELING dataset. Bundles:
+ * - {@link ParkerenGebiedRegeling.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenGebiedRegeling.Fields} — the queryable field definitions
+ * - {@link ParkerenGebiedRegeling.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** qtex-qwd8
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED-REGELING/qtex-qwd8
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenGebiedRegeling.RDWQuery()
+ *   .where(Where.like(ParkerenGebiedRegeling.Fields.Areaid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenGebiedRegeling = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

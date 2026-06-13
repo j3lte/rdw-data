@@ -112,6 +112,10 @@ export const Fields: {
   Startdatepaymentmethod: Field("startdatepaymentmethod", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenBetaalmethodeVerkooppunt**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Enddatepaymentmethod",
@@ -168,15 +172,31 @@ export const RDWQuery = (
     },
   );
 
-export const ParkerenBetaalmethodeVerkooppunt: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<ParkerenBetaalmethodeVerkooppunt_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: BETAALMETHODE VERKOOPPUNT**
+ * Een betaalmethode die gebruikt kan worden bij een bepaald verkooppunt of betaalautomaat van een parkeergebied, -garage of -terrein.
+ *
+ * Provider for the Open Data Parkeren: BETAALMETHODE VERKOOPPUNT dataset. Bundles:
+ * - {@link ParkerenBetaalmethodeVerkooppunt.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenBetaalmethodeVerkooppunt.Fields} — the queryable field definitions
+ * - {@link ParkerenBetaalmethodeVerkooppunt.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** j96a-7nhx
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenBetaalmethodeVerkooppunt.RDWQuery()
+ *   .where(Where.like(ParkerenBetaalmethodeVerkooppunt.Fields.Enddatepaymentmethod, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenBetaalmethodeVerkooppunt = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

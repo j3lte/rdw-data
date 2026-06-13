@@ -109,6 +109,10 @@ export const Fields: {
   SubcategorieVoertuigVolgnummer: Field("subcategorie_voertuig_volgnummer", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **KentekenVoertuigenSubcategorieVoertuig**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Kenteken",
@@ -165,15 +169,30 @@ export const RDWQuery = (
     },
   );
 
-export const KentekenVoertuigenSubcategorieVoertuig: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<KentekenVoertuigenSubcategorieVoertuig_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Gekentekende_voertuigen_subcategorie_voertuig**
+ *
+ * Provider for the Open Data RDW: Gekentekende_voertuigen_subcategorie_voertuig dataset. Bundles:
+ * - {@link KentekenVoertuigenSubcategorieVoertuig.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link KentekenVoertuigenSubcategorieVoertuig.Fields} — the queryable field definitions
+ * - {@link KentekenVoertuigenSubcategorieVoertuig.Info} — dataset metadata
+ *
+ * **Category:** Voertuigen
+ *
+ * **Dataset ID:** 2ba7-embk
+ *
+ * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_subcategorie/2ba7-embk
+ *
+ * @example
+ * ```ts
+ * const { data } = await KentekenVoertuigenSubcategorieVoertuig.RDWQuery()
+ *   .where(Where.like(KentekenVoertuigenSubcategorieVoertuig.Fields.Kenteken, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const KentekenVoertuigenSubcategorieVoertuig = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

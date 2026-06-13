@@ -174,6 +174,10 @@ export const Fields: {
   Volgnummerrupsbandset: Field("volgnummerrupsbandset", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **TgkRupsbandsetUitvoering**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Aangedrevenrupsbandsetind",
@@ -229,12 +233,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TgkRupsbandsetUitvoering: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TgkRupsbandsetUitvoering_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: TGK Rupsbandset Uitvoering**
+ *
+ * Provider for the Open Data RDW: TGK Rupsbandset Uitvoering dataset. Bundles:
+ * - {@link TgkRupsbandsetUitvoering.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TgkRupsbandsetUitvoering.Fields} — the queryable field definitions
+ * - {@link TgkRupsbandsetUitvoering.Info} — dataset metadata
+ *
+ * **Category:** Typegoedkeuring
+ *
+ * **Dataset ID:** xn6e-huse
+ *
+ * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Rupsbandset-Uitvoering/xn6e-huse
+ *
+ * @example
+ * ```ts
+ * const { data } = await TgkRupsbandsetUitvoering.RDWQuery()
+ *   .where(Where.like(TgkRupsbandsetUitvoering.Fields.Aangedrevenrupsbandsetind, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TgkRupsbandsetUitvoering = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

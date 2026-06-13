@@ -172,6 +172,10 @@ export const Fields: {
   Position: Field("position", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenContactpersoon**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Contactpersonid",
@@ -226,12 +230,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenContactpersoon: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenContactpersoon_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: CONTACTPERSOON**
+ * Geregistreerde contactpersonen van een parkeergebied of faciliteit
+ *
+ * Provider for the Open Data Parkeren: CONTACTPERSOON dataset. Bundles:
+ * - {@link ParkerenContactpersoon.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenContactpersoon.Fields} — the queryable field definitions
+ * - {@link ParkerenContactpersoon.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** rbew-yhyc
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-CONTACTPERSOON/rbew-yhyc
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenContactpersoon.RDWQuery()
+ *   .where(Where.like(ParkerenContactpersoon.Fields.Contactpersonid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenContactpersoon = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

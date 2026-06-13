@@ -176,6 +176,10 @@ export const Fields: {
   Validityextensiontype: Field("validityextensiontype", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenGeldigheidsuitbreiding**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areaid",
@@ -235,15 +239,31 @@ export const RDWQuery = (
     },
   );
 
-export const ParkerenGeldigheidsuitbreiding: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<ParkerenGeldigheidsuitbreiding_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: GELDIGHEIDSUITBREIDING**
+ * Een uitbreiding van het gebied waarvoor een bepaald parkeer- of verblijfsrecht geldig is.
+ *
+ * Provider for the Open Data Parkeren: GELDIGHEIDSUITBREIDING dataset. Bundles:
+ * - {@link ParkerenGeldigheidsuitbreiding.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenGeldigheidsuitbreiding.Fields} — the queryable field definitions
+ * - {@link ParkerenGeldigheidsuitbreiding.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** 8ff3-rxrk
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSUITBREIDING/8ff3-rxrk
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenGeldigheidsuitbreiding.RDWQuery()
+ *   .where(Where.like(ParkerenGeldigheidsuitbreiding.Fields.Areaid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenGeldigheidsuitbreiding = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

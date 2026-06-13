@@ -160,6 +160,10 @@ export const Fields: {
   IngangsdatumGebrekDt: Field("ingangsdatum_gebrek_dt", DataType.FloatingTimestamp),
 };
 
+/**
+ * Dataset metadata for **Gebreken**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "EinddatumGebrek",
@@ -215,12 +219,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const Gebreken: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<Gebreken_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Gebreken**
+ * Gebreken die bij een voertuig kunnen voorkomen zijn in deze dataset opgenomen.
+ *
+ * Provider for the Open Data RDW: Gebreken dataset. Bundles:
+ * - {@link Gebreken.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link Gebreken.Fields} — the queryable field definitions
+ * - {@link Gebreken.Info} — dataset metadata
+ *
+ * **Category:** Keuringen
+ *
+ * **Dataset ID:** hx2c-gt7k
+ *
+ * **URL:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Gebreken/hx2c-gt7k
+ *
+ * @example
+ * ```ts
+ * const { data } = await Gebreken.RDWQuery()
+ *   .where(Where.like(Gebreken.Fields.EinddatumGebrek, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const Gebreken = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -148,6 +148,10 @@ export const Fields: {
   Startdatesellingpoint: Field("startdatesellingpoint", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenGeoVerkooppunt**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areamanagerid",
@@ -201,12 +205,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenGeoVerkooppunt: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenGeoVerkooppunt_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: GEO VERKOOPPUNT**
+ * Tabel met geografische informatie van een verkooppunt.
+ *
+ * Provider for the Open Data Parkeren: GEO VERKOOPPUNT dataset. Bundles:
+ * - {@link ParkerenGeoVerkooppunt.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenGeoVerkooppunt.Fields} — the queryable field definitions
+ * - {@link ParkerenGeoVerkooppunt.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** cgqw-pfbp
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEO-VERKOOPPUNT/cgqw-pfbp
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenGeoVerkooppunt.RDWQuery()
+ *   .where(Where.like(ParkerenGeoVerkooppunt.Fields.Areamanagerid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenGeoVerkooppunt = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

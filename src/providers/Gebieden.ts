@@ -766,6 +766,10 @@ export const Fields: {
   UsageId: Field("usage_id", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **Gebieden**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "N01Naam",
@@ -858,12 +862,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const Gebieden: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<Gebieden_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Gebieden**
+ *
+ * Provider for the Gebieden dataset. Bundles:
+ * - {@link Gebieden.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link Gebieden.Fields} — the queryable field definitions
+ * - {@link Gebieden.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** u3zx-f5hd
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
+ *
+ * @example
+ * ```ts
+ * const { data } = await Gebieden.RDWQuery()
+ *   .where(Where.like(Gebieden.Fields.N01Naam, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const Gebieden = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

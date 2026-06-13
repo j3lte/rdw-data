@@ -208,6 +208,10 @@ export const Fields: {
   Usageid: Field("usageid", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **GeoPenr**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areadesc",
@@ -266,12 +270,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const GeoPenr: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<GeoPenr_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **GEO PenR**
+ * GEO Data laag met Park en Ride locaties.
+ *
+ * Provider for the GEO PenR dataset. Bundles:
+ * - {@link GeoPenr.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link GeoPenr.Fields} — the queryable field definitions
+ * - {@link GeoPenr.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** 6wzd-evwu
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/GEO-PenR/6wzd-evwu
+ *
+ * @example
+ * ```ts
+ * const { data } = await GeoPenr.RDWQuery()
+ *   .where(Where.like(GeoPenr.Fields.Areadesc, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const GeoPenr = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

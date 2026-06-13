@@ -798,6 +798,10 @@ export const Fields: {
   Wielbasisondergrens: Field("wielbasisondergrens", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **TgkBasisUitvoering**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Aantaldeurenbovengrens",
@@ -892,12 +896,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const TgkBasisUitvoering: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<TgkBasisUitvoering_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: TGK Basis Uitvoering**
+ *
+ * Provider for the Open Data RDW: TGK Basis Uitvoering dataset. Bundles:
+ * - {@link TgkBasisUitvoering.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TgkBasisUitvoering.Fields} — the queryable field definitions
+ * - {@link TgkBasisUitvoering.Info} — dataset metadata
+ *
+ * **Category:** Typegoedkeuring
+ *
+ * **Dataset ID:** byxc-wwua
+ *
+ * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Basis-Uitvoering/byxc-wwua
+ *
+ * @example
+ * ```ts
+ * const { data } = await TgkBasisUitvoering.RDWQuery()
+ *   .where(Where.like(TgkBasisUitvoering.Fields.Aantaldeurenbovengrens, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TgkBasisUitvoering = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

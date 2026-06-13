@@ -232,6 +232,10 @@ export const Fields: {
   Vehicleexit: Field("vehicleexit", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **ParkerenInUitgang**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Alias",
@@ -289,12 +293,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenInUitgang: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenInUitgang_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: IN-UITGANG**
+ * Tabel met informatie over een in- of uitgang (voor voertuigen of personen) van een parkeerfaciliteit.
+ *
+ * Provider for the Open Data Parkeren: IN-UITGANG dataset. Bundles:
+ * - {@link ParkerenInUitgang.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenInUitgang.Fields} — the queryable field definitions
+ * - {@link ParkerenInUitgang.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** c653-u9z2
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-IN-UITGANG/c653-u9z2
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenInUitgang.RDWQuery()
+ *   .where(Where.like(ParkerenInUitgang.Fields.Alias, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenInUitgang = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -132,6 +132,10 @@ export const Fields: {
   Startdatearea: Field("startdatearea", DataType.FloatingTimestamp),
 };
 
+/**
+ * Dataset metadata for **ParkerenGeometrieGebied**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areageometryastext",
@@ -184,12 +188,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenGeometrieGebied: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenGeometrieGebied_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: GEOMETRIE GEBIED**
+ * Een overzicht van de geometrieën van parkeergebieden en -faciliteiten, in coördinatenstelsel WGS84 (EPSG: 4326).
+ *
+ * Provider for the Open Data Parkeren: GEOMETRIE GEBIED dataset. Bundles:
+ * - {@link ParkerenGeometrieGebied.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenGeometrieGebied.Fields} — the queryable field definitions
+ * - {@link ParkerenGeometrieGebied.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** nsk3-v9n7
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEOMETRIE-GEBIED/nsk3-v9n7
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenGeometrieGebied.RDWQuery()
+ *   .where(Where.like(ParkerenGeometrieGebied.Fields.Areageometryastext, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenGeometrieGebied = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

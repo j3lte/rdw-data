@@ -268,6 +268,10 @@ export const Fields: {
   Starttimetimeframe: Field("starttimetimeframe", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **ParkerenTijdvak**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areamanagerid",
@@ -327,12 +331,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenTijdvak: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenTijdvak_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: TIJDVAK**
+ * Een deel van een benoemd etmaal waarin een bepaalde regeling van toepassing is. In een etmaal kan voor nul, een of meerdere tijdvakken worden geregistreerd welk tarief van toepassing is en kunnen andere aspecten van een regeling worden vastgelegd. Tijdvakken mogen niet overlappen, maar tijdvakken hoeven niet aaneen te sluiten. Voor die gedeelten van het etmaal waarvoor geen tijdvak is, geldt dat volgens de regeling het recht geen tarief heeft, bv. overdag betaald parkeren, maar 's avonds en 's nachts gratis.
+ *
+ * Provider for the Open Data Parkeren: TIJDVAK dataset. Bundles:
+ * - {@link ParkerenTijdvak.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenTijdvak.Fields} — the queryable field definitions
+ * - {@link ParkerenTijdvak.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** ixf8-gtwq
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TIJDVAK/ixf8-gtwq
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenTijdvak.RDWQuery()
+ *   .where(Where.like(ParkerenTijdvak.Fields.Areamanagerid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenTijdvak = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

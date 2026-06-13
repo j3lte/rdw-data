@@ -72,6 +72,10 @@ export const Fields: {
   Volgnummer: Field("volgnummer", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **Erkenningen**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Erkenning",
@@ -121,12 +125,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const Erkenningen: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<Erkenningen_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Erkenningen**
+ * Overzicht van de erkenningen behorende bij de erkende bedrijven.
+ *
+ * Provider for the Open Data RDW: Erkenningen dataset. Bundles:
+ * - {@link Erkenningen.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link Erkenningen.Fields} — the queryable field definitions
+ * - {@link Erkenningen.Info} — dataset metadata
+ *
+ * **Category:** Erkende bedrijven
+ *
+ * **Dataset ID:** nmwb-dqkz
+ *
+ * **URL:** https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz
+ *
+ * @example
+ * ```ts
+ * const { data } = await Erkenningen.RDWQuery()
+ *   .where(Where.like(Erkenningen.Fields.Erkenning, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const Erkenningen = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

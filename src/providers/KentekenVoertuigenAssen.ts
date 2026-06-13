@@ -354,6 +354,10 @@ export const Fields: {
   WettelijkToegestaneMaximumAslast: Field("wettelijk_toegestane_maximum_aslast", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **KentekenVoertuigenAssen**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "AangedrevenAs",
@@ -416,12 +420,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const KentekenVoertuigenAssen: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<KentekenVoertuigenAssen_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Gekentekende_voertuigen_assen**
+ *
+ * Provider for the Open Data RDW: Gekentekende_voertuigen_assen dataset. Bundles:
+ * - {@link KentekenVoertuigenAssen.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link KentekenVoertuigenAssen.Fields} — the queryable field definitions
+ * - {@link KentekenVoertuigenAssen.Info} — dataset metadata
+ *
+ * **Category:** Voertuigen
+ *
+ * **Dataset ID:** 3huj-srit
+ *
+ * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_assen/3huj-srit
+ *
+ * @example
+ * ```ts
+ * const { data } = await KentekenVoertuigenAssen.RDWQuery()
+ *   .where(Where.like(KentekenVoertuigenAssen.Fields.AangedrevenAs, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const KentekenVoertuigenAssen = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

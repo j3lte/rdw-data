@@ -163,6 +163,10 @@ export const Fields: {
   SoortErkenningOmschrijving: Field("soort_erkenning_omschrijving", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **GeconstateerdeGebreken**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "AantalGebrekenGeconstateerd",
@@ -218,12 +222,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const GeconstateerdeGebreken: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<GeconstateerdeGebreken_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Geconstateerde Gebreken**
+ * In deze set zijn op kenteken niveau geconstateerde gebreken opgenomen.
+ *
+ * Provider for the Open Data RDW: Geconstateerde Gebreken dataset. Bundles:
+ * - {@link GeconstateerdeGebreken.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link GeconstateerdeGebreken.Fields} — the queryable field definitions
+ * - {@link GeconstateerdeGebreken.Info} — dataset metadata
+ *
+ * **Category:** Keuringen
+ *
+ * **Dataset ID:** a34c-vvps
+ *
+ * **URL:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps
+ *
+ * @example
+ * ```ts
+ * const { data } = await GeconstateerdeGebreken.RDWQuery()
+ *   .where(Where.like(GeconstateerdeGebreken.Fields.AantalGebrekenGeconstateerd, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const GeconstateerdeGebreken = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

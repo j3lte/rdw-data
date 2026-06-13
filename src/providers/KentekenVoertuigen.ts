@@ -1646,6 +1646,10 @@ export const Fields: {
   Zuinigheidsclassificatie: Field("zuinigheidsclassificatie", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **KentekenVoertuigen**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "AanhangwagenAutonoomGeremd",
@@ -1790,12 +1794,30 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const KentekenVoertuigen: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<KentekenVoertuigen_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Gekentekende_voertuigen**
+ *
+ * Provider for the Open Data RDW: Gekentekende_voertuigen dataset. Bundles:
+ * - {@link KentekenVoertuigen.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link KentekenVoertuigen.Fields} — the queryable field definitions
+ * - {@link KentekenVoertuigen.Info} — dataset metadata
+ *
+ * **Category:** Voertuigen
+ *
+ * **Dataset ID:** m9d7-ebf2
+ *
+ * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2
+ *
+ * @example
+ * ```ts
+ * const { data } = await KentekenVoertuigen.RDWQuery()
+ *   .where(Where.like(KentekenVoertuigen.Fields.AanhangwagenAutonoomGeremd, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const KentekenVoertuigen = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

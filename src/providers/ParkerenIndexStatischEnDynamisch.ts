@@ -144,6 +144,10 @@ export const Fields: {
   UrlStaticParkingData: Field("url_static_parking_data", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenIndexStatischEnDynamisch**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "DynamicParkingData",
@@ -203,15 +207,31 @@ export const RDWQuery = (
     },
   );
 
-export const ParkerenIndexStatischEnDynamisch: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<ParkerenIndexStatischEnDynamisch_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: Index Statisch en Dynamisch**
+ * Index van statische en dynamische parkeerinformatie van Nederlandse gemeenten en private partijen
+ *
+ * Provider for the Open Data Parkeren: Index Statisch en Dynamisch dataset. Bundles:
+ * - {@link ParkerenIndexStatischEnDynamisch.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenIndexStatischEnDynamisch.Fields} — the queryable field definitions
+ * - {@link ParkerenIndexStatischEnDynamisch.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** f6v7-gjpa
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-Index-Statisch-en-Dynamisch/f6v7-gjpa
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenIndexStatischEnDynamisch.RDWQuery()
+ *   .where(Where.like(ParkerenIndexStatischEnDynamisch.Fields.DynamicParkingData, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenIndexStatischEnDynamisch = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

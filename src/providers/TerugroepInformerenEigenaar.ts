@@ -98,6 +98,10 @@ export const Fields: {
   WijzeWaaropUWordtGeNformeerd: Field("wijze_waarop_u_wordt_ge_nformeerd", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **TerugroepInformerenEigenaar**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "CodeWijzeInformeren",
@@ -153,15 +157,30 @@ export const RDWQuery = (
     },
   );
 
-export const TerugroepInformerenEigenaar: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<TerugroepInformerenEigenaar_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Terugroep_informeren_eigenaar**
+ *
+ * Provider for the Open Data RDW: Terugroep_informeren_eigenaar dataset. Bundles:
+ * - {@link TerugroepInformerenEigenaar.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TerugroepInformerenEigenaar.Fields} — the queryable field definitions
+ * - {@link TerugroepInformerenEigenaar.Info} — dataset metadata
+ *
+ * **Category:** Terugroepacties
+ *
+ * **Dataset ID:** mh8w-8cup
+ *
+ * **URL:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_informeren_eigenaar/mh8w-8cup
+ *
+ * @example
+ * ```ts
+ * const { data } = await TerugroepInformerenEigenaar.RDWQuery()
+ *   .where(Where.like(TerugroepInformerenEigenaar.Fields.CodeWijzeInformeren, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TerugroepInformerenEigenaar = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

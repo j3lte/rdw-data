@@ -172,6 +172,10 @@ export const Fields: {
   Startofperiod: Field("startofperiod", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenParkingOpen**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areaid",
@@ -226,12 +230,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenParkingOpen: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenParkingOpen_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: PARKING OPEN**
+ * Een periode waarin een parkeergebied, -garage of -terrein open (in bedrijf) is. Dit is niet de openingstijd op een bepaalde dag.
+ *
+ * Provider for the Open Data Parkeren: PARKING OPEN dataset. Bundles:
+ * - {@link ParkerenParkingOpen.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenParkingOpen.Fields} — the queryable field definitions
+ * - {@link ParkerenParkingOpen.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** figd-gux7
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-OPEN/figd-gux7
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenParkingOpen.RDWQuery()
+ *   .where(Where.like(ParkerenParkingOpen.Fields.Areaid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenParkingOpen = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

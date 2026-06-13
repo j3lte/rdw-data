@@ -142,6 +142,10 @@ export const Fields: {
   Volgnummerrevisieuitvoering: Field("volgnummerrevisieuitvoering", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **TgkHandelsbenamingFabrikant**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Codeuitvoeringtgk",
@@ -201,15 +205,30 @@ export const RDWQuery = (
     },
   );
 
-export const TgkHandelsbenamingFabrikant: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<TgkHandelsbenamingFabrikant_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: TGK Handelsbenaming Fabrikant**
+ *
+ * Provider for the Open Data RDW: TGK Handelsbenaming Fabrikant dataset. Bundles:
+ * - {@link TgkHandelsbenamingFabrikant.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TgkHandelsbenamingFabrikant.Fields} — the queryable field definitions
+ * - {@link TgkHandelsbenamingFabrikant.Info} — dataset metadata
+ *
+ * **Category:** Typegoedkeuring
+ *
+ * **Dataset ID:** x5v3-sewk
+ *
+ * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Handelsbenaming-Fabrikant/x5v3-sewk
+ *
+ * @example
+ * ```ts
+ * const { data } = await TgkHandelsbenamingFabrikant.RDWQuery()
+ *   .where(Where.like(TgkHandelsbenamingFabrikant.Fields.Codeuitvoeringtgk, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TgkHandelsbenamingFabrikant = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -218,6 +218,10 @@ export const Fields: {
   Startdatespecifications: Field("startdatespecifications", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenSpecificatiesParkeergebied**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areaid",
@@ -279,15 +283,31 @@ export const RDWQuery = (
     },
   );
 
-export const ParkerenSpecificatiesParkeergebied: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<ParkerenSpecificatiesParkeergebied_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: SPECIFICATIES PARKEERGEBIED**
+ * Specificaties behorende bij een parkeerterrein of parkeergarage, zoals het aantal parkeerplaatsen en oplaadpunten.
+ *
+ * Provider for the Open Data Parkeren: SPECIFICATIES PARKEERGEBIED dataset. Bundles:
+ * - {@link ParkerenSpecificatiesParkeergebied.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenSpecificatiesParkeergebied.Fields} — the queryable field definitions
+ * - {@link ParkerenSpecificatiesParkeergebied.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** b3us-f26s
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIFICATIES-PARKEERGEBIED/b3us-f26s
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenSpecificatiesParkeergebied.RDWQuery()
+ *   .where(Where.like(ParkerenSpecificatiesParkeergebied.Fields.Areaid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenSpecificatiesParkeergebied = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

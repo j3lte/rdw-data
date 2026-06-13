@@ -172,6 +172,10 @@ export const Fields: {
   Startdate: Field("startdate", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenBetaalmethodeGebied**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Areaid",
@@ -231,15 +235,31 @@ export const RDWQuery = (
     },
   );
 
-export const ParkerenBetaalmethodeGebied: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<ParkerenBetaalmethodeGebied_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: BETAALMETHODE GEBIED**
+ * Een mogelijke manier om te betalen voor het parkeren in een parkeergebied, -garage of -terrein.
+ *
+ * Provider for the Open Data Parkeren: BETAALMETHODE GEBIED dataset. Bundles:
+ * - {@link ParkerenBetaalmethodeGebied.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenBetaalmethodeGebied.Fields} — the queryable field definitions
+ * - {@link ParkerenBetaalmethodeGebied.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** r3rs-ibz5
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenBetaalmethodeGebied.RDWQuery()
+ *   .where(Where.like(ParkerenBetaalmethodeGebied.Fields.Areaid, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenBetaalmethodeGebied = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

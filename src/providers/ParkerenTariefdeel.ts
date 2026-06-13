@@ -212,6 +212,10 @@ export const Fields: {
   Stepsizefarepart: Field("stepsizefarepart", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **ParkerenTariefdeel**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Amountcumulative",
@@ -268,12 +272,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ParkerenTariefdeel: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ParkerenTariefdeel_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: TARIEFDEEL**
+ * Een tarief bestaat uit 1 of meerdere tariefdelen. Als er een vast tarief per tijdvak is, ongeacht de parkeerduur, dan is er 1 deel zonder tariefdeel duurbegrenzing. Als het tarief afhankelijk is van de parkeerduur (progressief/degressief tarief), zijn er meerdere tariefdelen, waarvan een aantal qua duur begrensd.
+ *
+ * Provider for the Open Data Parkeren: TARIEFDEEL dataset. Bundles:
+ * - {@link ParkerenTariefdeel.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenTariefdeel.Fields} — the queryable field definitions
+ * - {@link ParkerenTariefdeel.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** 534e-5vdg
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFDEEL/534e-5vdg
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenTariefdeel.RDWQuery()
+ *   .where(Where.like(ParkerenTariefdeel.Fields.Amountcumulative, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenTariefdeel = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

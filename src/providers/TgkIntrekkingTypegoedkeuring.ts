@@ -94,6 +94,10 @@ export const Fields: {
   Volgnummerintrekkingtgk: Field("volgnummerintrekkingtgk", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **TgkIntrekkingTypegoedkeuring**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Begindatumintrekkingtgk",
@@ -150,15 +154,30 @@ export const RDWQuery = (
     },
   );
 
-export const TgkIntrekkingTypegoedkeuring: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<TgkIntrekkingTypegoedkeuring_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: TGK Intrekking Typegoedkeuring**
+ *
+ * Provider for the Open Data RDW: TGK Intrekking Typegoedkeuring dataset. Bundles:
+ * - {@link TgkIntrekkingTypegoedkeuring.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link TgkIntrekkingTypegoedkeuring.Fields} — the queryable field definitions
+ * - {@link TgkIntrekkingTypegoedkeuring.Info} — dataset metadata
+ *
+ * **Category:** Typegoedkeuring
+ *
+ * **Dataset ID:** 9s6a-b42z
+ *
+ * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Intrekking-Typegoedkeuring/9s6a-b42z
+ *
+ * @example
+ * ```ts
+ * const { data } = await TgkIntrekkingTypegoedkeuring.RDWQuery()
+ *   .where(Where.like(TgkIntrekkingTypegoedkeuring.Fields.Begindatumintrekkingtgk, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const TgkIntrekkingTypegoedkeuring = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

@@ -211,6 +211,10 @@ export const Fields: {
   UitvoeringsVolgnrToegevObj: Field("uitvoerings_volgnr_toegev_obj", DataType.Number),
 };
 
+/**
+ * Dataset metadata for **ToegevoegdeObjecten**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "ClassificatieToegevoegdObj",
@@ -269,12 +273,31 @@ export const RDWQuery = (
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
   });
 
-export const ToegevoegdeObjecten: {
-  RDWQuery: (auth?: AuthOpts, opts?: Options) => SodaQuery<ToegevoegdeObjecten_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data RDW: Toegevoegde Objecten**
+ * Deze set bevat informatie over ingebouwde objecten aan voertuigen.
+ *
+ * Provider for the Open Data RDW: Toegevoegde Objecten dataset. Bundles:
+ * - {@link ToegevoegdeObjecten.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ToegevoegdeObjecten.Fields} — the queryable field definitions
+ * - {@link ToegevoegdeObjecten.Info} — dataset metadata
+ *
+ * **Category:** Keuringen
+ *
+ * **Dataset ID:** sghb-dzxx
+ *
+ * **URL:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx
+ *
+ * @example
+ * ```ts
+ * const { data } = await ToegevoegdeObjecten.RDWQuery()
+ *   .where(Where.like(ToegevoegdeObjecten.Fields.ClassificatieToegevoegdObj, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ToegevoegdeObjecten = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };

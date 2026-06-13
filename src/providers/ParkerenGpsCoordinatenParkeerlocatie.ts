@@ -152,6 +152,10 @@ export const Fields: {
   Startdatelocation: Field("startdatelocation", DataType.Text),
 };
 
+/**
+ * Dataset metadata for **ParkerenGpsCoordinatenParkeerlocatie**: the available field names, the
+ * Socrata `dataset` id, `domain`, source `url` and API documentation link.
+ */
 export const Info = {
   fields: [
     "Enddatelocation",
@@ -211,15 +215,31 @@ export const RDWQuery = (
     },
   );
 
-export const ParkerenGpsCoordinatenParkeerlocatie: {
-  RDWQuery: (
-    auth?: AuthOpts,
-    opts?: Options,
-  ) => SodaQuery<ParkerenGpsCoordinatenParkeerlocatie_ResponseData>;
-  Fields: typeof Fields;
-  Info: typeof Info;
-} = {
+/**
+ * **Open Data Parkeren: GPS-COÖRDINATEN PARKEERLOCATIE**
+ * Een geografische locatie van een verkooppunt of van een in- of uitgang van een parkeergebied. De coördinaten zijn in WGS 84 (EPSG: 4326).
+ *
+ * Provider for the Open Data Parkeren: GPS-COÖRDINATEN PARKEERLOCATIE dataset. Bundles:
+ * - {@link ParkerenGpsCoordinatenParkeerlocatie.RDWQuery} — a typed {@link SodaQuery} builder
+ * - {@link ParkerenGpsCoordinatenParkeerlocatie.Fields} — the queryable field definitions
+ * - {@link ParkerenGpsCoordinatenParkeerlocatie.Info} — dataset metadata
+ *
+ * **Category:** Parkeren
+ *
+ * **Dataset ID:** k3dr-ge3w
+ *
+ * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GPS-COÖRDINATEN-PARKEERLOCATIE/k3dr-ge3w
+ *
+ * @example
+ * ```ts
+ * const { data } = await ParkerenGpsCoordinatenParkeerlocatie.RDWQuery()
+ *   .where(Where.like(ParkerenGpsCoordinatenParkeerlocatie.Fields.Enddatelocation, "some_value"))
+ *   .limit(10)
+ *   .execute();
+ * ```
+ */
+export const ParkerenGpsCoordinatenParkeerlocatie = {
   RDWQuery,
-  Fields: Fields,
-  Info: Info,
+  Fields,
+  Info,
 };
