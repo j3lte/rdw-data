@@ -1,4 +1,4 @@
-import { Result } from "./interfaces.ts";
+import type { Result } from "./interfaces.ts";
 export const fixTitle = (str: string) => {
   return str
     .replaceAll(":", "")

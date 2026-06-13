@@ -11,7 +11,7 @@ export {
   SelectRegrSlope,
   SystemFields,
   Where,
-} from "https://deno.land/x/soda@<%= it.sodaVersion %>/mod.ts";
+} from "soda";
 <% it.items.forEach(function (item) { %>
 export { <%= item.name %> } from "./<%= item.name %>.ts";
 export type { <%= item.name %>_ResponseData } from "./<%= item.name %>.ts";<% }); %>

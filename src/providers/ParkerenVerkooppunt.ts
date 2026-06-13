@@ -13,8 +13,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data Parkeren: VERKOOPPUNT
@@ -92,7 +92,15 @@ export interface ParkerenVerkooppunt_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Areaid: FieldObject<DataType.Text>;
+  Areamanagerid: FieldObject<DataType.Number>;
+  Enddatesellingpoint: FieldObject<DataType.Number>;
+  Sellingpointdesc: FieldObject<DataType.Text>;
+  Sellingpointid: FieldObject<DataType.Number>;
+  Sellingpointnumber: FieldObject<DataType.Number>;
+  Startdatesellingpoint: FieldObject<DataType.Number>;
+} = {
   /**
    * ### AreaId
    *
@@ -181,7 +189,7 @@ export const Info = {
   provider_name: "ParkerenVerkooppunt",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-VERKOOPPUNT/fk68-nf2y",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/fk68-nf2y",
-};
+} as const;
 
 /**
  * ### Open Data Parkeren: VERKOOPPUNT
@@ -211,7 +219,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<ParkerenVerkooppunt_ResponseData> =>
   createQueryWithDataset<ParkerenVerkooppunt_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

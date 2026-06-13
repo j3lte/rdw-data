@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data Parkeren: TIJDVAK
@@ -134,7 +134,20 @@ export interface ParkerenTijdvak_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Areamanagerid: FieldObject<DataType.Number>;
+  Claimrightpossible: FieldObject<DataType.Text>;
+  Daytimeframe: FieldObject<DataType.Text>;
+  Enddatetimeframe: FieldObject<DataType.Text>;
+  Endtimetimeframe: FieldObject<DataType.Number>;
+  Farecalculationcode: FieldObject<DataType.Text>;
+  Maxdurationright: FieldObject<DataType.Number>;
+  Minparkinginterruption: FieldObject<DataType.Number>;
+  Regulationid: FieldObject<DataType.Text>;
+  Resetdurationtimeframe: FieldObject<DataType.Number>;
+  Startdatetimeframe: FieldObject<DataType.Text>;
+  Starttimetimeframe: FieldObject<DataType.Number>;
+} = {
   /**
    * ### AreaManagerId
    *
@@ -276,7 +289,7 @@ export const Info = {
   provider_name: "ParkerenTijdvak",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TIJDVAK/ixf8-gtwq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ixf8-gtwq",
-};
+} as const;
 
 /**
  * ### Open Data Parkeren: TIJDVAK
@@ -305,7 +318,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<ParkerenTijdvak_ResponseData> =>
   createQueryWithDataset<ParkerenTijdvak_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

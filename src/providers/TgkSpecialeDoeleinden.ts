@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Speciale Doeleinden
@@ -68,7 +68,14 @@ export interface TgkSpecialeDoeleinden_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Codespecialedoeleinden: FieldObject<DataType.Text>;
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevarianttgk: FieldObject<DataType.Text>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Number>;
+  Volgnummerspecialedoeleinden: FieldObject<DataType.Number>;
+} = {
   /**
    * ### CodeSpecialeDoeleinden
    *
@@ -134,7 +141,7 @@ export const Info = {
   provider_name: "TgkSpecialeDoeleinden",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Speciale-Doeleinden/m692-vvff",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/m692-vvff",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Speciale Doeleinden
@@ -162,7 +169,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkSpecialeDoeleinden_ResponseData> =>
   createQueryWithDataset<TgkSpecialeDoeleinden_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

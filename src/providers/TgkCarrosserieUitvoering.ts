@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Carrosserie Uitvoering
@@ -96,7 +96,18 @@ export interface TgkCarrosserieUitvoering_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Codecarrosseriecode: FieldObject<DataType.Text>;
+  Codecarrosserietype: FieldObject<DataType.Text>;
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevarianttgk: FieldObject<DataType.Text>;
+  Codevoertuigklasse: FieldObject<DataType.Text>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Volgnummercarrosseriecode: FieldObject<DataType.Number>;
+  Volgnummercarrosserietype: FieldObject<DataType.Number>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Number>;
+  Volgnummervoertuigklasse: FieldObject<DataType.Number>;
+} = {
   /**
    * ### CodeCarrosseriecode
    *
@@ -198,7 +209,7 @@ export const Info = {
   provider_name: "TgkCarrosserieUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Carrosserie-Uitvoering/ky2r-jqad",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ky2r-jqad",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Carrosserie Uitvoering
@@ -226,7 +237,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkCarrosserieUitvoering_ResponseData> =>
   createQueryWithDataset<TgkCarrosserieUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Terugroep_actie_risico
@@ -57,7 +57,11 @@ export interface TerugroepActieRisico_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  CodeMogelijkGevaar: FieldObject<DataType.Text>;
+  MogelijkGevaar: FieldObject<DataType.Text>;
+  ReferentiecodeRdw: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Code mogelijk gevaar
    *
@@ -106,7 +110,7 @@ export const Info = {
   provider_name: "TerugroepActieRisico",
   url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_risico/9ihi-jgpf",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/9ihi-jgpf",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Terugroep_actie_risico
@@ -134,7 +138,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TerugroepActieRisico_ResponseData> =>
   createQueryWithDataset<TerugroepActieRisico_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data Parkeren: GPS-COÖRDINATEN PARKEERLOCATIE
@@ -82,7 +82,14 @@ export interface ParkerenGpsCoordinatenParkeerlocatie_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Enddatelocation: FieldObject<DataType.Text>;
+  Latitude: FieldObject<DataType.Number>;
+  Locationreference: FieldObject<DataType.Number>;
+  Locationreferencetype: FieldObject<DataType.Text>;
+  Longitude: FieldObject<DataType.Number>;
+  Startdatelocation: FieldObject<DataType.Text>;
+} = {
   /**
    * ### EndDateLocation
    *
@@ -161,7 +168,7 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GPS-COÖRDINATEN-PARKEERLOCATIE/k3dr-ge3w",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/k3dr-ge3w",
-};
+} as const;
 
 /**
  * ### Open Data Parkeren: GPS-COÖRDINATEN PARKEERLOCATIE
@@ -190,7 +197,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<ParkerenGpsCoordinatenParkeerlocatie_ResponseData> =>
   createQueryWithDataset<ParkerenGpsCoordinatenParkeerlocatie_ResponseData>(
     Info.domain,
     Info.dataset,

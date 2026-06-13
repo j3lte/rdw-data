@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data Parkeren: TARIEFDEEL
@@ -109,7 +109,17 @@ export interface ParkerenTariefdeel_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Amountcumulative: FieldObject<DataType.Number>;
+  Amountfarepart: FieldObject<DataType.Number>;
+  Areamanagerid: FieldObject<DataType.Number>;
+  Enddatefarepart: FieldObject<DataType.Number>;
+  Enddurationfarepart: FieldObject<DataType.Number>;
+  Farecalculationcode: FieldObject<DataType.Text>;
+  Startdatefarepart: FieldObject<DataType.Number>;
+  Startdurationfarepart: FieldObject<DataType.Number>;
+  Stepsizefarepart: FieldObject<DataType.Number>;
+} = {
   /**
    * ### AmountCumulative
    *
@@ -220,7 +230,7 @@ export const Info = {
   provider_name: "ParkerenTariefdeel",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFDEEL/534e-5vdg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/534e-5vdg",
-};
+} as const;
 
 /**
  * ### Open Data Parkeren: TARIEFDEEL
@@ -249,7 +259,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<ParkerenTariefdeel_ResponseData> =>
   createQueryWithDataset<ParkerenTariefdeel_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Aandrijving Uitvoering
@@ -138,7 +138,24 @@ export interface TgkAandrijvingUitvoering_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Aantalcilinders: FieldObject<DataType.Number>;
+  Cilinderinhoud: FieldObject<DataType.Text>;
+  Codebrandstoftypemotor: FieldObject<DataType.Text>;
+  Codecilinderopstelling: FieldObject<DataType.Text>;
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevarianttgk: FieldObject<DataType.Text>;
+  Codewerkingmotor: FieldObject<DataType.Text>;
+  Elektromotorindicator: FieldObject<DataType.Text>;
+  Enkelelektrischschakelingind: FieldObject<DataType.Text>;
+  Externoplaadbaarindicator: FieldObject<DataType.Text>;
+  Hybridemotorindicator: FieldObject<DataType.Text>;
+  Motorcode: FieldObject<DataType.Text>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Typegoedkeuringsnummermotor: FieldObject<DataType.Text>;
+  Volgnummeraandrijving: FieldObject<DataType.Number>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Number>;
+} = {
   /**
    * ### AantalCilinders
    *
@@ -294,7 +311,7 @@ export const Info = {
   provider_name: "TgkAandrijvingUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Aandrijving-Uitvoering/4by9-ammk",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/4by9-ammk",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Aandrijving Uitvoering
@@ -322,7 +339,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkAandrijvingUitvoering_ResponseData> =>
   createQueryWithDataset<TgkAandrijvingUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

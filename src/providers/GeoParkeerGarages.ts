@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for GEO Parkeer Garages
@@ -105,7 +105,19 @@ export interface GeoParkeerGarages_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Areadesc: FieldObject<DataType.Text>;
+  Areaid: FieldObject<DataType.Text>;
+  Areamanagerid: FieldObject<DataType.Number>;
+  Enddataarea: FieldObject<DataType.Number>;
+  Location: FieldObject<DataType.Point>;
+  LocationAddress: FieldObject<DataType.Text>;
+  LocationCity: FieldObject<DataType.Text>;
+  LocationState: FieldObject<DataType.Text>;
+  LocationZip: FieldObject<DataType.Text>;
+  Startdataarea: FieldObject<DataType.Number>;
+  Usageid: FieldObject<DataType.Text>;
+} = {
   /**
    * ### AreaDesc
    *
@@ -216,7 +228,7 @@ export const Info = {
   provider_name: "GeoParkeerGarages",
   url: "https://opendata.rdw.nl/Parkeren/GEO-Parkeer-Garages/t5pc-eb34",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/t5pc-eb34",
-};
+} as const;
 
 /**
  * ### GEO Parkeer Garages
@@ -245,7 +257,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<GeoParkeerGarages_ResponseData> =>
   createQueryWithDataset<GeoParkeerGarages_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

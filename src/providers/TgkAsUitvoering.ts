@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK As Uitvoering
@@ -159,7 +159,27 @@ export interface TgkAsUitvoering_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Aangedrevenasindicator: FieldObject<DataType.Text>;
+  Afstandvolgendeasbovengrens: FieldObject<DataType.Text>;
+  Afstandvolgendeasondergrens: FieldObject<DataType.Text>;
+  Belastbareasindicator: FieldObject<DataType.Text>;
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevarianttgk: FieldObject<DataType.Text>;
+  Dubbelemontageindicator: FieldObject<DataType.Text>;
+  Gelijkwaardigaangedrevenasind: FieldObject<DataType.Text>;
+  Geremdeasindicator: FieldObject<DataType.Text>;
+  Hefasindicator: FieldObject<DataType.Text>;
+  Luchtveringaangedrevenasind: FieldObject<DataType.Text>;
+  Maximummassaasbelastingbgr: FieldObject<DataType.Text>;
+  Maximummassaasbelastingogr: FieldObject<DataType.Text>;
+  Spoorbreedtebovengrens: FieldObject<DataType.Text>;
+  Spoorbreedteondergrens: FieldObject<DataType.Text>;
+  Stuurasindicator: FieldObject<DataType.Text>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Volgnummeras: FieldObject<DataType.Number>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Number>;
+} = {
   /**
    * ### AangedrevenAsIndicator
    *
@@ -342,7 +362,7 @@ export const Info = {
   provider_name: "TgkAsUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-As-Uitvoering/xhyb-w7xt",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/xhyb-w7xt",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK As Uitvoering
@@ -370,7 +390,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkAsUitvoering_ResponseData> =>
   createQueryWithDataset<TgkAsUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

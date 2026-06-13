@@ -11,7 +11,7 @@ export {
   SelectRegrSlope,
   SystemFields,
   Where,
-} from "https://deno.land/x/soda@0.4.5/mod.ts";
+} from "soda";
 
 export { BrandstoffenOpPc4 } from "./BrandstoffenOpPc4.ts";
 export type { BrandstoffenOpPc4_ResponseData } from "./BrandstoffenOpPc4.ts";
@@ -19,8 +19,6 @@ export { ErkendeBedrijven } from "./ErkendeBedrijven.ts";
 export type { ErkendeBedrijven_ResponseData } from "./ErkendeBedrijven.ts";
 export { Erkenningen } from "./Erkenningen.ts";
 export type { Erkenningen_ResponseData } from "./Erkenningen.ts";
-export { Gebieden } from "./Gebieden.ts";
-export type { Gebieden_ResponseData } from "./Gebieden.ts";
 export { Gebieden } from "./Gebieden.ts";
 export type { Gebieden_ResponseData } from "./Gebieden.ts";
 export { Gebreken } from "./Gebreken.ts";
@@ -53,8 +51,6 @@ export { KentekenVoertuigenVoertuigklasse } from "./KentekenVoertuigenVoertuigkl
 export type { KentekenVoertuigenVoertuigklasse_ResponseData } from "./KentekenVoertuigenVoertuigklasse.ts";
 export { Keuringen } from "./Keuringen.ts";
 export type { Keuringen_ResponseData } from "./Keuringen.ts";
-export { Locaties } from "./Locaties.ts";
-export type { Locaties_ResponseData } from "./Locaties.ts";
 export { Locaties } from "./Locaties.ts";
 export type { Locaties_ResponseData } from "./Locaties.ts";
 export { MeldingenKeuringsinstantie } from "./MeldingenKeuringsinstantie.ts";

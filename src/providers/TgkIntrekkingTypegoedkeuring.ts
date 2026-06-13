@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Intrekking Typegoedkeuring
@@ -54,7 +54,12 @@ export interface TgkIntrekkingTypegoedkeuring_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Begindatumintrekkingtgk: FieldObject<DataType.FloatingTimestamp>;
+  Einddatumintrekkingtgk: FieldObject<DataType.FloatingTimestamp>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Volgnummerintrekkingtgk: FieldObject<DataType.Number>;
+} = {
   /**
    * ### BegindatumIntrekkingTgk
    *
@@ -103,7 +108,7 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Intrekking-Typegoedkeuring/9s6a-b42z",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/9s6a-b42z",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Intrekking Typegoedkeuring
@@ -131,7 +136,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkIntrekkingTypegoedkeuring_ResponseData> =>
   createQueryWithDataset<TgkIntrekkingTypegoedkeuring_ResponseData>(
     Info.domain,
     Info.dataset,

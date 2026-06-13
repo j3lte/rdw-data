@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Handelsbenaming Fabrikant
@@ -75,7 +75,15 @@ export interface TgkHandelsbenamingFabrikant_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevariantgk: FieldObject<DataType.Text>;
+  Handelsbenamingfabrikant: FieldObject<DataType.Text>;
+  Typeaanduidingfabrikant: FieldObject<DataType.Text>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Volgnummerhandelsbenamingfabr: FieldObject<DataType.Number>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Number>;
+} = {
   /**
    * ### CodeUitvoeringTgk
    *
@@ -151,7 +159,7 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Handelsbenaming-Fabrikant/x5v3-sewk",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/x5v3-sewk",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Handelsbenaming Fabrikant
@@ -179,7 +187,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkHandelsbenamingFabrikant_ResponseData> =>
   createQueryWithDataset<TgkHandelsbenamingFabrikant_ResponseData>(
     Info.domain,
     Info.dataset,

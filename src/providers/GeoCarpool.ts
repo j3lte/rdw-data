@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for GEO Carpool
@@ -133,7 +133,23 @@ export interface GeoCarpool_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  AantalLaadPunten: FieldObject<DataType.Number>;
+  AantalParkeerPlaatsen: FieldObject<DataType.Number>;
+  Areadesc: FieldObject<DataType.Text>;
+  Areaid: FieldObject<DataType.Text>;
+  Areamanagerid: FieldObject<DataType.Number>;
+  Enddataarea: FieldObject<DataType.Number>;
+  Location: FieldObject<DataType.Point>;
+  LocationAddress: FieldObject<DataType.Text>;
+  LocationCity: FieldObject<DataType.Text>;
+  LocationState: FieldObject<DataType.Text>;
+  LocationZip: FieldObject<DataType.Text>;
+  MaximaleInrijHoogte: FieldObject<DataType.Text>;
+  Startdataarea: FieldObject<DataType.Number>;
+  ToegankelijkVoorGehandicapten: FieldObject<DataType.Number>;
+  Usageid: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Aantal laad punten
    *
@@ -280,7 +296,7 @@ export const Info = {
   provider_name: "GeoCarpool",
   url: "https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/9c54-cmfx",
-};
+} as const;
 
 /**
  * ### GEO Carpool
@@ -309,7 +325,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<GeoCarpool_ResponseData> =>
   createQueryWithDataset<GeoCarpool_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

@@ -1,20 +1,33 @@
 {
+  "name": "@j3lte/rdw-data",
+  "version": "0.9.1",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "publish": {
+    "exclude": [
+      "scripts/",
+      ".github/",
+      "_local_testing.ts"
+    ]
+  },
   "tasks": {
     "fetch": "deno run -A scripts/fetch-databases.ts",
     "format": "deno fmt",
     "lint": "deno lint ./src/",
-    "fetch-data": "deno run -A scripts/fetch-databases.ts && deno fmt -q ./src/providers && deno lint",
+    "fetch-data": "deno run -A scripts/fetch-databases.ts && deno fmt -q && deno lint",
+    "set-version": "deno run --allow-read --allow-write ./scripts/set-version.ts",
     "npm": "deno run -A ./scripts/build-npm.ts"
   },
   "fmt": {
-    "options": {
-      "indentWidth": 2,
-      "lineWidth": 100,
-      "singleQuote": false,
-      "useTabs": false,
-      "proseWrap": "preserve"
-    },
-    "exclude": []
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "singleQuote": false,
+    "useTabs": false,
+    "proseWrap": "preserve",
+    "exclude": [
+      "npm/",
+      ".github/"
+    ]
   },
   "lint": {
     "rules": {
@@ -26,5 +39,13 @@
     "exclude": [
       "npm/"
     ]
+  },
+  "exclude": [
+    "npm/"
+  ],
+  "imports": {
+    "soda": "jsr:@j3lte/soda@0.5.0",
+    "@deno/dnt": "jsr:@deno/dnt@^0.42.3",
+    "eta": "npm:eta@^1.14.2"
   }
 }

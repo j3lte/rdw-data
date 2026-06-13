@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_assen
@@ -169,7 +169,24 @@ export interface KentekenVoertuigenAssen_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  AangedrevenAs: FieldObject<DataType.Text>;
+  AantalAssen: FieldObject<DataType.Number>;
+  AfstandTotVolgendeAsVoertuig: FieldObject<DataType.Number>;
+  AfstandTotVolgendeAsVoertuigMaximum: FieldObject<DataType.Number>;
+  AfstandTotVolgendeAsVoertuigMinimum: FieldObject<DataType.Number>;
+  AsNummer: FieldObject<DataType.Number>;
+  GeremdeAsIndicator: FieldObject<DataType.Text>;
+  Hefas: FieldObject<DataType.Text>;
+  Kenteken: FieldObject<DataType.Text>;
+  MaximumLastAsTechnischMaximum: FieldObject<DataType.Number>;
+  MaximumLastAsTechnischMinimum: FieldObject<DataType.Number>;
+  PlaatscodeAs: FieldObject<DataType.Text>;
+  Spoorbreedte: FieldObject<DataType.Number>;
+  TechnischToegestaneMaximumAslast: FieldObject<DataType.Number>;
+  WeggedragCode: FieldObject<DataType.Text>;
+  WettelijkToegestaneMaximumAslast: FieldObject<DataType.Number>;
+} = {
   /**
    * ### Aangedreven as
    *
@@ -362,7 +379,7 @@ export const Info = {
   provider_name: "KentekenVoertuigenAssen",
   url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_assen/3huj-srit",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/3huj-srit",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_assen
@@ -390,7 +407,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<KentekenVoertuigenAssen_ResponseData> =>
   createQueryWithDataset<KentekenVoertuigenAssen_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
