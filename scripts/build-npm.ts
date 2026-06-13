@@ -29,14 +29,13 @@ await build({
   importMap: "./scripts/dnt-import-map.json",
   declaration: "separate",
   skipSourceOutput: true,
-  // scriptModule: false,
+  scriptModule: false,
   shims: {},
   test: false,
   typeCheck: false,
   compilerOptions: {
-    importHelpers: true,
+    importHelpers: false,
     target: "ES2021",
-    lib: ["ESNext"],
   },
   package: {
     // package.json properties
@@ -44,7 +43,7 @@ await build({
     version: Deno.args[0] || "1.0.0",
     description: "Get RDW data from the RDW Open Data API",
     license: "MIT",
-    publishConfiig: {
+    publishConfig: {
       access: "public",
     },
     keywords: [
