@@ -2,8 +2,6 @@
 //
 // Name: Open Data RDW: Producten Catalogus
 //
-// Deze dataset is op 3 januari 2023 bijgewerkt met de tarieven voor 2023.
-//
 // Category: Product catalogus
 // Link: https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km
 // Permalink: https://opendata.rdw.nl/d/v23s-d6km
@@ -124,7 +122,6 @@ export const Info = {
 
 /**
  * ### Open Data RDW: Producten Catalogus
- * Deze dataset is op 3 januari 2023 bijgewerkt met de tarieven voor 2023.
  *
  * **URL:** https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km
  *

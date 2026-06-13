@@ -114,8 +114,8 @@ These are auto generated providers and use `soda-query@0.4.5`.
 | `KentekenVoertuigenSubcategorieVoertuig` | [Open Data RDW: Gekentekende_voertuigen_subcategorie_voertuig](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_subcategorie/2ba7-embk) | Voertuigen |
 | `KentekenVoertuigenVoertuigklasse` | [Open Data RDW: Gekentekende_voertuigen_voertuigklasse](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_voertuigklas/kmfi-hrps) | Voertuigen |
 | `Keuringen` | [Open Data RDW: Keuringen](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc) | Keuringen |
-| `Locaties` | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5) | Parkeren |
 | `Locaties` | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy) | Parkeren |
+| `Locaties` | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5) | Parkeren |
 | `MeldingenKeuringsinstantie` | [Open Data RDW: Meldingen Keuringsinstantie](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx) | Keuringen |
 | `ParkerenBetaalmethodeGebied` | [Open Data Parkeren: BETAALMETHODE GEBIED](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5) | Parkeren |
 | `ParkerenBetaalmethodeVerkooppunt` | [Open Data Parkeren: BETAALMETHODE VERKOOPPUNT](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx) | Parkeren |
@@ -640,20 +640,21 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Ken
 
 | Name | Field | Readable Name | Type |
 | --- | --- | --- | --- |
-| `ActieRadiusEnkelElektrischStadWltp` | `actie_radius_enkel_elektrisch_stad_wltp` | Actie radius enkel elektrisch stad wltp | Number |
 | `ActieRadiusEnkelElektrischWltp` | `actie_radius_enkel_elektrisch_wltp` | Actie radius enkel elektrisch wltp | Number |
-| `ActieRadiusExternOpladenStadWltp` | `actie_radius_extern_opladen_stad_wltp` | Actie radius extern opladen stad wltp | Number |
 | `ActieRadiusExternOpladenWltp` | `actie_radius_extern_opladen_wltp` | Actie radius extern opladen wltp | Number |
+| `Actieradius` | `actieradius` | Actieradius | Number |
+| `ActieradiusExternOplaadbaar` | `actieradius_extern_oplaadbaar` | Actieradius extern oplaadbaar | Number |
 | `BrandstofOmschrijving` | `brandstof_omschrijving` | Brandstof omschrijving | Text |
 | `BrandstofVerbruikGecombineerdWltp` | `brandstof_verbruik_gecombineerd_wltp` | Brandstof verbruik gecombineerd wltp | Number |
 | `BrandstofVerbruikGewogenGecombineerdWltp` | `brandstof_verbruik_gewogen_gecombineerd_wltp` | Brandstof verbruik gewogen gecombineerd wltp | Number |
 | `BrandstofVolgnummer` | `brandstof_volgnummer` | Brandstof volgnummer | Text |
-| `BrandstofverbruikBuiten` | `brandstofverbruik_buiten` | Brandstofverbruik buiten de stad | Text |
 | `BrandstofverbruikGecombineerd` | `brandstofverbruik_gecombineerd` | Brandstofverbruik gecombineerd | Text |
-| `BrandstofverbruikStad` | `brandstofverbruik_stad` | Brandstofverbruik stad | Text |
+| `BrandstofverbruikGewogenGecombineerd` | `brandstofverbruik_gewogen_gecombineerd` | Brandstofverbruik gewogen gecombineerd | Number |
 | `Co2Emissieklasse` | `co2_emissieklasse` | CO2 emissieklasse | Text |
 | `Co2UitstootGecombineerd` | `co2_uitstoot_gecombineerd` | CO2 uitstoot gecombineerd | Text |
 | `Co2UitstootGewogen` | `co2_uitstoot_gewogen` | CO2 uitstoot gewogen | Text |
+| `ElektriciteitsverbruikGewogenGecombineerd` | `elektriciteitsverbruik_gewogen_gecombineerd` | Elektriciteitsverbruik gewogen gecombineerd | Number |
+| `ElektriciteitsverbruikVolledigElektrisch` | `elektriciteitsverbruik_volledig_elektrisch` | Elektriciteitsverbruik volledig elektrisch | Number |
 | `ElektrischVerbruikEnkelElektrischWltp` | `elektrisch_verbruik_enkel_elektrisch_wltp` | Elektrisch verbruik enkel elektrisch wltp | Number |
 | `ElektrischVerbruikExternOpladenWltp` | `elektrisch_verbruik_extern_opladen_wltp` | Elektrisch verbruik extern opladen wltp | Number |
 | `EmisCo2GewogenGecombineerdWltp` | `emis_co2_gewogen_gecombineerd_wltp` | Emissie co2 gewogen gecombineerd wltp | Number |
@@ -665,14 +666,12 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Ken
 | `Kenteken` | `kenteken` | Kenteken | Text |
 | `KlasseHybrideElektrischVoertuig` | `klasse_hybride_elektrisch_voertuig` | Klasse hybride elektrisch voertuig | Text |
 | `MaxVermogen15Minuten` | `max_vermogen_15_minuten` | Max vermogen 15 minuten | Number |
-| `MaxVermogen60Minuten` | `max_vermogen_60_minuten` | Max vermogen 60 minuten | Number |
 | `MilieuklasseEgGoedkeuringLicht` | `milieuklasse_eg_goedkeuring_licht` | Milieuklasse EG Goedkeuring (licht) | Text |
 | `MilieuklasseEgGoedkeuringZwaar` | `milieuklasse_eg_goedkeuring_zwaar` | Milieuklasse EG Goedkeuring (zwaar) | Text |
 | `NettoMaxVermogenElektrisch` | `netto_max_vermogen_elektrisch` | Netto max vermogen elektrisch | Number |
 | `Nettomaximumvermogen` | `nettomaximumvermogen` | Nettomaximumvermogen | Text |
 | `NominaalContinuMaximumvermogen` | `nominaal_continu_maximumvermogen` | Nominaal continu maximumvermogen | Text |
 | `OpgegevenMaximumSnelheid` | `opgegeven_maximum_snelheid` | Opgegeven maximum snelheid | Number |
-| `Roetuitstoot` | `roetuitstoot` | Roetuitstoot | Text |
 | `ToerentalGeluidsniveau` | `toerental_geluidsniveau` | Toerental geluidsniveau | Text |
 | `Uitlaatemissieniveau` | `uitlaatemissieniveau` | Uitlaatemissieniveau | Text |
 | `UitstootDeeltjesLicht` | `uitstoot_deeltjes_licht` | Uitstoot deeltjes (licht) | Text |
@@ -851,7 +850,7 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Loc
 | `TheGeom` | `the_geom` | the_geom | Point |
 | `UsageId` | `usage_id` | UsageId | Text |
 
-**Link:** https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5
+**Link:** https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy
 </details>
 
 <details><summary>Locaties</summary>
@@ -912,7 +911,7 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Loc
 | `TheGeom` | `the_geom` | the_geom | Point |
 | `UsageId` | `usage_id` | UsageId | Text |
 
-**Link:** https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy
+**Link:** https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5
 </details>
 
 <details><summary>MeldingenKeuringsinstantie</summary>
@@ -1015,7 +1014,6 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Par
 | `Areamanagerid` | `areamanagerid` | AreaManagerId | Number |
 | `Enddatearea` | `enddatearea` | EndDateArea | Number |
 | `Startdatearea` | `startdatearea` | StartDateArea | Number |
-| `Usageid` | `usageid` | UsageId | Text |
 
 **Link:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg
 </details>
@@ -1035,6 +1033,7 @@ Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/Par
 | `Enddatearearegulation` | `enddatearearegulation` | EndDateAreaRegulation | Text |
 | `Regulationid` | `regulationid` | RegulationId | Text |
 | `Startdatearearegulation` | `startdatearearegulation` | StartDateAreaRegulation | Text |
+| `Usageid` | `usageid` | UsageId | Text |
 
 **Link:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED-REGELING/qtex-qwd8
 </details>

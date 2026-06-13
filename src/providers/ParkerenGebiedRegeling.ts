@@ -59,6 +59,14 @@ export interface ParkerenGebiedRegeling_ResponseData {
    * **Type**: Text
    */
   startdatearearegulation?: string;
+  /**
+   * ### UsageId
+   *
+   * Identificatiecode van het gebruiksdoel dat geldt voor een parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
+   *
+   * **Type**: Text
+   */
+  usageid?: string;
 }
 
 /**
@@ -70,6 +78,7 @@ export interface ParkerenGebiedRegeling_ResponseData {
  * | ``Enddatearearegulation`` | ``enddatearearegulation`` | _Text_ |
  * | ``Regulationid`` | ``regulationid`` | _Text_ |
  * | ``Startdatearearegulation`` | ``startdatearearegulation`` | _Text_ |
+ * | ``Usageid`` | ``usageid`` | _Text_ |
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
@@ -124,6 +133,16 @@ export const Fields = {
    * **Database Column Name**: `startdatearearegulation`
    */
   Startdatearearegulation: Field("startdatearearegulation", DataType.Text),
+  /**
+   * ### UsageId
+   *
+   * Identificatiecode van het gebruiksdoel dat geldt voor een parkeergebied of -faciliteit. Gebruiksdoelen kennen een hierarchie.
+   *
+   * **Type**: Text
+   *
+   * **Database Column Name**: `usageid`
+   */
+  Usageid: Field("usageid", DataType.Text),
 };
 
 export const Info = {
@@ -133,6 +152,7 @@ export const Info = {
     "Enddatearearegulation",
     "Regulationid",
     "Startdatearearegulation",
+    "Usageid",
   ],
   dataset: "qtex-qwd8",
   domain: "opendata.rdw.nl",

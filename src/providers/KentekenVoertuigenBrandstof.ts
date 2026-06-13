@@ -18,14 +18,6 @@ import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/sod
  */
 export interface KentekenVoertuigenBrandstof_ResponseData {
   /**
-   * ### Actie radius enkel elektrisch stad wltp
-   *
-   * Actieradius gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.
-   *
-   * **Type**: Number
-   */
-  actie_radius_enkel_elektrisch_stad_wltp?: string;
-  /**
    * ### Actie radius enkel elektrisch wltp
    *
    * Actieradius gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.
@@ -34,14 +26,6 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
    */
   actie_radius_enkel_elektrisch_wltp?: string;
   /**
-   * ### Actie radius extern opladen stad wltp
-   *
-   * Elektrisch verbruik gemeten bij een op een rollenbank rijdend extem oplaadbaar hybride voertuig tijdens een rit volgens de WLTP test onder belasting van een gestandaardiseerde stadsrit.
-   *
-   * **Type**: Number
-   */
-  actie_radius_extern_opladen_stad_wltp?: string;
-  /**
    * ### Actie radius extern opladen wltp
    *
    * Actieradius gemeten bij een op een rollenbank rijdend extem oplaadbaar hybride voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.
@@ -49,6 +33,18 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
    * **Type**: Number
    */
   actie_radius_extern_opladen_wltp?: string;
+  /**
+   * ### Actieradius
+   *
+   * **Type**: Number
+   */
+  actieradius?: string;
+  /**
+   * ### Actieradius extern oplaadbaar
+   *
+   * **Type**: Number
+   */
+  actieradius_extern_oplaadbaar?: string;
   /**
    * ### Brandstof omschrijving
    *
@@ -80,14 +76,6 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
    */
   brandstof_volgnummer?: string;
   /**
-   * ### Brandstofverbruik buiten de stad
-   *
-   * Het brandstofverbruik in l/100 km, tijdens een gestandaardiseerde rit buiten de stad, getest op een rollenbank.
-   *
-   * **Type**: Text
-   */
-  brandstofverbruik_buiten?: string;
-  /**
    * ### Brandstofverbruik gecombineerd
    *
    * Het brandstofverbruik in l/100 km, tijdens een combinatie van gestandaardiseerde stadsrit- en rit buiten de stad, getest op een rollenbank.
@@ -96,13 +84,11 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
    */
   brandstofverbruik_gecombineerd?: string;
   /**
-   * ### Brandstofverbruik stad
+   * ### Brandstofverbruik gewogen gecombineerd
    *
-   * Het brandstofverbruik in l/100 km, tijdens een gestandaardiseerde stadsritcyclus, getest op een rollenbank.
-   *
-   * **Type**: Text
+   * **Type**: Number
    */
-  brandstofverbruik_stad?: string;
+  brandstofverbruik_gewogen_gecombineerd?: string;
   /**
    * ### CO2 emissieklasse
    *
@@ -125,6 +111,18 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
    * **Type**: Text
    */
   co2_uitstoot_gewogen?: string;
+  /**
+   * ### Elektriciteitsverbruik gewogen gecombineerd
+   *
+   * **Type**: Number
+   */
+  elektriciteitsverbruik_gewogen_gecombineerd?: string;
+  /**
+   * ### Elektriciteitsverbruik volledig elektrisch
+   *
+   * **Type**: Number
+   */
+  elektriciteitsverbruik_volledig_elektrisch?: string;
   /**
    * ### Elektrisch verbruik enkel elektrisch wltp
    *
@@ -213,14 +211,6 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
    */
   max_vermogen_15_minuten?: string;
   /**
-   * ### Max vermogen 60 minuten
-   *
-   * Maximumelektrovermogen gemeten over 60 minuten.
-   *
-   * **Type**: Number
-   */
-  max_vermogen_60_minuten?: string;
-  /**
    * ### Milieuklasse EG Goedkeuring (licht)
    *
    * Richtlijnnummer voor emissies van voertuigen waarop het voertuig is getoetst en goedgekeurd.
@@ -267,15 +257,6 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
    */
   opgegeven_maximum_snelheid?: string;
   /**
-   * ### Roetuitstoot
-   *
-   * De mate van vervuiling van de lucht die uit de uitlaat van een voertuig komt tijdens de vrije acceleratietest (roetmeting).
-   * De afname van het doorgelaten licht door het in het uitlaatgas aanwezige roet wordt als k-waarde aangegeven in m-1.
-   *
-   * **Type**: Text
-   */
-  roetuitstoot?: string;
-  /**
    * ### Toerental geluidsniveau
    *
    * Het aantal omwentelingen per minuut van de motor bij de meting van het geluidsniveau van een stilstaand voertuig.
@@ -311,20 +292,21 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
  * Fieldnames for **KentekenVoertuigenBrandstof**
  * | **Fieldname** | **Database Column Name** | **Data Type** |
  * | --------- | -------------------- | --------- |
- * | ``ActieRadiusEnkelElektrischStadWltp`` | ``actie_radius_enkel_elektrisch_stad_wltp`` | _Number_ |
  * | ``ActieRadiusEnkelElektrischWltp`` | ``actie_radius_enkel_elektrisch_wltp`` | _Number_ |
- * | ``ActieRadiusExternOpladenStadWltp`` | ``actie_radius_extern_opladen_stad_wltp`` | _Number_ |
  * | ``ActieRadiusExternOpladenWltp`` | ``actie_radius_extern_opladen_wltp`` | _Number_ |
+ * | ``Actieradius`` | ``actieradius`` | _Number_ |
+ * | ``ActieradiusExternOplaadbaar`` | ``actieradius_extern_oplaadbaar`` | _Number_ |
  * | ``BrandstofOmschrijving`` | ``brandstof_omschrijving`` | _Text_ |
  * | ``BrandstofVerbruikGecombineerdWltp`` | ``brandstof_verbruik_gecombineerd_wltp`` | _Number_ |
  * | ``BrandstofVerbruikGewogenGecombineerdWltp`` | ``brandstof_verbruik_gewogen_gecombineerd_wltp`` | _Number_ |
  * | ``BrandstofVolgnummer`` | ``brandstof_volgnummer`` | _Text_ |
- * | ``BrandstofverbruikBuiten`` | ``brandstofverbruik_buiten`` | _Text_ |
  * | ``BrandstofverbruikGecombineerd`` | ``brandstofverbruik_gecombineerd`` | _Text_ |
- * | ``BrandstofverbruikStad`` | ``brandstofverbruik_stad`` | _Text_ |
+ * | ``BrandstofverbruikGewogenGecombineerd`` | ``brandstofverbruik_gewogen_gecombineerd`` | _Number_ |
  * | ``Co2Emissieklasse`` | ``co2_emissieklasse`` | _Text_ |
  * | ``Co2UitstootGecombineerd`` | ``co2_uitstoot_gecombineerd`` | _Text_ |
  * | ``Co2UitstootGewogen`` | ``co2_uitstoot_gewogen`` | _Text_ |
+ * | ``ElektriciteitsverbruikGewogenGecombineerd`` | ``elektriciteitsverbruik_gewogen_gecombineerd`` | _Number_ |
+ * | ``ElektriciteitsverbruikVolledigElektrisch`` | ``elektriciteitsverbruik_volledig_elektrisch`` | _Number_ |
  * | ``ElektrischVerbruikEnkelElektrischWltp`` | ``elektrisch_verbruik_enkel_elektrisch_wltp`` | _Number_ |
  * | ``ElektrischVerbruikExternOpladenWltp`` | ``elektrisch_verbruik_extern_opladen_wltp`` | _Number_ |
  * | ``EmisCo2GewogenGecombineerdWltp`` | ``emis_co2_gewogen_gecombineerd_wltp`` | _Number_ |
@@ -336,14 +318,12 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
  * | ``Kenteken`` | ``kenteken`` | _Text_ |
  * | ``KlasseHybrideElektrischVoertuig`` | ``klasse_hybride_elektrisch_voertuig`` | _Text_ |
  * | ``MaxVermogen15Minuten`` | ``max_vermogen_15_minuten`` | _Number_ |
- * | ``MaxVermogen60Minuten`` | ``max_vermogen_60_minuten`` | _Number_ |
  * | ``MilieuklasseEgGoedkeuringLicht`` | ``milieuklasse_eg_goedkeuring_licht`` | _Text_ |
  * | ``MilieuklasseEgGoedkeuringZwaar`` | ``milieuklasse_eg_goedkeuring_zwaar`` | _Text_ |
  * | ``NettoMaxVermogenElektrisch`` | ``netto_max_vermogen_elektrisch`` | _Number_ |
  * | ``Nettomaximumvermogen`` | ``nettomaximumvermogen`` | _Text_ |
  * | ``NominaalContinuMaximumvermogen`` | ``nominaal_continu_maximumvermogen`` | _Text_ |
  * | ``OpgegevenMaximumSnelheid`` | ``opgegeven_maximum_snelheid`` | _Number_ |
- * | ``Roetuitstoot`` | ``roetuitstoot`` | _Text_ |
  * | ``ToerentalGeluidsniveau`` | ``toerental_geluidsniveau`` | _Text_ |
  * | ``Uitlaatemissieniveau`` | ``uitlaatemissieniveau`` | _Text_ |
  * | ``UitstootDeeltjesLicht`` | ``uitstoot_deeltjes_licht`` | _Text_ |
@@ -352,19 +332,6 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
 export const Fields = {
-  /**
-   * ### Actie radius enkel elektrisch stad wltp
-   *
-   * Actieradius gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.
-   *
-   * **Type**: Number
-   *
-   * **Database Column Name**: `actie_radius_enkel_elektrisch_stad_wltp`
-   */
-  ActieRadiusEnkelElektrischStadWltp: Field(
-    "actie_radius_enkel_elektrisch_stad_wltp",
-    DataType.Number,
-  ),
   /**
    * ### Actie radius enkel elektrisch wltp
    *
@@ -376,16 +343,6 @@ export const Fields = {
    */
   ActieRadiusEnkelElektrischWltp: Field("actie_radius_enkel_elektrisch_wltp", DataType.Number),
   /**
-   * ### Actie radius extern opladen stad wltp
-   *
-   * Elektrisch verbruik gemeten bij een op een rollenbank rijdend extem oplaadbaar hybride voertuig tijdens een rit volgens de WLTP test onder belasting van een gestandaardiseerde stadsrit.
-   *
-   * **Type**: Number
-   *
-   * **Database Column Name**: `actie_radius_extern_opladen_stad_wltp`
-   */
-  ActieRadiusExternOpladenStadWltp: Field("actie_radius_extern_opladen_stad_wltp", DataType.Number),
-  /**
    * ### Actie radius extern opladen wltp
    *
    * Actieradius gemeten bij een op een rollenbank rijdend extem oplaadbaar hybride voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.
@@ -395,6 +352,22 @@ export const Fields = {
    * **Database Column Name**: `actie_radius_extern_opladen_wltp`
    */
   ActieRadiusExternOpladenWltp: Field("actie_radius_extern_opladen_wltp", DataType.Number),
+  /**
+   * ### Actieradius
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `actieradius`
+   */
+  Actieradius: Field("actieradius", DataType.Number),
+  /**
+   * ### Actieradius extern oplaadbaar
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `actieradius_extern_oplaadbaar`
+   */
+  ActieradiusExternOplaadbaar: Field("actieradius_extern_oplaadbaar", DataType.Number),
   /**
    * ### Brandstof omschrijving
    *
@@ -437,16 +410,6 @@ export const Fields = {
    */
   BrandstofVolgnummer: Field("brandstof_volgnummer", DataType.Text),
   /**
-   * ### Brandstofverbruik buiten de stad
-   *
-   * Het brandstofverbruik in l/100 km, tijdens een gestandaardiseerde rit buiten de stad, getest op een rollenbank.
-   *
-   * **Type**: Text
-   *
-   * **Database Column Name**: `brandstofverbruik_buiten`
-   */
-  BrandstofverbruikBuiten: Field("brandstofverbruik_buiten", DataType.Text),
-  /**
    * ### Brandstofverbruik gecombineerd
    *
    * Het brandstofverbruik in l/100 km, tijdens een combinatie van gestandaardiseerde stadsrit- en rit buiten de stad, getest op een rollenbank.
@@ -457,15 +420,16 @@ export const Fields = {
    */
   BrandstofverbruikGecombineerd: Field("brandstofverbruik_gecombineerd", DataType.Text),
   /**
-   * ### Brandstofverbruik stad
+   * ### Brandstofverbruik gewogen gecombineerd
    *
-   * Het brandstofverbruik in l/100 km, tijdens een gestandaardiseerde stadsritcyclus, getest op een rollenbank.
+   * **Type**: Number
    *
-   * **Type**: Text
-   *
-   * **Database Column Name**: `brandstofverbruik_stad`
+   * **Database Column Name**: `brandstofverbruik_gewogen_gecombineerd`
    */
-  BrandstofverbruikStad: Field("brandstofverbruik_stad", DataType.Text),
+  BrandstofverbruikGewogenGecombineerd: Field(
+    "brandstofverbruik_gewogen_gecombineerd",
+    DataType.Number,
+  ),
   /**
    * ### CO2 emissieklasse
    *
@@ -494,6 +458,28 @@ export const Fields = {
    * **Database Column Name**: `co2_uitstoot_gewogen`
    */
   Co2UitstootGewogen: Field("co2_uitstoot_gewogen", DataType.Text),
+  /**
+   * ### Elektriciteitsverbruik gewogen gecombineerd
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `elektriciteitsverbruik_gewogen_gecombineerd`
+   */
+  ElektriciteitsverbruikGewogenGecombineerd: Field(
+    "elektriciteitsverbruik_gewogen_gecombineerd",
+    DataType.Number,
+  ),
+  /**
+   * ### Elektriciteitsverbruik volledig elektrisch
+   *
+   * **Type**: Number
+   *
+   * **Database Column Name**: `elektriciteitsverbruik_volledig_elektrisch`
+   */
+  ElektriciteitsverbruikVolledigElektrisch: Field(
+    "elektriciteitsverbruik_volledig_elektrisch",
+    DataType.Number,
+  ),
   /**
    * ### Elektrisch verbruik enkel elektrisch wltp
    *
@@ -610,16 +596,6 @@ export const Fields = {
    */
   MaxVermogen15Minuten: Field("max_vermogen_15_minuten", DataType.Number),
   /**
-   * ### Max vermogen 60 minuten
-   *
-   * Maximumelektrovermogen gemeten over 60 minuten.
-   *
-   * **Type**: Number
-   *
-   * **Database Column Name**: `max_vermogen_60_minuten`
-   */
-  MaxVermogen60Minuten: Field("max_vermogen_60_minuten", DataType.Number),
-  /**
    * ### Milieuklasse EG Goedkeuring (licht)
    *
    * Richtlijnnummer voor emissies van voertuigen waarop het voertuig is getoetst en goedgekeurd.
@@ -678,17 +654,6 @@ export const Fields = {
    */
   OpgegevenMaximumSnelheid: Field("opgegeven_maximum_snelheid", DataType.Number),
   /**
-   * ### Roetuitstoot
-   *
-   * De mate van vervuiling van de lucht die uit de uitlaat van een voertuig komt tijdens de vrije acceleratietest (roetmeting).
-   * De afname van het doorgelaten licht door het in het uitlaatgas aanwezige roet wordt als k-waarde aangegeven in m-1.
-   *
-   * **Type**: Text
-   *
-   * **Database Column Name**: `roetuitstoot`
-   */
-  Roetuitstoot: Field("roetuitstoot", DataType.Text),
-  /**
    * ### Toerental geluidsniveau
    *
    * Het aantal omwentelingen per minuut van de motor bij de meting van het geluidsniveau van een stilstaand voertuig.
@@ -730,20 +695,21 @@ export const Fields = {
 
 export const Info = {
   fields: [
-    "ActieRadiusEnkelElektrischStadWltp",
     "ActieRadiusEnkelElektrischWltp",
-    "ActieRadiusExternOpladenStadWltp",
     "ActieRadiusExternOpladenWltp",
+    "Actieradius",
+    "ActieradiusExternOplaadbaar",
     "BrandstofOmschrijving",
     "BrandstofVerbruikGecombineerdWltp",
     "BrandstofVerbruikGewogenGecombineerdWltp",
     "BrandstofVolgnummer",
-    "BrandstofverbruikBuiten",
     "BrandstofverbruikGecombineerd",
-    "BrandstofverbruikStad",
+    "BrandstofverbruikGewogenGecombineerd",
     "Co2Emissieklasse",
     "Co2UitstootGecombineerd",
     "Co2UitstootGewogen",
+    "ElektriciteitsverbruikGewogenGecombineerd",
+    "ElektriciteitsverbruikVolledigElektrisch",
     "ElektrischVerbruikEnkelElektrischWltp",
     "ElektrischVerbruikExternOpladenWltp",
     "EmisCo2GewogenGecombineerdWltp",
@@ -755,14 +721,12 @@ export const Info = {
     "Kenteken",
     "KlasseHybrideElektrischVoertuig",
     "MaxVermogen15Minuten",
-    "MaxVermogen60Minuten",
     "MilieuklasseEgGoedkeuringLicht",
     "MilieuklasseEgGoedkeuringZwaar",
     "NettoMaxVermogenElektrisch",
     "Nettomaximumvermogen",
     "NominaalContinuMaximumvermogen",
     "OpgegevenMaximumSnelheid",
-    "Roetuitstoot",
     "ToerentalGeluidsniveau",
     "Uitlaatemissieniveau",
     "UitstootDeeltjesLicht",
@@ -797,7 +761,7 @@ export const Info = {
  * @example
  * ```ts
  * const data = await RDWQuery()
- *   .where(Where.like(Fields.ActieRadiusEnkelElektrischStadWltp, "some_value")
+ *   .where(Where.like(Fields.ActieRadiusEnkelElektrischWltp, "some_value")
  *   .limit(10)
  *   .offset(0);
  *   .execute();

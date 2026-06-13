@@ -59,14 +59,6 @@ export interface ParkerenGebied_ResponseData {
    * **Type**: Number
    */
   startdatearea?: string;
-  /**
-   * ### UsageId
-   *
-   * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hirarchie.
-   *
-   * **Type**: Text
-   */
-  usageid?: string;
 }
 
 /**
@@ -78,7 +70,6 @@ export interface ParkerenGebied_ResponseData {
  * | ``Areamanagerid`` | ``areamanagerid`` | _Number_ |
  * | ``Enddatearea`` | ``enddatearea`` | _Number_ |
  * | ``Startdatearea`` | ``startdatearea`` | _Number_ |
- * | ``Usageid`` | ``usageid`` | _Text_ |
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
@@ -133,16 +124,6 @@ export const Fields = {
    * **Database Column Name**: `startdatearea`
    */
   Startdatearea: Field("startdatearea", DataType.Number),
-  /**
-   * ### UsageId
-   *
-   * Identificatiecode van het gebruiksdoel dat geldt voor een  parkeergebied of -faciliteit. Gebruiksdoelen kennen een hirarchie.
-   *
-   * **Type**: Text
-   *
-   * **Database Column Name**: `usageid`
-   */
-  Usageid: Field("usageid", DataType.Text),
 };
 
 export const Info = {
@@ -152,7 +133,6 @@ export const Info = {
     "Areamanagerid",
     "Enddatearea",
     "Startdatearea",
-    "Usageid",
   ],
   dataset: "adw6-9hsg",
   domain: "opendata.rdw.nl",
