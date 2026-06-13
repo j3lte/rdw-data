@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Versnelling Uitvoering
@@ -82,7 +82,16 @@ export interface TgkVersnellingUitvoering_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Aantalversnellingenbovengrens: FieldObject<DataType.Text>;
+  Aantalversnellingenondergrens: FieldObject<DataType.Text>;
+  Codetypeversnellingsbak: FieldObject<DataType.Text>;
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevarianttgk: FieldObject<DataType.Text>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Text>;
+  Volgnummerversnelling: FieldObject<DataType.Text>;
+} = {
   /**
    * ### AantalVersnellingenBovengrens
    *
@@ -166,7 +175,7 @@ export const Info = {
   provider_name: "TgkVersnellingUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Versnelling-Uitvoering/7rjk-eycs",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/7rjk-eycs",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Versnelling Uitvoering
@@ -194,7 +203,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkVersnellingUitvoering_ResponseData> =>
   createQueryWithDataset<TgkVersnellingUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

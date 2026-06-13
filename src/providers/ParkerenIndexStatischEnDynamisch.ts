@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data Parkeren: Index Statisch en Dynamisch
@@ -77,7 +77,15 @@ export interface ParkerenIndexStatischEnDynamisch_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  DynamicParkingData: FieldObject<DataType.Checkbox>;
+  Organization: FieldObject<DataType.Text>;
+  OrganizationId: FieldObject<DataType.Number>;
+  StandardStaticParkingData: FieldObject<DataType.Text>;
+  StaticParkingData: FieldObject<DataType.Checkbox>;
+  UrlDynamicParkingData: FieldObject<DataType.Text>;
+  UrlStaticParkingData: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Dynamic parking data
    *
@@ -152,7 +160,7 @@ export const Info = {
   provider_name: "ParkerenIndexStatischEnDynamisch",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-Index-Statisch-en-Dynamisch/f6v7-gjpa",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/f6v7-gjpa",
-};
+} as const;
 
 /**
  * ### Open Data Parkeren: Index Statisch en Dynamisch
@@ -181,7 +189,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<ParkerenIndexStatischEnDynamisch_ResponseData> =>
   createQueryWithDataset<ParkerenIndexStatischEnDynamisch_ResponseData>(
     Info.domain,
     Info.dataset,

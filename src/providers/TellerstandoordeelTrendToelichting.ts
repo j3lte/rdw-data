@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Tellerstandoordeel Trend Toelichting
@@ -46,7 +46,10 @@ export interface TellerstandoordeelTrendToelichting_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  CodeToelichtingTellerstandoordeel: FieldObject<DataType.Text>;
+  ToelichtingTellerstandoordeel: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Code toelichting tellerstandoordeel
    *
@@ -81,7 +84,7 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Tellerstandoordeel-Trend-Toelichting/jqs4-4kvw",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/jqs4-4kvw",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Tellerstandoordeel Trend Toelichting
@@ -110,7 +113,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TellerstandoordeelTrendToelichting_ResponseData> =>
   createQueryWithDataset<TellerstandoordeelTrendToelichting_ResponseData>(
     Info.domain,
     Info.dataset,

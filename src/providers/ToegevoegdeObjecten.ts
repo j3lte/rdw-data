@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Toegevoegde Objecten
@@ -105,7 +105,19 @@ export interface ToegevoegdeObjecten_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  ClassificatieToegevoegdObj: FieldObject<DataType.Text>;
+  Demontagedatum: FieldObject<DataType.Number>;
+  DemontagedatumDt: FieldObject<DataType.FloatingTimestamp>;
+  GasinstallatieTankInhoud: FieldObject<DataType.Number>;
+  Kenteken: FieldObject<DataType.Text>;
+  MerkObjectToegevoegd: FieldObject<DataType.Text>;
+  MerkcodeToegevoegdObject: FieldObject<DataType.Text>;
+  Montagedatum: FieldObject<DataType.Number>;
+  MontagedatumDt: FieldObject<DataType.FloatingTimestamp>;
+  SoortToeTeVoegenObjectOmschrijving: FieldObject<DataType.Text>;
+  UitvoeringsVolgnrToegevObj: FieldObject<DataType.Number>;
+} = {
   /**
    * ### Classificatie toegevoegd obj
    *
@@ -219,7 +231,7 @@ export const Info = {
   provider_name: "ToegevoegdeObjecten",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/sghb-dzxx",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Toegevoegde Objecten
@@ -248,7 +260,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<ToegevoegdeObjecten_ResponseData> =>
   createQueryWithDataset<ToegevoegdeObjecten_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

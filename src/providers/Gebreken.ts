@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Gebreken
@@ -84,7 +84,16 @@ export interface Gebreken_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  EinddatumGebrek: FieldObject<DataType.Number>;
+  EinddatumGebrekDt: FieldObject<DataType.FloatingTimestamp>;
+  GebrekArtikelNummer: FieldObject<DataType.Text>;
+  GebrekIdentificatie: FieldObject<DataType.Text>;
+  GebrekOmschrijving: FieldObject<DataType.Text>;
+  GebrekParagraafNummer: FieldObject<DataType.Number>;
+  IngangsdatumGebrek: FieldObject<DataType.Number>;
+  IngangsdatumGebrekDt: FieldObject<DataType.FloatingTimestamp>;
+} = {
   /**
    * ### Einddatum gebrek
    *
@@ -168,7 +177,7 @@ export const Info = {
   provider_name: "Gebreken",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Gebreken/hx2c-gt7k",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/hx2c-gt7k",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Gebreken
@@ -197,7 +206,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<Gebreken_ResponseData> =>
   createQueryWithDataset<Gebreken_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

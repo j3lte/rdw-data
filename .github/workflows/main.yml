@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Check format
+        run: deno fmt --check
+
+      - name: Check linting
+        run: deno lint
+
+      - name: Type check
+        run: deno check mod.ts
+
+      - name: Verify package (publish dry-run)
+        run: deno publish --dry-run --allow-dirty

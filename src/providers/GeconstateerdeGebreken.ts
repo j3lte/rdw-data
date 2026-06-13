@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Geconstateerde Gebreken
@@ -84,7 +84,16 @@ export interface GeconstateerdeGebreken_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  AantalGebrekenGeconstateerd: FieldObject<DataType.Number>;
+  GebrekIdentificatie: FieldObject<DataType.Text>;
+  Kenteken: FieldObject<DataType.Text>;
+  MeldDatumDoorKeuringsinstantie: FieldObject<DataType.Number>;
+  MeldDatumDoorKeuringsinstantieDt: FieldObject<DataType.FloatingTimestamp>;
+  MeldTijdDoorKeuringsinstantie: FieldObject<DataType.Number>;
+  SoortErkenningKeuringsinstantie: FieldObject<DataType.Text>;
+  SoortErkenningOmschrijving: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Aantal gebreken geconstateerd
    *
@@ -171,7 +180,7 @@ export const Info = {
   provider_name: "GeconstateerdeGebreken",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/a34c-vvps",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Geconstateerde Gebreken
@@ -200,7 +209,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<GeconstateerdeGebreken_ResponseData> =>
   createQueryWithDataset<GeconstateerdeGebreken_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

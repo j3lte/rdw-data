@@ -15,8 +15,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@<%= it.item.sodaVersion %>/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for <%= it.item.full_name %>
@@ -43,7 +43,9 @@ export interface <%= it.item.name %>_ResponseData {<% it.item.columns.forEach(fu
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {<% it.item.columns.forEach(function(column) { %>
+export const Fields: {<% it.item.columns.forEach(function(column) { %>
+  <%= column.big_name %>: FieldObject<<%= column.datatypeTemplate %>>;<% }); %>
+} = {<% it.item.columns.forEach(function(column) { %>
   /**
   * ### <%= column.name %>
   *
@@ -67,7 +69,7 @@ export const Info = {
   provider_name: "<%= it.item.name %>",
   url: "<%= it.item.link %>",
   api_docs: "https://dev.socrata.com/foundry/<%= it.item.domain %>/<%= it.item.id %>",
-}
+} as const;
 
 /**
  * ### <%= it.item.full_name %><% it.item.description.forEach(function(line) { %>
@@ -96,7 +98,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<<%= it.item.name %>_ResponseData> =>
   createQueryWithDataset<<%= it.item.name %>_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

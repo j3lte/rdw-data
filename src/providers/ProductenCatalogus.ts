@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Producten Catalogus
@@ -61,7 +61,13 @@ export interface ProductenCatalogus_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Eenheid: FieldObject<DataType.Text>;
+  Omschrijving: FieldObject<DataType.Text>;
+  StaatscourantIndeling: FieldObject<DataType.Text>;
+  Tarief: FieldObject<DataType.Text>;
+  Tariefclustering: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Eenheid
    *
@@ -118,7 +124,7 @@ export const Info = {
   provider_name: "ProductenCatalogus",
   url: "https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/v23s-d6km",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Producten Catalogus
@@ -146,7 +152,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<ProductenCatalogus_ResponseData> =>
   createQueryWithDataset<ProductenCatalogus_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

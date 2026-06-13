@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_rupsbanden
@@ -75,7 +75,15 @@ export interface KentekenVoertuigenRupsbanden_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  AangedrevenRupsbandIndicator: FieldObject<DataType.Text>;
+  GeremdeRupsbandIndicator: FieldObject<DataType.Text>;
+  Kenteken: FieldObject<DataType.Text>;
+  RupsbandSetVolgnr: FieldObject<DataType.Number>;
+  TechnischToelaatbaarMaximum: FieldObject<DataType.Number>;
+  TechnischToelaatbaarMaximum1: FieldObject<DataType.Number>;
+  TechnischToelaatbaarMaximum2: FieldObject<DataType.Number>;
+} = {
   /**
    * ### Aangedreven rupsband indicator
    *
@@ -151,7 +159,7 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_rupsbanden/3xwf-ince",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/3xwf-ince",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_rupsbanden
@@ -179,7 +187,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<KentekenVoertuigenRupsbanden_ResponseData> =>
   createQueryWithDataset<KentekenVoertuigenRupsbanden_ResponseData>(
     Info.domain,
     Info.dataset,

@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Energiebron Uitvoering
@@ -600,7 +600,90 @@ export interface TgkEnergiebronUitvoering_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Actieradiusexternoplaadwltpbgr: FieldObject<DataType.Text>;
+  Actieradiusexternoplaadwltpogr: FieldObject<DataType.Text>;
+  Actieradiusvolledigelekwltpbgr: FieldObject<DataType.Text>;
+  Actieradiusvolledigelekwltpogr: FieldObject<DataType.Text>;
+  Brandstofverbruikgecombwltpbgr: FieldObject<DataType.Text>;
+  Brandstofverbruikgecombwltpogr: FieldObject<DataType.Text>;
+  Brandstverbrgewogencombwltpbgr: FieldObject<DataType.Text>;
+  Brandstverbrgewogencombwltpogr: FieldObject<DataType.Text>;
+  Co2emisgecombineerdnedchoog: FieldObject<DataType.Text>;
+  Co2emisgecombineerdnedclaag: FieldObject<DataType.Text>;
+  Co2emisgecombineerdwltpbgr: FieldObject<DataType.Text>;
+  Co2emisgecombineerdwltpogr: FieldObject<DataType.Text>;
+  Co2emisgewgecombnedchoog: FieldObject<DataType.Text>;
+  Co2emisgewgecombnedclaag: FieldObject<DataType.Text>;
+  Co2emisgewogengecombwltpbgr: FieldObject<DataType.Text>;
+  Co2emisgewogengecombwltpogr: FieldObject<DataType.Text>;
+  Co2emissiebuitennedchoog: FieldObject<DataType.Text>;
+  Co2emissiebuitennedclaag: FieldObject<DataType.Text>;
+  Co2emissiestadnedchoog: FieldObject<DataType.Text>;
+  Co2emissiestadnedclaag: FieldObject<DataType.Text>;
+  Codeenergiebron: FieldObject<DataType.Text>;
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevarianttgk: FieldObject<DataType.Text>;
+  Coemissieesc: FieldObject<DataType.Text>;
+  Coemissieetc: FieldObject<DataType.Text>;
+  Coemissietype1: FieldObject<DataType.Text>;
+  Coemissietype1wltp: FieldObject<DataType.Text>;
+  Coemissiewhsc: FieldObject<DataType.Text>;
+  Coemissiewhtc: FieldObject<DataType.Text>;
+  Elekactieradiusextoplaadbnedc: FieldObject<DataType.Text>;
+  Elektrischeactieradiusnedc: FieldObject<DataType.Text>;
+  Elekverbrexternoplaadbwltpbgr: FieldObject<DataType.Text>;
+  Elekverbrexternoplaadbwltpogr: FieldObject<DataType.Text>;
+  Elekverbruikgecombineerdnedc: FieldObject<DataType.Text>;
+  Elekverbruikgewgecombverbrnedc: FieldObject<DataType.Text>;
+  Emissieaantaldeeltjesesc: FieldObject<DataType.Text>;
+  Emissieaantaldeeltjesetc: FieldObject<DataType.Text>;
+  Emissieaantaldeeltjestype1: FieldObject<DataType.Text>;
+  Emissieaantaldeeltjestype1wltp: FieldObject<DataType.Text>;
+  Emissieaantaldeeltjeswhsc: FieldObject<DataType.Text>;
+  Emissieaantaldeeltjeswhtc: FieldObject<DataType.Text>;
+  Emissiedeeltjesesc: FieldObject<DataType.Text>;
+  Emissiedeeltjesetc: FieldObject<DataType.Text>;
+  Emissiedeeltjestype1: FieldObject<DataType.Text>;
+  Emissiedeeltjestype1wltp: FieldObject<DataType.Text>;
+  Emissiedeeltjeswhsc: FieldObject<DataType.Text>;
+  Emissiedeeltjeswhtc: FieldObject<DataType.Text>;
+  Geluidsniveaubovengrens: FieldObject<DataType.Text>;
+  Geluidsniveauondergrens: FieldObject<DataType.Text>;
+  Geluidsniveaurijdend: FieldObject<DataType.Text>;
+  Geluidsniveautoerentalbgr: FieldObject<DataType.Text>;
+  Geluidsniveautoerentalogr: FieldObject<DataType.Text>;
+  Hcemissietype1: FieldObject<DataType.Text>;
+  Hcnoxemissietype1: FieldObject<DataType.Text>;
+  Maxbiopercentagebrandstof: FieldObject<DataType.Text>;
+  Maximumconstructiesnelheidbgr: FieldObject<DataType.Text>;
+  Maximumconstructiesnelheidogr: FieldObject<DataType.Text>;
+  Maximumnettovermogenbgr: FieldObject<DataType.Text>;
+  Maximumnettovermogenogr: FieldObject<DataType.Text>;
+  Maximumvermogen30minbgr: FieldObject<DataType.Text>;
+  Maximumvermogen30minogr: FieldObject<DataType.Text>;
+  Noxemissieesc: FieldObject<DataType.Text>;
+  Noxemissieetc: FieldObject<DataType.Text>;
+  Noxemissietype1: FieldObject<DataType.Text>;
+  Noxemissietype1wltp: FieldObject<DataType.Text>;
+  Noxemissiewhsc: FieldObject<DataType.Text>;
+  Noxemissiewhtc: FieldObject<DataType.Text>;
+  Regelgevingemissiemotoren: FieldObject<DataType.Text>;
+  Regelgevingemissievoertuigen: FieldObject<DataType.Text>;
+  Toerentalmaxnettovermogenbgr: FieldObject<DataType.Text>;
+  Toerentalmaxnettovermogenogr: FieldObject<DataType.Text>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Uitlaatemissieniveau: FieldObject<DataType.Text>;
+  Verbrgewogengecombnedchoog: FieldObject<DataType.Text>;
+  Verbrgewogengecombnedclaag: FieldObject<DataType.Text>;
+  Verbruikgecombineerdnedchoog: FieldObject<DataType.Text>;
+  Verbruikgecombineerdnedclaag: FieldObject<DataType.Text>;
+  Verbruikvolledigelekwltpbgr: FieldObject<DataType.Text>;
+  Verbruikvolledigelekwltpogr: FieldObject<DataType.Text>;
+  Volgnummeraandrijving: FieldObject<DataType.Number>;
+  Volgnummerenergiebron: FieldObject<DataType.Text>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Number>;
+} = {
   /**
    * ### ActieradiusExternOplaadWltpBgr
    *
@@ -1350,7 +1433,7 @@ export const Info = {
   provider_name: "TgkEnergiebronUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Energiebron-Uitvoering/gr7t-qfnb",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/gr7t-qfnb",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Energiebron Uitvoering
@@ -1378,7 +1461,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkEnergiebronUitvoering_ResponseData> =>
   createQueryWithDataset<TgkEnergiebronUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

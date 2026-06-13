@@ -1,20 +1,8 @@
-import { render } from "https://deno.land/x/eta@v1.14.2/mod.ts";
-import { emptyDir } from "https://deno.land/x/dnt@0.34.0/mod.ts";
+import { render } from "eta";
+import { emptyDir } from "@deno/dnt";
 
-import { DataResult, ResponseData, WithSodaVersion } from "./util/interfaces.ts";
+import type { DataResult, ResponseData, WithSodaVersion } from "./util/interfaces.ts";
 import { fixTitle, mapColumns, updateText } from "./util/mod.ts";
-
-const runCmd = async (cmd: string[]) => {
-  const cmdFirst = cmd.shift() as string;
-  const p = new Deno.Command(cmdFirst, { stdout: "piped", stderr: "piped", args: cmd });
-  const { code, stdout, stderr } = await p.output();
-
-  return {
-    output: new TextDecoder().decode(stdout),
-    error: new TextDecoder().decode(stderr),
-    code,
-  };
-};
 
 const thisDir = new URL(".", import.meta.url).pathname;
 const url =
@@ -82,30 +70,22 @@ const renderAndWrite = async (template: string, item: WithSodaVersion) => {
   return Deno.writeTextFile(`${outputFolder}/${item.name}.ts`, rendered);
 };
 
-export const getLatestVersion = async () => {
-  const mod = "https://deno.land/x/soda/mod.ts";
-  const { output, code } = await runCmd([
-    "deno",
-    "info",
-    mod,
-    "--json",
-    "--quiet",
-    "--reload",
-  ]);
-  if (code !== 0) {
-    console.log("Error fetching latest version");
+// soda is pinned via the import map in deno.json (jsr:@j3lte/soda@^x.y.z).
+// Derive the version from there so the generator, README and npm build all
+// stay in sync with the single source of truth.
+export const getLatestVersion = async (): Promise<string | null> => {
+  const denoJsonPath = new URL("../deno.json", import.meta.url);
+  const denoJson = JSON.parse(await Deno.readTextFile(denoJsonPath)) as {
+    imports?: Record<string, string>;
+  };
+  const spec = denoJson.imports?.soda ?? "";
+  const version = spec.match(/(\d+\.\d+\.\d+)/)?.[1] ?? null;
+  if (!version) {
+    console.error("Could not determine soda version from deno.json imports");
     return null;
   }
-  const info = JSON.parse(output) as {
-    redirects?: Record<string, string>;
-  };
-  if (info.redirects?.[mod]) {
-    const version = info.redirects[mod].split("@")[1].replace("/mod.ts", "");
-    console.log(`Latest SodaQuery version: ${version}`);
-    return version;
-  }
-  console.error("Error fetching latest version");
-  return null;
+  console.log(`SodaQuery version (from deno.json): ${version}`);
+  return version;
 };
 
 const updateReadme = async (data: DataResult[], sodaVersion: string): Promise<void> => {
@@ -130,7 +110,7 @@ const updateReadme = async (data: DataResult[], sodaVersion: string): Promise<vo
 
 ### API
 
-Documentation can be found [here](https://deno.land/x/rdw_data/src/providers/${item.name}.ts)
+Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/${item.name})
 
 ### Fields
 
@@ -170,7 +150,20 @@ const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
     console.log("Error fetching latest version, aborting");
     return;
   }
-  const resultData = (await getData(url)).sort((a, b) => a.name.localeCompare(b.name));
+  // Dedupe by provider name: distinct datasets can collapse to the same name
+  // via fixTitle(). Without this, one provider file is written but mod.ts gets
+  // duplicate `export { Name }` lines (TS2300 duplicate identifier).
+  const seenNames = new Set<string>();
+  const resultData = (await getData(url))
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .filter((item) => {
+      if (seenNames.has(item.name)) {
+        console.warn(`Skipping duplicate provider name: ${item.name}`);
+        return false;
+      }
+      seenNames.add(item.name);
+      return true;
+    });
   const providerTemplate = await Deno.readTextFile(`${thisDir}/templates/provider.ts.ejs`);
   const modTemplate = await Deno.readTextFile(`${thisDir}/templates/mod.ts.ejs`);
 
@@ -233,4 +226,9 @@ const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
   );
 };
 
-run();
+// Only fetch + regenerate when run directly (e.g. `deno task fetch`).
+// build-npm.ts imports getLatestVersion from this module and must NOT trigger
+// a network refetch / provider regeneration as a side effect of importing.
+if (import.meta.main) {
+  run();
+}

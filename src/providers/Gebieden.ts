@@ -3,15 +3,15 @@
 // Name: Gebieden
 //
 // Category: Parkeren
-// Link: https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
-// Permalink: https://opendata.rdw.nl/d/b2fs-9ymw
+// Link: https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
+// Permalink: https://opendata.rdw.nl/d/u3zx-f5hd
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Gebieden
@@ -348,7 +348,54 @@ export interface Gebieden_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  N01Naam: FieldObject<DataType.Text>;
+  N02Code: FieldObject<DataType.Text>;
+  N03Url: FieldObject<DataType.Text>;
+  N04Uuid: FieldObject<DataType.Text>;
+  N05Gebcode: FieldObject<DataType.Text>;
+  N06Geboms: FieldObject<DataType.Text>;
+  N07Regcode: FieldObject<DataType.Text>;
+  N08Regoms: FieldObject<DataType.Text>;
+  N09Prijs: FieldObject<DataType.Text>;
+  N10SrtReg: FieldObject<DataType.Text>;
+  N11Ma: FieldObject<DataType.Text>;
+  N12Di: FieldObject<DataType.Text>;
+  N13Wo: FieldObject<DataType.Text>;
+  N14Do: FieldObject<DataType.Text>;
+  N15Vr: FieldObject<DataType.Text>;
+  N16Za: FieldObject<DataType.Text>;
+  N17Zo: FieldObject<DataType.Text>;
+  N18Maximum: FieldObject<DataType.Text>;
+  N19ParkPl: FieldObject<DataType.Text>;
+  N20Oplaadp: FieldObject<DataType.Text>;
+  N21Rolst: FieldObject<DataType.Text>;
+  N22Hoogte: FieldObject<DataType.Text>;
+  N23VoetgI: FieldObject<DataType.Text>;
+  N24VoetgU: FieldObject<DataType.Text>;
+  N25VrtgI: FieldObject<DataType.Text>;
+  N26VrtgU: FieldObject<DataType.Text>;
+  N27UitInd: FieldObject<DataType.Text>;
+  N28Jaarope: FieldObject<DataType.Text>;
+  N29Betaal: FieldObject<DataType.Text>;
+  N30Naam: FieldObject<DataType.Text>;
+  N31Functie: FieldObject<DataType.Text>;
+  N32Tel: FieldObject<DataType.Text>;
+  N33EMail: FieldObject<DataType.Text>;
+  N34Open: FieldObject<DataType.Text>;
+  N35Vrij: FieldObject<DataType.Text>;
+  N36Vrijopl: FieldObject<DataType.Text>;
+  N37Vol: FieldObject<DataType.Text>;
+  Issues: FieldObject<DataType.Text>;
+  Issues00: FieldObject<DataType.Text>;
+  Issues01: FieldObject<DataType.Text>;
+  Issues02: FieldObject<DataType.Text>;
+  ActueleInf: FieldObject<DataType.Text>;
+  LocationRe: FieldObject<DataType.Text>;
+  SocrataId: FieldObject<DataType.Text>;
+  TheGeom: FieldObject<DataType.MultiPolygon>;
+  UsageId: FieldObject<DataType.Text>;
+} = {
   /**
    * ### 01_NAAM
    *
@@ -768,22 +815,22 @@ export const Info = {
     "TheGeom",
     "UsageId",
   ],
-  dataset: "b2fs-9ymw",
+  dataset: "u3zx-f5hd",
   domain: "opendata.rdw.nl",
   full_name: "Gebieden",
   provider_name: "Gebieden",
-  url: "https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw",
-  api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/b2fs-9ymw",
-};
+  url: "https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd",
+  api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/u3zx-f5hd",
+} as const;
 
 /**
  * ### Gebieden
  *
- * **URL:** https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
+ * **URL:** https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
  *
- * **API DOCS:** https://dev.socrata.com/foundry/opendata.rdw.nl/b2fs-9ymw
+ * **API DOCS:** https://dev.socrata.com/foundry/opendata.rdw.nl/u3zx-f5hd
  *
- * **Dataset ID:** b2fs-9ymw
+ * **Dataset ID:** u3zx-f5hd
  *
  * **Category:** Parkeren
  *
@@ -802,7 +849,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<Gebieden_ResponseData> =>
   createQueryWithDataset<Gebieden_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

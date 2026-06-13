@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Brandstoffen_op_PC4
@@ -61,7 +61,13 @@ export interface BrandstoffenOpPc4_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Aantal: FieldObject<DataType.Number>;
+  Brandstof: FieldObject<DataType.Text>;
+  ExternOplaadbaar: FieldObject<DataType.Text>;
+  Postcode: FieldObject<DataType.Number>;
+  Voertuigsoort: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Aantal
    *
@@ -118,7 +124,7 @@ export const Info = {
   provider_name: "BrandstoffenOpPc4",
   url: "https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/8wbe-pu7d",
-};
+} as const;
 
 /**
  * ### Brandstoffen_op_PC4
@@ -146,7 +152,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<BrandstoffenOpPc4_ResponseData> =>
   createQueryWithDataset<BrandstoffenOpPc4_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

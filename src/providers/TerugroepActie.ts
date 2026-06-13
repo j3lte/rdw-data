@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Terugroep_actie
@@ -237,7 +237,35 @@ export interface TerugroepActie_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  ApiTerugroepActieRisico: FieldObject<DataType.Text>;
+  ApiTerugroepActieStatus: FieldObject<DataType.Text>;
+  ApiTerugroepInfomerenEigenaar: FieldObject<DataType.Text>;
+  ApiTerugroepVoertuigMerkType: FieldObject<DataType.Text>;
+  BeschrijvingVanHetHerstel: FieldObject<DataType.Text>;
+  CategorieDefect: FieldObject<DataType.Text>;
+  DatumAankondigingProducent: FieldObject<DataType.Number>;
+  DatumAankondigingProducentDt: FieldObject<DataType.FloatingTimestamp>;
+  DatumEigenarenGeNformeerd: FieldObject<DataType.Number>;
+  DatumEigenarenGeNformeerdDt: FieldObject<DataType.FloatingTimestamp>;
+  DatumInformerenEigenaar: FieldObject<DataType.Number>;
+  DatumInformerenEigenaarDt: FieldObject<DataType.FloatingTimestamp>;
+  DatumMeldingBijRdw: FieldObject<DataType.Number>;
+  DatumMeldingBijRdwDt: FieldObject<DataType.FloatingTimestamp>;
+  MateriLeGevolgen: FieldObject<DataType.Text>;
+  MeerInformatieOpInternet: FieldObject<DataType.Text>;
+  MeerInformatieViaTelefoonnummer: FieldObject<DataType.Text>;
+  MeldendeProducentDistributeur: FieldObject<DataType.Text>;
+  NationaalOpgegevenAantalVoertuigenTerugroepactie: FieldObject<DataType.Number>;
+  OmschrijvingDefect: FieldObject<DataType.Text>;
+  OpmerkingenRdw: FieldObject<DataType.Text>;
+  PublicatiedatumRdw: FieldObject<DataType.Number>;
+  PublicatiedatumRdwDt: FieldObject<DataType.FloatingTimestamp>;
+  ReferentiecodeProducent: FieldObject<DataType.Text>;
+  ReferentiecodeRdw: FieldObject<DataType.Text>;
+  RisicobeoordelingRdw: FieldObject<DataType.Text>;
+  TotaalAantalVoertuigenTerugroepactie: FieldObject<DataType.Number>;
+} = {
   /**
    * ### API Terugroep_actie_risico
    *
@@ -523,7 +551,7 @@ export const Info = {
   provider_name: "TerugroepActie",
   url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie/j9yg-7rg9",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/j9yg-7rg9",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Terugroep_actie
@@ -551,7 +579,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TerugroepActie_ResponseData> =>
   createQueryWithDataset<TerugroepActie_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

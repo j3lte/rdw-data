@@ -1,4 +1,4 @@
-name: Build NPM package (On Release)
+name: Publish (on release)
 
 on:
   release:
@@ -6,29 +6,46 @@ on:
       - published
 
 jobs:
-  release:
-    name: Build NPM package (On Release)
+  publish:
+    name: Publish to JSR + NPM
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # OIDC for JSR + npm trusted publishing
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.release.tag_name }}
 
       - name: Setup Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: 18.x
-          registry-url: 'https://registry.npmjs.org'
+          node-version: 22.x
+          registry-url: "https://registry.npmjs.org"
 
-      - name: Run Deno dnt
-        run: deno task npm ${{ github.ref_name }}
+      - name: Upgrade npm (trusted publishing requires >= 11.5.1)
+        run: npm install -g npm@latest
 
-      - name: Check Version
-        run: cat ./npm/package.json | jq .version
+      - name: Set version in deno.json
+        run: deno task set-version ${{ github.event.release.tag_name }}
 
+      - name: Verify package (publish dry-run)
+        run: deno publish --dry-run --allow-dirty
+
+      # Trusted publishing (OIDC): no token, uses the job's id-token: write
+      # permission.
+      - name: Publish to JSR
+        run: deno publish --allow-dirty
+
+      - name: Build NPM package
+        run: deno task npm ${{ github.event.release.tag_name }}
+
+      # Trusted publishing (OIDC): npm attaches provenance automatically.
       - name: Publish to NPM
-        run: cd ./npm && yarn publish --verbose --access public --new-version ${{ github.ref_name }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
+        run: cd ./npm && npm publish --access public

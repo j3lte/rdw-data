@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen
@@ -712,7 +712,106 @@ export interface KentekenVoertuigen_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  AanhangwagenAutonoomGeremd: FieldObject<DataType.Number>;
+  AanhangwagenMiddenasGeremd: FieldObject<DataType.Number>;
+  AantalCilinders: FieldObject<DataType.Number>;
+  AantalDeuren: FieldObject<DataType.Number>;
+  AantalPassagiersZitplaatsenWettelijk: FieldObject<DataType.Number>;
+  AantalRolstoelplaatsen: FieldObject<DataType.Number>;
+  AantalStaanplaatsen: FieldObject<DataType.Number>;
+  AantalWielen: FieldObject<DataType.Number>;
+  AantalZitplaatsen: FieldObject<DataType.Number>;
+  Aanwijzingsnummer: FieldObject<DataType.Text>;
+  AerodynVoorz: FieldObject<DataType.Text>;
+  AfstandHartKoppelingTotAchterzijdeVoertuig: FieldObject<DataType.Number>;
+  AfstandVoorzijdeVoertuigTotHartKoppeling: FieldObject<DataType.Number>;
+  AfwijkendeMaximumSnelheid: FieldObject<DataType.Number>;
+  ApiGekentekendeVoertuigenAssen: FieldObject<DataType.Text>;
+  ApiGekentekendeVoertuigenBrandstof: FieldObject<DataType.Text>;
+  ApiGekentekendeVoertuigenCarrosserie: FieldObject<DataType.Text>;
+  ApiGekentekendeVoertuigenCarrosserieSpecifiek: FieldObject<DataType.Text>;
+  ApiGekentekendeVoertuigenVoertuigklasse: FieldObject<DataType.Text>;
+  Breedte: FieldObject<DataType.Number>;
+  BreedteVoertuigMaximum: FieldObject<DataType.Number>;
+  BreedteVoertuigMinimum: FieldObject<DataType.Number>;
+  BrutoBpm: FieldObject<DataType.Number>;
+  Catalogusprijs: FieldObject<DataType.Number>;
+  Cilinderinhoud: FieldObject<DataType.Number>;
+  CodeToelichtingTellerstandoordeel: FieldObject<DataType.Text>;
+  DatumEersteTenaamstellingInNederland: FieldObject<DataType.Number>;
+  DatumEersteTenaamstellingInNederlandDt: FieldObject<DataType.FloatingTimestamp>;
+  DatumEersteToelating: FieldObject<DataType.Number>;
+  DatumEersteToelatingDt: FieldObject<DataType.FloatingTimestamp>;
+  DatumTenaamstelling: FieldObject<DataType.Number>;
+  DatumTenaamstellingDt: FieldObject<DataType.FloatingTimestamp>;
+  EersteKleur: FieldObject<DataType.Text>;
+  EuropeseUitvoeringcategorieToevoeging: FieldObject<DataType.Text>;
+  EuropeseVoertuigcategorie: FieldObject<DataType.Text>;
+  EuropeseVoertuigcategorieToevoeging: FieldObject<DataType.Text>;
+  ExportIndicator: FieldObject<DataType.Text>;
+  GemLadingWrde: FieldObject<DataType.Number>;
+  Handelsbenaming: FieldObject<DataType.Text>;
+  HoogteVoertuig: FieldObject<DataType.Number>;
+  HoogteVoertuigMaximum: FieldObject<DataType.Number>;
+  HoogteVoertuigMinimum: FieldObject<DataType.Number>;
+  Inrichting: FieldObject<DataType.Text>;
+  JaarLaatsteRegistratieTellerstand: FieldObject<DataType.Number>;
+  Kenteken: FieldObject<DataType.Text>;
+  Laadvermogen: FieldObject<DataType.Number>;
+  Lengte: FieldObject<DataType.Number>;
+  LengteVoertuigMaximum: FieldObject<DataType.Number>;
+  LengteVoertuigMinimum: FieldObject<DataType.Number>;
+  MassaAltAandr: FieldObject<DataType.Number>;
+  MassaBedrijfsklaarMaximaal: FieldObject<DataType.Number>;
+  MassaBedrijfsklaarMinimaal: FieldObject<DataType.Number>;
+  MassaLedigVoertuig: FieldObject<DataType.Number>;
+  MassaRijklaar: FieldObject<DataType.Number>;
+  MaximaleConstructiesnelheid: FieldObject<DataType.Number>;
+  MaximumLastOnderDeVoorasSenTezamenKoppeling: FieldObject<DataType.Number>;
+  MaximumMassaSamenstelling: FieldObject<DataType.Number>;
+  MaximumMassaTechnischMaximaal: FieldObject<DataType.Number>;
+  MaximumMassaTechnischMinimaal: FieldObject<DataType.Number>;
+  MaximumMassaTrekkenOngeremd: FieldObject<DataType.Number>;
+  MaximumOndersteunendeSnelheid: FieldObject<DataType.Number>;
+  MaximumTrekkenMassaGeremd: FieldObject<DataType.Number>;
+  Merk: FieldObject<DataType.Text>;
+  OpenstaandeTerugroepactieIndicator: FieldObject<DataType.Text>;
+  OpleggerGeremd: FieldObject<DataType.Number>;
+  PlaatsChassisnummer: FieldObject<DataType.Text>;
+  RegistratieDatumGoedkeuringAfschrijvingsmomentBpm: FieldObject<DataType.Number>;
+  RegistratieDatumGoedkeuringAfschrijvingsmomentBpmDt: FieldObject<DataType.FloatingTimestamp>;
+  Rupsonderstelconfiguratiecode: FieldObject<DataType.Text>;
+  SubcategorieNederland: FieldObject<DataType.Text>;
+  TaxiIndicator: FieldObject<DataType.Text>;
+  TechnischToelaatbaarMassaKoppelpunt: FieldObject<DataType.Number>;
+  TechnischeMaxMassaVoertuig: FieldObject<DataType.Number>;
+  Tellerstandoordeel: FieldObject<DataType.Text>;
+  TenaamstellenMogelijk: FieldObject<DataType.Text>;
+  ToegestaneMaximumMassaVoertuig: FieldObject<DataType.Number>;
+  TweedeKleur: FieldObject<DataType.Text>;
+  Type: FieldObject<DataType.Text>;
+  TypeGasinstallatie: FieldObject<DataType.Text>;
+  TypeRemsysteemVoertuigCode: FieldObject<DataType.Text>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Uitvoering: FieldObject<DataType.Text>;
+  Variant: FieldObject<DataType.Text>;
+  VerlCabInd: FieldObject<DataType.Text>;
+  VermogenMassarijklaar: FieldObject<DataType.Number>;
+  VerticaleBelastingKoppelpuntGetrokkenVoertuig: FieldObject<DataType.Number>;
+  VervaldatumApk: FieldObject<DataType.Number>;
+  VervaldatumApkDt: FieldObject<DataType.FloatingTimestamp>;
+  VervaldatumTachograaf: FieldObject<DataType.Number>;
+  VervaldatumTachograafDt: FieldObject<DataType.FloatingTimestamp>;
+  Voertuigsoort: FieldObject<DataType.Text>;
+  VolgnummerWijzigingEuTypegoedkeuring: FieldObject<DataType.Number>;
+  WachtOpKeuren: FieldObject<DataType.Text>;
+  WamVerzekerd: FieldObject<DataType.Text>;
+  Wielbasis: FieldObject<DataType.Number>;
+  WielbasisVoertuigMaximum: FieldObject<DataType.Number>;
+  WielbasisVoertuigMinimum: FieldObject<DataType.Number>;
+  Zuinigheidsclassificatie: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Aanhangwagen autonoom geremd
    *
@@ -1654,7 +1753,7 @@ export const Info = {
   provider_name: "KentekenVoertuigen",
   url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/m9d7-ebf2",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen
@@ -1682,7 +1781,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<KentekenVoertuigen_ResponseData> =>
   createQueryWithDataset<KentekenVoertuigen_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

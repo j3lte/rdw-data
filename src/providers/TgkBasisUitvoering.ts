@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Basis Uitvoering
@@ -362,7 +362,56 @@ export interface TgkBasisUitvoering_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Aantaldeurenbovengrens: FieldObject<DataType.Number>;
+  Aantaldeurenondergrens: FieldObject<DataType.Number>;
+  Aantalpassagiersbovengrens: FieldObject<DataType.Number>;
+  Aantalpassagiersondergrens: FieldObject<DataType.Number>;
+  Aantalrolstoelplaatsenbgr: FieldObject<DataType.Number>;
+  Aantalrolstoelplaatsenogr: FieldObject<DataType.Number>;
+  Aantalwielen: FieldObject<DataType.Number>;
+  Aantalzitplaatsenbovengrens: FieldObject<DataType.Number>;
+  Aantalzitplaatsenondergrens: FieldObject<DataType.Number>;
+  Aantalzitplaatsenpassagiersbgr: FieldObject<DataType.Number>;
+  Aantalzitplaatsenpassagiersogr: FieldObject<DataType.Number>;
+  Aantalzitplaatsenstilstaandbgr: FieldObject<DataType.Number>;
+  Aantalzitplaatsenstilstaandogr: FieldObject<DataType.Number>;
+  Begindatumrevisieuitvoering: FieldObject<DataType.Text>;
+  Breedtebovengrens: FieldObject<DataType.Number>;
+  Breedteondergrens: FieldObject<DataType.Number>;
+  Codelinksrechtsrijdend: FieldObject<DataType.Text>;
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevarianttgk: FieldObject<DataType.Text>;
+  Einddatumrevisieuitvoering: FieldObject<DataType.Text>;
+  Hoogtebovengrens: FieldObject<DataType.Number>;
+  Hoogteondergrens: FieldObject<DataType.Number>;
+  Lengtebovengrens: FieldObject<DataType.Number>;
+  Lengteondergrens: FieldObject<DataType.Number>;
+  Massaledigbovengrens: FieldObject<DataType.Number>;
+  Massaledigondergrens: FieldObject<DataType.Number>;
+  Massarijklaarbovengrens: FieldObject<DataType.Number>;
+  Massarijklaarondergrens: FieldObject<DataType.Number>;
+  Maxconstructiesnelheidahwbgr: FieldObject<DataType.Number>;
+  Maxconstructiesnelheidahwogr: FieldObject<DataType.Number>;
+  Maximummassabovengrens: FieldObject<DataType.Number>;
+  Maximummassaondergrens: FieldObject<DataType.Number>;
+  Maxondersteundesnelheidbgr: FieldObject<DataType.Number>;
+  Maxondersteundesnelheidogr: FieldObject<DataType.Number>;
+  Maxverticalebelastopkoppbgr: FieldObject<DataType.Number>;
+  Maxverticalebelastopkoppogr: FieldObject<DataType.Number>;
+  Minimummassavoltooid: FieldObject<DataType.Number>;
+  Paramrijweerstandf0bovengrens: FieldObject<DataType.Number>;
+  Paramrijweerstandf0ondergrens: FieldObject<DataType.Number>;
+  Paramrijweerstandf1bovengrens: FieldObject<DataType.Number>;
+  Paramrijweerstandf1ondergrens: FieldObject<DataType.Number>;
+  Paramrijweerstandf2bovengrens: FieldObject<DataType.Number>;
+  Paramrijweerstandf2ondergrens: FieldObject<DataType.Number>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Voertuigcategorie: FieldObject<DataType.Text>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Number>;
+  Wielbasisbovengrens: FieldObject<DataType.Number>;
+  Wielbasisondergrens: FieldObject<DataType.Number>;
+} = {
   /**
    * ### AantalDeurenBovengrens
    *
@@ -806,7 +855,7 @@ export const Info = {
   provider_name: "TgkBasisUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Basis-Uitvoering/byxc-wwua",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/byxc-wwua",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Basis Uitvoering
@@ -834,7 +883,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkBasisUitvoering_ResponseData> =>
   createQueryWithDataset<TgkBasisUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

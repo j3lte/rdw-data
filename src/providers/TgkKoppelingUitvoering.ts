@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Koppeling Uitvoering
@@ -145,7 +145,25 @@ export interface TgkKoppelingUitvoering_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevarianttgk: FieldObject<DataType.Text>;
+  Maximummassaautonoombgr: FieldObject<DataType.Number>;
+  Maximummassaautonoomogr: FieldObject<DataType.Number>;
+  Maximummassageremdbgr: FieldObject<DataType.Number>;
+  Maximummassageremdogr: FieldObject<DataType.Number>;
+  Maximummassamiddenasbgr: FieldObject<DataType.Number>;
+  Maximummassamiddenasogr: FieldObject<DataType.Number>;
+  Maximummassaongeremdbgr: FieldObject<DataType.Number>;
+  Maximummassaongeremdogr: FieldObject<DataType.Number>;
+  Maximummassaopleggerbgr: FieldObject<DataType.Number>;
+  Maximummassaopleggerogr: FieldObject<DataType.Number>;
+  Maximummassasamenstelbgr: FieldObject<DataType.Number>;
+  Maximummassasamenstelogr: FieldObject<DataType.Number>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Volgnummerkoppeling: FieldObject<DataType.Number>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Number>;
+} = {
   /**
    * ### CodeUitvoeringTgk
    *
@@ -310,7 +328,7 @@ export const Info = {
   provider_name: "TgkKoppelingUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Koppeling-Uitvoering/d3ex-xghj",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/d3ex-xghj",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Koppeling Uitvoering
@@ -338,7 +356,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkKoppelingUitvoering_ResponseData> =>
   createQueryWithDataset<TgkKoppelingUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

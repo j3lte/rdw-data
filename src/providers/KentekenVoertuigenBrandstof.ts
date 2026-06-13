@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_brandstof
@@ -331,7 +331,44 @@ export interface KentekenVoertuigenBrandstof_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  ActieRadiusEnkelElektrischWltp: FieldObject<DataType.Number>;
+  ActieRadiusExternOpladenWltp: FieldObject<DataType.Number>;
+  Actieradius: FieldObject<DataType.Number>;
+  ActieradiusExternOplaadbaar: FieldObject<DataType.Number>;
+  BrandstofOmschrijving: FieldObject<DataType.Text>;
+  BrandstofVerbruikGecombineerdWltp: FieldObject<DataType.Number>;
+  BrandstofVerbruikGewogenGecombineerdWltp: FieldObject<DataType.Number>;
+  BrandstofVolgnummer: FieldObject<DataType.Text>;
+  BrandstofverbruikGecombineerd: FieldObject<DataType.Text>;
+  BrandstofverbruikGewogenGecombineerd: FieldObject<DataType.Number>;
+  Co2Emissieklasse: FieldObject<DataType.Text>;
+  Co2UitstootGecombineerd: FieldObject<DataType.Text>;
+  Co2UitstootGewogen: FieldObject<DataType.Text>;
+  ElektriciteitsverbruikGewogenGecombineerd: FieldObject<DataType.Number>;
+  ElektriciteitsverbruikVolledigElektrisch: FieldObject<DataType.Number>;
+  ElektrischVerbruikEnkelElektrischWltp: FieldObject<DataType.Number>;
+  ElektrischVerbruikExternOpladenWltp: FieldObject<DataType.Number>;
+  EmisCo2GewogenGecombineerdWltp: FieldObject<DataType.Number>;
+  EmisDeeltjesType1Wltp: FieldObject<DataType.Number>;
+  EmissieCo2GecombineerdWltp: FieldObject<DataType.Number>;
+  EmissiecodeOmschrijving: FieldObject<DataType.Text>;
+  GeluidsniveauRijdend: FieldObject<DataType.Text>;
+  GeluidsniveauStationair: FieldObject<DataType.Text>;
+  Kenteken: FieldObject<DataType.Text>;
+  KlasseHybrideElektrischVoertuig: FieldObject<DataType.Text>;
+  MaxVermogen15Minuten: FieldObject<DataType.Number>;
+  MilieuklasseEgGoedkeuringLicht: FieldObject<DataType.Text>;
+  MilieuklasseEgGoedkeuringZwaar: FieldObject<DataType.Text>;
+  NettoMaxVermogenElektrisch: FieldObject<DataType.Number>;
+  Nettomaximumvermogen: FieldObject<DataType.Text>;
+  NominaalContinuMaximumvermogen: FieldObject<DataType.Text>;
+  OpgegevenMaximumSnelheid: FieldObject<DataType.Number>;
+  ToerentalGeluidsniveau: FieldObject<DataType.Text>;
+  Uitlaatemissieniveau: FieldObject<DataType.Text>;
+  UitstootDeeltjesLicht: FieldObject<DataType.Text>;
+  UitstootDeeltjesZwaar: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Actie radius enkel elektrisch wltp
    *
@@ -739,7 +776,7 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_brandstof/8ys7-d773",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/8ys7-d773",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_brandstof
@@ -767,7 +804,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<KentekenVoertuigenBrandstof_ResponseData> =>
   createQueryWithDataset<KentekenVoertuigenBrandstof_ResponseData>(
     Info.domain,
     Info.dataset,

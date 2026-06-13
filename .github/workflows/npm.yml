@@ -10,26 +10,33 @@ jobs:
   release:
     name: Build NPM package (On Demand)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # OIDC for npm trusted publishing
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Setup Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: 18.x
-          registry-url: 'https://registry.npmjs.org'
+          node-version: 22.x
+          registry-url: "https://registry.npmjs.org"
 
-      - name: Run Deno dnt
+      - name: Upgrade npm (trusted publishing requires >= 11.5.1)
+        run: npm install -g npm@latest
+
+      - name: Build NPM package
         run: deno task npm ${{ github.event.inputs.version }}
 
       - name: Check Version
         run: cat ./npm/package.json | jq .version
 
+      # Trusted publishing (OIDC): npm attaches provenance automatically.
       - name: Publish to NPM
-        run: cd ./npm && yarn publish --verbose --access public --new-version ${{ github.event.inputs.version }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
+        run: cd ./npm && npm publish --access public

@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: TGK Rupsbandset Uitvoering
@@ -89,7 +89,17 @@ export interface TgkRupsbandsetUitvoering_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Aangedrevenrupsbandsetind: FieldObject<DataType.Text>;
+  Codeuitvoeringtgk: FieldObject<DataType.Text>;
+  Codevarianttgk: FieldObject<DataType.Text>;
+  Geremderupsbandsetindicator: FieldObject<DataType.Number>;
+  Maximummassarupsbandsetbgr: FieldObject<DataType.Number>;
+  Maximummassarupsbandsetogr: FieldObject<DataType.Number>;
+  Typegoedkeuringsnummer: FieldObject<DataType.Text>;
+  Volgnummerrevisieuitvoering: FieldObject<DataType.Number>;
+  Volgnummerrupsbandset: FieldObject<DataType.Number>;
+} = {
   /**
    * ### AangedrevenRupsbandsetInd
    *
@@ -182,7 +192,7 @@ export const Info = {
   provider_name: "TgkRupsbandsetUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Rupsbandset-Uitvoering/xn6e-huse",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/xn6e-huse",
-};
+} as const;
 
 /**
  * ### Open Data RDW: TGK Rupsbandset Uitvoering
@@ -210,7 +220,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<TgkRupsbandsetUitvoering_ResponseData> =>
   createQueryWithDataset<TgkRupsbandsetUitvoering_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,

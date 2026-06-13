@@ -1,6 +1,4 @@
-import { SpecifierMappings } from "https://deno.land/x/dnt@0.39.0/transform.ts";
-import { build, emptyDir } from "../dev_deps.ts";
-import { getLatestVersion } from "./fetch-databases.ts";
+import { build, emptyDir } from "@deno/dnt";
 
 const cleanupTypes = async (dir: string) => {
   for await (const dirEntry of Deno.readDir(dir)) {
@@ -17,26 +15,18 @@ const cleanupTypes = async (dir: string) => {
 
 await emptyDir("./npm");
 
-const latestVersion = await getLatestVersion();
-
-if (!latestVersion) {
-  console.log("Error fetching latest version, aborting");
-  Deno.exit(1);
-}
-
-const mappings: SpecifierMappings = {};
-mappings[`https://deno.land/x/soda@${latestVersion}/mod.ts`] = {
-  name: "soda-query",
-  version: `^${latestVersion}`,
-};
-
 console.log("Building npm package");
-console.log(mappings);
 
+// Providers import soda via the bare "soda" specifier. For Deno/JSR that maps
+// to jsr:@j3lte/soda (deno.json). For the npm build we hand dnt a dedicated
+// import map that resolves "soda" to npm:soda-query (the npm build of the same
+// library) so dnt emits soda-query as a normal external npm dependency.
+// (dnt 0.42 cannot remap a jsr specifier onto a different npm package — it
+// panics — but resolving straight to an npm: specifier works cleanly.)
 await build({
   entryPoints: ["./src/mod.ts"],
   outDir: "./npm",
-  mappings,
+  importMap: "./scripts/dnt-import-map.json",
   declaration: "separate",
   skipSourceOutput: true,
   // scriptModule: false,

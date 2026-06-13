@@ -10,8 +10,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie
@@ -66,7 +66,13 @@ export interface KentekenVoertuigenCarrosserieSpecificatie_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  CarrosserieVoertuigNummerCodeVolgnummer: FieldObject<DataType.Text>;
+  CarrosserieVoertuigNummerEuropeseOmschrijving: FieldObject<DataType.Text>;
+  CarrosserieVolgnummer: FieldObject<DataType.Text>;
+  Carrosseriecode: FieldObject<DataType.Text>;
+  Kenteken: FieldObject<DataType.Text>;
+} = {
   /**
    * ### Carrosserie voertuig nummer code volgnummer
    *
@@ -135,7 +141,7 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie_/jhie-znh9",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/jhie-znh9",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie
@@ -163,7 +169,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<KentekenVoertuigenCarrosserieSpecificatie_ResponseData> =>
   createQueryWithDataset<KentekenVoertuigenCarrosserieSpecificatie_ResponseData>(
     Info.domain,
     Info.dataset,

@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data Parkeren: BETAALMETHODE GEBIED
@@ -91,7 +91,15 @@ export interface ParkerenBetaalmethodeGebied_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  Areaid: FieldObject<DataType.Text>;
+  Areamanagerid: FieldObject<DataType.Number>;
+  Enddate: FieldObject<DataType.Text>;
+  Paymentatexit: FieldObject<DataType.Number>;
+  Paymentatpaystation: FieldObject<DataType.Number>;
+  Paymentmethod: FieldObject<DataType.Text>;
+  Startdate: FieldObject<DataType.Text>;
+} = {
   /**
    * ### AreaId
    *
@@ -180,7 +188,7 @@ export const Info = {
   provider_name: "ParkerenBetaalmethodeGebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/r3rs-ibz5",
-};
+} as const;
 
 /**
  * ### Open Data Parkeren: BETAALMETHODE GEBIED
@@ -209,7 +217,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<ParkerenBetaalmethodeGebied_ResponseData> =>
   createQueryWithDataset<ParkerenBetaalmethodeGebied_ResponseData>(
     Info.domain,
     Info.dataset,

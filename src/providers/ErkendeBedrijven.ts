@@ -12,8 +12,8 @@
 //
 // *******************************************************
 
-import type { AuthOpts, Options, SodaQuery } from "https://deno.land/x/soda@0.4.5/mod.ts";
-import { createQueryWithDataset, DataType, Field } from "https://deno.land/x/soda@0.4.5/mod.ts";
+import type { AuthOpts, FieldObject, Options, SodaQuery } from "soda";
+import { createQueryWithDataset, DataType, Field } from "soda";
 
 /**
  * Return Data for Open Data RDW: Erkende Bedrijven
@@ -98,7 +98,18 @@ export interface ErkendeBedrijven_ResponseData {
  *
  * > You can use these fieldnames in your queries to filter, group, or sort your data.
  */
-export const Fields = {
+export const Fields: {
+  ApiBedrijfErkenningen: FieldObject<DataType.Text>;
+  Gevelnaam: FieldObject<DataType.Text>;
+  Huisnummer: FieldObject<DataType.Text>;
+  HuisnummerToevoeging: FieldObject<DataType.Text>;
+  NaamBedrijf: FieldObject<DataType.Text>;
+  Plaats: FieldObject<DataType.Text>;
+  PostcodeAlfanumeriek: FieldObject<DataType.Text>;
+  PostcodeNumeriek: FieldObject<DataType.Number>;
+  Straat: FieldObject<DataType.Text>;
+  Volgnummer: FieldObject<DataType.Number>;
+} = {
   /**
    * ### api_bedrijf_erkenningen
    *
@@ -200,7 +211,7 @@ export const Info = {
   provider_name: "ErkendeBedrijven",
   url: "https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/5k74-3jha",
-};
+} as const;
 
 /**
  * ### Open Data RDW: Erkende Bedrijven
@@ -229,7 +240,10 @@ export const Info = {
  *   .execute();
  * ```
  */
-export const RDWQuery = (auth: AuthOpts = {}, opts: Options = {}) =>
+export const RDWQuery = (
+  auth: AuthOpts = {},
+  opts: Options = {},
+): SodaQuery<ErkendeBedrijven_ResponseData> =>
   createQueryWithDataset<ErkendeBedrijven_ResponseData>(Info.domain, Info.dataset, auth, {
     ...opts,
     strict: typeof opts.strict === "boolean" ? opts.strict : true,
