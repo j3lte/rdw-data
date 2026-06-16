@@ -3,8 +3,8 @@
 // Name: Gebieden
 //
 // Category: Parkeren
-// Link: https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
-// Permalink: https://opendata.rdw.nl/d/b2fs-9ymw
+// Link: https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
+// Permalink: https://opendata.rdw.nl/d/u3zx-f5hd
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
 //
@@ -819,22 +819,22 @@ export const Info = {
     "TheGeom",
     "UsageId",
   ],
-  dataset: "b2fs-9ymw",
+  dataset: "u3zx-f5hd",
   domain: "opendata.rdw.nl",
   full_name: "Gebieden",
   provider_name: "Gebieden",
-  url: "https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw",
-  api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/b2fs-9ymw",
+  url: "https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd",
+  api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/u3zx-f5hd",
 } as const;
 
 /**
  * ### Gebieden
  *
- * **URL:** https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
+ * **URL:** https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
  *
- * **API DOCS:** https://dev.socrata.com/foundry/opendata.rdw.nl/b2fs-9ymw
+ * **API DOCS:** https://dev.socrata.com/foundry/opendata.rdw.nl/u3zx-f5hd
  *
- * **Dataset ID:** b2fs-9ymw
+ * **Dataset ID:** u3zx-f5hd
  *
  * **Category:** Parkeren
  *
@@ -872,9 +872,9 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Dataset ID:** b2fs-9ymw
+ * **Dataset ID:** u3zx-f5hd
  *
- * **URL:** https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
+ * **URL:** https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
  *
  * @example
  * ```ts

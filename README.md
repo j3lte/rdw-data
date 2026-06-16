@@ -98,7 +98,7 @@ These are auto generated providers and use `soda-query@0.5.0`.
 | `BrandstoffenOpPc4`                         | [Brandstoffen_op_PC4](https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d)                                                                               | Unknown           |
 | `ErkendeBedrijven`                          | [Open Data RDW: Erkende Bedrijven](https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha)                                            | Erkende bedrijven |
 | `Erkenningen`                               | [Open Data RDW: Erkenningen](https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz)                                                        | Erkende bedrijven |
-| `Gebieden`                                  | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw)                                                                                                    | Parkeren          |
+| `Gebieden`                                  | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd)                                                                                                    | Parkeren          |
 | `Gebreken`                                  | [Open Data RDW: Gebreken](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Gebreken/hx2c-gt7k)                                                                      | Keuringen         |
 | `GeconstateerdeGebreken`                    | [Open Data RDW: Geconstateerde Gebreken](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps)                                        | Keuringen         |
 | `GeoCarpool`                                | [GEO Carpool](https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx)                                                                                              | Parkeren          |
@@ -114,7 +114,7 @@ These are auto generated providers and use `soda-query@0.5.0`.
 | `KentekenVoertuigenSubcategorieVoertuig`    | [Open Data RDW: Gekentekende_voertuigen_subcategorie_voertuig](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_subcategorie/2ba7-embk)    | Voertuigen        |
 | `KentekenVoertuigenVoertuigklasse`          | [Open Data RDW: Gekentekende_voertuigen_voertuigklasse](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_voertuigklas/kmfi-hrps)           | Voertuigen        |
 | `Keuringen`                                 | [Open Data RDW: Keuringen](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc)                                                                    | Keuringen         |
-| `Locaties`                                  | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy)                                                                                                    | Parkeren          |
+| `Locaties`                                  | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5)                                                                                                    | Parkeren          |
 | `MeldingenKeuringsinstantie`                | [Open Data RDW: Meldingen Keuringsinstantie](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx)                                | Keuringen         |
 | `ParkerenBetaalmethodeGebied`               | [Open Data Parkeren: BETAALMETHODE GEBIED](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5)                                     | Parkeren          |
 | `ParkerenBetaalmethodeVerkooppunt`          | [Open Data Parkeren: BETAALMETHODE VERKOOPPUNT](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx)                           | Parkeren          |
@@ -284,7 +284,7 @@ Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Gebieden)
 | `TheGeom`    | `the_geom`    | the_geom      | MultiPolygon |
 | `UsageId`    | `usage_id`    | UsageId       | Text         |
 
-**Link:** https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
+**Link:** https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
 
 </details>
 
@@ -808,7 +808,7 @@ Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Locaties)
 | `TheGeom`    | `the_geom`    | the_geom      | Point |
 | `UsageId`    | `usage_id`    | UsageId       | Text  |
 
-**Link:** https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy
+**Link:** https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5
 
 </details>
 
