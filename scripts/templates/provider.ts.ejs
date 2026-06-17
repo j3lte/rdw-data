@@ -8,10 +8,15 @@
 <%- } %>
 //
 // Category: <%= it.item.category %>
+// Tags: <%= it.item.tags.join(", ") %>
+// License: <%= it.item.license %>
+// License (RDW): <%= it.item.license_detail %>
 // Link: <%= it.item.link %>
 // Permalink: <%= it.item.permalink %>
 // Owner: <%= it.item.owner %>
 // Creator: <%= it.item.creator %>
+// Published: <%= it.item.publication_date %>
+// Structure last updated: <%= it.item.metadata_updated_at %>
 //
 // *******************************************************
 
@@ -73,6 +78,12 @@ export const Info = {
   provider_name: "<%= it.item.name %>",
   url: "<%= it.item.link %>",
   api_docs: "https://dev.socrata.com/foundry/<%= it.item.domain %>/<%= it.item.id %>",
+  category: "<%= it.item.category %>",
+  tags: [<% it.item.tags.forEach(function(tag) { %>"<%= tag %>", <% }); %>],
+  license: "<%= it.item.license %>",
+  license_detail: "<%= it.item.license_detail %>",
+  publication_date: "<%= it.item.publication_date %>",
+  metadata_updated_at: "<%= it.item.metadata_updated_at %>",
 } as const;
 
 /**
@@ -86,6 +97,14 @@ export const Info = {
  * **Dataset ID:** <%= it.item.id %>
  *
  * **Category:** <%= it.item.category %>
+ *
+ * **Tags:** <%= it.item.tags.join(", ") %>
+ *
+ * **License:** <%= it.item.license %> (<%= it.item.license_detail %>)
+ *
+ * **Published:** <%= it.item.publication_date %>
+ *
+ * **Structure last updated:** <%= it.item.metadata_updated_at %>
  *
  * -----------------------
  * This generates a SodaQuery for the <%= it.item.full_name %> dataset.
@@ -122,9 +141,17 @@ export const RDWQuery = (
  *
  * **Category:** <%= it.item.category %>
  *
+ * **Tags:** <%= it.item.tags.join(", ") %>
+ *
+ * **License:** <%= it.item.license %> (<%= it.item.license_detail %>)
+ *
  * **Dataset ID:** <%= it.item.id %>
  *
  * **URL:** <%= it.item.link %>
+ *
+ * **Published:** <%= it.item.publication_date %>
+ *
+ * **Structure last updated:** <%= it.item.metadata_updated_at %>
  *
  * @example
  * ```ts

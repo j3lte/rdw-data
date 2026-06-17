@@ -85,6 +85,16 @@ export const mapColumns = (res: Result): Array<{
     const field_name = cleanString(columns_field_name[i]);
     const node_type = translateDatatype(datatype);
     const big_name = pascalCase(field_name);
+
+    // Surface unmapped datatypes with the dataset + column they occur in, so an
+    // "Unknown datatype" is actionable instead of an anonymous log line. node_type
+    // falls back to `unknown` and datatypeTemplate to `DataType._Unknown`.
+    if (node_type === "unknown" || datatypeTemplate === "DataType._Unknown") {
+      console.warn(
+        `Unknown datatype "${datatype}" in dataset "${res.resource.name}" (field "${field_name}")`,
+      );
+    }
+
     return { name, big_name, description, datatype, datatypeTemplate, field_name, node_type };
   }).sort((a, b) => a.field_name.localeCompare(b.field_name));
   return columns;
@@ -100,7 +110,11 @@ export const translateDatatype = (datatype: string) => {
   if (datatype === "Point") {
     return "{ latitude: string; longitude: string; human_address: null | string; }";
   }
-  console.log(`Unknown datatype: ${datatype}`);
+  if (datatype === "MultiPolygon") {
+    // Socrata returns this as GeoJSON, e.g. { type: "MultiPolygon", coordinates: [...] }.
+    return `{ type: "MultiPolygon"; coordinates: number[][][][]; }`;
+  }
+  // Caller (mapColumns) logs the dataset + column context when this falls through.
   return "unknown";
 };
 

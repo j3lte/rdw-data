@@ -4,7 +4,10 @@ import { emptyDir } from "@deno/dnt";
 import type { DataResult, ResponseData, WithSodaVersion } from "./util/interfaces.ts";
 import { fixTitle, mapColumns, updateText } from "./util/mod.ts";
 
-const thisDir = new URL(".", import.meta.url).pathname;
+// import.meta.dirname is the OS-native dir (e.g. C:\...\scripts on Windows),
+// unlike new URL(".", import.meta.url).pathname which yields an unreadable
+// /C:/... path on Windows. Keep the trailing slash the path concatenations expect.
+const thisDir = `${import.meta.dirname}/`;
 const url =
   "https://opendata.rdw.nl/api/catalog/v1?domains=opendata.rdw.nl&limit=1000&offset=0&only=datasets&order=updatedAt DESC&show_unsupported_data_federated_assets=false&show_visibility=true&visibility=open";
 
@@ -27,6 +30,15 @@ const getData = async (url: string) => {
       full_name: (result.resource.name || "").trim(),
       description,
       metadata_updated_at: (result.resource.metadata_updated_at || "").trim(),
+      publication_date: (result.resource.publication_date || "").trim(),
+      license: (result.metadata.license || "Unknown").trim(),
+      // RDW's own, more specific license declaration (e.g. "Creative Commons 0
+      // (CC0)") lives in classification.domain_metadata under Licentie_Licentie.
+      license_detail: (result.classification.domain_metadata
+        ?.find((m) => m.key === "Licentie_Licentie")?.value || "Unknown").trim(),
+      tags: (result.classification.domain_tags ?? []).map((t) => t.trim()).filter((t) =>
+        t.length > 0
+      ),
       category: (result.classification.domain_category ?? "Unknown").trim(),
       domain: (result.metadata.domain || "").trim(),
       link: (result.link || "").trim(),
@@ -89,9 +101,7 @@ export const getLatestVersion = async (): Promise<string | null> => {
 };
 
 const updateReadme = async (data: DataResult[], sodaVersion: string): Promise<void> => {
-  const filePath = new URL(import.meta.url).pathname;
-  const dirPath = filePath.split("/").slice(0, -1).join("/");
-  const readmePath = `${dirPath}/../README.md`;
+  const readmePath = `${thisDir}../README.md`;
 
   const readme = await Deno.readTextFile(readmePath);
 
@@ -150,20 +160,31 @@ const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
     console.log("Error fetching latest version, aborting");
     return;
   }
-  // Dedupe by provider name: distinct datasets can collapse to the same name
-  // via fixTitle(). Without this, one provider file is written but mod.ts gets
-  // duplicate `export { Name }` lines (TS2300 duplicate identifier).
-  const seenNames = new Set<string>();
-  const resultData = (await getData(url))
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .filter((item) => {
-      if (seenNames.has(item.name)) {
-        console.warn(`Skipping duplicate provider name: ${item.name}`);
-        return false;
-      }
-      seenNames.add(item.name);
-      return true;
-    });
+  // De-collide provider names: distinct datasets can collapse to the same name
+  // via fixTitle() (e.g. two "Gebieden"). Previously the duplicates were dropped,
+  // losing data. Instead, when a name occurs more than once, suffix every colliding
+  // entry with an incrementing index (Gebieden1, Gebieden2, ...) so each dataset
+  // keeps its own provider file and a unique `export { Name }` in mod.ts (avoids
+  // TS2300 duplicate identifier). full_name is left untouched as the real title.
+  const fetched = (await getData(url))
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const nameCounts = new Map<string, number>();
+  for (const item of fetched) {
+    nameCounts.set(item.name, (nameCounts.get(item.name) ?? 0) + 1);
+  }
+
+  const nameIndex = new Map<string, number>();
+  const resultData = fetched.map((item) => {
+    if ((nameCounts.get(item.name) ?? 0) <= 1) {
+      return item;
+    }
+    const index = (nameIndex.get(item.name) ?? 0) + 1;
+    nameIndex.set(item.name, index);
+    const newName = `${item.name}${index}`;
+    console.warn(`Renaming duplicate provider name: ${item.name} -> ${newName}`);
+    return { ...item, name: newName };
+  });
   const providerTemplate = await Deno.readTextFile(`${thisDir}/templates/provider.ts.ejs`);
   const modTemplate = await Deno.readTextFile(`${thisDir}/templates/mod.ts.ejs`);
 

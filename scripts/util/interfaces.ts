@@ -47,9 +47,12 @@ export interface Result {
   classification: {
     categories: string[];
     domain_category?: string;
+    domain_tags?: string[];
+    domain_metadata?: Array<{ key: string; value: string }>;
   } & Record<string, any>;
   metadata: {
     domain: string;
+    license?: string;
   };
   permalink: string;
   link: string;
@@ -68,6 +71,10 @@ export interface DataResult {
   full_name: string;
   description: string[];
   metadata_updated_at: string;
+  publication_date: string;
+  license: string;
+  license_detail: string;
+  tags: string[];
   category: string;
   id: string;
   domain: string;
