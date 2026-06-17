@@ -5,10 +5,15 @@
 // Overzicht van de erkenningen behorende bij de erkende bedrijven.
 //
 // Category: Erkende bedrijven
+// Tags: erkende bedrijven
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz
 // Permalink: https://opendata.rdw.nl/d/nmwb-dqkz
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-08-13T06:32:42.000Z
+// Structure last updated: 2026-01-30T09:37:41.000Z
 //
 // *******************************************************
 
@@ -87,6 +92,12 @@ export const Info = {
   provider_name: "Erkenningen",
   url: "https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nmwb-dqkz",
+  category: "Erkende bedrijven",
+  tags: ["erkende bedrijven"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-08-13T06:32:42.000Z",
+  metadata_updated_at: "2026-01-30T09:37:41.000Z",
 } as const;
 
 /**
@@ -100,6 +111,14 @@ export const Info = {
  * **Dataset ID:** nmwb-dqkz
  *
  * **Category:** Erkende bedrijven
+ *
+ * **Tags:** erkende bedrijven
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-08-13T06:32:42.000Z
+ *
+ * **Structure last updated:** 2026-01-30T09:37:41.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Erkenningen dataset.
@@ -136,9 +155,17 @@ export const RDWQuery = (
  *
  * **Category:** Erkende bedrijven
  *
+ * **Tags:** erkende bedrijven
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** nmwb-dqkz
  *
  * **URL:** https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz
+ *
+ * **Published:** 2024-08-13T06:32:42.000Z
+ *
+ * **Structure last updated:** 2026-01-30T09:37:41.000Z
  *
  * @example
  * ```ts

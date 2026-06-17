@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Carrosserie Uitvoering
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Carrosserie-Uitvoering/ky2r-jqad
 // Permalink: https://opendata.rdw.nl/d/ky2r-jqad
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-09-04T06:36:37.000Z
+// Structure last updated: 2025-03-17T14:21:41.000Z
 //
 // *******************************************************
 
@@ -213,6 +218,12 @@ export const Info = {
   provider_name: "TgkCarrosserieUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Carrosserie-Uitvoering/ky2r-jqad",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ky2r-jqad",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-09-04T06:36:37.000Z",
+  metadata_updated_at: "2025-03-17T14:21:41.000Z",
 } as const;
 
 /**
@@ -225,6 +236,14 @@ export const Info = {
  * **Dataset ID:** ky2r-jqad
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-09-04T06:36:37.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:21:41.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Carrosserie Uitvoering dataset.
@@ -260,9 +279,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** ky2r-jqad
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Carrosserie-Uitvoering/ky2r-jqad
+ *
+ * **Published:** 2024-09-04T06:36:37.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:21:41.000Z
  *
  * @example
  * ```ts

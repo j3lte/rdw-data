@@ -5,10 +5,15 @@
 // De tellerstandoordelen worden in gekentekende voertuigen vermeld als codes. Deze tabel helpt de gebruiker om die codes om te zetten in begrijpbare toelichtingen.
 //
 // Category: Voertuigen
+// Tags: tellerstandoordeel, voertuigen
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Tellerstandoordeel-Trend-Toelichting/jqs4-4kvw
 // Permalink: https://opendata.rdw.nl/d/jqs4-4kvw
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-05-28T14:16:29.000Z
+// Structure last updated: 2025-03-05T17:36:17.000Z
 //
 // *******************************************************
 
@@ -88,6 +93,12 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Tellerstandoordeel-Trend-Toelichting/jqs4-4kvw",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/jqs4-4kvw",
+  category: "Voertuigen",
+  tags: ["tellerstandoordeel", "voertuigen"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-05-28T14:16:29.000Z",
+  metadata_updated_at: "2025-03-05T17:36:17.000Z",
 } as const;
 
 /**
@@ -101,6 +112,14 @@ export const Info = {
  * **Dataset ID:** jqs4-4kvw
  *
  * **Category:** Voertuigen
+ *
+ * **Tags:** tellerstandoordeel, voertuigen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-05-28T14:16:29.000Z
+ *
+ * **Structure last updated:** 2025-03-05T17:36:17.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Tellerstandoordeel Trend Toelichting dataset.
@@ -142,9 +161,17 @@ export const RDWQuery = (
  *
  * **Category:** Voertuigen
  *
+ * **Tags:** tellerstandoordeel, voertuigen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** jqs4-4kvw
  *
  * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Tellerstandoordeel-Trend-Toelichting/jqs4-4kvw
+ *
+ * **Published:** 2024-05-28T14:16:29.000Z
+ *
+ * **Structure last updated:** 2025-03-05T17:36:17.000Z
  *
  * @example
  * ```ts

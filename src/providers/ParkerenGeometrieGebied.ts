@@ -5,10 +5,15 @@
 // Een overzicht van de geometrieën van parkeergebieden en -faciliteiten, in coördinatenstelsel WGS84 (EPSG: 4326).
 //
 // Category: Parkeren
+// Tags: geometrie, gebied, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEOMETRIE-GEBIED/nsk3-v9n7
 // Permalink: https://opendata.rdw.nl/d/nsk3-v9n7
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2014-11-05T13:48:43.000Z
+// Structure last updated: 2025-03-03T02:07:49.000Z
 //
 // *******************************************************
 
@@ -150,6 +155,12 @@ export const Info = {
   provider_name: "ParkerenGeometrieGebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEOMETRIE-GEBIED/nsk3-v9n7",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nsk3-v9n7",
+  category: "Parkeren",
+  tags: ["geometrie", "gebied", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2014-11-05T13:48:43.000Z",
+  metadata_updated_at: "2025-03-03T02:07:49.000Z",
 } as const;
 
 /**
@@ -163,6 +174,14 @@ export const Info = {
  * **Dataset ID:** nsk3-v9n7
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** geometrie, gebied, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2014-11-05T13:48:43.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:07:49.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: GEOMETRIE GEBIED dataset.
@@ -199,9 +218,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** geometrie, gebied, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** nsk3-v9n7
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEOMETRIE-GEBIED/nsk3-v9n7
+ *
+ * **Published:** 2014-11-05T13:48:43.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:07:49.000Z
  *
  * @example
  * ```ts

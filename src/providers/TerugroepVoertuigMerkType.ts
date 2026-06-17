@@ -3,10 +3,15 @@
 // Name: Open Data RDW: Terugroep_voertuig_merk_type
 //
 // Category: Terugroepacties
+// Tags: terugroep, voertuigen, merk, type, recall
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e
 // Permalink: https://opendata.rdw.nl/d/mu2x-mu5e
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-10-02T11:25:59.000Z
+// Structure last updated: 2026-04-29T12:27:56.000Z
 //
 // *******************************************************
 
@@ -107,6 +112,12 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mu2x-mu5e",
+  category: "Terugroepacties",
+  tags: ["terugroep", "voertuigen", "merk", "type", "recall"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-10-02T11:25:59.000Z",
+  metadata_updated_at: "2026-04-29T12:27:56.000Z",
 } as const;
 
 /**
@@ -119,6 +130,14 @@ export const Info = {
  * **Dataset ID:** mu2x-mu5e
  *
  * **Category:** Terugroepacties
+ *
+ * **Tags:** terugroep, voertuigen, merk, type, recall
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-10-02T11:25:59.000Z
+ *
+ * **Structure last updated:** 2026-04-29T12:27:56.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Terugroep_voertuig_merk_type dataset.
@@ -154,9 +173,17 @@ export const RDWQuery = (
  *
  * **Category:** Terugroepacties
  *
+ * **Tags:** terugroep, voertuigen, merk, type, recall
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** mu2x-mu5e
  *
  * **URL:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e
+ *
+ * **Published:** 2024-10-02T11:25:59.000Z
+ *
+ * **Structure last updated:** 2026-04-29T12:27:56.000Z
  *
  * @example
  * ```ts

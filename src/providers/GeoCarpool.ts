@@ -5,10 +5,15 @@
 // GEO Data laag met Carpool locaties.
 //
 // Category: Parkeren
+// Tags:
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx
 // Permalink: https://opendata.rdw.nl/d/9c54-cmfx
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2017-05-03T20:20:07.000Z
+// Structure last updated: 2025-03-03T02:07:08.000Z
 //
 // *******************************************************
 
@@ -300,6 +305,12 @@ export const Info = {
   provider_name: "GeoCarpool",
   url: "https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/9c54-cmfx",
+  category: "Parkeren",
+  tags: [],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2017-05-03T20:20:07.000Z",
+  metadata_updated_at: "2025-03-03T02:07:08.000Z",
 } as const;
 
 /**
@@ -313,6 +324,14 @@ export const Info = {
  * **Dataset ID:** 9c54-cmfx
  *
  * **Category:** Parkeren
+ *
+ * **Tags:**
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2017-05-03T20:20:07.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:07:08.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the GEO Carpool dataset.
@@ -349,9 +368,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:**
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 9c54-cmfx
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx
+ *
+ * **Published:** 2017-05-03T20:20:07.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:07:08.000Z
  *
  * @example
  * ```ts

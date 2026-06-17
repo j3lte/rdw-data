@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Koppeling Uitvoering
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Koppeling-Uitvoering/d3ex-xghj
 // Permalink: https://opendata.rdw.nl/d/d3ex-xghj
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-04-17T08:37:18.000Z
+// Structure last updated: 2025-03-17T15:24:53.000Z
 //
 // *******************************************************
 
@@ -332,6 +337,12 @@ export const Info = {
   provider_name: "TgkKoppelingUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Koppeling-Uitvoering/d3ex-xghj",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/d3ex-xghj",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-04-17T08:37:18.000Z",
+  metadata_updated_at: "2025-03-17T15:24:53.000Z",
 } as const;
 
 /**
@@ -344,6 +355,14 @@ export const Info = {
  * **Dataset ID:** d3ex-xghj
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-04-17T08:37:18.000Z
+ *
+ * **Structure last updated:** 2025-03-17T15:24:53.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Koppeling Uitvoering dataset.
@@ -379,9 +398,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** d3ex-xghj
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Koppeling-Uitvoering/d3ex-xghj
+ *
+ * **Published:** 2024-04-17T08:37:18.000Z
+ *
+ * **Structure last updated:** 2025-03-17T15:24:53.000Z
  *
  * @example
  * ```ts

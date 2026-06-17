@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Versnelling Uitvoering
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Versnelling-Uitvoering/7rjk-eycs
 // Permalink: https://opendata.rdw.nl/d/7rjk-eycs
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-04-17T08:40:32.000Z
+// Structure last updated: 2025-03-17T14:52:41.000Z
 //
 // *******************************************************
 
@@ -179,6 +184,12 @@ export const Info = {
   provider_name: "TgkVersnellingUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Versnelling-Uitvoering/7rjk-eycs",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/7rjk-eycs",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-04-17T08:40:32.000Z",
+  metadata_updated_at: "2025-03-17T14:52:41.000Z",
 } as const;
 
 /**
@@ -191,6 +202,14 @@ export const Info = {
  * **Dataset ID:** 7rjk-eycs
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-04-17T08:40:32.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:52:41.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Versnelling Uitvoering dataset.
@@ -226,9 +245,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 7rjk-eycs
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Versnelling-Uitvoering/7rjk-eycs
+ *
+ * **Published:** 2024-04-17T08:40:32.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:52:41.000Z
  *
  * @example
  * ```ts

@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Speciale Doeleinden
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Speciale-Doeleinden/m692-vvff
 // Permalink: https://opendata.rdw.nl/d/m692-vvff
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-04-16T16:14:28.000Z
+// Structure last updated: 2025-03-17T14:48:40.000Z
 //
 // *******************************************************
 
@@ -145,6 +150,12 @@ export const Info = {
   provider_name: "TgkSpecialeDoeleinden",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Speciale-Doeleinden/m692-vvff",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/m692-vvff",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-04-16T16:14:28.000Z",
+  metadata_updated_at: "2025-03-17T14:48:40.000Z",
 } as const;
 
 /**
@@ -157,6 +168,14 @@ export const Info = {
  * **Dataset ID:** m692-vvff
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-04-16T16:14:28.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:48:40.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Speciale Doeleinden dataset.
@@ -192,9 +211,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** m692-vvff
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Speciale-Doeleinden/m692-vvff
+ *
+ * **Published:** 2024-04-16T16:14:28.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:48:40.000Z
  *
  * @example
  * ```ts

@@ -5,10 +5,15 @@
 // Specificaties behorende bij een parkeerterrein of parkeergarage, zoals het aantal parkeerplaatsen en oplaadpunten.
 //
 // Category: Parkeren
+// Tags: specificaties, parkeergebied, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIFICATIES-PARKEERGEBIED/b3us-f26s
 // Permalink: https://opendata.rdw.nl/d/b3us-f26s
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T15:37:18.000Z
+// Structure last updated: 2025-03-03T02:13:11.000Z
 //
 // *******************************************************
 
@@ -240,6 +245,12 @@ export const Info = {
   provider_name: "ParkerenSpecificatiesParkeergebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIFICATIES-PARKEERGEBIED/b3us-f26s",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/b3us-f26s",
+  category: "Parkeren",
+  tags: ["specificaties", "parkeergebied", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:37:18.000Z",
+  metadata_updated_at: "2025-03-03T02:13:11.000Z",
 } as const;
 
 /**
@@ -253,6 +264,14 @@ export const Info = {
  * **Dataset ID:** b3us-f26s
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** specificaties, parkeergebied, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:37:18.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:13:11.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: SPECIFICATIES PARKEERGEBIED dataset.
@@ -294,9 +313,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** specificaties, parkeergebied, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** b3us-f26s
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIFICATIES-PARKEERGEBIED/b3us-f26s
+ *
+ * **Published:** 2025-02-05T15:37:18.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:13:11.000Z
  *
  * @example
  * ```ts

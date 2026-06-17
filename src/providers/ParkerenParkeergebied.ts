@@ -5,10 +5,15 @@
 // Deze tabel legt een koppeling tussen de gebieden zoals deze vastgelegd zijn in het NPR en de gebieden zoals deze voor Open Data Parkeren volgens de standaard SPDP2.0 gepubliceerd worden.
 //
 // Category: Parkeren
+// Tags: parkeergebied, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED/mz4f-59fw
 // Permalink: https://opendata.rdw.nl/d/mz4f-59fw
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-05-13T09:04:00.000Z
+// Structure last updated: 2025-05-13T09:04:00.000Z
 //
 // *******************************************************
 
@@ -150,6 +155,12 @@ export const Info = {
   provider_name: "ParkerenParkeergebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED/mz4f-59fw",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mz4f-59fw",
+  category: "Parkeren",
+  tags: ["parkeergebied", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-05-13T09:04:00.000Z",
+  metadata_updated_at: "2025-05-13T09:04:00.000Z",
 } as const;
 
 /**
@@ -163,6 +174,14 @@ export const Info = {
  * **Dataset ID:** mz4f-59fw
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** parkeergebied, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-05-13T09:04:00.000Z
+ *
+ * **Structure last updated:** 2025-05-13T09:04:00.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: PARKEERGEBIED dataset.
@@ -199,9 +218,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** parkeergebied, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** mz4f-59fw
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED/mz4f-59fw
+ *
+ * **Published:** 2025-05-13T09:04:00.000Z
+ *
+ * **Structure last updated:** 2025-05-13T09:04:00.000Z
  *
  * @example
  * ```ts

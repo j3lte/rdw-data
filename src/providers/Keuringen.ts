@@ -5,10 +5,15 @@
 // Gegevens set met per kenteken de vervaldatum van de laatst uitgevoerde APK.
 //
 // Category: Keuringen
+// Tags: keuringen
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc
 // Permalink: https://opendata.rdw.nl/d/vkij-7mwc
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-05-24T19:58:17.000Z
+// Structure last updated: 2025-03-26T00:32:19.000Z
 //
 // *******************************************************
 
@@ -96,6 +101,12 @@ export const Info = {
   provider_name: "Keuringen",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/vkij-7mwc",
+  category: "Keuringen",
+  tags: ["keuringen"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-05-24T19:58:17.000Z",
+  metadata_updated_at: "2025-03-26T00:32:19.000Z",
 } as const;
 
 /**
@@ -109,6 +120,14 @@ export const Info = {
  * **Dataset ID:** vkij-7mwc
  *
  * **Category:** Keuringen
+ *
+ * **Tags:** keuringen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-05-24T19:58:17.000Z
+ *
+ * **Structure last updated:** 2025-03-26T00:32:19.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Keuringen dataset.
@@ -145,9 +164,17 @@ export const RDWQuery = (
  *
  * **Category:** Keuringen
  *
+ * **Tags:** keuringen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** vkij-7mwc
  *
  * **URL:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc
+ *
+ * **Published:** 2024-05-24T19:58:17.000Z
+ *
+ * **Structure last updated:** 2025-03-26T00:32:19.000Z
  *
  * @example
  * ```ts

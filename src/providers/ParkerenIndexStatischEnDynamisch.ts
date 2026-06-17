@@ -5,10 +5,15 @@
 // Index van statische en dynamische parkeerinformatie van Nederlandse gemeenten en private partijen
 //
 // Category: Parkeren
+// Tags: index, statisch, dynamisch, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-Index-Statisch-en-Dynamisch/f6v7-gjpa
 // Permalink: https://opendata.rdw.nl/d/f6v7-gjpa
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2018-12-31T22:25:40.000Z
+// Structure last updated: 2018-12-31T22:25:40.000Z
 //
 // *******************************************************
 
@@ -164,6 +169,12 @@ export const Info = {
   provider_name: "ParkerenIndexStatischEnDynamisch",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-Index-Statisch-en-Dynamisch/f6v7-gjpa",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/f6v7-gjpa",
+  category: "Parkeren",
+  tags: ["index", "statisch", "dynamisch", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2018-12-31T22:25:40.000Z",
+  metadata_updated_at: "2018-12-31T22:25:40.000Z",
 } as const;
 
 /**
@@ -177,6 +188,14 @@ export const Info = {
  * **Dataset ID:** f6v7-gjpa
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** index, statisch, dynamisch, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2018-12-31T22:25:40.000Z
+ *
+ * **Structure last updated:** 2018-12-31T22:25:40.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: Index Statisch en Dynamisch dataset.
@@ -218,9 +237,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** index, statisch, dynamisch, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** f6v7-gjpa
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-Index-Statisch-en-Dynamisch/f6v7-gjpa
+ *
+ * **Published:** 2018-12-31T22:25:40.000Z
+ *
+ * **Structure last updated:** 2018-12-31T22:25:40.000Z
  *
  * @example
  * ```ts

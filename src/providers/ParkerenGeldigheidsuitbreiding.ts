@@ -5,10 +5,15 @@
 // Een uitbreiding van het gebied waarvoor een bepaald parkeer- of verblijfsrecht geldig is.
 //
 // Category: Parkeren
+// Tags: geldigheidsuitbreiding, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSUITBREIDING/8ff3-rxrk
 // Permalink: https://opendata.rdw.nl/d/8ff3-rxrk
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T14:59:56.000Z
+// Structure last updated: 2025-03-03T02:06:50.000Z
 //
 // *******************************************************
 
@@ -196,6 +201,12 @@ export const Info = {
   provider_name: "ParkerenGeldigheidsuitbreiding",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSUITBREIDING/8ff3-rxrk",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/8ff3-rxrk",
+  category: "Parkeren",
+  tags: ["geldigheidsuitbreiding", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T14:59:56.000Z",
+  metadata_updated_at: "2025-03-03T02:06:50.000Z",
 } as const;
 
 /**
@@ -209,6 +220,14 @@ export const Info = {
  * **Dataset ID:** 8ff3-rxrk
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** geldigheidsuitbreiding, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T14:59:56.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:06:50.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: GELDIGHEIDSUITBREIDING dataset.
@@ -250,9 +269,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** geldigheidsuitbreiding, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 8ff3-rxrk
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSUITBREIDING/8ff3-rxrk
+ *
+ * **Published:** 2025-02-05T14:59:56.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:06:50.000Z
  *
  * @example
  * ```ts

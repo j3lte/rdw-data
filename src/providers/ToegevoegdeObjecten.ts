@@ -5,10 +5,15 @@
 // Deze set bevat informatie over ingebouwde objecten aan voertuigen.
 //
 // Category: Keuringen
+// Tags: keuringen
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx
 // Permalink: https://opendata.rdw.nl/d/sghb-dzxx
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-05-24T21:11:39.000Z
+// Structure last updated: 2025-03-25T23:59:48.000Z
 //
 // *******************************************************
 
@@ -235,6 +240,12 @@ export const Info = {
   provider_name: "ToegevoegdeObjecten",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/sghb-dzxx",
+  category: "Keuringen",
+  tags: ["keuringen"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-05-24T21:11:39.000Z",
+  metadata_updated_at: "2025-03-25T23:59:48.000Z",
 } as const;
 
 /**
@@ -248,6 +259,14 @@ export const Info = {
  * **Dataset ID:** sghb-dzxx
  *
  * **Category:** Keuringen
+ *
+ * **Tags:** keuringen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-05-24T21:11:39.000Z
+ *
+ * **Structure last updated:** 2025-03-25T23:59:48.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Toegevoegde Objecten dataset.
@@ -284,9 +303,17 @@ export const RDWQuery = (
  *
  * **Category:** Keuringen
  *
+ * **Tags:** keuringen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** sghb-dzxx
  *
  * **URL:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Toegevoegde-Objecten/sghb-dzxx
+ *
+ * **Published:** 2024-05-24T21:11:39.000Z
+ *
+ * **Structure last updated:** 2025-03-25T23:59:48.000Z
  *
  * @example
  * ```ts

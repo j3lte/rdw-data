@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Handelsbenaming Fabrikant
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Handelsbenaming-Fabrikant/x5v3-sewk
 // Permalink: https://opendata.rdw.nl/d/x5v3-sewk
 // Owner: BICC
 // Creator: BICC
+// Published: 2025-03-17T15:58:57.000Z
+// Structure last updated: 2025-03-17T15:58:57.000Z
 //
 // *******************************************************
 
@@ -163,6 +168,12 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Handelsbenaming-Fabrikant/x5v3-sewk",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/x5v3-sewk",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-03-17T15:58:57.000Z",
+  metadata_updated_at: "2025-03-17T15:58:57.000Z",
 } as const;
 
 /**
@@ -175,6 +186,14 @@ export const Info = {
  * **Dataset ID:** x5v3-sewk
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-03-17T15:58:57.000Z
+ *
+ * **Structure last updated:** 2025-03-17T15:58:57.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Handelsbenaming Fabrikant dataset.
@@ -215,9 +234,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** x5v3-sewk
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Handelsbenaming-Fabrikant/x5v3-sewk
+ *
+ * **Published:** 2025-03-17T15:58:57.000Z
+ *
+ * **Structure last updated:** 2025-03-17T15:58:57.000Z
  *
  * @example
  * ```ts

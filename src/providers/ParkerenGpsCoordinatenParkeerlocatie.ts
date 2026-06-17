@@ -5,10 +5,15 @@
 // Een geografische locatie van een verkooppunt of van een in- of uitgang van een parkeergebied. De coördinaten zijn in WGS 84 (EPSG: 4326).
 //
 // Category: Parkeren
+// Tags: gps-coördinaten, parkeerlocatie, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GPS-COÖRDINATEN-PARKEERLOCATIE/k3dr-ge3w
 // Permalink: https://opendata.rdw.nl/d/k3dr-ge3w
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2025-02-05T15:10:11.000Z
+// Structure last updated: 2025-03-03T02:09:58.000Z
 //
 // *******************************************************
 
@@ -172,6 +177,12 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GPS-COÖRDINATEN-PARKEERLOCATIE/k3dr-ge3w",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/k3dr-ge3w",
+  category: "Parkeren",
+  tags: ["gps-coördinaten", "parkeerlocatie", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:10:11.000Z",
+  metadata_updated_at: "2025-03-03T02:09:58.000Z",
 } as const;
 
 /**
@@ -185,6 +196,14 @@ export const Info = {
  * **Dataset ID:** k3dr-ge3w
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** gps-coördinaten, parkeerlocatie, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:10:11.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:09:58.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: GPS-COÖRDINATEN PARKEERLOCATIE dataset.
@@ -226,9 +245,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** gps-coördinaten, parkeerlocatie, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** k3dr-ge3w
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GPS-COÖRDINATEN-PARKEERLOCATIE/k3dr-ge3w
+ *
+ * **Published:** 2025-02-05T15:10:11.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:09:58.000Z
  *
  * @example
  * ```ts

@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Aandrijving Uitvoering
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Aandrijving-Uitvoering/4by9-ammk
 // Permalink: https://opendata.rdw.nl/d/4by9-ammk
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-04-16T15:05:43.000Z
+// Structure last updated: 2025-03-17T14:20:35.000Z
 //
 // *******************************************************
 
@@ -315,6 +320,12 @@ export const Info = {
   provider_name: "TgkAandrijvingUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Aandrijving-Uitvoering/4by9-ammk",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/4by9-ammk",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-04-16T15:05:43.000Z",
+  metadata_updated_at: "2025-03-17T14:20:35.000Z",
 } as const;
 
 /**
@@ -327,6 +338,14 @@ export const Info = {
  * **Dataset ID:** 4by9-ammk
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-04-16T15:05:43.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:20:35.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Aandrijving Uitvoering dataset.
@@ -362,9 +381,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 4by9-ammk
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Aandrijving-Uitvoering/4by9-ammk
+ *
+ * **Published:** 2024-04-16T15:05:43.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:20:35.000Z
  *
  * @example
  * ```ts

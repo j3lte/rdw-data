@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Energiebron Uitvoering
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Energiebron-Uitvoering/gr7t-qfnb
 // Permalink: https://opendata.rdw.nl/d/gr7t-qfnb
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-09-09T10:39:31.000Z
+// Structure last updated: 2025-03-17T14:46:16.000Z
 //
 // *******************************************************
 
@@ -1437,6 +1442,12 @@ export const Info = {
   provider_name: "TgkEnergiebronUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Energiebron-Uitvoering/gr7t-qfnb",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/gr7t-qfnb",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-09-09T10:39:31.000Z",
+  metadata_updated_at: "2025-03-17T14:46:16.000Z",
 } as const;
 
 /**
@@ -1449,6 +1460,14 @@ export const Info = {
  * **Dataset ID:** gr7t-qfnb
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-09-09T10:39:31.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:46:16.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Energiebron Uitvoering dataset.
@@ -1484,9 +1503,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** gr7t-qfnb
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Energiebron-Uitvoering/gr7t-qfnb
+ *
+ * **Published:** 2024-09-09T10:39:31.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:46:16.000Z
  *
  * @example
  * ```ts

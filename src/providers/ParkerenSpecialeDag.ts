@@ -5,10 +5,15 @@
 // Een door de gebiedsbeheerder benoemd etmaal waarop afwijkende tarieven gelden (lokale feestdagen, evenementen, koopzondagen, etc.).
 //
 // Category: Parkeren
+// Tags: speciale dag, tabel, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIALE-DAG/hpi4-mynq
 // Permalink: https://opendata.rdw.nl/d/hpi4-mynq
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2025-02-05T15:33:19.000Z
+// Structure last updated: 2025-03-03T02:14:59.000Z
 //
 // *******************************************************
 
@@ -108,6 +113,12 @@ export const Info = {
   provider_name: "ParkerenSpecialeDag",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIALE-DAG/hpi4-mynq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/hpi4-mynq",
+  category: "Parkeren",
+  tags: ["speciale dag", "tabel", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:33:19.000Z",
+  metadata_updated_at: "2025-03-03T02:14:59.000Z",
 } as const;
 
 /**
@@ -121,6 +132,14 @@ export const Info = {
  * **Dataset ID:** hpi4-mynq
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** speciale dag, tabel, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:33:19.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:14:59.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: SPECIALE DAG dataset.
@@ -157,9 +176,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** speciale dag, tabel, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** hpi4-mynq
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIALE-DAG/hpi4-mynq
+ *
+ * **Published:** 2025-02-05T15:33:19.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:14:59.000Z
  *
  * @example
  * ```ts

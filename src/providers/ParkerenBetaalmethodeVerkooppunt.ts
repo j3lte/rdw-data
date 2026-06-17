@@ -5,10 +5,15 @@
 // Een betaalmethode die gebruikt kan worden bij een bepaald verkooppunt of betaalautomaat van een parkeergebied, -garage of -terrein.
 //
 // Category: Parkeren
+// Tags: betaalmethode, verkooppunt, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx
 // Permalink: https://opendata.rdw.nl/d/j96a-7nhx
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T12:22:27.000Z
+// Structure last updated: 2025-03-03T02:18:26.000Z
 //
 // *******************************************************
 
@@ -129,6 +134,12 @@ export const Info = {
   provider_name: "ParkerenBetaalmethodeVerkooppunt",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/j96a-7nhx",
+  category: "Parkeren",
+  tags: ["betaalmethode", "verkooppunt", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T12:22:27.000Z",
+  metadata_updated_at: "2025-03-03T02:18:26.000Z",
 } as const;
 
 /**
@@ -142,6 +153,14 @@ export const Info = {
  * **Dataset ID:** j96a-7nhx
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** betaalmethode, verkooppunt, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T12:22:27.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:18:26.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: BETAALMETHODE VERKOOPPUNT dataset.
@@ -183,9 +202,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** betaalmethode, verkooppunt, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** j96a-7nhx
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx
+ *
+ * **Published:** 2025-02-05T12:22:27.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:18:26.000Z
  *
  * @example
  * ```ts

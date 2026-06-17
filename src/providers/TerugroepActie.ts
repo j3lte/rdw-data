@@ -3,10 +3,15 @@
 // Name: Open Data RDW: Terugroep_actie
 //
 // Category: Terugroepacties
+// Tags: terugroep, voertuigen, recall
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie/j9yg-7rg9
 // Permalink: https://opendata.rdw.nl/d/j9yg-7rg9
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-10-02T11:20:45.000Z
+// Structure last updated: 2026-04-29T12:31:32.000Z
 //
 // *******************************************************
 
@@ -555,6 +560,12 @@ export const Info = {
   provider_name: "TerugroepActie",
   url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie/j9yg-7rg9",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/j9yg-7rg9",
+  category: "Terugroepacties",
+  tags: ["terugroep", "voertuigen", "recall"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-10-02T11:20:45.000Z",
+  metadata_updated_at: "2026-04-29T12:31:32.000Z",
 } as const;
 
 /**
@@ -567,6 +578,14 @@ export const Info = {
  * **Dataset ID:** j9yg-7rg9
  *
  * **Category:** Terugroepacties
+ *
+ * **Tags:** terugroep, voertuigen, recall
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-10-02T11:20:45.000Z
+ *
+ * **Structure last updated:** 2026-04-29T12:31:32.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Terugroep_actie dataset.
@@ -602,9 +621,17 @@ export const RDWQuery = (
  *
  * **Category:** Terugroepacties
  *
+ * **Tags:** terugroep, voertuigen, recall
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** j9yg-7rg9
  *
  * **URL:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie/j9yg-7rg9
+ *
+ * **Published:** 2024-10-02T11:20:45.000Z
+ *
+ * **Structure last updated:** 2026-04-29T12:31:32.000Z
  *
  * @example
  * ```ts

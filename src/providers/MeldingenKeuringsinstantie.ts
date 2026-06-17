@@ -5,10 +5,15 @@
 // Dataset met meldingen in het kader van een bepaalde erkenning uitgevoerd door een keuringsinstantie.
 //
 // Category: Keuringen
+// Tags: keuringen
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx
 // Permalink: https://opendata.rdw.nl/d/sgfe-77wx
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-05-24T13:09:58.000Z
+// Structure last updated: 2025-03-26T01:02:19.000Z
 //
 // *******************************************************
 
@@ -235,6 +240,12 @@ export const Info = {
   provider_name: "MeldingenKeuringsinstantie",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/sgfe-77wx",
+  category: "Keuringen",
+  tags: ["keuringen"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-05-24T13:09:58.000Z",
+  metadata_updated_at: "2025-03-26T01:02:19.000Z",
 } as const;
 
 /**
@@ -248,6 +259,14 @@ export const Info = {
  * **Dataset ID:** sgfe-77wx
  *
  * **Category:** Keuringen
+ *
+ * **Tags:** keuringen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-05-24T13:09:58.000Z
+ *
+ * **Structure last updated:** 2025-03-26T01:02:19.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Meldingen Keuringsinstantie dataset.
@@ -284,9 +303,17 @@ export const RDWQuery = (
  *
  * **Category:** Keuringen
  *
+ * **Tags:** keuringen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** sgfe-77wx
  *
  * **URL:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx
+ *
+ * **Published:** 2024-05-24T13:09:58.000Z
+ *
+ * **Structure last updated:** 2025-03-26T01:02:19.000Z
  *
  * @example
  * ```ts

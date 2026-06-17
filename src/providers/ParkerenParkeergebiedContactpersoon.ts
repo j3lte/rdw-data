@@ -5,10 +5,15 @@
 // Informatie over de koppeling tussen een parkeergebied of -faciliteit en een contactpersoon
 //
 // Category: Parkeren
+// Tags: parkeergebied, contactpersoon
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED-CONTACTPERSOON/69hx-t283
 // Permalink: https://opendata.rdw.nl/d/69hx-t283
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T15:22:02.000Z
+// Structure last updated: 2025-03-03T02:12:04.000Z
 //
 // *******************************************************
 
@@ -154,6 +159,12 @@ export const Info = {
   provider_name: "ParkerenParkeergebiedContactpersoon",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED-CONTACTPERSOON/69hx-t283",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/69hx-t283",
+  category: "Parkeren",
+  tags: ["parkeergebied", "contactpersoon"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:22:02.000Z",
+  metadata_updated_at: "2025-03-03T02:12:04.000Z",
 } as const;
 
 /**
@@ -167,6 +178,14 @@ export const Info = {
  * **Dataset ID:** 69hx-t283
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** parkeergebied, contactpersoon
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:22:02.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:12:04.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: PARKEERGEBIED CONTACTPERSOON dataset.
@@ -208,9 +227,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** parkeergebied, contactpersoon
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 69hx-t283
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED-CONTACTPERSOON/69hx-t283
+ *
+ * **Published:** 2025-02-05T15:22:02.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:12:04.000Z
  *
  * @example
  * ```ts

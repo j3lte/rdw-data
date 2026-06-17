@@ -5,10 +5,15 @@
 // Een benoemde ruimte met een gebruiksdoel waar een voertuig zich onder condities kan begeven of bevinden.
 //
 // Category: Parkeren
+// Tags: parkeren, tabel, gebied
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg
 // Permalink: https://opendata.rdw.nl/d/adw6-9hsg
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-12-09T13:00:30.000Z
+// Structure last updated: 2025-12-09T13:00:30.000Z
 //
 // *******************************************************
 
@@ -150,6 +155,12 @@ export const Info = {
   provider_name: "ParkerenGebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/adw6-9hsg",
+  category: "Parkeren",
+  tags: ["parkeren", "tabel", "gebied"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-12-09T13:00:30.000Z",
+  metadata_updated_at: "2025-12-09T13:00:30.000Z",
 } as const;
 
 /**
@@ -163,6 +174,14 @@ export const Info = {
  * **Dataset ID:** adw6-9hsg
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** parkeren, tabel, gebied
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-12-09T13:00:30.000Z
+ *
+ * **Structure last updated:** 2025-12-09T13:00:30.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: GEBIED dataset.
@@ -199,9 +218,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** parkeren, tabel, gebied
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** adw6-9hsg
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg
+ *
+ * **Published:** 2025-12-09T13:00:30.000Z
+ *
+ * **Structure last updated:** 2025-12-09T13:00:30.000Z
  *
  * @example
  * ```ts

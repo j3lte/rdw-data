@@ -5,10 +5,15 @@
 // Overzicht van de door RDW erkende bedrijven.
 //
 // Category: Erkende bedrijven
+// Tags: erkende bedrijven
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha
 // Permalink: https://opendata.rdw.nl/d/5k74-3jha
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-08-13T06:28:19.000Z
+// Structure last updated: 2026-01-30T09:38:55.000Z
 //
 // *******************************************************
 
@@ -215,6 +220,12 @@ export const Info = {
   provider_name: "ErkendeBedrijven",
   url: "https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/5k74-3jha",
+  category: "Erkende bedrijven",
+  tags: ["erkende bedrijven"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-08-13T06:28:19.000Z",
+  metadata_updated_at: "2026-01-30T09:38:55.000Z",
 } as const;
 
 /**
@@ -228,6 +239,14 @@ export const Info = {
  * **Dataset ID:** 5k74-3jha
  *
  * **Category:** Erkende bedrijven
+ *
+ * **Tags:** erkende bedrijven
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-08-13T06:28:19.000Z
+ *
+ * **Structure last updated:** 2026-01-30T09:38:55.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Erkende Bedrijven dataset.
@@ -264,9 +283,17 @@ export const RDWQuery = (
  *
  * **Category:** Erkende bedrijven
  *
+ * **Tags:** erkende bedrijven
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 5k74-3jha
  *
  * **URL:** https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha
+ *
+ * **Published:** 2024-08-13T06:28:19.000Z
+ *
+ * **Structure last updated:** 2026-01-30T09:38:55.000Z
  *
  * @example
  * ```ts

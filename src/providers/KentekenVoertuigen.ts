@@ -3,10 +3,15 @@
 // Name: Open Data RDW: Gekentekende_voertuigen
 //
 // Category: Voertuigen
+// Tags: kenteken
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2
 // Permalink: https://opendata.rdw.nl/d/m9d7-ebf2
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2025-07-16T16:11:01.000Z
+// Structure last updated: 2026-02-26T08:29:19.000Z
 //
 // *******************************************************
 
@@ -1757,6 +1762,12 @@ export const Info = {
   provider_name: "KentekenVoertuigen",
   url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/m9d7-ebf2",
+  category: "Voertuigen",
+  tags: ["kenteken"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-07-16T16:11:01.000Z",
+  metadata_updated_at: "2026-02-26T08:29:19.000Z",
 } as const;
 
 /**
@@ -1769,6 +1780,14 @@ export const Info = {
  * **Dataset ID:** m9d7-ebf2
  *
  * **Category:** Voertuigen
+ *
+ * **Tags:** kenteken
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-07-16T16:11:01.000Z
+ *
+ * **Structure last updated:** 2026-02-26T08:29:19.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Gekentekende_voertuigen dataset.
@@ -1804,9 +1823,17 @@ export const RDWQuery = (
  *
  * **Category:** Voertuigen
  *
+ * **Tags:** kenteken
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** m9d7-ebf2
  *
  * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2
+ *
+ * **Published:** 2025-07-16T16:11:01.000Z
+ *
+ * **Structure last updated:** 2026-02-26T08:29:19.000Z
  *
  * @example
  * ```ts

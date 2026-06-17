@@ -5,10 +5,15 @@
 // GEO Data laag met Park en Ride locaties.
 //
 // Category: Parkeren
+// Tags:
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/GEO-PenR/6wzd-evwu
 // Permalink: https://opendata.rdw.nl/d/6wzd-evwu
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2017-04-19T19:59:05.000Z
+// Structure last updated: 2025-03-03T02:09:00.000Z
 //
 // *******************************************************
 
@@ -232,6 +237,12 @@ export const Info = {
   provider_name: "GeoPenr",
   url: "https://opendata.rdw.nl/Parkeren/GEO-PenR/6wzd-evwu",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/6wzd-evwu",
+  category: "Parkeren",
+  tags: [],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2017-04-19T19:59:05.000Z",
+  metadata_updated_at: "2025-03-03T02:09:00.000Z",
 } as const;
 
 /**
@@ -245,6 +256,14 @@ export const Info = {
  * **Dataset ID:** 6wzd-evwu
  *
  * **Category:** Parkeren
+ *
+ * **Tags:**
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2017-04-19T19:59:05.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:09:00.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the GEO PenR dataset.
@@ -281,9 +300,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:**
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 6wzd-evwu
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/GEO-PenR/6wzd-evwu
+ *
+ * **Published:** 2017-04-19T19:59:05.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:09:00.000Z
  *
  * @example
  * ```ts

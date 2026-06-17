@@ -5,10 +5,15 @@
 // Een periode waarin een parkeergebied, -garage of -terrein open (in bedrijf) is. Dit is niet de openingstijd op een bepaalde dag.
 //
 // Category: Parkeren
+// Tags: open, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-OPEN/figd-gux7
 // Permalink: https://opendata.rdw.nl/d/figd-gux7
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T15:26:19.000Z
+// Structure last updated: 2025-03-03T02:13:37.000Z
 //
 // *******************************************************
 
@@ -192,6 +197,12 @@ export const Info = {
   provider_name: "ParkerenParkingOpen",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-OPEN/figd-gux7",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/figd-gux7",
+  category: "Parkeren",
+  tags: ["open", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:26:19.000Z",
+  metadata_updated_at: "2025-03-03T02:13:37.000Z",
 } as const;
 
 /**
@@ -205,6 +216,14 @@ export const Info = {
  * **Dataset ID:** figd-gux7
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** open, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:26:19.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:13:37.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: PARKING OPEN dataset.
@@ -241,9 +260,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** open, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** figd-gux7
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-OPEN/figd-gux7
+ *
+ * **Published:** 2025-02-05T15:26:19.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:13:37.000Z
  *
  * @example
  * ```ts

@@ -95,7 +95,8 @@ These are auto generated providers and use `soda-query@0.5.0`.
 | `BrandstoffenOpPc4`                         | [Brandstoffen_op_PC4](https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d)                                                                               | Unknown           |
 | `ErkendeBedrijven`                          | [Open Data RDW: Erkende Bedrijven](https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha)                                            | Erkende bedrijven |
 | `Erkenningen`                               | [Open Data RDW: Erkenningen](https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz)                                                        | Erkende bedrijven |
-| `Gebieden`                                  | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd)                                                                                                    | Parkeren          |
+| `Gebieden1`                                 | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd)                                                                                                    | Parkeren          |
+| `Gebieden2`                                 | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw)                                                                                                    | Parkeren          |
 | `Gebreken`                                  | [Open Data RDW: Gebreken](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Gebreken/hx2c-gt7k)                                                                      | Keuringen         |
 | `GeconstateerdeGebreken`                    | [Open Data RDW: Geconstateerde Gebreken](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps)                                        | Keuringen         |
 | `GeoCarpool`                                | [GEO Carpool](https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx)                                                                                              | Parkeren          |
@@ -111,7 +112,8 @@ These are auto generated providers and use `soda-query@0.5.0`.
 | `KentekenVoertuigenSubcategorieVoertuig`    | [Open Data RDW: Gekentekende_voertuigen_subcategorie_voertuig](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_subcategorie/2ba7-embk)    | Voertuigen        |
 | `KentekenVoertuigenVoertuigklasse`          | [Open Data RDW: Gekentekende_voertuigen_voertuigklasse](https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_voertuigklas/kmfi-hrps)           | Voertuigen        |
 | `Keuringen`                                 | [Open Data RDW: Keuringen](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Keuringen/vkij-7mwc)                                                                    | Keuringen         |
-| `Locaties`                                  | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy)                                                                                                    | Parkeren          |
+| `Locaties1`                                 | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy)                                                                                                    | Parkeren          |
+| `Locaties2`                                 | [Locaties](https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5)                                                                                                    | Parkeren          |
 | `MeldingenKeuringsinstantie`                | [Open Data RDW: Meldingen Keuringsinstantie](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Meldingen-Keuringsinstantie/sgfe-77wx)                                | Keuringen         |
 | `ParkerenBetaalmethodeGebied`               | [Open Data Parkeren: BETAALMETHODE GEBIED](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5)                                     | Parkeren          |
 | `ParkerenBetaalmethodeVerkooppunt`          | [Open Data Parkeren: BETAALMETHODE VERKOOPPUNT](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx)                           | Parkeren          |
@@ -224,11 +226,11 @@ Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Erkenning
 
 </details>
 
-<details><summary>Gebieden</summary>
+<details><summary>Gebieden1</summary>
 
 ### API
 
-Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Gebieden)
+Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Gebieden1)
 
 ### Fields
 
@@ -282,6 +284,67 @@ Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Gebieden)
 | `UsageId`    | `usage_id`    | UsageId       | Text         |
 
 **Link:** https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
+
+</details>
+
+<details><summary>Gebieden2</summary>
+
+### API
+
+Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Gebieden2)
+
+### Fields
+
+| Name         | Field         | Readable Name | Type         |
+| ------------ | ------------- | ------------- | ------------ |
+| `N01Naam`    | `_01_naam`    | 01_NAAM       | Text         |
+| `N02Code`    | `_02_code`    | 02_CODE       | Text         |
+| `N03Url`     | `_03_url`     | 03_URL        | Text         |
+| `N04Uuid`    | `_04_uuid`    | 04_UUID       | Text         |
+| `N05Gebcode` | `_05_gebcode` | 05_GEBCODE    | Text         |
+| `N06Geboms`  | `_06_geboms`  | 06_GEBOMS     | Text         |
+| `N07Regcode` | `_07_regcode` | 07_REGCODE    | Text         |
+| `N08Regoms`  | `_08_regoms`  | 08_REGOMS     | Text         |
+| `N09Prijs`   | `_09_prijs`   | 09_PRIJS      | Text         |
+| `N10SrtReg`  | `_10_srt_reg` | 10_SRT_REG    | Text         |
+| `N11Ma`      | `_11_ma`      | 11_MA         | Text         |
+| `N12Di`      | `_12_di`      | 12_DI         | Text         |
+| `N13Wo`      | `_13_wo`      | 13_WO         | Text         |
+| `N14Do`      | `_14_do`      | 14_DO         | Text         |
+| `N15Vr`      | `_15_vr`      | 15_VR         | Text         |
+| `N16Za`      | `_16_za`      | 16_ZA         | Text         |
+| `N17Zo`      | `_17_zo`      | 17_ZO         | Text         |
+| `N18Maximum` | `_18_maximum` | 18_MAXIMUM    | Text         |
+| `N19ParkPl`  | `_19_park_pl` | 19_PARK_PL    | Text         |
+| `N20Oplaadp` | `_20_oplaadp` | 20_OPLAADP    | Text         |
+| `N21Rolst`   | `_21_rolst`   | 21_ROLST      | Text         |
+| `N22Hoogte`  | `_22_hoogte`  | 22_HOOGTE     | Text         |
+| `N23VoetgI`  | `_23_voetg_i` | 23_VOETG_I    | Text         |
+| `N24VoetgU`  | `_24_voetg_u` | 24_VOETG_U    | Text         |
+| `N25VrtgI`   | `_25_vrtg_i`  | 25_VRTG_I     | Text         |
+| `N26VrtgU`   | `_26_vrtg_u`  | 26_VRTG_U     | Text         |
+| `N27UitInd`  | `_27_uit_ind` | 27_UIT_IND    | Text         |
+| `N28Jaarope` | `_28_jaarope` | 28_JAAROPE    | Text         |
+| `N29Betaal`  | `_29_betaal`  | 29_BETAAL     | Text         |
+| `N30Naam`    | `_30_naam`    | 30_NAAM       | Text         |
+| `N31Functie` | `_31_functie` | 31_FUNCTIE    | Text         |
+| `N32Tel`     | `_32_tel`     | 32_TEL        | Text         |
+| `N33EMail`   | `_33_e_mail`  | 33_E_MAIL     | Text         |
+| `N34Open`    | `_34_open`    | 34_OPEN       | Text         |
+| `N35Vrij`    | `_35_vrij`    | 35_VRIJ       | Text         |
+| `N36Vrijopl` | `_36_vrijopl` | 36_VRIJOPL    | Text         |
+| `N37Vol`     | `_37_vol`     | 37_VOL        | Text         |
+| `Issues`     | `_issues___`  | _issues___    | Text         |
+| `Issues00`   | `_issues_00`  | _issues_00    | Text         |
+| `Issues01`   | `_issues_01`  | _issues_01    | Text         |
+| `Issues02`   | `_issues_02`  | _issues_02    | Text         |
+| `ActueleInf` | `actuele_inf` | ActueleInf    | Text         |
+| `LocationRe` | `location_re` | LocationRe    | Text         |
+| `SocrataId`  | `socrata_id`  | socrata_id    | Text         |
+| `TheGeom`    | `the_geom`    | the_geom      | MultiPolygon |
+| `UsageId`    | `usage_id`    | UsageId       | Text         |
+
+**Link:** https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
 
 </details>
 
@@ -747,11 +810,11 @@ Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Keuringen
 
 </details>
 
-<details><summary>Locaties</summary>
+<details><summary>Locaties1</summary>
 
 ### API
 
-Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Locaties)
+Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Locaties1)
 
 ### Fields
 
@@ -806,6 +869,68 @@ Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Locaties)
 | `UsageId`    | `usage_id`    | UsageId       | Text  |
 
 **Link:** https://opendata.rdw.nl/Parkeren/Locaties/gfb5-nkdy
+
+</details>
+
+<details><summary>Locaties2</summary>
+
+### API
+
+Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Locaties2)
+
+### Fields
+
+| Name         | Field         | Readable Name | Type  |
+| ------------ | ------------- | ------------- | ----- |
+| `N01Naam`    | `_01_naam`    | 01_NAAM       | Text  |
+| `N02Code`    | `_02_code`    | 02_CODE       | Text  |
+| `N03Url`     | `_03_url`     | 03_URL        | Text  |
+| `N04Uuid`    | `_04_uuid`    | 04_UUID       | Text  |
+| `N05Gebcode` | `_05_gebcode` | 05_GEBCODE    | Text  |
+| `N06Geboms`  | `_06_geboms`  | 06_GEBOMS     | Text  |
+| `N07Regcode` | `_07_regcode` | 07_REGCODE    | Text  |
+| `N08Regoms`  | `_08_regoms`  | 08_REGOMS     | Text  |
+| `N09Prijs`   | `_09_prijs`   | 09_PRIJS      | Text  |
+| `N10SrtReg`  | `_10_srt_reg` | 10_SRT_REG    | Text  |
+| `N11Ma`      | `_11_ma`      | 11_MA         | Text  |
+| `N12Di`      | `_12_di`      | 12_DI         | Text  |
+| `N13Wo`      | `_13_wo`      | 13_WO         | Text  |
+| `N14Do`      | `_14_do`      | 14_DO         | Text  |
+| `N15Vr`      | `_15_vr`      | 15_VR         | Text  |
+| `N16Za`      | `_16_za`      | 16_ZA         | Text  |
+| `N17Zo`      | `_17_zo`      | 17_ZO         | Text  |
+| `N18Maximum` | `_18_maximum` | 18_MAXIMUM    | Text  |
+| `N19ParkPl`  | `_19_park_pl` | 19_PARK_PL    | Text  |
+| `N20Oplaadp` | `_20_oplaadp` | 20_OPLAADP    | Text  |
+| `N21Rolst`   | `_21_rolst`   | 21_ROLST      | Text  |
+| `N22Hoogte`  | `_22_hoogte`  | 22_HOOGTE     | Text  |
+| `N23VoetgI`  | `_23_voetg_i` | 23_VOETG_I    | Text  |
+| `N24VoetgU`  | `_24_voetg_u` | 24_VOETG_U    | Text  |
+| `N25VrtgI`   | `_25_vrtg_i`  | 25_VRTG_I     | Text  |
+| `N26VrtgU`   | `_26_vrtg_u`  | 26_VRTG_U     | Text  |
+| `N27UitInd`  | `_27_uit_ind` | 27_UIT_IND    | Text  |
+| `N28Jaarope` | `_28_jaarope` | 28_JAAROPE    | Text  |
+| `N29Betaal`  | `_29_betaal`  | 29_BETAAL     | Text  |
+| `N30Naam`    | `_30_naam`    | 30_NAAM       | Text  |
+| `N31Functie` | `_31_functie` | 31_FUNCTIE    | Text  |
+| `N32Tel`     | `_32_tel`     | 32_TEL        | Text  |
+| `N33EMail`   | `_33_e_mail`  | 33_E_MAIL     | Text  |
+| `N34Open`    | `_34_open`    | 34_OPEN       | Text  |
+| `N35Vrij`    | `_35_vrij`    | 35_VRIJ       | Text  |
+| `N36Vrijopl` | `_36_vrijopl` | 36_VRIJOPL    | Text  |
+| `N37Vol`     | `_37_vol`     | 37_VOL        | Text  |
+| `Issues`     | `_issues___`  | _issues___    | Text  |
+| `Issues00`   | `_issues_00`  | _issues_00    | Text  |
+| `Issues01`   | `_issues_01`  | _issues_01    | Text  |
+| `Issues02`   | `_issues_02`  | _issues_02    | Text  |
+| `ActueleInf` | `actuele_inf` | ActueleInf    | Text  |
+| `Location00` | `location_00` | Location00    | Text  |
+| `LocationRe` | `location_re` | LocationRe    | Text  |
+| `SocrataId`  | `socrata_id`  | socrata_id    | Text  |
+| `TheGeom`    | `the_geom`    | the_geom      | Point |
+| `UsageId`    | `usage_id`    | UsageId       | Text  |
+
+**Link:** https://opendata.rdw.nl/Parkeren/Locaties/3rhp-hrx5
 
 </details>
 

@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Basis Uitvoering
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Basis-Uitvoering/byxc-wwua
 // Permalink: https://opendata.rdw.nl/d/byxc-wwua
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-09-09T10:18:20.000Z
+// Structure last updated: 2025-03-17T14:23:17.000Z
 //
 // *******************************************************
 
@@ -859,6 +864,12 @@ export const Info = {
   provider_name: "TgkBasisUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Basis-Uitvoering/byxc-wwua",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/byxc-wwua",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-09-09T10:18:20.000Z",
+  metadata_updated_at: "2025-03-17T14:23:17.000Z",
 } as const;
 
 /**
@@ -871,6 +882,14 @@ export const Info = {
  * **Dataset ID:** byxc-wwua
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-09-09T10:18:20.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:23:17.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Basis Uitvoering dataset.
@@ -906,9 +925,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** byxc-wwua
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Basis-Uitvoering/byxc-wwua
+ *
+ * **Published:** 2024-09-09T10:18:20.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:23:17.000Z
  *
  * @example
  * ```ts

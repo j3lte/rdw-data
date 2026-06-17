@@ -5,10 +5,15 @@
 // Een adres van een gebiedsbeheerder of een in- of uitgang van een parkeergebied.
 //
 // Category: Parkeren
+// Tags: adres, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERADRES/ygq4-hh5q
 // Permalink: https://opendata.rdw.nl/d/ygq4-hh5q
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T15:15:42.000Z
+// Structure last updated: 2025-03-03T02:11:09.000Z
 //
 // *******************************************************
 
@@ -297,6 +302,12 @@ export const Info = {
   provider_name: "ParkerenParkeeradres",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERADRES/ygq4-hh5q",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ygq4-hh5q",
+  category: "Parkeren",
+  tags: ["adres", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:15:42.000Z",
+  metadata_updated_at: "2025-03-03T02:11:09.000Z",
 } as const;
 
 /**
@@ -310,6 +321,14 @@ export const Info = {
  * **Dataset ID:** ygq4-hh5q
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** adres, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:15:42.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:11:09.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: PARKEERADRES dataset.
@@ -346,9 +365,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** adres, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** ygq4-hh5q
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERADRES/ygq4-hh5q
+ *
+ * **Published:** 2025-02-05T15:15:42.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:11:09.000Z
  *
  * @example
  * ```ts

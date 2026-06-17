@@ -5,10 +5,15 @@
 // De berekeningswijze waarmee het bedrag van een recht wordt bepaald. Elke gebiedsbeheerder kan zijn eigen voorgedefinieerde tarieven aanleggen.
 //
 // Category: Parkeren
+// Tags: tariefberekening, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFBEREKENING/nfzq-8g7y
 // Permalink: https://opendata.rdw.nl/d/nfzq-8g7y
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2025-02-05T15:39:39.000Z
+// Structure last updated: 2025-03-03T02:15:50.000Z
 //
 // *******************************************************
 
@@ -192,6 +197,12 @@ export const Info = {
   provider_name: "ParkerenTariefberekening",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFBEREKENING/nfzq-8g7y",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nfzq-8g7y",
+  category: "Parkeren",
+  tags: ["tariefberekening", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:39:39.000Z",
+  metadata_updated_at: "2025-03-03T02:15:50.000Z",
 } as const;
 
 /**
@@ -205,6 +216,14 @@ export const Info = {
  * **Dataset ID:** nfzq-8g7y
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** tariefberekening, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:39:39.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:15:50.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: TARIEFBEREKENING dataset.
@@ -241,9 +260,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** tariefberekening, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** nfzq-8g7y
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFBEREKENING/nfzq-8g7y
+ *
+ * **Published:** 2025-02-05T15:39:39.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:15:50.000Z
  *
  * @example
  * ```ts

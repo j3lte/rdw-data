@@ -5,10 +5,15 @@
 // Een tarief bestaat uit 1 of meerdere tariefdelen. Als er een vast tarief per tijdvak is, ongeacht de parkeerduur, dan is er 1 deel zonder tariefdeel duurbegrenzing. Als het tarief afhankelijk is van de parkeerduur (progressief/degressief tarief), zijn er meerdere tariefdelen, waarvan een aantal qua duur begrensd.
 //
 // Category: Parkeren
+// Tags: parkeren, tariefdeel
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFDEEL/534e-5vdg
 // Permalink: https://opendata.rdw.nl/d/534e-5vdg
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T15:42:05.000Z
+// Structure last updated: 2025-03-03T02:16:09.000Z
 //
 // *******************************************************
 
@@ -234,6 +239,12 @@ export const Info = {
   provider_name: "ParkerenTariefdeel",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFDEEL/534e-5vdg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/534e-5vdg",
+  category: "Parkeren",
+  tags: ["parkeren", "tariefdeel"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:42:05.000Z",
+  metadata_updated_at: "2025-03-03T02:16:09.000Z",
 } as const;
 
 /**
@@ -247,6 +258,14 @@ export const Info = {
  * **Dataset ID:** 534e-5vdg
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** parkeren, tariefdeel
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:42:05.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:16:09.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: TARIEFDEEL dataset.
@@ -283,9 +302,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** parkeren, tariefdeel
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 534e-5vdg
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFDEEL/534e-5vdg
+ *
+ * **Published:** 2025-02-05T15:42:05.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:16:09.000Z
  *
  * @example
  * ```ts

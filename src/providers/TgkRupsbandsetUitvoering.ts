@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Rupsbandset Uitvoering
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Rupsbandset-Uitvoering/xn6e-huse
 // Permalink: https://opendata.rdw.nl/d/xn6e-huse
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-04-16T14:32:56.000Z
+// Structure last updated: 2025-03-17T14:48:59.000Z
 //
 // *******************************************************
 
@@ -196,6 +201,12 @@ export const Info = {
   provider_name: "TgkRupsbandsetUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Rupsbandset-Uitvoering/xn6e-huse",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/xn6e-huse",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-04-16T14:32:56.000Z",
+  metadata_updated_at: "2025-03-17T14:48:59.000Z",
 } as const;
 
 /**
@@ -208,6 +219,14 @@ export const Info = {
  * **Dataset ID:** xn6e-huse
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-04-16T14:32:56.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:48:59.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Rupsbandset Uitvoering dataset.
@@ -243,9 +262,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** xn6e-huse
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Rupsbandset-Uitvoering/xn6e-huse
+ *
+ * **Published:** 2024-04-16T14:32:56.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:48:59.000Z
  *
  * @example
  * ```ts

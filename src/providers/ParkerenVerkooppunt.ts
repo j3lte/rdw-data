@@ -6,10 +6,15 @@
 // Een voor de hand liggend voorbeeld is een parkeerautomaat, die zich in één specifiek gebied bevindt. Deze entiteit is opgenomen omdat parkeerautomaten een eigen identificatie (uniek in heel Nederland dankzij afspraken tussen providers) hebben die in de berichten doorgegeven kan worden. Via dit SellingPointID kan bepaald worden in welk gebied de automaat zich bevindt en voor welk gebied het recht is verworven.
 //
 // Category: Parkeren
+// Tags: verkooppunt, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-VERKOOPPUNT/fk68-nf2y
 // Permalink: https://opendata.rdw.nl/d/fk68-nf2y
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T16:02:05.000Z
+// Structure last updated: 2025-03-03T02:17:54.000Z
 //
 // *******************************************************
 
@@ -193,6 +198,12 @@ export const Info = {
   provider_name: "ParkerenVerkooppunt",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-VERKOOPPUNT/fk68-nf2y",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/fk68-nf2y",
+  category: "Parkeren",
+  tags: ["verkooppunt", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T16:02:05.000Z",
+  metadata_updated_at: "2025-03-03T02:17:54.000Z",
 } as const;
 
 /**
@@ -207,6 +218,14 @@ export const Info = {
  * **Dataset ID:** fk68-nf2y
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** verkooppunt, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T16:02:05.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:17:54.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: VERKOOPPUNT dataset.
@@ -244,9 +263,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** verkooppunt, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** fk68-nf2y
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-VERKOOPPUNT/fk68-nf2y
+ *
+ * **Published:** 2025-02-05T16:02:05.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:17:54.000Z
  *
  * @example
  * ```ts

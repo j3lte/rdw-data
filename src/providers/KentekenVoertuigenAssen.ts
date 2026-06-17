@@ -3,10 +3,15 @@
 // Name: Open Data RDW: Gekentekende_voertuigen_assen
 //
 // Category: Voertuigen
+// Tags: kenteken, assen
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_assen/3huj-srit
 // Permalink: https://opendata.rdw.nl/d/3huj-srit
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-07-12T13:53:50.000Z
+// Structure last updated: 2025-03-25T22:28:12.000Z
 //
 // *******************************************************
 
@@ -383,6 +388,12 @@ export const Info = {
   provider_name: "KentekenVoertuigenAssen",
   url: "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_assen/3huj-srit",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/3huj-srit",
+  category: "Voertuigen",
+  tags: ["kenteken", "assen"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-07-12T13:53:50.000Z",
+  metadata_updated_at: "2025-03-25T22:28:12.000Z",
 } as const;
 
 /**
@@ -395,6 +406,14 @@ export const Info = {
  * **Dataset ID:** 3huj-srit
  *
  * **Category:** Voertuigen
+ *
+ * **Tags:** kenteken, assen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-07-12T13:53:50.000Z
+ *
+ * **Structure last updated:** 2025-03-25T22:28:12.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Gekentekende_voertuigen_assen dataset.
@@ -430,9 +449,17 @@ export const RDWQuery = (
  *
  * **Category:** Voertuigen
  *
+ * **Tags:** kenteken, assen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 3huj-srit
  *
  * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_assen/3huj-srit
+ *
+ * **Published:** 2024-07-12T13:53:50.000Z
+ *
+ * **Structure last updated:** 2025-03-25T22:28:12.000Z
  *
  * @example
  * ```ts

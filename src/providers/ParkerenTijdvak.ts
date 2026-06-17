@@ -5,10 +5,15 @@
 // Een deel van een benoemd etmaal waarin een bepaalde regeling van toepassing is. In een etmaal kan voor nul, een of meerdere tijdvakken worden geregistreerd welk tarief van toepassing is en kunnen andere aspecten van een regeling worden vastgelegd. Tijdvakken mogen niet overlappen, maar tijdvakken hoeven niet aaneen te sluiten. Voor die gedeelten van het etmaal waarvoor geen tijdvak is, geldt dat volgens de regeling het recht geen tarief heeft, bv. overdag betaald parkeren, maar 's avonds en 's nachts gratis.
 //
 // Category: Parkeren
+// Tags: tijdvak, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TIJDVAK/ixf8-gtwq
 // Permalink: https://opendata.rdw.nl/d/ixf8-gtwq
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T15:53:05.000Z
+// Structure last updated: 2025-03-24T12:16:27.000Z
 //
 // *******************************************************
 
@@ -293,6 +298,12 @@ export const Info = {
   provider_name: "ParkerenTijdvak",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TIJDVAK/ixf8-gtwq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ixf8-gtwq",
+  category: "Parkeren",
+  tags: ["tijdvak", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:53:05.000Z",
+  metadata_updated_at: "2025-03-24T12:16:27.000Z",
 } as const;
 
 /**
@@ -306,6 +317,14 @@ export const Info = {
  * **Dataset ID:** ixf8-gtwq
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** tijdvak, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:53:05.000Z
+ *
+ * **Structure last updated:** 2025-03-24T12:16:27.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: TIJDVAK dataset.
@@ -342,9 +361,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** tijdvak, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** ixf8-gtwq
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TIJDVAK/ixf8-gtwq
+ *
+ * **Published:** 2025-02-05T15:53:05.000Z
+ *
+ * **Structure last updated:** 2025-03-24T12:16:27.000Z
  *
  * @example
  * ```ts

@@ -5,10 +5,15 @@
 // GEO Data laag met Parkeer Garage locaties.
 //
 // Category: Parkeren
+// Tags:
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/GEO-Parkeer-Garages/t5pc-eb34
 // Permalink: https://opendata.rdw.nl/d/t5pc-eb34
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2017-04-21T11:41:32.000Z
+// Structure last updated: 2025-03-03T02:07:24.000Z
 //
 // *******************************************************
 
@@ -232,6 +237,12 @@ export const Info = {
   provider_name: "GeoParkeerGarages",
   url: "https://opendata.rdw.nl/Parkeren/GEO-Parkeer-Garages/t5pc-eb34",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/t5pc-eb34",
+  category: "Parkeren",
+  tags: [],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2017-04-21T11:41:32.000Z",
+  metadata_updated_at: "2025-03-03T02:07:24.000Z",
 } as const;
 
 /**
@@ -245,6 +256,14 @@ export const Info = {
  * **Dataset ID:** t5pc-eb34
  *
  * **Category:** Parkeren
+ *
+ * **Tags:**
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2017-04-21T11:41:32.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:07:24.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the GEO Parkeer Garages dataset.
@@ -281,9 +300,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:**
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** t5pc-eb34
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/GEO-Parkeer-Garages/t5pc-eb34
+ *
+ * **Published:** 2017-04-21T11:41:32.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:07:24.000Z
  *
  * @example
  * ```ts

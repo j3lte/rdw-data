@@ -3,10 +3,15 @@
 // Name: Brandstoffen_op_PC4
 //
 // Category: Unknown
+// Tags:
+// License: Unknown
+// License (RDW): Unknown
 // Link: https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d
 // Permalink: https://opendata.rdw.nl/d/8wbe-pu7d
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2025-04-23T12:26:12.000Z
+// Structure last updated: 2025-04-23T12:26:12.000Z
 //
 // *******************************************************
 
@@ -128,6 +133,12 @@ export const Info = {
   provider_name: "BrandstoffenOpPc4",
   url: "https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/8wbe-pu7d",
+  category: "Unknown",
+  tags: [],
+  license: "Unknown",
+  license_detail: "Unknown",
+  publication_date: "2025-04-23T12:26:12.000Z",
+  metadata_updated_at: "2025-04-23T12:26:12.000Z",
 } as const;
 
 /**
@@ -140,6 +151,14 @@ export const Info = {
  * **Dataset ID:** 8wbe-pu7d
  *
  * **Category:** Unknown
+ *
+ * **Tags:**
+ *
+ * **License:** Unknown (Unknown)
+ *
+ * **Published:** 2025-04-23T12:26:12.000Z
+ *
+ * **Structure last updated:** 2025-04-23T12:26:12.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Brandstoffen_op_PC4 dataset.
@@ -175,9 +194,17 @@ export const RDWQuery = (
  *
  * **Category:** Unknown
  *
+ * **Tags:**
+ *
+ * **License:** Unknown (Unknown)
+ *
  * **Dataset ID:** 8wbe-pu7d
  *
  * **URL:** https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d
+ *
+ * **Published:** 2025-04-23T12:26:12.000Z
+ *
+ * **Structure last updated:** 2025-04-23T12:26:12.000Z
  *
  * @example
  * ```ts

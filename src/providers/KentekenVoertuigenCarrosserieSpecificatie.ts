@@ -3,10 +3,15 @@
 // Name: Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie
 //
 // Category: Voertuigen
+// Tags: kenteken, carrosserie
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie_/jhie-znh9
 // Permalink: https://opendata.rdw.nl/d/jhie-znh9
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-05-28T14:45:21.000Z
+// Structure last updated: 2025-03-05T18:20:11.000Z
 //
 // *******************************************************
 
@@ -145,6 +150,12 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie_/jhie-znh9",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/jhie-znh9",
+  category: "Voertuigen",
+  tags: ["kenteken", "carrosserie"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-05-28T14:45:21.000Z",
+  metadata_updated_at: "2025-03-05T18:20:11.000Z",
 } as const;
 
 /**
@@ -157,6 +168,14 @@ export const Info = {
  * **Dataset ID:** jhie-znh9
  *
  * **Category:** Voertuigen
+ *
+ * **Tags:** kenteken, carrosserie
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-05-28T14:45:21.000Z
+ *
+ * **Structure last updated:** 2025-03-05T18:20:11.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Gekentekende_voertuigen_carrosserie_specificatie dataset.
@@ -197,9 +216,17 @@ export const RDWQuery = (
  *
  * **Category:** Voertuigen
  *
+ * **Tags:** kenteken, carrosserie
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** jhie-znh9
  *
  * **URL:** https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_carrosserie_/jhie-znh9
+ *
+ * **Published:** 2024-05-28T14:45:21.000Z
+ *
+ * **Structure last updated:** 2025-03-05T18:20:11.000Z
  *
  * @example
  * ```ts

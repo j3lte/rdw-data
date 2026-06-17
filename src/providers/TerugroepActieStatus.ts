@@ -3,10 +3,15 @@
 // Name: Open Data RDW: Terugroep_actie_status
 //
 // Category: Terugroepacties
+// Tags: terugroep, status, voertuigen, recall
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_status/t49b-isb7
 // Permalink: https://opendata.rdw.nl/d/t49b-isb7
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-10-02T11:43:44.000Z
+// Structure last updated: 2026-01-08T13:33:57.000Z
 //
 // *******************************************************
 
@@ -137,6 +142,12 @@ export const Info = {
   provider_name: "TerugroepActieStatus",
   url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_status/t49b-isb7",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/t49b-isb7",
+  category: "Terugroepacties",
+  tags: ["terugroep", "status", "voertuigen", "recall"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-10-02T11:43:44.000Z",
+  metadata_updated_at: "2026-01-08T13:33:57.000Z",
 } as const;
 
 /**
@@ -149,6 +160,14 @@ export const Info = {
  * **Dataset ID:** t49b-isb7
  *
  * **Category:** Terugroepacties
+ *
+ * **Tags:** terugroep, status, voertuigen, recall
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-10-02T11:43:44.000Z
+ *
+ * **Structure last updated:** 2026-01-08T13:33:57.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Terugroep_actie_status dataset.
@@ -184,9 +203,17 @@ export const RDWQuery = (
  *
  * **Category:** Terugroepacties
  *
+ * **Tags:** terugroep, status, voertuigen, recall
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** t49b-isb7
  *
  * **URL:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_status/t49b-isb7
+ *
+ * **Published:** 2024-10-02T11:43:44.000Z
+ *
+ * **Structure last updated:** 2026-01-08T13:33:57.000Z
  *
  * @example
  * ```ts

@@ -5,10 +5,15 @@
 // Tabel met geografische informatie van een verkooppunt.
 //
 // Category: Parkeren
+// Tags: locatie, verkooppunt, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEO-VERKOOPPUNT/cgqw-pfbp
 // Permalink: https://opendata.rdw.nl/d/cgqw-pfbp
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-04-10T07:36:41.000Z
+// Structure last updated: 2026-04-08T08:41:42.000Z
 //
 // *******************************************************
 
@@ -167,6 +172,12 @@ export const Info = {
   provider_name: "ParkerenGeoVerkooppunt",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEO-VERKOOPPUNT/cgqw-pfbp",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/cgqw-pfbp",
+  category: "Parkeren",
+  tags: ["locatie", "verkooppunt", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-04-10T07:36:41.000Z",
+  metadata_updated_at: "2026-04-08T08:41:42.000Z",
 } as const;
 
 /**
@@ -180,6 +191,14 @@ export const Info = {
  * **Dataset ID:** cgqw-pfbp
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** locatie, verkooppunt, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-04-10T07:36:41.000Z
+ *
+ * **Structure last updated:** 2026-04-08T08:41:42.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: GEO VERKOOPPUNT dataset.
@@ -216,9 +235,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** locatie, verkooppunt, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** cgqw-pfbp
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEO-VERKOOPPUNT/cgqw-pfbp
+ *
+ * **Published:** 2025-04-10T07:36:41.000Z
+ *
+ * **Structure last updated:** 2026-04-08T08:41:42.000Z
  *
  * @example
  * ```ts

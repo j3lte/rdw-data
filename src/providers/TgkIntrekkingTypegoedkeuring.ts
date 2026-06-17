@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Intrekking Typegoedkeuring
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Intrekking-Typegoedkeuring/9s6a-b42z
 // Permalink: https://opendata.rdw.nl/d/9s6a-b42z
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-04-16T14:29:10.000Z
+// Structure last updated: 2025-03-17T14:29:52.000Z
 //
 // *******************************************************
 
@@ -112,6 +117,12 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Intrekking-Typegoedkeuring/9s6a-b42z",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/9s6a-b42z",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-04-16T14:29:10.000Z",
+  metadata_updated_at: "2025-03-17T14:29:52.000Z",
 } as const;
 
 /**
@@ -124,6 +135,14 @@ export const Info = {
  * **Dataset ID:** 9s6a-b42z
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-04-16T14:29:10.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:29:52.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Intrekking Typegoedkeuring dataset.
@@ -164,9 +183,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** 9s6a-b42z
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Intrekking-Typegoedkeuring/9s6a-b42z
+ *
+ * **Published:** 2024-04-16T14:29:10.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:29:52.000Z
  *
  * @example
  * ```ts

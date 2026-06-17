@@ -5,10 +5,15 @@
 // Regeling of regelingen die op een gebied van toepassing zijn. Op een bepaald moment is op één gebied maar één regeling van toepassing, maar de regeling die van toepassing is op een gebied, kan periodiek veranderen
 //
 // Category: Parkeren
+// Tags: gebied, regeling, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED-REGELING/qtex-qwd8
 // Permalink: https://opendata.rdw.nl/d/qtex-qwd8
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-12-09T13:05:55.000Z
+// Structure last updated: 2025-12-09T13:05:55.000Z
 //
 // *******************************************************
 
@@ -171,6 +176,12 @@ export const Info = {
   provider_name: "ParkerenGebiedRegeling",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED-REGELING/qtex-qwd8",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/qtex-qwd8",
+  category: "Parkeren",
+  tags: ["gebied", "regeling", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-12-09T13:05:55.000Z",
+  metadata_updated_at: "2025-12-09T13:05:55.000Z",
 } as const;
 
 /**
@@ -184,6 +195,14 @@ export const Info = {
  * **Dataset ID:** qtex-qwd8
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** gebied, regeling, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-12-09T13:05:55.000Z
+ *
+ * **Structure last updated:** 2025-12-09T13:05:55.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: GEBIED REGELING dataset.
@@ -220,9 +239,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** gebied, regeling, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** qtex-qwd8
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED-REGELING/qtex-qwd8
+ *
+ * **Published:** 2025-12-09T13:05:55.000Z
+ *
+ * **Structure last updated:** 2025-12-09T13:05:55.000Z
  *
  * @example
  * ```ts

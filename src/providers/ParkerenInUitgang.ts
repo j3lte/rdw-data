@@ -5,10 +5,15 @@
 // Tabel met informatie over een in- of uitgang (voor voertuigen of personen) van een parkeerfaciliteit.
 //
 // Category: Parkeren
+// Tags: ingang, uitgang, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-IN-UITGANG/c653-u9z2
 // Permalink: https://opendata.rdw.nl/d/c653-u9z2
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T15:12:28.000Z
+// Structure last updated: 2025-03-03T02:10:23.000Z
 //
 // *******************************************************
 
@@ -255,6 +260,12 @@ export const Info = {
   provider_name: "ParkerenInUitgang",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-IN-UITGANG/c653-u9z2",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/c653-u9z2",
+  category: "Parkeren",
+  tags: ["ingang", "uitgang", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:12:28.000Z",
+  metadata_updated_at: "2025-03-03T02:10:23.000Z",
 } as const;
 
 /**
@@ -268,6 +279,14 @@ export const Info = {
  * **Dataset ID:** c653-u9z2
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** ingang, uitgang, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:12:28.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:10:23.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: IN-UITGANG dataset.
@@ -304,9 +323,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** ingang, uitgang, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** c653-u9z2
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-IN-UITGANG/c653-u9z2
+ *
+ * **Published:** 2025-02-05T15:12:28.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:10:23.000Z
  *
  * @example
  * ```ts

@@ -5,10 +5,15 @@
 // Toegangstijden van een parkeergebied, -garage of -terrein. Als een toegang gesloten is kan de uitgang wel open zijn.
 //
 // Category: Parkeren
+// Tags: toegang, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-TOEGANG/edv8-qiyg
 // Permalink: https://opendata.rdw.nl/d/edv8-qiyg
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T15:28:36.000Z
+// Structure last updated: 2025-03-03T02:14:11.000Z
 //
 // *******************************************************
 
@@ -192,6 +197,12 @@ export const Info = {
   provider_name: "ParkerenParkingToegang",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-TOEGANG/edv8-qiyg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/edv8-qiyg",
+  category: "Parkeren",
+  tags: ["toegang", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T15:28:36.000Z",
+  metadata_updated_at: "2025-03-03T02:14:11.000Z",
 } as const;
 
 /**
@@ -205,6 +216,14 @@ export const Info = {
  * **Dataset ID:** edv8-qiyg
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** toegang, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T15:28:36.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:14:11.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: PARKING TOEGANG dataset.
@@ -241,9 +260,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** toegang, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** edv8-qiyg
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-TOEGANG/edv8-qiyg
+ *
+ * **Published:** 2025-02-05T15:28:36.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:14:11.000Z
  *
  * @example
  * ```ts

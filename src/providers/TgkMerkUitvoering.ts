@@ -3,10 +3,15 @@
 // Name: Open Data RDW: TGK Merk Uitvoering
 //
 // Category: Typegoedkeuring
+// Tags: typegoedkeuring
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Merk-Uitvoering/kyri-nuah
 // Permalink: https://opendata.rdw.nl/d/kyri-nuah
 // Owner: BICC
 // Creator: BICC
+// Published: 2024-04-17T08:39:10.000Z
+// Structure last updated: 2025-03-17T14:56:37.000Z
 //
 // *******************************************************
 
@@ -145,6 +150,12 @@ export const Info = {
   provider_name: "TgkMerkUitvoering",
   url: "https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Merk-Uitvoering/kyri-nuah",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/kyri-nuah",
+  category: "Typegoedkeuring",
+  tags: ["typegoedkeuring"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-04-17T08:39:10.000Z",
+  metadata_updated_at: "2025-03-17T14:56:37.000Z",
 } as const;
 
 /**
@@ -157,6 +168,14 @@ export const Info = {
  * **Dataset ID:** kyri-nuah
  *
  * **Category:** Typegoedkeuring
+ *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-04-17T08:39:10.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:56:37.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: TGK Merk Uitvoering dataset.
@@ -192,9 +211,17 @@ export const RDWQuery = (
  *
  * **Category:** Typegoedkeuring
  *
+ * **Tags:** typegoedkeuring
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** kyri-nuah
  *
  * **URL:** https://opendata.rdw.nl/Typegoedkeuring/Open-Data-RDW-TGK-Merk-Uitvoering/kyri-nuah
+ *
+ * **Published:** 2024-04-17T08:39:10.000Z
+ *
+ * **Structure last updated:** 2025-03-17T14:56:37.000Z
  *
  * @example
  * ```ts

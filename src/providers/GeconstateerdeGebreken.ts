@@ -5,10 +5,15 @@
 // In deze set zijn op kenteken niveau geconstateerde gebreken opgenomen.
 //
 // Category: Keuringen
+// Tags: keuringen
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps
 // Permalink: https://opendata.rdw.nl/d/a34c-vvps
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-05-24T16:48:40.000Z
+// Structure last updated: 2025-03-26T01:07:22.000Z
 //
 // *******************************************************
 
@@ -184,6 +189,12 @@ export const Info = {
   provider_name: "GeconstateerdeGebreken",
   url: "https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/a34c-vvps",
+  category: "Keuringen",
+  tags: ["keuringen"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-05-24T16:48:40.000Z",
+  metadata_updated_at: "2025-03-26T01:07:22.000Z",
 } as const;
 
 /**
@@ -197,6 +208,14 @@ export const Info = {
  * **Dataset ID:** a34c-vvps
  *
  * **Category:** Keuringen
+ *
+ * **Tags:** keuringen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-05-24T16:48:40.000Z
+ *
+ * **Structure last updated:** 2025-03-26T01:07:22.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Geconstateerde Gebreken dataset.
@@ -233,9 +252,17 @@ export const RDWQuery = (
  *
  * **Category:** Keuringen
  *
+ * **Tags:** keuringen
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** a34c-vvps
  *
  * **URL:** https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps
+ *
+ * **Published:** 2024-05-24T16:48:40.000Z
+ *
+ * **Structure last updated:** 2025-03-26T01:07:22.000Z
  *
  * @example
  * ```ts

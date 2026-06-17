@@ -5,10 +5,15 @@
 // Een voertuiggerelateerde gereguleerde bestemming van een gebied. Voorbeelden: betaald parkeren, vergunning, blauwe zone, etc.
 //
 // Category: Parkeren
+// Tags: gebruiksdoel, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBRUIKSDOEL/qidm-7mkf
 // Permalink: https://opendata.rdw.nl/d/qidm-7mkf
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2025-02-05T14:51:59.000Z
+// Structure last updated: 2025-03-03T02:05:18.000Z
 //
 // *******************************************************
 
@@ -213,6 +218,12 @@ export const Info = {
   provider_name: "ParkerenGebruiksdoel",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBRUIKSDOEL/qidm-7mkf",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/qidm-7mkf",
+  category: "Parkeren",
+  tags: ["gebruiksdoel", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T14:51:59.000Z",
+  metadata_updated_at: "2025-03-03T02:05:18.000Z",
 } as const;
 
 /**
@@ -226,6 +237,14 @@ export const Info = {
  * **Dataset ID:** qidm-7mkf
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** gebruiksdoel, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T14:51:59.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:05:18.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: GEBRUIKSDOEL dataset.
@@ -262,9 +281,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** gebruiksdoel, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** qidm-7mkf
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBRUIKSDOEL/qidm-7mkf
+ *
+ * **Published:** 2025-02-05T14:51:59.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:05:18.000Z
  *
  * @example
  * ```ts

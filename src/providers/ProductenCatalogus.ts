@@ -3,10 +3,15 @@
 // Name: Open Data RDW: Producten Catalogus
 //
 // Category: Product catalogus
+// Tags: producten catalogus
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km
 // Permalink: https://opendata.rdw.nl/d/v23s-d6km
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2017-12-21T13:38:34.000Z
+// Structure last updated: 2026-01-05T16:09:26.000Z
 //
 // *******************************************************
 
@@ -128,6 +133,12 @@ export const Info = {
   provider_name: "ProductenCatalogus",
   url: "https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/v23s-d6km",
+  category: "Product catalogus",
+  tags: ["producten catalogus"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2017-12-21T13:38:34.000Z",
+  metadata_updated_at: "2026-01-05T16:09:26.000Z",
 } as const;
 
 /**
@@ -140,6 +151,14 @@ export const Info = {
  * **Dataset ID:** v23s-d6km
  *
  * **Category:** Product catalogus
+ *
+ * **Tags:** producten catalogus
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2017-12-21T13:38:34.000Z
+ *
+ * **Structure last updated:** 2026-01-05T16:09:26.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Producten Catalogus dataset.
@@ -175,9 +194,17 @@ export const RDWQuery = (
  *
  * **Category:** Product catalogus
  *
+ * **Tags:** producten catalogus
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** v23s-d6km
  *
  * **URL:** https://opendata.rdw.nl/Product-catalogus/Open-Data-RDW-Producten-Catalogus/v23s-d6km
+ *
+ * **Published:** 2017-12-21T13:38:34.000Z
+ *
+ * **Structure last updated:** 2026-01-05T16:09:26.000Z
  *
  * @example
  * ```ts

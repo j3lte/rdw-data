@@ -3,10 +3,15 @@
 // Name: Open Data RDW: Terugroep_informeren_eigenaar
 //
 // Category: Terugroepacties
+// Tags: terugroep, voertuigen, informeren, eigenaar, recall
+// License: Public Domain
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_informeren_eigenaar/mh8w-8cup
 // Permalink: https://opendata.rdw.nl/d/mh8w-8cup
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2024-10-02T11:24:57.000Z
+// Structure last updated: 2026-01-08T13:43:37.000Z
 //
 // *******************************************************
 
@@ -115,6 +120,12 @@ export const Info = {
   url:
     "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_informeren_eigenaar/mh8w-8cup",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mh8w-8cup",
+  category: "Terugroepacties",
+  tags: ["terugroep", "voertuigen", "informeren", "eigenaar", "recall"],
+  license: "Public Domain",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2024-10-02T11:24:57.000Z",
+  metadata_updated_at: "2026-01-08T13:43:37.000Z",
 } as const;
 
 /**
@@ -127,6 +138,14 @@ export const Info = {
  * **Dataset ID:** mh8w-8cup
  *
  * **Category:** Terugroepacties
+ *
+ * **Tags:** terugroep, voertuigen, informeren, eigenaar, recall
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2024-10-02T11:24:57.000Z
+ *
+ * **Structure last updated:** 2026-01-08T13:43:37.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data RDW: Terugroep_informeren_eigenaar dataset.
@@ -167,9 +186,17 @@ export const RDWQuery = (
  *
  * **Category:** Terugroepacties
  *
+ * **Tags:** terugroep, voertuigen, informeren, eigenaar, recall
+ *
+ * **License:** Public Domain (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** mh8w-8cup
  *
  * **URL:** https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_informeren_eigenaar/mh8w-8cup
+ *
+ * **Published:** 2024-10-02T11:24:57.000Z
+ *
+ * **Structure last updated:** 2026-01-08T13:43:37.000Z
  *
  * @example
  * ```ts

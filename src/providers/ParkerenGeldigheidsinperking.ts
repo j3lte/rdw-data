@@ -5,10 +5,15 @@
 // Een etmaal- en/of tijdvenster dat de geldigheid van een parkeer- of verblijfrecht inperkt. Het einde van een inperking van de geldigheid wordt alleen geregistreerd bij de uitbreiding van het gebied waarvoor dat recht geldt.
 //
 // Category: Parkeren
+// Tags: geldigheidsinperking, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSINPERKING/ynha-fuwp
 // Permalink: https://opendata.rdw.nl/d/ynha-fuwp
 // Owner: Open data team RDW
 // Creator: Open data team RDW
+// Published: 2025-02-05T14:56:53.000Z
+// Structure last updated: 2025-03-03T02:06:04.000Z
 //
 // *******************************************************
 
@@ -258,6 +263,12 @@ export const Info = {
   provider_name: "ParkerenGeldigheidsinperking",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSINPERKING/ynha-fuwp",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ynha-fuwp",
+  category: "Parkeren",
+  tags: ["geldigheidsinperking", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T14:56:53.000Z",
+  metadata_updated_at: "2025-03-03T02:06:04.000Z",
 } as const;
 
 /**
@@ -271,6 +282,14 @@ export const Info = {
  * **Dataset ID:** ynha-fuwp
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** geldigheidsinperking, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T14:56:53.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:06:04.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: GELDIGHEIDSINPERKING dataset.
@@ -312,9 +331,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** geldigheidsinperking, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** ynha-fuwp
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GELDIGHEIDSINPERKING/ynha-fuwp
+ *
+ * **Published:** 2025-02-05T14:56:53.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:06:04.000Z
  *
  * @example
  * ```ts

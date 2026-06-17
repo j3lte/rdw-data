@@ -5,10 +5,15 @@
 // Een mogelijke manier om te betalen voor het parkeren in een parkeergebied, -garage of -terrein.
 //
 // Category: Parkeren
+// Tags: betaalmethode, parkeren
+// License: Unknown
+// License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5
 // Permalink: https://opendata.rdw.nl/d/r3rs-ibz5
 // Owner: Team Open Data RDW
 // Creator: Team Open Data RDW
+// Published: 2025-02-05T12:04:25.000Z
+// Structure last updated: 2025-03-03T02:01:49.000Z
 //
 // *******************************************************
 
@@ -192,6 +197,12 @@ export const Info = {
   provider_name: "ParkerenBetaalmethodeGebied",
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/r3rs-ibz5",
+  category: "Parkeren",
+  tags: ["betaalmethode", "parkeren"],
+  license: "Unknown",
+  license_detail: "Creative Commons 0 (CC0)",
+  publication_date: "2025-02-05T12:04:25.000Z",
+  metadata_updated_at: "2025-03-03T02:01:49.000Z",
 } as const;
 
 /**
@@ -205,6 +216,14 @@ export const Info = {
  * **Dataset ID:** r3rs-ibz5
  *
  * **Category:** Parkeren
+ *
+ * **Tags:** betaalmethode, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
+ * **Published:** 2025-02-05T12:04:25.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:01:49.000Z
  *
  * -----------------------
  * This generates a SodaQuery for the Open Data Parkeren: BETAALMETHODE GEBIED dataset.
@@ -246,9 +265,17 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
+ * **Tags:** betaalmethode, parkeren
+ *
+ * **License:** Unknown (Creative Commons 0 (CC0))
+ *
  * **Dataset ID:** r3rs-ibz5
  *
  * **URL:** https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-GEBIED/r3rs-ibz5
+ *
+ * **Published:** 2025-02-05T12:04:25.000Z
+ *
+ * **Structure last updated:** 2025-03-03T02:01:49.000Z
  *
  * @example
  * ```ts
