@@ -1,13 +1,10 @@
 # RDW Data
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/releases/latest "GitHub release (latest by date)")
-[![NPM Version](https://img.shields.io/npm/v/rdw-data?style=for-the-badge)](https://www.npmjs.com/package/rdw-data "NPM Version")
-[![GitHub Release Date](https://img.shields.io/github/release-date/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/releases/latest "GitHub Release Date")
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/j3lte/rdw-data?style=for-the-badge)
-[![GitHub](https://img.shields.io/github/license/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/blob/main/LICENSE "GitHub License")
-[![GitHub last commit](https://img.shields.io/github/last-commit/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/commits/main "GitHub last commit")
-[![GitHub issues](https://img.shields.io/github/issues/j3lte/rdw-data?style=for-the-badge)](https://github.com/j3lte/rdw-data/issues "Github Issues")
-[![JSR](https://jsr.io/badges/@j3lte/rdw-data?style=for-the-badge)](https://jsr.io/@j3lte/rdw-data "JSR")
+[![NPM Version](https://img.shields.io/npm/v/rdw-data)](https://www.npmjs.com/package/rdw-data "NPM Version")
+[![JSR](https://jsr.io/badges/@j3lte/rdw-data)](https://jsr.io/@j3lte/rdw-data "JSR")
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/j3lte/rdw-data/blob/main/LICENSE "MIT License")
+[![CI](https://github.com/j3lte/rdw-data/actions/workflows/main.yml/badge.svg)](https://github.com/j3lte/rdw-data/actions/workflows/main.yml "CI status")
+[![Release](https://github.com/j3lte/rdw-data/actions/workflows/release.yml/badge.svg)](https://github.com/j3lte/rdw-data/actions/workflows/release.yml "Release status")
 
 This uses the [RDW Open Data](https://opendata.rdw.nl/) API to generate a [SODA API](https://github.com/j3lte/deno-soda) providers for Deno and NodeJS.
 
