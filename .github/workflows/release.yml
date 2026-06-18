@@ -43,6 +43,9 @@ jobs:
       - name: Fetch & update providers
         run: deno task fetch-data
 
+      - name: Type check
+        run: deno check mod.ts
+
       - name: Decide whether to release
         id: gate
         run: |
