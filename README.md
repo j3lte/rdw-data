@@ -95,8 +95,8 @@ These are auto generated providers and use `soda-query@0.5.0`.
 | `BrandstoffenOpPc4`                         | [Brandstoffen_op_PC4](https://opendata.rdw.nl/dataset/Brandstoffen_op_PC4/8wbe-pu7d)                                                                               | Unknown           |
 | `ErkendeBedrijven`                          | [Open Data RDW: Erkende Bedrijven](https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha)                                            | Erkende bedrijven |
 | `Erkenningen`                               | [Open Data RDW: Erkenningen](https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkenningen/nmwb-dqkz)                                                        | Erkende bedrijven |
-| `Gebieden1`                                 | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd)                                                                                                    | Parkeren          |
-| `Gebieden2`                                 | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw)                                                                                                    | Parkeren          |
+| `Gebieden1`                                 | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw)                                                                                                    | Parkeren          |
+| `Gebieden2`                                 | [Gebieden](https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd)                                                                                                    | Parkeren          |
 | `Gebreken`                                  | [Open Data RDW: Gebreken](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Gebreken/hx2c-gt7k)                                                                      | Keuringen         |
 | `GeconstateerdeGebreken`                    | [Open Data RDW: Geconstateerde Gebreken](https://opendata.rdw.nl/Keuringen/Open-Data-RDW-Geconstateerde-Gebreken/a34c-vvps)                                        | Keuringen         |
 | `GeoCarpool`                                | [GEO Carpool](https://opendata.rdw.nl/Parkeren/GEO-Carpool/9c54-cmfx)                                                                                              | Parkeren          |
@@ -283,7 +283,7 @@ Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Gebieden1
 | `TheGeom`    | `the_geom`    | the_geom      | MultiPolygon |
 | `UsageId`    | `usage_id`    | UsageId       | Text         |
 
-**Link:** https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
+**Link:** https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
 
 </details>
 
@@ -344,7 +344,7 @@ Documentation can be found [here](https://jsr.io/@j3lte/rdw-data/doc/~/Gebieden2
 | `TheGeom`    | `the_geom`    | the_geom      | MultiPolygon |
 | `UsageId`    | `usage_id`    | UsageId       | Text         |
 
-**Link:** https://opendata.rdw.nl/Parkeren/Gebieden/b2fs-9ymw
+**Link:** https://opendata.rdw.nl/Parkeren/Gebieden/u3zx-f5hd
 
 </details>
 
