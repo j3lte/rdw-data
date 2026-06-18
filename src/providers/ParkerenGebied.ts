@@ -5,7 +5,7 @@
 // Een benoemde ruimte met een gebruiksdoel waar een voertuig zich onder condities kan begeven of bevinden.
 //
 // Category: Parkeren
-// Tags: parkeren, tabel, gebied
+// Tags: gebied, parkeren, tabel
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg
@@ -156,7 +156,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/adw6-9hsg",
   category: "Parkeren",
-  tags: ["parkeren", "tabel", "gebied"],
+  tags: ["gebied", "parkeren", "tabel"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-12-09T13:00:30.000Z",
@@ -175,7 +175,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** parkeren, tabel, gebied
+ * **Tags:** gebied, parkeren, tabel
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -218,7 +218,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** parkeren, tabel, gebied
+ * **Tags:** gebied, parkeren, tabel
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

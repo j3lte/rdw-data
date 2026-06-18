@@ -3,7 +3,7 @@
 // Name: Open Data RDW: Gekentekende_voertuigen_brandstof
 //
 // Category: Voertuigen
-// Tags: kenteken, brandstof
+// Tags: brandstof, kenteken
 // License: Public Domain
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_brandstof/8ys7-d773
@@ -786,7 +786,7 @@ export const Info = {
     "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_brandstof/8ys7-d773",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/8ys7-d773",
   category: "Voertuigen",
-  tags: ["kenteken", "brandstof"],
+  tags: ["brandstof", "kenteken"],
   license: "Public Domain",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2026-05-21T13:32:08.000Z",
@@ -804,7 +804,7 @@ export const Info = {
  *
  * **Category:** Voertuigen
  *
- * **Tags:** kenteken, brandstof
+ * **Tags:** brandstof, kenteken
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *
@@ -851,7 +851,7 @@ export const RDWQuery = (
  *
  * **Category:** Voertuigen
  *
- * **Tags:** kenteken, brandstof
+ * **Tags:** brandstof, kenteken
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *

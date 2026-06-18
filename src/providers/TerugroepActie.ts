@@ -3,7 +3,7 @@
 // Name: Open Data RDW: Terugroep_actie
 //
 // Category: Terugroepacties
-// Tags: terugroep, voertuigen, recall
+// Tags: recall, terugroep, voertuigen
 // License: Public Domain
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie/j9yg-7rg9
@@ -561,7 +561,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie/j9yg-7rg9",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/j9yg-7rg9",
   category: "Terugroepacties",
-  tags: ["terugroep", "voertuigen", "recall"],
+  tags: ["recall", "terugroep", "voertuigen"],
   license: "Public Domain",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2024-10-02T11:20:45.000Z",
@@ -579,7 +579,7 @@ export const Info = {
  *
  * **Category:** Terugroepacties
  *
- * **Tags:** terugroep, voertuigen, recall
+ * **Tags:** recall, terugroep, voertuigen
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *
@@ -621,7 +621,7 @@ export const RDWQuery = (
  *
  * **Category:** Terugroepacties
  *
- * **Tags:** terugroep, voertuigen, recall
+ * **Tags:** recall, terugroep, voertuigen
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *

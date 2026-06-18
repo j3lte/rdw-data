@@ -115,7 +115,7 @@ export const Info = {
  * @example
  * ```ts
  * const data = await RDWQuery()
- *   .where(Where.like(Fields.<%= it.item.columns[0].big_name %>, "some_value")
+ *   .where(Where.like(Fields.<%= it.item.columns[0] ? it.item.columns[0].big_name : "SomeField" %>, "some_value")
  *   .limit(10)
  *   .offset(0);
  *   .execute();
@@ -156,7 +156,7 @@ export const RDWQuery = (
  * @example
  * ```ts
  * const { data } = await <%= it.item.name %>.RDWQuery()
- *   .where(Where.like(<%= it.item.name %>.Fields.<%= it.item.columns[0].big_name %>, "some_value"))
+ *   .where(Where.like(<%= it.item.name %>.Fields.<%= it.item.columns[0] ? it.item.columns[0].big_name : "SomeField" %>, "some_value"))
  *   .limit(10)
  *   .execute();
  * ```

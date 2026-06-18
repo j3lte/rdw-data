@@ -5,7 +5,7 @@
 // Een door de gebiedsbeheerder benoemd etmaal waarop afwijkende tarieven gelden (lokale feestdagen, evenementen, koopzondagen, etc.).
 //
 // Category: Parkeren
-// Tags: speciale dag, tabel, parkeren
+// Tags: parkeren, speciale dag, tabel
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIALE-DAG/hpi4-mynq
@@ -114,7 +114,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIALE-DAG/hpi4-mynq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/hpi4-mynq",
   category: "Parkeren",
-  tags: ["speciale dag", "tabel", "parkeren"],
+  tags: ["parkeren", "speciale dag", "tabel"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T15:33:19.000Z",
@@ -133,7 +133,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** speciale dag, tabel, parkeren
+ * **Tags:** parkeren, speciale dag, tabel
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -176,7 +176,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** speciale dag, tabel, parkeren
+ * **Tags:** parkeren, speciale dag, tabel
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

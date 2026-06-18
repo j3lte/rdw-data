@@ -5,7 +5,7 @@
 // Specificaties behorende bij een parkeerterrein of parkeergarage, zoals het aantal parkeerplaatsen en oplaadpunten.
 //
 // Category: Parkeren
-// Tags: specificaties, parkeergebied, parkeren
+// Tags: parkeergebied, parkeren, specificaties
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIFICATIES-PARKEERGEBIED/b3us-f26s
@@ -246,7 +246,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIFICATIES-PARKEERGEBIED/b3us-f26s",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/b3us-f26s",
   category: "Parkeren",
-  tags: ["specificaties", "parkeergebied", "parkeren"],
+  tags: ["parkeergebied", "parkeren", "specificaties"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T15:37:18.000Z",
@@ -265,7 +265,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** specificaties, parkeergebied, parkeren
+ * **Tags:** parkeergebied, parkeren, specificaties
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -313,7 +313,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** specificaties, parkeergebied, parkeren
+ * **Tags:** parkeergebied, parkeren, specificaties
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

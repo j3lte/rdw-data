@@ -3,7 +3,7 @@
 // Name: Open Data RDW: Terugroep_informeren_eigenaar
 //
 // Category: Terugroepacties
-// Tags: terugroep, voertuigen, informeren, eigenaar, recall
+// Tags: eigenaar, informeren, recall, terugroep, voertuigen
 // License: Public Domain
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_informeren_eigenaar/mh8w-8cup
@@ -121,7 +121,7 @@ export const Info = {
     "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_informeren_eigenaar/mh8w-8cup",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mh8w-8cup",
   category: "Terugroepacties",
-  tags: ["terugroep", "voertuigen", "informeren", "eigenaar", "recall"],
+  tags: ["eigenaar", "informeren", "recall", "terugroep", "voertuigen"],
   license: "Public Domain",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2024-10-02T11:24:57.000Z",
@@ -139,7 +139,7 @@ export const Info = {
  *
  * **Category:** Terugroepacties
  *
- * **Tags:** terugroep, voertuigen, informeren, eigenaar, recall
+ * **Tags:** eigenaar, informeren, recall, terugroep, voertuigen
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *
@@ -186,7 +186,7 @@ export const RDWQuery = (
  *
  * **Category:** Terugroepacties
  *
- * **Tags:** terugroep, voertuigen, informeren, eigenaar, recall
+ * **Tags:** eigenaar, informeren, recall, terugroep, voertuigen
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *

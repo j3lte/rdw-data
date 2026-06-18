@@ -14,50 +14,87 @@ const url =
 const outputFolder = `${thisDir}../src/providers/`;
 const rootFolder = `${thisDir}../src/`;
 
+// Fetch JSON with an HTTP status check and linear backoff. The RDW catalog
+// endpoint occasionally 5xx/429s; a single transient blip should not abort a
+// scheduled release, and a non-OK response must fail loudly rather than feeding
+// `undefined.results` into the loop below with a cryptic error.
+const fetchJson = async (url: string, retries = 3): Promise<ResponseData> => {
+  let lastErr: unknown;
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status} ${res.statusText}`);
+      }
+      return await res.json() as ResponseData;
+    } catch (err) {
+      lastErr = err;
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`Fetch attempt ${attempt}/${retries} failed: ${msg}`);
+      if (attempt < retries) {
+        await new Promise((r) => setTimeout(r, attempt * 1000));
+      }
+    }
+  }
+  const msg = lastErr instanceof Error ? lastErr.message : String(lastErr);
+  throw new Error(`Failed to fetch ${url} after ${retries} attempts: ${msg}`);
+};
+
 const getData = async (url: string) => {
-  const response = await fetch(url).then((res) => res.json()) as ResponseData;
+  const response = await fetchJson(url);
   const resultData: Array<DataResult> = [];
 
-  response.results.forEach((result) => {
-    const description = (result.resource.description || "")
-      .trim()
-      .split("\n")
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0);
+  // Build each dataset inside a try/catch: a single malformed upstream record
+  // (e.g. unequal column arrays, which mapColumns throws on) should be skipped
+  // with a warning rather than aborting the entire release of the other datasets.
+  for (const result of response.results) {
+    try {
+      const description = (result.resource.description || "")
+        .trim()
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0);
 
-    const data: DataResult = {
-      name: fixTitle(result.resource.name),
-      full_name: (result.resource.name || "").trim(),
-      description,
-      metadata_updated_at: (result.resource.metadata_updated_at || "").trim(),
-      publication_date: (result.resource.publication_date || "").trim(),
-      license: (result.metadata.license || "Unknown").trim(),
-      // RDW's own, more specific license declaration (e.g. "Creative Commons 0
-      // (CC0)") lives in classification.domain_metadata under Licentie_Licentie.
-      license_detail: (result.classification.domain_metadata
-        ?.find((m) => m.key === "Licentie_Licentie")?.value || "Unknown").trim(),
-      tags: (result.classification.domain_tags ?? []).map((t) => t.trim()).filter((t) =>
-        t.length > 0
-      ),
-      category: (result.classification.domain_category ?? "Unknown").trim(),
-      domain: (result.metadata.domain || "").trim(),
-      link: (result.link || "").trim(),
-      permalink: (result.permalink || "").trim(),
-      id: result.resource.id.trim(),
-      owner: (result.owner?.display_name ?? "Unknown").trim(),
-      creator: (result.creator?.display_name ?? "Unknown").trim(),
-      columns: mapColumns(result),
-    };
+      const data: DataResult = {
+        name: fixTitle(result.resource.name),
+        full_name: (result.resource.name || "").trim(),
+        description,
+        metadata_updated_at: (result.resource.metadata_updated_at || "").trim(),
+        publication_date: (result.resource.publication_date || "").trim(),
+        license: (result.metadata.license || "Unknown").trim(),
+        // RDW's own, more specific license declaration (e.g. "Creative Commons 0
+        // (CC0)") lives in classification.domain_metadata under Licentie_Licentie.
+        license_detail: (result.classification.domain_metadata
+          ?.find((m) => m.key === "Licentie_Licentie")?.value || "Unknown").trim(),
+        // Sort tags so a pure upstream reordering doesn't churn provider files +
+        // README on every run (same determinism guarantee as the column sort).
+        tags: (result.classification.domain_tags ?? []).map((t) => t.trim())
+          .filter((t) => t.length > 0)
+          .sort((a, b) => a.localeCompare(b)),
+        category: (result.classification.domain_category ?? "Unknown").trim(),
+        domain: (result.metadata.domain || "").trim(),
+        link: (result.link || "").trim(),
+        permalink: (result.permalink || "").trim(),
+        id: result.resource.id.trim(),
+        owner: (result.owner?.display_name ?? "Unknown").trim(),
+        creator: (result.creator?.display_name ?? "Unknown").trim(),
+        columns: mapColumns(result),
+      };
 
-    resultData.push(data);
-  });
+      resultData.push(data);
+    } catch (err) {
+      const id = result?.resource?.name ?? result?.resource?.id ?? "unknown";
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`Skipping dataset "${id}": ${msg}`);
+    }
+  }
 
   console.log(`Found ${resultData.length} datasets.`);
 
   return resultData;
 };
 
-const renderRemplate = (template: string, item: WithSodaVersion) =>
+const renderTemplate = (template: string, item: WithSodaVersion) =>
   (render(template, {
     item,
   }, {
@@ -77,8 +114,25 @@ const renderRemplate = (template: string, item: WithSodaVersion) =>
     return fixed2;
   });
 
+// Count the provider .ts files already on disk (excluding mod.ts). info.json is
+// gitignored, so in a fresh CI checkout the committed provider files are the only
+// reliable baseline for the shrink guard in run().
+const countExistingProviders = async (): Promise<number> => {
+  try {
+    let count = 0;
+    for await (const entry of Deno.readDir(outputFolder)) {
+      if (entry.isFile && entry.name.endsWith(".ts") && entry.name !== "mod.ts") {
+        count++;
+      }
+    }
+    return count;
+  } catch {
+    return 0; // dir missing (first run)
+  }
+};
+
 const renderAndWrite = async (template: string, item: WithSodaVersion) => {
-  const rendered = await renderRemplate(template, item);
+  const rendered = await renderTemplate(template, item);
   return Deno.writeTextFile(`${outputFolder}/${item.name}.ts`, rendered);
 };
 
@@ -202,6 +256,20 @@ const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
     return;
   }
 
+  // Shrink guard: refuse to wipe + regenerate when the upstream catalog returns
+  // markedly fewer datasets than we already have committed (>10% drop). A partial
+  // API response would otherwise empty the providers dir and publish a shrunken
+  // package. Re-run manually if the drop is genuine.
+  const existingCount = await countExistingProviders();
+  if (existingCount > 0 && resultData.length < existingCount * 0.9) {
+    console.error(
+      `Refusing to regenerate: fetched ${resultData.length} datasets but ` +
+        `${existingCount} providers exist (>10% drop). Aborting to avoid ` +
+        `publishing a shrunken package. Re-run manually if this drop is real.`,
+    );
+    Deno.exit(1);
+  }
+
   if (!dryRun) {
     console.log(`Make dir: ${outputFolder}`);
     await Deno.mkdir(outputFolder, { recursive: true });
@@ -244,7 +312,7 @@ const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
   await Promise.all(
     resultData.map((item) => {
       if (dryRun) {
-        return renderRemplate(providerTemplate, { ...item, sodaVersion: lastSodaVersion });
+        return renderTemplate(providerTemplate, { ...item, sodaVersion: lastSodaVersion });
       } else {
         return renderAndWrite(providerTemplate, { ...item, sodaVersion: lastSodaVersion });
       }

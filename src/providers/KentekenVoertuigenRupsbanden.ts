@@ -3,7 +3,7 @@
 // Name: Open Data RDW: Gekentekende_voertuigen_rupsbanden
 //
 // Category: Voertuigen
-// Tags: voertuigen, kenteken
+// Tags: kenteken, voertuigen
 // License: Public Domain
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_rupsbanden/3xwf-ince
@@ -169,7 +169,7 @@ export const Info = {
     "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_rupsbanden/3xwf-ince",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/3xwf-ince",
   category: "Voertuigen",
-  tags: ["voertuigen", "kenteken"],
+  tags: ["kenteken", "voertuigen"],
   license: "Public Domain",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2024-05-28T14:20:19.000Z",
@@ -187,7 +187,7 @@ export const Info = {
  *
  * **Category:** Voertuigen
  *
- * **Tags:** voertuigen, kenteken
+ * **Tags:** kenteken, voertuigen
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *
@@ -234,7 +234,7 @@ export const RDWQuery = (
  *
  * **Category:** Voertuigen
  *
- * **Tags:** voertuigen, kenteken
+ * **Tags:** kenteken, voertuigen
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *

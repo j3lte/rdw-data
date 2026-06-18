@@ -3,7 +3,7 @@
 // Name: Open Data RDW: Terugroep_voertuig_merk_type
 //
 // Category: Terugroepacties
-// Tags: terugroep, voertuigen, merk, type, recall
+// Tags: merk, recall, terugroep, type, voertuigen
 // License: Public Domain
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e
@@ -113,7 +113,7 @@ export const Info = {
     "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_voertuig_merk_type/mu2x-mu5e",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/mu2x-mu5e",
   category: "Terugroepacties",
-  tags: ["terugroep", "voertuigen", "merk", "type", "recall"],
+  tags: ["merk", "recall", "terugroep", "type", "voertuigen"],
   license: "Public Domain",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2024-10-02T11:25:59.000Z",
@@ -131,7 +131,7 @@ export const Info = {
  *
  * **Category:** Terugroepacties
  *
- * **Tags:** terugroep, voertuigen, merk, type, recall
+ * **Tags:** merk, recall, terugroep, type, voertuigen
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *
@@ -173,7 +173,7 @@ export const RDWQuery = (
  *
  * **Category:** Terugroepacties
  *
- * **Tags:** terugroep, voertuigen, merk, type, recall
+ * **Tags:** merk, recall, terugroep, type, voertuigen
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *

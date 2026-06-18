@@ -5,7 +5,7 @@
 // Index van statische en dynamische parkeerinformatie van Nederlandse gemeenten en private partijen
 //
 // Category: Parkeren
-// Tags: index, statisch, dynamisch, parkeren
+// Tags: dynamisch, index, parkeren, statisch
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-Index-Statisch-en-Dynamisch/f6v7-gjpa
@@ -170,7 +170,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-Index-Statisch-en-Dynamisch/f6v7-gjpa",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/f6v7-gjpa",
   category: "Parkeren",
-  tags: ["index", "statisch", "dynamisch", "parkeren"],
+  tags: ["dynamisch", "index", "parkeren", "statisch"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2018-12-31T22:25:40.000Z",
@@ -189,7 +189,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** index, statisch, dynamisch, parkeren
+ * **Tags:** dynamisch, index, parkeren, statisch
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -237,7 +237,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** index, statisch, dynamisch, parkeren
+ * **Tags:** dynamisch, index, parkeren, statisch
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

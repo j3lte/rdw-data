@@ -5,7 +5,7 @@
 // Tabel met informatie over een in- of uitgang (voor voertuigen of personen) van een parkeerfaciliteit.
 //
 // Category: Parkeren
-// Tags: ingang, uitgang, parkeren
+// Tags: ingang, parkeren, uitgang
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-IN-UITGANG/c653-u9z2
@@ -261,7 +261,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-IN-UITGANG/c653-u9z2",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/c653-u9z2",
   category: "Parkeren",
-  tags: ["ingang", "uitgang", "parkeren"],
+  tags: ["ingang", "parkeren", "uitgang"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T15:12:28.000Z",
@@ -280,7 +280,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** ingang, uitgang, parkeren
+ * **Tags:** ingang, parkeren, uitgang
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -323,7 +323,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** ingang, uitgang, parkeren
+ * **Tags:** ingang, parkeren, uitgang
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

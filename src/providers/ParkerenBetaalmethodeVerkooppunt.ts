@@ -5,7 +5,7 @@
 // Een betaalmethode die gebruikt kan worden bij een bepaald verkooppunt of betaalautomaat van een parkeergebied, -garage of -terrein.
 //
 // Category: Parkeren
-// Tags: betaalmethode, verkooppunt, parkeren
+// Tags: betaalmethode, parkeren, verkooppunt
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx
@@ -135,7 +135,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-BETAALMETHODE-VERKOOPPUNT/j96a-7nhx",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/j96a-7nhx",
   category: "Parkeren",
-  tags: ["betaalmethode", "verkooppunt", "parkeren"],
+  tags: ["betaalmethode", "parkeren", "verkooppunt"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T12:22:27.000Z",
@@ -154,7 +154,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** betaalmethode, verkooppunt, parkeren
+ * **Tags:** betaalmethode, parkeren, verkooppunt
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -202,7 +202,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** betaalmethode, verkooppunt, parkeren
+ * **Tags:** betaalmethode, parkeren, verkooppunt
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

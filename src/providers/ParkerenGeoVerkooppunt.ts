@@ -5,7 +5,7 @@
 // Tabel met geografische informatie van een verkooppunt.
 //
 // Category: Parkeren
-// Tags: locatie, verkooppunt, parkeren
+// Tags: locatie, parkeren, verkooppunt
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEO-VERKOOPPUNT/cgqw-pfbp
@@ -173,7 +173,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEO-VERKOOPPUNT/cgqw-pfbp",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/cgqw-pfbp",
   category: "Parkeren",
-  tags: ["locatie", "verkooppunt", "parkeren"],
+  tags: ["locatie", "parkeren", "verkooppunt"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-04-10T07:36:41.000Z",
@@ -192,7 +192,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** locatie, verkooppunt, parkeren
+ * **Tags:** locatie, parkeren, verkooppunt
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -235,7 +235,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** locatie, verkooppunt, parkeren
+ * **Tags:** locatie, parkeren, verkooppunt
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

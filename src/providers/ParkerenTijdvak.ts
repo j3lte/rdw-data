@@ -5,7 +5,7 @@
 // Een deel van een benoemd etmaal waarin een bepaalde regeling van toepassing is. In een etmaal kan voor nul, een of meerdere tijdvakken worden geregistreerd welk tarief van toepassing is en kunnen andere aspecten van een regeling worden vastgelegd. Tijdvakken mogen niet overlappen, maar tijdvakken hoeven niet aaneen te sluiten. Voor die gedeelten van het etmaal waarvoor geen tijdvak is, geldt dat volgens de regeling het recht geen tarief heeft, bv. overdag betaald parkeren, maar 's avonds en 's nachts gratis.
 //
 // Category: Parkeren
-// Tags: tijdvak, parkeren
+// Tags: parkeren, tijdvak
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TIJDVAK/ixf8-gtwq
@@ -299,7 +299,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TIJDVAK/ixf8-gtwq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/ixf8-gtwq",
   category: "Parkeren",
-  tags: ["tijdvak", "parkeren"],
+  tags: ["parkeren", "tijdvak"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T15:53:05.000Z",
@@ -318,7 +318,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** tijdvak, parkeren
+ * **Tags:** parkeren, tijdvak
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -361,7 +361,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** tijdvak, parkeren
+ * **Tags:** parkeren, tijdvak
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

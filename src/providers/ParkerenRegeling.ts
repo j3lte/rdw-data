@@ -5,7 +5,7 @@
 // Een regeling bevat alle condities die gelden wanneer iemand een recht voor een bepaald gebied verwerft.
 //
 // Category: Parkeren
-// Tags: regeling, gebied, tariefdeel
+// Tags: gebied, regeling, tariefdeel
 // License: Public Domain
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-REGELING/yefi-qfiq
@@ -198,7 +198,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-REGELING/yefi-qfiq",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/yefi-qfiq",
   category: "Parkeren",
-  tags: ["regeling", "gebied", "tariefdeel"],
+  tags: ["gebied", "regeling", "tariefdeel"],
   license: "Public Domain",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T15:31:21.000Z",
@@ -217,7 +217,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** regeling, gebied, tariefdeel
+ * **Tags:** gebied, regeling, tariefdeel
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *
@@ -260,7 +260,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** regeling, gebied, tariefdeel
+ * **Tags:** gebied, regeling, tariefdeel
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *

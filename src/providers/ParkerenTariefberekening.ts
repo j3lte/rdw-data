@@ -5,7 +5,7 @@
 // De berekeningswijze waarmee het bedrag van een recht wordt bepaald. Elke gebiedsbeheerder kan zijn eigen voorgedefinieerde tarieven aanleggen.
 //
 // Category: Parkeren
-// Tags: tariefberekening, parkeren
+// Tags: parkeren, tariefberekening
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFBEREKENING/nfzq-8g7y
@@ -198,7 +198,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-TARIEFBEREKENING/nfzq-8g7y",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nfzq-8g7y",
   category: "Parkeren",
-  tags: ["tariefberekening", "parkeren"],
+  tags: ["parkeren", "tariefberekening"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T15:39:39.000Z",
@@ -217,7 +217,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** tariefberekening, parkeren
+ * **Tags:** parkeren, tariefberekening
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -260,7 +260,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** tariefberekening, parkeren
+ * **Tags:** parkeren, tariefberekening
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

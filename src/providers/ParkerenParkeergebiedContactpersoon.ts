@@ -5,7 +5,7 @@
 // Informatie over de koppeling tussen een parkeergebied of -faciliteit en een contactpersoon
 //
 // Category: Parkeren
-// Tags: parkeergebied, contactpersoon
+// Tags: contactpersoon, parkeergebied
 // License: Public Domain
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED-CONTACTPERSOON/69hx-t283
@@ -160,7 +160,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERGEBIED-CONTACTPERSOON/69hx-t283",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/69hx-t283",
   category: "Parkeren",
-  tags: ["parkeergebied", "contactpersoon"],
+  tags: ["contactpersoon", "parkeergebied"],
   license: "Public Domain",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T15:22:02.000Z",
@@ -179,7 +179,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** parkeergebied, contactpersoon
+ * **Tags:** contactpersoon, parkeergebied
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *
@@ -227,7 +227,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** parkeergebied, contactpersoon
+ * **Tags:** contactpersoon, parkeergebied
  *
  * **License:** Public Domain (Creative Commons 0 (CC0))
  *

@@ -6,7 +6,7 @@
 // Een voor de hand liggend voorbeeld is een parkeerautomaat, die zich in één specifiek gebied bevindt. Deze entiteit is opgenomen omdat parkeerautomaten een eigen identificatie (uniek in heel Nederland dankzij afspraken tussen providers) hebben die in de berichten doorgegeven kan worden. Via dit SellingPointID kan bepaald worden in welk gebied de automaat zich bevindt en voor welk gebied het recht is verworven.
 //
 // Category: Parkeren
-// Tags: verkooppunt, parkeren
+// Tags: parkeren, verkooppunt
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-VERKOOPPUNT/fk68-nf2y
@@ -199,7 +199,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-VERKOOPPUNT/fk68-nf2y",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/fk68-nf2y",
   category: "Parkeren",
-  tags: ["verkooppunt", "parkeren"],
+  tags: ["parkeren", "verkooppunt"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T16:02:05.000Z",
@@ -219,7 +219,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** verkooppunt, parkeren
+ * **Tags:** parkeren, verkooppunt
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -263,7 +263,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** verkooppunt, parkeren
+ * **Tags:** parkeren, verkooppunt
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

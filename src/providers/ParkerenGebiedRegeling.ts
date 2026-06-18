@@ -5,7 +5,7 @@
 // Regeling of regelingen die op een gebied van toepassing zijn. Op een bepaald moment is op één gebied maar één regeling van toepassing, maar de regeling die van toepassing is op een gebied, kan periodiek veranderen
 //
 // Category: Parkeren
-// Tags: gebied, regeling, parkeren
+// Tags: gebied, parkeren, regeling
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED-REGELING/qtex-qwd8
@@ -177,7 +177,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED-REGELING/qtex-qwd8",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/qtex-qwd8",
   category: "Parkeren",
-  tags: ["gebied", "regeling", "parkeren"],
+  tags: ["gebied", "parkeren", "regeling"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-12-09T13:05:55.000Z",
@@ -196,7 +196,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** gebied, regeling, parkeren
+ * **Tags:** gebied, parkeren, regeling
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -239,7 +239,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** gebied, regeling, parkeren
+ * **Tags:** gebied, parkeren, regeling
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

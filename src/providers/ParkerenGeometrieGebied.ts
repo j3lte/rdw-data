@@ -5,7 +5,7 @@
 // Een overzicht van de geometrieën van parkeergebieden en -faciliteiten, in coördinatenstelsel WGS84 (EPSG: 4326).
 //
 // Category: Parkeren
-// Tags: geometrie, gebied, parkeren
+// Tags: gebied, geometrie, parkeren
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEOMETRIE-GEBIED/nsk3-v9n7
@@ -156,7 +156,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEOMETRIE-GEBIED/nsk3-v9n7",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/nsk3-v9n7",
   category: "Parkeren",
-  tags: ["geometrie", "gebied", "parkeren"],
+  tags: ["gebied", "geometrie", "parkeren"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2014-11-05T13:48:43.000Z",
@@ -175,7 +175,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** geometrie, gebied, parkeren
+ * **Tags:** gebied, geometrie, parkeren
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -218,7 +218,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** geometrie, gebied, parkeren
+ * **Tags:** gebied, geometrie, parkeren
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *

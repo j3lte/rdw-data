@@ -12,7 +12,9 @@ export const fixTitle = (str: string) => {
     .replaceAll("ß", "ss")
     // replace special characters
     .split(/[\s_-]/)
-    .map((s) => s[0].toUpperCase() + s.slice(1).toLowerCase())
+    // Guard empty segments (leading/trailing/double separators) so s[0] never
+    // dereferences undefined — same guard pascalCase already uses.
+    .map((s) => s ? s[0].toUpperCase() + s.slice(1).toLowerCase() : "")
     .join("")
     .replace("OpenDataRdw", "")
     .replace("OpenData", "")
@@ -25,7 +27,7 @@ export const pascalCase = (str: string) => {
     .split(/[\s_-]/)
     .map((s) => s ? s[0].toUpperCase() + s.slice(1).toLowerCase() : "")
     .join("");
-  if (s[0].match(/\d/)) {
+  if (s && s[0].match(/\d/)) {
     return `N${s}`;
   }
 
@@ -33,7 +35,7 @@ export const pascalCase = (str: string) => {
 };
 
 export const cleanString = (str?: string) => {
-  const cleanRegex = /[^\x20-\x7E\u200B-\u200D\uFEFF\uBBBF]/g;
+  const cleanRegex = /[^\x20-\x7E\u200B-\u200D\uFEFF]/g;
   const cleanAndTrim = (s: string) =>
     s.replace(cleanRegex, "").replace("\r", "").replace("\n", "").trim();
   const splitted = (str || "").split("\n");

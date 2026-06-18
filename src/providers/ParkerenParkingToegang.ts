@@ -5,7 +5,7 @@
 // Toegangstijden van een parkeergebied, -garage of -terrein. Als een toegang gesloten is kan de uitgang wel open zijn.
 //
 // Category: Parkeren
-// Tags: toegang, parkeren
+// Tags: parkeren, toegang
 // License: Unknown
 // License (RDW): Creative Commons 0 (CC0)
 // Link: https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-TOEGANG/edv8-qiyg
@@ -198,7 +198,7 @@ export const Info = {
   url: "https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKING-TOEGANG/edv8-qiyg",
   api_docs: "https://dev.socrata.com/foundry/opendata.rdw.nl/edv8-qiyg",
   category: "Parkeren",
-  tags: ["toegang", "parkeren"],
+  tags: ["parkeren", "toegang"],
   license: "Unknown",
   license_detail: "Creative Commons 0 (CC0)",
   publication_date: "2025-02-05T15:28:36.000Z",
@@ -217,7 +217,7 @@ export const Info = {
  *
  * **Category:** Parkeren
  *
- * **Tags:** toegang, parkeren
+ * **Tags:** parkeren, toegang
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
@@ -260,7 +260,7 @@ export const RDWQuery = (
  *
  * **Category:** Parkeren
  *
- * **Tags:** toegang, parkeren
+ * **Tags:** parkeren, toegang
  *
  * **License:** Unknown (Creative Commons 0 (CC0))
  *
