@@ -166,8 +166,13 @@ const run = async ({ dryRun }: { dryRun?: boolean } = {}) => {
   // entry with an incrementing index (Gebieden1, Gebieden2, ...) so each dataset
   // keeps its own provider file and a unique `export { Name }` in mod.ts (avoids
   // TS2300 duplicate identifier). full_name is left untouched as the real title.
+  // Sort by name, then by the dataset id as a stable tiebreaker. The API returns
+  // results in `updatedAt DESC` order, so datasets that collapse to the same name
+  // (e.g. two "Locaties") would otherwise keep whatever relative order the last
+  // update happened to produce — flipping their 1/2 suffixes between runs. Sorting
+  // on the unique id pins the suffix assignment deterministically.
   const fetched = (await getData(url))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => a.name.localeCompare(b.name) || a.id.localeCompare(b.id));
 
   const nameCounts = new Map<string, number>();
   for (const item of fetched) {

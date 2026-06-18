@@ -90,10 +90,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet; then
+          # `git add -A` stages new/deleted files too; `git commit -a` would only
+          # pick up modified tracked files and silently drop newly generated
+          # providers (e.g. Gebieden1/Locaties1 from the de-collide step).
+          git add -A
+          if git diff --cached --quiet; then
             echo "Nothing to commit"
           else
-            git commit -am "Update providers + release ${{ steps.version.outputs.version }}"
+            git commit -m "Update providers + release ${{ steps.version.outputs.version }}"
             git push
           fi
 
